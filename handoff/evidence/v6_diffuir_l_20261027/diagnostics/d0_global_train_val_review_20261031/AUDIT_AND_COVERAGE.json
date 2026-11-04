@@ -1,0 +1,39 @@
+{
+  "status": "PASS_COMPLETE_D0_HISTORY_AND_FROZEN_SELECTION_CPU_REVIEW",
+  "unix": 1793428358.915255,
+  "train_main_rows": 157505,
+  "train_main_range": [
+    1,
+    157505
+  ],
+  "train_branch_rows": {
+    "Control": 5000,
+    "G4_biased": 5000
+  },
+  "total_retained_training_events": 167505,
+  "failed_unsaved_replay_updates_separate": 420,
+  "full_G4_main_validation_nodes": 131,
+  "all_branch_and_five_g_validation_rows": 303,
+  "residual_Val_loss_checkpoint_count": 1,
+  "residual_Val_loss_checkpoint": 95544,
+  "residual_Val_loss": 0.08768200272414833,
+  "historical_Train_PSNR_curve_available": false,
+  "fixed_Train_PSNR_point_U14927": {
+    "sources": 300,
+    "samples": 1200,
+    "psnr": 20.91985027422168
+  },
+  "mixed_residual_Val_loss_history_available": false,
+  "last1000_train_loss": {
+    "native_G4": 0.08918210926651955,
+    "mixed": 0.0668703367896378,
+    "Control": 0.06642958555370569,
+    "G4_biased": 0.0746733430288732
+  },
+  "metrics_not_derived_from_loss": true,
+  "no_train_or_val_history_fabricated": true,
+  "no_old_artifacts_modified": true,
+  "new_model_calls": 0,
+  "new_training_updates": 0,
+  "A_B_resumed": false
+}

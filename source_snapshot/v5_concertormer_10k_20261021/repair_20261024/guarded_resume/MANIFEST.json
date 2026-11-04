@@ -1,0 +1,13 @@
+{
+  "schema": "v5_gradient_guard_extension_manifest_v1",
+  "files": {
+    "__init__.py": "604b02cd10c1e9db19fca6480e876a1c99a381d19bf7b273215bf8ae1badc956",
+    "guard.py": "8df8c2a66bda9ad9548bc3626321e4cab98494e82002899354e5f45d53b213c5",
+    "guarded_runner.py": "256df9d73af5c703e2c682a567d7b98d382be80f9518e97b67b893580d078364",
+    "resume_controller.py": "6491483dc71e410a264a327f6092002c0317824375e8f1104661967c79e163cc",
+    "test_guard.py": "5a558664e390b7772eaf4f0cda5fa2b98b17ade3107ba62a179ceb9a62a91d4e",
+    "PROPOSED_GUARD_POLICY.json": "52b49bd7f533d3d53aaf8495c891875451f355900a7b7f675c43d7271b8e97b5",
+    "README_ZH.md": "d6d7bd161acc6fb4b869c05560de424e207069c38c1bed4af51302b249bee429"
+  },
+  "original_scientific_files_modified": false
+}

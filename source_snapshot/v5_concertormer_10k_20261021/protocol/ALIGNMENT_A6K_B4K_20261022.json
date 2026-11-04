@@ -1,0 +1,90 @@
+{
+  "D0_required_updates": 10000,
+  "D0_run": "/data2/yanglin/v5_concertormer_10k_20261021/runs/clean_only_D0_then_R0D0Init_B48_u250/D0",
+  "D0_scientific_config_hash": "efd8fc898a07fea075bc068eb980796a232774dbddbdba022ea44475a5942e91",
+  "cache": {
+    "anchor_fraction": 0.25,
+    "concurrent_with_training": false,
+    "generations": 3,
+    "internal_fraction": 0.75,
+    "precision": "float32_lossless",
+    "strata_per_trajectory": 10,
+    "updates_per_generation": 2000
+  },
+  "cache_root": "/data2/yanglin/v5_concertormer_10k_20261021/data/alignment_A6k_B4k_20261022",
+  "checkpoint_interval": 250,
+  "code_manifest": "/data2/yanglin/v5_concertormer_10k_20261021/protocol/ALIGNMENT_CODE_MANIFEST_20261022.json",
+  "dataset_root": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+  "ema": false,
+  "environment": {
+    "TASK_QUEUE_ENABLE": "0"
+  },
+  "execution_sequence": [
+    "A",
+    "B"
+  ],
+  "extended_validation_metrics": true,
+  "gradient_clip": 1.0,
+  "keep_recent_checkpoints": 2,
+  "master_port": 29867,
+  "max_transient_retries": 2,
+  "old_successor_disable_receipt": "/data2/yanglin/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/OLD_SUCCESSOR_DISABLED.json",
+  "optimizer": "AdamW",
+  "physical_cards": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "preparation_root": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/alignment_20261022",
+  "refinement": false,
+  "resource_retry_seconds": 60,
+  "run_root": "/data2/yanglin/v5_concertormer_10k_20261021/runs/alignment_A6k_B4k_20261022",
+  "runtime": {
+    "accumulation_steps": 4,
+    "activation_checkpointing": true,
+    "checkpoint_policy": "highest_half",
+    "effective_batch": 48,
+    "hf32": false,
+    "microbatch": 2,
+    "network_precision": "bf16",
+    "psf_backend": "adjoint",
+    "simulator_precision": "fp32",
+    "talking_backend": "conv2d_equivalent",
+    "world_size": 6
+  },
+  "save_interval": 1000,
+  "schema": "v5_alignment_workflow_v1",
+  "seed": 20261022,
+  "source_user_instruction_sha256": "477c97af6a4079518fcba23f86c880c6eb34acb748b1f9d5dbf0a188ebbcaa42",
+  "stages": {
+    "A": {
+      "backbone_lr": 5e-05,
+      "cache_boundaries": [
+        2000,
+        4000,
+        6000
+      ],
+      "max_updates": 6000,
+      "new_lr": 0.0001,
+      "objective": "precomputed_current_g",
+      "warmup_updates": 300
+    },
+    "B": {
+      "backbone_lr": 2.5e-05,
+      "max_updates": 4000,
+      "new_lr": 5e-05,
+      "objective": "recursive_alignment",
+      "warmup_updates": 100
+    }
+  },
+  "test_used": false,
+  "train_log_interval": 10,
+  "val_batch_size": 4,
+  "val_interval": 250,
+  "weight_decay": 0.0001,
+  "workers": 2,
+  "workflow_reports_dir": "/data2/yanglin/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022"
+}

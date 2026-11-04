@@ -1,0 +1,156 @@
+{
+  "schema": "unidb_midnight_full_delivery_v1",
+  "scope": "unidb_midnight_full_delivery_v1",
+  "status": "PASS",
+  "final": true,
+  "created_unix": 1793729359.4114938,
+  "network_calls": 0,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "checkpoint_payload_reads": 0,
+  "campaign": "unidb_dual_20261104_until00",
+  "deadline_unix": 1793721600,
+  "identities": {
+    "original:latest": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "original:best": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "improved:latest": {
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+    },
+    "improved:best": {
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+    }
+  },
+  "content_acceptance": "Complete experimental delivery content accepted; this is not a claim that a message or project handoff was sent.",
+  "chat_delivery_performed": false,
+  "project_handoff_document_delivery_performed": false,
+  "best_original_equals_latest": true,
+  "unique_checkpoint_count": 3,
+  "all_four_checkpoint_state_roles_bound": true,
+  "all_unique_full5000_saved_outputs_CPU_audited": true,
+  "root_final_experiment_figures_visual_QA": true,
+  "root_original_route_seven_figures_visual_QA": true,
+  "actual_final_unique_checkpoint_backups_accepted": true,
+  "all_owned_processes_exited": true,
+  "native_pending_receipts_preserved": true,
+  "native_pending_receipts_scope": "CPU finalizer and original_attachment source receipts retain their capture-time pending fields. Later independent SHA-bound root QA, sync, exit and final-role adapters complete those specific requirements without editing original records.",
+  "required_future_scope": "Full-project final document/render/package acceptance and actual user-facing delivery remain independent root tasks.",
+  "evidence_bindings": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json",
+      "sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+      "sha256": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json",
+      "sha256": "07a9573f0652a2da61da276cce976faf8f6d04144e530534bb512a2bce35efc5"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CONTROLLER_EXIT.json",
+      "sha256": "323cf71f801097b87e67e17cf406d192ee4812a94a614775149f376f06273853"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_POSTPROCESS_ACCEPTANCE.json",
+      "sha256": "e9c560e0c00b614c23be8def0cdc14da013ee9b7c1d98a19521259290355f567"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+      "sha256": "a471f18c89d7c794159bf94f9bd3506290c1a69c076cf217e9ed935259076585"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+      "sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_READY_SMALL_SYNC_ACCEPTANCE.json",
+      "sha256": "3ff87a55675e5cfa4c258f6bf34a2599173a75d99f76b3662f19187f05aa4224"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/final_metadata_review/FINAL_METADATA_REVIEW.json",
+      "sha256": "887a5ac1422303790a3ca62057b00e56d5f0446387bcf3174fde87c5cddf6c3f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_RANK_UPDATE_METADATA.json",
+      "sha256": "b092f111dc7be5286418e496fb6218d55fc0d6b488d5d5af7eddc3a6a009243d"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/REPORT_STATUS.json",
+      "sha256": "9baa3c7830addac67b3a23a75bd487522789c5652d2383ce7ed40d6c8017e0c9"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FIGURE_MANIFEST.json",
+      "sha256": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/VISUAL_QA.json",
+      "sha256": "66887bfb97b80544861b4a37c2e3237dad051292a78f871aceb3b2acb4072ec0"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_ATTACHMENT_RECEIPT.json",
+      "sha256": "715cfe51ae714d40ae036dd088b48ecb6410e1c371f9ef632c586df0cdaa71ea"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/VISUAL_QA.json",
+      "sha256": "3d994b295d866becdb7e13de6d0c1a2c7e35e47d3a5b8ba9c3e34248ff2c1473"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+      "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+      "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+      "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+      "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+      "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+      "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+      "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/OWNED_EXIT_PRECHECK_20261104_0112.json",
+      "sha256": "55aa079a5382324b4960e9636eef1769bf9b1b258d756e6e1bad3fdd4b6ac25c"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+      "sha256": "df2acaf91cd7ab5851616f5185d4d33984dfb0c5eb53e03a0f48ed73bdb313e2"
+    }
+  ],
+  "revision_unix": 1793729493.328972,
+  "owned_exit_native_identity_count": 468,
+  "owned_exit_additional_historical_identity_count": 66,
+  "owned_exit_union_identity_count": 534,
+  "historical_exit_reconciliation_bound": true
+}

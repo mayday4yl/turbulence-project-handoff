@@ -1,0 +1,14 @@
+{
+  "dataset_id": "places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+  "dataset_identities": {
+    "BUILD_IDENTITY.json": {
+      "sha256": "3671bc1957d27da190f7c2e54a1a9e04ffffef5d3c95b99984b8f12ea72bc37f"
+    },
+    "source_manifest.jsonl": {
+      "sha256": "61249690d551b048096477e51e5ae387b67bc6599301236a58f26c117c260d51"
+    },
+    "trajectory_manifest.jsonl": {
+      "sha256": "fc8ba9d9bf2b4eaa254052fe6003773514327cbf5b167f3796a95a0d87b5c9d4"
+    }
+  }
+}

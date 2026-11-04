@@ -1,0 +1,138 @@
+{
+  "status": "HISTORICAL_PREPARATION",
+  "checked_unix": 1793722214.054419,
+  "document": "extra_branches.md",
+  "document_sha256": "5a6e6ec1f032f8136a1b522f5f6312762fa052a82d03fbc99bf8426e2b2247da",
+  "sources": [
+    {
+      "path": "dmat_audit_20261029/reports/DMAT_REAL_ATD_DOWNLOAD_ZH.txt",
+      "bytes": 5008,
+      "sha256": "a847cc9e7ece916338bd65f7b2209552e2feba34e124d0beab69196e6c247b97",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "dmat_audit_20261029/reports/ORIGINAL_VIDEO_MANIFEST.csv",
+      "bytes": 15561,
+      "sha256": "ba8962c14e35fd59801604a62265c6ed80d0619b96d5386387936ac7c3036bd7",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "dmat_audit_20261029/evidence/ORIGINAL_VIDEO_RECEIPTS.json",
+      "bytes": 23116,
+      "sha256": "9c055940db575666dd862cc6f9db0858845a0327e41b9f497c4c6440bfeed37f",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "otis_audit_20261029/reports/OTIS_AUDIT_ZH.txt",
+      "bytes": 7545,
+      "sha256": "6ac7ce991b88eb259d74e3c5f092ea839c6c9a388768b57c39cb7327e917e499",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "otis_audit_20261029/reports/SAVED_DATA_ACCEPTANCE.json",
+      "bytes": 2626,
+      "sha256": "98a9778784b8f0aa6e1273d5f72b5b9a5c8dbb58d861635bf3dfd2860f9bb558",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "otis_audit_20261029/reports/PAIRED_STATIC_CANDIDATES.csv",
+      "bytes": 2061025,
+      "sha256": "dba85f7ab05578cebf6eaed2fbe41a3eefca8e3a02b8453a8080435d3e4485f0",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "heat_chamber_audit_20261029/reports/ACQUISITION_AND_SUITABILITY_ZH.md",
+      "bytes": 6011,
+      "sha256": "90f3672d01b34cbc76e37bb41cecf7dce62f84c7b2a20ee0e7d3873073c2c070",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "heat_chamber_audit_20261029/reports/EXTENDED_PUBLIC_SEARCH_ZH.md",
+      "bytes": 6166,
+      "sha256": "34f1cd3529f870e758841126aeed1b6c285b5a9e00b3498424f58021273474e6",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "real20_d0_turbwnet_20261029/reports/RESULTS_ZH.txt",
+      "bytes": 7271,
+      "sha256": "ca16ac5e4d72d8d8377702e8222e032176d7905f335eaa5f0f8cb6fdd1d4eab8",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "real20_d0_turbwnet_20261029/evidence/MODEL_ACCEPTANCE.json",
+      "bytes": 1813,
+      "sha256": "7126bcf21077a58e504359294bdadc8ef250765fb691bd9a3cb57c96756277a0",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "d0_real20_diagnosis_20261029/reports/DIAGNOSIS_ZH.txt",
+      "bytes": 12402,
+      "sha256": "926b95dfa3d8627bc20dde534dccc8d1ad10a65b98ad9e50f48ec79afb77f63c",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "d0_real20_diagnosis_20261029/evidence/FINAL_ACCEPTANCE.json",
+      "bytes": 455,
+      "sha256": "87b2d80fefa76ce4d6e617faf2254e52455dde9fcc066b568d63523835c5c2cf",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "g05_g4_fixed10_turbwnet_d0_20261030/reports/RESULTS_ZH.txt",
+      "bytes": 3261,
+      "sha256": "f0d017223b67a09ca451840a3f5893133cfc31e1a9184db82d706210b86aa23c",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "g05_g4_fixed10_turbwnet_d0_20261030/reports/SUMMARY_BY_G.csv",
+      "bytes": 1389,
+      "sha256": "7c16050c021068966a1a2b6f97b10d76aa72fd817ec60fbbf0ddbf553e725ffe",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "g05_g4_fixed10_turbwnet_d0_20261030/evidence/FINAL_ACCEPTANCE.json",
+      "bytes": 1766,
+      "sha256": "819ba0bdb1c29f6ae91c44284ae125d6dd4dce219ad97f136943306e9b5fdccc",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "latest_d0_turbwnet_20261029/reports/RESULTS_ZH.txt",
+      "bytes": 1144,
+      "sha256": "34092a43e43525ddeb3a94b81087ad47dc66febd78eb368937c8c9dfb25c225e",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "at_ddpm_overlap_20261029/FULL_COMPARISON_ZH.md",
+      "bytes": 9443,
+      "sha256": "d608f1d862839d9fe2d1f23c7e4eb2a62d109cf85bef4489f9e024ced221c2e0",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "unidb_warmup_review_20261102/REVIEW_ZH.md",
+      "bytes": 3435,
+      "sha256": "166e0998360be28fb107ac01877e30f92926a4828a1f2bacb6c78491777c86bc",
+      "scope": "Local historical evidence file hash; no new download, inference or remote process check"
+    },
+    {
+      "path": "v6_diffuir_l_20261027/external_eval_20261029_otis_atd/OTIS_ATD_EVALUATION_REPORT_ZH.md",
+      "bytes": 8134,
+      "sha256": "73941a7e9a057ad821f1a507e820c38ddcd21bcb23a91baf24f528ac63359e91",
+      "scope": "Historical completion supersedes earlier acquisition-only status; no model rerun"
+    },
+    {
+      "path": "v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/HANDOFF_CURRENT_ZH.md",
+      "bytes": 18752,
+      "sha256": "9af2467e246c3c4f23adeddf2f12710ec79cbb90464daa927273cd856eac0fae",
+      "scope": "Historical completion supersedes earlier acquisition-only status; no model rerun"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "web_sources_not_refreshed": true,
+  "current_handoff_complete": false,
+  "review_correction": {
+    "unix": 1793724060.1773682,
+    "reason": "Clarify OTIS acquisition report versus subsequently completed V6 frozen evaluations",
+    "new_model_calls": 0,
+    "path_prefix_fixed_unix": 1793724291.0412512
+  }
+}

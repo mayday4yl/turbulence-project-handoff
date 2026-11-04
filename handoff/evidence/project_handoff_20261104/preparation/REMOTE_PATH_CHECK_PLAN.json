@@ -1,0 +1,575 @@
+{
+  "status": "PLAN_ONLY_NOT_EXECUTED",
+  "prepared_UTC": "2026-11-03T16:16:50.575273+00:00",
+  "paths": [
+    {
+      "asset_id": "LEGACY_CODE",
+      "host_label_from_evidence": "liteserver-40b3",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_40b3>",
+      "path": "/data0/yanglin/physical_bridge",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/legacy_evidence.json",
+      "source_sha256": "5e69691092e342e27f6e841b4af15521e10695e000432a2e2d41f9b5f42f3ba3",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "DE36_BASE_ENV",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data0/yanglin/envs/physical_bridge/bin/python",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/scripts/run_env.sh",
+      "source_sha256": "47d9c4aa38fae25ff4ce4455d166ab2a512275cf520dfacf1bb55b44d43a6f3e",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "A100_ENV",
+      "host_label_from_evidence": "h3c-gpu-server01",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_h3c_gpu_server01>",
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/envs/py310_torch271_cu126_v1/bin/python",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/reports/A100_ENVIRONMENT.json",
+      "source_sha256": "978de125a9e10390e88db617519e6232f470d31b72f70280d90bc9e472898a0d",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V6_UNIDB_ENV",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/evidence/CURRENT_RUNTIME_ENVIRONMENT.json",
+      "source_sha256": "12e08392a044c4eaeaa158abc9ea3244e7dd3b7e3959fa07572ce28db6d070ae",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V5_SIM_CODE",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_v1_simulator_20261020",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/README.md",
+      "source_sha256": "5b9559edb2e7c7c999ac22858cffc070dc1eb188862f126032ba2fa742f3185d",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "SIM_P2S_model_pt",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/P2S_model.pt",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/simulator_v5.py",
+      "source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "SIM_dictionary_pt",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/dictionary.pt",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/simulator_v5.py",
+      "source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "SIM_I0_I2_pt",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/I0_I2.pt",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/simulator_v5.py",
+      "source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "SIM_CANONICAL_CPU_REFERENCE_npz",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/CANONICAL_CPU_REFERENCE.npz",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/simulator_v5.py",
+      "source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V4_TRAIN2000_DE36",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/configs/runtime.json",
+      "source_sha256": "4c9297f24eee26e67311162e24f77317399a473fc9b165c1cc9b8e106a22abd5",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V4_TRAIN2000_XI_RETAINED",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1/xi",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/storage_archives/A100_turbulence_cleanup_proposal_20261012/CLEANUP_RECEIPT.json",
+      "source_sha256": "53727e21dbe9145105f98e4902b2e7f6195f013c68fd4c78386b5fde06b5c887",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V4_TRAIN8000_A100",
+      "host_label_from_evidence": "h3c-gpu-server01",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_h3c_gpu_server01>",
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/FROZEN_DATA_METADATA_AUDIT.json",
+      "source_sha256": "48d7a11c64e38965f0b50caaf1cb5fd1d0394bfba7ff9c812ed0a8655925c4fd",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V5_DATA",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/DATA_READINESS_ZH.md",
+      "source_sha256": "611b96f9daf576fdd741772292136c02288fcda2cd1fcbd7bb9a6f38f371b0e9",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V6_DATA",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/datasets",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/reports/G1_DATA_REPORT_ZH.md",
+      "source_sha256": "a1e8a07cb860edd91debb4cfcf3275bf0d1c0faef3a911716f67d924df5f8e25",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V6_MULTIG_TRAIN_MANIFEST",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/TRAIN_MANIFEST.jsonl",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/evidence/DATA_GATE.json",
+      "source_sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "V6_MULTIG_VAL_MANIFEST",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/evidence/DATA_GATE.json",
+      "source_sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "PLACES_VAL_ARCHIVE",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/physical_bridge/data/source_archives/val_256.tar",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/evidence/G0_ASSET_PREFLIGHT.json",
+      "source_sha256": "664b1bb64bebfbccaa758adcb95b64f63f07d979e822e449e6ad21be714667aa",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "NAFNET_SIDD_OFFICIAL",
+      "host_label_from_evidence": "h3c-gpu-server01",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_h3c_gpu_server01>",
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_candidate_20261005/assets/pretrained/NAFNet-SIDD-width64.pth",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/protocol/PRETRAINED_SOURCE.json",
+      "source_sha256": "7715d12440788b442fae165ced1e0b2f2b262e1b4012977868248455736a91d5",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "CONCERTORMER_GOPRO_OFFICIAL",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/weights/Concertormer_GoPro_official.pth",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/model_remote_weight.json",
+      "source_sha256": "f91bc7f087515c4ab452fde2b443f110eaa50a68a0259f8a10a2cbde70115596",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "DIFFUIR_MODEL300_OFFICIAL",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v5_diffuir_l_stage1_20261026/weights/model-300.pt",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v5_diffuir_l_stage1_20261026/reports/FINAL_REPORT_ZH.md",
+      "source_sha256": "0a9b5c7abcd14f673f7390e01325ee1108bb34e36258fb007f8de6147021344d",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "UNIDB_SR_GAMMA1E7",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/unidb_d0_20261102/weights/sr_gamma_1e7.pth",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/protocol/LOCAL_WEIGHT_DOWNLOAD.json",
+      "source_sha256": "dbc0540c47e6f73981f03e167bc986c29db853a275543077b5c6d98b10d5bda0",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "LPIPS_ALEXNET",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/protocol/ENVIRONMENT.json",
+      "source_sha256": "017602b3a3483222553975970f0b8f3131f9331fd13e5d6d46b2a7e94acf0380",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "ARCHIVE_20_REMOTE",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_review_20261020/ARCHIVE_ACCEPTANCE.json",
+      "source_sha256": "4e286be00fcd018fab9f79015069967e8e6e855cef65df61e06fb16403aa4bb8",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "ARCHIVE_25_REMOTE",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/ARCHIVE_ACCEPTANCE.json",
+      "source_sha256": "b3a10774975be5ace4c20e1c86bd374deda760581f821f06d4cd38f50013db62",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "CLEANUP_12_RECEIPT",
+      "host_label_from_evidence": "h3c-gpu-server01",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_h3c_gpu_server01>",
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/maintenance/storage_cleanup_20261012/COMPLETE.json",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/storage_archives/A100_turbulence_cleanup_proposal_20261012/CLEANUP_RECEIPT.json",
+      "source_sha256": "53727e21dbe9145105f98e4902b2e7f6195f013c68fd4c78386b5fde06b5c887",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "NAFNET_STOP_D0",
+      "host_label_from_evidence": "h3c-gpu-server01",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_h3c_gpu_server01>",
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/D0/checkpoints/full_U40000.pt",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/user_stop_20261018/LOCAL_CHECKPOINT_BACKUP_ACCEPTANCE.json",
+      "source_sha256": "b6176ff0c773f99a290bfefdd1cca39c74b02d4821218dc494da9b1c93c7d944",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "UNIDB_CODE",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/unidb_d0_20261102",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/protocol/UPSTREAM_SOURCE.json",
+      "source_sha256": "8e3a89d37a39cecf0531cdba6ebb5312d4c04846df323c53ad0a95dc875a63b7",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    },
+    {
+      "asset_id": "UNIDB_MIDNIGHT_ROOT",
+      "host_label_from_evidence": "liteserver-de36",
+      "ssh_alias_placeholder": "<SSH_ALIAS_FOR_liteserver_de36>",
+      "path": "/data2/yanglin/unidb_dual_20261104_until00",
+      "operations": [
+        "exists",
+        "lstat/stat",
+        "is_symlink",
+        "is_file/is_dir",
+        "bytes",
+        "mtime_ns"
+      ],
+      "read_payload": false,
+      "recursive": false,
+      "executed": false,
+      "source_evidence": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/HANDOFF_REQUEST.json",
+      "source_sha256": "3e1f433fe4c375c4e6e26a28aff2a3e48270d83da26c812c55c3bbf7a0f58efd",
+      "meaning": "Metadata existence check only; not contentSHA/model/runtime readiness acceptance"
+    }
+  ],
+  "path_count": 28,
+  "network_or_remote_calls_this_asset_review": 0,
+  "no_traversal": true,
+  "no_downloads": true,
+  "no_credentials": true,
+  "no_model_import_or_tensor_load": true,
+  "no_signals_STOP_or_mutation": true,
+  "current_midnight_note": "Root owns ongoingterminalvalidation; thisplan onlystats exactroot,doesnottriggerfullstateauditor orfinalizer",
+  "permission_boundary": "Existingauthorizedhost/pathread-onlyscope; replacealiaslocally,donotreadSSHconfig orkeysfromthishandoff"
+}

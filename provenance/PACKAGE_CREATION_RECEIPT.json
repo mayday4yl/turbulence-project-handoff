@@ -1,0 +1,37 @@
+{
+  "status": "PORTABLE_SMALL_PACKAGE_CREATED_NOT_EXTERNAL_TRANSMISSION",
+  "created_receipt_unix": 1793730256.001693,
+  "command_exit_code": 0,
+  "directory": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff",
+  "zip": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff.zip",
+    "bytes": 29674149,
+    "sha256": "aaba5303f5b5d555d143cb40b131593079dbea29d2a22539a17ed126c912d827"
+  },
+  "manifest": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff/MANIFEST.json",
+    "bytes": 108943,
+    "sha256": "3a736d8b5e736e0ed1fe511cd1574501e241c6000cd71e96cfc6b1ac1f2d580d"
+  },
+  "source_count": 416,
+  "manifest_file_count": 561,
+  "checked_local_markdown_links": 694,
+  "root_docx_pdf_visual_qa": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/HANDOFF_FINAL_DOCUMENT_VISUAL_QA.json",
+    "bytes": 5479,
+    "sha256": "947fdb3afe84bd9dbe96c629697081bfd3e34a9548d8fbb800e69984296470c7"
+  },
+  "actual_inputs": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/package_preparation/PACKAGE_FINAL_INPUTS.json",
+    "bytes": 3750,
+    "sha256": "e0739c892540d0c6b30283141b3c0dbc2a53646ae67f5260da85338d65d99fb2"
+  },
+  "actual_dry_run": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/package_preparation/PACKAGING_DRY_RUN.json",
+    "bytes": 246855,
+    "sha256": "9e8e49b43040794fe31c2d8dcc1aad0520fee8e8745036077bfebe4734117f6b"
+  },
+  "payloads_included": false,
+  "chat_delivery_pending": true,
+  "external_transmission_performed": false
+}

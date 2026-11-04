@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "last": {
+    "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U157505.pt",
+    "sha256": "9e6b66e6a46434dc86b327dfce6be04d78aa1de61449d7791e282c62d52e0029",
+    "update": 157505,
+    "cursor": 3717660,
+    "stage_updates": 61961,
+    "old_G4_cursor": 5732640,
+    "cpu_readback": true
+  },
+  "best": {
+    "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U109544.pt",
+    "sha256": "5d7c57408af1a296f940997406c4bb2b2e876b9100ae20cd30ce2690a0d693a8",
+    "update": 109544,
+    "cursor": 840000,
+    "stage_updates": 14000,
+    "old_G4_cursor": 5732640,
+    "cpu_readback": true,
+    "validation": {
+      "status": "PASS",
+      "update": 109544,
+      "full_val1000_per_g": true,
+      "count": 5000,
+      "g_values": [
+        0.5,
+        1,
+        2,
+        3,
+        4
+      ],
+      "by_g": {
+        "0.5": {
+          "psnr": 25.98022582616571,
+          "ssim": 0.8126592993265419,
+          "lpips": 0.14448033687099815,
+          "mae": 0.03147415008198074,
+          "input_psnr": 25.170834311941398,
+          "input_ssim": 0.7587941511532414,
+          "input_lpips": 0.07494747577421366,
+          "input_mae": 0.035363938774343
+        },
+        "1": {
+          "psnr": 24.48931968721217,
+          "ssim": 0.7500357139118135,
+          "lpips": 0.17965020594000816,
+          "mae": 0.037213653936679046,
+          "input_psnr": 22.24176827289323,
+          "input_ssim": 0.618508816620545,
+          "input_lpips": 0.10602416064217687,
+          "input_mae": 0.049477644154632294
+        },
+        "2": {
+          "psnr": 22.882957502069235,
+          "ssim": 0.6617878403360499,
+          "lpips": 0.25369183205813167,
+          "mae": 0.0453650287357232,
+          "input_psnr": 20.306366255324075,
+          "input_ssim": 0.5135806055266076,
+          "input_lpips": 0.19167134827375412,
+          "input_mae": 0.06372611351143745
+        },
+        "3": {
+          "psnr": 21.99519402629824,
+          "ssim": 0.6039490272816842,
+          "lpips": 0.3601206909716129,
+          "mae": 0.05108200862192682,
+          "input_psnr": 19.471852182624986,
+          "input_ssim": 0.4758446847912819,
+          "input_lpips": 0.3613753688335419,
+          "input_mae": 0.07247536184037472
+        },
+        "4": {
+          "psnr": 20.982485446175307,
+          "ssim": 0.5358005206047843,
+          "lpips": 0.505751010030508,
+          "mae": 0.05823057894227683,
+          "input_psnr": 18.795937524221916,
+          "input_ssim": 0.4517511536247705,
+          "input_lpips": 0.5716285873651504,
+          "input_mae": 0.08017829378919374
+        }
+      },
+      "means": {
+        "psnr": 23.266036497584132,
+        "ssim": 0.6728464802921748,
+        "lpips": 0.28873881517425176,
+        "mae": 0.044673084063717325,
+        "input_psnr": 21.197351709401122,
+        "input_ssim": 0.5636958823432893,
+        "input_lpips": 0.2611293881777674,
+        "input_mae": 0.060244270413996236
+      },
+      "seconds": 369.370050907135,
+      "test_used": false,
+      "source_manifest_sha256": "07d4b430b5383371998e605a22f23af0fa33cf600c7fa8d8ac6a5b85eec59304"
+    },
+    "validation_path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/validation/U109544_1000",
+    "selection": {
+      "G4_floor": 20.96514236838766,
+      "eligible_count": 8,
+      "candidate_count": 33,
+      "Smax": 23.266036497584132,
+      "PSNR_tie": 0.02,
+      "criterion": "G4 retention then five-g mean PSNR, LPIPS, SSIM, earlier update"
+    }
+  },
+  "checkpoints": [
+    {
+      "status": "PASS",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U157505.pt",
+      "sha256": "9e6b66e6a46434dc86b327dfce6be04d78aa1de61449d7791e282c62d52e0029",
+      "update": 157505,
+      "cursor": 3717660,
+      "Adam_states": 276
+    },
+    {
+      "status": "PASS",
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U109544.pt",
+      "sha256": "5d7c57408af1a296f940997406c4bb2b2e876b9100ae20cd30ce2690a0d693a8",
+      "update": 109544,
+      "cursor": 840000,
+      "Adam_states": 276
+    }
+  ],
+  "final_five_g_validation": true,
+  "all_workers_exited": true,
+  "report_sha256": "3a29234e1832c6c9212f64f36b0997ccab75411ab2d6a936311ca4601bdc8483",
+  "stage_updates": 61961,
+  "stage_presentations": 3717660,
+  "test_used": false,
+  "independent_audit_sha256": "6f590db093be557f377bbc59ef9ebf03b65599aee3ef70c5304e088c70b4e04f",
+  "report_supplemented_preserving_automatic_original": true
+}

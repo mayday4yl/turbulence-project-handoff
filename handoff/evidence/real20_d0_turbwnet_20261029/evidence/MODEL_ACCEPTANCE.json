@@ -1,0 +1,76 @@
+{
+  "backend": "local_CPU_FP32",
+  "python": "/Users/lucas/Desktop/turbulence IR/real20_d0_turbwnet_20261029/env/bin/python",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "hostname": "MacBook-Air.local",
+  "torch": "2.7.1",
+  "D0_U14927_EMA": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "tensor_count": 276,
+    "parameters": 36261187,
+    "loaded_values_exact": true
+  },
+  "D0_buffers": {
+    "native": {
+      "count": 14,
+      "exact_match": true
+    },
+    "sampling": {
+      "count": 14,
+      "exact_match": true
+    }
+  },
+  "D0_NFE": 3,
+  "D0_sampler_source_unchanged": true,
+  "TurbWNet_full_checkpoint": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "tensor_count": 709,
+    "parameters": 32430816,
+    "loaded_values_exact": true
+  },
+  "TurbWNet_config": {
+    "dim": 48,
+    "num_blocks": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "num_refinement_blocks": 1,
+    "channel_heads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "spatial_heads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "overlap_ratio": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "window_size": 8,
+    "spatial_dim_head": 16,
+    "ffn_expansion_factor": 2.66,
+    "bias": false,
+    "LayerNorm_type": "WithBias",
+    "scale": 1
+  },
+  "weight_sha256": {
+    "v5_diffuir_l_stage1_20261026/weights/model-300.pt": "b9d07ab6b32d37d895be65c50e99bbe6b2ae6e32823e7304ec2167bc5f18843f",
+    "real20_d0_turbwnet_20261029/weights/U014927.pt": "0c7903726f262c56fb40333dcaf70e0e205109c618456bb39e216987bd48d9b6",
+    "turbwnet_zeroshot_20261028/weights/net_g_300000.pth": "a039c67176a0704a9db22cfefe6f58e78d09681e50c03ce73bfad34290b0843f"
+  },
+  "GT_read_by_inference_process": false,
+  "torch_npu_loaded": false,
+  "all_model_parameters_and_buffers_on_CPU": true,
+  "training_updates": 0
+}

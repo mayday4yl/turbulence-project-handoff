@@ -1,0 +1,98 @@
+OTIS 官方彩色 PNG 数据验收（2026-10-29）
+
+结论：完整官方包已取得且全部通过完整性与解码核验。可将 16 条静态 Pattern 序列的 4,328 个单帧样本作为固定真实图案测试候选；不宜将其当作覆盖自然 RGB 图像恢复的唯一真实测试集。评估的灰度、有效区域及窗口指标协议尚未冻结，本轮没有运行任何模型。
+
+1. 官方来源与完整性
+官方记录：https://zenodo.org/records/161439
+官方 API：https://zenodo.org/api/records/161439
+文件：OTIS_PNG_Color.zip
+数据 DOI：10.5281/zenodo.161439；记录 v1；发布时间 2016-10-17。
+记录元数据许可：CC BY 4.0。
+精确下载大小：283,564,104 bytes（283.564104 MB，十进制）。
+官方 MD5 与本地 MD5 一致：34c4be67fed6aeb03b87155c4eeaf1bd
+本地计算 SHA256：3d6ec49ddae59e32e4015743919bc111ab63f016d7dd7ea574e7548371579404
+官方记录只发布 MD5；SHA256 是本次计算的复现指纹。
+下载耗时约 198.94 秒。所有 ZIP 条目解压时 CRC 均通过；5,794 张 PNG 均通过 verify 与像素解码。
+解压后的 5,795 个文件再次逐个核对 SHA256，0 个不一致；输入帧编号均从 1 连续，无缺帧。
+原包除图像外仅包含 Catalogue.xlsx。压缩包共有 5,840 条目，其中含 45 个目录。
+
+2. 实际清点（不把 GT 或 Mask 当作退化输入）
+类别 | 序列数 | 退化输入帧数 | 清晰恢复 GT | 其他标注
+固定图案 Pattern1–16 | 16 | 4,328 | 每序列 1 张，共 16 张 | 有效区域 Mask 16 张
+自然场景 Door | 1 | 300 | 无 | 无
+动态汽车 Car1–4 | 4 | 567 | 无 | 每帧一个目标框二值 Mask，共 567 张
+总计 | 21 | 5,195 | 16 张 | 583 张 Mask
+PNG 总数为 5,195 + 16 + 583 = 5,794。所有序列输入数量与论文及随包 Catalogue.xlsx 一致。
+全部退化输入均为 RGB、uint8；输入帧之间没有逐像素完全相同的副本（全体 5,195 帧检查）。
+
+逐序列：序列 | 输入数 | 原生尺寸 W×H | 强度 | 清晰 GT
+Door | 300 | 520×520 | strong | 无
+Pattern1 | 64 | 302×309 | weak | 有
+Pattern2 | 64 | 291×287 | weak | 有
+Pattern3 | 300 | 113×117 | strong | 有
+Pattern4 | 300 | 109×113 | strong | 有
+Pattern5 | 300 | 113×117 | strong | 有
+Pattern6 | 300 | 109×113 | strong | 有
+Pattern7 | 300 | 122×125 | strong | 有
+Pattern8 | 300 | 119×122 | strong | 有
+Pattern9 | 300 | 152×157 | medium | 有
+Pattern10 | 300 | 149×149 | medium | 有
+Pattern11 | 300 | 172×183 | medium | 有
+Pattern12 | 300 | 172×173 | medium | 有
+Pattern13 | 300 | 202×202 | weak | 有
+Pattern14 | 300 | 196×193 | weak | 有
+Pattern15 | 300 | 134×139 | strong | 有
+Pattern16 | 300 | 135×135 | strong | 有
+Car1 | 100 | 200×200 | medium | 无
+Car2 | 315 | 500×200 | medium | 无
+Car3 | 51 | 300×300 | medium | 无
+Car4 | 101 | 300×300 | medium | 无
+
+图案部分按论文定性强度分组：weak 4 序列/728 帧；medium 4 序列/1,200 帧；strong 8 序列/2,400 帧。这些标签不是测得的物理参数。
+
+3. GT 的实际含义及限制
+原论文：https://arxiv.org/html/2410.22791v1 （该 arXiv 上传时间不等于数据集首发时间）。
+原论文说明：数据由室外热天真实大气湍流采集；16 条图案序列来自两种打印在海报上的测试图案。GT 由原始数字图案缩放，并在 GIMP 中人工配准到序列的时间平均图，而非关闭湍流后拍摄的同相机 clean 照片。
+因此 16 条序列不是 16 种独立自然场景；4,328 帧也不是 4,328 张独立 clean 内容，帧间存在时间相关性。
+文件实测：16 张 GT 都是 RGBA，RGB 三通道逐像素完全相同，实际内容为灰度图案；部分边缘 alpha 为中间值。
+官方独立二值有效区域 Mask 的覆盖率为 93.0792%–100%。部分序列的 Mask 不等于 alpha>0、alpha==255 或 alpha>=128，不能自行用 alpha 阈值替换官方 Mask。
+同一序列的所有输入、GT、有效区域 Mask 的原生宽高均一致。14/16 条图案序列的宽和高均小于 256。
+Door 无清晰 GT；Car 的 GT 目录实际是目标框二值图，用于检测/跟踪，不是恢复参考图。
+
+4. 固定真实测试的建议边界（本轮尚未运行评估）
+纳入全部 Pattern1–16，保持 4,328 个单帧候选 ID 与现有原图，不按恢复质量挑帧。
+每次模型只输入当前一张 RGB 退化帧；GT、Mask 只进入离线计分，不进入恢复网络；不使用相邻帧、时间平均或 GT 对齐来辅助恢复。
+保留原生尺寸，若网络要求整倍数，在输入端按统一规则 padding，并将输出恢复原尺寸；不把样本强制拉伸为 256×256。
+为灰度图案评估固定亮度转换及官方有效区域处理。PSNR/MAE 可在有效区域定义；SSIM 窗口及 LPIPS 特征对无效边缘的处理要在运行前固定。不得临时依据不同模型输出改后处理或 GT 配准。
+PSNR 会受数字模板与相机拍摄的曝光、色偏、打印响应差异影响，不能与 G4 RGB 指标视为同一量尺。原论文偏重 SSIM。
+逐帧指标之外，应同时汇报逐序列均值和序列等权宏平均，并按三档强度分组。不要把相关视频帧当独立样本给置信区间。
+建议用途：真实湍流几何校正、边缘/分辨率图案恢复的补充实测；自然内容泛化仍需额外真实自然图像数据。
+PAIRED_STATIC_CANDIDATES.csv 只冻结文件配对候选，metric_protocol_status 明确为 pending，不能声称已完成正式测试协议或模型质量验收。
+
+5. 后续论文使用情况（核对原文，不据此声称存在统一单帧榜单）
+ConVRT，NeurIPS 2024，Section 4.1 明确列出 OTIS、HeatChamber、BVI-CLEAR 等真实数据进行评估：
+https://proceedings.neurips.cc/paper_files/paper/2024/file/4eb91efe090f72f7cf42c69aab03fe85-Paper-Conference.pdf
+TMFS，CVPR 2026，Figure 7 及正文在 OTIS 上做定性比较：
+https://openaccess.thecvf.com/content/CVPR2026/papers/Xie_Physically-Grounded_Turbulence_Mitigation_with_Frame-Shared_Degradation_Parameters_CVPR_2026_paper.pdf
+这些证明 OTIS 持续被后续论文采用，但其多帧/逐序列优化方法及具体选帧协议不能直接当作我们的单帧成绩对照。
+
+6. 本地交付与复现
+downloads/OTIS_PNG_Color.zip：官方原包。
+data/OTIS_PNG_Color/：已逐文件核验的原始解压文件，未改变颜色、尺寸、GT 或 Mask。
+reports/FILE_INVENTORY.csv：全部文件的路径、精确大小、CRC、SHA256。
+reports/PNG_INVENTORY.csv：全部 PNG 的模式、尺寸、范围、像素哈希等。
+reports/SEQUENCE_COUNTS.csv：逐序列统计。
+reports/PAIRED_STATIC_CANDIDATES.csv：4,328 个单帧配对候选，包含原图/GT/Mask 路径与哈希。
+reports/AUDIT_RESULT.json、reports/SAVED_DATA_ACCEPTANCE.json：结构化验收结果。
+reports/OTIS_INPUT_GT_MASK_PREVIEW.png：仅用于展示的拼图，包含两类图案；GT 在白底合成、缩放只发生于预览，原始文件不变。
+环境：本地 Python 3.9，Pillow 11.3.0（/tmp/otis_audit_deps 隔离安装），NumPy 2.0.2。未连接任何服务器，未使用 NPU/GPU，未运行模型。
+
+复现（在项目根目录运行）：
+python3 -m pip install --target /tmp/otis_audit_deps Pillow==11.3.0 numpy==2.0.2
+python3 otis_audit_20261029/scripts/download_otis.py
+PYTHONPATH=/tmp/otis_audit_deps python3 otis_audit_20261029/scripts/audit_otis.py
+python3 otis_audit_20261029/scripts/validate_saved.py
+
+只复核已下载文件时不必联网：
+cd otis_audit_20261029
+shasum -a 256 -c SHA256SUMS

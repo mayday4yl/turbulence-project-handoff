@@ -1,0 +1,22 @@
+{
+  "status": "PASS_BYTE_IDENTICAL_TERMINAL_LATEST_FINAL_ROLE_AUDIT_PENDING",
+  "branch": "improved",
+  "update": 40848,
+  "pid": 54759,
+  "pid_start": "Wed Nov  4 01:11:35 2026",
+  "started_unix": 1793725895.078408,
+  "source_path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00040848.pt",
+  "source_bytes": 2194679415,
+  "source_sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+  "local_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/U00040848.pt",
+  "final_state_acceptance": false,
+  "final_role_acceptance": false,
+  "new_model_calls": 0,
+  "optimizer_updates": 0,
+  "rsync_pid": 54761,
+  "rsync_pid_start": "Wed Nov  4 01:11:35 2026",
+  "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+  "bytes": 2194679415,
+  "local_mtime_ns": 1793721611000000000,
+  "SHA_verified_unix": 1793727540.1499789
+}

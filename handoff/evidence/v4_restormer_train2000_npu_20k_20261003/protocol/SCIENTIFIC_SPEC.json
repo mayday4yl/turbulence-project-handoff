@@ -1,0 +1,146 @@
+{
+  "experiment": "v4_restormer_train2000_npu_20k_20261003",
+  "authorized_at": "2026-10-02T16:23:26.308529+00:00",
+  "authorization_source": "User full unattended execution prompt 2026-10-03 Asia/Shanghai",
+  "methods": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "backbone": {
+    "authority": "D2Turb public Restormer pinned candidate",
+    "commit": "bbc28441b7212cc55319124a081ed6c0001879ef",
+    "pretrained": false,
+    "initialization": "candidate random learned tensors shared by all methods, new train-only frozen stats binding"
+  },
+  "data": {
+    "dataset_id": "places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+    "seed": 20261003,
+    "categories": 50,
+    "sources_per_category": {
+      "train": 40,
+      "val": 5,
+      "test": 4
+    },
+    "sources": {
+      "train": 2000,
+      "val": 250,
+      "test": 200
+    },
+    "realizations_per_source": {
+      "train": 4,
+      "val": 2,
+      "test": 2
+    },
+    "severities": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "starts": {
+      "train": 32000,
+      "val": 2000,
+      "test": 1600
+    },
+    "generalization": "same-category/unseen-image",
+    "source_disjoint": true,
+    "canonical_generation_paths": 1,
+    "preprocessing": "inherit accepted V4 exactly",
+    "normalization": "recompute train-only mu,s from 32000 states; no val/test",
+    "test_locked": true
+  },
+  "training": {
+    "updates_per_method": 20000,
+    "effective_batch": 32,
+    "updates_per_epoch": 1000,
+    "epochs": 20,
+    "exposures_per_method": 640000,
+    "full_BPTT": true,
+    "loss": "mean_RGB_fullimage_MAE(clean,C)+0.2*mean_RGB_fullimage_MAE(F(clean,raw_xi,G),Y)",
+    "reduction": "mean over each sample path then mean over effective batch",
+    "training_refinement": false,
+    "perceptual_loss": false,
+    "optimizer": {
+      "type": "AdamW",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "no_decay": "norm parameters and biases"
+    },
+    "grad_clip_norm": 1.0,
+    "ema_decay_per32": 0.996,
+    "schedule": {
+      "type": "update_linear_warmup_cosine",
+      "warmup": 500,
+      "peak": 0.0001,
+      "end": 1e-05,
+      "horizon": 20000
+    }
+  },
+  "execution": {
+    "host": "liteserver-de36",
+    "method_devices": {
+      "D0": 0,
+      "R0": 1,
+      "R08": 2,
+      "L08": 3
+    },
+    "precision": "BF16 preferred, validated model AMP with sensitive physics/loss FP32",
+    "microbatch": "largest stable divisor of32, calibrated per method",
+    "A100_formal_training": false,
+    "A100_assets_independent": true,
+    "preserve_unrelated_jobs": true
+  },
+  "evaluation": {
+    "scalar_every": 20,
+    "monitor_every": 500,
+    "full_validation_every": 2000,
+    "full_validation_starts": 2000,
+    "metrics": [
+      "PSNR",
+      "SSIM",
+      "LPIPS"
+    ],
+    "weights": "RAW",
+    "primary_refinement": "OFF",
+    "checkpoint_every": 1000,
+    "latest_keep": 2,
+    "milestones": [
+      5000,
+      10000,
+      20000
+    ],
+    "milestone_outputs": [
+      "fullval",
+      "progression_by_G",
+      "paired_ablation",
+      "qualitative",
+      "fulltrain",
+      "R0_R08_serial_refinement_OFF_ON"
+    ],
+    "reports_block_training": false,
+    "refinement": {
+      "parent": "v4_swinir_l1_train500_2k_20261001/protocol/REFINEMENT_ABLATION.json",
+      "steps": 40,
+      "lambda": 0.01,
+      "lr": 0.01,
+      "execution": "per_sample_serial",
+      "selection": "minimum_total_J_including_initial"
+    },
+    "best_selection": "RAW_OFF_fullval2000_mean_PSNR_on_declared_fullval_and_milestone_grid; earlier on tie",
+    "test_access_for_evaluation": false
+  },
+  "recovery": {
+    "automatic": true,
+    "method_failures_isolated": true,
+    "durable_checkpoint_boundary": true,
+    "save_emergency_on_handled_errors": true,
+    "same_repeated_unrecoverable_error_stop_method_only": true,
+    "early_val_stopping": false
+  }
+}

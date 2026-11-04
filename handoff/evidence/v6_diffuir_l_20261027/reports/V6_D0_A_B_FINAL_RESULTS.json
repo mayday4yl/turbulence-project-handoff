@@ -1,0 +1,156 @@
+{
+  "status": "D0_COMPLETE_A_B_NOT_RUN_METHOD_DETAIL_PENDING",
+  "checked_at": "2026-10-27 09:01:47 CST",
+  "formal_updates": {
+    "D0": 10000,
+    "A": 0,
+    "B": 0
+  },
+  "targets": {
+    "D0": 10000,
+    "A": 6000,
+    "B": 4000
+  },
+  "D0_best_update": 10000,
+  "D0_best_metrics": {
+    "psnr": 21.033938489506035,
+    "mae": 0.056372885174779494,
+    "ssim": 0.5474573339201539,
+    "lpips": 0.5312090688198805,
+    "input_psnr": 18.795937524221916
+  },
+  "D0_best_sha256": "505d1f865e46c429fccc5a7701c6216cc7f088176d1e78549960f6cc3f653e39",
+  "D0_validation_curve": [
+    {
+      "update": 0,
+      "psnr": 18.592240243421635,
+      "mae": 0.08007468184274165,
+      "ssim": 0.45175666756360316,
+      "lpips": 0.5151060271859169,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 1000,
+      "psnr": 19.765362129251418,
+      "mae": 0.0662741149328375,
+      "ssim": 0.502008054147996,
+      "lpips": 0.581501404672861,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 2000,
+      "psnr": 20.58730672907969,
+      "mae": 0.05990244624490491,
+      "ssim": 0.5288874861506074,
+      "lpips": 0.5592953682392836,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 3000,
+      "psnr": 20.76934009299188,
+      "mae": 0.058459227431346725,
+      "ssim": 0.5358695021878319,
+      "lpips": 0.5496386459618807,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 4000,
+      "psnr": 20.86761982756144,
+      "mae": 0.05768648480827438,
+      "ssim": 0.5398370788591563,
+      "lpips": 0.5437846789807081,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 5000,
+      "psnr": 20.92778477323794,
+      "mae": 0.05720604841847247,
+      "ssim": 0.5425145482711923,
+      "lpips": 0.5395225196778775,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 6000,
+      "psnr": 20.96788388336788,
+      "mae": 0.056886808114426354,
+      "ssim": 0.544365454925963,
+      "lpips": 0.5364745976924896,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 7000,
+      "psnr": 20.99791261996746,
+      "mae": 0.05665939021611292,
+      "ssim": 0.5456849708998398,
+      "lpips": 0.5343060929328203,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 8000,
+      "psnr": 21.01602875565771,
+      "mae": 0.05651342911885503,
+      "ssim": 0.5465487887060425,
+      "lpips": 0.532795369759202,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 9000,
+      "psnr": 21.02343436058175,
+      "mae": 0.05644492674432519,
+      "ssim": 0.5470220067735113,
+      "lpips": 0.5318893659561873,
+      "input_psnr": 18.795937524221916
+    },
+    {
+      "update": 10000,
+      "psnr": 21.033938489506035,
+      "mae": 0.056372885174779494,
+      "ssim": 0.5474573339201539,
+      "lpips": 0.5312090688198805,
+      "input_psnr": 18.795937524221916
+    }
+  ],
+  "paired_val1000": {
+    "delta_vs_input": {
+      "mean": 2.2380009652841166,
+      "median": 2.067938838007578,
+      "min": -2.030953053154839,
+      "max": 7.378591814949175,
+      "positive_trajectories": 983,
+      "total_trajectories": 1000,
+      "mean_source_delta": 2.2380009652841166
+    },
+    "delta_vs_u0": {
+      "mean": 2.4416982460844032,
+      "median": 2.313515411362042,
+      "min": -2.795818598878057,
+      "max": 7.946284207105261,
+      "positive_trajectories": 974,
+      "total_trajectories": 1000,
+      "mean_source_delta": 2.4416982460844032
+    },
+    "delta_vs_old_v5": {
+      "mean": -0.40956723063251244,
+      "median": -0.4296260029716965,
+      "min": -5.298669844024676,
+      "max": 3.7533432096831625,
+      "positive_trajectories": 229,
+      "total_trajectories": 1000,
+      "mean_source_delta": -0.40956723063251244
+    }
+  },
+  "old_v5_reference_metrics": {
+    "psnr": 21.44350572013855,
+    "ssim": 0.5740724176120517,
+    "lpips": 0.45879667487740516,
+    "mae": 0.052756673975847664
+  },
+  "old_v5_reference_csv_sha256": "741fc55e4f74f5e9212cbf9e5c181c445098971303a026e70b1dc600a99115dd",
+  "old_v5_not_controlled_backbone_comparison": true,
+  "data_fingerprint_sha256": "0eb85bfd1d783b25ec3145d65de02da71176bce7c880dde7e183c8aa140b53d0",
+  "completion_audit_sha256": "37f13136242517e30e1ce064806307f55cd49b47a0ce6330d3901b36a2017623",
+  "checkpoint_audit_sha256": "51899c1be3f51e67bcff95e64d48fff49f1f83a767a491b1086dc798e8d40f8e",
+  "test_restoration_used": false,
+  "quality_is_not_blocker": true,
+  "blocking_issue": "Method Spec 4.2 xi Head physical time modulation equation/injection/initialization not defined; awaiting existing Q1 answer"
+}

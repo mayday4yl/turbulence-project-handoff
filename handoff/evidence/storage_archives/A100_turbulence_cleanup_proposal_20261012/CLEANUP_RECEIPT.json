@@ -1,0 +1,99 @@
+{
+  "allocated_GiB_unlinked": 560.7314720153809,
+  "allocated_bytes_unlinked": 602080833536,
+  "candidate_scope": "/home/zhuzhiyu/yanglin/turbulence_ir",
+  "de36_backup_full_sha": {
+    "all_actual_SHA_match_frozen_manifest": true,
+    "bytes_read": 354630681600,
+    "checked": 17800,
+    "elapsed_seconds": 370.0784644987434,
+    "no_remote_writes": true,
+    "scope": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1/xi",
+    "status": "PASS_FULL_DE36_CANONICAL_XI_SHA",
+    "total": 17800
+  },
+  "deleted_files": 18114,
+  "elapsed_seconds": 621.9545912109315,
+  "empty_xi_directories_removed": 8901,
+  "groups": {
+    "A": 17800,
+    "B": 86,
+    "C": 7,
+    "D": 221
+  },
+  "no_process_signals_or_training_restarts": true,
+  "protected_actual_sha_before_and_after": [
+    {
+      "bytes": 471308601,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/protocol/common_init.pt",
+      "sha256": "17aa7aca8cbe5fcff6d5af9631cb2c92cf68fc1c13e8e37f9ee9d5d53b0b9d8b"
+    },
+    {
+      "bytes": 471328539,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_candidate_20261005/protocol/pretrained_common_init.pt",
+      "sha256": "b5ed0a9b430618f477c7b1bc0377537365f74df384df2ae20a6874b7d8214b2b"
+    },
+    {
+      "bytes": 464154961,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_candidate_20261005/assets/pretrained/NAFNet-SIDD-width64.pth",
+      "sha256": "cd685efaae01f7c4e9951f2deab05780079c8eb1e49ed664b72f6db04dabb445"
+    },
+    {
+      "bytes": 1885306767,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/runs/phase1/D0/checkpoints/full_U20000.pt",
+      "sha256": "625d5bad5d8c0eb8fc07cb9371e448c978b48086d5595dddc725a9cf27d4a844"
+    },
+    {
+      "bytes": 1885306767,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/runs/phase1/R0/checkpoints/full_U20000.pt",
+      "sha256": "1a081d67d2af6307d4199140b4f05b4106f8317ac6133039c12d8aa6a1dd7c18"
+    },
+    {
+      "bytes": 1885306767,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/runs/phase1/R08/checkpoints/full_U20000.pt",
+      "sha256": "c57e224b18ea80902017bab3b8c1a230cf2b27f7990b24345ff392e935f3c9d9"
+    },
+    {
+      "bytes": 1885306767,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/runs/phase1/L08/checkpoints/full_U20000.pt",
+      "sha256": "c06049b32f8891c19915532a34a93c1d6ef06037bdd8fdf1f02d8f9caae0e2ad"
+    },
+    {
+      "bytes": 14515,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/configs/FROZEN_RUNTIME.json",
+      "sha256": "6426b0a895818768be100feeaf8a4f95335bc6560c64fcf0e65925227683a264"
+    },
+    {
+      "bytes": 5159,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/protocol/LAUNCH_GATE.json",
+      "sha256": "f9a4a4b3b3883bb28a007839b236ded60cfeab08cfc047f84cf0b9a1b25e7a67"
+    },
+    {
+      "bytes": 2817,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/protocol/SCIENTIFIC_SPEC.json",
+      "sha256": "2cd98eb647892b4adb8c23f1a83698edb4605f199bb81c5fd9437d3a14cc29a8"
+    },
+    {
+      "bytes": 2220,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_COMPLETE.json",
+      "sha256": "4385831f7572893238b99dfe1df38580534f6b2c31010cdd8835a409e954c063"
+    },
+    {
+      "bytes": 62857,
+      "path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/FINAL_ACCEPTANCE.json",
+      "sha256": "9f7d93ae7f07c5f0c516416da415cf5ff8f07d75359c89d4b23fc01919e4af17"
+    }
+  ],
+  "retained_artifact_fingerprint_after": {
+    "retained_file_count": 580442,
+    "retained_identity_fingerprint_sha256": "3d6260e842214e7f2cb8a505f72f2d53c5bdea0d17af10880cb5a7bfd6f1ccac",
+    "retained_logical_bytes": 381791968668
+  },
+  "retained_artifact_fingerprint_before": {
+    "retained_file_count": 580442,
+    "retained_identity_fingerprint_sha256": "3d6260e842214e7f2cb8a505f72f2d53c5bdea0d17af10880cb5a7bfd6f1ccac",
+    "retained_logical_bytes": 381791968668
+  },
+  "status": "PASS_AUTHORIZED_TURBULENCE_ONLY_CLEANUP_COMPLETE",
+  "teacher_and_other_project_paths_excluded": true
+}

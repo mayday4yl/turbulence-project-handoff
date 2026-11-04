@@ -1,0 +1,141 @@
+{
+  "status": "PASS_METADATA_ONLY",
+  "began_unix": 1793718078.8600402,
+  "completed_unix": 1793718081.7083864,
+  "root": "/data2/yanglin/unidb_dual_20261104_until00",
+  "branch": "original",
+  "update": 65411,
+  "weights": "EMA",
+  "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00065411_ema_full",
+  "checkpoint_sha256_metadata": "35376e15d2d462573aa46800a68d54e9bbe32703e143af53e473c525e6ba4e20",
+  "checkpoint_bytes_stat_verified": 2194706735,
+  "parameter_digest_evaluation_EMA": "0f8950620b0d25400cc4e914e7cca83b9ed3ebb895b747cde38ffe7d8f30b468",
+  "summary": {
+    "status": "PASS",
+    "branch": "original",
+    "update": 65411,
+    "weights": "EMA",
+    "full": true,
+    "count": 5000,
+    "sources_per_g": 250,
+    "per_g": 1000,
+    "by_g": {
+      "0.5": {
+        "psnr": 21.62024228123969,
+        "ssim": 0.6422593798429367,
+        "lpips": 0.07468536229338497,
+        "mae": 0.050948364495124875,
+        "input_psnr": 25.170834311941398
+      },
+      "1": {
+        "psnr": 20.15506887637161,
+        "ssim": 0.5503295700202102,
+        "lpips": 0.09084347211848945,
+        "mae": 0.0612349006141655,
+        "input_psnr": 22.24176827289323
+      },
+      "2": {
+        "psnr": 18.318737818017237,
+        "ssim": 0.4480767349880103,
+        "lpips": 0.12681921641528607,
+        "mae": 0.07694201590767076,
+        "input_psnr": 20.30636625532408
+      },
+      "3": {
+        "psnr": 17.3773305483948,
+        "ssim": 0.3991995979770518,
+        "lpips": 0.20458088447898626,
+        "mae": 0.08732005370678653,
+        "input_psnr": 19.471852182624982
+      },
+      "4": {
+        "psnr": 16.191891822559644,
+        "ssim": 0.3147485070597237,
+        "lpips": 0.41143062341213227,
+        "mae": 0.10338766403634532,
+        "input_psnr": 18.795937524221916
+      }
+    },
+    "nfe_per_image": 100,
+    "sampler": "native_reverse_sde",
+    "precision": "FP32/HF32off",
+    "image_clip_crop_resize": false,
+    "seconds": 4549.638882637024,
+    "selection_role": "full_validation",
+    "training_RNG_restored": true,
+    "test_used": false,
+    "parameter_digest": "0f8950620b0d25400cc4e914e7cca83b9ed3ebb895b747cde38ffe7d8f30b468"
+  },
+  "group_files": 1250,
+  "records": 5000,
+  "records_per_g": {
+    "0.5": 1000,
+    "1": 1000,
+    "2": 1000,
+    "3": 1000,
+    "4": 1000
+  },
+  "rank_record_counts": {
+    "0": 1668,
+    "1": 1668,
+    "2": 1664
+  },
+  "passed_checks": 33572,
+  "recorded_mean_absolute_errors": {
+    "0.5": {
+      "psnr": 0.0,
+      "ssim": 0.0,
+      "lpips": 0.0,
+      "mae": 0.0,
+      "input_psnr": 0.0
+    },
+    "1": {
+      "psnr": 0.0,
+      "ssim": 1.1102230246251565e-16,
+      "lpips": 0.0,
+      "mae": 6.938893903907228e-18,
+      "input_psnr": 0.0
+    },
+    "2": {
+      "psnr": 0.0,
+      "ssim": 0.0,
+      "lpips": 0.0,
+      "mae": 0.0,
+      "input_psnr": 3.552713678800501e-15
+    },
+    "3": {
+      "psnr": 3.552713678800501e-15,
+      "ssim": 5.551115123125783e-17,
+      "lpips": 0.0,
+      "mae": 0.0,
+      "input_psnr": 0.0
+    },
+    "4": {
+      "psnr": 0.0,
+      "ssim": 0.0,
+      "lpips": 0.0,
+      "mae": 0.0,
+      "input_psnr": 3.552713678800501e-15
+    }
+  },
+  "source_identity": {
+    "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py": "81aac46fe9150fdc36d858d33275c0a34ae9d5e5a1b8acc9cb3cb5b06c9ea2c1",
+    "/data2/yanglin/unidb_dual_20261104_until00/validation.py": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f",
+    "/data2/yanglin/unidb_d0_20261102/data.py": "72682ee4ce60fc1f197e69bee49f5f802e234a366800c5df43fee371aa11900c",
+    "/data2/yanglin/unidb_d0_20261102/core.py": "1bc3d1cc551d9ef8f24cf70bb5a97e0663c4b5fffa0115ef86ced7646ce4c7d5"
+  },
+  "review_script_sha256": "456ba6dcd62ecd61497a6c83b3af768bd6fee97f38c0008e59f116a021d85953",
+  "scope": "Exact canonical identities/EMA digest consistency/metadata binding/JSONL SHA/record order/arithmetic of recorded metrics only",
+  "limits": [
+    "Checkpoint payload not read or rehashed; Adam/EMA/RNG full-state CPU acceptance remains required.",
+    "Periodic checkpoint sidecar full_parameter_digest is null. No independent checkpoint EMA tensor digest binding is claimed here.",
+    "No prediction/input/clean payload SHA rehash or fresh metric calculation. Final saved-output CPU audit remains required.",
+    "Midpoint full validation does not establish convergence, successful restoration, or generalization."
+  ],
+  "restoration_model_calls": 0,
+  "metric_model_calls": 0,
+  "optimizer_steps": 0,
+  "NPU_calls": 0,
+  "checkpoint_tensor_loads": 0,
+  "prediction_payload_reads": 0
+}

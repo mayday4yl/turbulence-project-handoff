@@ -1,0 +1,12 @@
+{
+  "group": "R08",
+  "T0": 0.8,
+  "path": "physical",
+  "predictions": "G",
+  "refinement": "optional_serial",
+  "common_runtime": "configs/runtime.json",
+  "common_initialization": "protocol/common_init.pt",
+  "loss": "path_mean(LC + 0.2 LR); batch_mean",
+  "learned_parameters": "shared+clean+realization",
+  "full_BPTT": true
+}

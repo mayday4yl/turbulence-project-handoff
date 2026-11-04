@@ -1,0 +1,19 @@
+{
+  "parent": "v4_swinir_l1_train500_2k_20261001",
+  "files": {
+    "v4/__init__.py": "ec4c7c6b24e386d8a5b4d183171bac92c995932e79f00670530e0565bf18241c",
+    "v4/core.py": "48a7158894d8ab335840c683092c9505b90fa27820727656cadca9b90c8149a3",
+    "v4/training.py": "ad4b7c4bd88a11de74b34da8094f571c2c35e8e70a770520cf63536eaaf1d156",
+    "v4/normalization.py": "011b803b557e4efdf2af0135b9aa3f17a68fb75af47dfa3e3ba6511596769768",
+    "v4/data.py": "90692f7135d316b6ec135a8d8a1d505b38d39ad3ed5421c50a1e2eecb5af17c1",
+    "v4/runtime.py": "d98b79f363a32393bfdb85c064f0b8ef31831bd589f7ff7cfab3d81589694cd4",
+    "v4/refinement.py": "c5f39f691f304ef30ec87024430e0c3d920df0205c12efa763dd8c0c1429c40d",
+    "v4/inference.py": "d07c1f9a073256366a7ded951166853f6faa889dde7e1af7abdc5053abf05cb4",
+    "v4/model.py": "bdcf36c92bc9e180cda9a73acd8bad7a623bcf54e992a165525b5e3c647ebf6d",
+    "physical_bridge/__init__.py": "c7993d49fe900729e0e209414972517a19534fd0eba216af9c223163624e6fae",
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "protocol/normalization_train500.json": "63565fc8fff255495b7329bd492fff9add30586e453b44fd087c1f789abf3502"
+  },
+  "scope": "Byte-identical scientific objective, simulator, normalization, model interfaces. Legacy training helper schedules are NOT selected for this candidate; no trainer copied."
+}

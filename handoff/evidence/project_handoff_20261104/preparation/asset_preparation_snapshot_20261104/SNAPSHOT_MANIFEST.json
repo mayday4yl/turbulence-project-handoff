@@ -1,0 +1,57 @@
+{
+  "status": "PASS_PRESERVED_PRE_FINAL_ASSET_PREPARATION",
+  "captured_UTC": "2026-11-03T18:09:36.997532+00:00",
+  "scope": "Small preparation evidence snapshot only; no checkpoint/array/model access",
+  "original_rows": 77,
+  "files": [
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/ASSET_REGISTER.csv",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/ASSET_REGISTER.csv",
+      "relative_path": "ASSET_REGISTER.csv",
+      "bytes": 54775,
+      "sha256": "c814a546b720b484eac73366dbc5ca80af62035725468dad7fdba5449051ea5a"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_evidence.json",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/asset_evidence.json",
+      "relative_path": "asset_evidence.json",
+      "bytes": 202941,
+      "sha256": "b58324dae5605dbea2944ac1b84eb1255df70fe4ee95e6fa921b3411186c93a8"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/OPERATIONS_GUIDE_ZH.md",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/OPERATIONS_GUIDE_ZH.md",
+      "relative_path": "OPERATIONS_GUIDE_ZH.md",
+      "bytes": 16551,
+      "sha256": "ad9191f82754761b9e6589af22b084bbca9b4fb13346853145b917b8533cc44c"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/build_asset_register.py",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/build_asset_register.py",
+      "relative_path": "build_asset_register.py",
+      "bytes": 29892,
+      "sha256": "9f404afe59adb6c5523e1caa0311e1c759833b4c2cde42ad215ac60b12a926d7"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/REMOTE_PATH_CHECK_PLAN.json",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/REMOTE_PATH_CHECK_PLAN.json",
+      "relative_path": "REMOTE_PATH_CHECK_PLAN.json",
+      "bytes": 23293,
+      "sha256": "c9ad7006d75a9dcaec1827953cf073b130bd5c451e7d469674f967a04bfeffff"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/REMOTE_PATH_CHECK_RESULT.json",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/REMOTE_PATH_CHECK_RESULT.json",
+      "relative_path": "REMOTE_PATH_CHECK_RESULT.json",
+      "bytes": 10602,
+      "sha256": "8e9529abd5cc10253805bf31bd680ff17ba8e3c05c001c34f091673b7913e230"
+    },
+    {
+      "original_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/REMOTE_PATH_CHECK_RESULT_A100.json",
+      "snapshot_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/asset_preparation_snapshot_20261104/REMOTE_PATH_CHECK_RESULT_A100.json",
+      "relative_path": "REMOTE_PATH_CHECK_RESULT_A100.json",
+      "bytes": 583,
+      "sha256": "71d7e45f63182be61e579a622fe5922b60046b05866a656b2dcaffd9d3c6f583"
+    }
+  ]
+}

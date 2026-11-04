@@ -1,0 +1,25 @@
+{
+  "host": "h3c-gpu-server01",
+  "python": "3.10.20 (main, Aug  7 2026, 02:25:15) [Clang 22.1.3 ]",
+  "executable": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/envs/py310_torch271_cu126_v1/bin/python",
+  "torch": "2.7.1+cu126",
+  "cuda_runtime": "12.6",
+  "cudnn": 90501,
+  "package_versions": {
+    "torch": "2.7.1+cu126",
+    "torchvision": "0.22.1+cu126",
+    "numpy": "1.26.4",
+    "lpips": "0.1.4",
+    "scikit-image": "0.25.2",
+    "einops": "metadata_unavailable"
+  },
+  "static_only": true,
+  "formal_training_started": false,
+  "gpu_initialized": false,
+  "reused_links": {
+    "deps": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_metrics_20260929/deps",
+    "assets/torch": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_metrics_20260929/assets/torch",
+    "assets/pirn": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/assets/pirn_utils/PiRN_12b9ef6a32c7"
+  },
+  "time": 1790961628.9172819
+}

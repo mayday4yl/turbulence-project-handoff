@@ -1,0 +1,713 @@
+{
+  "status": "PASS",
+  "scope": "Actual midnight formal START full-state preservation and first3-update engineering acceptance; no restoration quality/convergence/generalization or midnight completion claim.",
+  "branches": [
+    {
+      "status": "PASS",
+      "branch": "original",
+      "update": 61764,
+      "cursor": 5929344,
+      "parent": {
+        "path": "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt",
+        "sha256": "d8b6e9bafac6f8d7368a9418f9bcc46b9e4838d7f3a7652028144c42dc1b471a"
+      },
+      "START": {
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00061764.pt",
+        "sha256": "66ad41f27483daf1c0bdd05f848d39b4c1757eee55c4b7ecc68a2f38911cb235",
+        "bytes": 2194706735
+      },
+      "categories": {
+        "RAW151": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 151,
+          "tensor_bytes_compared": 548590092,
+          "numpy_arrays": 0
+        },
+        "Adam151_all_groups_steps_moments": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 453,
+          "tensor_bytes_compared": 1097180788,
+          "numpy_arrays": 0
+        },
+        "EMA151_and_all_state": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 153,
+          "tensor_bytes_compared": 548590101,
+          "numpy_arrays": 0
+        },
+        "counts": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "original_D0_or_SR_lineage": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "data_positions": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "initial_update": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "new_updates": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "logical_world_size": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "physical_world_size": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "scaler": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "all_method_RNG": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 16,
+          "tensor_bytes_compared": 40576,
+          "numpy_arrays": 8
+        },
+        "prior18_scheduler_complete": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "prior18_extension_metadata_complete": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "previous_monitor_history": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        }
+      },
+      "method_RNG_banks": 8,
+      "three_clock_metadata": {
+        "scope": "extension",
+        "deadline_unix": 1793721600,
+        "extension_parent": {
+          "path": "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt",
+          "sha256": "d8b6e9bafac6f8d7368a9418f9bcc46b9e4838d7f3a7652028144c42dc1b471a",
+          "update": 61764,
+          "cursor": 5929344,
+          "cpu_audit_path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_original.json"
+        },
+        "extension_start_update": 61764,
+        "extension_start_cursor": 5929344,
+        "extension_new_updates": 0,
+        "extension_new_presentations": 0,
+        "extension_start_unix": 1793701003.2040093,
+        "prior_scheduler_locations": [
+          "payload"
+        ],
+        "parent_cpu_audit": {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_original.json",
+          "sha256": "3f6d809fc4d1b18150c0ec4169b6ffefcebff955e1f57dca998e10a76df33f42"
+        },
+        "preserved_old_schedule_deadline": 1793678400,
+        "preserved_previous_stop_deadline": 1793700000,
+        "post_parent_LR": 1e-05,
+        "zero_update_parent_LR_exception": true
+      },
+      "loader_generators": [
+        {
+          "rank": 0,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 8405605232301323965,
+          "parent_state_sha256": "88d3fa809cf9453f317f80e1befa17689b8c5f844b3569052dbaa28fcdbb46a2",
+          "START_state_sha256": "b451499f96403fde9fb1a8be533bfc6f7732b4cec8c40820a81470b14baea88b"
+        },
+        {
+          "rank": 1,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 7987615805512256809,
+          "parent_state_sha256": "093c1ea48f4fb5a12318d0b0f0202dab563417a20b37704783155b951bf2388a",
+          "START_state_sha256": "35f84247a01c6a6b410551022a1cf62b19db6b20531bfb4627fbfbf66f37ce8c"
+        },
+        {
+          "rank": 2,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 9031096848218448163,
+          "parent_state_sha256": "f48deacd142b0f38286aabc842938970d9285531092673537d317a313bc54b96",
+          "START_state_sha256": "eb2696e8b2829e16993ae9f5c4211c5b61bfd3f7632fbc60f6fa4d36aaf77c0c"
+        }
+      ],
+      "all_rank_RAW_full_consensus": {
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/FULL_SHA_START.json",
+        "sha256": "57873967011a72669dabf6b6e34b4da057339016e14579ff3b64affc620d206a",
+        "full_digest": "8fecff554f1b53e5e1629ed45d58b46bda714ac67f7277238175739077d6416b",
+        "ranks": 3
+      },
+      "parent_LR": 1e-05,
+      "START_LR": 1e-05,
+      "parent_counts_by_g": {
+        "1": 1482373,
+        "2": 1482267,
+        "3": 1482386,
+        "4": 1482318
+      },
+      "seconds": 19.310147523880005
+    },
+    {
+      "status": "PASS",
+      "branch": "improved",
+      "update": 30000,
+      "cursor": 2880000,
+      "parent": {
+        "path": "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt",
+        "sha256": "71b3547cb2f65b0c7e8bfc7ad434f620f9349ebc523a586871541cb373594bbd"
+      },
+      "START": {
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00030000.pt",
+        "sha256": "891b5d24b6e49f4546800441cc1283b818946e8f92f30f134a9e34709b7f3714",
+        "bytes": 2194679223
+      },
+      "categories": {
+        "RAW151": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 151,
+          "tensor_bytes_compared": 548590092,
+          "numpy_arrays": 0
+        },
+        "Adam151_all_groups_steps_moments": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 453,
+          "tensor_bytes_compared": 1097180788,
+          "numpy_arrays": 0
+        },
+        "EMA151_and_all_state": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 153,
+          "tensor_bytes_compared": 548590101,
+          "numpy_arrays": 0
+        },
+        "counts": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "original_D0_or_SR_lineage": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "data_positions": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "initial_update": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "new_updates": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "logical_world_size": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "physical_world_size": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "scaler": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "all_method_RNG": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 10,
+          "tensor_bytes_compared": 25360,
+          "numpy_arrays": 5
+        },
+        "prior18_scheduler_complete": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "prior18_extension_metadata_complete": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        },
+        "previous_monitor_history": {
+          "status": "PASS",
+          "bitwise_complete_equal": true,
+          "tensor_count": 0,
+          "tensor_bytes_compared": 0,
+          "numpy_arrays": 0
+        }
+      },
+      "method_RNG_banks": 5,
+      "three_clock_metadata": {
+        "scope": "extension",
+        "deadline_unix": 1793721600,
+        "extension_parent": {
+          "path": "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt",
+          "sha256": "71b3547cb2f65b0c7e8bfc7ad434f620f9349ebc523a586871541cb373594bbd",
+          "update": 30000,
+          "cursor": 2880000,
+          "cpu_audit_path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_improved.json"
+        },
+        "extension_start_update": 30000,
+        "extension_start_cursor": 2880000,
+        "extension_new_updates": 0,
+        "extension_new_presentations": 0,
+        "extension_start_unix": 1793701006.4062514,
+        "prior_scheduler_locations": [
+          "payload"
+        ],
+        "parent_cpu_audit": {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_improved.json",
+          "sha256": "acd6aa3dff5c34fb44876d5fd4cc1355e364e777acbe4207ddd614b1f700589b"
+        },
+        "preserved_old_schedule_deadline": 1793678400,
+        "preserved_previous_stop_deadline": 1793700000,
+        "post_parent_LR": 2e-07,
+        "zero_update_parent_LR_exception": true
+      },
+      "loader_generators": [
+        {
+          "rank": 0,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 4859226401275997926,
+          "parent_state_sha256": "0f8502a96efb2cab726254fe377cbdcde08156a8e23036856fa6b7030adc8894",
+          "START_state_sha256": "946c7532168c4bf19a41b0032b46fd237e8d88a9bb416cf1bea08afbcb91d6e4"
+        },
+        {
+          "rank": 1,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 6829362006192997841,
+          "parent_state_sha256": "53ca6062fe5ca9d289ec37b760f2b2ef98cc4e60a057ce1828694b41014f683d",
+          "START_state_sha256": "725cce36b812bfcead1cdb8a71b70a5b4639a2237e9c7f82250cb1b9afdaa701"
+        },
+        {
+          "rank": 2,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 8367216222704729087,
+          "parent_state_sha256": "a011158ab5cc8360bbf08b93f43338467fab8e5202302f4a8b82a3ca9f882cd0",
+          "START_state_sha256": "2c7678f1587c4f2f74b505e3d4769040c97458e147356511aef30c6efeba62f2"
+        },
+        {
+          "rank": 3,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 2893964720287326379,
+          "parent_state_sha256": "d637e46569e5d977e5bcf72487443a426057ea48fc94ee14bfe3fbf10a4cab4b",
+          "START_state_sha256": "fd693fc6c3beba006ad2ee4a4c1137c3f07efb2e664324737a2e34271481c59c"
+        },
+        {
+          "rank": 4,
+          "one_iterator_base_seed_advance_exact": true,
+          "base_seed": 1211557132929779681,
+          "parent_state_sha256": "142238cb2197342e93b9c556c29b2a96ca336d7dcfdd7ab03a2ff380aa1fee6f",
+          "START_state_sha256": "f90773be903bb70e1acb1380835fda9c0741c00cfc5a346fc7dabe8e53188cf8"
+        }
+      ],
+      "all_rank_RAW_full_consensus": {
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/FULL_SHA_START.json",
+        "sha256": "4d885438ee251a1d3894cb5783b36b59926aa1583bd459033bf4b3b7b4ee1978",
+        "full_digest": "a54b2cc6d8552702fc816e1f8e1e4a376427d5d00c348c96beae32fba91e1727",
+        "ranks": 5
+      },
+      "parent_LR": 2e-07,
+      "START_LR": 2e-07,
+      "parent_counts_by_g": {
+        "1": 720000,
+        "2": 720000,
+        "3": 720000,
+        "4": 720000
+      },
+      "seconds": 14.369051218032837
+    }
+  ],
+  "formal_prefix_and_processes": {
+    "original": {
+      "status": "PASS",
+      "physical_ranks": [
+        {
+          "rank": 0,
+          "pid": 2012690,
+          "start_ticks": "598536925",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "original",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/original",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt"
+          ],
+          "rank_record_sha256": "423ebefc9ddccc330ae647f97d25e169f5c242b5328592369839b1e336a82056",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/UPDATES_rank0.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "37fb54636df53d33f325e2a4195c21b363c2ecd8f703bbd18fd2b7262f62c289"
+        },
+        {
+          "rank": 1,
+          "pid": 2012691,
+          "start_ticks": "598536925",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "original",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/original",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt"
+          ],
+          "rank_record_sha256": "1b13195cc16e5f3efff4ab429c5191628cb318edbcbbc1a0438b32958f388341",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/UPDATES_rank1.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "290002ab9edcbbb29b855025be2560d36f9d83ce07ed8f6c3778425e60872320"
+        },
+        {
+          "rank": 2,
+          "pid": 2012692,
+          "start_ticks": "598536925",
+          "state": "R",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "original",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/original",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt"
+          ],
+          "rank_record_sha256": "b86e582044ca9c34d10332866d0137aee1fea4bd6ca5b52f2005221647ee7639",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/UPDATES_rank2.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "c2a14de7092b998aab000ddb4c1ca881974a09c8439657f96a4b7f596b3ccb9c"
+        }
+      ],
+      "first_complete_global_updates": [
+        {
+          "update": 61765,
+          "extension_update": 1,
+          "cursor": 5929440,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.0008281099726445973,
+          "all_rank_LR": 1e-05,
+          "completed_unix": 1793701065.205599
+        },
+        {
+          "update": 61766,
+          "extension_update": 2,
+          "cursor": 5929536,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.0008585579344071448,
+          "all_rank_LR": 1e-05,
+          "completed_unix": 1793701067.9720478
+        },
+        {
+          "update": 61767,
+          "extension_update": 3,
+          "cursor": 5929632,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.0008213364635594189,
+          "all_rank_LR": 1e-05,
+          "completed_unix": 1793701070.7240891
+        }
+      ],
+      "prefix_global_positions_exact96": true
+    },
+    "improved": {
+      "status": "PASS",
+      "physical_ranks": [
+        {
+          "rank": 0,
+          "pid": 2012695,
+          "start_ticks": "598536928",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "improved",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/improved",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt"
+          ],
+          "rank_record_sha256": "de2993d60acc15d30f8c6b2c4a20bc32a5c86416c7d2434006938ce1711d45cd",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank0.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "e7af5a7a5b334d8b610b8e8fd2c89404ac805d4c1b7be3d33cd37b49b3f880c1"
+        },
+        {
+          "rank": 1,
+          "pid": 2012696,
+          "start_ticks": "598536928",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "improved",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/improved",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt"
+          ],
+          "rank_record_sha256": "c351874c00c69347f958ae92377eaa0957bd8dd1000429fc34ee97dea7160917",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank1.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "a641bb3a750c1d5461db8111502d9bfb1af3357f6f8fa1862a07a7c8f85d7f18"
+        },
+        {
+          "rank": 2,
+          "pid": 2012697,
+          "start_ticks": "598536928",
+          "state": "R",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "improved",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/improved",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt"
+          ],
+          "rank_record_sha256": "5214e684a47c52c7d917a08401e7a169a0c62a4af5885d9b7d19b60f43d4ca72",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank2.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "ce54ff4da8482562c0f524377a2fadd70a7656c9a7f30209b053c8d999fe77b4"
+        },
+        {
+          "rank": 3,
+          "pid": 2012698,
+          "start_ticks": "598536928",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "improved",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/improved",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt"
+          ],
+          "rank_record_sha256": "2a2a1501e65715a11f9a6405ccf34ba8cbeea3e43736bb2f9a6e0fe537b4a0f7",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank3.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "492cc8eedabab3d2060f671063cd9c45de99f75830a488bc3be12167e1cd9133"
+        },
+        {
+          "rank": 4,
+          "pid": 2012699,
+          "start_ticks": "598536928",
+          "state": "S",
+          "actual_command": [
+            "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "-u",
+            "/data2/yanglin/unidb_dual_20261104_until00/training_worker.py",
+            "--branch",
+            "improved",
+            "--phase",
+            "formal",
+            "--out",
+            "/data2/yanglin/unidb_dual_20261104_until00/runs/improved",
+            "--steps",
+            "2",
+            "--dummy-mode",
+            "parameters",
+            "--resume",
+            "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt"
+          ],
+          "rank_record_sha256": "c647ad730ff3d30f19a6169450f1780f5b52f04ae3c75196059e06b6dcacdf3c",
+          "prefix_file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank4.jsonl",
+          "prefix_rows": 3,
+          "prefix_sha256": "d376f897f7063978239f1447773026a9b8aefc82c8c89599efc74df7d1234ea3"
+        }
+      ],
+      "first_complete_global_updates": [
+        {
+          "update": 30001,
+          "extension_update": 1,
+          "cursor": 2880096,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.06988898664712906,
+          "all_rank_LR": 2e-07,
+          "completed_unix": 1793701074.2123632
+        },
+        {
+          "update": 30002,
+          "extension_update": 2,
+          "cursor": 2880192,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.06537346541881561,
+          "all_rank_LR": 2e-07,
+          "completed_unix": 1793701075.7041602
+        },
+        {
+          "update": 30003,
+          "extension_update": 3,
+          "cursor": 2880288,
+          "global_real_presentations": 96,
+          "unique_positions": 96,
+          "global_loss": 0.06675463914871216,
+          "all_rank_LR": 2e-07,
+          "completed_unix": 1793701077.187791
+        }
+      ],
+      "prefix_global_positions_exact96": true
+    }
+  },
+  "formal_real_processes_verified": 8,
+  "checkpoint_deserializations": 4,
+  "engineering_acceptance": {
+    "path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/ENGINEERING_ACCEPTANCE.json",
+    "sha256": "5685c3cc78be827b164e14eefe87aa50b9b77f7b63f6280c6f3bd7214ad80980",
+    "status": "PASS"
+  },
+  "source_freeze": {
+    "path": "/data2/yanglin/unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+    "sha256": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a",
+    "files_checked": 18
+  },
+  "new_model_objects": 0,
+  "new_optimizer_objects": 0,
+  "new_optimizer_steps": 0,
+  "NPU_calls": 0,
+  "auditor_source_sha256": "931e2edc208f0a219ade9deb1976873d9820ab485eaa1f58798f1da06fde1a40",
+  "authority_sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22",
+  "training_worker_sha256": "81aac46fe9150fdc36d858d33275c0a34ae9d5e5a1b8acc9cb3cb5b06c9ea2c1",
+  "state_auditor_sha256": "481710f049c97efff7def9d567685290e1ed370b3eb251270bbacaeb1ace5a39",
+  "controller_sha256": "7819e3efa7dd72a20126fc3b1241ea15b8689a8d6d708a6c64caa11c104c0038",
+  "seconds": 36.46888089179993,
+  "verified_unix": 1793701433.1378164
+}

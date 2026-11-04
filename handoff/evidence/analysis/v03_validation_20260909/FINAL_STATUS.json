@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE",
+  "gate1": "FAIL",
+  "gate2": "NOT_RUN_GATE1_FAILED",
+  "card_hours": 1.7451596206524926,
+  "max_concurrency": 4,
+  "models": [
+    {
+      "name": "stage1-scalar-2026090901",
+      "updates": 5000,
+      "checkpoint_sha256": "f791fbdbd88cb24a7620ca722a8279ca16af37ecb1e6048a907317e1431ed30e",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-scalar-2026090901/resume.pt"
+    },
+    {
+      "name": "stage1-decoupled-2026090901",
+      "updates": 5000,
+      "checkpoint_sha256": "88ac272a20812b36378a82ff6042594db1fb5af5c120c9f3be1f18830d308b4c",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-decoupled-2026090901/resume.pt"
+    },
+    {
+      "name": "stage1-generic-2026090901",
+      "updates": 5000,
+      "checkpoint_sha256": "ea1da16a3036d0869a60edb00f38c81ebbcc56b7610351b08d354814278cf99f",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-generic-2026090901/resume.pt"
+    },
+    {
+      "name": "stage1-actual-2026090901",
+      "updates": 5000,
+      "checkpoint_sha256": "26c111e70a3dd38319442f9827b58aa03f4b887927b85c7e7deebd2ee05cc23c",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-actual-2026090901/resume.pt"
+    },
+    {
+      "name": "stage1-scalar-2026090902",
+      "updates": 5000,
+      "checkpoint_sha256": "8307f2565c0cd25be2df9920b0d7228679178b02e7fdce15718a440cb6326aa4",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-scalar-2026090902/resume.pt"
+    },
+    {
+      "name": "stage1-decoupled-2026090902",
+      "updates": 5000,
+      "checkpoint_sha256": "8f0f44fcfb5bf075ac89f8d4a4c0b531a79886033d1c52bec98a29614bdf5ef9",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-decoupled-2026090902/resume.pt"
+    },
+    {
+      "name": "stage1-generic-2026090902",
+      "updates": 5000,
+      "checkpoint_sha256": "283d1f8453998529b31fbe9b09c286bf04d4fa0b2c6f3cce0ecff20afc203995",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-generic-2026090902/resume.pt"
+    },
+    {
+      "name": "stage1-actual-2026090902",
+      "updates": 5000,
+      "checkpoint_sha256": "1f0fe2768b4a1fa20ef5bac50514b46a12cb8982209eb907f17e0d226442cc9f",
+      "remote_checkpoint": "/data2/yanglin/v03_validation_20260909/models/stage1-actual-2026090902/resume.pt"
+    }
+  ],
+  "test_restoration_scores_used": false,
+  "final_safety_snapshot_utc": "2026-09-08T18:12:11.243718+00:00",
+  "own_active_processes": [],
+  "automation_id": "automation",
+  "automation_status": "PAUSED",
+  "followup_is_proposal_only": true,
+  "report_pdf": "/Users/lucas/Desktop/turbulence IR/output/pdf/turbulence_v03_validation_20260909.pdf",
+  "report_pdf_sha256": "49f6c7c69bdeb8e766f91b8db8dccbc046352b9cd58c2ff29f56e8a7633e5feb"
+}

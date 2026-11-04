@@ -1,0 +1,29 @@
+{
+  "user_request": "A100自己从头训，不是从npu迁移checkpoint",
+  "timestamp_local": "2026-10-03T13:56:30.417585",
+  "supersedes": "all earlier NPU-only/A100-assets-only and NPU-checkpoint-continuation execution instructions",
+  "initialization": "shared random common U0, no pretrained and no NPU trained state",
+  "common_init_sha256": "9b0307b7abd264e28977911c4dab909f62b0f5e0f18639dfb26c9d99db98019a",
+  "A100_formal_training_authorized": true,
+  "NPU_formal_training_authorized": false,
+  "methods": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "effective_batch": 32,
+  "updates_per_method": 20000,
+  "physical_gpus": {
+    "D0": 3,
+    "R08": 3,
+    "R0": 5,
+    "L08": 5
+  },
+  "scientific_spec_unchanged": true,
+  "a100_root": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003",
+  "run_root": "runs/a100_fresh_u0_20k",
+  "controller": "scripts/a100_fresh_controller.py",
+  "initial_checkpoint_import_permitted": false,
+  "later_resume": "this A100 fresh run only"
+}

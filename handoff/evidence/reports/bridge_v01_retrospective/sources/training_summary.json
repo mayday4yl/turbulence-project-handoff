@@ -1,0 +1,86 @@
+{
+  "best_selection": {
+    "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-020000.pt",
+    "degradation_residual": 0.0006756107177519274,
+    "lpips": 0.35022662225800255,
+    "psnr": 22.972010039885834,
+    "update": 20000
+  },
+  "completed_updates": 20000,
+  "last_significant_improvement": 12000,
+  "significant_reference_psnr": 22.97068375190099,
+  "stopped_early": true,
+  "validation_history": [
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-002000.pt",
+      "degradation_residual": 0.004837294864555588,
+      "lpips": 0.5749224884745975,
+      "psnr": 19.809789559046425,
+      "update": 2000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-004000.pt",
+      "degradation_residual": 0.0025458373201884877,
+      "lpips": 0.5667413392476738,
+      "psnr": 20.947762491703035,
+      "update": 4000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-006000.pt",
+      "degradation_residual": 0.0009894933634116872,
+      "lpips": 0.5052697864361106,
+      "psnr": 22.168303197224933,
+      "update": 6000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-008000.pt",
+      "degradation_residual": 0.0007626653730721955,
+      "lpips": 0.4552695157472044,
+      "psnr": 22.679786721467973,
+      "update": 8000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-010000.pt",
+      "degradation_residual": 0.0007131162284076709,
+      "lpips": 0.4247132452220346,
+      "psnr": 22.882432824770614,
+      "update": 10000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-012000.pt",
+      "degradation_residual": 0.000690778351189086,
+      "lpips": 0.40168035654195894,
+      "psnr": 22.97068375190099,
+      "update": 12000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-014000.pt",
+      "degradation_residual": 0.0006840815424235796,
+      "lpips": 0.3839368754408012,
+      "psnr": 23.005832859277728,
+      "update": 14000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-016000.pt",
+      "degradation_residual": 0.0006772627108633363,
+      "lpips": 0.3704389577871188,
+      "psnr": 23.012336736122773,
+      "update": 16000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-018000.pt",
+      "degradation_residual": 0.0006755866820837279,
+      "lpips": 0.35956097109708934,
+      "psnr": 23.00174583435059,
+      "update": 18000
+    },
+    {
+      "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-020000.pt",
+      "degradation_residual": 0.0006756107177519274,
+      "lpips": 0.35022662225800255,
+      "psnr": 22.972010039885834,
+      "update": 20000
+    }
+  ],
+  "wall_seconds": 9140.935939939998
+}

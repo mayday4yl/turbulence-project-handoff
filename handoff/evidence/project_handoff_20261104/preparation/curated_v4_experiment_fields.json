@@ -1,0 +1,1521 @@
+{
+  "schema": "handoff_experiment_field_overrides_v1",
+  "status": "DIRECT_LOCAL_EVIDENCE_FIELDS_ONLY",
+  "prepared_at_local": "2026-11-04T00:58:33.731176+08:00",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "source_group": "v4",
+  "input_branch_manifest": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/v4_evidence.json",
+    "sha256": "93f555e1e3c4b29ea343640b09a98ca88d86f5e7cb82f3838992584d6ffd99df"
+  },
+  "execution": {
+    "network_calls": 0,
+    "NN_calls": 0,
+    "optimizer_updates": 0,
+    "checkpoint_tensor_loads": 0,
+    "old_asset_mutations": 0
+  },
+  "field_scope_note": "Methods and populations only. Cancelled candidate is NOT_RUN; bounded gates are not formal training; archive population is not a restoration dataset. No status/date/result overrides. Counts described from historical records, not new remote validation.",
+  "overrides": [
+    {
+      "experiment_id": "v4:noise_bridge",
+      "source_group": "v4",
+      "branch_local_id": "noise_bridge",
+      "field": "method_description",
+      "value": "RGB 像素空间 V4 Noise Bridge 工程验收：V3 网络适配六通道 Concat(Z,Y)、原数值[g,t]条件、clean sigmoid 与原生两块 raw ξ；T0=0.8、K=G 的完整物理尾路径，每级 LC+0.2LR、路径均值再 batch 均值、full-BPTT。推理 raw-ξ 精修采用逐样本串行40步Adam；仅1次临时模型更新，正式训练0。严格重复性/原批量轨迹对照未通过。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+          "sha256": "a4472d679fd827c4c8e9fe8fc997ead3dae36143b6ee6a332156ce809aa3b948",
+          "exact_excerpt": "没有发现实质图文矛盾，也没有方法定义偏差。当前实现为 T0=0.8、K=G、g=G…1、K−1 次状态生成、原始数值 `[g,t]`，不独立输入 G。训练每级 `LC+0.2LR`，含末级，LR 匹配原始 Y/G。训练不精修、不 detach、不引入 GT-xi/弱状态监督；原 simulator 参数冻结、输入图保留。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+          "sha256": "a4472d679fd827c4c8e9fe8fc997ead3dae36143b6ee6a332156ce809aa3b948",
+          "exact_excerpt": "| 文件 | 变更 |\n|---|---|\n| `physical_bridge/model.py`、`simulator.py` | V3 原始快照逐字复制；哈希与原件一致。没有改 simulator 数学。 |\n| `v4/model.py` | V3 网络继承适配：6 通道、raw `[g,t]` 的 2→256→256 SiLU MLP；保留双 decoder、clean Sigmoid、两块 raw-xi 布局和正式零头初始化。 |\n| `v4/data.py`、`normalization.py` | 已有真实数据的 train/Overfit100 身份绑定与读取；FP64 Chan 统计、四档等权、独立 artifact、FP32 非训练 buffer 与 artifact hash。 |\n| `v4/core.py` | 固定原始 Y、每样本独立且路径共享 eta、完整尾路径、active 索引、每级原始 G/Y 回投、path mean→batch mean、full-BPTT。 |\n| `v4/refinement.py`、`inference.py` | 当前 xi_hat 初始化/固定中心、合计元素分母、固定 Adam/41候选；公共执行逐样本串行，每样本每级新 optimizer；末级不精修。 |\n| `v4/runtime.py` | 实际 import/源码/资产哈希核验、FP32 CUDA 设置、完整临时 checkpoint 与独立噪声 RNG 往返。 |\n| `scripts/`、`tests/` | 真实 CUDA 验收、CPU 小型合同检查、失败诊断与持久 optimizer-step 限额。 |"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+          "sha256": "a4472d679fd827c4c8e9fe8fc997ead3dae36143b6ee6a332156ce809aa3b948",
+          "exact_excerpt": "本轮完成 implementation + correctness 后停止：正式runs目录仍为空，只做1次临时模型optimizer更新，未启动正式训练、独立T0对照、收敛/PSNR效果Pilot或T0/lambda搜索。最终GPU5无计算进程，临时checkpoint无遗留。[最终释放/身份检查](reports/final_identity_and_release.json) · [机器可读摘要](reports/SUMMARY.json) · [证据哈希](reports/EVIDENCE_MANIFEST.json)\n"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:noise_bridge",
+      "source_group": "v4",
+      "branch_local_id": "noise_bridge",
+      "field": "dataset_or_population_json",
+      "value": {
+        "scope": "implementation/correctness; not formal training",
+        "canonical_dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+        "normalization_population": {
+          "name": "Overfit100 training subset",
+          "trajectories": 400,
+          "states": 1600,
+          "states_per_G": 400,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "RGB_view": [
+            3,
+            256,
+            256
+          ]
+        },
+        "validation_test_clean_and_rollout_excluded_from_statistics": true
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+          "sha256": "a4472d679fd827c4c8e9fe8fc997ead3dae36143b6ee6a332156ce809aa3b948",
+          "exact_excerpt": "实际统计绑定 **Overfit100 训练子集**，400条轨迹×4档=1600个唯一状态，每档400张，仅全幅256 RGB固定视图。mu = `[0.4587469524, 0.4475286356, 0.4201560764]`，s = `[0.2491986447, 0.2523667266, 0.2715907645]`。未把它冒充完整500张训练集的统计；将来训练总体改变需重新绑定统计 artifact。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/README.md",
+          "sha256": "354ba99409028273e86a4b0e419a01ac1072ea4b2b2b645b4064c07031c1524f",
+          "exact_excerpt": "--dataset-root /home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_p2s_a100_20260928_g4321_s500_v100_t200_v1 \\"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/README.md",
+          "sha256": "354ba99409028273e86a4b0e419a01ac1072ea4b2b2b645b4064c07031c1524f",
+          "exact_excerpt": "Normalization is explicitly **Overfit100 training population**, 400 trajectories × 4 states = 1600 unique states, one full stored 256×256 view per state. It is not the full500 train population's statistics. Validation/test/clean/rollout states are excluded. Changing the intended training population requires a separate bound statistics artifact."
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit100",
+      "source_group": "v4",
+      "branch_local_id": "overfit100",
+      "field": "method_description",
+      "value": "同一共同初始化的 D0/R0/R08 三组首段配对训练，FP32、effective B32、两卡 DDP/micro4×accum4，同20轮 start 顺序。D0 用 Concat(Y,Y)、[G,0]单次预测并保留原G物理辅助损失；R0 为T0=0物理递归，R08 为T0=.8完整物理递归。训练不精修，各1000更新/32000曝光；RAW/refinement-OFF为主，EMA和串行推理精修另列。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_training_20260929/results/FINAL_REPORT_ZH.md",
+          "sha256": "d17f1b279658571ef1def24dcc91bbcb8794cb9a30435ea775f898575b20424a",
+          "exact_excerpt": "共同执行配置：物理 A100 GPU5/6；FP32，autocast/TF32 关闭；全局 batch=32，每卡 microbatch=4，累积4次；网络评估 batch=2，固定 chunk/GPU 分组；正式精修始终 per_sample_serial，实际 refine batch=1。三组从同一初始化独立训练，使用完全相同的20轮 start 顺序。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_training_20260929/results/FINAL_REPORT_ZH.md",
+          "sha256": "d17f1b279658571ef1def24dcc91bbcb8794cb9a30435ea775f898575b20424a",
+          "exact_excerpt": "R08 使用 T0=0.8 完整物理递归；R0 使用 T0=0 完整物理递归；D0 使用 Concat(Y,Y)、[G,0] 单次预测，并保留原始 G 的物理辅助损失。D0 是本训练计划授权的控制组。训练不精修；推理仅在非末级精修。未继承历史 Track A/B、FLUX、latent 或 ControlNet 方案。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit100",
+      "source_group": "v4",
+      "branch_local_id": "overfit100",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 100,
+          "realizations_per_source": 4,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 1600
+        },
+        "validation": {
+          "clean_sources": 100,
+          "realizations_per_source": 2,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 800
+        },
+        "aggregation": "逐图浮点PSNR，先source/G内平均realization，source和G等权",
+        "main_weights": "last_32k RAW",
+        "main_refinement": "OFF"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_training_20260929/results/FINAL_REPORT_ZH.md",
+          "sha256": "d17f1b279658571ef1def24dcc91bbcb8794cb9a30435ea775f898575b20424a",
+          "exact_excerpt": "训练集为100 sources ×4 realizations ×4 G =1,600 starts；独立验证为100 sources ×2 realizations ×4 G =800 starts。指标来自浮点输出：逐图 PSNR，再按 source/G 平均 realization，最后 source 与四档 G 等权。没有使用显示 PNG 计算分数。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_full",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_full",
+      "field": "method_description",
+      "value": "完整D0五来源拟合诊断：从原共同随机初始化训练40epoch，80 starts/epoch、400 optimizer更新/3200曝光；每epoch在同一RAW checkpoint评估train80与固定val64，原FP32输出，无精修或参数搜索。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "已完成：仅 D0，从原共同随机初始化训练 40 epoch；80 starts/epoch，共 3200 exposures、400 optimizer updates。\n每个 epoch 在同一 raw checkpoint 下评估 train80 与固定 val64；三指标使用原始 FP32 输出。无 refinement，无参数搜索。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "已完成：仅 D0，从原共同随机初始化训练 40 epoch；80 starts/epoch，共 3200 exposures、400 optimizer updates。\n每个 epoch 在同一 raw checkpoint 下评估 train80 与固定 val64；三指标使用原始 FP32 输出。无 refinement，无参数搜索。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_full",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_full",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 5,
+          "source_ids": [
+            "Places365_val_00005914.jpg",
+            "Places365_val_00030817.jpg",
+            "Places365_val_00013160.jpg",
+            "Places365_val_00012149.jpg",
+            "Places365_val_00014491.jpg"
+          ],
+          "starts": 80
+        },
+        "validation": {
+          "starts": 64,
+          "source_disjoint_from_train": true,
+          "scope": "fixed subset; not val800"
+        },
+        "purpose": "small-set fitting diagnostic"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "源图：Places365_val_00005914.jpg, Places365_val_00030817.jpg, Places365_val_00013160.jpg, Places365_val_00012149.jpg, Places365_val_00014491.jpg"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "本轮用于诊断小训练集拟合能力。train80 是全部训练起点，val64 来自不同 source，只是固定验证子集，不是 val800。40 epoch 对应 400 updates；不能与旧实验按 epoch 数直接等同。\n主图为 raw；EMA 仅作末期附录，其曝光累计较少可能明显滞后。历史 train100 统计 buffer 只保留身份，D0 不用 mu/s 构造输入。\n每步在线 train loss 和每个 epoch 重新评估的 train loss 分别保存在 online_training_loss.csv、epoch_metrics.csv。后者与 val loss 口径一致。\n指标：RGB PSNR range=1；SSIM Gaussian 11/sigma1.5/population covariance；LPIPS AlexNet v0.1。没有预处理 clamp/resize/PNG 量化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_clean",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_clean",
+      "field": "method_description",
+      "value": "Clean-only D0配对控制：L=clean MSE，从原共同随机初始化训练40epoch/400更新/3200曝光；ξ参数冻结且不进optimizer，完全跳过ξ分支和simulator；主体/clean路径初始化、样本顺序、batch、LR和评价与完整D0配对。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "706172ec278ecf30ee92fb2ab4d09e46c5895c24be9af3e3357687cd42bbd9a7",
+          "exact_excerpt": "已完成：仅 clean-only D0，L=clean MSE，从原共同随机初始化训练 40 epoch；80 starts/epoch，共 3200 exposures、400 optimizer updates。\n每个 epoch 在同一 raw checkpoint 下评估 train80 与固定 val64；三指标使用原始 FP32 输出。无 refinement，无参数搜索。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "706172ec278ecf30ee92fb2ab4d09e46c5895c24be9af3e3357687cd42bbd9a7",
+          "exact_excerpt": "本轮用于诊断小训练集拟合能力。train80 是全部训练起点，val64 来自不同 source，只是固定验证子集，不是 val800。40 epoch 对应 400 updates；不能与旧实验按 epoch 数直接等同。\n本轮完全跳过xi分支和simulator；xi参数冻结且不进入optimizer。与旧D0的主体/clean路径初始化及数据、顺序、batch、LR、评估完全配对。\n主图为 raw；EMA 仅作末期附录，其曝光累计较少可能明显滞后。历史 train100 统计 buffer 只保留身份，D0 不用 mu/s 构造输入。\n每步在线 train loss 和每个 epoch 重新评估的 train loss 分别保存在 online_training_loss.csv、epoch_metrics.csv。后者与 val loss 口径一致。\n指标：RGB PSNR range=1；SSIM Gaussian 11/sigma1.5/population covariance；LPIPS AlexNet v0.1。没有预处理 clamp/resize/PNG 量化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_clean",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_clean",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 5,
+          "source_ids": [
+            "Places365_val_00005914.jpg",
+            "Places365_val_00030817.jpg",
+            "Places365_val_00013160.jpg",
+            "Places365_val_00012149.jpg",
+            "Places365_val_00014491.jpg"
+          ],
+          "starts": 80
+        },
+        "validation": {
+          "starts": 64,
+          "source_disjoint_from_train": true,
+          "scope": "fixed subset; not val800"
+        },
+        "purpose": "small-set fitting diagnostic"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "706172ec278ecf30ee92fb2ab4d09e46c5895c24be9af3e3357687cd42bbd9a7",
+          "exact_excerpt": "源图：Places365_val_00005914.jpg, Places365_val_00030817.jpg, Places365_val_00013160.jpg, Places365_val_00012149.jpg, Places365_val_00014491.jpg"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "706172ec278ecf30ee92fb2ab4d09e46c5895c24be9af3e3357687cd42bbd9a7",
+          "exact_excerpt": "本轮用于诊断小训练集拟合能力。train80 是全部训练起点，val64 来自不同 source，只是固定验证子集，不是 val800。40 epoch 对应 400 updates；不能与旧实验按 epoch 数直接等同。\n本轮完全跳过xi分支和simulator；xi参数冻结且不进入optimizer。与旧D0的主体/clean路径初始化及数据、顺序、batch、LR、评估完全配对。\n主图为 raw；EMA 仅作末期附录，其曝光累计较少可能明显滞后。历史 train100 统计 buffer 只保留身份，D0 不用 mu/s 构造输入。\n每步在线 train loss 和每个 epoch 重新评估的 train loss 分别保存在 online_training_loss.csv、epoch_metrics.csv。后者与 val loss 口径一致。\n指标：RGB PSNR range=1；SSIM Gaussian 11/sigma1.5/population covariance；LPIPS AlexNet v0.1。没有预处理 clamp/resize/PNG 量化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_resume200_cancelled",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_resume200_cancelled",
+      "field": "method_description",
+      "value": "已取消的 clean-only epoch200续训准备：用户纠正续训对象为完整D0后取消，未上传远端，无冻结协议/训练结果，实际optimizer更新0。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume200_20260929/README.md",
+          "sha256": "5bb4f2ffdc63518b222d74e680ae33914a0f2d568d42fda7cf13be58fe774fac",
+          "exact_excerpt": "用户已明确纠正续训对象为完整D0。此clean-only epoch200续训准备已取消，没有上传到远端，没有冻结协议或训练结果，optimizer更新数为0。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_resume200_cancelled",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_resume200_cancelled",
+      "field": "dataset_or_population_json",
+      "value": {
+        "execution": "NOT_RUN",
+        "actual_training_population": "NOT_APPLICABLE",
+        "reason": "prepared clean-only epoch200 continuation was cancelled before upload/freeze; no training result"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume200_20260929/README.md",
+          "sha256": "5bb4f2ffdc63518b222d74e680ae33914a0f2d568d42fda7cf13be58fe774fac",
+          "exact_excerpt": "用户已明确纠正续训对象为完整D0。此clean-only epoch200续训准备已取消，没有上传到远端，没有冻结协议或训练结果，optimizer更新数为0。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_clean_plateau",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_clean_plateau",
+      "field": "method_description",
+      "value": "五来源clean-only D0从epoch40完整AdamW/模型/EMA/RNG续训，恒定LR1e-5，新增1600/累计2000更新到epoch200；以三个20epoch train80窗口的LC/PSNR规则判断平台，val64不参与停止，实际达到上限而未确认平台。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume_plateau_20260929/results/report/REPORT_ZH.md",
+          "sha256": "069b06ccc0645127a98ad06ea064cde35686a079e797892198c6336984d4118a",
+          "exact_excerpt": "最终epoch200；新增1600updates；总2000updates。LR恒定1e-5，AdamW/模型/EMA/RNG从原epoch40恢复。\n停止原因：MAX_EPOCH_200_REACHED_WITHOUT_CONFIRMED_PLATEAU。只依据train80；val64没有参与停止。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume_plateau_20260929/results/report/REPORT_ZH.md",
+          "sha256": "069b06ccc0645127a98ad06ea064cde35686a079e797892198c6336984d4118a",
+          "exact_excerpt": "训练更新累计298.38秒；含评估和checkpoint约448.16秒。\n平台规则是三个连续不重叠20epoch窗口，各LC相对下降<1%且PSNR提升<.05dB；使用各窗口端点完整train80均值，改善按有符号数值记录。负值代表回落，也需如实解释。\n达到epoch200上限不等于达到平台；本实验不能单独宣称模型容量极限，只判断固定LR及当前优化配置下的拟合变化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_clean_plateau",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_clean_plateau",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 5,
+          "source_ids": [
+            "Places365_val_00005914.jpg",
+            "Places365_val_00030817.jpg",
+            "Places365_val_00013160.jpg",
+            "Places365_val_00012149.jpg",
+            "Places365_val_00014491.jpg"
+          ],
+          "starts": 80
+        },
+        "validation": {
+          "starts": 64,
+          "source_disjoint_from_train": true,
+          "scope": "fixed subset; not val800"
+        },
+        "purpose": "small-set fitting diagnostic"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume_plateau_20260929/results/report/REPORT_ZH.md",
+          "sha256": "069b06ccc0645127a98ad06ea064cde35686a079e797892198c6336984d4118a",
+          "exact_excerpt": "最终epoch200；新增1600updates；总2000updates。LR恒定1e-5，AdamW/模型/EMA/RNG从原epoch40恢复。\n停止原因：MAX_EPOCH_200_REACHED_WITHOUT_CONFIRMED_PLATEAU。只依据train80；val64没有参与停止。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "源图：Places365_val_00005914.jpg, Places365_val_00030817.jpg, Places365_val_00013160.jpg, Places365_val_00012149.jpg, Places365_val_00014491.jpg"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "本轮用于诊断小训练集拟合能力。train80 是全部训练起点，val64 来自不同 source，只是固定验证子集，不是 val800。40 epoch 对应 400 updates；不能与旧实验按 epoch 数直接等同。\n主图为 raw；EMA 仅作末期附录，其曝光累计较少可能明显滞后。历史 train100 统计 buffer 只保留身份，D0 不用 mu/s 构造输入。\n每步在线 train loss 和每个 epoch 重新评估的 train loss 分别保存在 online_training_loss.csv、epoch_metrics.csv。后者与 val loss 口径一致。\n指标：RGB PSNR range=1；SSIM Gaussian 11/sigma1.5/population covariance；LPIPS AlexNet v0.1。没有预处理 clamp/resize/PNG 量化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_full_resume",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_full_resume",
+      "field": "method_description",
+      "value": "完整D0从epoch40恢复AdamW/模型/EMA/RNG，恒定LR1e-5，新增1600/累计2000更新至固定epoch200；与clean-only匹配同训练预算，窗口仅诊断、不早停，val64只记录。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_full_d0_resume_20260929/results/report/REPORT_ZH.md",
+          "sha256": "948db34d725048cf56e6d5781380a8b7aefb4daa7c010e920fb68dc7ed65906d",
+          "exact_excerpt": "最终epoch200；新增1600updates；总2000updates。LR恒定1e-5，AdamW/模型/EMA/RNG从原epoch40恢复。\n停止原因：FIXED_PAIRED_EPOCH_200_COMPLETE。固定epoch200配对终点；val64只记录。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_full_d0_resume_20260929/results/report/REPORT_ZH.md",
+          "sha256": "948db34d725048cf56e6d5781380a8b7aefb4daa7c010e920fb68dc7ed65906d",
+          "exact_excerpt": "训练更新累计833.71秒；含评估和checkpoint约1025.06秒。\n窗口统计仅诊断Train LC及PSNR变化，不提前停止；固定200epoch，与已有clean-only在同一训练预算比较。\n达到epoch200上限不等于达到平台；本实验不能单独宣称模型容量极限，只判断固定LR及当前优化配置下的拟合变化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:overfit5_full_resume",
+      "source_group": "v4",
+      "branch_local_id": "overfit5_full_resume",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 5,
+          "source_ids": [
+            "Places365_val_00005914.jpg",
+            "Places365_val_00030817.jpg",
+            "Places365_val_00013160.jpg",
+            "Places365_val_00012149.jpg",
+            "Places365_val_00014491.jpg"
+          ],
+          "starts": 80
+        },
+        "validation": {
+          "starts": 64,
+          "source_disjoint_from_train": true,
+          "scope": "fixed subset; not val800"
+        },
+        "purpose": "small-set fitting diagnostic"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_full_d0_resume_20260929/results/report/REPORT_ZH.md",
+          "sha256": "948db34d725048cf56e6d5781380a8b7aefb4daa7c010e920fb68dc7ed65906d",
+          "exact_excerpt": "最终epoch200；新增1600updates；总2000updates。LR恒定1e-5，AdamW/模型/EMA/RNG从原epoch40恢复。\n停止原因：FIXED_PAIRED_EPOCH_200_COMPLETE。固定epoch200配对终点；val64只记录。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "源图：Places365_val_00005914.jpg, Places365_val_00030817.jpg, Places365_val_00013160.jpg, Places365_val_00012149.jpg, Places365_val_00014491.jpg"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+          "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+          "exact_excerpt": "本轮用于诊断小训练集拟合能力。train80 是全部训练起点，val64 来自不同 source，只是固定验证子集，不是 val800。40 epoch 对应 400 updates；不能与旧实验按 epoch 数直接等同。\n主图为 raw；EMA 仅作末期附录，其曝光累计较少可能明显滞后。历史 train100 统计 buffer 只保留身份，D0 不用 mu/s 构造输入。\n每步在线 train loss 和每个 epoch 重新评估的 train loss 分别保存在 online_training_loss.csv、epoch_metrics.csv。后者与 val loss 口径一致。\n指标：RGB PSNR range=1；SSIM Gaussian 11/sigma1.5/population covariance；LPIPS AlexNet v0.1。没有预处理 clamp/resize/PNG 量化。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:one_source16",
+      "source_group": "v4",
+      "branch_local_id": "one_source16",
+      "field": "method_description",
+      "value": "Clean-only D0单来源重复拟合：原共同初始化、LC only、batch8，16个固定start每epoch各出现一次，训练200epoch/400更新/3200曝光；RAW为主、末期EMA附录，每5epoch同一checkpoint评估。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4e2ef21c41ef62a2563489a175528675f4d04939e5989c73f443085d4e2d6835",
+          "exact_excerpt": "已完成400updates/200epoch/3200exposures。batch8；A100物理GPU5/6。原共同初始化，LC only，raw主结果，末期EMA仅附录。\n每epoch16个固定start各出现一次；每个start共出现200次。epoch40=80updates/640exposures，每个start出现40次。\ntrain16与val64 source不相交；每5epoch在同一checkpoint状态评估，所有三指标来自FP32输出。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4e2ef21c41ef62a2563489a175528675f4d04939e5989c73f443085d4e2d6835",
+          "exact_excerpt": "已完成400updates/200epoch/3200exposures。batch8；A100物理GPU5/6。原共同初始化，LC only，raw主结果，末期EMA仅附录。\n每epoch16个固定start各出现一次；每个start共出现200次。epoch40=80updates/640exposures，每个start出现40次。\ntrain16与val64 source不相交；每5epoch在同一checkpoint状态评估，所有三指标来自FP32输出。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:one_source16",
+      "source_group": "v4",
+      "branch_local_id": "one_source16",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 1,
+          "realizations_per_source": 4,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 16,
+          "appearances_per_start": 200
+        },
+        "validation": {
+          "starts": 64,
+          "source_disjoint_from_train": true
+        }
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4e2ef21c41ef62a2563489a175528675f4d04939e5989c73f443085d4e2d6835",
+          "exact_excerpt": "# 1 source × 4 xi × 4 G：clean-only D0"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4e2ef21c41ef62a2563489a175528675f4d04939e5989c73f443085d4e2d6835",
+          "exact_excerpt": "已完成400updates/200epoch/3200exposures。batch8；A100物理GPU5/6。原共同初始化，LC only，raw主结果，末期EMA仅附录。\n每epoch16个固定start各出现一次；每个start共出现200次。epoch40=80updates/640exposures，每个start出现40次。\ntrain16与val64 source不相交；每5epoch在同一checkpoint状态评估，所有三指标来自FP32输出。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:single_pair",
+      "source_group": "v4",
+      "branch_local_id": "single_pair",
+      "field": "method_description",
+      "value": "同一固定图像对 clean-only D0拟合：原共同初始化、batch1、LC only，冻结/跳过ξ分支、simulator零调用，400次更新/400次曝光；无held-out验证，不作泛化结论。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_single_pair_cleanonly_400u_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4964ae18d16668f7b9898bbdad080e29e5d4ac0d0af78c91d68c55230c69a900",
+          "exact_excerpt": "固定 Train source 01 / train_s0006_r00 / G4，同一张 C、同一份原始 raw-xi、同一张 Y。原共同初始化，batch1、GPU5一张A100、LC only。400updates=400次固定图像对曝光；没有val曲线，没有泛化结论。\n# 单对 clean-only D0：400 updates"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_single_pair_cleanonly_400u_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4964ae18d16668f7b9898bbdad080e29e5d4ac0d0af78c91d68c55230c69a900",
+          "exact_excerpt": "训练更新耗时 41.35 秒；含评估/保存checkpoint的训练阶段墙钟 50.04 秒，不含预验收/作图/下载。原common_init复用、xi冻结跳过、simulator零调用、400次optimizer状态计数、最终checkpoint恢复输出逐元素一致、旧代码/资产哈希未变，验收PASS。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:single_pair",
+      "source_group": "v4",
+      "branch_local_id": "single_pair",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 1,
+          "source_label": "Train source 01",
+          "trajectory_id": "train_s0006_r00",
+          "G": 4,
+          "fixed_clean_raw_xi_and_observation": true,
+          "unique_pairs": 1,
+          "exposures": 400
+        },
+        "validation": "none"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_single_pair_cleanonly_400u_20260929/results/report/REPORT_ZH.md",
+          "sha256": "4964ae18d16668f7b9898bbdad080e29e5d4ac0d0af78c91d68c55230c69a900",
+          "exact_excerpt": "固定 Train source 01 / train_s0006_r00 / G4，同一张 C、同一份原始 raw-xi、同一张 Y。原共同初始化，batch1、GPU5一张A100、LC only。400updates=400次固定图像对曝光；没有val曲线，没有泛化结论。\n# 单对 clean-only D0：400 updates"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:fixed_operator",
+      "source_group": "v4",
+      "branch_local_id": "fixed_operator",
+      "field": "method_description",
+      "value": "固定真实ξ与g的单帧算子诊断：A=WB（固定空间加权反射卷积与border双线性采样），用保存FP32系数构造FP64分析算子，检查零列/重复行秩上界、合法RGB近零方向及原FP32重放；另以零初始化LSMR（damp0、至多512次）作已知算子无约束反演。无网络训练或ξ预测。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+          "sha256": "662078dca990638f643bf2e6cf8baf7da412e2cafda619efe47a2544f1978996",
+          "exact_excerpt": "固定真实 ξ、g 后，A=WB。B 为反射边界卷积及固定空间权重，W 为双线性 border 采样。实际 flow 按原代码保留；没有把 (N−1) 的 flow 构造与 align_corners=False 的历史组合改成另一种 warp。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+          "sha256": "662078dca990638f643bf2e6cf8baf7da412e2cafda619efe47a2544f1978996",
+          "exact_excerpt": "下表对应以保存的 FP32 flow/物理系数定义的 FP64 分析算子。W 的零列及精确重复行给出严格秩上界，且 rank(A)≤rank(W)。若零空间下界>0，就能证明该理想离散连续像素空间内全局非单射；RGB 三通道独立使用同一算子。为避免大图最大匹配耗时，本轮可跳过完整结构秩计算；跳过明确显示为‘未计算’，不影响零列/重复行给出的上界。结构满秩也不能反向证明可逆。没有计算完整数值秩或奇异值谱。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+          "sha256": "662078dca990638f643bf2e6cf8baf7da412e2cafda619efe47a2544f1978996",
+          "exact_excerpt": "LSMR 从零初始化、damp=0，最多 512 次迭代；atol/btol=1e-10，conlim=1e+12。输入仅为 Y 与已知算子。GT 不进入恢复的初始化、目标或停止条件。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:fixed_operator",
+      "source_group": "v4",
+      "branch_local_id": "fixed_operator",
+      "field": "dataset_or_population_json",
+      "value": {
+        "diagnostic_population": {
+          "clean_source": "Train source 01",
+          "clean_sources": 1,
+          "realizations": 1,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "training": "not a network training experiment",
+        "scope": "one fixed clean/true-xi realization; not generalization population"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+          "sha256": "662078dca990638f643bf2e6cf8baf7da412e2cafda619efe47a2544f1978996",
+          "exact_excerpt": "本报告只覆盖同一张 Train source 01、同一真实 realization 在 G=1/2/3/4 下的算子。没有训练网络、预测 ξ、修改 simulator 或搜索参数。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:blind_ambiguity",
+      "source_group": "v4",
+      "branch_local_id": "blind_ambiguity",
+      "field": "method_description",
+      "value": "局部C–ξ补偿可辨识性诊断：fixed_xi只优化C、xi_only只优化两块rawξ、joint联合优化；固定RGB距离和[0,1]约束、局部ξ边界，目标仅观测MSE/1e-8，无clean loss。36段各600次诊断变量更新，13个审核候选取最小观测MSE；网络训练更新0，非盲恢复测试成绩。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_blind_ambiguity_20260929/results/report/REPORT_ZH.md",
+          "sha256": "980675f1767703bcc65308ed4070f1a148d5a1eaac2f2ea38d53b86839517bd1",
+          "exact_excerpt": "36 段固定预算搜索已完成，保存数组已逐个通过原 simulator 独立重放和约束复核，并通过本报告的数据、哈希与候选选择审计。每段 600 次诊断变量更新，总计 21,600 次；网络训练更新为 0。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_blind_ambiguity_20260929/results/report/REPORT_ZH.md",
+          "sha256": "980675f1767703bcc65308ed4070f1a148d5a1eaac2f2ea38d53b86839517bd1",
+          "exact_excerpt": "fixed_xi 只更新 C；xi_only 固定初始 C′、只更新两块 raw ξ；joint 同时更新 C 和两块 ξ。固定 ξ 达到阈值只记作对照，不能计为 blind witness。每段只从初始化及每 50 次更新的 13 个审核候选中取最小观测 MSE；不是 601 个状态或全局最优。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:blind_ambiguity",
+      "source_group": "v4",
+      "branch_local_id": "blind_ambiguity",
+      "field": "dataset_or_population_json",
+      "value": {
+        "diagnostic_population": {
+          "clean_source": "Train source 01",
+          "clean_sources": 1,
+          "raw_xi": "original true realization",
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "initializations": 3,
+          "optimization_modes": [
+            "fixed_xi",
+            "xi_only",
+            "joint"
+          ],
+          "search_segments": 36
+        },
+        "clean_distance_RMS": 0.010001,
+        "RGB_constraint": [
+          0,
+          1
+        ],
+        "training_network_updates": 0
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_blind_ambiguity_20260929/results/report/REPORT_ZH.md",
+          "sha256": "980675f1767703bcc65308ed4070f1a148d5a1eaac2f2ea38d53b86839517bd1",
+          "exact_excerpt": "只覆盖 Train source 01、原真实 raw ξ、G=1/2/3/4 和三个预先固定初始化。C 的距离固定为 RMS(C′−C_GT)=0.010001，RGB 限制 [0,1]；ξ 使用登记的局部变化边界和统计筛查。目标只含观测 MSE/1e−8，没有 clean loss；GT 用于初始化、可行域与最终评价。这不是盲恢复算法的测试集性能。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:unet_train500",
+      "source_group": "v4",
+      "branch_local_id": "unet_train500",
+      "field": "method_description",
+      "value": "旧V4六通道小型RGB/U-Net主体（clean sigmoid、原生raw ξ双头）的D0/R0/R08/L08四组matched-update训练：direct、T0=0物理递归、T0=.8物理递归与预测clean到原Y线性路径；共同path-mean(MSE clean+.2MSE原G/Y回投)、full-BPTT。已验收共同U5000/每组160000曝光阶段；后续完整终态未核，不把10k计划当完成。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/protocol/METHOD_AND_DATA_SPEC.json",
+          "sha256": "b23a7ad30c1f422da46a15044b750f127efd0417a9a63ead7f4d480a4a4ecc72",
+          "exact_excerpt": "\"common_model\": \"existing V4 small RGB 6-channel joint [g,t] model; clean sigmoid + two native raw-xi outputs\",\n  \"common_loss\": \"mean_b(mean_k(MSE(C_hat_bk,C_b)+0.2*MSE(F(C_hat_bk,xi_hat_bk,G_b),Y_b)))\","
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/protocol/FROZEN.json",
+          "sha256": "c5446695ccdbeab62f023cd516cfd35a1736f7c60407d57c26fedc31fe0faad8",
+          "exact_excerpt": "\"status\": \"PASS_ALL_GATES\",\n  \"formal_training_authorized\": true,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/reports/U05000_READOUT.md",
+          "sha256": "4161443f965dfe2d189fe80810ef316179066287f6575f97a997fb73f6d9304f",
+          "exact_excerpt": "四组共同 U=5000，epoch=20，每组 160000 start-record exposures。原完整交付和 FIGURES_AND_TABLES 均已提交、下载并通过全部哈希核验；训练已按授权继续到 U=7500，最终上限仍为 U=10000。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:unet_train500",
+      "source_group": "v4",
+      "branch_local_id": "unet_train500",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+        "train": {
+          "clean_sources": 500,
+          "realizations_per_source": 4,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 8000
+        },
+        "validation": {
+          "clean_sources": 100,
+          "realizations_per_source": 2,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 800
+        },
+        "reserved_test": {
+          "clean_sources": 200,
+          "used": false
+        },
+        "RGB_resolution": [
+          256,
+          256
+        ]
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/protocol/METHOD_AND_DATA_SPEC.json",
+          "sha256": "b23a7ad30c1f422da46a15044b750f127efd0417a9a63ead7f4d480a4a4ecc72",
+          "exact_excerpt": "\"data\": {\n    \"dataset_id\": \"places_p2s_a100_20260928_g4321_s500_v100_t200_v1\",\n    \"train_sources\": 500,\n    \"train_realizations_per_source\": 4,\n    \"train_starts\": 8000,\n    \"val_sources\": 100,\n    \"val_realizations_per_source\": 2,\n    \"val_starts\": 800,\n    \"test_sources_reserved\": 200,\n    \"test_starts_reserved\": 1600,\n    \"test_used_in_this_round\": false,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/reports/U05000_READOUT.md",
+          "sha256": "4161443f965dfe2d189fe80810ef316179066287f6575f97a997fb73f6d9304f",
+          "exact_excerpt": "主比较为 val800、RAW / refinement-OFF："
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:pirn_backbone",
+      "source_group": "v4",
+      "branch_local_id": "pirn_backbone",
+      "field": "method_description",
+      "value": "PiRN仓库SwinIR/RSTB backbone加V4条件/双输出适配的四方法功能验收，共同全新随机PiRN U0、不加载PiRN预训练权重；验收direct/physical/linear路径、原path-mean LC+.2LR、full-BPTT与截断负控、B32梯度累积、U0恢复。正式网络optimizer更新0。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "名称为 PiRN 仓库 SwinIR/RSTB backbone + V4 条件/双输出适配，未加载预训练 PiRN 权重，不称为整套官方 PiRN 方法复现。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "- 当前 train500 冻结 μ/s、8000 starts 与共同初始化身份一致；四组都是同一份全新 PiRN 权重。\n- G1/G2/G3/G4、单样本与混合批次对齐；原 Y/G/η 保持身份；clean GT 只参与 loss。\n- D0 单次预测且 clean/ξ 全部纳入 optimizer；R0/R08 物理递归；L08 精确使用原线性状态公式，并保留物理 LR。\n- 原 path-mean LC + 0.2 LR、full BPTT 与截断负对照通过；L08 末端 clean loss 对早期 ξ 没有依赖是预期语义，不是断图。\n- 有效 B32（各 G 八个 starts），microbatch1 与 microbatch2 梯度和 loss 一致，全部参数梯度有限；没有执行 network optimizer.step。\n- Y/G-only 统一推理接口与训练 objective 的 RAW 输出一致；D0/L08 的 refinement-ON 拒绝为 N/A。\n- R0/R08 在真实 G4 样本各经过 3 个合法精修阶段，每阶段逐样本 40 步、41 candidates；网络和模拟器哈希不变。临时 ξ Adam 更新不属于训练网络更新。\n- U0 RAW/EMA/空 optimizer/RNG/数据游标保存恢复；错误方法、架构、旧统计、stream、初始权重身份或缺失统计 buffer 均被拒绝。\n- 实际 PSNR/SSIM/LPIPS 与 LC/0.2LR/total 管线完成样本 COMMIT，所有文件哈希核验通过。\n- 38 项父来源文件、16 项原训练状态/日志/指针等文件保持不变；旧正式训练仍按用户要求停止。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "**结论：D0 / R0 / R08 / L08 四组真实 GPU 功能验收全部通过。正式训练未启动，网络 optimizer updates = 0。**"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:pirn_backbone",
+      "source_group": "v4",
+      "branch_local_id": "pirn_backbone",
+      "field": "dataset_or_population_json",
+      "value": {
+        "scope": "bounded engineering acceptance, not formal training/full-population quality evaluation",
+        "reference_training_population": {
+          "name": "train500",
+          "starts": 8000,
+          "statistics": "frozen train500 mu/s"
+        },
+        "actual_checks": "fixed training samples, G1-G4 single/mixed; B32 each G8",
+        "test200_used": false,
+        "full_train8000_val800_evaluated": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "- 当前 train500 冻结 μ/s、8000 starts 与共同初始化身份一致；四组都是同一份全新 PiRN 权重。\n- G1/G2/G3/G4、单样本与混合批次对齐；原 Y/G/η 保持身份；clean GT 只参与 loss。\n- D0 单次预测且 clean/ξ 全部纳入 optimizer；R0/R08 物理递归；L08 精确使用原线性状态公式，并保留物理 LR。\n- 原 path-mean LC + 0.2 LR、full BPTT 与截断负对照通过；L08 末端 clean loss 对早期 ξ 没有依赖是预期语义，不是断图。\n- 有效 B32（各 G 八个 starts），microbatch1 与 microbatch2 梯度和 loss 一致，全部参数梯度有限；没有执行 network optimizer.step。\n- Y/G-only 统一推理接口与训练 objective 的 RAW 输出一致；D0/L08 的 refinement-ON 拒绝为 N/A。\n- R0/R08 在真实 G4 样本各经过 3 个合法精修阶段，每阶段逐样本 40 步、41 candidates；网络和模拟器哈希不变。临时 ξ Adam 更新不属于训练网络更新。\n- U0 RAW/EMA/空 optimizer/RNG/数据游标保存恢复；错误方法、架构、旧统计、stream、初始权重身份或缺失统计 buffer 均被拒绝。\n- 实际 PSNR/SSIM/LPIPS 与 LC/0.2LR/total 管线完成样本 COMMIT，所有文件哈希核验通过。\n- 38 项父来源文件、16 项原训练状态/日志/指针等文件保持不变；旧正式训练仍按用户要求停止。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "- 当前 train500 冻结 μ/s、8000 starts 与共同初始化身份一致；四组都是同一份全新 PiRN 权重。\n- G1/G2/G3/G4、单样本与混合批次对齐；原 Y/G/η 保持身份；clean GT 只参与 loss。\n- D0 单次预测且 clean/ξ 全部纳入 optimizer；R0/R08 物理递归；L08 精确使用原线性状态公式，并保留物理 LR。\n- 原 path-mean LC + 0.2 LR、full BPTT 与截断负对照通过；L08 末端 clean loss 对早期 ξ 没有依赖是预期语义，不是断图。\n- 有效 B32（各 G 八个 starts），microbatch1 与 microbatch2 梯度和 loss 一致，全部参数梯度有限；没有执行 network optimizer.step。\n- Y/G-only 统一推理接口与训练 objective 的 RAW 输出一致；D0/L08 的 refinement-ON 拒绝为 N/A。\n- R0/R08 在真实 G4 样本各经过 3 个合法精修阶段，每阶段逐样本 40 步、41 candidates；网络和模拟器哈希不变。临时 ξ Adam 更新不属于训练网络更新。\n- U0 RAW/EMA/空 optimizer/RNG/数据游标保存恢复；错误方法、架构、旧统计、stream、初始权重身份或缺失统计 buffer 均被拒绝。\n- 实际 PSNR/SSIM/LPIPS 与 LC/0.2LR/total 管线完成样本 COMMIT，所有文件哈希核验通过。\n- 38 项父来源文件、16 项原训练状态/日志/指针等文件保持不变；旧正式训练仍按用户要求停止。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+          "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+          "exact_excerpt": "后续正式训练仍需确定预算与执行冻结，并接入新正式运行的完整状态管理。本次只验证 U0 保存恢复，未验证非零 optimizer moments 续训；未运行学习曲线、全量 train8000/val800 或方法效果比较。`scripts/train_worker.py` 仍拒绝直接开训。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:swinir_2k",
+      "source_group": "v4",
+      "branch_local_id": "swinir_2k",
+      "field": "method_description",
+      "value": "SwinIR骨干+L1（MAE）+独立2k LR日程的D0/R0/R08/L08综合配置，四法各2000正式更新/64000曝光；共同U2000 RAW/refinement-OFF为主，R0/R08串行40步精修为辅助。新旧骨干、loss、LR同时改变，不能单项归因。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+          "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+          "exact_excerpt": "# V4 SwinIR + L1 + 独立 2k LR：U2000 完整交付核验"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+          "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+          "exact_excerpt": "四组均已完成预设的 2000 次正式 optimizer update（各 64000 次 start-record exposure），完整交付已下载并核验。实际进程扫描、历史 PID 核对、空 worker 列表及 tmux 退出共同确认本实验全部进程退出。预算到点停止；不自动延长，也不恢复旧 U-Net 实验。方法下一步等待用户决定。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+          "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+          "exact_excerpt": "新旧比较同时改变 backbone、loss 和 LR，应整体归因；MSE 与 MAE training loss 不直接比较。旧 U2000 缺少 fulltrain 时保留 N/A，不用 monitor400 代理；旧 U5000 仅属历史。旧运行、文件与 checkpoint 保持只读。完整数值和原始来源见 [matched updates](../stage_deliveries/U02000/old_vs_new_matched_updates.md)、[common-grid best](../stage_deliveries/U02000/old_vs_new_common_grid_best.md) 与 [OLD_VS_NEW](../stage_deliveries/U02000/OLD_VS_NEW.md)。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/protocol/SCIENTIFIC_SPEC.json",
+          "sha256": "72e791322a96d84cfdc12db4949e0f16a4445509bb736f083fd784376f17dc80",
+          "exact_excerpt": "\"training_loss\": {\n    \"clean\": \"per_sample_RGB_full_image_MAE\",\n    \"observation\": \"per_sample_RGB_full_image_MAE\",\n    \"lambda_R\": 0.2,\n    \"reduction\": \"unchanged_stage_path_batch\",\n    \"full_BPTT\": true"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:swinir_2k",
+      "source_group": "v4",
+      "branch_local_id": "swinir_2k",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+        "train": {
+          "clean_sources": 500,
+          "realizations_per_source": 4,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 8000
+        },
+        "validation": {
+          "clean_sources": 100,
+          "realizations_per_source": 2,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 800
+        },
+        "reserved_test": {
+          "clean_sources": 200,
+          "used": false
+        },
+        "RGB_resolution": [
+          256,
+          256
+        ]
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+          "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+          "exact_excerpt": "Input PSNR = 20.539433 dB。验证 population 为 100 个 source、800 个 start。PSNR/SSIM 越高越好，LPIPS 越低越好。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+          "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+          "exact_excerpt": "完整训练集的表现同样有限；较小的 Train−Val gap 本身不能证明恢复效果好或泛化成功。monitor400 仅作固定子集监控，表中训练指标全部来自真正的 fulltrain8000。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/docs/TRAINING_PLAN.md",
+          "sha256": "8d54ffb7b61f9da17596efcb15c3dc491087f5b3646b8df7de6dfdecc782427c",
+          "exact_excerpt": "| train500 | 500 | 4 | 1/2/3/4 | 8,000 | 四组共同训练 |\n| val100 | 100 | 2 | 1/2/3/4 | 800 | 记录泛化与配对比较 |\n| test200 | 200 | 2 | 1/2/3/4 | 1,600 | 本轮保留，不使用 |"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/protocol/SCIENTIFIC_SPEC.json",
+          "sha256": "72e791322a96d84cfdc12db4949e0f16a4445509bb736f083fd784376f17dc80",
+          "exact_excerpt": "\"unchanged\": [\n    \"AdamW\",\n    \"grad_clip\",\n    \"EMA\",\n    \"train500_mu_s\",\n    \"start_stream\",\n    \"eta\",\n    \"split\",\n    \"simulator\",\n    \"rollout\",\n    \"Concat(Z,Y)\",\n    \"raw_g_t_conditioning\",\n    \"RGB_and_raw_xi_outputs\""
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:restormer_candidate",
+      "source_group": "v4",
+      "branch_local_id": "restormer_candidate",
+      "field": "method_description",
+      "value": "D²Turb作者公开Restormer骨干接入D0/R0/R08/L08的有界正确性候选，四法同一随机U0；六通道Concat(Z,Y)、raw[g,t] FiLM、sigmoid clean/native rawξ；保持RGB MAE LC+.2LR、full-BPTT。仅公开骨干对齐，非作者完整训练recipe复现；正式optimizer调用0，部分真实尺寸验证为CPU/offload。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+          "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+          "exact_excerpt": "本目录把 **D²Turb 作者公开的 Restormer 骨干结构** 接入 V4 的 D0、R0、R08、L08，使用同一份全新随机初始化。它是候选模型资产与正确性验证包；正式训练尚未授权，也没有选择新的训练预算或学习率计划。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+          "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+          "exact_excerpt": "输入为原尺度 FP32 `Concat(Z,Y)`（6×256×256），raw `[g,t]` 经原 JointCondition 和各 stage 的 FiLM 注入。输入不 clamp、不增加标准化。RGB 输出使用 sigmoid；因此没有照搬作者 RGB 残差输出层。独立 ξ 分支输出不限制范围的 Zernike 36×512×512 和 tilt 512×512×2。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+          "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+          "exact_excerpt": "共同保留 RGB 全图 MAE 的 `LC + 0.2 LR`、路径平均后 batch 平均、full BPTT、固定同一路径 eta。训练中无精修。13 个科学逻辑/统计文件与既有 SwinIR 实验逐字节一致，见 `protocol/INHERITED_IDENTITY.json`。归一化统计沿用冻结的 train500/8000 记录；没有访问测试集。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:restormer_candidate",
+      "source_group": "v4",
+      "branch_local_id": "restormer_candidate",
+      "field": "dataset_or_population_json",
+      "value": {
+        "scope": "bounded candidate acceptance",
+        "RGB_resolution": [
+          256,
+          256
+        ],
+        "raw_xi_resolution": 512,
+        "fixed_training_checks": "mixed G1/G4 real samples",
+        "normalization_reference": {
+          "name": "train500",
+          "starts": 8000
+        },
+        "test_accessed": false,
+        "formal_training": "not started"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+          "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+          "exact_excerpt": "共同保留 RGB 全图 MAE 的 `LC + 0.2 LR`、路径平均后 batch 平均、full BPTT、固定同一路径 eta。训练中无精修。13 个科学逻辑/统计文件与既有 SwinIR 实验逐字节一致，见 `protocol/INHERITED_IDENTITY.json`。归一化统计沿用冻结的 train500/8000 记录；没有访问测试集。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+          "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+          "exact_excerpt": "1. 完整宽度/深度、32×32 CPU：与作者骨干特征及输入/全部骨干参数梯度比较，六通道映射和 FiLM 隔离方式写入报告。\n2. 真实 256 图像、512 模拟器：混合 G=1/4 的前向、逐样本一致性、真实 MAE、G4 完整反传及故意断图的负控。\n3. 检查四组共同 U0、完整 RAW/EMA/空 optimizer/RNG 保存恢复，以及损坏身份、状态、目标 EMA 和错误 optimizer 绑定的拒绝行为。正式训练入口主动拒绝，全部 optimizer 调用为 **0**。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:restormer_platform_migration",
+      "source_group": "v4",
+      "branch_local_id": "restormer_platform_migration",
+      "field": "method_description",
+      "value": "V4 Restormer四方法L1/原物理与线性rollout训练的平台迁移链：NPU四组先安全保存停止（D0 U669/R0 U196/R08 U198/L08 U201），随后A100从新的共同随机U0重新训练，未加载NPU权重；后续matched U5000收尾，不将旧20k计划当完成。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/README.md",
+          "sha256": "83b15236aa98f06919d6c1ec9c8601dc489453c7f1d893fac428116a18382c14",
+          "exact_excerpt": "User explicitly corrected: A100 starts from shared random U0, not NPU checkpoints. See `protocol/A100_FRESH_U0_AUTHORIZATION_20261003.json`. Four separate fresh runs: `runs/a100_fresh_u0_20k` on A100 GPUs3/5 (D0+R08 / R0+L08). CUDA acceptance PASS for all4. Original NPU workers remain safely stopped and results preserved. Checkpoint migration cancelled. Earlier continuation/platform instructions below are historical and superseded."
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/README.md",
+          "sha256": "83b15236aa98f06919d6c1ec9c8601dc489453c7f1d893fac428116a18382c14",
+          "exact_excerpt": "User explicitly requested stopping NPU and continuing on A100. See `protocol/A100_MIGRATION_AUTHORIZATION_20261003.json` and `reports/migration_a100_20261003/`. NPU workers/controller stopped with full checkpoints D0 U669, R0 U196, R08 U198, L08 U201. Keep NPU stopped. Original scientific specification and historic NPU records stay frozen. A100 has an independent migration execution directory; acceptance and imported checkpoint evidence govern launch. Older platform statements below are historical, superseded."
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/README.md",
+          "sha256": "83b15236aa98f06919d6c1ec9c8601dc489453c7f1d893fac428116a18382c14",
+          "exact_excerpt": "- de36 NPU 0/1/2/3: D0/R0/R08/L08, 20,000 updates each, effective batch 32.\n- A100: complete mirrored assets only, no formal training.\n- Canonical Places 50-category 2000/250/200 clean split, 4/2/2 realizations, G1-4.\n- Single canonical tensor identity; train-only statistics; test locked.\n- Backbone reuses pinned D2Turb Restormer candidate and random learned parameters.\n- Physics, four-method rollout and L1 objective preserved."
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/OLD_U5000_FULLVAL_SUMMARY.md",
+          "sha256": "7959701b420971a961926bcb11f1b4971298c661558df6f7f207ed0de1f7c288",
+          "exact_excerpt": "旧 Train2000 run，四组均 U5000 / 160000 exposures。完整 Val250 clean × 2ξ × 4G = 2000 starts；online/raw 权重、refinement OFF、CUDA BF16、batch1，指标与 population identity 已逐组核对。Test未使用。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:restormer_platform_migration",
+      "source_group": "v4",
+      "branch_local_id": "restormer_platform_migration",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_dataset_id": "places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+        "source_domain": "Places365; 50 categories",
+        "train": {
+          "clean_sources": 2000,
+          "realizations_per_source": 4,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 32000
+        },
+        "validation": {
+          "clean_sources": 250,
+          "realizations_per_source": 2,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 2000
+        },
+        "reserved_test": {
+          "clean_sources": 200,
+          "realizations_per_source": 2,
+          "used": false
+        },
+        "source_split": "canonical 2000/250/200 clean; train-only statistics"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/README.md",
+          "sha256": "83b15236aa98f06919d6c1ec9c8601dc489453c7f1d893fac428116a18382c14",
+          "exact_excerpt": "- de36 NPU 0/1/2/3: D0/R0/R08/L08, 20,000 updates each, effective batch 32.\n- A100: complete mirrored assets only, no formal training.\n- Canonical Places 50-category 2000/250/200 clean split, 4/2/2 realizations, G1-4.\n- Single canonical tensor identity; train-only statistics; test locked.\n- Backbone reuses pinned D2Turb Restormer candidate and random learned parameters.\n- Physics, four-method rollout and L1 objective preserved."
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/OLD_U5000_FULLVAL_SUMMARY.md",
+          "sha256": "7959701b420971a961926bcb11f1b4971298c661558df6f7f207ed0de1f7c288",
+          "exact_excerpt": "旧 Train2000 run，四组均 U5000 / 160000 exposures。完整 Val250 clean × 2ξ × 4G = 2000 starts；online/raw 权重、refinement OFF、CUDA BF16、batch1，指标与 population identity 已逐组核对。Test未使用。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/protocol/SCIENTIFIC_SPEC.json",
+          "sha256": "b79fd0872f5edd2ab25ddb6f512870eb6717206e3999d37c3548371ba0cf4cfe",
+          "exact_excerpt": "\"data\": {\n    \"dataset_id\": \"places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1\",\n    \"seed\": 20261003,\n    \"categories\": 50,\n    \"sources_per_category\": {\n      \"train\": 40,\n      \"val\": 5,\n      \"test\": 4\n    },\n    \"sources\": {\n      \"train\": 2000,\n      \"val\": 250,\n      \"test\": 200\n    },\n    \"realizations_per_source\": {\n      \"train\": 4,\n      \"val\": 2,\n      \"test\": 2\n    },\n    \"severities\": [\n      1,\n      2,\n      3,\n      4\n    ],\n    \"starts\": {\n      \"train\": 32000,\n      \"val\": 2000,\n      \"test\": 1600\n    },\n    \"generalization\": \"same-category/unseen-image\",\n    \"source_disjoint\": true,\n    \"canonical_generation_paths\": 1,\n    \"preprocessing\": \"inherit accepted V4 exactly\",\n    \"normalization\": \"recompute train-only mu,s from 32000 states; no val/test\",\n    \"test_locked\": true"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_candidate",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_candidate",
+      "field": "method_description",
+      "value": "官方NAFNet-SIDD width64预训练主体的V4四方法适配：intro扩为[W/2,W/2]接六通道，raw[g,t] FiLM、new sigmoid绝对clean head与native rawξ头；官方ending不直接加载，四法共享适配预训练U0。保持MAE clean+.2MAE原G/Y回投、full-BPTT；B1/G4临时验收非B32正式训练，非完整官方SIDD方法复现。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/README.md",
+          "sha256": "444255655aa284ca1ff5a44c274a5eab8a6d3bee077da9c095baf235f5f80368",
+          "exact_excerpt": "当前默认资产为 **SIDD 官方预训练主体 + 新 V4 接口**，四方法共享同一份适配后的预训练 V4 U0。NAFBlock 的全部已训练权重（包括 beta/gamma）原样迁移；intro 扩成 `[W/2,W/2]`，保留原 bias；主干各级 FiLM 初始为恒等。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/ADAPTATION.md",
+          "sha256": "1a50329935c59b4050a9d084c3cd7ca1da9e53b5cd73e62d78bf8ed9171d401e",
+          "exact_excerpt": "1. **输入**：官方 intro 从 3 通道改为 6 通道，接 `[Z,Y]`。保留 3×3、padding1；从官方预训练权重扩为 `[W/2,W/2]` 并复用原 bias，使 Z=Y 时保持原 intro 映射；输入与原实验一致，不 clamp、不额外标准化。\n2. **条件**：复用 V4 `JointCondition`，raw `[g,t] → 256 → 256`。在四个 encoder、middle、四个 decoder 前加 FiLM；decoder 的注入位置是 upsample+skip 之后。当前预训练版主干 FiLM 的 scale/shift 投影初始全零，以保留预训练主体的特征路径。条件 MLP 在首步可能是零梯度，投影更新后再学习，这是预期初始化，不是断图；新 raw ξ block 内 FiLM 仍按旧 V4 接口初始化。\n3. **主干**：官方 width64 / `[2,2,4,8]` / 12 / `[2,2,2,2]`；所有 NAFBlock 和其官方 LayerNorm 自定义反向代码保持不变。当前使用已训练 checkpoint 中的 beta/gamma，不将其重置为零。原随机参考版才采用官方从零训练的 gate=0 初始化。\n4. **输出**：用 width64 feature 接 3×3 clean RGB head+sigmoid，另接与现有 V4 同型的 realization projection、nearest×2、卷积/SiLU/FiLM block、36+2 raw heads。官方 `ending` 预测加性残差，与 V4 的绝对 RGB sigmoid head 语义不同，因此不直接误载该输出头；完整原去噪模型仍保留于官方 checkpoint。V4 clean head 与 ξ decoder 新初始化，raw heads 零初始化、无界、在 simulator 内应用 severity。未对 ξ 改坐标系或缩小 native resolution。\n5. **数值/内存**：BF16 只限模型 autocast 范围；输出转回 FP32，simulator/loss 保持 FP32。stage activation checkpoint 不 detach，不改变完整递归反传。必要 CPU activation offload 仅为无损存储选项，是否使用以验收报告为准。\n6. **优化器**：沿用 V4 AdamW lr1e-4、betas(.9,.999)、eps1e-8、weight decay1e-4；bias 和 normalization 参数不做 decay。NAFNet 的自定义 `LayerNorm2d` 显式纳入该规则。这里只是验收配置，没有采用官方 SIDD 400k/PSNRLoss 的训练配方。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/ADAPTATION.md",
+          "sha256": "1a50329935c59b4050a9d084c3cd7ca1da9e53b5cd73e62d78bf8ed9171d401e",
+          "exact_excerpt": "1. **输入**：官方 intro 从 3 通道改为 6 通道，接 `[Z,Y]`。保留 3×3、padding1；从官方预训练权重扩为 `[W/2,W/2]` 并复用原 bias，使 Z=Y 时保持原 intro 映射；输入与原实验一致，不 clamp、不额外标准化。\n2. **条件**：复用 V4 `JointCondition`，raw `[g,t] → 256 → 256`。在四个 encoder、middle、四个 decoder 前加 FiLM；decoder 的注入位置是 upsample+skip 之后。当前预训练版主干 FiLM 的 scale/shift 投影初始全零，以保留预训练主体的特征路径。条件 MLP 在首步可能是零梯度，投影更新后再学习，这是预期初始化，不是断图；新 raw ξ block 内 FiLM 仍按旧 V4 接口初始化。\n3. **主干**：官方 width64 / `[2,2,4,8]` / 12 / `[2,2,2,2]`；所有 NAFBlock 和其官方 LayerNorm 自定义反向代码保持不变。当前使用已训练 checkpoint 中的 beta/gamma，不将其重置为零。原随机参考版才采用官方从零训练的 gate=0 初始化。\n4. **输出**：用 width64 feature 接 3×3 clean RGB head+sigmoid，另接与现有 V4 同型的 realization projection、nearest×2、卷积/SiLU/FiLM block、36+2 raw heads。官方 `ending` 预测加性残差，与 V4 的绝对 RGB sigmoid head 语义不同，因此不直接误载该输出头；完整原去噪模型仍保留于官方 checkpoint。V4 clean head 与 ξ decoder 新初始化，raw heads 零初始化、无界、在 simulator 内应用 severity。未对 ξ 改坐标系或缩小 native resolution。\n5. **数值/内存**：BF16 只限模型 autocast 范围；输出转回 FP32，simulator/loss 保持 FP32。stage activation checkpoint 不 detach，不改变完整递归反传。必要 CPU activation offload 仅为无损存储选项，是否使用以验收报告为准。\n6. **优化器**：沿用 V4 AdamW lr1e-4、betas(.9,.999)、eps1e-8、weight decay1e-4；bias 和 normalization 参数不做 decay。NAFNet 的自定义 `LayerNorm2d` 显式纳入该规则。这里只是验收配置，没有采用官方 SIDD 400k/PSNRLoss 的训练配方。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/README.md",
+          "sha256": "444255655aa284ca1ff5a44c274a5eab8a6d3bee077da9c095baf235f5f80368",
+          "exact_excerpt": "共同使用原版 `L = mean(|C_hat-C|) + 0.2 mean(|F(C_hat,xi_hat,G)-Y|)`；递归先对每条路径求均值，再对 batch 求均值。保持 G1–4、原观测 Y 条件、同一条路径的 eta、原 simulator 和 full-BPTT。R0/R08 refinement 为独立 inference 开关，沿用 per-sample serial 的 40 步实现，不参与训练。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_candidate",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_candidate",
+      "field": "dataset_or_population_json",
+      "value": {
+        "scope": "bounded pretrained candidate acceptance",
+        "reference_dataset": "existing canonical Train2000",
+        "statistics": "fixed train-only Train2000 statistics",
+        "actual_population": "train samples only; native B1/G4 and bounded G2 refinement checks",
+        "Test_locked": true,
+        "new_data_generation_or_sampling": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/README.md",
+          "sha256": "444255655aa284ca1ff5a44c274a5eab8a6d3bee077da9c095baf235f5f80368",
+          "exact_excerpt": "Train2000 仅用于这次有界验收：引用既有 canonical 数据、固定 train-only 统计，不重新生成、复制或抽样数据；只读取 train 样本，Test 锁定。后续若改用更多图片，必须新建数据身份并重算对应 train-only 统计，不能沿用本验收统计。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/README.md",
+          "sha256": "444255655aa284ca1ff5a44c274a5eab8a6d3bee077da9c095baf235f5f80368",
+          "exact_excerpt": "- `nafnet_v4/model.py`：骨干和接口；`upstream.py`：校验源文件 SHA 后隔离导入未改写的官方类，避免 BasicSR 的无关插件依赖。\n- `nafnet_v4/pretrained.py`：官方权重严格加载、来源/统计身份检查、共同预训练 U0、四方法 factory；`factory.py` 保留原随机参考入口和共享 AdamW。自定义 LayerNorm2d 正确进入不施加 weight decay 的归一化参数组。\n- `nafnet_v4/inference.py`：四方法推理及 R0/R08 独立 refinement。\n- `nafnet_v4/metrics.py`：复用 PSNR/SSIM/LPIPS 定义；固定评价网络权重只用于 LPIPS。\n- `nafnet_v4/checkpoints.py`：显式绑定实验身份、model/optimizer/scaler/scheduler/RNG/采样位置/计数的保存与恢复。拒绝其他骨干或 run 的 checkpoint。\n- `configs/groups_pretrained/` 与 `configs/runtime_pretrained.json`：当前预训练四方法配置。`groups/` 和 `runtime.json` 保留原随机参考配置。\n- `protocol/`：官方源、继承科学代码、Train2000 统计、共同预训练 V4 U0、旧随机参考及授权边界。\n- `scripts/accept_pretrained_cpu.py`：官方预训练权重映射和真实256尺寸特征 parity。`accept_cpu.py` 保留原随机结构的32尺寸梯度 parity 与方法语义 fixtures。\n- `scripts/accept_native_pretrained.py`：实际 256/512 尺寸、B1/G4、一次临时优化器更新和 save/restore 检查。**不是 B32 正式训练验收。**\n- `reports/`：实测结果；最终状态见 `reports/pretrained/ACCEPTANCE_SUMMARY.json`。\n- `scripts/verify_assets.py`：无需 PyTorch/GPU 的完整资产 SHA 校验。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_train8000",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_train8000",
+      "field": "method_description",
+      "value": "NAFNet-SIDD预训练主体适配后的D0/R0/R08/L08四法全参数full-BPTT训练，共同适配U0和样本流，最终micro16×accum2/B32/FP32、peak LR5e-5；各20000更新/640000曝光/5epochs。主评价online/raw、refinement-OFF，EMA及R0/R08串行推理精修独立列示。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "四方法正式工程配置为 **microbatch16 × accumulation2，effective batch32，FP32**。R0从自身完整U6898、R08从自身完整U6894恢复，回滚0步；D0/L08仍从共同U0排队，配置均为16。四组16档完整恢复验收及精确源码兼容链PASS；CPU监督与旧L08双卡补评均已接续。只占GPU3/5。原模型/数据/损失/fullBPTT/LR/预算、原preflight/TIMEBOX及历史receipt均未修改。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "- 旧Restormer：只保留matched U5000主比较，逐组完整状态验收、持久STOP、graceful stop及无respawn验证。D0已有U>5000结果全部保留，不继续旧20k计划。旧NPU训练不恢复。\n- 新数据：Places4000+LSDIR4000训练；Places500+LSDIR500验证；旧Test200锁定。原2450个来源及已有退化字节复用，不重新生成。全局精确重复/基础近重复审查覆盖跨数据集和Test来源。\n- LSDIR：官方公开val只有250，本轮已按允许的fallback，采用官方train源池的4000train+500held-out；明确不是官方val500。选择源池为按固定seed预选的官方HR shard-09，尚未把“抽一个archive”描述为对全部LSDIR的均匀抽样。\n- de36：唯一canonical generation，原已验收FP32 pipeline，raw ξ保留。只允许NPU0–3持续空闲后取分片，不挤占其他任务、不用5–7。生成和全量验收已经完成，DATA_READY已冻结；原数据控制器正常退出，不得重启生成。\n- A100：仅3/5；账号全部任务可能超两张时等待，不用第三卡。新full-BPTT四方法全参数微调；同预训练共同U0、数据/样本流、effective B、LR/precision和640000 exposures；Phase-1后不自动延长。\n- 新训练gates：Train8000统计、全部runtime RGB哈希、真实峰值LR≥10步/方法、吞吐B32/B64、FP32/BF16、调度及精确状态恢复。CPU工程检查已通过，不替代真实GPU验收。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/U20000_FOUR_METHOD_RESULTS.md",
+          "sha256": "ce73d1f59417e91a389656b15dbbaa8f284c12a253b712105178617bd0cbacdb",
+          "exact_excerpt": "本地生成时间：2026-10-12T15:05:55.926343+08:00。四法各20000updates、640000exposures、5epochs，全部104项评价通过原parts独立CPU验收。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "统一FP32/B32/peak LR5e-5"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_train8000",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_train8000",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_dataset_id": "places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+        "train": {
+          "clean_sources": 8000,
+          "Places365": 4000,
+          "LSDIR": 4000,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "starts": 128000
+        },
+        "validation": {
+          "clean_sources": 1000,
+          "Places365": 500,
+          "LSDIR": 500,
+          "realizations_per_source": 2,
+          "G": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "inputs": 8000
+        },
+        "LSDIR_scope": "official train-source pool, fixed HR shard-09; 500 held-out not official val500, not uniform over all LSDIR",
+        "locked_test_sources": 200,
+        "Test_used": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "- 旧Restormer：只保留matched U5000主比较，逐组完整状态验收、持久STOP、graceful stop及无respawn验证。D0已有U>5000结果全部保留，不继续旧20k计划。旧NPU训练不恢复。\n- 新数据：Places4000+LSDIR4000训练；Places500+LSDIR500验证；旧Test200锁定。原2450个来源及已有退化字节复用，不重新生成。全局精确重复/基础近重复审查覆盖跨数据集和Test来源。\n- LSDIR：官方公开val只有250，本轮已按允许的fallback，采用官方train源池的4000train+500held-out；明确不是官方val500。选择源池为按固定seed预选的官方HR shard-09，尚未把“抽一个archive”描述为对全部LSDIR的均匀抽样。\n- de36：唯一canonical generation，原已验收FP32 pipeline，raw ξ保留。只允许NPU0–3持续空闲后取分片，不挤占其他任务、不用5–7。生成和全量验收已经完成，DATA_READY已冻结；原数据控制器正常退出，不得重启生成。\n- A100：仅3/5；账号全部任务可能超两张时等待，不用第三卡。新full-BPTT四方法全参数微调；同预训练共同U0、数据/样本流、effective B、LR/precision和640000 exposures；Phase-1后不自动延长。\n- 新训练gates：Train8000统计、全部runtime RGB哈希、真实峰值LR≥10步/方法、吞吐B32/B64、FP32/BF16、调度及精确状态恢复。CPU工程检查已通过，不替代真实GPU验收。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "- 旧Restormer：只保留matched U5000主比较，逐组完整状态验收、持久STOP、graceful stop及无respawn验证。D0已有U>5000结果全部保留，不继续旧20k计划。旧NPU训练不恢复。\n- 新数据：Places4000+LSDIR4000训练；Places500+LSDIR500验证；旧Test200锁定。原2450个来源及已有退化字节复用，不重新生成。全局精确重复/基础近重复审查覆盖跨数据集和Test来源。\n- LSDIR：官方公开val只有250，本轮已按允许的fallback，采用官方train源池的4000train+500held-out；明确不是官方val500。选择源池为按固定seed预选的官方HR shard-09，尚未把“抽一个archive”描述为对全部LSDIR的均匀抽样。\n- de36：唯一canonical generation，原已验收FP32 pipeline，raw ξ保留。只允许NPU0–3持续空闲后取分片，不挤占其他任务、不用5–7。生成和全量验收已经完成，DATA_READY已冻结；原数据控制器正常退出，不得重启生成。\n- A100：仅3/5；账号全部任务可能超两张时等待，不用第三卡。新full-BPTT四方法全参数微调；同预训练共同U0、数据/样本流、effective B、LR/precision和640000 exposures；Phase-1后不自动延长。\n- 新训练gates：Train8000统计、全部runtime RGB哈希、真实峰值LR≥10步/方法、吞吐B32/B64、FP32/BF16、调度及精确状态恢复。CPU工程检查已通过，不替代真实GPU验收。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/U20000_FOUR_METHOD_RESULTS.md",
+          "sha256": "ce73d1f59417e91a389656b15dbbaa8f284c12a253b712105178617bd0cbacdb",
+          "exact_excerpt": "同一full Val8000：1000clean sources×2realizations×G1–4；Places365/LSDIR各500sources。主表为online/raw、refinement OFF、FP32、batch1、TF32 OFF、Test禁用。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/protocol/SCIENTIFIC_SPEC.json",
+          "sha256": "2cd98eb647892b4adb8c23f1a83698edb4605f199bb81c5fd9437d3a14cc29a8",
+          "exact_excerpt": "\"data\": {\n    \"train\": {\n      \"Places365\": 4000,\n      \"LSDIR\": 4000\n    },\n    \"val\": {\n      \"Places365\": 500,\n      \"LSDIR\": 500\n    },\n    \"test\": {\n      \"Places365\": 200,\n      \"locked\": true\n    },\n    \"train_starts\": 128000,\n    \"val_starts\": 8000,\n    \"old_2450_sources_and_rendered_bytes_reused\": true,\n    \"one_canonical_generation\": \"de36 NPU FP32, authorized physical devices 0-3 only\",\n    \"A100_mirror\": \"train/val RGB arrays and frozen metadata, no new raw xi copy\""
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+          "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+          "exact_excerpt": "Canonical：`places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1`。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_train15000",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_train15000",
+      "field": "method_description",
+      "value": "NAFNet Phase2四法从各自Phase1 U20000完整状态续接，保留optimizer/EMA，新增20k阶段日程为500update rewarm(1e-6→5e-5)再cosine到1e-6，B32/原grid-free四方法；新balanced240000starts采样。实际D0/R0到globalU40000，R08/L08在U32891/U21559按用户要求完整保存停止，不作共同U40000完成结论。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_D0_U40000_20261016/provenance/D0_IDENTITY.json",
+          "sha256": "c8eb84ad41ee57c7a3df6ac5897c0ad580002ff36430bf1934dcdd36ac85d9e2",
+          "exact_excerpt": "\"stage_budget_updates\": 20000,\n  \"effective_batch\": 32,\n  \"stats_sha256\": \"6bafa481ca1712ec076145f4bc437ef14feb653f0e97baaf4573e698fcaf0b41\",\n  \"scheduler\": \"500update rewarm 1e-6->5e-5, then cosine to1e-6 over new20k\",\n  \"sampler\": \"new balanced240000starts epoch; phase cursor0; independent grid-free original methods\",\n  \"optimizer_and_EMA_retained\": true,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/user_stop_20261018/停止与结果保全说明.md",
+          "sha256": "557489055d6a4f3502cc3b7afb17d560598cd6ce6f63b0dbe39ded4c378980e6",
+          "exact_excerpt": "| D0 | 已完成 | 40000 | 20000 | 640000 |\n| R0 | 已完成 | 40000 | 20000 | 640000 |\n| R08 | 用户主动停止 | 32891 | 12891 | 412512 |\n| L08 | 用户主动停止 | 21559 | 1559 | 49888 |"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:nafnet_train15000",
+      "source_group": "v4",
+      "branch_local_id": "nafnet_train15000",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_dataset_id": "places_lsdir_p2s_canonical_20261013_p7500_l7500_v1000_t200_g4321_v2",
+        "train": {
+          "clean_sources": 15000,
+          "Places365": 7500,
+          "LSDIR": 7500,
+          "starts": 240000,
+          "new_sources_added": 7000
+        },
+        "validation": {
+          "clean_sources": 1000,
+          "Places365": 500,
+          "LSDIR": 500,
+          "inputs": 8000
+        },
+        "old_arrays_reused_exactly": true,
+        "locked_test_sources": 200,
+        "Test_used": false,
+        "raw_xi_policy_for_new_sources": "CPU seed+hash+version+small golden examples; no full xi archive"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/status_20261015_0040/SOURCE_ACCEPTANCE.json",
+          "sha256": "71b56e95e1a5a0512cfb1694fd9bddcb6f7685f3d88a96968917a7e0c0ca25b9",
+          "exact_excerpt": "\"freeze\": {\n    \"dataset_id\": \"places_lsdir_p2s_canonical_20261013_p7500_l7500_v1000_t200_g4321_v2\",\n    \"old_dataset\": \"places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1\",\n    \"old_source_sha256\": \"de6446663fc38e0e447cadaa7bf5c27d2d08018fb968071d5d6db195e4035037\",\n    \"source_manifest_sha256\": \"baabaf15a6cdb39022f99e7ccc9979b16afa5529877b5dbca8aedc40b3333209\",\n    \"trajectory_plan_sha256\": \"35984d538b646d4f8f0ffe633e43ba1843e2b34ff52e3330e352796c94984787\",\n    \"new_sources_sha256\": \"aecf2583db3473e3a790fce716f721f2cb706f26af8325d4c2475b4fbd902371\",\n    \"train_sources\": 15000,\n    \"val_sources\": 1000,\n    \"locked_test_sources\": 200,\n    \"train_starts\": 240000,\n    \"old_arrays_reused_exactly\": true,\n    \"new_raw_xi_policy\": \"CPU seed+hash+version+small golden examples, no full xi archive\",\n    \"source_selection_seed\": 20261013,\n    \"Test_inference\": false"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/status_20261015_0040/SOURCE_ACCEPTANCE.json",
+          "sha256": "71b56e95e1a5a0512cfb1694fd9bddcb6f7685f3d88a96968917a7e0c0ca25b9",
+          "exact_excerpt": "\"population\": {\n    \"('Places365', 'train')\": 7500,\n    \"('Places365', 'val')\": 500,\n    \"('Places365', 'test')\": 200,\n    \"('LSDIR', 'train')\": 7500,\n    \"('LSDIR', 'val')\": 500\n  },\n  \"new_source_count\": 7000,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_D0_U40000_20261016/README_ZH.md",
+          "sha256": "f4a599b09b1a626fea33ba6682e489d5185fe73e609c1ab0b0b4bcd7a2c5d8b8",
+          "exact_excerpt": "同一原序8,000 inputs / 1,000 clean sources，每源8，每G2,000，Places365/LSDIR各4,000 inputs。Test未使用。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:continuous_delta_initial",
+      "source_group": "v4",
+      "branch_local_id": "continuous_delta_initial",
+      "field": "method_description",
+      "value": "D0对连续物理差分CONT_DELTA_R0的G4小数据pilot，初次尝试，无共同里程碑/配对评价；共同初始化、B32/FP32，peak LR5e-5、100update warmup。连续法训练K=2/3/4等概率、内部等距网格±0.2interval jitter，状态Q+(F(pred,next_g)−F(pred,current_g))，完整端点；loss为path-mean MAE(clean)+.2MAE原G4/Y4回投，主评价K4/online/refinement-OFF。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"peak_lr\": 5e-05,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"warmup_updates\": 100,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"training_grid\": \"K=2/3/4 equal probability; internal equal-grid jitter +/-0.2 interval; full endpoints\",\n  \"loss\": \"path mean MAE(clean)+0.2 MAE(F(pred,original G4),Y4)\",\n  \"state_update\": \"Q+(F(pred,next_g)-F(pred,current_g))\",\n  \"minimum_grid_interval\": 0.03125"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/PILOT_REPORT.md",
+          "sha256": "656e05c0b159be787356d2c25a2681a9143c59f3188ca882bd8c74da44a6959a",
+          "exact_excerpt": "匹配训练节点：尚无共同里程碑。共同初始化；Train1000/G4；各目标U1000；主评价Val200 sources/400 inputs，FP32 online。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"effective_batch\": 32,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"precision\": \"fp32\","
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:continuous_delta_initial",
+      "source_group": "v4",
+      "branch_local_id": "continuous_delta_initial",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_parent_dataset_id": "places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+        "train": {
+          "clean_sources": 1000,
+          "G": [
+            4
+          ]
+        },
+        "validation": {
+          "clean_sources": 200,
+          "inputs": 400,
+          "G": [
+            4
+          ]
+        },
+        "training_precision": "FP32",
+        "primary_eval": "online K4 refinement OFF",
+        "Test_used": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/PILOT_REPORT.md",
+          "sha256": "656e05c0b159be787356d2c25a2681a9143c59f3188ca882bd8c74da44a6959a",
+          "exact_excerpt": "匹配训练节点：尚无共同里程碑。共同初始化；Train1000/G4；各目标U1000；主评价Val200 sources/400 inputs，FP32 online。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"dataset_root\": \"/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1\","
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/CONFIG.json",
+          "sha256": "dbfa5f083c8bbb54a043ab32b532f29ba6175533cd6c1240a0458e73ef9f83a4",
+          "exact_excerpt": "\"Test\": false,"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:continuous_delta_attempt2",
+      "source_group": "v4",
+      "branch_local_id": "continuous_delta_attempt2",
+      "field": "method_description",
+      "value": "D0对连续物理差分CONT_DELTA_R0的G4小数据pilot，独立重做，两法实际共同U1000已完成；共同初始化、B32/FP32，peak LR5e-6、100update warmup。连续法训练K=2/3/4等概率、内部等距网格±0.2interval jitter，状态Q+(F(pred,next_g)−F(pred,current_g))，完整端点；loss为path-mean MAE(clean)+.2MAE原G4/Y4回投，主评价K4/online/refinement-OFF。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"peak_lr\": 5e-06,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"warmup_updates\": 100,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"training_grid\": \"K=2/3/4 equal probability; internal equal-grid jitter +/-0.2 interval; full endpoints\",\n  \"loss\": \"path mean MAE(clean)+0.2 MAE(F(pred,original G4),Y4)\",\n  \"state_update\": \"Q+(F(pred,next_g)-F(pred,current_g))\",\n  \"minimum_grid_interval\": 0.03125"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/PILOT_REPORT.md",
+          "sha256": "f93fd0684af2b43cc1df8fd66e890a28ab6ee185e606229459b840cfa3f96871",
+          "exact_excerpt": "匹配训练节点：1000。共同初始化；Train1000/G4；各目标U1000；主评价Val200 sources/400 inputs，FP32 online。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"effective_batch\": 32,"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"precision\": \"fp32\","
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:continuous_delta_attempt2",
+      "source_group": "v4",
+      "branch_local_id": "continuous_delta_attempt2",
+      "field": "dataset_or_population_json",
+      "value": {
+        "canonical_parent_dataset_id": "places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+        "train": {
+          "clean_sources": 1000,
+          "G": [
+            4
+          ]
+        },
+        "validation": {
+          "clean_sources": 200,
+          "inputs": 400,
+          "G": [
+            4
+          ]
+        },
+        "training_precision": "FP32",
+        "primary_eval": "online K4 refinement OFF",
+        "Test_used": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/PILOT_REPORT.md",
+          "sha256": "f93fd0684af2b43cc1df8fd66e890a28ab6ee185e606229459b840cfa3f96871",
+          "exact_excerpt": "匹配训练节点：1000。共同初始化；Train1000/G4；各目标U1000；主评价Val200 sources/400 inputs，FP32 online。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"dataset_root\": \"/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1\","
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/CONFIG.json",
+          "sha256": "5aecf79e052e77296997a6461c3558396f44524eace2efd8f55e7dc1a0c7534b",
+          "exact_excerpt": "\"Test\": false,"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:raw_field",
+      "source_group": "v4",
+      "branch_local_id": "raw_field",
+      "field": "method_description",
+      "value": "Raw与Field状态坐标配对的四阶段G4物理递归pilot：两组651417参数、共同clean-only warm500初始化与数据顺序；Raw用native512两块ξ，Field用256 alpha/u场，四级Clean MAE+.2原G4/Y4重退化MAE后路径平均。无GT状态监督、teacher forcing、mixing noise或精修训练；共同U1000，0/500/1000 full val64 OFF，末点8source串行40步精修辅助。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "运行环境：torch 2.7.1，torch-npu 2.7.1.post2，CANN8.5.2。模型651417参数：shared459600、clean85747、state106070；Raw状态36×512×512及512×512×2，Field状态36×256×256及256×256×2。两组同一共同初始化与数据顺序。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "L_C是Clean MAE；L_R始终回投原始G4/Y4的MAE。四级平均后组合 L_C+0.2L_R。训练最后100个update的minibatch均值（不是full-train评价）："
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "本次是单seed、128训练source、32验证source、G4-only小实验；Test未读取，没有改authority/旧runs/canonical数据，没有GT状态监督、teacher forcing、mixing noise、refinement训练或renderer修复。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "共同clean-only初始化500 updates，耗时 155.129 秒；不是D0 baseline。共同N1000在正式验证前冻结，之后只增加用户授权的一小时收尾缓冲，未加训练步数。实际完成早于 2026-10-15 13:44:22 的最晚结束时间。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:raw_field",
+      "source_group": "v4",
+      "branch_local_id": "raw_field",
+      "field": "dataset_or_population_json",
+      "value": {
+        "train": {
+          "clean_sources": 128,
+          "G": [
+            4
+          ]
+        },
+        "validation": {
+          "clean_sources": 32,
+          "realizations_per_source": 2,
+          "inputs": 64,
+          "G": [
+            4
+          ]
+        },
+        "refinement_diagnostic": {
+          "clean_sources": 8,
+          "inputs_per_source": 1,
+          "G": [
+            4
+          ]
+        },
+        "seed_scope": "single seed small pilot",
+        "Test_used": false,
+        "common_warmup": "clean-only 500updates; not independent D0 baseline"
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "每个source先平均两个已有realization，再进行source级配对。32个独立source、64个G4输入。LPIPS越低越好。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "本节均来自预先固定的8个不同val source、每source一个已有G4输入；不能代替完整val64主比较。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+          "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+          "exact_excerpt": "本次是单seed、128训练source、32验证source、G4-only小实验；Test未读取，没有改authority/旧runs/canonical数据，没有GT状态监督、teacher forcing、mixing noise、refinement训练或renderer修复。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:a100_archives",
+      "source_group": "v4",
+      "branch_local_id": "a100_archives",
+      "field": "method_description",
+      "value": "两次授权存储归档/清理操作，非模型实验：10月2日指定93份中间权重先下载本地逐SHA核验再删A100源副本；10月25日126050份文件先归档de36、独立逐文件回读/集合/fsync及删除前源复核后才清理源副本。正式模型/结果/源码/Train8000/rawξ等保留，未启动或恢复训练。",
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/storage_archives/A100_cleanup_20261002/CLEANUP_RECEIPT.md",
+          "sha256": "44eb7ebea1b52fb02930912d03fbfefcdcac46194b5b6c6b92322ab345ec8c59",
+          "exact_excerpt": "93个权重均先归档至本机 **/Users/lucas/Desktop/turbulence IR/storage_archives/A100_cleanup_20261002/files**，逐文件SHA256与远端清理前清单一致，之后才删除对应远端文件。归档正文共 **40.29 GiB**，本机剩余约 **22.13 GiB**。缓存可以重建，不另行保存5.3 GiB副本。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/CLEANUP_RECEIPT.md",
+          "sha256": "cda045e72a69f404960e1c561b94c0e18b63ea7f5a6fb40e5a02aa769696e994",
+          "exact_excerpt": "已将 **126,050份文件**归档至 `liteserver-de36:/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data`，源端SHA256、de36独立逐文件回读、完整文件集合与fsync、删除前源端复核均通过后，才逐一删除A100清单内副本。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/CLEANUP_RECEIPT.md",
+          "sha256": "cda045e72a69f404960e1c561b94c0e18b63ea7f5a6fb40e5a02aa769696e994",
+          "exact_excerpt": "流水线及文档完成时间：2026-10-25T21:04:14.986361+08:00（本机时区）。空间扫描结束于2026-10-25T21:03:51.405792+08:00。本次按用户直接授权执行，不启动或恢复实验。"
+        }
+      ]
+    },
+    {
+      "experiment_id": "v4:a100_archives",
+      "source_group": "v4",
+      "branch_local_id": "a100_archives",
+      "field": "dataset_or_population_json",
+      "value": {
+        "scope": "archive asset population; not training/evaluation dataset",
+        "20261002": {
+          "archived_intermediate_checkpoints": 93,
+          "weights_subgroups": {
+            "temporary_matched_perf_swinir": 21,
+            "overfit5_dense_intermediate": 72
+          },
+          "destination": "local storage_archives/A100_cleanup_20261002/files",
+          "cache_deleted_without_archive": "rebuildable uv install cache"
+        },
+        "20261025": {
+          "total_archived_files": 126050,
+          "new_Train15000_sources": 7000,
+          "new_original_clean_states_files": 126000,
+          "temporary_acceptance_data_files": 9,
+          "old_Restormer_intermediate_eval_weights": 41,
+          "destination": "liteserver-de36:/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data/files"
+        },
+        "preserved": "Train8000, original raw xi, final/best models, results, predictions, metrics, logs, scientific source/config/statistics and data identity metadata",
+        "current_remote_presence_revalidated_here": false
+      },
+      "citations": [
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/storage_archives/A100_cleanup_20261002/CLEANUP_RECEIPT.md",
+          "sha256": "44eb7ebea1b52fb02930912d03fbfefcdcac46194b5b6c6b92322ab345ec8c59",
+          "exact_excerpt": "| cache/uv/archive-v0 安装缓存 | 18973 个普通文件及缓存目录 | 约 5.29 GiB |\n| 旧matched_v2、perf1、SwinIR临时验收权重 | 21个.pt | 约8.48 GiB |\n| 两组Overfit5的密集中间权重 | 72个.pt | 约32.00 GiB |"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/RESTORE_README.md",
+          "sha256": "35d3c9d321301a2047b6cb2c7b5ce7551821a359e8aa5414048bddf337ce9385",
+          "exact_excerpt": "归档包括 Train15000 新增 7000 个源的 original/clean/states 共126000份，以及9份临时验收数据和41份旧 Restormer 中间评价权重。"
+        },
+        {
+          "path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/RESTORE_README.md",
+          "sha256": "35d3c9d321301a2047b6cb2c7b5ce7551821a359e8aa5414048bddf337ce9385",
+          "exact_excerpt": "保留 A100 上的整个 Train8000 数据集、约97GiB原始ξ、最终及最佳模型、全部指标/预测/报告/日志/结果包，以及科学源码、配置、统计量和数据身份元数据。此次归档不授权启动或恢复任何实验。"
+        }
+      ]
+    }
+  ],
+  "gaps": [],
+  "self_check": {
+    "status": "PASS",
+    "branches": 23,
+    "overrides": 46,
+    "method_overrides": 23,
+    "dataset_or_population_overrides": 23,
+    "unique_citation_files": 40,
+    "citation_relations": 125,
+    "exact_substring_and_SHA_checked": true,
+    "branch_ids_and_unique_fields_checked": true,
+    "input_manifest_source_SHA_checked_for_used_sources": true,
+    "all_read_source_files_under_2MB": true
+  }
+}

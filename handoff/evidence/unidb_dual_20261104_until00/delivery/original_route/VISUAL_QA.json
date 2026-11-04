@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "reviewer": "root",
+  "unix": 1793727786.6968682,
+  "figures": {
+    "ORIGINAL_TRAIN_GLOBAL.png": "db8a822493b48129ab1155634c1b202b23a6a885809943f179e61c6f8fe545de",
+    "ORIGINAL_VAL_4METRICS_MONITOR100.png": "0cc04de200b3414e6404498d0cafd084b5d1a4bbeaf382f28fafc19e963250c3",
+    "ORIGINAL_VAL_4METRICS_FULL1000.png": "2f83306afc136641e05ab1b300c51580654e6ec97cb979a10d871a5f6f66c54d",
+    "ORIGINAL_FINAL_BEST_LATEST_G1.png": "7a80bc178d3a765ebd38b3286f906406cf6235b9648db63190509797aa4366d4",
+    "ORIGINAL_FINAL_BEST_LATEST_G2.png": "9edbb6729855e03445b9997090778baf3e8d7f5bec649915e9f480fa7ca4398f",
+    "ORIGINAL_FINAL_BEST_LATEST_G3.png": "5a100b57142c34359310fefc0644f4d70c637c8f57fe1a0c100fc3ce57d0b991",
+    "ORIGINAL_FINAL_BEST_LATEST_G4.png": "2de7b466e859a2fe85f4dd273a057e1446cb356134abceec902d743101540c36"
+  },
+  "pages_or_images_actually_reviewed": 7,
+  "receipt_sha256": "715cfe51ae714d40ae036dd088b48ecb6410e1c371f9ef632c586df0cdaa71ea",
+  "checks": [
+    "Viewed original U0 to U67180 train loss with 200-step trailing mean and U45411 continuation marker.",
+    "Viewed separate four-metric monitor100 and full1000 panels, correct populations, five full-validation strengths, raw directions and final U.",
+    "Viewed each G1/G2/G3/G4 two-source fixed image; actual final Best=Latest=U67180 explicitly labelled with duplicate columns, Input and GT preserved.",
+    "All Chinese text, legends, metrics, source labels and footnotes legible; no clipped content or missing assets observed.",
+    "Only existing predictions were displayed; raw metrics and source identity remain bound to final CPU audit; samples do not establish success or generalization."
+  ],
+  "new_restoration_model_calls": 0,
+  "optimizer_calls": 0,
+  "NPU_calls": 0
+}

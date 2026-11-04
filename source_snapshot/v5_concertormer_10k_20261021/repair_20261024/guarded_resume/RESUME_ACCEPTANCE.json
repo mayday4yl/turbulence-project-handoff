@@ -1,0 +1,46 @@
+{
+  "status": "ACCEPTED_FOR_GUARDED_RESUME",
+  "scientific_config_hash": "dfcda596e5893e82642ac3ca1a636f6442c5666d59a3775fbaab997ff9b35104",
+  "guard_policy_sha256": "6ca877b3f3a7587d35470ca883966f368401760e2b992b0e7b00e058a5b02d76",
+  "extension_manifest_sha256": "10daabfc9ade9389b0ce1aa5cb975a5f05b901af0dcd2392a37eaecb02476222",
+  "resume_anchor_checkpoint": "/data2/yanglin/v5_concertormer_10k_20261021/runs/alignment_A6k_B4k_20261022/B/checkpoints/update_001000.pt",
+  "resume_anchor_checkpoint_sha256": "b84644318b36694dc7bb23b57004bdfbd1894eec6e693aa461b11f02f3e843dd",
+  "method_changed": false,
+  "optimizer_scheduler_rng_sampler_reset": false,
+  "recovery_evidence": [
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/current_U1000_three_windows/SUMMARY.json",
+      "sha256": "ed43319c7d91cea682bed010530ee0a8afbab00acc36c1e77066ec58dcc20684"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/resume_preflight_probe/RESULT.json",
+      "sha256": "076c7a2c9fe2dcf7e03d1df6ae0f5a3d9d56ca20605bfeddde3186d196b2e6a1"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/resume_preflight_probe/LAUNCH_RESULT.json",
+      "sha256": "8cddc79c118c3b8129e0b88ddfa1b160f739ca00ccf6f740712079af91e4cc2c"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/repair_20261024/guarded_resume/CPU_GUARD_TEST.json",
+      "sha256": "f0f046c4c3a1eae86c3194010d2a9a9784dfcb53018011a92706ec48dc0941c8"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/gradient_audit/DERIVATIVE_RESULTS.json",
+      "sha256": "489e23b3431de6eaeadb9fd05fa6c1b2f6cae6c52531be19aaf55593ab6b476a"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/layer_trace/U750_bf16.json",
+      "sha256": "d14d2f45c774f76d7e362877e5764840074252d4b75734e9414d1a6cf53a22a2"
+    },
+    {
+      "path": "/data2/yanglin/v5_concertormer_10k_20261021/reports/gradient_spike_audit_20261024/repair_20261024/layer_trace/U1000_bf16.json",
+      "sha256": "e76586b043a84b71681ac87d9c96f1f2e728e1bd5c1ad2655008dcde5dc2f8a1"
+    }
+  ],
+  "user_authorization": "2026-10-24 latest direct instruction: 继续修复，恢复训练",
+  "decision": "Qualified recovery of existing current checkpoint with verified pause-only guard. Not a cure of historical U750 mapping.",
+  "historical_failures_preserved": true,
+  "budget_max_updates": 4000,
+  "test_used": false,
+  "accepted_unix": 1792818736.3019307
+}

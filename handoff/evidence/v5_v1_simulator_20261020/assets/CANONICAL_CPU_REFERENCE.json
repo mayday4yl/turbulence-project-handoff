@@ -1,0 +1,59 @@
+{
+  "status": "CPU_ONLY_CANONICAL_REFERENCE",
+  "torch": "2.7.1+cpu",
+  "original_build_torch": "2.7.1+cpu",
+  "numpy": "1.26.4",
+  "CPU_capability": "DEFAULT",
+  "device": "cpu",
+  "NPU_backend_not_imported": true,
+  "simulator_source_sha256": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "tilt_constant": 205637965.677547,
+  "buffers": {
+    "r_z": {
+      "shape": [
+        36,
+        36
+      ],
+      "dtype": "float32",
+      "raw_bytes_sha256": "99c051f1d17024af219779b075cdb24256a5e6e6a5d586f5338c46db41d025c5"
+    },
+    "sqrt_psd": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "complex64",
+      "raw_bytes_sha256": "61d48a8672abaa893ee7bf55a2182c67993bbbca1ae4d0ff6c7d877a6fc39ba0"
+    },
+    "tilt_s_half_unit": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "complex64",
+      "raw_bytes_sha256": "0245679bef49a2fafa2d7bcf0460a4c7d325964bb3fee354eb0d0b4a1f7cbf06"
+    },
+    "pixel_position": {
+      "shape": [
+        1,
+        256,
+        256,
+        2
+      ],
+      "dtype": "float32",
+      "raw_bytes_sha256": "4da28ccd38694c6b8ed0ce976e47f68bc2b330d48a6db365fd35873d8f4afdea"
+    }
+  },
+  "npz_sha256": "bab111fcb0e4ca7813e2712b2151102f2ca72376205195bbc3f730e50bfd4a28",
+  "time": 1791996895.132977
+}

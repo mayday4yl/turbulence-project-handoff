@@ -1,0 +1,9 @@
+{
+  "status": "TRAINING_STOPPED_FINAL_VALIDATION_PENDING",
+  "evidence": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/MIDNIGHT_BOUNDARY_OBSERVATION.json",
+  "evidence_sha256": "e150cf87a2d160c1b604952c221d104738f2581cf59bfc09f042abd32c87c90e",
+  "original_update": 67180,
+  "improved_update": 40848,
+  "do_not_resume_training": true,
+  "handover_not_complete": true
+}

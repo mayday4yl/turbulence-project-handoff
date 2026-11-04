@@ -1,0 +1,65 @@
+{
+  "method": "V4_RESTORMER_TRAIN2000_NPU20K",
+  "T0": 0.8,
+  "lambda_R": 0.2,
+  "seed": 20261002,
+  "network": {
+    "image_size": 256,
+    "dim": 48,
+    "num_blocks": [
+      4,
+      6,
+      6,
+      8
+    ],
+    "num_refinement_blocks": 4,
+    "heads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "ffn_expansion_factor": 2.66,
+    "bias": false,
+    "LayerNorm_type": "WithBias",
+    "decoder_channels": 64,
+    "use_checkpoint": true
+  },
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "asset_dir": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_train2000_npu_20k_20261003/assets/pirn",
+  "asset_sha256": {
+    "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+    "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+    "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+  },
+  "dataset_root": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+  "dataset_id": "places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+  "population": "train",
+  "precision": "bf16",
+  "normalization_artifact": "protocol/normalization_train2000.json",
+  "parity_atol": 2e-05,
+  "parity_rtol": 0.0002,
+  "refinement_steps": 40,
+  "formal_training_authorized": false,
+  "asset_lock": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1/ASSET_LOCK.json",
+  "architecture": "restormer_rgb_noise_bridge_v1",
+  "training_loss": "MAE",
+  "purpose": "Prepared future CUDA assets only; formal training prohibited until new explicit authorization and separate CUDA acceptance",
+  "expected_train_states": 32000,
+  "data_seed": 20261003,
+  "stream_seed": 20261003,
+  "max_updates": 20000,
+  "effective_batch": 32,
+  "results_root": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_train2000_npu_20k_20261003/runs/future_cuda_formal_20k",
+  "cache_gib": 2,
+  "execution_backend": "cuda"
+}

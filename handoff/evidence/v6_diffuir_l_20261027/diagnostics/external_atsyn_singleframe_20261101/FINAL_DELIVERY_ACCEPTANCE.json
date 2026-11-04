@@ -1,0 +1,18 @@
+{
+  "status": "PASS_FULL999_PAIRED_SINGLEFRAME_SOURCE_WEIGHT_OUTPUT_METRICS_EXIT_VISUAL_QA_LOCAL_SYNC",
+  "count": 999,
+  "records_models": 1998,
+  "sources_checked": {
+    "SOURCE_MANIFEST.json": 108,
+    "CONTROL_SOURCE_MANIFEST.json": 3
+  },
+  "PSNR_recomputed_maxabs": 0.0,
+  "MAE_recomputed_maxabs": 0.0,
+  "SSIM_LPIPS": "all finite and all999 source-record means independently recomputed; no extra model execution",
+  "model_calls": 0,
+  "all_NN_worker_and_controller_exited": true,
+  "unix": 1793493748.5756848,
+  "visual_QA": "first/middle/last all4 columns viewed; structure matches GT, still strongly blurred",
+  "local_sync": "all summary/2997 per-image rows/config/gates and fixed12 full+12ROI PNG checked",
+  "training_updates": 0
+}

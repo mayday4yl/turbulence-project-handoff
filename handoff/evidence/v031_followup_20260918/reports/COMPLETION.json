@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "T1_updates": 1000,
+  "T2_updates": 1000,
+  "I1_status": "no_repair_candidate_supported_on_dev",
+  "package": {
+    "path": "/data2/yanglin/v031_followup_20260918/V031_FOLLOWUP_RESULTS.zip",
+    "sha256": "5aaafa213b009f24cb51b2a8fcf1d4c0ba73469dbfffa5294741d14d2be3f806",
+    "files": 9626,
+    "large_checkpoints_and_npy_remain_on_server": true,
+    "final": true,
+    "time": 1789798639.1650681
+  },
+  "local_sync_and_visual_QA_pending": false,
+  "time": 1789798639.1782846,
+  "CPU_report_rebuild_reason": "include absolute heldout table and conclusions from already complete frozen results; no model execution",
+  "archive_note": "COMPLETION and current archive SHA manifest are external to the ZIP to avoid stale self-references; historical manifests are labeled history.",
+  "local_delivery_validation_sha256": "4b00dc678343c30cc7834f5b2d675fb9c52dc98dad443133fd9bfc0e7e429980",
+  "local_package_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/V031_FOLLOWUP_RESULTS.zip",
+  "local_verified_at": "2026-09-19T14:20:40.323508+08:00",
+  "automation_status": "PAUSED"
+}

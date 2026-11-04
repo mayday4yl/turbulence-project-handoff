@@ -1,0 +1,31 @@
+{
+  "schema": "local_recorded_transfer_process_exit_v1",
+  "status": "PASS_RECORDED_LOCAL_TRANSFER_PIDS_ABSENT",
+  "checked_unix": 1793729359.3780491,
+  "recorded_pids": [
+    54754,
+    54756,
+    54759,
+    54761,
+    20812,
+    20815,
+    20949,
+    20951
+  ],
+  "scope": "New original/improved byte-copy runner and rsync records plus the prior4 candidate rsync IDs; native remote full-owned-process exit is a separate receipt.",
+  "probe": [
+    "ps",
+    "-p",
+    "54754,54756,54759,54761,20812,20815,20949,20951",
+    "-o",
+    "pid=,ppid=,pgid=,lstart=,comm="
+  ],
+  "ps_exit_code": 1,
+  "ps_stdout": "",
+  "same_recorded_identity_live": [],
+  "observation": "Exact read-only ps command executed successfully outside sandbox; exit1 with empty output means none of those PIDs present at observation. Earlier restricted sandbox ps was denied; no signals or mutations attempted.",
+  "signals_sent": 0,
+  "new_model_calls": 0,
+  "optimizer_updates": 0,
+  "network_calls": 0
+}

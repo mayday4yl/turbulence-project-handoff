@@ -1,0 +1,43 @@
+version: known_g_physical_bridge_v02_new_20260829
+method_document_sha256: 834723e3cd6883fc9873eeb48b59ad723560ac35265ef8c3f8b2d220fc1a0a7f
+training_document_sha256: 64a166fdc6b5b00d6fff4253980431f5bfd402d85683d69d3b68101464a89f53
+authorized_physical_npus: "0,2,4,6"
+base_project_root: /data0/yanglin/physical_bridge
+v02_source_root: /data0/yanglin/physical_bridge/v02_new_protocol_20260829
+dataset_root: /data2/yanglin/physical_bridge/data/places_p2s_bridge_v01
+run_root: /data2/yanglin/physical_bridge/runs/v02_new_protocol_20260829
+v01_checkpoint: /data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/update-020000.pt
+v01_checkpoint_sha256: 34dc4dce03bd13ba4079100d4b195fcc0e8c3b07699e06ae12ca91e0aba48f47
+simulator_config: configs/simulator_v01.yaml
+model:
+  base_channels: 64
+  channel_multipliers: [1, 2, 4, 4, 4]
+  residual_blocks_per_level: 2
+  group_norm_groups: 32
+  severity_embedding_dim: 256
+a0:
+  effective_batches: 128
+  effective_batch_size: 16
+  manifest_seed: 2026082800
+  lambda_T_candidates: [0.2, 0.4, 0.8]
+  lambda_B_candidates: [0.05, 0.1, 0.2]
+a1:
+  updates: 3000
+  effective_batch_size: 16
+  train_per_terminal_bucket: 400
+  val_per_terminal_bucket: 20
+  learning_rate: 0.00002
+  warmup_updates: 200
+  optimizer: AdamW
+  betas: [0.9, 0.99]
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  ema: 0.999
+  network_precision: bfloat16
+  simulator_precision: float32
+  checkpoint_interval: 1000
+  data_order_seed: 2026082801
+  g_h_seed: 2026082802
+  trajectory_loss_seed: 2026082803
+  refinement_seed: 2026082804
+  model_optimizer_seed: 2026082805

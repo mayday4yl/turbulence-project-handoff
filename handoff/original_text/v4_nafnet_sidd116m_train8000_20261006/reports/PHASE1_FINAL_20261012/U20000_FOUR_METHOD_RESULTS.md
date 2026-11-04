@@ -1,0 +1,63 @@
+# NAFNet Phase1 四方法 U20000 最终结果
+
+本地生成时间：2026-10-12T15:05:55.926343+08:00。四法各20000updates、640000exposures、5epochs，全部104项评价通过原parts独立CPU验收。
+
+同一full Val8000：1000clean sources×2realizations×G1–4；Places365/LSDIR各500sources。主表为online/raw、refinement OFF、FP32、batch1、TF32 OFF、Test禁用。
+
+| 方法 | Path loss↓ | L_C↓ | L_R↓ | PSNR↑ | SSIM↑ | LPIPS↓ |
+|---|---|---|---|---|---|---|
+| D0 | 0.04710069 | 0.04531385 | 0.00893418 | 23.09077535 | 0.64696799 | 0.37889746 |
+| R0 | 0.04809140 | 0.04619230 | 0.00949547 | 22.91951237 | 0.63865431 | 0.40178125 |
+| R08 | 0.05007409 | 0.04811336 | 0.00980364 | 22.73627484 | 0.62923249 | 0.41617541 |
+| L08 | 0.04947400 | 0.04755109 | 0.00961452 | 22.81135343 | 0.63339814 | 0.41042081 |
+
+Loss采用各方法原科学路径聚合；PSNR/SSIM/LPIPS评价最终恢复RGB。
+
+## 相对独立D0的质量差异
+
+| 方法 | ΔPSNR dB | ΔSSIM | ΔLPIPS |
+|---|---|---|---|
+| R0 | -0.17126298 | -0.00831368 | +0.02288379 |
+| R08 | -0.35450051 | -0.01773550 | +0.03727795 |
+| L08 | -0.27942192 | -0.01356985 | +0.03152335 |
+
+这些为固定验证人口的描述性差异；本正式全等级比较未另做显著性检验。
+
+## G4 子集
+
+| 方法 | PSNR↑ | SSIM↑ | LPIPS↓ |
+|---|---|---|---|
+| D0 | 21.33776359 | 0.54959621 | 0.49540773 |
+| R0 | 21.13489309 | 0.54008852 | 0.52692516 |
+| R08 | 21.02582643 | 0.53345953 | 0.53171417 |
+| L08 | 21.09770430 | 0.53751231 | 0.52637471 |
+
+G4为2000inputs/1000sources，不能混用全等级fullVal8000或固定monitor。
+
+## EMA 次要评价
+
+| 方法 | PSNR↑ | SSIM↑ | LPIPS↓ |
+|---|---|---|---|
+| D0 | 23.09112358 | 0.64708445 | 0.37873252 |
+| R0 | 22.92309604 | 0.63869718 | 0.40132831 |
+| R08 | 22.73525397 | 0.62928297 | 0.41636232 |
+| L08 | 22.81084215 | 0.63353665 | 0.41079494 |
+
+## 训练过程固定monitor曲线
+
+![Train_Val_Loss_U20000](</Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/Train_Val_Loss_U20000.png>)
+
+![Train_Val_PSNR_U20000](</Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/Train_Val_PSNR_U20000.png>)
+
+![Train_Val_SSIM_U20000](</Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/Train_Val_SSIM_U20000.png>)
+
+![Train_Val_LPIPS_U20000](</Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/Train_Val_LPIPS_U20000.png>)
+
+## 执行验收
+
+- 用户授权后仅启动一次原CPUworkflow；训练未重启、supervisor未重启、supervisor历史retries4与方法infra计数(0/0/0/2)完整保留。
+- 最后三项L08monitor、online fullVal8000和EMA fullVal8000均完成，原parts身份/顺序/G/域/source/FP64聚合与SHA通过独立CPU复算。
+- 原科学config/LAUNCH_GATE/源码兼容链/数据/预算/指标/噪声规则未改。旧已验收数据镜像、matchedU5000报告复用，不重跑。
+- 完整证据见同目录FINAL_ACCEPTANCE.json与operations/final_eval_cpu_recovery_20261012记录。
+
+正式四法与104项验收完成，原90分钟自动化已删除；没有删除checkpoint或数据。最终四张曲线已逐张视觉检查，见VISUAL_ACCEPTANCE.json。

@@ -1,0 +1,114 @@
+{
+  "method_version": "V0.31",
+  "stage": 1,
+  "project_root": "/data2/yanglin/v031_overfit100_g4321_n4",
+  "base_source": "/data0/yanglin/physical_bridge",
+  "dataset_root": "/data2/yanglin/v03_overfit100_g4321_n4/data/places_p2s_bridge_v03_overfit100_g4321_n4",
+  "dataset_id": "places_p2s_bridge_v03_overfit100_g4321_n4",
+  "asset_dir": "/data0/yanglin/vendor/PiRN/assets/utils",
+  "data_hash_manifest_sha256": "b896f9060a8ff012cafe476ec6c0bb1075e6291bfdec1eab7ff791dc8936b03b",
+  "base_hashes": {
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "physical_bridge/inference.py": "d8adc179bb58a7a166c216cd16f459f4233017a63730da6330eec4007a332bd7",
+    "physical_bridge/data.py": "2bda58815d446ae0aaf53b06548d3150f68683f3d10eb9bfd0e41c3055407a14"
+  },
+  "authority_hashes": {
+    "V031_TRAINING_PROTOCOL_ADDENDUM.md": "0d2c482f22dbfdce896554ebc7b1d5307c44e8c8eff4f47f691dddcc149d3211",
+    "V031_STAGE1_METHOD_AND_IMPLEMENTATION.md": "bbcb67a6c063778b426a737edc4e8af13d8756b3631f19d33732d7c9e137b8d5"
+  },
+  "seed": 20260916,
+  "lambda_R": 0.2,
+  "diagnostic_subset": "subsets/overfit_16traj_starts.jsonl",
+  "sample_selection": "First two G=4 starts of frozen overfit_16traj view; first trajectory all four G for trace",
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "network": {
+    "base_channels": 64,
+    "channel_multipliers": [
+      1,
+      2,
+      4,
+      4,
+      4
+    ],
+    "residual_blocks_per_level": 2,
+    "group_norm_groups": 32,
+    "severity_embedding_dim": 256
+  },
+  "precision": {
+    "reference": "fp32",
+    "candidate": "hybrid_bf16",
+    "fallback": "fp32",
+    "parameter_dtype": "float32",
+    "ema_dtype": "float32",
+    "optimizer_state_dtype": "float32",
+    "simulator_dtype": "float32",
+    "loss_dtype": "float32"
+  },
+  "acceptance": {
+    "parity_total_relative_max": 0.01,
+    "parity_global_gradient_cosine_min": 0.99,
+    "per_step_loss_relative_drift_max": 0.05,
+    "negative_forward_atol": 1e-06,
+    "negative_forward_rtol": 1e-05,
+    "finite_difference_eps": [
+      0.001,
+      0.003,
+      0.01
+    ],
+    "finite_difference_rtol": 0.05,
+    "finite_difference_atol": 2e-05,
+    "finite_difference_directions_per_branch": 2,
+    "finite_difference_projection": "fixed Gaussian scalar projection scaled by sqrt(num_pixels), summed in CPU float64; simulator stays FP32",
+    "finite_difference_direction": "independent seeded normal normalized to RMS=1; native GT xi diagnostic only",
+    "microbatches": [
+      1,
+      2
+    ],
+    "timing_repeats": 2,
+    "max_npu_seconds_per_attempt": 3600,
+    "memory_guard_gib": 58,
+    "gradient_accumulation_relative_l2_max": 0.0001
+  },
+  "scheduler": {
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "warmup_updates": 50,
+    "cosine_end_update": 1000,
+    "floor_lr": 1e-05,
+    "after_1000": "constant",
+    "diagnostic_checkpoints": [
+      500,
+      1000
+    ]
+  },
+  "stage2_constraints_not_frozen": {
+    "effective_batch_paths": 32,
+    "microbatch": null,
+    "gradient_accumulation": null,
+    "formal_precision": null,
+    "refinement_numeric_config": "pending_stage2"
+  },
+  "formal_training_started": false,
+  "restoration_optimizer_updates": 0,
+  "npu_execution": {
+    "jit_compile": false,
+    "task_queue_enable": 0,
+    "launch_blocking": 0,
+    "force_jit_ops": ["Conv2DBackpropInput"],
+    "precision_mode": "must_keep_origin_dtype",
+    "allow_internal_format": true,
+    "conv_hf32": false,
+    "matmul_hf32": false,
+    "aclnn_hf32": false
+  }
+}

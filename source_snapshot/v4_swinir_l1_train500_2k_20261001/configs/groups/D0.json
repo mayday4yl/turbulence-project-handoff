@@ -1,0 +1,12 @@
+{
+  "group": "D0",
+  "T0": 0.0,
+  "path": "direct",
+  "predictions": "1",
+  "refinement": "N/A",
+  "common_runtime": "configs/runtime.json",
+  "common_initialization": "protocol/common_init.pt",
+  "loss": "path_mean(LC + 0.2 LR); batch_mean",
+  "learned_parameters": "shared+clean+realization",
+  "full_BPTT": true
+}

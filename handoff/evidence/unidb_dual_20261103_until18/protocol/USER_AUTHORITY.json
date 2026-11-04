@@ -1,0 +1,95 @@
+{
+  "created_UTC": "2026-11-03T04:08:57.479252+00:00",
+  "scope": "Explicit extension of both existing 3+5 routes to 2026-11-03 18:00; noon campaign immutable and no external processes signalled",
+  "user_quotes": [
+    "我的想法是两条路，一条继续训练原来的，然后另外找一个改进的也开始训练，然后都到中午12点",
+    "不是比较吞吐计算资源的目的，而是哪个适合多训练一点的",
+    "还是3，5吧，你现在先训练起来",
+    "改进的改好了你也就直接训练，不要太保守的改动，我的时间不多了，不能无限尝试，我去睡觉了，继续推进",
+    "继续训练到下午6点"
+  ],
+  "deadline_local": "2026-11-03T18:00:00+08:00",
+  "deadline_unix": 1793700000,
+  "old_08AM_and_500_2000_step_caps_superseded": true,
+  "max_NPUs": 8,
+  "allocation": {
+    "original_continue": [
+      0,
+      1,
+      2
+    ],
+    "improved": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "external_process_termination_authorized": false,
+  "card1_service_context_may_coexist_from_prior_explicit_authority": true,
+  "engineering_gates_then_autostart": true,
+  "no_additional_confirmation_needed": true,
+  "old_parent_STOP_markers_must_remain": true,
+  "original_checkpoint": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/checkpoints/U00045411.pt",
+  "original_checkpoint_sha256": "c59a997659f8b3f63996344cde29f4bab2d5916de35a750ca23eb76f08da3bca",
+  "official_SR_sha256": "a6bb76bfabe32b8403d8b112f0ce7876114d830d20b9f4a4119aa860afef64b4",
+  "effective_batch_both": 96,
+  "original": {
+    "retain_optimizer_Adam_EMA_and_8logical_rank_RNG": true,
+    "lr": 1e-05,
+    "objective": "native mean MatchingLoss L1",
+    "no_scientific_recipe_change": true,
+    "physical_world_change_disclosed": true
+  },
+  "improved": {
+    "initialize": "official complete SR U0 network",
+    "fresh_optimizer": true,
+    "objective": "epsilon_opt MSE, equivalent to mean(((predicted_mu-GT_discrete_posterior_mu)/c_t)^2); t uniform1..99",
+    "lr_peak": 2e-06,
+    "lr_initial": 2e-07,
+    "warmup_updates": 200,
+    "lr_final": 2e-07,
+    "post_warmup": "cosine decay over remaining wall-clock deadline interval",
+    "full_parameter_finetune": true,
+    "clip_global_grad_norm": 1.0,
+    "G_mixture": "unchanged equal G1-G4",
+    "EMA": "same installed original beta0.995/update_every10/warmup semantics",
+    "extension": "At resumed global U20001 onward constant existing floor2e-7, no rewarmup or LR rise; preserve prior scheduler metadata"
+  },
+  "both": {
+    "native_network_and_bridge_unchanged": true,
+    "no_task_prompt_adapter_raw_xi_AB_or_physical_recursion": true,
+    "precision": "FP32/HF32off, original exact-erf GELU equivalence",
+    "primary_validation": "same fixed 100-step native SDE, raw float RGB and same seeds; RAW and EMA",
+    "evaluation_RNG_isolated": true,
+    "final_full_validation": "each route EMA five strengths x Val1000; common U0 and originalFinal baseline reuse when source/protocol match",
+    "save_best_latest_complete": true,
+    "stop": "New extension deadline18:00: finish in-flight full optimizer update, atomically save, stop updates, then final evaluation",
+    "no_fixed_update_cap": true
+  },
+  "scientific_limits": "Different starting state, recipe and resources: practical two-route campaign, not a clean one-factor LR/loss ablation; small quality monitors are not success or generalization proof.",
+  "previous_deadline_unix": 1793678400,
+  "previous_campaign_root": "/data2/yanglin/unidb_dual_20261103_until_noon",
+  "latest_user_quote": "继续训练到下午6点",
+  "old_noon_stop_superseded_for_new_extension_only": true,
+  "extension_lrs": {
+    "original": 1e-05,
+    "improved": 2e-07
+  },
+  "extension_policy": "Retain both full RAW/Adam/EMA/RNG/cursor states; preserve original pre-noon schedule history. Improved extension stays at existing floor, no new warmup or LR increase. New root only. All gate updates discarded.",
+  "extension_parents": {
+    "original": {
+      "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/checkpoints/U00055760.pt",
+      "sha256": "d9e490ffcc5e8fffcb57202f0a8ad3a887951b14a7dfe439daae9a88d97afba5",
+      "update": 55760,
+      "cursor": 5352960
+    },
+    "improved": {
+      "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00020000.pt",
+      "sha256": "aaf66a6f5cc3dba16dd39375ec17a5a7d1cd670b685b23b34cce6993ecd11d76",
+      "update": 20000,
+      "cursor": 1920000
+    }
+  }
+}

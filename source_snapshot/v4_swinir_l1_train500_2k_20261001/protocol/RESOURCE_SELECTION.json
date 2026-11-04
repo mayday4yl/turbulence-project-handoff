@@ -1,0 +1,43 @@
+{
+  "status": "SELECTED_PENDING_RESOURCE_ACCEPTANCE",
+  "gpu_uuids": {
+    "5": "GPU-83edf451-9cae-c2a0-c9a6-f344b7bb2673",
+    "6": "GPU-8079b40c-338b-f5a5-2be6-db5255033862"
+  },
+  "mapping": {
+    "5": [
+      "R08",
+      "D0"
+    ],
+    "6": [
+      "R0",
+      "L08"
+    ]
+  },
+  "group_gpu": {
+    "R08": 5,
+    "D0": 5,
+    "R0": 6,
+    "L08": 6
+  },
+  "mode": "shared_existing_jobs",
+  "external_before": {
+    "5": {
+      "uuid": "GPU-83edf451-9cae-c2a0-c9a6-f344b7bb2673",
+      "free_MiB": 81153,
+      "used_MiB": 4,
+      "util": 0,
+      "pids": []
+    },
+    "6": {
+      "uuid": "GPU-8079b40c-338b-f5a5-2be6-db5255033862",
+      "free_MiB": 80659,
+      "used_MiB": 497,
+      "util": 14,
+      "pids": [
+        1749209
+      ]
+    }
+  },
+  "time": 1790869589.8742714
+}

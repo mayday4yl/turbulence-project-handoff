@@ -1,0 +1,50 @@
+{
+  "status": "PASS_INDEPENDENT_FROZEN_METADATA_AND_TRAIN_STAT_POPULATION_AUDIT",
+  "time_local": "2026-10-06T07:59:07.923581+08:00",
+  "source_count": 9200,
+  "split_sources": {
+    "test": 200,
+    "train": 8000,
+    "val": 1000
+  },
+  "split_starts": {
+    "test": 1600,
+    "train": 128000,
+    "val": 8000
+  },
+  "source_domains": {
+    "('train', 'Places365')": 4000,
+    "('val', 'Places365')": 500,
+    "('test', 'Places365')": 200,
+    "('train', 'LSDIR')": 4000,
+    "('val', 'LSDIR')": 500
+  },
+  "normalization_only_train_sources": 8000,
+  "normalization_state_count": 128000,
+  "train_only_domain_G_strata": {
+    "('Places365', 1)": 16000,
+    "('Places365', 2)": 16000,
+    "('Places365', 3)": 16000,
+    "('Places365', 4)": 16000,
+    "('LSDIR', 1)": 16000,
+    "('LSDIR', 2)": 16000,
+    "('LSDIR', 3)": 16000,
+    "('LSDIR', 4)": 16000
+  },
+  "mu": [
+    0.46214597632541154,
+    0.4528440932349394,
+    0.4242713196714787
+  ],
+  "s": [
+    0.2321309322114307,
+    0.22842592123142572,
+    0.26152402252502627
+  ],
+  "normalization_sha256": "6bafa481ca1712ec076145f4bc437ef14feb653f0e97baaf4573e698fcaf0b41",
+  "asset_lock_sha256": "2d9f912a8dcd74a765ecf19f658ea56376c4fa1d21ea0ef0878ea24b770bb7d6",
+  "runtime_RGB_arrays": 145000,
+  "no_val_or_test_in_statistics": true,
+  "no_raw_xi_or_test_arrays_in_runtime_manifest": true,
+  "all_array_content_audit": "de36 DATA_READY reports SHA/shape/dtype/finite for 215600 arrays; A100 runtime content audit still pending; this local audit checks metadata identities and membership"
+}

@@ -1,0 +1,13 @@
+version: simulator_v01
+image_size: 256
+rf_range: 512
+aperture_diameter: 0.071
+propagation_distance: 100.0
+wavelength: 5.0e-7
+correlation: -0.05
+tilt_threshold: 0.02
+adjustment: 1.0
+renderer_order: blur_then_tilt
+g_grid: [0.75, 1.50, 2.25, 3.00, 3.75, 4.50]
+asset_dir: /data0/yanglin/vendor/PiRN/assets/utils
+

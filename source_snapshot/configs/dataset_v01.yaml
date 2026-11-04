@@ -1,0 +1,35 @@
+version: places_p2s_bridge_v01
+master_seed: 20260826
+source:
+  name: Places365-Standard
+  archive_url: https://data.csail.mit.edu/places/places365/val_256.tar
+  archive_path: /data2/yanglin/physical_bridge/data/source_archives/val_256.tar
+  filelist_archive_url: https://data.csail.mit.edu/places/places365/filelist_places365-standard.tar
+  filelist_archive_path: /data2/yanglin/physical_bridge/data/source_archives/filelist_places365-standard.tar
+output_root: /data2/yanglin/physical_bridge/data/places_p2s_bridge_v01
+temporary_root: /data0/yanglin/tmp/physical_bridge/generation
+image_size: 256
+shard_size: 128
+g_grid: [0.75, 1.50, 2.25, 3.00, 3.75, 4.50]
+terminal_grid: [1.50, 2.25, 3.00, 3.75, 4.50]
+splits:
+  train:
+    source_images: 2000
+    realizations_per_source: 4
+  val:
+    source_images: 200
+    realizations_per_source: 2
+  test:
+    source_images: 500
+    realizations_per_source: 2
+qualitative_ids:
+  generation: 16
+  val: 25
+  test: 25
+storage:
+  clean_dtype: uint8
+  state_dtype: float16
+  realization_dtype: float32
+  minimum_free_bytes: 1099511627776
+  project_stop_bytes: 2199023255552
+

@@ -1,0 +1,54 @@
+{
+  "authority_dtype": "float32",
+  "clamp": false,
+  "dataset_build_seed": 20260916,
+  "dataset_id": "places_p2s_bridge_v03_overfit100_g4321_n4",
+  "engineering_configuration_frozen": true,
+  "engineering_frozen_utc": "2026-09-16T11:17:56.740421+00:00",
+  "id_encoding": "UTF-8; source basename exactly as original source manifest; no normalization; ASCII validated",
+  "image_preparation": "Original simulator.prepare_image once per trajectory; render_prepared for each actual g; verified against independent original render calls",
+  "jit_compile": false,
+  "logical_device": "npu:0",
+  "native_sampling": "PiRNP2SSimulator.sample_realization(batch_size=1), independent CPU torch.Generator FP32 blocks",
+  "path_semantics": "num_predictions includes final prediction at g=1; no g=0; no network run",
+  "physical_devices": [
+    0
+  ],
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "preprocessing": "EXIF transpose; RGB; identity for 256x256; otherwise short-side 256 bicubic with integer floor; center crop floor; FP32/255",
+  "realization_indices": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "realizations_per_source": 4,
+  "render_batch_size": 1,
+  "renderer_order": "blur_then_tilt",
+  "replay_tolerance": {
+    "MSE": 1e-12,
+    "basis": "Two trajectories x all four actual strengths; direct/cached and disk-reloaded xi repeated render tested before full build. Fixed FP32 thresholds, exact equality also reported.",
+    "max_abs": 1e-06
+  },
+  "selected_source_manifest_sha256": "cfcca03afc4fd61f17970973f1ad45eb0317170c45b3e7d4f0742c9306ff64f1",
+  "severity_values": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "source_count": 100,
+  "source_selection": "SHA256(UTF8(\"source-select|20260916|\" + source_id)), ascending digest then source_id",
+  "source_selection_seed": 20260916,
+  "subset_selection_seed": 20260916,
+  "xi_seed_algorithm": "JSON compact UTF-8 [20260916,source_id,realization_index,block_name]; SHA256; first 8 bytes big endian & ((1<<63)-1)"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-29",
+  "user_instruction": "按当前训练计划执行。本轮固定逐样本 refine，最多使用两张 A100；先补齐代码、完成验收并冻结共同配置，再完成三组各 32,000 次曝光的训练和配对评估，结束后停止。",
+  "formal_training_authorized": true,
+  "groups": [
+    "R08",
+    "R0",
+    "D0"
+  ],
+  "exposures_per_group": 32000,
+  "max_gpus": 2,
+  "refinement_execution": "per_sample_serial",
+  "plan_sha256": "f3d1f6083f901c68b942bee755ad1f67c93897e77de563cbbd0c4f33c502de6d",
+  "base_implementation": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929"
+}

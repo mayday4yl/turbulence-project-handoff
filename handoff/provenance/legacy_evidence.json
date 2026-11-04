@@ -1,0 +1,1718 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE_LOCAL_HISTORICAL_REVIEW_WITH_EXPLICIT_GAPS",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "sources": {
+    "INDEX": {
+      "relative_path": "EXPERIMENT_INDEX.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/EXPERIMENT_INDEX.md",
+      "sha256": "b069b571b5ec32256196febcb51898343e64619d0e9ceaee34d5ea662c82c1ca",
+      "bytes": 51886,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V2_README": {
+      "relative_path": "v03_recursive_from_scratch_20260915/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/README.md",
+      "sha256": "0d12990549fe7ab723b498a6508ac62bfab85a6f32085e082cef8b41231ec443",
+      "bytes": 2112,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V2_EXECUTION": {
+      "relative_path": "v03_recursive_from_scratch_20260915/docs/EXECUTION_STATUS.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/docs/EXECUTION_STATUS.md",
+      "sha256": "fbc4b72f4a877441112a320f2505a0ff898431322bbeb42a11eadd68c9b5a3c7",
+      "bytes": 1283,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V2_TERMINATION": {
+      "relative_path": "v03_recursive_from_scratch_20260915/artifacts/DATASET_PROTOCOL_CHANGE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/artifacts/DATASET_PROTOCOL_CHANGE.json",
+      "sha256": "bde3f810a3251dde546cadc9c5ec7f6aa2b0ce0e0d857bfd0c56ff66589265d0",
+      "bytes": 286,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_DATA": {
+      "relative_path": "v03_half_recursive_20260915/docs/DATASET_AUDIT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/DATASET_AUDIT.md",
+      "sha256": "6fce31cb70c051a8f68150fcb921711df57cb2fa0076a16b2748b1d497e930e7",
+      "bytes": 1250,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_PROTOCOL": {
+      "relative_path": "v03_half_recursive_20260915/docs/FORMAL_PROTOCOL.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/FORMAL_PROTOCOL.md",
+      "sha256": "9f9cdaf3d5f7f8324a236d736dcf45e19df71b23ad637e8ada0933c9aef0135c",
+      "bytes": 4677,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_CONFIG": {
+      "relative_path": "v03_half_recursive_20260915/configs/half_formal_01.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/configs/half_formal_01.json",
+      "sha256": "3ade4c5dfd327766727fe841339844e10dcb73bc134bc89e07fa2a2abca92d3f",
+      "bytes": 3753,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_HANDOFF": {
+      "relative_path": "v03_half_recursive_20260915/docs/NOON_HANDOFF.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/NOON_HANDOFF.md",
+      "sha256": "7e02635f073d733948ffa3ddef7c496a6afe07ffe47e165c72d7c49876fc8eb2",
+      "bytes": 8614,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_STATUS": {
+      "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/handoff_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/handoff_summary.json",
+      "sha256": "17360f9e3c676002570d4af4dc5591cafc90cad0a08c89ae3a68da830b252c33",
+      "bytes": 832,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_RESUME_AUDIT": {
+      "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/noon_resume_audit.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/noon_resume_audit.json",
+      "sha256": "57966ec028545960bc5f8ab603cd8db03f2f8cda2c4dff95da910d551fb75589",
+      "bytes": 1977,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V25_VAL_CSV": {
+      "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/validation_metrics_per_G_K.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/validation_metrics_per_G_K.csv",
+      "sha256": "555727cf9f1d0e9d4ee370122657f04732e5def8cffbe61c998da54725825e1a",
+      "bytes": 2724,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_DATA_DELIVERY": {
+      "relative_path": "v03_overfit100_g4321_n4/DELIVERY_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_overfit100_g4321_n4/DELIVERY_REPORT.md",
+      "sha256": "8daccef59efbce20d8cd26bcceac0caa7202a01651839f3cca233953a2375665",
+      "bytes": 5139,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_DATA_ACCEPTANCE": {
+      "relative_path": "v03_overfit100_g4321_n4/artifacts/independent_cpu_acceptance.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_overfit100_g4321_n4/artifacts/independent_cpu_acceptance.json",
+      "sha256": "bea2fef64bf6f69c1137809f5113c2cf0a326d528595e6ffcfa10eb87a22552b",
+      "bytes": 736,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_STAGE1_METHOD": {
+      "relative_path": "v031_overfit100_g4321_n4/docs/V031_STAGE1_METHOD_AND_IMPLEMENTATION.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/docs/V031_STAGE1_METHOD_AND_IMPLEMENTATION.md",
+      "sha256": "bbcb67a6c063778b426a737edc4e8af13d8756b3631f19d33732d7c9e137b8d5",
+      "bytes": 16723,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_STAGE1_REPORT": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_IMPLEMENTATION_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_IMPLEMENTATION_REPORT.md",
+      "sha256": "6cc9f150b4f3066f4a4c0256cfe40d7e9f34ce496526731fb151bf51d09728ce",
+      "bytes": 15318,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_PROTOCOL": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_TRAINING_PROTOCOL.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_TRAINING_PROTOCOL.md",
+      "sha256": "502da957564a90ddb08bb25a72b0f8efd09c5bdcf2961777757ad3f0a0595122",
+      "bytes": 3876,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_CONFIG": {
+      "relative_path": "v031_overfit100_g4321_n4/configs/train_v031.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/configs/train_v031.json",
+      "sha256": "ee4c2e9074b3bd11333364fcb2ce553a1985d8120a4f74974fa8cc842b50f706",
+      "bytes": 8065,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FINAL_STATUS": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/WORKFLOW_STATUS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/WORKFLOW_STATUS.json",
+      "sha256": "4b1c15314b416d2fea252e9108a242f48fd97bd903dd1933d5eea8015a3bb9db",
+      "bytes": 3658,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_U1000_REPORT": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_UPDATE1000_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_UPDATE1000_REPORT.md",
+      "sha256": "afeef85610bf08995ff41c93f2465ad7d0cdc8f1a1e7302dce487597a33dda04",
+      "bytes": 14216,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_U1000_STATE": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/CHECKPOINT_001000_STATE_CHECK.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/CHECKPOINT_001000_STATE_CHECK.json",
+      "sha256": "12c5faedae8eed28fc682b15781a79d4611f249497b501172431a2b63451cb77",
+      "bytes": 1335,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_REFINEMENT_FORENSIC": {
+      "relative_path": "v031_overfit100_g4321_n4/artifacts/refinement_forensic_20260918/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/refinement_forensic_20260918/FINAL_REPORT_ZH.md",
+      "sha256": "c296f326c690dd058ed9b54b18ff707ce1e8b36855a34aeb62e0b8a38284e4d7",
+      "bytes": 12634,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FOLLOWUP_README": {
+      "relative_path": "v031_followup_20260918/reports/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/README.md",
+      "sha256": "688f919c4c15d736ad9155fdbe0ba6191707ed9788b403d4c08c79573eeec2e8",
+      "bytes": 3964,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FOLLOWUP_TRAINING": {
+      "relative_path": "v031_followup_20260918/reports/TRAINING_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/TRAINING_REPORT.md",
+      "sha256": "c8c757ca54fcb66e32c94c13aca2c37aaa0348368165d52b7db9d0f1ada8ad07",
+      "bytes": 1315,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_T1_METHOD": {
+      "relative_path": "v031_followup_20260918/shared/authority/01_T1_DIRECT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/shared/authority/01_T1_DIRECT.md",
+      "sha256": "f16bfa0e0afd3a1ae351f25ae21fd90bdc01cd85ea66aea04f14083c142d2a0c",
+      "bytes": 5521,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_T2_METHOD": {
+      "relative_path": "v031_followup_20260918/shared/authority/02_T2_FEEDBACK_R.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/shared/authority/02_T2_FEEDBACK_R.md",
+      "sha256": "63fe8bcc0dd0788cf82760f572e9c62ecbaea07ea187e32cac9f1b3cbc54373d",
+      "bytes": 5725,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_T1_CONFIG": {
+      "relative_path": "v031_followup_20260918/configs/T1_DIRECT_formal.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/configs/T1_DIRECT_formal.json",
+      "sha256": "6bd86e78609069bc7589b39ee4a6313eacaca40fd480274396e8c57067274a0b",
+      "bytes": 9088,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_T2_CONFIG": {
+      "relative_path": "v031_followup_20260918/configs/T2_FEEDBACK_R_formal.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/configs/T2_FEEDBACK_R_formal.json",
+      "sha256": "73f1b4bdec8b4a3db3f0bd898f06b05914cb925129f91b48d3d09612bf9b84ff",
+      "bytes": 9096,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FOLLOWUP_COMPLETE": {
+      "relative_path": "v031_followup_20260918/reports/COMPLETION.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/COMPLETION.json",
+      "sha256": "8d10a4916ad0af2383a63e45cfcc06ab29d10c197bb6f4d15fda7c6f2bc72cf2",
+      "bytes": 1117,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FOLLOWUP_MISSING": {
+      "relative_path": "v031_followup_20260918/reports/MISSINGNESS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/MISSINGNESS.json",
+      "sha256": "93921cdcb8ea91fdbb7751eff5ccb384b69f60034eef8fa9a0e216ddd7c18204",
+      "bytes": 484,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_FOLLOWUP_RESUME": {
+      "relative_path": "v031_followup_20260918/reports/CHECKPOINT_AND_RESUME.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/CHECKPOINT_AND_RESUME.md",
+      "sha256": "70529152b002c2c1ef9ae886c599ae2ddd8174c8f2bcdd28913ce57d53658daa",
+      "bytes": 1566,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_HELDOUT": {
+      "relative_path": "v031_followup_20260918/reports/HELDOUT_SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/HELDOUT_SUMMARY.json",
+      "sha256": "2850308b82fb3ae20e0ea89388447c1abdbc65b6201012ccc04efacc36407d93",
+      "bytes": 951638,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_HELDOUT_CURVE": {
+      "relative_path": "v031_followup_20260918/reports/heldout_curve_20260919_2138/delivery/REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/heldout_curve_20260919_2138/delivery/REPORT.md",
+      "sha256": "238addf01f872f45e1dafae8b5c023f4e5711d2730b7d830cffcd2b13d038698",
+      "bytes": 7001,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V3_I1_REPORT": {
+      "relative_path": "v031_followup_20260918/reports/I1_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/I1_REPORT.md",
+      "sha256": "b77e00b3ed8069c354d3b939f2a51d46ba5e524b1a7147cb308c80da21369468",
+      "bytes": 3314,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "GEOMETRY_PROTOCOL": {
+      "relative_path": "analysis/v03_validation_20260909/PROTOCOL.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/PROTOCOL.md",
+      "sha256": "d04e74a274b841997918ad7fa2c7f377584cbaa6e36161641a04111e167e4bcb",
+      "bytes": 5962,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "GEOMETRY_REPORT": {
+      "relative_path": "analysis/v03_validation_20260909/REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/REPORT.md",
+      "sha256": "e53e188fe6c5f95c25a1efb775acf2d81ae5b6c58d920758e29b6143ac45a402",
+      "bytes": 15234,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "GEOMETRY_STATUS": {
+      "relative_path": "analysis/v03_validation_20260909/FINAL_STATUS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/FINAL_STATUS.json",
+      "sha256": "cc7936f77cb449f6339bb8b6cced8a68a8cc29e787b9b1e7452721228544deff",
+      "bytes": 2874,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "GEOMETRY_GATE": {
+      "relative_path": "analysis/v03_validation_20260909/evidence/stage1_analysis.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/evidence/stage1_analysis.json",
+      "sha256": "74232f19eb5a7a57e24777d1263a698d3efb5aa4fa86c9076864fa3da18fa908",
+      "bytes": 50994,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "GEOMETRY_QA": {
+      "relative_path": "analysis/v03_validation_20260909/FINAL_QA.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/FINAL_QA.json",
+      "sha256": "b8e25bbda8ee4ef02b7ba9e2a0a59f6a5ad2a3825bc8e5a7657011b6b99d47ad",
+      "bytes": 749,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_FINAL_REPORT": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/original_final_report.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/original_final_report.md",
+      "sha256": "6bc192bca640fae51fbdc5fdc84d4ad9389034a1690b8ef712b8fb1040ea0dc1",
+      "bytes": 4365,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_FINAL_SUMMARY": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/final_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/final_summary.json",
+      "sha256": "65657e8fdabf651778e714e3fda5c47bdd842b990d39e6e65bba2943d88081e4",
+      "bytes": 66934,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_TRAIN_SUMMARY": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/training_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/training_summary.json",
+      "sha256": "7d53310b8be1cd83191ac6c34d98475c01ac1d1457b5968a01b80e9e86cac6e6",
+      "bytes": 3176,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_GENERATION_SUMMARY": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/generation_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/generation_summary.json",
+      "sha256": "701df72796488fb53417b29f34643b6e3406e7cb243e21c89608b48e45a5feb8",
+      "bytes": 74203,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_TEST_ROLLOUTS": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/test_rollouts_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/test_rollouts_summary.json",
+      "sha256": "fdce922d4d05226c31eff3abd72a61ac227d8b250584bb76d7e3928b9abc00e1",
+      "bytes": 7772,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_TEACHER_FORCED": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/teacher_forced_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/teacher_forced_summary.json",
+      "sha256": "01d343331d7f4b3bb0007708382e075f39b5beaa759d5005b96165177897806e",
+      "bytes": 4579,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_DATA_CONFIG": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/configs/dataset_v01.yaml",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/dataset_v01.yaml",
+      "sha256": "ed9d1c8983dc19d82729097de3e2526200edb3ea15da72c5ad5a12148f527a32",
+      "bytes": 1109,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_TRAIN_CONFIG": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/configs/train_v01.yaml",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/train_v01.yaml",
+      "sha256": "327535abc5034537d05f10246e7236f669cb3ba284334cf399bdfbe4bcfa5de9",
+      "bytes": 1011,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_INFERENCE_CONFIG": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/configs/inference_v01.yaml",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/inference_v01.yaml",
+      "sha256": "0cf635b4e72a1261404627e478117845d1a7fa8183f9de6ec9e7a65956e172c9",
+      "bytes": 532,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_EVIDENCE_AUDIT": {
+      "relative_path": "reports/bridge_v01_retrospective/analysis/evidence_audit.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/analysis/evidence_audit.md",
+      "sha256": "bfe0e2747f8ca4279d05057550424d66eb5ed500d2b84d432b414457ec7c8b21",
+      "bytes": 355,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V1_REMOTE_TRAIN": {
+      "relative_path": "reports/bridge_v01_retrospective/sources/remote_code/train.py",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/remote_code/train.py",
+      "sha256": "95b2384368952c7f6fa5a716672243c4fbaba5dd8a6af7f26fd23ae7e329c5c5",
+      "bytes": 29952,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_METHOD": {
+      "relative_path": "v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_METHOD.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_METHOD.md",
+      "sha256": "834723e3cd6883fc9873eeb48b59ad723560ac35265ef8c3f8b2d220fc1a0a7f",
+      "bytes": 14963,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_PLAN": {
+      "relative_path": "v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_TRAINING_PLAN_CODEX.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_TRAINING_PLAN_CODEX.md",
+      "sha256": "64a166fdc6b5b00d6fff4253980431f5bfd402d85683d69d3b68101464a89f53",
+      "bytes": 32602,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_AMENDMENT": {
+      "relative_path": "v02_new_protocol_20260829/docs/EXECUTION_AMENDMENT_20260829.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/EXECUTION_AMENDMENT_20260829.md",
+      "sha256": "09adc0ec5cd5fdece2a363bdc07611bf9238b4151844fecbccb3e59ab94faf35",
+      "bytes": 2007,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_CONFIG": {
+      "relative_path": "v02_new_protocol_20260829/configs/v02.yaml",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/configs/v02.yaml",
+      "sha256": "9a829762f47e48eb6e81ee9b47ea4d201800dbea025c83fa5b2ada5832e361d0",
+      "bytes": 1582,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_OBJECTIVE_REPORT": {
+      "relative_path": "analysis/v02_a1_20260830/report/V02_A1_OBJECTIVE_HANDOFF_FOR_GPT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/report/V02_A1_OBJECTIVE_HANDOFF_FOR_GPT.md",
+      "sha256": "2f8e04efe2506aab0be15247e1490caef19f4057e11b0e69400aafb3db1f7ef6",
+      "bytes": 21955,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_QA": {
+      "relative_path": "analysis/v02_a1_20260830/report/qa_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/report/qa_summary.json",
+      "sha256": "0d7c05027f1c4ac7757c41fed0b3c4560d6afb9722e6d39cc63f36fed4983172",
+      "bytes": 980,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_TRAIN_SUMMARY": {
+      "relative_path": "analysis/v02_a1_20260830/data/a1/training_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/data/a1/training_summary.json",
+      "sha256": "7a0906c943e055cfbbb9cf213d4a682df9e5adb7a9fcff144a4ea2fa029bfb3c",
+      "bytes": 377,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_ORIGINAL_EVAL": {
+      "relative_path": "analysis/v02_a1_20260830/data/eval/v02_pilot_report.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/data/eval/v02_pilot_report.json",
+      "sha256": "71efc2992f186537edc47ee960a00620bdd83ccec81c001961c6bc6915448498",
+      "bytes": 1409,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_GATE_SENSITIVITY": {
+      "relative_path": "analysis/v02_a1_20260830/derived/gate_sensitivity.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/gate_sensitivity.csv",
+      "sha256": "1992c99d9a3fa1c17489609087b762f12a3110d8635fa39ad76d9413ac035573",
+      "bytes": 1234,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_CORRECTED_G": {
+      "relative_path": "analysis/v02_a1_20260830/derived/corrected_per_g.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/corrected_per_g.csv",
+      "sha256": "319b0e5ebcaac3ac1d690ad4b7dd353879664baac4256b32ff30661387d8a86c",
+      "bytes": 933,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_CHECKPOINT_G450": {
+      "relative_path": "analysis/v02_a1_20260830/derived/checkpoint_progression_g450.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/checkpoint_progression_g450.csv",
+      "sha256": "7c5ca68c887db89ce1961257946854d1cd4ed0b7cef7e882ffd9fd74135a9992",
+      "bytes": 645,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_DIFFERENTIABILITY": {
+      "relative_path": "analysis/v02_a1_20260830/derived/differentiability_summary.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/differentiability_summary.json",
+      "sha256": "c675176469d0a2dc010b44170b5cbdfd4ee4f784c4d6ee984e16893bd1963c8a",
+      "bytes": 5347,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_TRAIN_SOURCE": {
+      "relative_path": "analysis/v02_a1_20260830/source/v02_train_pilot.py",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_train_pilot.py",
+      "sha256": "62f4e8f461646844add7cb918d4227ab5c85e195a805c2166f21ea756e9957c6",
+      "bytes": 17242,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_EVAL_SOURCE": {
+      "relative_path": "analysis/v02_a1_20260830/source/v02_evaluate_pilot.py",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_evaluate_pilot.py",
+      "sha256": "672464174b8c2c1ce1588bf0a33cef01dd2c0f85b3406b27ccaddb133b6b277b",
+      "bytes": 11562,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_LOSS_SOURCE": {
+      "relative_path": "analysis/v02_a1_20260830/source/v02_losses.py",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_losses.py",
+      "sha256": "229ee5211920d8078506136301b9df096705e87ce0a6abbc97eaf142bd915008",
+      "bytes": 3089,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_LEGACY_CONFIG": {
+      "relative_path": "v02_src/configs/train_v02.yaml",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_src/configs/train_v02.yaml",
+      "sha256": "fd0072de546ea5a4b00b5d1975604fcb053d51a01c272d9072c3591be0ae91e1",
+      "bytes": 1187,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    },
+    "V15_LEGACY_AUTHORITY": {
+      "relative_path": "v02_src/docs/AUTHORITY.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_src/docs/AUTHORITY.md",
+      "sha256": "dd2c695077d0433019f1afb0803a8f12e7d8192aeaaa5cc9b74c1f369d5a6267",
+      "bytes": 1150,
+      "verified_local_exists": true,
+      "scope": "local archived report/config/metadata bytes; remote payload identity is historical unless explicitly stated"
+    }
+  },
+  "remote_reverification_performed": false,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "historical_assets_modified": false,
+  "prepared_at": "2026-11-03T16:05:07.044309+00:00",
+  "canonical_naming": {
+    "v1": "V0.1/v01",
+    "v1.5": "V0.2/v02",
+    "v2": "V0.3/v03 teachers recursive full-data",
+    "v2.5": "V0.3-half/v03-half source-half",
+    "v3": "V0.31/V0.3.1/v031 Overfit100 and followups",
+    "geometric_branch": "historical v0.3 in analysis/v03_validation_20260909; not v2"
+  },
+  "covered_versions": [
+    "v1",
+    "v1.5",
+    "v2",
+    "v2.5",
+    "v3",
+    "geometric_branch"
+  ],
+  "current_midnight_campaign": "Out of this legacy preparation scope; root owns actual terminal validation and final overall handoff",
+  "no_live_server_claims": true,
+  "remote_commands_executed": 0,
+  "training_or_evaluation_reexecuted": false,
+  "checkpoint_tensor_loads": 0,
+  "source_files_count": 66,
+  "stages": [
+    {
+      "name": "v1",
+      "period": "2026-08-26 authorization; exact train start/stop not independently established",
+      "purpose": "Known-G physical bridge versus same-network one-shot",
+      "method": "Original DualHeadUNet; clean MSE plus GT-clean/predicted-native-xi observation MSE, severity embedding, optional inference xi refinement",
+      "actual_historical_execution_boundary": "20000 updates/B16, stopped_early; EMA checkpoint and val-frozen K0/LR0.03 then Test1000",
+      "dataset": {
+        "id": "places_p2s_bridge_v01",
+        "train_sources": 2000,
+        "train_trajectories": 8000,
+        "val_sources": 200,
+        "val_trajectories": 400,
+        "test_sources": 500,
+        "test_trajectories": 1000,
+        "severity_states": [
+          0.75,
+          1.5,
+          2.25,
+          3,
+          3.75,
+          4.5
+        ],
+        "test_terminal_G": [
+          1.5,
+          2.25,
+          3,
+          3.75,
+          4.5
+        ],
+        "split_source_overlap": 0
+      },
+      "quality_results": [
+        {
+          "scope": "EMA frozen terminal Test1000; five terminal G buckets times200; final per-trajectory output, averaged per-image metrics",
+          "psnr": 22.24463244,
+          "ssim": 0.62972416,
+          "lpips": 0.41176186,
+          "l1": 0.05016122
+        },
+        {
+          "scope": "G4.5 terminal Test200",
+          "psnr": 20.62721163,
+          "ssim": 0.55501783,
+          "lpips": 0.47951543,
+          "l1": 0.05971911
+        },
+        {
+          "scope": "val selected K0; all frozen bridge/oracle/refinement routes reduce to one-shot",
+          "paired_psnr_delta": 0,
+          "ci95": [
+            0,
+            0
+          ],
+          "claim": "Progressive superiority not supported; does not establish oracle xi uselessness"
+        },
+        {
+          "scope": "Separate teacher-forced1000trajectory times6state=6000; do not substitute for frozen Test1000",
+          "psnr": 23.087334
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V1_FINAL_REPORT",
+        "V1_FINAL_SUMMARY",
+        "V1_TRAIN_SUMMARY",
+        "V1_GENERATION_SUMMARY",
+        "V1_TEST_ROLLOUTS",
+        "V1_TEACHER_FORCED",
+        "V1_DATA_CONFIG",
+        "V1_TRAIN_CONFIG",
+        "V1_INFERENCE_CONFIG",
+        "V1_EVIDENCE_AUDIT",
+        "V1_REMOTE_TRAIN"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/original_final_report.md",
+          "relative_path": "reports/bridge_v01_retrospective/sources/original_final_report.md",
+          "sha256": "6bc192bca640fae51fbdc5fdc84d4ad9389034a1690b8ef712b8fb1040ea0dc1",
+          "bytes": 4365
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/final_summary.json",
+          "relative_path": "reports/bridge_v01_retrospective/sources/final_summary.json",
+          "sha256": "65657e8fdabf651778e714e3fda5c47bdd842b990d39e6e65bba2943d88081e4",
+          "bytes": 66934
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/training_summary.json",
+          "relative_path": "reports/bridge_v01_retrospective/sources/training_summary.json",
+          "sha256": "7d53310b8be1cd83191ac6c34d98475c01ac1d1457b5968a01b80e9e86cac6e6",
+          "bytes": 3176
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/generation_summary.json",
+          "relative_path": "reports/bridge_v01_retrospective/sources/generation_summary.json",
+          "sha256": "701df72796488fb53417b29f34643b6e3406e7cb243e21c89608b48e45a5feb8",
+          "bytes": 74203
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/test_rollouts_summary.json",
+          "relative_path": "reports/bridge_v01_retrospective/sources/test_rollouts_summary.json",
+          "sha256": "fdce922d4d05226c31eff3abd72a61ac227d8b250584bb76d7e3928b9abc00e1",
+          "bytes": 7772
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/teacher_forced_summary.json",
+          "relative_path": "reports/bridge_v01_retrospective/sources/teacher_forced_summary.json",
+          "sha256": "01d343331d7f4b3bb0007708382e075f39b5beaa759d5005b96165177897806e",
+          "bytes": 4579
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/dataset_v01.yaml",
+          "relative_path": "reports/bridge_v01_retrospective/sources/configs/dataset_v01.yaml",
+          "sha256": "ed9d1c8983dc19d82729097de3e2526200edb3ea15da72c5ad5a12148f527a32",
+          "bytes": 1109
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/train_v01.yaml",
+          "relative_path": "reports/bridge_v01_retrospective/sources/configs/train_v01.yaml",
+          "sha256": "327535abc5034537d05f10246e7236f669cb3ba284334cf399bdfbe4bcfa5de9",
+          "bytes": 1011
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/configs/inference_v01.yaml",
+          "relative_path": "reports/bridge_v01_retrospective/sources/configs/inference_v01.yaml",
+          "sha256": "0cf635b4e72a1261404627e478117845d1a7fa8183f9de6ec9e7a65956e172c9",
+          "bytes": 532
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/analysis/evidence_audit.md",
+          "relative_path": "reports/bridge_v01_retrospective/analysis/evidence_audit.md",
+          "sha256": "bfe0e2747f8ca4279d05057550424d66eb5ed500d2b84d432b414457ec7c8b21",
+          "bytes": 355
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/reports/bridge_v01_retrospective/sources/remote_code/train.py",
+          "relative_path": "reports/bridge_v01_retrospective/sources/remote_code/train.py",
+          "sha256": "95b2384368952c7f6fa5a716672243c4fbaba5dd8a6af7f26fd23ae7e329c5c5",
+          "bytes": 29952
+        }
+      ],
+      "remote_asset_references": [
+        {
+          "path": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/frozen_checkpoint.pt",
+          "historically_recorded_sha256": "34dc4dce03bd13ba4079100d4b195fcc0e8c3b07699e06ae12ca91e0aba48f47",
+          "role": "Frozen legacy EMA inference bundle",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        }
+      ],
+      "unresolved_or_unverified": [
+        "Root cause of poor progressive rollout not causally isolated by K0 frozen test",
+        "No new remote tar/checkpoint verification",
+        "Exact train calendar endpoints unverified"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v1.5 new protocol A1",
+      "period": "2026-08-29 protocol; formal data through08-30; differentiability audit09-01",
+      "purpose": "Improve xi trajectory transport and bridge execution supervision",
+      "method": "LC+0.8LT+0.1LB after fixed A0; LT uses GTclean and predicted xi across unique severities; LB uses predicted clean/xi for next weak state. Starts from v1 U20000 RAW(model field), new AdamW/EMA; A1 evaluations EMA",
+      "actual_historical_execution_boundary": "A0 PASS; actual A1 3000updates/B16=48000calls; A1_STOP/SCIENTIFIC_STOP; StageB not run; original evaluator invalidated seed/comparator, posthoc corrected inference-only analysis still STOP",
+      "dataset": {
+        "base": "v1 dataset reuse",
+        "A1_train_trajectories": 2000,
+        "terminal_G_counts": {
+          "1.5": 400,
+          "2.25": 400,
+          "3": 400,
+          "3.75": 400,
+          "4.5": 400
+        },
+        "fastval": 100,
+        "per_G": 20,
+        "executed_val_seed": 2026082801,
+        "protocol_val_seed": 2026082897,
+        "subset_intersection": 19
+      },
+      "quality_results": [
+        {
+          "scope": "Corrected protocol seed2026082897, v1EMA comparator, A1U3000EMA; K0 all100",
+          "K0_psnr_delta": -0.14817378044128418,
+          "ci95": [
+            -0.16795111513137817,
+            -0.12803171873092653
+          ],
+          "threshold": -0.1,
+          "gate": "FAIL"
+        },
+        {
+          "scope": "Same corrected protocol; G4.5 K1,20trajectories",
+          "K1_psnr_delta": -0.0019287586212158204,
+          "ci95": [
+            -0.06494431495666504,
+            0.054311795234680174
+          ],
+          "threshold": 0.1,
+          "gate": "FAIL"
+        },
+        {
+          "scope": "Same corrected protocol; G4.5 next-state MSE reduction fraction",
+          "fraction": 0.013485936707605561,
+          "ci95": [
+            0.0022347504997828507,
+            0.024732287571128102
+          ],
+          "threshold": 0.25,
+          "gate": "FAIL"
+        },
+        {
+          "scope": "Matched G4.5 same20 A1EMA",
+          "K0_psnr": 20.57190967,
+          "K1_psnr": 20.25016356,
+          "teacher_forced_K1_psnr": 21.27747574,
+          "K1_minus_K0": -0.32174611
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V15_METHOD",
+        "V15_PLAN",
+        "V15_AMENDMENT",
+        "V15_CONFIG",
+        "V15_OBJECTIVE_REPORT",
+        "V15_QA",
+        "V15_TRAIN_SUMMARY",
+        "V15_ORIGINAL_EVAL",
+        "V15_GATE_SENSITIVITY",
+        "V15_CORRECTED_G",
+        "V15_CHECKPOINT_G450",
+        "V15_DIFFERENTIABILITY",
+        "V15_TRAIN_SOURCE",
+        "V15_EVAL_SOURCE",
+        "V15_LOSS_SOURCE"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_METHOD.md",
+          "relative_path": "v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_METHOD.md",
+          "sha256": "834723e3cd6883fc9873eeb48b59ad723560ac35265ef8c3f8b2d220fc1a0a7f",
+          "bytes": 14963
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_TRAINING_PLAN_CODEX.md",
+          "relative_path": "v02_new_protocol_20260829/docs/KNOWN_G_PHYSICAL_TURBULENCE_BRIDGE_V02_TRAINING_PLAN_CODEX.md",
+          "sha256": "64a166fdc6b5b00d6fff4253980431f5bfd402d85683d69d3b68101464a89f53",
+          "bytes": 32602
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/docs/EXECUTION_AMENDMENT_20260829.md",
+          "relative_path": "v02_new_protocol_20260829/docs/EXECUTION_AMENDMENT_20260829.md",
+          "sha256": "09adc0ec5cd5fdece2a363bdc07611bf9238b4151844fecbccb3e59ab94faf35",
+          "bytes": 2007
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v02_new_protocol_20260829/configs/v02.yaml",
+          "relative_path": "v02_new_protocol_20260829/configs/v02.yaml",
+          "sha256": "9a829762f47e48eb6e81ee9b47ea4d201800dbea025c83fa5b2ada5832e361d0",
+          "bytes": 1582
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/report/V02_A1_OBJECTIVE_HANDOFF_FOR_GPT.md",
+          "relative_path": "analysis/v02_a1_20260830/report/V02_A1_OBJECTIVE_HANDOFF_FOR_GPT.md",
+          "sha256": "2f8e04efe2506aab0be15247e1490caef19f4057e11b0e69400aafb3db1f7ef6",
+          "bytes": 21955
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/report/qa_summary.json",
+          "relative_path": "analysis/v02_a1_20260830/report/qa_summary.json",
+          "sha256": "0d7c05027f1c4ac7757c41fed0b3c4560d6afb9722e6d39cc63f36fed4983172",
+          "bytes": 980
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/data/a1/training_summary.json",
+          "relative_path": "analysis/v02_a1_20260830/data/a1/training_summary.json",
+          "sha256": "7a0906c943e055cfbbb9cf213d4a682df9e5adb7a9fcff144a4ea2fa029bfb3c",
+          "bytes": 377
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/data/eval/v02_pilot_report.json",
+          "relative_path": "analysis/v02_a1_20260830/data/eval/v02_pilot_report.json",
+          "sha256": "71efc2992f186537edc47ee960a00620bdd83ccec81c001961c6bc6915448498",
+          "bytes": 1409
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/gate_sensitivity.csv",
+          "relative_path": "analysis/v02_a1_20260830/derived/gate_sensitivity.csv",
+          "sha256": "1992c99d9a3fa1c17489609087b762f12a3110d8635fa39ad76d9413ac035573",
+          "bytes": 1234
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/corrected_per_g.csv",
+          "relative_path": "analysis/v02_a1_20260830/derived/corrected_per_g.csv",
+          "sha256": "319b0e5ebcaac3ac1d690ad4b7dd353879664baac4256b32ff30661387d8a86c",
+          "bytes": 933
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/checkpoint_progression_g450.csv",
+          "relative_path": "analysis/v02_a1_20260830/derived/checkpoint_progression_g450.csv",
+          "sha256": "7c5ca68c887db89ce1961257946854d1cd4ed0b7cef7e882ffd9fd74135a9992",
+          "bytes": 645
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/derived/differentiability_summary.json",
+          "relative_path": "analysis/v02_a1_20260830/derived/differentiability_summary.json",
+          "sha256": "c675176469d0a2dc010b44170b5cbdfd4ee4f784c4d6ee984e16893bd1963c8a",
+          "bytes": 5347
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_train_pilot.py",
+          "relative_path": "analysis/v02_a1_20260830/source/v02_train_pilot.py",
+          "sha256": "62f4e8f461646844add7cb918d4227ab5c85e195a805c2166f21ea756e9957c6",
+          "bytes": 17242
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_evaluate_pilot.py",
+          "relative_path": "analysis/v02_a1_20260830/source/v02_evaluate_pilot.py",
+          "sha256": "672464174b8c2c1ce1588bf0a33cef01dd2c0f85b3406b27ccaddb133b6b277b",
+          "bytes": 11562
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v02_a1_20260830/source/v02_losses.py",
+          "relative_path": "analysis/v02_a1_20260830/source/v02_losses.py",
+          "sha256": "229ee5211920d8078506136301b9df096705e87ce0a6abbc97eaf142bd915008",
+          "bytes": 3089
+        }
+      ],
+      "remote_asset_references": [
+        {
+          "path": "/data2/yanglin/physical_bridge/runs/v02_new_protocol_20260829/a1/checkpoints/update-003000.pt",
+          "historically_recorded_sha256": "a48a7557a577d0affd745f1e06f32902801b96c2b97d1df53f68d59176ff033a",
+          "role": "Complete trained A1 checkpoint; evaluation execution identity is separate",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        }
+      ],
+      "unresolved_or_unverified": [
+        "No formal replacement fullval/test/multiseed completion",
+        "Predicted-clean transition evidence does not isolate unique root cause",
+        "NPU direct finite differences and FFT resize-warning localization unclosed",
+        "Old v02_src is superseded, never merge its settings/status"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v2 full-data recursive",
+      "period": "2026-09-15; termination2026-09-15T15:42:20.462142Z",
+      "purpose": "Train predicted-state physical recursion with full BPTT",
+      "method": "Original network/simulator/complete inference; per-path mean(cleanMSE+observationMSE), no detach/teacher forcing/refinement in training; sixG, schedules requestedK0/1/3/5 deduplicated",
+      "actual_historical_execution_boundary": "Engineering acceptance only, including3updates/12paths longest-path four-card segment; formal training never started; terminated for source-half data protocol; old weights cannot initialize successor",
+      "dataset": {
+        "scope": "Original six-level full pool planned, superseded by source-half before formal"
+      },
+      "quality_results": [
+        {
+          "scope": "Engineering acceptance, not restoration quality",
+          "updates": 3,
+          "paths": 12,
+          "warm_seconds_per_update_approx": 10.1,
+          "formal_quality": "NOT_AVAILABLE"
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V2_README",
+        "V2_EXECUTION",
+        "V2_TERMINATION"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/README.md",
+          "relative_path": "v03_recursive_from_scratch_20260915/README.md",
+          "sha256": "0d12990549fe7ab723b498a6508ac62bfab85a6f32085e082cef8b41231ec443",
+          "bytes": 2112
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/docs/EXECUTION_STATUS.md",
+          "relative_path": "v03_recursive_from_scratch_20260915/docs/EXECUTION_STATUS.md",
+          "sha256": "fbc4b72f4a877441112a320f2505a0ff898431322bbeb42a11eadd68c9b5a3c7",
+          "bytes": 1283
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_recursive_from_scratch_20260915/artifacts/DATASET_PROTOCOL_CHANGE.json",
+          "relative_path": "v03_recursive_from_scratch_20260915/artifacts/DATASET_PROTOCOL_CHANGE.json",
+          "sha256": "bde3f810a3251dde546cadc9c5ec7f6aa2b0ce0e0d857bfd0c56ff66589265d0",
+          "bytes": 286
+        }
+      ],
+      "remote_asset_references": [],
+      "unresolved_or_unverified": [
+        "No formal full-data quality result",
+        "Full versus half superiority not tested",
+        "Acceptance artifacts current remote existence unverified"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v2.5 source-half recursive",
+      "period": "2026-09-15—16; formal2026-09-16 10:24; safe pause11:50:24+08:00",
+      "purpose": "Execute teacher recursive protocol on exact source-half dataset",
+      "method": "Full-image LC+.2LR, predicted transitions/fullBPTT, original sixG/K0,1,3,5 inference; AdamW B32 peak1e-4 warm64 horizon10k floor1e-6 EMA.999**4; fresh model/optimizer/EMA, no pilot state transfer",
+      "actual_historical_execution_boundary": "Formal pausedU204,6528sampledtrajectories/10098predictions; CPU fullstate accepted; only U173 EMA fixed16trajectory validation; no fullval or frozen test readiness",
+      "dataset": {
+        "train_sources": 1000,
+        "train_trajectories": 4000,
+        "train_states": 24000,
+        "val_sources": 100,
+        "val_trajectories": 200,
+        "val_states": 1200,
+        "test_sources": 250,
+        "test_trajectories": 500,
+        "test_states": 3000,
+        "members_read": 47000,
+        "existing_SHA_matches": 42300,
+        "source_overlap": 0,
+        "test_inference": false
+      },
+      "quality_results": [
+        {
+          "scope": "U173EMA fixed16valtrajectories times6G times4K=384records; original complete inference",
+          "K": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "psnr": [
+            17.2925,
+            16.1409,
+            15.3683,
+            15.2162
+          ],
+          "ssim": [
+            0.504,
+            0.4791,
+            0.4622,
+            0.4594
+          ],
+          "lpips": [
+            0.6794,
+            0.7559,
+            0.7766,
+            0.7792
+          ],
+          "delta_psnr_vs_K0": [
+            0,
+            -1.1516,
+            -1.9242,
+            -2.0763
+          ],
+          "progressive_gain": false
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V25_DATA",
+        "V25_PROTOCOL",
+        "V25_CONFIG",
+        "V25_HANDOFF",
+        "V25_STATUS",
+        "V25_RESUME_AUDIT",
+        "V25_VAL_CSV"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/DATASET_AUDIT.md",
+          "relative_path": "v03_half_recursive_20260915/docs/DATASET_AUDIT.md",
+          "sha256": "6fce31cb70c051a8f68150fcb921711df57cb2fa0076a16b2748b1d497e930e7",
+          "bytes": 1250
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/FORMAL_PROTOCOL.md",
+          "relative_path": "v03_half_recursive_20260915/docs/FORMAL_PROTOCOL.md",
+          "sha256": "9f9cdaf3d5f7f8324a236d736dcf45e19df71b23ad637e8ada0933c9aef0135c",
+          "bytes": 4677
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/configs/half_formal_01.json",
+          "relative_path": "v03_half_recursive_20260915/configs/half_formal_01.json",
+          "sha256": "3ade4c5dfd327766727fe841339844e10dcb73bc134bc89e07fa2a2abca92d3f",
+          "bytes": 3753
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/NOON_HANDOFF.md",
+          "relative_path": "v03_half_recursive_20260915/docs/NOON_HANDOFF.md",
+          "sha256": "7e02635f073d733948ffa3ddef7c496a6afe07ffe47e165c72d7c49876fc8eb2",
+          "bytes": 8614
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/handoff_summary.json",
+          "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/handoff_summary.json",
+          "sha256": "17360f9e3c676002570d4af4dc5591cafc90cad0a08c89ae3a68da830b252c33",
+          "bytes": 832
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/noon_resume_audit.json",
+          "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/noon_resume_audit.json",
+          "sha256": "57966ec028545960bc5f8ab603cd8db03f2f8cda2c4dff95da910d551fb75589",
+          "bytes": 1977
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/artifacts/noon_handoff/validation_metrics_per_G_K.csv",
+          "relative_path": "v03_half_recursive_20260915/artifacts/noon_handoff/validation_metrics_per_G_K.csv",
+          "sha256": "555727cf9f1d0e9d4ee370122657f04732e5def8cffbe61c998da54725825e1a",
+          "bytes": 2724
+        }
+      ],
+      "remote_asset_references": [
+        {
+          "path": "/data2/yanglin/v03_half_recursive_20260915/runs/half_formal_01/checkpoints/update-000204.pt",
+          "historically_recorded_sha256": "8bb92a45c1fca32d4a8692a909dfc54120ad24bf5ee32ef9c28588c949c43b92",
+          "role": "Resume-ready complete early model, not final performance selection",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        }
+      ],
+      "unresolved_or_unverified": [
+        "Formal incomplete, no fullval200trajectory selection or heldouttest",
+        "Immediate restored state accepted does not prove future NPU bitwise replay",
+        "No present remote continuation inspected"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v3 Overfit100 data build",
+      "period": "2026-09-16 19:31+08:00 delivery",
+      "purpose": "Construct fixed-clean/native-xi directly rendered four-severity diagnostic population",
+      "method": "100 source selection by frozenSHA ranking from oldtrain2000,4xi each, direct sameclean/xi renders G4/3/2/1, no clamp/cascade/G0",
+      "actual_historical_execution_boundary": "ready_for_overfit_training; data build/fullreplay/independentCPU accepted; no restoration training/pilot/inference in this dataset task",
+      "dataset": {
+        "sources": 100,
+        "trajectories": 400,
+        "states": 1600,
+        "starts": 1600,
+        "authoritative_FP32_arrays": 2500,
+        "bytes": 17278657719,
+        "data_root": "/data2/yanglin/v03_overfit100_g4321_n4/data/places_p2s_bridge_v03_overfit100_g4321_n4",
+        "historical_hash_manifest_sha256": "b896f9060a8ff012cafe476ec6c0bb1075e6291bfdec1eab7ff791dc8936b03b"
+      },
+      "quality_results": [
+        {
+          "scope": "Data replay/seed reconstruction, not restoration metric",
+          "replay_states": 1600,
+          "max_abs": 0,
+          "max_MSE": 0,
+          "seed_replayed_realizations": 400,
+          "hash_files_checked": 2516,
+          "arrays_decoded": 2500
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V3_DATA_DELIVERY",
+        "V3_DATA_ACCEPTANCE"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_overfit100_g4321_n4/DELIVERY_REPORT.md",
+          "relative_path": "v03_overfit100_g4321_n4/DELIVERY_REPORT.md",
+          "sha256": "8daccef59efbce20d8cd26bcceac0caa7202a01651839f3cca233953a2375665",
+          "bytes": 5139
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v03_overfit100_g4321_n4/artifacts/independent_cpu_acceptance.json",
+          "relative_path": "v03_overfit100_g4321_n4/artifacts/independent_cpu_acceptance.json",
+          "sha256": "bea2fef64bf6f69c1137809f5113c2cf0a326d528595e6ffcfa10eb87a22552b",
+          "bytes": 736
+        }
+      ],
+      "remote_asset_references": [],
+      "unresolved_or_unverified": [
+        "Large FP32 arrays retained remotely, no current payload rehash"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v3 original recursive and refinement forensic",
+      "period": "2026-09-16—17 formal/validation;09-18forensic",
+      "purpose": "Establish train-population recursive fitting and determine refinement negative effects",
+      "method": "Original DualHeadUNet32.1M; fixed complete fourGtails; mean_paths(mean_steps(LC+.2LR)); fullBPTT predicted F-transition; FP32/B32/AdamW/warm50 peak1e-4 floor1e-5 atU1000/EMA.996; inference native-xi observation Adam LR.01 iterations40",
+      "actual_historical_execution_boundary": "PAUSED_AT_1000;1000updates/32000paths/80000networkpredictions; full1600 for RAW/EMA refined/unrefined complete; completeCPU state audit accepted; no later restoration updates in forensic",
+      "dataset": {
+        "scope": "Training-only Overfit100 data,100sources/400trajectories/1600starts,20passes; perG400 starts"
+      },
+      "quality_results": [
+        {
+          "scope": "U1000 RAW originalfloatRGB fullimage/data_range1 mean per-image PSNR; every legalK reported",
+          "G": [
+            4,
+            3,
+            2,
+            1
+          ],
+          "K1_psnr": [
+            21.8539,
+            22.5287,
+            23.1473,
+            24.1221
+          ],
+          "complete_unrefined_psnr": [
+            22.8074,
+            23.0932,
+            23.3548,
+            24.1221
+          ],
+          "complete_refined_psnr": [
+            22.2671,
+            22.6925,
+            23.1135,
+            24.1221
+          ],
+          "unrefined_gain_vs_K1": [
+            0.953519,
+            0.564457,
+            0.20754,
+            null
+          ]
+        },
+        {
+          "scope": "Separate fixed48forensicstarts;16source eachG4/3/2, fixed checkpointU1000RAW,0restorationupdates",
+          "refinement_next_restore_psnr_delta": [
+            -0.845,
+            -0.551,
+            -0.346
+          ],
+          "all48_worse_at_fullfirststep": true,
+          "gradient_probe_count": 12,
+          "all12_gradient_cosines_negative": true,
+          "causal_limit": "Evidence of objective/downstream conflict at measured points; not unique backend root cause or all-refinement failure"
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V3_STAGE1_METHOD",
+        "V3_STAGE1_REPORT",
+        "V3_PROTOCOL",
+        "V3_CONFIG",
+        "V3_FINAL_STATUS",
+        "V3_U1000_REPORT",
+        "V3_U1000_STATE",
+        "V3_REFINEMENT_FORENSIC"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/docs/V031_STAGE1_METHOD_AND_IMPLEMENTATION.md",
+          "relative_path": "v031_overfit100_g4321_n4/docs/V031_STAGE1_METHOD_AND_IMPLEMENTATION.md",
+          "sha256": "bbcb67a6c063778b426a737edc4e8af13d8756b3631f19d33732d7c9e137b8d5",
+          "bytes": 16723
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_IMPLEMENTATION_REPORT.md",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_IMPLEMENTATION_REPORT.md",
+          "sha256": "6cc9f150b4f3066f4a4c0256cfe40d7e9f34ce496526731fb151bf51d09728ce",
+          "bytes": 15318
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_TRAINING_PROTOCOL.md",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_TRAINING_PROTOCOL.md",
+          "sha256": "502da957564a90ddb08bb25a72b0f8efd09c5bdcf2961777757ad3f0a0595122",
+          "bytes": 3876
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/configs/train_v031.json",
+          "relative_path": "v031_overfit100_g4321_n4/configs/train_v031.json",
+          "sha256": "ee4c2e9074b3bd11333364fcb2ce553a1985d8120a4f74974fa8cc842b50f706",
+          "bytes": 8065
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/WORKFLOW_STATUS.json",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/WORKFLOW_STATUS.json",
+          "sha256": "4b1c15314b416d2fea252e9108a242f48fd97bd903dd1933d5eea8015a3bb9db",
+          "bytes": 3658
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/V031_UPDATE1000_REPORT.md",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/V031_UPDATE1000_REPORT.md",
+          "sha256": "afeef85610bf08995ff41c93f2465ad7d0cdc8f1a1e7302dce487597a33dda04",
+          "bytes": 14216
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/CHECKPOINT_001000_STATE_CHECK.json",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/CHECKPOINT_001000_STATE_CHECK.json",
+          "sha256": "12c5faedae8eed28fc682b15781a79d4611f249497b501172431a2b63451cb77",
+          "bytes": 1335
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_overfit100_g4321_n4/artifacts/refinement_forensic_20260918/FINAL_REPORT_ZH.md",
+          "relative_path": "v031_overfit100_g4321_n4/artifacts/refinement_forensic_20260918/FINAL_REPORT_ZH.md",
+          "sha256": "c296f326c690dd058ed9b54b18ff707ce1e8b36855a34aeb62e0b8a38284e4d7",
+          "bytes": 12634
+        }
+      ],
+      "remote_asset_references": [
+        {
+          "path": "/data2/yanglin/v031_overfit100_g4321_n4/runs/formal/checkpoint_001000.pt",
+          "historically_recorded_sha256": "6eb3de6a064a0215a9a5b02935145528b23209d2f633b6dd50b60a999bad2454",
+          "role": "Complete RAW/EMA/AdamW/scheduler/4RNG/sampler U1000",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        }
+      ],
+      "unresolved_or_unverified": [
+        "Train fitting is not unseen-source generalization",
+        "BF16 parity failed; original finite-difference failures preserved",
+        "Immediate state restore passed but bitwise future NPU reexecution failed_preserved",
+        "No unique backend or scientific root cause proved"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "v3 T1/T2/I1 followups",
+      "period": "2026-09-18—19; heldout curve supplemental09-19",
+      "purpose": "Compare direct restoration and clean-feedback recursion; bounded fixed-checkpoint refinement repair",
+      "method": "T1 shared/clean-only LC once, noxi/simulator/recursion; T2 complete dualhead LC+.2LR with Znext=Chat, simulator only LR. Fresh commonuntrainedinitial,RAWonly/noEMA,4cardsB32/AdamW/sameLR,1000updates each. I1 fixedoldU1000RAW inferenceonly",
+      "actual_historical_execution_boundary": "T1/T2 both1000 with complete state accepted/paused; fulltrain1600 and fixedheldout256 complete; I1no12newcandidate passeddev, so confirmation/candidateheldout deliberately not run; package/localQA complete",
+      "dataset": {
+        "train_sources": 100,
+        "train_starts": 1600,
+        "heldout_sources": 32,
+        "heldout_realizations_per_source": 2,
+        "heldout_G": 4,
+        "heldout_starts": 256,
+        "fixed_train_curve_sources": 16,
+        "fixed_train_curve_starts": 64,
+        "heldout_scope": "same-distribution unseen train-pool source screening, not external benchmark; repeatedly viewed later"
+      },
+      "quality_results": [
+        {
+          "scope": "RAW1000 finaltrain1600 versus oldRAW1000complete_unrefined, matched perG",
+          "G": [
+            4,
+            3,
+            2,
+            1
+          ],
+          "T1_psnr_delta": [
+            0.79393,
+            0.944353,
+            0.976816,
+            0.719382
+          ],
+          "T2_psnr_delta": [
+            -0.237647,
+            -0.055815,
+            0.046907,
+            -0.049376
+          ]
+        },
+        {
+          "scope": "RAW1000 heldout32*2*4,perG64; average per-image PSNR",
+          "G": [
+            4,
+            3,
+            2,
+            1
+          ],
+          "input_psnr": [
+            18.833153,
+            19.497087,
+            20.479326,
+            22.27771
+          ],
+          "old_final_psnr": [
+            16.68242,
+            17.431869,
+            18.504187,
+            20.784585
+          ],
+          "T1_psnr": [
+            17.430093,
+            17.994651,
+            18.767752,
+            20.240979
+          ],
+          "T2_final_psnr": [
+            16.605387,
+            17.398567,
+            18.501353,
+            20.51495
+          ],
+          "all_model_perG_final_below_input": true
+        },
+        {
+          "scope": "Samefixedtrain64/heldout256 macroG curve,500to1000;sourcebootstrap,notmultitrainingseed",
+          "T1_train_psnr": [
+            21.398672,
+            24.183928
+          ],
+          "T1_heldout_psnr": [
+            19.594123,
+            18.608369
+          ],
+          "T2_train_psnr": [
+            20.449457,
+            23.31644
+          ],
+          "T2_heldout_psnr": [
+            19.464401,
+            18.255065
+          ],
+          "heldout_sources_worse_each_model": 32
+        },
+        {
+          "scope": "I1dev8sources/24starts,14totalconfigs/336paths,12newcandidates",
+          "eligible_new_candidates": 0,
+          "status": "no_repair_candidate_supported_on_dev",
+          "confirmation": "not_run_predeclared_stop"
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "V3_FOLLOWUP_README",
+        "V3_FOLLOWUP_TRAINING",
+        "V3_T1_METHOD",
+        "V3_T2_METHOD",
+        "V3_T1_CONFIG",
+        "V3_T2_CONFIG",
+        "V3_FOLLOWUP_COMPLETE",
+        "V3_FOLLOWUP_MISSING",
+        "V3_FOLLOWUP_RESUME",
+        "V3_HELDOUT",
+        "V3_HELDOUT_CURVE",
+        "V3_I1_REPORT"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/README.md",
+          "relative_path": "v031_followup_20260918/reports/README.md",
+          "sha256": "688f919c4c15d736ad9155fdbe0ba6191707ed9788b403d4c08c79573eeec2e8",
+          "bytes": 3964
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/TRAINING_REPORT.md",
+          "relative_path": "v031_followup_20260918/reports/TRAINING_REPORT.md",
+          "sha256": "c8c757ca54fcb66e32c94c13aca2c37aaa0348368165d52b7db9d0f1ada8ad07",
+          "bytes": 1315
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/shared/authority/01_T1_DIRECT.md",
+          "relative_path": "v031_followup_20260918/shared/authority/01_T1_DIRECT.md",
+          "sha256": "f16bfa0e0afd3a1ae351f25ae21fd90bdc01cd85ea66aea04f14083c142d2a0c",
+          "bytes": 5521
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/shared/authority/02_T2_FEEDBACK_R.md",
+          "relative_path": "v031_followup_20260918/shared/authority/02_T2_FEEDBACK_R.md",
+          "sha256": "63fe8bcc0dd0788cf82760f572e9c62ecbaea07ea187e32cac9f1b3cbc54373d",
+          "bytes": 5725
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/configs/T1_DIRECT_formal.json",
+          "relative_path": "v031_followup_20260918/configs/T1_DIRECT_formal.json",
+          "sha256": "6bd86e78609069bc7589b39ee4a6313eacaca40fd480274396e8c57067274a0b",
+          "bytes": 9088
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/configs/T2_FEEDBACK_R_formal.json",
+          "relative_path": "v031_followup_20260918/configs/T2_FEEDBACK_R_formal.json",
+          "sha256": "73f1b4bdec8b4a3db3f0bd898f06b05914cb925129f91b48d3d09612bf9b84ff",
+          "bytes": 9096
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/COMPLETION.json",
+          "relative_path": "v031_followup_20260918/reports/COMPLETION.json",
+          "sha256": "8d10a4916ad0af2383a63e45cfcc06ab29d10c197bb6f4d15fda7c6f2bc72cf2",
+          "bytes": 1117
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/MISSINGNESS.json",
+          "relative_path": "v031_followup_20260918/reports/MISSINGNESS.json",
+          "sha256": "93921cdcb8ea91fdbb7751eff5ccb384b69f60034eef8fa9a0e216ddd7c18204",
+          "bytes": 484
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/CHECKPOINT_AND_RESUME.md",
+          "relative_path": "v031_followup_20260918/reports/CHECKPOINT_AND_RESUME.md",
+          "sha256": "70529152b002c2c1ef9ae886c599ae2ddd8174c8f2bcdd28913ce57d53658daa",
+          "bytes": 1566
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/HELDOUT_SUMMARY.json",
+          "relative_path": "v031_followup_20260918/reports/HELDOUT_SUMMARY.json",
+          "sha256": "2850308b82fb3ae20e0ea89388447c1abdbc65b6201012ccc04efacc36407d93",
+          "bytes": 951638
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/heldout_curve_20260919_2138/delivery/REPORT.md",
+          "relative_path": "v031_followup_20260918/reports/heldout_curve_20260919_2138/delivery/REPORT.md",
+          "sha256": "238addf01f872f45e1dafae8b5c023f4e5711d2730b7d830cffcd2b13d038698",
+          "bytes": 7001
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/v031_followup_20260918/reports/I1_REPORT.md",
+          "relative_path": "v031_followup_20260918/reports/I1_REPORT.md",
+          "sha256": "b77e00b3ed8069c354d3b939f2a51d46ba5e524b1a7147cb308c80da21369468",
+          "bytes": 3314
+        }
+      ],
+      "remote_asset_references": [
+        {
+          "path": "/data2/yanglin/v031_followup_20260918/T1_DIRECT/formal/checkpoint_001000.pt",
+          "historically_recorded_sha256": "46cf6879e587089d645c8de767b128d48d585cb981bb6f0551c28808f9d7d7ff",
+          "role": "CompleteT1RAW/noEMA U1000",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        },
+        {
+          "path": "/data2/yanglin/v031_followup_20260918/T2_FEEDBACK_R/formal/checkpoint_001000.pt",
+          "historically_recorded_sha256": "80cbb6bd56d7c941395a833a56c9389fe1943d712110b495f65c4e6d0d4cae59",
+          "role": "CompleteT2RAW/noEMA U1000",
+          "payload_rehashed_this_review": false,
+          "remote_existence_checked_this_review": false
+        }
+      ],
+      "unresolved_or_unverified": [
+        "One training seed only; equalupdates/exposures are not equalcompute",
+        "T1 changes xi branch and LRloss etc, not single-factor ablation",
+        "No source-scaling causal test",
+        "Repeatedheldout diagnostic set cannot be freshfinaltest after tuning"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    },
+    {
+      "name": "geometric correction sidebranch, historical v0.3",
+      "period": "2026-09-08audit,09-09earlymorning computationcomplete",
+      "purpose": "Test whether actual geometric correction state training is necessary beyond scalar/decoupled/generic controls",
+      "method": "4arms scalar/decoupled/genericRMS/actual, common22.53Mclean branch/currentstate+originalY+frozenC0 knownG/alpha; full256simulation and128crop MSE/AdamW/BF16 training,2fixedrandomorders each5000",
+      "actual_historical_execution_boundary": "8models each5000updates/40000total; complete validation;Gate1FAIL/Gate2notrun;testrestorationscoresunused;1.7451596NPUcardhours",
+      "dataset": {
+        "train_sources": 512,
+        "val_sources": 128,
+        "reserved_test_sources": 128,
+        "realizations_per_source": 2,
+        "excluded_old_diagnostic_sources": 129,
+        "train_instances": 2048,
+        "val_instances": 768,
+        "primary_G": [
+          2.25,
+          4.5
+        ],
+        "statistical_unit": "128originalsources after averaging2xi and2G;10000pairedsourcebootstrap"
+      },
+      "quality_results": [
+        {
+          "scope": "ActualT(Y) versusdecoupledT(Y),twofixedseeds",
+          "psnr_delta": [
+            -0.0392,
+            -0.0305
+          ],
+          "ci95": [
+            [
+              -0.0755,
+              -0.0017
+            ],
+            [
+              -0.0658,
+              0.0035
+            ]
+          ],
+          "gate": "FAIL"
+        },
+        {
+          "scope": "ActualT(Y) versus genericT(Y)",
+          "psnr_delta": [
+            0.0518,
+            0.0572
+          ],
+          "required_minimum_each_seed": 0.1
+        },
+        {
+          "scope": "ActualT(Y) versus frozenC0,primaryGmacro/128sources",
+          "psnr_delta": [
+            0.0122,
+            0.026
+          ],
+          "ci95": [
+            [
+              -0.0258,
+              0.0471
+            ],
+            [
+              -0.0115,
+              0.0605
+            ]
+          ],
+          "ssim_delta": [
+            -0.00129,
+            -0.00317
+          ]
+        },
+        {
+          "scope": "PerG2.25/G4.5 rawPSNR",
+          "frozen_C0": [
+            22.7625,
+            20.6289
+          ],
+          "actual_seed1": [
+            22.6279,
+            20.7879
+          ],
+          "actual_seed2": [
+            22.6304,
+            20.813
+          ]
+        }
+      ],
+      "entry_and_evidence_ids": [
+        "GEOMETRY_PROTOCOL",
+        "GEOMETRY_REPORT",
+        "GEOMETRY_STATUS",
+        "GEOMETRY_GATE",
+        "GEOMETRY_QA"
+      ],
+      "sources": [
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/PROTOCOL.md",
+          "relative_path": "analysis/v03_validation_20260909/PROTOCOL.md",
+          "sha256": "d04e74a274b841997918ad7fa2c7f377584cbaa6e36161641a04111e167e4bcb",
+          "bytes": 5962
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/REPORT.md",
+          "relative_path": "analysis/v03_validation_20260909/REPORT.md",
+          "sha256": "e53e188fe6c5f95c25a1efb775acf2d81ae5b6c58d920758e29b6143ac45a402",
+          "bytes": 15234
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/FINAL_STATUS.json",
+          "relative_path": "analysis/v03_validation_20260909/FINAL_STATUS.json",
+          "sha256": "cc7936f77cb449f6339bb8b6cced8a68a8cc29e787b9b1e7452721228544deff",
+          "bytes": 2874
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/evidence/stage1_analysis.json",
+          "relative_path": "analysis/v03_validation_20260909/evidence/stage1_analysis.json",
+          "sha256": "74232f19eb5a7a57e24777d1263a698d3efb5aa4fa86c9076864fa3da18fa908",
+          "bytes": 50994
+        },
+        {
+          "absolute_path": "/Users/lucas/Desktop/turbulence IR/analysis/v03_validation_20260909/FINAL_QA.json",
+          "relative_path": "analysis/v03_validation_20260909/FINAL_QA.json",
+          "sha256": "b8e25bbda8ee4ef02b7ba9e2a0a59f6a5ad2a3825bc8e5a7657011b6b99d47ad",
+          "bytes": 749
+        }
+      ],
+      "remote_asset_references": [],
+      "unresolved_or_unverified": [
+        "Not teacherrecursivev2, cannot transfer Gate1 conclusion to it",
+        "Firstseedcompletecode snapshots not frozen foreachscriptrevision;seed2hascode_snapshots",
+        "Gate0fixedxi scalarprobe does not prove allphysicaloperatorsnonclosure",
+        "Blindrealworld/multiseedpretraining/oraclebenefitsnotestablished",
+        "Remote8checkpoints not reinspected"
+      ],
+      "status_scope": "historical archive; no present remote status inferred"
+    }
+  ],
+  "sidebranch_index": [
+    {
+      "name": "old v02_src superseded implementation",
+      "paths": [
+        "v02_src/docs/AUTHORITY.md",
+        "v02_src/configs/train_v02.yaml"
+      ],
+      "source_ids": [
+        "V15_LEGACY_AUTHORITY",
+        "V15_LEGACY_CONFIG"
+      ],
+      "boundary": "Do not import budget/loss/status into20260829newprotocol"
+    },
+    {
+      "name": "v2 gradient smoke/engineering acceptance",
+      "paths": [
+        "v03_recursive_from_scratch_20260915/README.md"
+      ],
+      "source_ids": [
+        "V2_README"
+      ],
+      "boundary": "Remoteattempt3 reference only, not formalrestoration quality"
+    },
+    {
+      "name": "v3 backward/FD/tilt/JIT/BF16diagnostics",
+      "paths": [
+        "v031_overfit100_g4321_n4/docs/NPU_BACKWARD_DIAGNOSIS.md",
+        "v031_overfit100_g4321_n4/artifacts/V031_IMPLEMENTATION_REPORT.md"
+      ],
+      "source_ids": [
+        "V3_STAGE1_REPORT"
+      ],
+      "boundary": "Retain failedmeasurements; productionmethods unchanged"
+    },
+    {
+      "name": "v3 checkpoint/HCCL/evaluation infrastructure",
+      "paths": [
+        "v031_overfit100_g4321_n4/artifacts/STAGE2_RESUME_DIAGNOSIS.md",
+        "v031_overfit100_g4321_n4/docs/STAGE2_HCCL_TIMEOUT_REPAIR.md",
+        "v031_overfit100_g4321_n4/artifacts/evaluation_sharded_4card/"
+      ],
+      "source_ids": [
+        "V3_FINAL_STATUS",
+        "V3_U1000_STATE"
+      ],
+      "boundary": "Infrastructure replay details indexed, not fresh currentresource verification"
+    },
+    {
+      "name": "v3 gradient balance/xi refinementforensic",
+      "paths": [
+        "v031_overfit100_g4321_n4/artifacts/gradient_balance_update900_20260917_cpu02/REPORT.md",
+        "v031_overfit100_g4321_n4/artifacts/refinement_forensic_20260918/FINAL_REPORT_ZH.md"
+      ],
+      "source_ids": [
+        "V3_REFINEMENT_FORENSIC"
+      ],
+      "boundary": "Networktheta traininggradients differ from xirefinementgradients"
+    },
+    {
+      "name": "v3 late report/array/losscurve supplements",
+      "paths": [
+        "v031_followup_20260918/reports/array_supplement_20260919/",
+        "v031_followup_20260918/reports/loss_curves_20260920/",
+        "v031_followup_20260918/reports/heldout_curve_20260919_2138/delivery/REPORT.md"
+      ],
+      "source_ids": [
+        "V3_HELDOUT_CURVE"
+      ],
+      "boundary": "Posthoc savedresult/oldcheckpointanalysis, not retraining"
+    },
+    {
+      "name": "geometric literature and proposednextprotocol",
+      "paths": [
+        "analysis/v03_validation_20260909/LITERATURE_UPDATE.md",
+        "analysis/v03_validation_20260909/REPORT.md"
+      ],
+      "source_ids": [
+        "GEOMETRY_REPORT"
+      ],
+      "boundary": "Proposals not executed; bibliography not rechecked live"
+    }
+  ],
+  "global_limits": [
+    "Localhistorical review only; no SSH/network/model/optimizer, noassetcleanup or mutation",
+    "A reported historicalcheckpointSHA is not a freshpayloadhash or promise it remains atserverpath",
+    "EarlyREADME/plan language is superseded by datedfinalstatus/report for execution facts",
+    "Version/source split, knownG, weighttype, sampler/refinement/Ksemantics and perpopulation must accompany metrics",
+    "Legacyexperimental resume commands are archival capability descriptions, no new execution authority",
+    "CurrentUniDBcampaign finalvalidation/backup/process exit/wholehandoff remainsroot responsibility"
+  ],
+  "document": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/legacy_v1_v3.md",
+    "sha256": "2722fc961eefaa694b4c0ff107c30f68f27c5587757f40c7bce9829206654e30"
+  },
+  "quality_review": {
+    "status": "PASS",
+    "source_SHA_files_checked": 66,
+    "stage_required_fields_checked": 8,
+    "source_citation_ids_resolve": true,
+    "source_files_unchanged_since_collection": true,
+    "no_placeholder_sections": true,
+    "numeric_results_reused_from_archived_evidence_not_model_recomputed": true,
+    "scope": "Document/source traceability check only, not present remote asset acceptance"
+  }
+}

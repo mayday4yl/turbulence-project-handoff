@@ -1,0 +1,38 @@
+version: train_v01
+master_seed: 20260826
+dataset_root: /data2/yanglin/physical_bridge/data/places_p2s_bridge_v01
+run_root: /data2/yanglin/physical_bridge/runs
+model:
+  base_channels: 64
+  channel_multipliers: [1, 2, 4, 4, 4]
+  residual_blocks_per_level: 2
+  group_norm_groups: 32
+  severity_embedding_dim: 256
+  clean_activation: sigmoid
+  realization_activation: linear
+training:
+  maximum_updates: 30000
+  minimum_updates: 15000
+  effective_batch_size: 16
+  optimizer: AdamW
+  learning_rate: 1.0e-4
+  betas: [0.9, 0.99]
+  weight_decay: 1.0e-4
+  warmup_updates: 1000
+  final_learning_rate: 1.0e-6
+  gradient_clip: 1.0
+  ema: 0.999
+  network_precision: bfloat16
+  simulator_precision: float32
+  checkpoint_interval: 1000
+  full_validation_interval: 2000
+  num_workers_per_rank: 2
+  prefetch_factor: 2
+  lambda_clean: 1.0
+  lambda_degradation_final: 0.1
+  degradation_zero_until: 3000
+  degradation_ramp_until: 5000
+  early_stop_patience_updates: 8000
+  early_stop_min_delta_db: 0.05
+  extension_updates: 60000
+

@@ -1,0 +1,105 @@
+{
+  "schema": "all_campaign_owned_process_exit_v1",
+  "scope": "all_campaign_owned_process_exit_v1",
+  "status": "PASS",
+  "final": true,
+  "created_unix": 1793729359.404941,
+  "network_calls": 0,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "checkpoint_payload_reads": 0,
+  "campaign_roots": [
+    "unidb_dual_20261103_until_noon",
+    "unidb_dual_20261103_until18",
+    "unidb_dual_20261104_until00"
+  ],
+  "all_owned_exited": true,
+  "live_owned_actors": [],
+  "external_signals_sent": 0,
+  "checked_unix": 1793729426.1490653,
+  "remote_OS_audit_unix": 1793729031.890204,
+  "identity_count": 534,
+  "identity_coverage_checks": {
+    "unidb_dual_20261103_until_noon:CONTROLLER": true,
+    "unidb_dual_20261103_until_noon:CPU_FINALIZER": true,
+    "unidb_dual_20261103_until_noon:original:rank0": true,
+    "unidb_dual_20261103_until_noon:original:rank1": true,
+    "unidb_dual_20261103_until_noon:original:rank2": true,
+    "unidb_dual_20261103_until_noon:improved:rank0": true,
+    "unidb_dual_20261103_until_noon:improved:rank1": true,
+    "unidb_dual_20261103_until_noon:improved:rank2": true,
+    "unidb_dual_20261103_until_noon:improved:rank3": true,
+    "unidb_dual_20261103_until_noon:improved:rank4": true,
+    "unidb_dual_20261103_until_noon:historical_groups": true,
+    "unidb_dual_20261103_until18:CONTROLLER": true,
+    "unidb_dual_20261103_until18:CPU_FINALIZER": true,
+    "unidb_dual_20261103_until18:original:rank0": true,
+    "unidb_dual_20261103_until18:original:rank1": true,
+    "unidb_dual_20261103_until18:original:rank2": true,
+    "unidb_dual_20261103_until18:improved:rank0": true,
+    "unidb_dual_20261103_until18:improved:rank1": true,
+    "unidb_dual_20261103_until18:improved:rank2": true,
+    "unidb_dual_20261103_until18:improved:rank3": true,
+    "unidb_dual_20261103_until18:improved:rank4": true,
+    "unidb_dual_20261103_until18:owned_groups": true,
+    "unidb_dual_20261104_until00:CONTROLLER": true,
+    "unidb_dual_20261104_until00:CPU_FINALIZER": true,
+    "unidb_dual_20261104_until00:original:rank0": true,
+    "unidb_dual_20261104_until00:original:rank1": true,
+    "unidb_dual_20261104_until00:original:rank2": true,
+    "unidb_dual_20261104_until00:improved:rank0": true,
+    "unidb_dual_20261104_until00:improved:rank1": true,
+    "unidb_dual_20261104_until00:improved:rank2": true,
+    "unidb_dual_20261104_until00:improved:rank3": true,
+    "unidb_dual_20261104_until00:improved:rank4": true,
+    "unidb_dual_20261104_until00:owned_groups": true,
+    "current_helper:evidence/ACTIVE_HANDOFF_COORDINATOR.json": true,
+    "current_helper:evidence/ACTIVE_STARTUP_AUDIT.json": true,
+    "current_helper:briefing_20261103_1900/ACTIVE_COLLECTOR.json": true,
+    "noon_midpoint_CPU_auditor": true
+  },
+  "local_transfer_processes_checked": [
+    54754,
+    54756,
+    54759,
+    54761,
+    20812,
+    20815,
+    20949,
+    20951
+  ],
+  "scope_note": "Native three-root final audit checked468 recorded identities at02:03:51. A separate02:10:26 read-only audit checked66 additional earlier loader/resource_tracker PID/start/PGID/SID identities: allgone, none reused as same identity or unexplained alive. The source-union coverage is534; this does not rewrite native count468. Recorded local copy runner/rsync IDs were independently absent. No external task signalled; drivercontext2938958 is not an OSidentity assertion.",
+  "evidence_bindings": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/ALL_OWNED_PROCESS_EXIT_AUDIT.json",
+      "sha256": "e1817f0e9752d9ae31fc2fc0c66a8a4b6ee68834ad126d0105e0303b252122e8"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/LOCAL_TRANSFER_PROCESS_EXIT.json",
+      "sha256": "e2c5fc6862d52423686d5e311ea5e019d8712302941d08d1d0449382391da7d9"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+      "sha256": "a471f18c89d7c794159bf94f9bd3506290c1a69c076cf217e9ed935259076585"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CONTROLLER_EXIT.json",
+      "sha256": "323cf71f801097b87e67e17cf406d192ee4812a94a614775149f376f06273853"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/OWNED_EXIT_PRECHECK_20261104_0112.json",
+      "sha256": "55aa079a5382324b4960e9636eef1769bf9b1b258d756e6e1bad3fdd4b6ac25c"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+      "sha256": "df2acaf91cd7ab5851616f5185d4d33984dfb0c5eb53e03a0f48ed73bdb313e2"
+    }
+  ],
+  "native_audit_identity_count": 468,
+  "additional_historical_exact_identity_count": 66,
+  "historical_union_identity_count": 534,
+  "historical_reconciliation_unix": 1793729426.1490653,
+  "historical_reconciliation_status": "PASS_HISTORICAL_IDENTITY_UNION_EXIT",
+  "historical_identity_set_difference_verified": true,
+  "revision_unix": 1793729493.3281941
+}

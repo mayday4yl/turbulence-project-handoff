@@ -1,0 +1,52 @@
+{
+  "status": "PASS_FROZEN_SOURCE_IDENTITIES_AND_POPULATION",
+  "source_complete": {
+    "status": "PASS",
+    "source_freeze_sha256": "bfdf6051964a028f11b0d1ff0c4834a4866b6cce7bab1cd652fe92b305f8567d",
+    "new_sources": 7000,
+    "time": 1791996907.7434382
+  },
+  "freeze": {
+    "dataset_id": "places_lsdir_p2s_canonical_20261013_p7500_l7500_v1000_t200_g4321_v2",
+    "old_dataset": "places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+    "old_source_sha256": "de6446663fc38e0e447cadaa7bf5c27d2d08018fb968071d5d6db195e4035037",
+    "source_manifest_sha256": "baabaf15a6cdb39022f99e7ccc9979b16afa5529877b5dbca8aedc40b3333209",
+    "trajectory_plan_sha256": "35984d538b646d4f8f0ffe633e43ba1843e2b34ff52e3330e352796c94984787",
+    "new_sources_sha256": "aecf2583db3473e3a790fce716f721f2cb706f26af8325d4c2475b4fbd902371",
+    "train_sources": 15000,
+    "val_sources": 1000,
+    "locked_test_sources": 200,
+    "train_starts": 240000,
+    "old_arrays_reused_exactly": true,
+    "new_raw_xi_policy": "CPU seed+hash+version+small golden examples, no full xi archive",
+    "source_selection_seed": 20261013,
+    "Test_inference": false
+  },
+  "population": {
+    "('Places365', 'train')": 7500,
+    "('Places365', 'val')": 500,
+    "('Places365', 'test')": 200,
+    "('LSDIR', 'train')": 7500,
+    "('LSDIR', 'val')": 500
+  },
+  "new_source_count": 7000,
+  "source_audit_receipt": {
+    "status": "PASS",
+    "scope": "all old Train8000/Val1000/lockedTest200 plus new7000, both domains",
+    "rejections": [
+      {
+        "domain": "Places365",
+        "member": "a/airplane_cabin/00001969.jpg",
+        "reason": "joint_phash4_dhash4_duplicate"
+      }
+    ],
+    "all_original_sha_unique": true,
+    "all_clean_pixel_unique": true,
+    "source_ids_and_paths_unique": true,
+    "remaining_joint_phash4_dhash4_pairs": 0,
+    "heuristic_not_semantic_uniqueness_proof": true
+  },
+  "scope": "CPU metadata/SHA verification only; no repeated source image audit",
+  "server_time": 1791996991.8613904,
+  "local_equivalent_epoch": 1791996036.4438186
+}

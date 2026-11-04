@@ -1,0 +1,67 @@
+{
+  "schema": "diffuir_l_d0_pilot_v1",
+  "status": "FROZEN_BASELINE_GATES_PASSED",
+  "updates": 100,
+  "microbatch": 1,
+  "gradient_accumulate_every": 2,
+  "lr": 8e-05,
+  "adam_betas": [
+    0.9,
+    0.99
+  ],
+  "grad_clip_norm": 1.0,
+  "precision": "FP32",
+  "seed": 10,
+  "sampling_seed": 12345,
+  "eval_updates": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "checkpoint_updates": [
+    0,
+    50,
+    100
+  ],
+  "ema_beta": 0.995,
+  "ema_update_every": 10,
+  "selection_sha256": "e45d931949437ce4e714ba9ecd273762e9591394364b0a7cfe2bd306995d4b63",
+  "official_checkpoint_sha256": "b9d07ab6b32d37d895be65c50e99bbe6b2ae6e32823e7304ec2167bc5f18843f",
+  "source_commit": "c71437ce86ad1b098aa9be4678dc82e8b99649df",
+  "init_branch": "model",
+  "optimizer_state": "fresh Adam; not resume pretrained optimizer or diagnostic update",
+  "ema_initialization": "new EMA copied from official raw model, using pinned ema-pytorch defaults",
+  "training_schedule": "checkpoint-native official schedule buffers retained; endpoint delta=0.0018 verified",
+  "inference_schedule": "official init before evaluation, three steps, eta0, sum_scale0.01",
+  "training_loss": "unchanged official forward([Clean,Y4,[blur]]) normalized residual L1",
+  "data_adapter": "original FP32 NPY RGB256; no clamp, resize, PNG quantization, or augmentation",
+  "data_root": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+  "physical_g": 4,
+  "train_sources": 100,
+  "train_pairs": 400,
+  "val_sources": 50,
+  "val_pairs": 50,
+  "test_used": false,
+  "xi_head": false,
+  "physical_time_modulation": false,
+  "new_condition_module": false,
+  "official_training_differences": [
+    "turbulence-only paired subset instead of five-task batch",
+    "micro1 accumulate2 effective2 instead of micro10 effective20",
+    "100 updates instead of 300000",
+    "NPY input adapter without original JPEG/PNG loader and augmentation",
+    "fresh optimizer and EMA for new finetune, no scheduler"
+  ],
+  "stop_on": [
+    "nonfinite loss",
+    "nonfinite gradients",
+    "nonfinite parameters",
+    "device operator error",
+    "100 optimizer updates"
+  ],
+  "scope": "bounded training feasibility pilot; not full D0, full Val1000 or four-step physical recursion",
+  "frozen": true,
+  "run_dir": "runs/d0_pilot_100u"
+}

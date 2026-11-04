@@ -1,0 +1,98 @@
+{
+  "schema": "handoff_final_content_refresh_v1",
+  "scope": "handoff_final_content_refresh_v1",
+  "status": "PASS",
+  "final": true,
+  "identities": {
+    "original:latest": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "original:best": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "improved:latest": {
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+    },
+    "improved:best": {
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+    }
+  },
+  "created_UTC": "2026-11-03T18:15:37.172958+00:00",
+  "current_unidb_history": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/unidb_history.md",
+    "bytes": 15066,
+    "sha256": "48542b7a6c5582857ad41acea206c71d1555abe65ef9e7e6d9cc8edd2e4d4ae6"
+  },
+  "current_unidb_evidence": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/unidb_evidence.json",
+    "bytes": 35576,
+    "sha256": "8ae509a88a9758cfc744ee39b10539a3e3d69c7391ce821e1083e01ea7b7b07e"
+  },
+  "current_handoff_state": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/UNIDB_FINAL_HANDOFF_STATE.json",
+    "bytes": 2072,
+    "sha256": "c7eb38466ab34c02dc1ea24d9775375d3b8fbebcfae6efc8a23b2aa0569a1168"
+  },
+  "consolidation_acceptance": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/CONSOLIDATION_ACCEPTANCE.json",
+    "bytes": 53774,
+    "sha256": "4a67bb49d6ae3c7dbf1ad80a9d0077a6bf9bfdb458da5f215891074a977279da"
+  },
+  "registers": {
+    "VERSION_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/VERSION_REGISTER.csv",
+      "bytes": 15151,
+      "sha256": "03e01e3f07ff35101855b74ca43959f5675267c5216d05c8aae6dacf54c15423"
+    },
+    "EXPERIMENT_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/EXPERIMENT_REGISTER.csv",
+      "bytes": 534942,
+      "sha256": "17cc4275a6b25f47b7adb1e84b8e9ada8a52d3417d856046d226416e4655660b"
+    },
+    "DATA_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/DATA_REGISTER.csv",
+      "bytes": 31736,
+      "sha256": "56846fd3a6886df7e52050222808601fc508d33310547b065a6e450561dc15f6"
+    },
+    "CODE_ENV_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/CODE_ENV_REGISTER.csv",
+      "bytes": 34569,
+      "sha256": "74d45d6fcfb4da4bc5f640cc778dbe293c9223ff04b6fb97f6e5062aaefe3bb4"
+    },
+    "WEIGHT_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/WEIGHT_REGISTER.csv",
+      "bytes": 38947,
+      "sha256": "412a3b047d4b95b2f6db1f17f72035006592bbcdf18206e1ff9fa5257fdfee86"
+    },
+    "ASSET_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/ASSET_REGISTER.csv",
+      "bytes": 59280,
+      "sha256": "3363073e84d358d08ed93f19aa88973d3deedeecfbd476e9031c7ec46d24be5c"
+    },
+    "EVIDENCE_REGISTER.csv": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/EVIDENCE_REGISTER.csv",
+      "bytes": 380468,
+      "sha256": "2a2a748b86f3ea5860d85b3a67660069078df462ff685c5e90a48052cb0c09c9"
+    }
+  },
+  "curated_experiment_fields": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/curated_experiment_fields.json",
+    "bytes": 320798,
+    "sha256": "a6c921dd5a842176970a7c23245818b161c699b5b97700cf0b599573a8f940f1"
+  },
+  "asset_final_refresh": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/FINAL_UNIDB_ASSET_REFRESH.json",
+    "bytes": 1185,
+    "sha256": "10b478a626cdf20728753cd2ebb0e6e945dae4f40c1678af09a5acbfe19722c7"
+  },
+  "scientific_scope": "Actual UniDB experiment final validation, byte-backed states and owned exits. Not a claim of strong-turbulence recovery/generalization success.",
+  "overall_project_handoff_complete": false,
+  "chat_delivery_performed": false,
+  "network_calls": 0,
+  "model_calls": 0,
+  "checkpoint_payload_reads": 0
+}

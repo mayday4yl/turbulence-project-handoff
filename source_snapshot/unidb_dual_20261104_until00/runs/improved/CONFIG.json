@@ -1,0 +1,96 @@
+{
+  "branch": "improved",
+  "phase": "formal",
+  "physical_world_size": 5,
+  "logical_world_size": null,
+  "effective_batch": 96,
+  "data_seed": 843101,
+  "rng_seed": 843101,
+  "precision": "FP32_HF32off",
+  "objective": "epsilon_opt_MSE",
+  "gamma_inv": 1e-07,
+  "T": 100,
+  "dummy_mode": null,
+  "physical_micro_layout": [
+    [
+      {
+        "lid": null,
+        "offset": 0,
+        "n": 10
+      },
+      {
+        "lid": null,
+        "offset": 10,
+        "n": 10
+      }
+    ],
+    [
+      {
+        "lid": null,
+        "offset": 20,
+        "n": 10
+      },
+      {
+        "lid": null,
+        "offset": 30,
+        "n": 9
+      }
+    ],
+    [
+      {
+        "lid": null,
+        "offset": 39,
+        "n": 10
+      },
+      {
+        "lid": null,
+        "offset": 49,
+        "n": 9
+      }
+    ],
+    [
+      {
+        "lid": null,
+        "offset": 58,
+        "n": 10
+      },
+      {
+        "lid": null,
+        "offset": 68,
+        "n": 9
+      }
+    ],
+    [
+      {
+        "lid": null,
+        "offset": 77,
+        "n": 10
+      },
+      {
+        "lid": null,
+        "offset": 87,
+        "n": 9
+      }
+    ]
+  ],
+  "gradient_clip": 1.0,
+  "Adam_betas": [
+    0.9,
+    0.99
+  ],
+  "Adam_eps": 1e-08,
+  "weight_decay": 0.0,
+  "EMA_beta": 0.995,
+  "EMA_update_every": 10,
+  "deadline_unix": 1793721600,
+  "schedule_deadline_unix": 1793678400,
+  "extension_lr": 2e-07,
+  "startup_monitor": false,
+  "source_identity": {
+    "original_sources_checked": true,
+    "new_manifests": {
+      "protocol/RUN_SOURCE.json": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a"
+    },
+    "authority_sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22"
+  }
+}

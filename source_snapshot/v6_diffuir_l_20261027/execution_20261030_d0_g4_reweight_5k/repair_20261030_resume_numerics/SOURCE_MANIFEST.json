@@ -1,0 +1,8 @@
+{
+  "files": {
+    "scripts/audit_d0_g4_reweight_v2_20261030.py": "daefc0116af3895130836e8fba54bae0a3bc5517972a06bec90a14e7c99bf5ec",
+    "scripts/d0_g4_reweight_pipeline_v2_20261030.py": "5157d2b6ea809af074e4aeb75720186e028617eefdf79a10adf92f3bd22e7ba2",
+    "execution_20261030_d0_g4_reweight_5k/repair_20261030_resume_numerics/REPAIR_REPORT_ZH.md": "a23e5e7e34d615b0b4c1a6b37d18a49cfe150574a95cd6008ae151609900aaa2",
+    "scripts/audit_ddp_resume.py": "5c519df228b8062105df9f357515645c9ba1bf77e60e91ad7cd0a103e9e06600"
+  }
+}

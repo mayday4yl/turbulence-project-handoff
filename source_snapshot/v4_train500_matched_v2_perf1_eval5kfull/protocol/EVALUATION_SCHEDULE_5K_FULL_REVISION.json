@@ -1,0 +1,34 @@
+{
+  "revision": "eval5k_full_RAW_v3",
+  "authority": "Explicit user request in this thread",
+  "changed": {
+    "5000": [
+      "train8000",
+      "val800"
+    ]
+  },
+  "unchanged": {
+    "7500": [
+      "train_monitor400",
+      "val800"
+    ],
+    "10000": [
+      "train8000",
+      "val800"
+    ],
+    "default_EMA_evaluation": false,
+    "EMA_updates_and_checkpoint": true,
+    "refinement_auxiliary": [
+      "R0",
+      "R08"
+    ],
+    "automatic_continue_after5000": true
+  },
+  "max_updates_per_group": 10000,
+  "scientific_changes": false,
+  "extra_wall_hours_estimate": [
+    0.4,
+    0.8
+  ],
+  "estimate_basis": "Prior per-arm evaluation timings;two-card parallel and per-card mutex;baseline/I-O uncertainty included"
+}

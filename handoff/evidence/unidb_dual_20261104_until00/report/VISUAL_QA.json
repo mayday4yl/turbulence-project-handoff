@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reviewer": "root",
+  "reviewed_unix": 1793727725.677584,
+  "figures": {
+    "CAMPAIGN_DYNAMICS.png": "745821cdf1cdae7a1b14eb5f1ccb2ac12ddc7772683727b49e63d463daef6d1d",
+    "FIXED_G4_BEST.png": "e09a9e52224e637d4058762d9a23debee33aa8441f3c71a928824ccdffe0a326",
+    "FIXED_G4_LATEST.png": "53451213b0987668d73006438f38a99aa7e649877e080a0c9e1e6977f41273a9"
+  },
+  "figure_manifest_sha256": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa",
+  "actual_images_opened_individually": true,
+  "checks": [
+    "Viewed both fixed source rows and all six columns of best and latest images; actual original U67180 in both, improved U10000 best and U40848 latest.",
+    "Viewed all eight dynamics panels, extension markers, different loss units, monitor100 versus full1000 markers and matched-monitor baselines.",
+    "Labels, source identities and visible data correspond to final report; no fabricated missing predictions or reused stage QA.",
+    "Visible sharpening/distortion and improved-route noise are retained; fixed samples do not establish generalization or recovery success."
+  ],
+  "new_restoration_model_calls": 0,
+  "optimizer_updates": 0
+}

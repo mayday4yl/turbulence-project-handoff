@@ -1,0 +1,36 @@
+{
+  "schema": "turbulence_project_handoff_v1",
+  "requested_local_date": "2026-11-03",
+  "user_quote": "训练完过后，从头到尾整理整个湍流项目，我不干了，搞一个交接的",
+  "status": "PREPARING_HISTORY_PENDING_CURRENT_CAMPAIGN_FINAL_ACCEPTANCE",
+  "scope": "Whole turbulence restoration project, not only the current UniDB experiment",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "current_campaign": "unidb_dual_20261104_until00",
+  "training_deadline_local": "2026-11-04T00:00:00+08:00",
+  "training_deadline_unix": 1793721600,
+  "training_authority_unchanged": true,
+  "new_experiments_authorized": false,
+  "historical_asset_deletion_or_renaming_authorized": false,
+  "external_process_changes_authorized": false,
+  "sharing_with_other_people_authorized": false,
+  "delivery_language": "zh-CN",
+  "planned_deliverables": [
+    "Chinese editable handover document and PDF",
+    "README entrypoint and chronological method/experiment map",
+    "CSV registries for experiments, datasets, code, environments, checkpoints and evidence",
+    "Reproduction and operations guide with prerequisites and historical versus current status",
+    "Latest accepted UniDB final results, original-route global curves and G1-G4 fixed comparisons",
+    "Known limitations, unresolved questions, pending items and recipient acceptance checklist",
+    "Small portable delivery package and SHA256 manifest; large assets referenced rather than blindly copied"
+  ],
+  "completion_gates": [
+    "Current campaign fully saved, evaluated, CPU audited, visually reviewed, exited and locally delivered",
+    "Legacy versions and material side branches covered with dated source evidence or explicit gaps",
+    "Key asset paths and local portable links checked; remote checks timestamped and failures disclosed",
+    "Evidence distinguishes plans, gates, actual runs, quality findings and hypotheses",
+    "Final handover document rendered and reviewed, attachment and manifest checks passed",
+    "User receives the actual handover package in this chat"
+  ],
+  "automation_id": "unidb-3-5",
+  "automation_delete_only_after": "Both current campaign and whole-project handover are actually delivered"
+}

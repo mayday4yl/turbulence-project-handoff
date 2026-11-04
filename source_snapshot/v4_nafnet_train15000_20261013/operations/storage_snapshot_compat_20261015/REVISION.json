@@ -1,0 +1,15 @@
+{
+  "purpose": "CONSERVATIVE_ATOMIC_STORAGE_SNAPSHOT_CONTROL_COMPATIBILITY_V1",
+  "base_resource_revision_sha256": "982db814b2f3517efdcd210ef8b0692adeb52fe6a3f5571cd7ed23970360a7f3",
+  "multi_source_CPU_acceptance_sha256": "0226ae9210c5c2b31ff0854635870bc5398bdbae6da9eda4e89c25b708602941",
+  "canonical_reference_npz_sha256": "bab111fcb0e4ca7813e2712b2151102f2ca72376205195bbc3f730e50bfd4a28",
+  "CPU_RGB_acceptance_sha256": "c8773e5765164ac2309e01170113c8670a491cd6363e1bca9d75aeb2410dcea3",
+  "scope": "generation only: exact canonical CPU RNG and original canonical fixed renderer buffers; scientific sources/model/LR/precision/budget and fixed tolerances retained",
+  "training_CPU_GPU_math_unchanged": true,
+  "prior_failed_generation_history_preserved": true,
+  "deployment_status": "STAGED_NOT_RUNNING_GPU_RECOVERY_REQUIRES_DIRECT_AUTHORIZATION",
+  "numerical_canonical_revision_sha256": "2bbe3e4afa66dad71a14275a636a67b26c7abb5c8579301f55a29fd225bd4d9d",
+  "atomic_inflight_reserve_bytes": 8589934592,
+  "storage_limits_not_relaxed": true,
+  "same_canonical_BUILD_IDENTITY_preserved": true
+}

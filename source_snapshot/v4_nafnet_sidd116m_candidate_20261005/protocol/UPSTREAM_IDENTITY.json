@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/megvii-research/NAFNet",
+  "commit": "2b4af71ebe098a92a75910c233a3965a3e93ede4",
+  "configuration": "NAFNet-SIDD-width64",
+  "files": {
+    "basicsr/models/archs/NAFNet_arch.py": "01b22270cc93f1bb90c0e3e4490e98b023fcf73f8552860b4a9ee880ce5c6967",
+    "basicsr/models/archs/arch_util.py": "5a11af2e7c2d7a7b57c1fbd7e19cf0a50b4b4e8c7ae7dd203a915d7a707e7005",
+    "basicsr/models/archs/local_arch.py": "c4df2ba4d896442a0f6ec984accd6e68f31edce3afdf066add202c25a0d1af26",
+    "options/train/SIDD/NAFNet-width64.yml": "ffc6dd747eff87edadaeff47424532eede1b30d8c1e3a1f42ae9140787e0568f",
+    "options/test/SIDD/NAFNet-width64.yml": "a85618244545c62cf8b49ba7d3f7ba32f32fdcb0a4a0047689ae78c89435e139",
+    "LICENSE": "a29ecef3456149898f08e4c71b11b33e7d333664e087bc212e84e18ddd6599ad"
+  },
+  "downloaded_pretrained_weights": false
+}

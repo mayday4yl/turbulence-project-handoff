@@ -1,0 +1,64 @@
+DMAT 官方真实数据（ATD）下载验收 — 2026-10-29
+
+结果：DMAT 官方 README 的 Real dataset 所指 ATD 数据，全部 38 段原始 MP4 已下载。
+原始视频总大小：1,340,693,816 bytes（1.340693816 GB，十进制）。
+38/38 文件均匹配官方 ZIP 目录记录的精确大小及 CRC32；保存后重新核对 SHA256，全部一致。
+38/38 视频的 MP4 结构与视频采样表均可解析，38/38 可解码首帧。未逐帧解码全视频。
+视频采样表记录合计 18,075 帧；每段 118–1,054 帧，约 25 fps，时长 4.72–42.16 秒。
+原始视频获取阶段耗时：251.2 秒（不包括前置来源核查、元数据下载及后续验收）。
+
+官方来源：
+https://github.com/pui-nantheera/DMAT/blob/main/README.md
+其中 Real dataset → https://zenodo.org/records/13737763
+官方标题：Atmospheric Turbulence Dataset.（ATD）；2024-09-17，v1。
+官方元数据许可：CC BY 4.0。
+官方完整 ZIP 原名：20224_UoB_Turb_v1.0.zip（保留官方拼写）。
+完整 ZIP 标称大小：7,834,835,082 bytes；官方公布 MD5：4157c96e161928b0fd12089ad5de5d06。
+本轮没有完整保存该 ZIP，因此没有宣称验证整包 MD5。
+本轮通过标准 HTTP Range 获取全部 Originals/*.mp4，流式解压并严格匹配 ZIP 中的大小及 CRC32，另计算逐文件 SHA256。
+同时完整下载官方 README.txt 与 Heathaze_datasets_descriptions_2024.xlsx，两者均通过官方 MD5、精确大小及 ZIP 条目 CRC 核对。
+
+下载范围与区别：
+实际包内有 38 段原始 MP4，71 张 CLEAR1 处理结果 PNG，58 段 CLEAR2 处理结果 AVI，以及说明和附带的仓库元数据。
+CLEAR2 处理结果与附带元数据约 6.473 GB，因此本轮只保留全部原始视频与说明，未保存冗余 CLEAR 算法输出。
+一开始启动的完整包下载已停止，其不完整临时文件已清理；过程记录保留于 evidence/ACQUISITION_SCOPE.json 与 FULL_PACKAGE_* 日志。
+DMAT 的 Synthetic datasets 是另一个入口：https://zenodo.org/records/17673509
+该入口包含 COCO/GOT-10k 的 P2S 合成数据及模型权重；本轮仅保存其元信息，没有下载合成数据或权重。
+
+真实测试的适用范围：
+原始实拍内容包括道路、车辆、标志牌、建筑、风机等；38 段视频包含重复拍摄和空间裁剪，不能称为 38 个独立自然场景。
+实际公开包未提供逐帧 clean GT；CLEAR1/CLEAR2 是其他恢复算法的结果，不是 clean GT。
+可作为自然场景真实湍流的定性测试素材；不能直接计算常规 full-reference PSNR、SSIM、LPIPS 或 clean MAE。
+未定义正式选帧测试协议；尚未进行任何模型推理、质量排名或训练。
+
+实际像素分辨率：
+720×576：27 段；256×256：7 段；512×512：2 段；1920×1080：2 段。
+Tene_SD_001v2 的像素栅格为 720×576，像素纵横比 16:15，显示宽度为 768；初次检查误将显示宽度当作像素宽度，现已修正容器解析并通过，原视频没有变动。
+后续单帧推理应固定视频解码、颜色转换及 padding 规则，保留原始像素尺寸，不根据 GT 或输出质量调整。
+
+官方说明与实际归档的两点差异：
+1. README 描述 Original_Seqs/PNGs；实际 ZIP 为 Originals/*.mp4，没有原始 PNG 帧目录。reports/first_frames/ 中的 PNG 是本轮从 MP4 解码的第 0 帧，仅用于展示。
+2. 说明表主列表含 TF1_3_SD_Clip01，实际包对应集合中多出 TF1_2_SD_Clip02。未自行认定两者等同，也未重命名。所有清单使用实际 MP4 文件名。
+
+本地文件：
+data/ATD/Originals/：完整的 38 段原始 MP4。
+downloads/README.txt、downloads/Heathaze_datasets_descriptions_2024.xlsx：官方说明。
+reports/ORIGINAL_VIDEO_MANIFEST.csv：视频路径、大小、SHA256、原始 ZIP CRC、分辨率、帧采样数、时长、像素纵横比及说明表匹配状态。
+evidence/ORIGINAL_VIDEO_RECEIPTS.json：逐文件下载来源、归档字节范围、大小及校验结果。
+reports/OFFICIAL_PACKAGE_CONTENTS.csv：官方 ZIP 的完整目录清单，明确标注原始数据与 CLEAR 结果。
+reports/ATD_ORIGINAL_FIRST_FRAMES_PREVIEW.jpg：原始视频首帧拼图；只对预览缩放。
+reports/first_frames/：38 张解码首帧，未做恢复、锐化或色彩后处理。
+ORIGINAL_VIDEOS_SHA256SUMS：全部原始 MP4 的复现指纹。
+SHA256SUMS：本目录全部交付文件校验清单（不含该清单自身）。
+
+复现（项目根目录）：
+python3 dmat_audit_20261029/scripts/read_remote_directory.py
+python3 dmat_audit_20261029/scripts/download_originals.py
+python3 -m pip install --target /tmp/dmat_audit_deps imageio-ffmpeg==0.6.0 Pillow==11.3.0
+PYTHONPATH=/tmp/dmat_audit_deps python3 -B dmat_audit_20261029/scripts/audit_originals.py
+
+离线校验：
+cd dmat_audit_20261029
+shasum -a 256 -c ORIGINAL_VIDEOS_SHA256SUMS
+
+仅使用本地网络、磁盘及 CPU。未连接训练服务器，未占用 NPU/GPU，未加载模型，未修改 D0。

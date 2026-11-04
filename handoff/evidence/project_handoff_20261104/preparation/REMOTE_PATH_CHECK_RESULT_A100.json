@@ -1,0 +1,19 @@
+{
+  "status": "METADATA_ONLY",
+  "captured_UTC": "2026-11-03T16:38:58.607453+00:00",
+  "plan_sha256": "c9ad7006d75a9dcaec1827953cf073b130bd5c451e7d469674f967a04bfeffff",
+  "results": [
+    {
+      "host": "h3c-gpu-server01",
+      "status": "NOT_VERIFIED_CONNECTION_FAILED",
+      "exit_code": 255,
+      "error": "ssh: connect to host 10.94.2.1 port 22: Operation timed out",
+      "requested_count": 5
+    }
+  ],
+  "no_recursive_traversal": true,
+  "no_payload_read": true,
+  "no_model_calls": true,
+  "no_signals_or_mutations": true,
+  "not_content_or_runtime_acceptance": true
+}

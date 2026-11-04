@@ -1,0 +1,579 @@
+{
+  "status": "FINAL_EXPERIMENT_SOURCES_VERIFIED",
+  "created_unix": 1793722034.4850318,
+  "scope": "UniDB D0, completed forensic audit and noon/18/midnight dual-route lineage",
+  "document": "unidb_history.md",
+  "document_sha256": "48542b7a6c5582857ad41acea206c71d1555abe65ef9e7e6d9cc8edd2e4d4ae6",
+  "sources": [
+    {
+      "path": "EXPERIMENT_INDEX.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/EXPERIMENT_INDEX.md",
+      "bytes": 51886,
+      "sha256": "b069b571b5ec32256196febcb51898343e64619d0e9ceaee34d5ea662c82c1ca",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/UNIDB_LIVE_METADATA_1793721811.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/UNIDB_LIVE_METADATA_1793721811.json",
+      "bytes": 7148,
+      "sha256": "5c81e5d70f7efe27d50053c3f7d3bd8ea44ce3b1d05f3c0fde3fc4832fa68ac3",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/refresh_final_unidb_records.py",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/refresh_final_unidb_records.py",
+      "bytes": 14718,
+      "sha256": "d5052bccc7271bc398ce5a6039817f77fa64ae876d8f718991faa7b8fefecf78",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/FINAL_REPORT_ZH.md",
+      "bytes": 16536,
+      "sha256": "e16aceaed73488aa3bb8f2bfe9031f083117ae831533dda9703c6422e23aa097",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/USER_STOP_FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/USER_STOP_FINAL_ACCEPTANCE.json",
+      "bytes": 2725,
+      "sha256": "50cf7bdc0ea7be63e9804c7bc162e3ae1558b325952e00e0091193b9353e4f5c",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/FINAL_ACCEPTANCE.json",
+      "bytes": 2072,
+      "sha256": "d3e1de890e703308025fd38e408791e0fc392ea211a552151d569491ed618c72",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/FINAL_FORENSIC_AUDIT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/FINAL_FORENSIC_AUDIT.md",
+      "bytes": 30757,
+      "sha256": "4ecd748dfe205c5509bcd55126b1eab5eb1480cc7356f9b537b1c5398c4bc9b4",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/HYPOTHESIS_MATRIX.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/HYPOTHESIS_MATRIX.csv",
+      "bytes": 9158,
+      "sha256": "ad7bb1742754b1b8d21d945750589dbb47ed7d088ff6dcddcaa6acb9667fbcd9",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/LOCAL_DELIVERY_RECEIPT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/LOCAL_DELIVERY_RECEIPT.json",
+      "bytes": 1290,
+      "sha256": "7e091a017471f7814e5256f014bbbf6338b8914c9ac510ff4c39d1b9b9f912a7",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/MATHEMATICAL_AUDIT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/MATHEMATICAL_AUDIT.md",
+      "bytes": 17877,
+      "sha256": "37b65c65002cfbff89c00af3c911c7f1769787e6ab86b3030052aab02051feaa",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/OFFICIAL_VS_CURRENT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/OFFICIAL_VS_CURRENT.md",
+      "bytes": 17558,
+      "sha256": "08d7ba171fbfc9563bdcf9041af474cf6b411224fb47ee2822a4df89a21769db",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/OPTIMIZER_AUDIT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/OPTIMIZER_AUDIT.md",
+      "bytes": 28202,
+      "sha256": "544d92ec15eab8267281830c5e9416e29694a70ff33b2118fbb5eb8b8fb7ea1f",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/REMOTE_ASSET_INVENTORY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/REMOTE_ASSET_INVENTORY.json",
+      "bytes": 3518947,
+      "sha256": "9f57da4fb620af9a16cb781956327af165599c8bf425493028238615ca7818d6",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/REPRODUCTION_GUIDE.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/REPRODUCTION_GUIDE.md",
+      "bytes": 4240,
+      "sha256": "c5357ced7841abf76e78b72203d14cbb0410a8f62011b173228c70e6e7385583",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/forensic_audit_20261102/teacher_noise_probe/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102/teacher_noise_probe/REPORT_ZH.md",
+      "bytes": 4182,
+      "sha256": "a8d3cb912acce1d50d6331c013434be5d4465f8971b1891cbe5c0b8320b73eb6",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/protocol/ENVIRONMENT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/protocol/ENVIRONMENT.json",
+      "bytes": 536,
+      "sha256": "86b95f7f01f9c8f448ba17abf249eabcf52cd416ccdc1e7415c56e1db89873e3",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_d0_20261102/protocol/UPSTREAM_SOURCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/protocol/UPSTREAM_SOURCE.json",
+      "bytes": 1551,
+      "sha256": "8e3a89d37a39cecf0531cdba6ebb5312d4c04846df323c53ad0a95dc875a63b7",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261103_until18/protocol/USER_AUTHORITY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until18/protocol/USER_AUTHORITY.json",
+      "bytes": 4529,
+      "sha256": "6e31e86f16b05c783ba31e91759dc0a4c5d813d4a465aaf0f2180b96a34fdb97",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261103_until_noon/delivery/CANDIDATE_CHECKPOINT_BACKUP_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/CANDIDATE_CHECKPOINT_BACKUP_AUDIT.json",
+      "bytes": 2463,
+      "sha256": "23625ae97f254c9d8242bf134daed88e7b505f1ce74c373c306b5404260dad01",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261103_until_noon/protocol/USER_AUTHORITY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/protocol/USER_AUTHORITY.json",
+      "bytes": 3246,
+      "sha256": "331bdb5d8e3198fc18a5fcc7d7658a82ce033709b255ee7e3562576e85f91d3f",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+      "bytes": 1490,
+      "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json",
+      "bytes": 7644,
+      "sha256": "07a9573f0652a2da61da276cce976faf8f6d04144e530534bb512a2bce35efc5",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/checkpoint_backup_staging/improved/TRANSFER.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/TRANSFER.json",
+      "bytes": 944,
+      "sha256": "dbe9de24a0f3b2a0d954286cee1d71c04c40f96b95eb696ce0e6f20d79a391c2",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/checkpoint_backup_staging/original/TRANSFER.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/original/TRANSFER.json",
+      "bytes": 944,
+      "sha256": "3c1e2bae6581f2ae8bedb94a5504138752a0494cd9af3bbcf044ae8f9b5288a1",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/EXPERIMENT_FINAL_RECEIPT_VALIDATION.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/EXPERIMENT_FINAL_RECEIPT_VALIDATION.json",
+      "bytes": 14478,
+      "sha256": "fa686b6a0cf4a176d04de44da16520fa9a36dfae156209ebda0290d433b5613e",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/FINAL_RECEIPT_REGISTRY_INPUT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/FINAL_RECEIPT_REGISTRY_INPUT.json",
+      "bytes": 833,
+      "sha256": "24494e1d1bba98a070b4bf9e14508c054f4d27730a359d8abe80d0b3683537c9",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/LOCAL_TRANSFER_PROCESS_EXIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/LOCAL_TRANSFER_PROCESS_EXIT.json",
+      "bytes": 980,
+      "sha256": "e2c5fc6862d52423686d5e311ea5e019d8712302941d08d1d0449382391da7d9",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "bytes": 5060,
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+      "bytes": 7914,
+      "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_ATTACHMENT_RECEIPT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_ATTACHMENT_RECEIPT.json",
+      "bytes": 4913,
+      "sha256": "715cfe51ae714d40ae036dd088b48ecb6410e1c371f9ef632c586df0cdaa71ea",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/original_route/VISUAL_QA.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/VISUAL_QA.json",
+      "bytes": 1782,
+      "sha256": "3d994b295d866becdb7e13de6d0c1a2c7e35e47d3a5b8ba9c3e34248ff2c1473",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "bytes": 5579,
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/delivery_preparation/PREPARATION_SOURCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery_preparation/PREPARATION_SOURCE.json",
+      "bytes": 1507,
+      "sha256": "3f5db78c01f22f5960cdc11e0a68eea77747a7d89b1f9409f653aa49352829ef",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/ALL_OWNED_PROCESS_EXIT_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/ALL_OWNED_PROCESS_EXIT_AUDIT.json",
+      "bytes": 244149,
+      "sha256": "e1817f0e9752d9ae31fc2fc0c66a8a4b6ee68834ad126d0105e0303b252122e8",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/CONTROLLER_EXIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CONTROLLER_EXIT.json",
+      "bytes": 115,
+      "sha256": "323cf71f801097b87e67e17cf406d192ee4812a94a614775149f376f06273853",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+      "bytes": 177,
+      "sha256": "a471f18c89d7c794159bf94f9bd3506290c1a69c076cf217e9ed935259076585",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/CPU_POSTPROCESS_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_POSTPROCESS_ACCEPTANCE.json",
+      "bytes": 7221,
+      "sha256": "e9c560e0c00b614c23be8def0cdc14da013ee9b7c1d98a19521259290355f567",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+      "bytes": 26985,
+      "sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/FINAL_RANK_UPDATE_METADATA.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_RANK_UPDATE_METADATA.json",
+      "bytes": 121451,
+      "sha256": "b092f111dc7be5286418e496fb6218d55fc0d6b488d5d5af7eddc3a6a009243d",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/FINAL_READY_SMALL_SYNC_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_READY_SMALL_SYNC_ACCEPTANCE.json",
+      "bytes": 9043,
+      "sha256": "3ff87a55675e5cfa4c258f6bf34a2599173a75d99f76b3662f19187f05aa4224",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/FORMAL_EXTENSION_STARTUP_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FORMAL_EXTENSION_STARTUP_ACCEPTANCE.json",
+      "bytes": 26079,
+      "sha256": "52ceff1af4db8878cf6d83f92ae5739167b36cc3d31e842ca36711f792337864",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+      "bytes": 23288,
+      "sha256": "df2acaf91cd7ab5851616f5185d4d33984dfb0c5eb53e03a0f48ed73bdb313e2",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/MIDNIGHT_BOUNDARY_OBSERVATION.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/MIDNIGHT_BOUNDARY_OBSERVATION.json",
+      "bytes": 2592,
+      "sha256": "e150cf87a2d160c1b604952c221d104738f2581cf59bfc09f042abd32c87c90e",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/OWNED_EXIT_PRECHECK_20261104_0112.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/OWNED_EXIT_PRECHECK_20261104_0112.json",
+      "bytes": 265470,
+      "sha256": "55aa079a5382324b4960e9636eef1769bf9b1b258d756e6e1bad3fdd4b6ac25c",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+      "bytes": 203255,
+      "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+      "bytes": 204153,
+      "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+      "bytes": 205744,
+      "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+      "bytes": 205744,
+      "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/final_metadata_review/FINAL_METADATA_REVIEW.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/final_metadata_review/FINAL_METADATA_REVIEW.json",
+      "bytes": 59297,
+      "sha256": "887a5ac1422303790a3ca62057b00e56d5f0446387bcf3174fde87c5cddf6c3f",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/evidence/midpoint_U65411/METADATA_REVIEW.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/midpoint_U65411/METADATA_REVIEW.json",
+      "bytes": 4611,
+      "sha256": "1f7142304d8e4e8a5f7e32023e78ef3b1470eebbd84d0d615b66d86d51679a37",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/protocol/POSTPROCESS_SOURCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/POSTPROCESS_SOURCE.json",
+      "bytes": 839,
+      "sha256": "23e9c01ab6e80c9d62d92d3a4add9c6514750a95eec74e29332f4202e1a5d897",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+      "bytes": 2264,
+      "sha256": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json",
+      "bytes": 6719,
+      "sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/ACTIVITY_AND_COST.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/ACTIVITY_AND_COST.csv",
+      "bytes": 3466,
+      "sha256": "e666e4b42848294e4a3ab47d16b037d3b2830f1e8e85e2dbabb5c08cc9c0c335",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/CPU_AUDIT_VALIDATION_PROVENANCE.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/CPU_AUDIT_VALIDATION_PROVENANCE.csv",
+      "bytes": 1489,
+      "sha256": "f601d76e6339478e858cdf7706113b409e2087b21442c609290967497766044c",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/CPU_POSTPROCESS_WORK.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/CPU_POSTPROCESS_WORK.csv",
+      "bytes": 1188,
+      "sha256": "6d588360a0213bda9c7cf2272eb6daac92083c4e8a4152c94f3c6634b215bb51",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/FIGURE_MANIFEST.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FIGURE_MANIFEST.json",
+      "bytes": 12367,
+      "sha256": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FINAL_REPORT_ZH.md",
+      "bytes": 17300,
+      "sha256": "813919c28dde710590d3e534f056f4da3f98acd547338d57369401dd32e5e93a",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/FULL_QUALITY_COMPARISON.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FULL_QUALITY_COMPARISON.csv",
+      "bytes": 12365,
+      "sha256": "9bcf1f112b6c4b10823775ee43047c224c26edb7959e6968405fb74905313589",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/HANDOFF_INTERVALS.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/HANDOFF_INTERVALS.csv",
+      "bytes": 1041,
+      "sha256": "aed28569bd9f65d55a8af8919ef7fd5aa045c1005766a26de165ae2740bad66a",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/REPORT_STATUS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/REPORT_STATUS.json",
+      "bytes": 13984,
+      "sha256": "9baa3c7830addac67b3a23a75bd487522789c5652d2383ce7ed40d6c8017e0c9",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/VALIDATION_HISTORY.csv",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/VALIDATION_HISTORY.csv",
+      "bytes": 56751,
+      "sha256": "d005eefaf6ada61b4bdf0d7780d46b3db4dac589d375c7e7fc4c263b15025679",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/report/VISUAL_QA.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/VISUAL_QA.json",
+      "bytes": 1187,
+      "sha256": "66887bfb97b80544861b4a37c2e3237dad051292a78f871aceb3b2acb4072ec0",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+      "bytes": 1486,
+      "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    },
+    {
+      "path": "unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+      "bytes": 1492,
+      "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+      "local_exists": true,
+      "check_scope": "Small local evidence bytes; checkpoint payloads only stat through actual accepted byte-backup receipt; no tensor read by refresh"
+    }
+  ],
+  "current_experiment_final_acceptance": true,
+  "gaps": [],
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "prepared_UTC": "2026-11-03T18:15:36.845893+00:00",
+  "scientific_limits": [
+    "No strong-turbulence or external-real generalization success established",
+    "Different starts/objective/LR/clip/resources prevent single-cause attribution",
+    "Multi-site-packages and physical simulation/source-split limitations retained"
+  ],
+  "final_experiment_receipt": {
+    "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+    "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac"
+  },
+  "final_related_receipts": {
+    "all_owned_process_exit_audit": {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+    },
+    "unique_checkpoint_backup_audit": {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+    }
+  },
+  "actual_final_identities": {
+    "original:latest": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "original:best": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "improved:latest": {
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+    },
+    "improved:best": {
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+    }
+  },
+  "overall_project_handoff_complete": false,
+  "chat_delivery_performed": false,
+  "generation_script": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/refresh_final_unidb_records.py",
+    "bytes": 14718,
+    "sha256": "d5052bccc7271bc398ce5a6039817f77fa64ae876d8f718991faa7b8fefecf78"
+  },
+  "checkpoint_payload_reads": 0
+}

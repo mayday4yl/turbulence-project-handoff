@@ -1,0 +1,69 @@
+OTIS 10 张 + ATD 10 张：旧 D0 U14927 EMA / TurbWNet 官方权重单帧视觉对比
+完成日期：2026-10-29（Asia/Shanghai）
+
+已完成：20 个固定输入、40 个正式模型结果。全部在本机 MacBook Air 的独立 CPU FP32 环境执行，batch=1，2 个计算线程，nice=15。无训练或微调，无服务器端模型推理。
+总体观察：在这批预选样例上，旧 D0 明显过平滑，部分文字、测试条纹和细杆结构丢失。TurbWNet 保留更多原有结构，但 OTIS 中明显形变仍存在，部分 ATD 平坦区域出现细纹。仅为这 20 张预选样例的视觉观察，未构成整体数据集排名。
+
+1. 先看图
+reports/COMPARISON_GALLERY.html：全部 20 张，逐张打开原像素对比、固定细节放大与来源裁剪范围。
+reports/OTIS_ALL10.png、ATD_ALL10.png：各 10 张无损总览。
+reports/OTIS_page1.png、OTIS_page2.png：OTIS 每页 5 张高分辨率拼图。
+reports/ATD_page1.png、ATD_page2.png：ATD 每页 5 张高分辨率拼图。
+comparisons/*_native.png：20 张原像素拼图；*_detail3x.png：20 张固定中心 96×96（不足时取原尺寸）最近邻 3 倍展示。
+列顺序：Input / D0 U14927 EMA / TurbWNet official；OTIS 最后一列为 GT template，ATD 没有 GT 列。
+
+2. 固定选图与预处理
+选图清单在任何模型推理前冻结，SHA256：f8b20648661a05da5ceae9c694e628f0a298fc4fc58b77fcf2fa764400b29045
+OTIS：Pattern1、2、3、4、7、8、9、10、13、14，各取第 1 帧；涵盖两种印刷图案，以及 weak/medium/strong 条件。
+ATD：Bin_SD_Clip_03、Cabin_256_Clip01、Camp_SD_Clip01、Cueva_512_01、Road_HD_Clip01、sign_01_SD_crop1、skip_01_SD_crop2、TF1_1_SD_Clip01、WindM2_1_SD_Clip02、Tene_SD_001v2；各取第 0 帧。
+ATD 从前一轮已验收 MP4 解码首帧，不使用后续帧或融合图。
+两模型输入严格相同：Pillow RGB、uint8/255→FP32 [0,1]；不交换 RGB/BGR，不做白平衡、锐化或输出选择。
+本轮为低成本区域预览：每个尺寸超过 256 时取固定中心区域，最大 256×256；小于 256 的原图保留原生像素。没有缩放输入。
+输入在右侧/底部统一 reflect padding 至 64 的整数倍；两个模型处理同一补边张量，输出统一去除补边。完整取样坐标保存在 FIXED20.json 和 PAIRED20_OUTPUTS.csv；source_context 的红框标明区域。
+这不是 ATD 高分辨率整图恢复测试，亦不是 OTIS/ATD 完整集评估。
+
+3. 模型验收与忠实性
+旧 D0：U014927.pt，580,755,715 bytes，只读下载自 liteserver-de36 的旧 D0 checkpoint，使用 ema.model；更新数 14927。
+D0 SHA256：0c7903726f262c56fb40333dcaf70e0e205109c618456bb39e216987bd48d9b6
+D0 网络严格加载 276 个张量 / 36,261,187 参数，missing/unexpected 均为空，加载后值逐张量一致。native 与 sampling 各 14 个 buffer 与 checkpoint 完全一致。
+D0 使用原始 DiffUIR S3（NFE=3、eta=0），固定每图随机种子；未减少采样步数或更换采样器。DiffUIR 源码版本 c71437ce86ad1b098aa9be4678dc82e8b99649df；现用代码文件 SHA 另存 SOURCE_FINGERPRINTS.json。
+另外取同组中的 OTIS Pattern3 和 ATD TF1_1 样本，通过原始 D0Restorer.sample_clean 接口复跑，对照本轮适配结果逐值相等，最大差异均为 0。2 次控制复跑没有创建替代结果，没有改选图、种子或后处理。
+TurbWNet：官方完整 net_g_300000.pth，使用 params，包含 deblur、detilt、最终恢复全阶段；没有以单独子网权重覆盖完整 checkpoint。
+TurbWNet SHA256：a039c67176a0704a9db22cfefe6f58e78d09681e50c03ce73bfad34290b0843f
+TurbWNet 网络严格加载 709 个张量 / 32,430,816 参数，missing/unexpected 均为空，加载后值逐张量一致。
+官方仓库：https://github.com/FallenLeaves-Creator/TurbWNet
+官方源码提交：05627b725241c28a09b03c00faefafa861558ebf。使用此前已验收的 runtime 副本，只清理未用导入与注册，模型类方法及前向算子保持原样。
+所有模型参数与 buffer 在 CPU，eval()、requires_grad=False；正式前向均使用 torch.inference_mode()。推理进程没有读取 GT 图或 Mask。
+
+4. 执行量、时间与训练隔离
+正式前向总时间：94.853 秒；主推理循环时间：95.159 秒（不含环境安装、权重下载和模型初始化）。
+全组单图平均：D0 2.052 秒，TurbWNet 2.691 秒。
+本机进程峰值 RSS：1.815 GiB。
+正式结果的实际调用计数：D0 网络 60 次，TurbWNet deblur/detilt/final 各 20 次。额外规范接口控制：D0 2 张复跑、网络 6 次，不计入 40 个正式结果。
+服务器操作仅为只读资源核对和限速复制旧 checkpoint，没有在那里启动模型，没有写入训练依赖、源码、配置或 checkpoint，没有向训练进程发送信号。
+de36 的 NPU 进程列表在本轮主推理前后相同；只读快照见 NPU_BEFORE.txt / NPU_AFTER.txt。未启动本任务的 NPU 模型进程，也未导入 torch_npu。
+没有读取 PiRN/P2S 锁定 Test，没有自动进行全量评估、新训练或微调。
+
+按数据集分开计时：
+OTIS：10 张，D0 平均 1.634 秒，TurbWNet 平均 2.002 秒。
+ATD：10 张，D0 平均 2.469 秒，TurbWNet 平均 3.380 秒。
+
+5. 展示与结论边界
+正式输出均保存原始 FP32 CHW NPY。PNG 仅在展示时统一裁限至 [0,1] 并四舍五入为 uint8；逐图原始范围和裁限比例保存在 PER_IMAGE.jsonl。
+总览缩放只发生在拼图展示；*_native.png 不缩放任何模型输出。没有基于 GT 对输出做对齐、调色、挑种子或选版本。
+OTIS GT 为人工配准的数字灰度图案模板，带 alpha；展示在白底合成并按与输入相同的固定区域裁剪。GT/Mask 首次由独立渲染脚本在 40 个正式输出全部保存后打开。
+ATD 没有 clean GT。本轮不报告 PSNR/SSIM/LPIPS/MAE，未将 CLEAR 输出作为 GT。
+逐页检查了全部 20 张和列标签；另检查 Camp 与 TF1_1 的原像素细节。可观察到 D0 的文字/细杆丢失及过平滑，TurbWNet 的保留与伪影并存；不能据此声称其已恢复真实细节或消除湍流形变。
+
+6. 复现与文件
+固定输入、ROI 和种子：inputs/FIXED20.json；逐图结果及范围：outputs/PER_IMAGE.jsonl。
+逐图 CSV：reports/PAIRED20_OUTPUTS.csv；机器汇总：outputs/RESULT.json。
+严格加载记录：evidence/MODEL_ACCEPTANCE.json；原始接口复核：evidence/D0_CANONICAL_REPLAY.json。
+环境：env/；固定依赖：requirements-cpu.txt；实际全量依赖：evidence/ENV_FREEZE.txt。
+所有新脚本都在 scripts/；已有五个原始源码文件运行前后哈希一致。
+
+原始执行命令（项目根目录；已有结果默认拒绝覆盖，重新运行须使用独立的新目录）：
+TORCH_DEVICE_BACKEND_AUTOLOAD=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 nice -n 15 real20_d0_turbwnet_20261029/env/bin/python -B -u real20_d0_turbwnet_20261029/scripts/infer_cpu.py
+real20_d0_turbwnet_20261029/env/bin/python -B real20_d0_turbwnet_20261029/scripts/render_comparisons.py
+TORCH_DEVICE_BACKEND_AUTOLOAD=0 real20_d0_turbwnet_20261029/env/bin/python -B real20_d0_turbwnet_20261029/scripts/check_d0_canonical.py
+

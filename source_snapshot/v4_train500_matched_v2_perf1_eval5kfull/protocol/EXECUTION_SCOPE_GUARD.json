@@ -1,0 +1,33 @@
+{
+  "id": "execution_scope_guard_v1",
+  "recorded_utc": "2026-09-29T17:02:09.478428+00:00",
+  "parent_addendum_sha256": "ec9a3bdca3cef078e71bc418fad7453de620dc159adc8f29c5f4462bf5884097",
+  "only_adds": [
+    "milestones",
+    "stage delivery",
+    "stop rules",
+    "ETA"
+  ],
+  "may_modify_frozen_scientific_protocol": false,
+  "may_modify_budget": false,
+  "required_existing_budget": {
+    "D0": 10000,
+    "R0": 10000,
+    "R08": 10000,
+    "L08": 10000
+  },
+  "conflict_action": "STOP_AND_REPORT; never interpret execution supplement as a budget change",
+  "verified_plan_budget": {
+    "D0": 10000,
+    "R0": 10000,
+    "R08": 10000,
+    "L08": 10000
+  },
+  "verified_authorization_updates_per_method": 10000,
+  "runtime_FROZEN_exists_locally": false,
+  "check_again_at": [
+    "before any formal freeze",
+    "every formal launch/resume",
+    "stage release"
+  ]
+}

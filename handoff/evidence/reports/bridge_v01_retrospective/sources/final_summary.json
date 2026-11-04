@@ -1,0 +1,2458 @@
+{
+  "bridge_success_rule": {
+    "g450_lpips_improvement_nonnegative": true,
+    "g450_psnr_bootstrap_ci_lower_above_zero": true,
+    "g450_psnr_mean_delta_above_zero": true,
+    "requires_progressive_k_above_zero": true
+  },
+  "bridge_supported": false,
+  "dataset_statistics": {
+    "path": "/data2/yanglin/physical_bridge/data/places_p2s_bridge_v01/statistics/summary.json",
+    "sha256": "015f2408788b4ff2a2683664c5ed315b7d134288be73ec2f9fa0c589c4a5edb8",
+    "trajectory_count": 9400
+  },
+  "final_report_sha256": "6bc192bca640fae51fbdc5fdc84d4ad9389034a1690b8ef712b8fb1040ea0dc1",
+  "frozen_inference": {
+    "K": 0,
+    "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/frozen_checkpoint.pt",
+    "checkpoint_sha256": "34dc4dce03bd13ba4079100d4b195fcc0e8c3b07699e06ae12ca91e0aba48f47",
+    "k_selection": {
+      "candidates": [
+        {
+          "K": 0,
+          "lpips": 0.3989813767373562,
+          "name": "k_0",
+          "psnr": 22.13205792427063
+        },
+        {
+          "K": 1,
+          "lpips": 0.4001301269605756,
+          "name": "k_1",
+          "psnr": 21.950073029994964
+        },
+        {
+          "K": 3,
+          "lpips": 0.4587072628363967,
+          "name": "k_3",
+          "psnr": 21.414580941200256
+        },
+        {
+          "K": 5,
+          "lpips": 0.47547550838440655,
+          "name": "k_5",
+          "psnr": 21.21722909450531
+        }
+      ],
+      "rule": "max PSNR; within 0.05 dB lower LPIPS; then smaller K",
+      "selected": {
+        "K": 0,
+        "lpips": 0.3989813767373562,
+        "name": "k_0",
+        "psnr": 22.13205792427063
+      },
+      "source": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/val/k_selection/summary.json"
+    },
+    "learning_rate": 0.03,
+    "learning_rate_selection": {
+      "best": {
+        "learning_rate": 0.03,
+        "lpips": 0.6434134781360626,
+        "name": "lr_0.030",
+        "psnr": 18.692432403564453
+      },
+      "candidates": [
+        {
+          "learning_rate": 0.003,
+          "lpips": 0.6292174175381661,
+          "name": "lr_0.003",
+          "psnr": 18.61470079421997
+        },
+        {
+          "learning_rate": 0.01,
+          "lpips": 0.6043181523680687,
+          "name": "lr_0.010",
+          "psnr": 18.582097721099853
+        },
+        {
+          "learning_rate": 0.03,
+          "lpips": 0.6434134781360626,
+          "name": "lr_0.030",
+          "psnr": 18.692432403564453
+        }
+      ],
+      "rule": "keep 0.01 when within 0.05 dB of the best final PSNR",
+      "selected": {
+        "learning_rate": 0.03,
+        "lpips": 0.6434134781360626,
+        "name": "lr_0.030",
+        "psnr": 18.692432403564453
+      },
+      "source": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/val/refinement_lr/summary.json"
+    },
+    "status": "FROZEN_FOR_TEST"
+  },
+  "mechanism_judgment": "validation_selected_one_shot_progressive_not_supported",
+  "paired": {
+    "all": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 1000,
+          "paired_losses": 0,
+          "paired_ties": 1000,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "g450": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "high_g300_to_g450": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 600,
+          "paired_losses": 0,
+          "paired_ties": 600,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    }
+  },
+  "paired_by_terminal": {
+    "1.50": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "2.25": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "3.00": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "3.75": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    },
+    "4.50": {
+      "bridge_no_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "bridge_refinement": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "oracle_xi": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      },
+      "teacher_forced": {
+        "l1": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "lpips": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "psnr": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        },
+        "ssim": {
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_samples": 10000,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "n": 200,
+          "paired_losses": 0,
+          "paired_ties": 200,
+          "paired_wins": 0,
+          "positive_means_method_is_better": true
+        }
+      }
+    }
+  },
+  "per_terminal": {
+    "1.50": {
+      "bridge_no_refinement": {
+        "l1": 0.03849767812993377,
+        "lpips": 0.27837840443477035,
+        "psnr": 24.42063911437988,
+        "ssim": 0.7380737447738648
+      },
+      "bridge_refinement": {
+        "l1": 0.03849767812993377,
+        "lpips": 0.27837840443477035,
+        "psnr": 24.42063911437988,
+        "ssim": 0.7380737447738648
+      },
+      "one_shot": {
+        "l1": 0.03849767812993377,
+        "lpips": 0.27837840443477035,
+        "psnr": 24.42063911437988,
+        "ssim": 0.7380737447738648
+      },
+      "oracle_xi": {
+        "l1": 0.03849767812993377,
+        "lpips": 0.27837840443477035,
+        "psnr": 24.42063911437988,
+        "ssim": 0.7380737447738648
+      },
+      "teacher_forced": {
+        "l1": 0.03849767812993377,
+        "lpips": 0.27837840443477035,
+        "psnr": 24.42063911437988,
+        "ssim": 0.7380737447738648
+      }
+    },
+    "2.25": {
+      "bridge_no_refinement": {
+        "l1": 0.045013766796328125,
+        "lpips": 0.38260699935257436,
+        "psnr": 22.976879787445068,
+        "ssim": 0.6699744318425656
+      },
+      "bridge_refinement": {
+        "l1": 0.045013766796328125,
+        "lpips": 0.38260699935257436,
+        "psnr": 22.976879787445068,
+        "ssim": 0.6699744318425656
+      },
+      "one_shot": {
+        "l1": 0.045013766796328125,
+        "lpips": 0.38260699935257436,
+        "psnr": 22.976879787445068,
+        "ssim": 0.6699744318425656
+      },
+      "oracle_xi": {
+        "l1": 0.045013766796328125,
+        "lpips": 0.38260699935257436,
+        "psnr": 22.976879787445068,
+        "ssim": 0.6699744318425656
+      },
+      "teacher_forced": {
+        "l1": 0.045013766796328125,
+        "lpips": 0.38260699935257436,
+        "psnr": 22.976879787445068,
+        "ssim": 0.6699744318425656
+      }
+    },
+    "3.00": {
+      "bridge_no_refinement": {
+        "l1": 0.05075128384865821,
+        "lpips": 0.4431932337582111,
+        "psnr": 22.164151706695556,
+        "ssim": 0.6145285636186599
+      },
+      "bridge_refinement": {
+        "l1": 0.05075128384865821,
+        "lpips": 0.4431932337582111,
+        "psnr": 22.164151706695556,
+        "ssim": 0.6145285636186599
+      },
+      "one_shot": {
+        "l1": 0.05075128384865821,
+        "lpips": 0.4431932337582111,
+        "psnr": 22.164151706695556,
+        "ssim": 0.6145285636186599
+      },
+      "oracle_xi": {
+        "l1": 0.05075128384865821,
+        "lpips": 0.4431932337582111,
+        "psnr": 22.164151706695556,
+        "ssim": 0.6145285636186599
+      },
+      "teacher_forced": {
+        "l1": 0.05075128384865821,
+        "lpips": 0.4431932337582111,
+        "psnr": 22.164151706695556,
+        "ssim": 0.6145285636186599
+      }
+    },
+    "3.75": {
+      "bridge_no_refinement": {
+        "l1": 0.05682428409811109,
+        "lpips": 0.4751152194291353,
+        "psnr": 21.034279985427858,
+        "ssim": 0.5710262154042721
+      },
+      "bridge_refinement": {
+        "l1": 0.05682428409811109,
+        "lpips": 0.4751152194291353,
+        "psnr": 21.034279985427858,
+        "ssim": 0.5710262154042721
+      },
+      "one_shot": {
+        "l1": 0.05682428409811109,
+        "lpips": 0.4751152194291353,
+        "psnr": 21.034279985427858,
+        "ssim": 0.5710262154042721
+      },
+      "oracle_xi": {
+        "l1": 0.05682428409811109,
+        "lpips": 0.4751152194291353,
+        "psnr": 21.034279985427858,
+        "ssim": 0.5710262154042721
+      },
+      "teacher_forced": {
+        "l1": 0.05682428409811109,
+        "lpips": 0.4751152194291353,
+        "psnr": 21.034279985427858,
+        "ssim": 0.5710262154042721
+      }
+    },
+    "4.50": {
+      "bridge_no_refinement": {
+        "l1": 0.05971911165863276,
+        "lpips": 0.4795154330134392,
+        "psnr": 20.627211627960204,
+        "ssim": 0.5550178307294845
+      },
+      "bridge_refinement": {
+        "l1": 0.05971911165863276,
+        "lpips": 0.4795154330134392,
+        "psnr": 20.627211627960204,
+        "ssim": 0.5550178307294845
+      },
+      "one_shot": {
+        "l1": 0.05971911165863276,
+        "lpips": 0.4795154330134392,
+        "psnr": 20.627211627960204,
+        "ssim": 0.5550178307294845
+      },
+      "oracle_xi": {
+        "l1": 0.05971911165863276,
+        "lpips": 0.4795154330134392,
+        "psnr": 20.627211627960204,
+        "ssim": 0.5550178307294845
+      },
+      "teacher_forced": {
+        "l1": 0.05971911165863276,
+        "lpips": 0.4795154330134392,
+        "psnr": 20.627211627960204,
+        "ssim": 0.5550178307294845
+      }
+    }
+  },
+  "rollout_diagnostics_by_terminal": {
+    "1.50": {
+      "bridge_no_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025223166020732605,
+        "peak_npu_memory_bytes": 451108864
+      },
+      "bridge_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025291841239959468,
+        "peak_npu_memory_bytes": 451108864
+      },
+      "one_shot": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.0494127205296536,
+        "peak_npu_memory_bytes": 451108864
+      },
+      "oracle_xi": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025326495695044287,
+        "peak_npu_memory_bytes": 451108864
+      },
+      "teacher_forced": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.02539352537038212,
+        "peak_npu_memory_bytes": 451108864
+      }
+    },
+    "2.25": {
+      "bridge_no_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.024959214169139158,
+        "peak_npu_memory_bytes": 451895808
+      },
+      "bridge_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.024918578510041697,
+        "peak_npu_memory_bytes": 451895808
+      },
+      "one_shot": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.026400391469796888,
+        "peak_npu_memory_bytes": 451895808
+      },
+      "oracle_xi": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.027802345325399075,
+        "peak_npu_memory_bytes": 451895808
+      },
+      "teacher_forced": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025159374274735455,
+        "peak_npu_memory_bytes": 451895808
+      }
+    },
+    "3.00": {
+      "bridge_no_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025062088259801385,
+        "peak_npu_memory_bytes": 452682752
+      },
+      "bridge_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025046992789648358,
+        "peak_npu_memory_bytes": 452682752
+      },
+      "one_shot": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.06942212298010418,
+        "peak_npu_memory_bytes": 452682752
+      },
+      "oracle_xi": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025233165074459975,
+        "peak_npu_memory_bytes": 452682752
+      },
+      "teacher_forced": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.0251895318942843,
+        "peak_npu_memory_bytes": 452682752
+      }
+    },
+    "3.75": {
+      "bridge_no_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.02499516087533266,
+        "peak_npu_memory_bytes": 453469696
+      },
+      "bridge_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025102935934773994,
+        "peak_npu_memory_bytes": 453469696
+      },
+      "one_shot": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.04906486927968217,
+        "peak_npu_memory_bytes": 453469696
+      },
+      "oracle_xi": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025061653594457313,
+        "peak_npu_memory_bytes": 453469696
+      },
+      "teacher_forced": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025059320235595806,
+        "peak_npu_memory_bytes": 453469696
+      }
+    },
+    "4.50": {
+      "bridge_no_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.02500095654017059,
+        "peak_npu_memory_bytes": 454256640
+      },
+      "bridge_refinement": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.024991177124902605,
+        "peak_npu_memory_bytes": 454256640
+      },
+      "one_shot": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.026279229770007077,
+        "peak_npu_memory_bytes": 454256640
+      },
+      "oracle_xi": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025117232060219975,
+        "peak_npu_memory_bytes": 454256640
+      },
+      "teacher_forced": {
+        "count": 200,
+        "mean_network_forwards": 1.0,
+        "mean_simulator_backwards": 0.0,
+        "mean_simulator_forwards": 0.0,
+        "mean_wall_seconds": 0.025128794595148066,
+        "peak_npu_memory_bytes": 454256640
+      }
+    }
+  },
+  "teacher_forced_branch": {
+    "equal_severity_mean_degradation_residual": 0.0006559116595199157,
+    "equal_severity_mean_lpips": 0.3616580458053698,
+    "equal_severity_mean_psnr": 23.0873343073527,
+    "per_g": {
+      "0.75": {
+        "degradation_residual": 0.0007138432454394206,
+        "l1": 0.02742533658305183,
+        "lpips": 0.11274251493811607,
+        "predicted_tilt_mean": 0.0008264160493999952,
+        "predicted_tilt_norm": 63.25266260910034,
+        "predicted_tilt_std": 0.08733750050514937,
+        "predicted_zernike_mean": -0.00934080312680453,
+        "predicted_zernike_norm": 301.15905557250977,
+        "predicted_zernike_std": 0.09758579502254724,
+        "psnr": 27.304205780029296,
+        "ssim": 0.8654366484880447,
+        "tilt_true_correlation": -1.1470879303260517e-05,
+        "tilt_true_mse": 1.0079199681282043,
+        "zernike_true_correlation": -5.2426939429466305e-06,
+        "zernike_true_mse": 1.009627019405365
+      },
+      "1.50": {
+        "degradation_residual": 0.0006701847807380545,
+        "l1": 0.03882814101362601,
+        "lpips": 0.28216968693956734,
+        "predicted_tilt_mean": 0.001357922730876453,
+        "predicted_tilt_norm": 62.581019046783446,
+        "predicted_tilt_std": 0.08640308880060911,
+        "predicted_zernike_mean": -0.00943316281400621,
+        "predicted_zernike_norm": 299.9243516845703,
+        "predicted_zernike_std": 0.09717293211817742,
+        "psnr": 24.275512992858886,
+        "ssim": 0.7367071504890919,
+        "tilt_true_correlation": -3.0614330406550036e-05,
+        "tilt_true_mse": 1.007766170680523,
+        "zernike_true_correlation": -6.662540733167077e-06,
+        "zernike_true_mse": 1.0095486592054368
+      },
+      "2.25": {
+        "degradation_residual": 0.0006439167472199188,
+        "l1": 0.04572641411423683,
+        "lpips": 0.3869298127517104,
+        "predicted_tilt_mean": 0.0013999795622294186,
+        "predicted_tilt_norm": 62.153408489227296,
+        "predicted_tilt_std": 0.08581181075423956,
+        "predicted_zernike_mean": -0.008312738748732954,
+        "predicted_zernike_norm": 297.3922332458496,
+        "predicted_zernike_std": 0.09644801420718431,
+        "psnr": 22.918033807754515,
+        "ssim": 0.6615472366213798,
+        "tilt_true_correlation": -4.139588209335443e-05,
+        "tilt_true_mse": 1.007665460407734,
+        "zernike_true_correlation": -2.7453987536034674e-06,
+        "zernike_true_mse": 1.009387000322342
+      },
+      "3.00": {
+        "degradation_residual": 0.0006398223666237755,
+        "l1": 0.05091271744854748,
+        "lpips": 0.43983637549728155,
+        "predicted_tilt_mean": 0.0005845236174354796,
+        "predicted_tilt_norm": 61.70209729385376,
+        "predicted_tilt_std": 0.08519833648204804,
+        "predicted_zernike_mean": -0.006744203987997025,
+        "predicted_zernike_norm": 290.5358763122559,
+        "predicted_zernike_std": 0.09433306496590375,
+        "psnr": 22.02024970436096,
+        "ssim": 0.6153417077958584,
+        "tilt_true_correlation": -3.789124540185185e-05,
+        "tilt_true_mse": 1.0075584473609924,
+        "zernike_true_correlation": -3.831408069778775e-06,
+        "zernike_true_mse": 1.0089594707489014
+      },
+      "3.75": {
+        "degradation_residual": 0.0006348200275751878,
+        "l1": 0.05534153260011226,
+        "lpips": 0.46688715751469134,
+        "predicted_tilt_mean": 0.000650305009658041,
+        "predicted_tilt_norm": 61.36805520629883,
+        "predicted_tilt_std": 0.08473744644224644,
+        "predicted_zernike_mean": -0.005261527743190527,
+        "predicted_zernike_norm": 280.886588470459,
+        "predicted_zernike_std": 0.09128133360296488,
+        "psnr": 21.31648483276367,
+        "ssim": 0.5826029648780823,
+        "tilt_true_correlation": -3.0058387745157233e-05,
+        "tilt_true_mse": 1.0074819093346596,
+        "zernike_true_correlation": -2.7926916056735253e-06,
+        "zernike_true_mse": 1.0083745995759963
+      },
+      "4.50": {
+        "degradation_residual": 0.0006328827895231371,
+        "l1": 0.05963794265128672,
+        "lpips": 0.4813827271908522,
+        "predicted_tilt_mean": 0.001220802673662547,
+        "predicted_tilt_norm": 61.08559844589234,
+        "predicted_tilt_std": 0.084341647811234,
+        "predicted_zernike_mean": -0.004098284446168691,
+        "predicted_zernike_norm": 272.6692466430664,
+        "predicted_zernike_std": 0.08866325233131647,
+        "psnr": 20.689518726348876,
+        "ssim": 0.5558620093613863,
+        "tilt_true_correlation": -2.942480901504929e-05,
+        "tilt_true_mse": 1.00741789996624,
+        "zernike_true_correlation": -2.635857443522127e-06,
+        "zernike_true_mse": 1.0078917171955109
+      }
+    },
+    "row_count": 6000,
+    "trajectory_count": 1000,
+    "wall_seconds": 88.53418372799933
+  },
+  "test_row_count": 5000
+}

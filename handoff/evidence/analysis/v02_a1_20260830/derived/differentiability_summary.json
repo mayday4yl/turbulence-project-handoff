@@ -1,0 +1,119 @@
+{
+  "answer": "No evidence of a broken or detached first-order graph. CPU central finite differences agree with autograd, and real NPU A0/A1 gradients have the expected branch fingerprint. A gradient-conditioning issue in the P2S Zernike path remains a plausible secondary contributor, not the primary failure locus established by the rollout controls.",
+  "binary_non_differentiability_supported": false,
+  "causal_boundary": {
+    "ruled_out": [
+      "simulator output detached from predicted xi",
+      "simulator parameter freezing disabled input gradients",
+      "all-zero or non-finite physical-loss gradients",
+      "high-severity total gradient collapse on the audited cohort",
+      "gross mismatch between simulator and archived forward states"
+    ],
+    "secondary_plausible": [
+      "P2S Zernike-path scale/activation conditioning",
+      "border-gradient loss for the small out-of-bounds flow fraction",
+      "inherited N-1 plus align_corners=False coordinate convention",
+      "NPU backward resize warning pending operator localization and direct NPU finite differences"
+    ],
+    "strongest_existing_failure_locus": "Predicted-clean intermediate-state error amplification, based on prior teacher-forced and controlled-render routes."
+  },
+  "coordinate_convention_probe": {
+    "grid_sample_align_corners": false,
+    "implemented_normalization": "2 * pixel / (N - 1) - 1",
+    "implemented_zero_tilt_mse_to_blur": 4.337200152804144e-06,
+    "matching_identity_mse_to_blur": 0.0,
+    "mathematically_matching_identity_normalization": "2 * (pixel + 0.5) / N - 1",
+    "note": "Forward-coordinate convention mismatch; not a broken autograd edge."
+  },
+  "cpu_gradient_accuracy": {
+    "all_bridge_input_gradients_finite_nonzero": true,
+    "all_graph_outputs_require_grad": true,
+    "all_sign_match": true,
+    "checkpoint_sha256": "a48a7557a577d0affd745f1e06f32902801b96c2b97d1df53f68d59176ff033a",
+    "device": "cpu",
+    "max_best_relative_error": 0.002394150496690054,
+    "sample_key": "val_000260"
+  },
+  "forward_replay": {
+    "interpretation": "True clean plus true realization replays archived states to near numerical precision, arguing against a gross forward-model mismatch.",
+    "true_replay_mse": {
+      "finite_n": 10,
+      "max": 1.7611924363336584e-08,
+      "median": 8.250084615468722e-09,
+      "min": 2.1920256720875386e-09,
+      "n": 10
+    }
+  },
+  "g450_conditioning": {
+    "all_gradients_finite_nonzero": true,
+    "displacement_rms_ratio": {
+      "finite_n": 10,
+      "max": 1.0509770970866072,
+      "median": 0.8678231870926625,
+      "min": 0.5493540455651303,
+      "n": 10
+    },
+    "effective_zernike_rms_ratio": {
+      "finite_n": 10,
+      "max": 5.548297509534137,
+      "median": 4.646534016635837,
+      "min": 3.7691553453231204,
+      "n": 10
+    },
+    "interpretation": "The Zernike/P2S path is active but operates far from the true effective-state scale on this 10-sample high-severity cohort. This can make gradients poorly conditioned or semantically weak without making the renderer non-differentiable.",
+    "relu3_active_fraction": {
+      "finite_n": 10,
+      "max": 0.14657440781593323,
+      "median": 0.144037164747715,
+      "min": 0.14122985303401947,
+      "n": 10
+    },
+    "sample_count": 10,
+    "tilt_gradient_l2": {
+      "finite_n": 10,
+      "max": 0.001523414277471602,
+      "median": 0.00052766696899198,
+      "min": 8.512713247910142e-05,
+      "n": 10
+    },
+    "zernike_gradient_l2": {
+      "finite_n": 10,
+      "max": 0.00015952302783261985,
+      "median": 9.951164611265995e-05,
+      "min": 2.8519303668872453e-05,
+      "n": 10
+    }
+  },
+  "question": "Is V0.2 failure caused by a non-differentiable simulator?",
+  "real_npu_gradient_presence": {
+    "a0_backward_resize_warning_processes": 4,
+    "a0_batches": 128,
+    "a0_expected_branch_fingerprint": {
+      "bridge_all_three_branches_nonzero_all_batches": true,
+      "clean_loss_realization_zero_all_batches": true,
+      "trajectory_loss_clean_zero_all_batches": true
+    },
+    "a1_all_three_branch_norms_finite_nonzero": true,
+    "a1_backward_resize_warning_processes": 4,
+    "a1_updates": 3000,
+    "direct_npu_finite_difference_blocker": "Authorized physical NPUs 0,2,4,6 were occupied by unrelated jobs during the 2026-09-01 audit, so no co-scheduled diagnostic was launched.",
+    "direct_npu_finite_difference_checked": false,
+    "warning_interpretation": "One warning per rank reports a [16,17,32] to [16,32,32] output resize. That shape resembles an N=32 real-FFT half spectrum, but the log does not identify the operator. It is a compatibility risk, not proof of wrong gradients."
+  },
+  "source_audit": {
+    "frozen_parameters_do_not_detach_inputs": true,
+    "path_ops": [
+      "einsum",
+      "fft2/ifft2/irfft2",
+      "conv2d",
+      "linear/ReLU P2S",
+      "bilinear grid_sample with border padding"
+    ],
+    "render_is_not_decorated_no_grad": true,
+    "simulator_sha256": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "training_precision": "BF16 network forward; FP32 simulator and loss",
+    "upstream_git_commit": "12b9ef6a32c75143c23402a7ab8f843624ca99e8",
+    "upstream_simulator_sha256": "5c5023ed0cd8db1c759a3eca7dd047dd5169d9f761133ba0f29a4ceb8e20ddd4"
+  },
+  "status": "COMPLETE_WITH_NPU_FINITE_DIFFERENCE_PENDING"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "train_pairs": 160000,
+  "train_clean_sources": 10000,
+  "val_clean_sources": 250,
+  "val_per_strength": 1000,
+  "counts_by_g": {
+    "1": 40000,
+    "2": 40000,
+    "3": 40000,
+    "4": 40000
+  },
+  "train_manifest": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/TRAIN_MANIFEST.jsonl",
+  "train_manifest_sha256": "d4898f32bff9deb2c40dbfdfce0c427e7dd4213c824e32c560e5a2afa8ba2a24",
+  "val_manifest": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+  "val_manifest_sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9",
+  "all_files_freshly_SHA_shape_dtype_finite_checked": 175250,
+  "input_range": [
+    -0.28111532330513,
+    1.1410144567489624
+  ],
+  "clipping_applied": false,
+  "seconds": 116.20509028434753,
+  "test_used": false,
+  "source_disjoint": true,
+  "same_source_xi_all_four_g": true
+}

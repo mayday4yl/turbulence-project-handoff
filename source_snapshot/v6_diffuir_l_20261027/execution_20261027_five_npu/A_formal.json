@@ -1,0 +1,27 @@
+{
+  "stage": "A",
+  "microbatch": 4,
+  "accumulation": 2,
+  "world_size": 5,
+  "effective_batch": 40,
+  "precision": "FP32",
+  "amp": false,
+  "checkpointing": false,
+  "loss": "residual+0.9*Clean_S3+0.1*physics_current_g",
+  "lr_peaks": [
+    1e-05,
+    5e-05,
+    5e-05
+  ],
+  "initial_checkpoint": "/data2/yanglin/v6_diffuir_l_20261027/distributed/D0_continue_5epoch_01/checkpoints/U013334.pt",
+  "initial_checkpoint_sha256": "88c27a1997252542b5d40bd857921c44d62b9161f751679906ea005b21561b85",
+  "psf_backend": "exact_frozen_psf_adjoint",
+  "checkpoint_every": 250,
+  "stop_request": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261027_five_npu/STOP_REQUEST.json",
+  "mode": "formal",
+  "updates": 6000,
+  "seed": 741003,
+  "scheduler_total_updates": 6000,
+  "data_cursor_offset": 19280,
+  "migration_parent_checkpoint_sha256": "0f58a95b94b139e504bf31e9135c0c6bee39330ad4e3f5136dc37064c2da1e89"
+}

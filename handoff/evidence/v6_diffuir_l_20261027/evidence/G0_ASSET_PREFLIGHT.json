@@ -1,0 +1,516 @@
+{
+  "status": "ASSET_IDENTITY_PASS_NETWORK_AND_DATA_BUILD_PENDING",
+  "created_at": "2026-10-27T01:07:24.111517+08:00",
+  "base_root": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+  "source_counts": {
+    "train": 2000,
+    "val": 250,
+    "test": 250
+  },
+  "sample_counts": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "class_counts": {
+    "train": {
+      "254": 40,
+      "156": 40,
+      "140": 40,
+      "132": 40,
+      "300": 40,
+      "344": 40,
+      "166": 40,
+      "38": 40,
+      "203": 40,
+      "13": 40,
+      "239": 40,
+      "159": 40,
+      "135": 40,
+      "234": 40,
+      "314": 40,
+      "241": 40,
+      "343": 40,
+      "341": 40,
+      "173": 40,
+      "7": 40,
+      "49": 40,
+      "5": 40,
+      "154": 40,
+      "356": 40,
+      "175": 40,
+      "61": 40,
+      "215": 40,
+      "180": 40,
+      "3": 40,
+      "101": 40,
+      "361": 40,
+      "312": 40,
+      "137": 40,
+      "11": 40,
+      "31": 40,
+      "1": 40,
+      "123": 40,
+      "142": 40,
+      "40": 40,
+      "67": 40,
+      "57": 40,
+      "167": 40,
+      "118": 40,
+      "134": 40,
+      "162": 40,
+      "176": 40,
+      "21": 40,
+      "107": 40,
+      "363": 40,
+      "185": 40
+    },
+    "val": {
+      "254": 5,
+      "156": 5,
+      "140": 5,
+      "132": 5,
+      "300": 5,
+      "344": 5,
+      "166": 5,
+      "38": 5,
+      "203": 5,
+      "13": 5,
+      "239": 5,
+      "159": 5,
+      "135": 5,
+      "234": 5,
+      "314": 5,
+      "241": 5,
+      "343": 5,
+      "341": 5,
+      "173": 5,
+      "7": 5,
+      "49": 5,
+      "5": 5,
+      "154": 5,
+      "356": 5,
+      "175": 5,
+      "61": 5,
+      "215": 5,
+      "180": 5,
+      "3": 5,
+      "101": 5,
+      "361": 5,
+      "312": 5,
+      "137": 5,
+      "11": 5,
+      "31": 5,
+      "1": 5,
+      "123": 5,
+      "142": 5,
+      "40": 5,
+      "67": 5,
+      "57": 5,
+      "167": 5,
+      "118": 5,
+      "134": 5,
+      "162": 5,
+      "176": 5,
+      "21": 5,
+      "107": 5,
+      "363": 5,
+      "185": 5
+    },
+    "test": {
+      "254": 5,
+      "156": 5,
+      "140": 5,
+      "132": 5,
+      "300": 5,
+      "344": 5,
+      "166": 5,
+      "38": 5,
+      "203": 5,
+      "13": 5,
+      "239": 5,
+      "159": 5,
+      "135": 5,
+      "234": 5,
+      "314": 5,
+      "241": 5,
+      "343": 5,
+      "341": 5,
+      "173": 5,
+      "7": 5,
+      "49": 5,
+      "5": 5,
+      "154": 5,
+      "356": 5,
+      "175": 5,
+      "61": 5,
+      "215": 5,
+      "180": 5,
+      "3": 5,
+      "101": 5,
+      "361": 5,
+      "312": 5,
+      "137": 5,
+      "11": 5,
+      "31": 5,
+      "1": 5,
+      "123": 5,
+      "142": 5,
+      "40": 5,
+      "67": 5,
+      "57": 5,
+      "167": 5,
+      "118": 5,
+      "134": 5,
+      "162": 5,
+      "176": 5,
+      "21": 5,
+      "107": 5,
+      "363": 5,
+      "185": 5
+    }
+  },
+  "categories": [
+    [
+      1,
+      "/a/airplane_cabin"
+    ],
+    [
+      3,
+      "/a/alcove"
+    ],
+    [
+      5,
+      "/a/amphitheater"
+    ],
+    [
+      7,
+      "/a/amusement_park"
+    ],
+    [
+      11,
+      "/a/arcade"
+    ],
+    [
+      13,
+      "/a/archaelogical_excavation"
+    ],
+    [
+      21,
+      "/a/art_studio"
+    ],
+    [
+      31,
+      "/b/bakery/shop"
+    ],
+    [
+      38,
+      "/b/banquet_hall"
+    ],
+    [
+      40,
+      "/b/barn"
+    ],
+    [
+      49,
+      "/b/beach_house"
+    ],
+    [
+      57,
+      "/b/boardwalk"
+    ],
+    [
+      61,
+      "/b/booth/indoor"
+    ],
+    [
+      67,
+      "/b/building_facade"
+    ],
+    [
+      101,
+      "/c/conference_center"
+    ],
+    [
+      107,
+      "/c/cottage"
+    ],
+    [
+      118,
+      "/d/desert_road"
+    ],
+    [
+      123,
+      "/d/doorway/outdoor"
+    ],
+    [
+      132,
+      "/e/embassy"
+    ],
+    [
+      134,
+      "/e/entrance_hall"
+    ],
+    [
+      135,
+      "/e/escalator/indoor"
+    ],
+    [
+      137,
+      "/f/fabric_store"
+    ],
+    [
+      140,
+      "/f/field/cultivated"
+    ],
+    [
+      142,
+      "/f/field_road"
+    ],
+    [
+      154,
+      "/f/fountain"
+    ],
+    [
+      156,
+      "/g/garage/indoor"
+    ],
+    [
+      159,
+      "/g/gazebo/exterior"
+    ],
+    [
+      162,
+      "/g/gift_shop"
+    ],
+    [
+      166,
+      "/g/greenhouse/outdoor"
+    ],
+    [
+      167,
+      "/g/grotto"
+    ],
+    [
+      173,
+      "/h/hayfield"
+    ],
+    [
+      175,
+      "/h/highway"
+    ],
+    [
+      176,
+      "/h/home_office"
+    ],
+    [
+      180,
+      "/h/hot_spring"
+    ],
+    [
+      185,
+      "/i/ice_cream_parlor"
+    ],
+    [
+      203,
+      "/k/kitchen"
+    ],
+    [
+      215,
+      "/l/living_room"
+    ],
+    [
+      234,
+      "/m/mountain_snowy"
+    ],
+    [
+      239,
+      "/n/natural_history_museum"
+    ],
+    [
+      241,
+      "/n/nursing_home"
+    ],
+    [
+      254,
+      "/p/park"
+    ],
+    [
+      300,
+      "/s/shoe_shop"
+    ],
+    [
+      312,
+      "/s/stadium/baseball"
+    ],
+    [
+      314,
+      "/s/stadium/soccer"
+    ],
+    [
+      341,
+      "/t/tundra"
+    ],
+    [
+      343,
+      "/u/utility_room"
+    ],
+    [
+      344,
+      "/v/valley"
+    ],
+    [
+      356,
+      "/w/watering_hole"
+    ],
+    [
+      361,
+      "/w/windmill"
+    ],
+    [
+      363,
+      "/y/youth_hostel"
+    ]
+  ],
+  "metadata_sha256": {
+    "SOURCE_FREEZE.json": "9936e0c0fbe6e35a931edd99bc59cf2ebe849f9a5f9e0c93df5d2372bde090fd",
+    "DATA_READY.json": "14173a9ad216664e884520cf14bec96ea549b7127a2d8027fab2ebea8ca613c7",
+    "GENERATION_IDENTITY.json": "b6eb62f95f46fe88f39b710a62de78d335e9947d0d85255f7852d1512023f884",
+    "sample_plan.jsonl": "57e9674d0b144a2aecab5e5336c7e79114669681658daffd4797df8dc92c9565",
+    "source_manifest.jsonl": "2cbccb56c8e5a2868d24c554539e4890f35bb17ec00315c2b71187e5c90d39a5",
+    "sample_manifest.jsonl": "3306c98f724b1e8f875c618e87573b206e36c1c3bf7600c09ad2a12ac8a89f96"
+  },
+  "simulator_asset_sha256": {
+    "CANONICAL_CPU_REFERENCE.json": "5c19f9b3430f6ff31533d3f498a745460105f1e200d04b9af7752aedcbb08f1e",
+    "CANONICAL_CPU_REFERENCE.npz": "bab111fcb0e4ca7813e2712b2151102f2ca72376205195bbc3f730e50bfd4a28",
+    "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+    "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+    "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+  },
+  "weight_sha256": "b9d07ab6b32d37d895be65c50e99bbe6b2ae6e32823e7304ec2167bc5f18843f",
+  "weight_bytes": 580824471,
+  "filelist_archive": {
+    "path": "/data2/yanglin/physical_bridge/data/source_archives/filelist_places365-standard.tar",
+    "sha256": "520699e00d69b63ddc29fac54645aa00ce1c10ca42e288960aa1cf791d6e9aa9",
+    "bytes": 67498496
+  },
+  "disk": {
+    "total": 7619772022784,
+    "free": 4729850490880
+  },
+  "npu_smi": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 117.2       48                0    / 0             |\n| 0                         | 0000:C1:00.0  | 19          0    / 0          27289/ 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 95.4        48                0    / 0             |\n| 0                         | 0000:01:00.0  | 0           0    / 0          5807 / 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 94.4        50                0    / 0             |\n| 0                         | 0000:C2:00.0  | 0           0    / 0          3414 / 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 100.1       50                0    / 0             |\n| 0                         | 0000:02:00.0  | 0           0    / 0          3417 / 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 96.9        48                0    / 0             |\n| 0                         | 0000:81:00.0  | 0           0    / 0          3409 / 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 93.9        51                0    / 0             |\n| 0                         | 0000:41:00.0  | 0           0    / 0          3409 / 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 99.9        50                0    / 0             |\n| 0                         | 0000:82:00.0  | 0           0    / 0          3409 / 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 97.1        50                0    / 0             |\n| 0                         | 0000:42:00.0  | 0           0    / 0          3407 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| 0       0                 | 3541605       | python                   | 23928                   |\n+===========================+===============+====================================================+\n| 1       0                 | 2938958       |                          | 2452                    |\n+===========================+===============+====================================================+\n| No running processes found in NPU 2                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 4                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 5                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 6                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 7                                                            |\n+===========================+===============+====================================================+\n",
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "generation_identity": {
+    "G": 4.0,
+    "asset_sha256": {
+      "CANONICAL_CPU_REFERENCE.json": "5c19f9b3430f6ff31533d3f498a745460105f1e200d04b9af7752aedcbb08f1e",
+      "CANONICAL_CPU_REFERENCE.npz": "bab111fcb0e4ca7813e2712b2151102f2ca72376205195bbc3f730e50bfd4a28",
+      "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+      "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+      "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+    },
+    "backend": "npu",
+    "clamp": false,
+    "generator_file_sha256": "e1834b06398b8cbe85f9b88e885a42117db273e1dd3b61c2ebe6ef46d4789325",
+    "hf32": false,
+    "jit_compile": false,
+    "npu_precision": "must_keep_origin_dtype",
+    "numpy": "1.26.4",
+    "observation_dtype": "float32",
+    "physics_dtype": "float32",
+    "pixel_center_grid": true,
+    "raw_rng": "independent CPU torch.Generator.manual_seed per kind; torch.randn(dtype=float32) exact B=1 shape",
+    "raw_rng_helper_file_sha256": "408320f11964d8c8724d99abebd739e81c678cf4a58c84e2d48771dacbee4dcc",
+    "raw_shapes": {
+      "epsilon_tilt": [
+        1,
+        512,
+        512,
+        2
+      ],
+      "epsilon_zernike": [
+        1,
+        36,
+        512,
+        512
+      ]
+    },
+    "simulator_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+    "smooth_psf": true,
+    "source_freeze_sha256": "9936e0c0fbe6e35a931edd99bc59cf2ebe849f9a5f9e0c93df5d2372bde090fd",
+    "tilt_fft": "legacy_full",
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post2",
+    "vendor_simulator_sha256": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c"
+  },
+  "source_freeze": {
+    "G": 4.0,
+    "clamp_observations": false,
+    "dataset_id": "v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+    "expected_samples": {
+      "test": 1000,
+      "train": 8000,
+      "val": 1000
+    },
+    "expected_sources": {
+      "test": 250,
+      "train": 2000,
+      "val": 250
+    },
+    "new_test_exclusion_manifest_sha256": "de6446663fc38e0e447cadaa7bf5c27d2d08018fb968071d5d6db195e4035037",
+    "new_test_exclusion_root": "/data2/yanglin/datasets/places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+    "observation_dtype": "float32",
+    "observation_layout": "CHW",
+    "old_clean_root": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+    "old_observations_reused": false,
+    "old_source_manifest_sha256": "61249690d551b048096477e51e5ae387b67bc6599301236a58f26c117c260d51",
+    "original_archive": "/data2/yanglin/physical_bridge/data/source_archives/val_256.tar",
+    "original_archive_sha256": "24b4e639ef12a0012af525bc4cb443e4ab4aaea8369a1fb009b70e4a4aad5d48",
+    "physics": {
+      "adjustment": 1.0,
+      "aperture_diameter": 0.071,
+      "correlation": -0.05,
+      "image_size": 256,
+      "propagation_distance": 100.0,
+      "rf_range": 512,
+      "tilt_threshold": 0.02,
+      "wavelength": 5e-07
+    },
+    "preprocessing_file_sha256": "77ba79cb2faac2f75342427cf47a1ac9b8b5733137ac8f259f2d690f99907782",
+    "random_augmentation": false,
+    "raw_rng": "Per sample and per kind torch.Generator(device=cpu).manual_seed; torch.randn FP32; B=1 shape fixed; torch version pinned by GENERATION_IDENTITY.json; raw SHA recorded; raw arrays not stored.",
+    "raw_shapes": {
+      "epsilon_tilt": [
+        1,
+        512,
+        512,
+        2
+      ],
+      "epsilon_zernike": [
+        1,
+        36,
+        512,
+        512
+      ]
+    },
+    "sample_plan_sha256": "57e9674d0b144a2aecab5e5336c7e79114669681658daffd4797df8dc92c9565",
+    "scientific_target": "Places fixed 50 classes, same-category unseen-image generalization",
+    "selection_rule": "Preserve historical 2450 source/split identities; one SHA-ranked unused exact/near-distinct source per original category added to test; exclude all expanded historical sources.",
+    "selection_seed": 20261021,
+    "simulator_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+    "source_manifest_sha256": "2cbccb56c8e5a2868d24c554539e4890f35bb17ec00315c2b71187e5c90d39a5",
+    "test_model_evaluation": false
+  },
+  "tests_run": "metadata consistency and full weight/physics-asset hashes, no model execution",
+  "old_image_arrays_rehashed_this_gate": false,
+  "old_model_checkpoints_modified": false
+}

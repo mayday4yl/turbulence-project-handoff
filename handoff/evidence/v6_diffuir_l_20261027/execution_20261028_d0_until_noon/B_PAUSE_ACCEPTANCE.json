@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "last": {
+    "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/checkpoints/U009500.pt",
+    "sha256": "e49abaae1e487e63e73a3c3151b8f5585bd4945f9a15fde103ffc1bd572f7337",
+    "update": 9500,
+    "cursor": 95000,
+    "cpu_readback": true
+  },
+  "B_worker_and_controller_exited": true,
+  "sha_verified": true,
+  "no_automatic_AB_resume": true
+}

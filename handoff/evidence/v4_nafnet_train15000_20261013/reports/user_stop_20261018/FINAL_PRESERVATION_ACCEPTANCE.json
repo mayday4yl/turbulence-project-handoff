@@ -1,0 +1,89 @@
+{
+  "status": "PASS_EXPERIMENTS_STOPPED_RESULTS_AND_FULL_CHECKPOINTS_PRESERVED",
+  "direct_human_stop": true,
+  "automation_deleted": true,
+  "completed_methods": [
+    "D0",
+    "R0"
+  ],
+  "intentionally_stopped": {
+    "R08": 32891,
+    "L08": 21559
+  },
+  "not_all_methods_completed_U40000": true,
+  "full_checkpoints": {
+    "status": "PASS_ALL_FOUR_LATEST_FULL_CHECKPOINTS_LOCAL_SHA256",
+    "items": [
+      {
+        "method": "D0",
+        "global_update": 40000,
+        "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/D0/checkpoints/full_U40000.pt",
+        "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/D0_full_U40000.pt",
+        "sha256": "d0a66bb030a73527f0c86e9cd642fe8e704ac5316f48515fcbbf546b9711173b",
+        "bytes": 1885307919,
+        "verified_local_epoch": 1792303035.00265,
+        "seconds": 60.94495606422424
+      },
+      {
+        "method": "R0",
+        "global_update": 40000,
+        "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R0/checkpoints/full_U40000.pt",
+        "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/R0_full_U40000.pt",
+        "sha256": "73c7c7dea2f0722cae32ab52aeafefbe897f67cef76c44c270f5eae13a3be3e5",
+        "bytes": 1885307919,
+        "verified_local_epoch": 1792303097.546819,
+        "seconds": 62.54361581802368
+      },
+      {
+        "method": "R08",
+        "global_update": 32891,
+        "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R08/checkpoints/full_U32891.pt",
+        "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/R08_full_U32891.pt",
+        "sha256": "56f1e261b4f3d00cc8ef9f3606c14cb96862f8fb7540e74c38e29c7e432e033e",
+        "bytes": 1885308879,
+        "verified_local_epoch": 1792303155.237105,
+        "seconds": 57.689308881759644
+      },
+      {
+        "method": "L08",
+        "global_update": 21559,
+        "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/L08/checkpoints/full_U21559.pt",
+        "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/L08_full_U21559.pt",
+        "sha256": "50ff132f85369e79f592102a193e97cccc047e9cc37c5bd4c70636393ae86205",
+        "bytes": 1885308879,
+        "verified_local_epoch": 1792303211.792809,
+        "seconds": 56.55483078956604
+      }
+    ]
+  },
+  "result_archive": {
+    "status": "PASS_ALL_ARCHIVE_INTERNAL_FILE_SHA256_AND_BYTES",
+    "archive_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_existing_results.tar.gz",
+    "archive_sha256": "183a6204d4949df90448049f44f997e4ef7d829352a618e223780f8cac9a8385",
+    "archive_bytes": 143514152,
+    "file_count": 5710,
+    "uncompressed_file_bytes": 479577776,
+    "elapsed_seconds": 1.052192211151123,
+    "all_existing_results_read_only": true,
+    "new_inference": false
+  },
+  "CPU_validation": {
+    "status": "PASS_STOP_SAVE_CPU_VALIDATION",
+    "R08": {
+      "global_update": 32891,
+      "receipt": "R08_U32891/R08_U32891_SAVED_CPU_ACCEPTANCE.json",
+      "output_adapter_resolution": "READONLY_ADAPTER_RESOLUTION.json"
+    },
+    "L08": {
+      "global_update": 21559,
+      "receipt": "L08_U21559/L08_U21559_SAVED_CPU_ACCEPTANCE.json"
+    },
+    "all_model_EMA_optimizer_finite": true,
+    "optimizer_sampler_RNG_identity_nextLR_validated": true,
+    "new_checkpoint_loads_per_method": 1,
+    "no_GPU_launch_or_inference": true,
+    "local_time": "2026-10-18T13:58:28.851196+08:00"
+  },
+  "remote_user_stop_receipt_sha256": "2dfdb86211ea5a1a6a310e332515fa1f5b1dcafe52f0d538f8d6a96e69272d3c",
+  "no_auto_resume_authorized": true
+}

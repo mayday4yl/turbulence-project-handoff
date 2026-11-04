@@ -1,0 +1,44 @@
+version: train_v02
+master_seed: 20260826
+dataset_root: /data2/yanglin/physical_bridge/data/places_p2s_bridge_v01
+run_root: /data2/yanglin/physical_bridge/runs
+initial_checkpoint: /data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/frozen_checkpoint.pt
+model:
+  base_channels: 64
+  channel_multipliers: [1, 2, 4, 4, 4]
+  residual_blocks_per_level: 2
+  group_norm_groups: 32
+  severity_embedding_dim: 256
+  clean_activation: sigmoid
+  realization_activation: linear
+training:
+  optimizer: AdamW
+  betas: [0.9, 0.99]
+  weight_decay: 1.0e-4
+  gradient_clip: 1.0
+  ema: 0.999
+  network_precision: bfloat16
+  simulator_precision: float32
+  num_workers_per_rank: 2
+  prefetch_factor: 2
+  checkpoint_sample_interval: 32000
+  gradient_audit_batches: 128
+  stage_a:
+    sample_exposure: 128000
+    initial_learning_rate: 2.0e-5
+    final_learning_rate: 5.0e-6
+  stage_b:
+    sample_exposure: 96000
+    initial_learning_rate: 1.0e-5
+    final_learning_rate: 2.0e-6
+loss_weights:
+  clean: 1.0
+  degradation: 0.1
+  trajectory: 0.2
+  consensus: 0.05
+  clean_physical: 0.1
+  next_state: 0.2
+  rollout_clean: 0.2
+  reidentification: 0.1
+  rollout_trajectory: 0.1
+  rollout_next: 0.2

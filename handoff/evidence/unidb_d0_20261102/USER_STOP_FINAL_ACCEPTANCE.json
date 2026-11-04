@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "task": "user-requested safe stop, preservation, final native validation and diagnosis",
+  "formal_training_update": 45411,
+  "presentations": 4359456,
+  "post_stop_new_started_updates": 0,
+  "complete_final_validation": {
+    "strengths": [
+      0.5,
+      1,
+      2,
+      3,
+      4
+    ],
+    "images_per_strength": 1000,
+    "total": 5000
+  },
+  "full_checkpoint_CPU_readback": true,
+  "independent_local_checkpoint_SHA_copies": 3,
+  "native_best_latest_CPU_output_audit_images": 10000,
+  "additional_mean_ODE_CPU_audit_images": 1600,
+  "diagnostic_native_restoration_images": 4000,
+  "teacher_image_time_pairs": 198000,
+  "diagnostic_mean_ODE_images": 1600,
+  "CPU_NPU_forward_pairs": 24,
+  "fixed_figures_visually_verified": 6,
+  "all_own_training_evaluation_diagnostic_workers_and_CPU_controllers_exited": true,
+  "training_resume_forbidden": true,
+  "foreign_process_signals": 0,
+  "AB_started": false,
+  "restoration_quality_goal_met": false,
+  "external_real_turbulence_generalization_established": false,
+  "report": "FINAL_REPORT_ZH.md",
+  "required_evidence": {
+    "evidence/ENGINEERING_GATE.json": "45518d434e9b951d88ae9229848a4ae09a49bfad6d705ecb69b65b6bf0a570ec",
+    "evidence/RESUME_GATE.json": "1fe9fa24c85ec069e85caf9f9c4de1925f8a445e63c748febdd5e0ba42a05c1d",
+    "evidence/PILOT_STATE_AUDIT.json": "7e2db1b266c4f30a45ece650dbc53fd7f00b852d4b224c47262013799af4fe88",
+    "evidence/FORMAL_U0_IDENTITY.json": "5034db1a011beaf0cb2a6a3a9fb997e723e9fa786c7191a214ffb587b0bd3471",
+    "evidence/FINAL_CHECKPOINT_AUDIT.json": "75d62b24824c37db6af23e0676dd121ee2956daf7c96a73eca8cdf9544aa46dc",
+    "evidence/FINAL_OUTPUTS_CPU_AUDIT.json": "2c95f5f10487f42fee2a0eaae9848f5b49b40257b34ba797856816ba99aebdd4",
+    "evidence/USER_STOP_BOUNDARY_AUDIT.json": "1f8b30e55a2fdbc5bcd3e6db80e16aeec63dcda2995c3062641ac6ea6d68b82d",
+    "evidence/LOCAL_CHECKPOINT_PRESERVATION.json": "ecfac2cc9701367476dfcc4e331c21b2c7829c47ef7fce8170f2bc2e2ccd7a69",
+    "evidence/ALL_OWN_ACTORS_EXITED.json": "536db79f362ed451a8374eb8244f2e6b5f09f46fb3ff499da98e6ca58f14dec2",
+    "evidence/FINAL_FIGURE_VISUAL_QA.json": "6064b5dca524dd09ea4a1fc0177d6a4de8abb984ccb4967b9a6cfb7b6a493a4e",
+    "diagnosis_20261102/SUMMARY.json": "6cdbf85a54db35cc0895c67dc56b22b76c95557d8a7c7dd33f2374bc4fcda9f7",
+    "diagnosis_20261102/CPU_NPU_RGB256_PARITY.json": "690e0d90d078fd32f136f757ff1a320c0dff099e216c49b740c40503b29c10c8",
+    "diagnosis_20261102/SAMPLER_OUTPUTS_CPU_AUDIT.json": "c54fa3ffa34e48ae22d604ebc5f06fc6f17f108988f8ccfd5a153d254492351a",
+    "diagnosis_20261102/CHECKPOINT_SAMPLER_2X2.json": "d5fdab455dbed8d6dac3789bdee1d17158f4fd4132d4411fe14bd14ba32e87a6"
+  },
+  "completed_unix": 1793621706.3285625
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "created_unix": 1793700632.6229346,
+  "files": {
+    "training_worker.py": "81aac46fe9150fdc36d858d33275c0a34ae9d5e5a1b8acc9cb3cb5b06c9ea2c1",
+    "controller.py": "7819e3efa7dd72a20126fc3b1241ea15b8689a8d6d708a6c64caa11c104c0038",
+    "audit_state.py": "481710f049c97efff7def9d567685290e1ed370b3eb251270bbacaeb1ace5a39",
+    "improved_objective.py": "20aa4a11a11494436186ac3a8ad1ff56e47ed1b277ba7a5b9b3d21c45060ba98",
+    "validation.py": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f",
+    "protocol/AUDIT_STATE_FROZEN_TOLERANCES.json": "61bc51ce136f314de7cbbf8ea62c0c6dd1def3cce8881e03b9913879f76a7d3e",
+    "protocol/SHARED_CONTEXTS.json": "11958217c598b9de23183ae8b357c5b3e79b9ef466070b4657d77ac3e7bb1bc4",
+    "scripts/test_extension_worker_state.py": "0fdf4ea3a860c869062c5fdade6daaf6207e2f36ae625960393706e2b8bd1811",
+    "scripts/test_midnight_auditor_metadata.py": "dc34828f42898d2594758c3f73c5a8bc92475ec8b54ac3a7702309212fd93594",
+    "tests/test_controller_owned_cleanup.py": "4b66b6cf9b9d0b3d939ec3035f0827940eb6fac52c671d60d0309ab884ed0a55",
+    "evidence/EXTENSION_WORKER_CPU_SELFTEST.json": "55bdf823e4297d9143b55d210bc8f7add8dd288ddb18e7bb11f58b3864f5dfbc",
+    "evidence/EXTENSION_AUDITOR_CPU_TESTS.json": "93ee0f87e80721be4e9f9b95e953cfa10cc5eff55e214a06550a352714abc3ee",
+    "evidence/EXTENSION_CONTROLLER_CLEANUP_MOCK_TESTS.json": "198b786e8acb3238ab95bb572a802a5d45bf3b515155f1e6f99e5eeaadbe05de",
+    "evidence/MIDNIGHT_TRAINING_SOURCE_REVIEW.json": "a0f4ddf9eb5add73a2f3bdd5c2588443045bb6bae9010768709052e509b9b2dc",
+    "evidence/MIDNIGHT_TRAINING_INDEPENDENT_REVIEW.json": "f359461a798bc068e865074a1f84f7b261a10e7493c8e9bd4ebf915d4298de46",
+    "protocol/USER_AUTHORITY.json": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22",
+    "evidence/PARENT_STATE_AUDIT_original.json": "3f6d809fc4d1b18150c0ec4169b6ffefcebff955e1f57dca998e10a76df33f42",
+    "evidence/PARENT_STATE_AUDIT_improved.json": "acd6aa3dff5c34fb44876d5fd4cc1355e364e777acbe4207ddd614b1f700589b"
+  },
+  "scope": "Midnight continuation from naturally stopped18h full CPU-accepted parents; scientific recipe unchanged",
+  "ready_manifest_sha256": "30ee413b3aae7ec22d19dfee9afb4ebfc3d043bfdc41e7aba59351926ca5c9c8"
+}

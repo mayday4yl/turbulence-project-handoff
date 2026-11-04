@@ -1,0 +1,15 @@
+{
+  "purpose": "USER_FLEX_CHENCHAO_SHARE_RESOURCE_OVERLAY_V1",
+  "authorization_sha256": "b2757bf923582fed0f3af0e6b33e881a2dc1fd0e53aae42ffe555338d7bf4157",
+  "original_config_sha256": "cbbf12b52c2f5b0cdad7e1c25a54a2cf3f1a6fec731c8291cae16e4f9f892170",
+  "original_CONFIG_and_scientific_sources_preserved": true,
+  "resource_transformations": "dynamic selection and child dispatch; foreign memory in existing .85 peak gate; new generation/checkpoint identity binds resource revision",
+  "launch_peak_reservation_bytes": 64424509440,
+  "safety_margin_bytes": 1073741824,
+  "shared_process_uid": 1037,
+  "shared_process_user": "chenchao",
+  "maximum_account_GPUs": 2,
+  "all_unknown_processes_conservative_refusal": true,
+  "no_third_scientific_pilot": true,
+  "launch_reservation_basis": "conservative above previous micro16 measured training footprint; actual own migration peak plus foreign reserve plus1GiB must still fit85%"
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "Auxiliary inference-only ablation, user authorized; scientific training protocol and RAW/OFF primary tables unchanged",
+  "milestones": [
+    5000,
+    7500,
+    10000
+  ],
+  "methods": [
+    "R0",
+    "R08"
+  ],
+  "not_applicable": {
+    "D0": "No intermediate xi-refinement path affecting final clean",
+    "L08": "Linear state does not use xi; no new mechanism"
+  },
+  "weights": "raw",
+  "population": "val800",
+  "off": "Reuse committed main evaluation, no re-inference",
+  "network_batch": 2,
+  "refinement_execution": "per_sample_serial",
+  "steps": 40,
+  "candidate_count": 41,
+  "selection": "minimum total J, including initialization",
+  "initialization": "current xi_hat only",
+  "center": "current xi_hat, fixed",
+  "lambda_ref": 0.01,
+  "adam": {
+    "lr": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0
+  },
+  "regularizer": "sum squared differences across both native blocks divided by combined per-sample element count",
+  "only_nonterminal_stages": true,
+  "eta": "unchanged fixed evaluation start_id seeds",
+  "metrics": [
+    "PSNR",
+    "SSIM",
+    "LPIPS"
+  ],
+  "paired_unit": "same val start, aggregate by source for win-rate and bootstrap",
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20260929,
+    "unit": "source",
+    "CI": 0.95
+  },
+  "selection_affected": false,
+  "training_affected": false,
+  "primary_table_affected": false,
+  "runtime": "report separately, included in full stage delivery ETA",
+  "repeatability": "CUDA grid-sample backward may be nondeterministic; preserve single frozen implementation and repeat diagnostic evidence; do not claim bitwise xi repeatability"
+}

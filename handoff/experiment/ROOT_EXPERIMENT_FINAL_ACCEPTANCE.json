@@ -1,0 +1,309 @@
+{
+  "reviewer": "root",
+  "status": "PASS",
+  "native_validation": {
+    "status": "PASS_EXPLICIT_NATIVE_FINAL_RECEIPT",
+    "identities": {
+      "original:latest": {
+        "update": 67180,
+        "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+      },
+      "original:best": {
+        "update": 67180,
+        "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+      },
+      "improved:latest": {
+        "update": 40848,
+        "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+      },
+      "improved:best": {
+        "update": 10000,
+        "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+      }
+    },
+    "native_CPU_exit_unix": 1793727575.7159739,
+    "files": [
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/CANDIDATE_CHECKPOINT_BACKUP_AUDIT.json",
+        "bytes": 2463,
+        "sha256": "23625ae97f254c9d8242bf134daed88e7b505f1ce74c373c306b5404260dad01",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+        "bytes": 1490,
+        "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json",
+        "bytes": 7644,
+        "sha256": "07a9573f0652a2da61da276cce976faf8f6d04144e530534bb512a2bce35efc5",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/TRANSFER.json",
+        "bytes": 944,
+        "sha256": "dbe9de24a0f3b2a0d954286cee1d71c04c40f96b95eb696ce0e6f20d79a391c2",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/original/TRANSFER.json",
+        "bytes": 944,
+        "sha256": "3c1e2bae6581f2ae8bedb94a5504138752a0494cd9af3bbcf044ae8f9b5288a1",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/LOCAL_TRANSFER_PROCESS_EXIT.json",
+        "bytes": 980,
+        "sha256": "e2c5fc6862d52423686d5e311ea5e019d8712302941d08d1d0449382391da7d9",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+        "bytes": 5060,
+        "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+        "bytes": 7914,
+        "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_ATTACHMENT_RECEIPT.json",
+        "bytes": 4913,
+        "sha256": "715cfe51ae714d40ae036dd088b48ecb6410e1c371f9ef632c586df0cdaa71ea",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G1.png",
+        "bytes": 1202597,
+        "sha256": "7a80bc178d3a765ebd38b3286f906406cf6235b9648db63190509797aa4366d4",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G2.png",
+        "bytes": 1173403,
+        "sha256": "9edbb6729855e03445b9997090778baf3e8d7f5bec649915e9f480fa7ca4398f",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G3.png",
+        "bytes": 1147388,
+        "sha256": "5a100b57142c34359310fefc0644f4d70c637c8f57fe1a0c100fc3ce57d0b991",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G4.png",
+        "bytes": 1178042,
+        "sha256": "2de7b466e859a2fe85f4dd273a057e1446cb356134abceec902d743101540c36",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_TRAIN_GLOBAL.png",
+        "bytes": 163034,
+        "sha256": "db8a822493b48129ab1155634c1b202b23a6a885809943f179e61c6f8fe545de",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_VAL_4METRICS_FULL1000.png",
+        "bytes": 306151,
+        "sha256": "2f83306afc136641e05ab1b300c51580654e6ec97cb979a10d871a5f6f66c54d",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_VAL_4METRICS_MONITOR100.png",
+        "bytes": 222382,
+        "sha256": "0cc04de200b3414e6404498d0cafd084b5d1a4bbeaf382f28fafc19e963250c3",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route/VISUAL_QA.json",
+        "bytes": 1782,
+        "sha256": "3d994b295d866becdb7e13de6d0c1a2c7e35e47d3a5b8ba9c3e34248ff2c1473",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+        "bytes": 5579,
+        "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/ALL_OWNED_PROCESS_EXIT_AUDIT.json",
+        "bytes": 244149,
+        "sha256": "e1817f0e9752d9ae31fc2fc0c66a8a4b6ee68834ad126d0105e0303b252122e8",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CONTROLLER_EXIT.json",
+        "bytes": 115,
+        "sha256": "323cf71f801097b87e67e17cf406d192ee4812a94a614775149f376f06273853",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+        "bytes": 177,
+        "sha256": "a471f18c89d7c794159bf94f9bd3506290c1a69c076cf217e9ed935259076585",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_POSTPROCESS_ACCEPTANCE.json",
+        "bytes": 7221,
+        "sha256": "e9c560e0c00b614c23be8def0cdc14da013ee9b7c1d98a19521259290355f567",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+        "bytes": 26985,
+        "sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_RANK_UPDATE_METADATA.json",
+        "bytes": 121451,
+        "sha256": "b092f111dc7be5286418e496fb6218d55fc0d6b488d5d5af7eddc3a6a009243d",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_READY_SMALL_SYNC_ACCEPTANCE.json",
+        "bytes": 9043,
+        "sha256": "3ff87a55675e5cfa4c258f6bf34a2599173a75d99f76b3662f19187f05aa4224",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+        "bytes": 23288,
+        "sha256": "df2acaf91cd7ab5851616f5185d4d33984dfb0c5eb53e03a0f48ed73bdb313e2",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/OWNED_EXIT_PRECHECK_20261104_0112.json",
+        "bytes": 265470,
+        "sha256": "55aa079a5382324b4960e9636eef1769bf9b1b258d756e6e1bad3fdd4b6ac25c",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+        "bytes": 203255,
+        "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+        "bytes": 204153,
+        "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+        "bytes": 205744,
+        "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+        "bytes": 205744,
+        "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/final_metadata_review/FINAL_METADATA_REVIEW.json",
+        "bytes": 59297,
+        "sha256": "887a5ac1422303790a3ca62057b00e56d5f0446387bcf3174fde87c5cddf6c3f",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/figures/CAMPAIGN_DYNAMICS.png",
+        "bytes": 429645,
+        "sha256": "745821cdf1cdae7a1b14eb5f1ccb2ac12ddc7772683727b49e63d463daef6d1d",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/figures/FIXED_G4_BEST.png",
+        "bytes": 2404418,
+        "sha256": "e09a9e52224e637d4058762d9a23debee33aa8441f3c71a928824ccdffe0a326",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/figures/FIXED_G4_LATEST.png",
+        "bytes": 2420063,
+        "sha256": "53451213b0987668d73006438f38a99aa7e649877e080a0c9e1e6977f41273a9",
+        "kind": "fixed_final_figure"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+        "bytes": 2264,
+        "sha256": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json",
+        "bytes": 6719,
+        "sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FIGURE_MANIFEST.json",
+        "bytes": 12367,
+        "sha256": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/REPORT_STATUS.json",
+        "bytes": 13984,
+        "sha256": "9baa3c7830addac67b3a23a75bd487522789c5652d2383ce7ed40d6c8017e0c9",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/VISUAL_QA.json",
+        "bytes": 1187,
+        "sha256": "66887bfb97b80544861b4a37c2e3237dad051292a78f871aceb3b2acb4072ec0",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+        "bytes": 1486,
+        "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+        "kind": "final_metadata"
+      },
+      {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+        "bytes": 1492,
+        "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+        "kind": "final_metadata"
+      }
+    ],
+    "package_gate_source": {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/package_preparation/build_handoff_package.py",
+      "sha256": "41ed23a8e75e88ffaf091e47ea2c6d5023e743e515cbef76389c036d9b557fd9"
+    },
+    "adapters": {
+      "experiment_full_delivery_receipt": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+        "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac"
+      },
+      "all_owned_process_exit_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+        "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+      },
+      "unique_checkpoint_backup_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+        "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+      }
+    },
+    "network_calls": 0,
+    "model_calls": 0,
+    "optimizer_updates": 0,
+    "checkpoint_payload_reads": 0,
+    "scope": "Experimental native final acceptance only; final handoff document/package delivery remain separate"
+  },
+  "exit_reconciliation_source": {
+    "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery_preparation/audit_historical_identity_union_exit.py",
+    "bytes": 22983,
+    "sha256": "22b5d615ddf13a1601d3a24c6e66da5fd0923c70726cc74c766413c305b335b2"
+  },
+  "scope": "Final experiment artifacts locally accepted; chat delivery and project handoff remain separate"
+}

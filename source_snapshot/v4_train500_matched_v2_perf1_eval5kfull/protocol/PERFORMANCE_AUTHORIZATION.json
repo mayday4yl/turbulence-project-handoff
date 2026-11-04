@@ -1,0 +1,24 @@
+{
+  "user_authorized": true,
+  "recorded_utc": "2026-09-29T17:56:30.311540+00:00",
+  "target_5k_hours": 30,
+  "target_is_hard_requirement": false,
+  "max_updates_per_group": 10000,
+  "scope": "Engineering throughput tuning and scheduling; no scientific changes",
+  "candidates": [
+    "microbatch2/accumulation16 shared versus true solo GPU",
+    "uniform microbatch1 fallback only if needed",
+    "dynamic pause/resume, GPU5/6 reassignment, stage release after verified checkpoint"
+  ],
+  "forbidden": [
+    "change simulator/network/formulas",
+    "change FP32/TF32 settings",
+    "change evaluation batch/order/metrics",
+    "change LR/start stream/loss",
+    "extra GPU or training budget"
+  ],
+  "parent": "v4_train500_matched_v2",
+  "parent_protocol_hash": "e4517830c81a064be87d762f583244439c8df9759b086484899922c1b6128ca2",
+  "temporary_optimizer_steps_planned": 0,
+  "latest_scope": "User clarified legal microbatch choices 2 or uniform fallback1; microbatch4 draft removed before benchmark execution"
+}

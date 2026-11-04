@@ -1,0 +1,10 @@
+{
+  "user_instruction": "Finish existing benchmark and selected scheduling acceptance then immediately start; no more pretraining optimization projects",
+  "adopted": "serialized_updates with stage-boundary release and authorized GPU5/6 single-job relocation",
+  "microbatch": 2,
+  "accumulation": 16,
+  "effective_batch": 32,
+  "no_extra_optimizer_steps": true,
+  "not_adopted": "microbatch changes, extra candidates, AMP/TF32, DDP, scientific changes",
+  "after_start": "Once stable, use one short profile; only largest1-2 bottlenecks may justify more engineering work"
+}

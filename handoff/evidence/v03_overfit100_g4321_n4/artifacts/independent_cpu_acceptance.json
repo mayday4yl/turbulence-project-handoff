@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_hash_files": 2516,
+  "hash_manifest_sha256": "b896f9060a8ff012cafe476ec6c0bb1075e6291bfdec1eab7ff791dc8936b03b",
+  "sources": 100,
+  "trajectories": 400,
+  "starts": 1600,
+  "all_authoritative_arrays_decoded": 2500,
+  "replay_states": 1600,
+  "seed_replayed_realizations": 400,
+  "max_abs": 0.0,
+  "max_MSE": 0.0,
+  "subsets": {
+    "1": {
+      "trajectories": 1,
+      "starts": 4,
+      "sources": 1
+    },
+    "16": {
+      "trajectories": 16,
+      "starts": 64,
+      "sources": 16
+    },
+    "400": {
+      "trajectories": 400,
+      "starts": 1600,
+      "sources": 100
+    }
+  },
+  "scope": "Independent CPU verification of files and archived full NPU replay results; no new NPU inference"
+}

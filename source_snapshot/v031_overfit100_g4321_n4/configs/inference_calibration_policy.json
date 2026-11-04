@@ -1,0 +1,63 @@
+{
+  "format": "v031_calibration_policy_v1",
+  "calibrate_once_at_update": 100,
+  "checkpoint_weights": "raw",
+  "dataset_root": "/data2/yanglin/v03_overfit100_g4321_n4/data/places_p2s_bridge_v03_overfit100_g4321_n4",
+  "trajectory_manifest": "subsets/overfit_16traj_trajectories.jsonl",
+  "trajectory_manifest_sha256": "1c29ef06c68fe005002fa2157b597c272866f81bb7b9da86be4aa14e7694fea3",
+  "start_manifest_sha256": "9ee10f77a842f316301bff91adcda3ce3aa896c2c22cc25023866d573a7dd6d6",
+  "trajectory_ids": [
+    "Places365_val_00015052_r04",
+    "Places365_val_00035417_r04",
+    "Places365_val_00007264_r04",
+    "Places365_val_00011620_r04"
+  ],
+  "start_ids": [
+    "Places365_val_00015052_r04_G4",
+    "Places365_val_00015052_r04_G3",
+    "Places365_val_00015052_r04_G2",
+    "Places365_val_00035417_r04_G4",
+    "Places365_val_00035417_r04_G3",
+    "Places365_val_00035417_r04_G2",
+    "Places365_val_00007264_r04_G4",
+    "Places365_val_00007264_r04_G3",
+    "Places365_val_00007264_r04_G2",
+    "Places365_val_00011620_r04_G4",
+    "Places365_val_00011620_r04_G3",
+    "Places365_val_00011620_r04_G2"
+  ],
+  "expected_probe_count": 24,
+  "learning_rates": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "iteration_budgets": [
+    10,
+    20,
+    40
+  ],
+  "optimizer": "Adam",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "objective": "original_observation_single_image_full_RGB_mean_MSE",
+  "precision": "fp32",
+  "same_lr_for_both_native_blocks": true,
+  "optimizer_state": "reset_every_transition",
+  "return": "best_including_initialization",
+  "early_stopping": false,
+  "clipping": false,
+  "normalization": false,
+  "projection": false,
+  "clamp": false,
+  "selection_fraction": 0.95,
+  "timing_tie_fraction": 0.03,
+  "integration_attempt_limit": 3,
+  "low_signal_relative_improvement_threshold": 1e-06,
+  "probe_initialization": "network_xi_from_fixed_unrefined_rollout",
+  "selection_uses_GT": false
+}

@@ -1,0 +1,69 @@
+{
+  "purpose": "V4_G4_CONTINUOUS_DELTA_PILOT_20261013_V1",
+  "allowed_gpus": [
+    4,
+    5
+  ],
+  "seed": 20261013,
+  "max_updates": 1000,
+  "effective_batch": 32,
+  "peak_lr": 5e-05,
+  "min_lr": 1e-06,
+  "warmup_updates": 100,
+  "network": {
+    "image_size": 256,
+    "width": 64,
+    "enc_blk_nums": [
+      2,
+      2,
+      4,
+      8
+    ],
+    "middle_blk_num": 12,
+    "dec_blk_nums": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "decoder_channels": 64,
+    "use_checkpoint": true
+  },
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "asset_dir": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_train2000_npu_20k_20261003/assets/pirn",
+  "asset_sha256": {
+    "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+    "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+    "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+  },
+  "dataset_root": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+  "precision": "fp32",
+  "cache_bytes": 1073741824,
+  "pilot_disk_limit_bytes": 21474836480,
+  "account_quota_bytes": 2000000000000,
+  "account_safety_bytes": 107374182400,
+  "checkpoint_interval": 100,
+  "milestones": [
+    250,
+    500,
+    750,
+    1000
+  ],
+  "primary_eval_K": 4,
+  "weight": "online",
+  "refinement": false,
+  "Test": false,
+  "training_grid": "K=2/3/4 equal probability; internal equal-grid jitter +/-0.2 interval; full endpoints",
+  "loss": "path mean MAE(clean)+0.2 MAE(F(pred,original G4),Y4)",
+  "state_update": "Q+(F(pred,next_g)-F(pred,current_g))",
+  "minimum_grid_interval": 0.03125
+}

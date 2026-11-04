@@ -1,0 +1,51 @@
+{
+  "schema": "unidb_final_handoff_content_state_v1",
+  "status": "FINAL_EXPERIMENT_DELIVERY_COMPLETE",
+  "campaign": "unidb_dual_20261104_until00",
+  "handover_not_complete": false,
+  "identities": {
+    "original:latest": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "original:best": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "improved:latest": {
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+    },
+    "improved:best": {
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+    }
+  },
+  "evidence": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/unidb_evidence.json",
+    "bytes": 35576,
+    "sha256": "8ae509a88a9758cfc744ee39b10539a3e3d69c7391ce821e1083e01ea7b7b07e"
+  },
+  "history": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/unidb_history.md",
+    "bytes": 15066,
+    "sha256": "48542b7a6c5582857ad41acea206c71d1555abe65ef9e7e6d9cc8edd2e4d4ae6"
+  },
+  "upstream_registry": {
+    "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/FINAL_RECEIPT_REGISTRY_INPUT.json",
+    "bytes": 833,
+    "sha256": "24494e1d1bba98a070b4bf9e14508c054f4d27730a359d8abe80d0b3683537c9"
+  },
+  "native_validation_receipt": {
+    "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/EXPERIMENT_FINAL_RECEIPT_VALIDATION.json",
+    "bytes": 14478,
+    "sha256": "fa686b6a0cf4a176d04de44da16520fa9a36dfae156209ebda0290d433b5613e"
+  },
+  "updated_UTC": "2026-11-03T18:15:36.846524+00:00",
+  "scope": "Actual final experimental evidence, owned exit and unique byte backups; overall project Word/package/chat delivery separate",
+  "overall_project_handoff_complete": false,
+  "chat_delivery_performed": false,
+  "network_calls": 0,
+  "model_calls": 0,
+  "checkpoint_payload_reads": 0
+}

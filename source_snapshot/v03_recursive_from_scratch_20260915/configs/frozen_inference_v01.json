@@ -1,0 +1,79 @@
+{
+  "K": 0,
+  "checkpoint": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/checkpoints/frozen_checkpoint.pt",
+  "checkpoint_sha256": "34dc4dce03bd13ba4079100d4b195fcc0e8c3b07699e06ae12ca91e0aba48f47",
+  "k_selection": {
+    "candidates": [
+      {
+        "K": 0,
+        "lpips": 0.3989813767373562,
+        "name": "k_0",
+        "psnr": 22.13205792427063
+      },
+      {
+        "K": 1,
+        "lpips": 0.4001301269605756,
+        "name": "k_1",
+        "psnr": 21.950073029994964
+      },
+      {
+        "K": 3,
+        "lpips": 0.4587072628363967,
+        "name": "k_3",
+        "psnr": 21.414580941200256
+      },
+      {
+        "K": 5,
+        "lpips": 0.47547550838440655,
+        "name": "k_5",
+        "psnr": 21.21722909450531
+      }
+    ],
+    "rule": "max PSNR; within 0.05 dB lower LPIPS; then smaller K",
+    "selected": {
+      "K": 0,
+      "lpips": 0.3989813767373562,
+      "name": "k_0",
+      "psnr": 22.13205792427063
+    },
+    "source": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/val/k_selection/summary.json"
+  },
+  "learning_rate": 0.03,
+  "learning_rate_selection": {
+    "best": {
+      "learning_rate": 0.03,
+      "lpips": 0.6434134781360626,
+      "name": "lr_0.030",
+      "psnr": 18.692432403564453
+    },
+    "candidates": [
+      {
+        "learning_rate": 0.003,
+        "lpips": 0.6292174175381661,
+        "name": "lr_0.003",
+        "psnr": 18.61470079421997
+      },
+      {
+        "learning_rate": 0.01,
+        "lpips": 0.6043181523680687,
+        "name": "lr_0.010",
+        "psnr": 18.582097721099853
+      },
+      {
+        "learning_rate": 0.03,
+        "lpips": 0.6434134781360626,
+        "name": "lr_0.030",
+        "psnr": 18.692432403564453
+      }
+    ],
+    "rule": "keep 0.01 when within 0.05 dB of the best final PSNR",
+    "selected": {
+      "learning_rate": 0.03,
+      "lpips": 0.6434134781360626,
+      "name": "lr_0.030",
+      "psnr": 18.692432403564453
+    },
+    "source": "/data2/yanglin/physical_bridge/runs/bridge_v01_seed20260826/val/refinement_lr/summary.json"
+  },
+  "status": "FROZEN_FOR_TEST"
+}

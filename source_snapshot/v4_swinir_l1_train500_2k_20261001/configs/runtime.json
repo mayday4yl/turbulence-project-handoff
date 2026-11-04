@@ -1,0 +1,68 @@
+{
+  "method": "V4_SWINIR_L1_TRAIN500_2K",
+  "T0": 0.8,
+  "lambda_R": 0.2,
+  "seed": 20260929,
+  "maximum_training_optimizer_steps": 2000,
+  "network": {
+    "image_size": 256,
+    "embed_dim": 180,
+    "depths": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "num_heads": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "window_size": 8,
+    "mlp_ratio": 2.0,
+    "unshuffle_scale": 8,
+    "decoder_channels": 64,
+    "drop_path_rate": 0.0,
+    "use_checkpoint": false
+  },
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "asset_dir": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/assets/pirn_utils/PiRN_12b9ef6a32c7",
+  "asset_sha256": {
+    "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+    "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+    "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+  },
+  "dataset_root": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/data/generated/places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+  "dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+  "population": "train",
+  "precision": "FP32_autocast_and_TF32_off",
+  "gpu_uuid": "GPU-e49c0ca8-8eac-7cec-4ecb-228af638edfb",
+  "gpu_index": 2,
+  "normalization_artifact": "protocol/normalization_train500.json",
+  "parity_atol": 2e-05,
+  "parity_rtol": 0.0002,
+  "refinement_steps": 40,
+  "formal_training_authorized": true,
+  "asset_lock": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/ASSET_LOCK.json",
+  "architecture": "pirn_swin_rgb_noise_bridge_v1",
+  "metrics_torch_home": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_train500_matched_v2_perf1_eval5kfull/assets/torch",
+  "training_loss": "MAE"
+}

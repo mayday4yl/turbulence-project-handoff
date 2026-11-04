@@ -1,0 +1,84 @@
+{
+  "status": "METHOD_AND_DATA_DESIGN_ONLY_NOT_EXECUTION_PROTOCOL",
+  "design_id": "v4_rgb_four_arm_train500_linear08_v1",
+  "groups": {
+    "D0": {
+      "path": "direct",
+      "T0": 0,
+      "predictions": "1"
+    },
+    "R0": {
+      "path": "physical",
+      "T0": 0,
+      "predictions": "G"
+    },
+    "R08": {
+      "path": "physical",
+      "T0": 0.8,
+      "predictions": "G"
+    },
+    "L08": {
+      "path": "linear_predicted_clean_to_original_Y",
+      "T0": 0.8,
+      "predictions": "G"
+    }
+  },
+  "linear_path": {
+    "K": "G",
+    "g_k": "G-k+1",
+    "a_k_K_gt_1": "(K-k)/(K-1)",
+    "t_k_K_gt_1": "0.8*(K-k)/(K-1)",
+    "K_eq_1": {
+      "state": "Y",
+      "t": 0,
+      "predictions": 1,
+      "transitions": 0
+    },
+    "state_1": "Y",
+    "state_next": "(1-a_next)*predicted_clean_current+a_next*original_Y",
+    "noise_mix": "(1-t)*state+t*mu+s*t*eta",
+    "same_eta_within_rollout": true,
+    "fresh_eta_each_training_exposure": true,
+    "training_state_from_GT_clean": false,
+    "detach_training_transition": false,
+    "refinement": false,
+    "final_prediction": "C_hat_K",
+    "next_state_after_final": false
+  },
+  "common_model": "existing V4 small RGB 6-channel joint [g,t] model; clean sigmoid + two native raw-xi outputs",
+  "common_loss": "mean_b(mean_k(MSE(C_hat_bk,C_b)+0.2*MSE(F(C_hat_bk,xi_hat_bk,G_b),Y_b)))",
+  "common_primary_eval": "raw weights; refinement OFF; original floating RGB PSNR/SSIM/LPIPS; Y baseline",
+  "data": {
+    "dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+    "train_sources": 500,
+    "train_realizations_per_source": 4,
+    "train_starts": 8000,
+    "val_sources": 100,
+    "val_realizations_per_source": 2,
+    "val_starts": 800,
+    "test_sources_reserved": 200,
+    "test_starts_reserved": 1600,
+    "test_used_in_this_round": false,
+    "resolution": [
+      256,
+      256
+    ],
+    "new_data_generation_needed_for_chosen_scope": false,
+    "normalization_population": "all 8000 unique train500 physical states; one frozen artifact shared by all four groups; recompute before formal training"
+  },
+  "resource_target": {
+    "max_A100_cards": 2,
+    "independent_runs_per_card": 2,
+    "concurrent_runs": 4,
+    "common_effective_batch": null,
+    "microbatch_accumulation_and_pairing": "to be chosen by bounded shared-GPU acceptance and throughput tests; no automatic resource availability claim"
+  },
+  "future_training_plan_required": {
+    "exposures_per_group": null,
+    "optimizer_updates_per_group": null,
+    "learning_rate_schedule": null,
+    "evaluation_and_checkpoint_cadence": null,
+    "formal_start_authorized_by_this_document": false
+  },
+  "local_dataset_audit_sha256": "d481dfc7d195cae6a3288009ecbbcacc490d3f51f55e44a72af58669489557e5"
+}

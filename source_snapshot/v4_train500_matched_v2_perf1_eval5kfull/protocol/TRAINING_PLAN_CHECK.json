@@ -1,0 +1,388 @@
+{
+  "status": "PASS_LOCAL_PLAN_INVARIANTS_AND_SYNTHETIC_RULE_CHECKS_ONLY",
+  "plan_id": "v4_train500_four_arm_matched_v2",
+  "revision_id": "reporting_eval_addendum_v1",
+  "runtime_training_verified": false,
+  "new_training_optimizer_steps": 0,
+  "remote_access_performed": false,
+  "numerical_evaluation_repeat_check_executed": false,
+  "GPU_mutex_runtime_verified": false,
+  "training_sufficiency_established": false,
+  "formal_training_started": false,
+  "assertion_count": 89,
+  "checks": [
+    "unchanged: plan_id",
+    "unchanged: groups",
+    "unchanged: data",
+    "unchanged: batch",
+    "unchanged: optimizer",
+    "unchanged: EMA",
+    "unchanged: precision",
+    "unchanged: seeds",
+    "unchanged: preflight",
+    "unchanged: new_paths_proposed_not_created",
+    "unchanged: parent_method_spec_sha256",
+    "unchanged: parent_data_scope_audit_sha256",
+    "unchanged: planned_monitor_lists_sha256",
+    "unchanged LR field: common_stage1_updates",
+    "unchanged LR field: warmup_updates",
+    "unchanged LR field: peak",
+    "unchanged LR field: end",
+    "unchanged LR field: warmup",
+    "unchanged LR field: decay",
+    "unchanged LR field: same_value_at_same_update_all_groups",
+    "unchanged LR field: dependent_on_runtime_or_compute_cost",
+    "unchanged LR field: future_extension",
+    "unchanged budget: primary",
+    "unchanged budget: stage1_updates_per_group",
+    "unchanged budget: stage1_exposures_per_group",
+    "unchanged budget: stage1_epochs_per_group",
+    "unchanged budget: effective_batch",
+    "unchanged budget: same_ordered_start_stream",
+    "unchanged budget: same_LR_at_same_update",
+    "unchanged budget: reference_hours_cap",
+    "unchanged budget: compute_or_walltime_determines_updates",
+    "unchanged budget: cost_role",
+    "unchanged budget: stop",
+    "unchanged extension constraint: automatic",
+    "unchanged extension constraint: included_in_stage1",
+    "unchanged extension constraint: suggested_common_additional_updates",
+    "unchanged extension constraint: suggested_additional_exposures",
+    "unchanged extension constraint: suggested_lr",
+    "unchanged extension constraint: resume",
+    "unchanged extension constraint: must_keep_all_four_groups_same_new_update_endpoint",
+    "file unchanged: METHOD_AND_DATA_SPEC.json",
+    "file unchanged: DATA_SCOPE_AUDIT.json",
+    "file unchanged: PLANNED_MONITOR_LISTS.json",
+    "matched budget arithmetic",
+    "plan does not authorize launch",
+    "best-val uses all41 registered RAW nodes",
+    "EMA cadence unchanged",
+    "full-train anchors unchanged",
+    "flat best-val tie selects initialization",
+    "global-max tolerance selection avoids nontransitive online tie rule",
+    "missing/nonfinite best-val node rejected",
+    "prior trigger window fixed",
+    "last trigger window fixed",
+    "prior epoch/update mapping",
+    "last epoch/update mapping",
+    "trigger thresholds preset at0.05 and0.02dB",
+    "synthetic trigger: flat",
+    "synthetic trigger: rising",
+    "synthetic trigger: persistent_decline",
+    "synthetic trigger: tiny_pullback",
+    "synthetic trigger: threshold_equal",
+    "synthetic trigger: below_threshold",
+    "any of all four methods can trigger; not restricted to recursive methods",
+    "incomplete group blocks overall review",
+    "trigger never auto-starts +5000",
+    "progression Overall excludes G1",
+    "synthetic equal-G first-final aggregation",
+    "all five mandatory contrasts",
+    "source win-rate retains ties in denominator",
+    "bootstrap remains source-cluster10000",
+    "mutex forbids both peer evaluation and training during lease",
+    "mutex requires boundary ACK and accounts for paused-peer memory",
+    "full55GB tensor archive not required or enabled by default",
+    "fixed40 qualitative includes both layouts",
+    "three exact main figure names",
+    "three exact main table names",
+    "Markdown contains required artifact/status: train_val_psnr_curve",
+    "Markdown contains required artifact/status: train_val_loss_curve",
+    "Markdown contains required artifact/status: progression_by_G",
+    "Markdown contains required artifact/status: main_performance_table",
+    "Markdown contains required artifact/status: paired_ablation_table",
+    "Markdown contains required artifact/status: progression_by_G_table",
+    "Markdown contains required artifact/status: best_validation_capability_table",
+    "Markdown contains required artifact/status: TRAINING_NOT_SATURATED",
+    "Markdown contains required artifact/status: EXTENSION_TRIGGER_NOT_MET",
+    "Markdown contains required artifact/status: REVIEW_INCOMPLETE",
+    "stale conflicting text removed: 本版不新增自动数值plateau",
+    "stale conflicting text removed: 全量浮点输出只在U=10,000保存",
+    "stale conflicting text removed: 一组评估/另一组训练的重叠"
+  ],
+  "synthetic_cases": {
+    "best_val_global_tie": {
+      "selected_update": 250,
+      "same_checkpoint_all_metrics": true
+    },
+    "flat": {
+      "status": "EXTENSION_TRIGGER_NOT_MET",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.0,
+          "B_minus_A": 0.0,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.0,
+          "B_minus_A": 0.0,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.0,
+          "B_minus_A": 0.0,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.0,
+          "B_minus_A": 0.0,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        }
+      }
+    },
+    "rising": {
+      "status": "TRAINING_NOT_SATURATED",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.069,
+          "B_minus_A": 0.06899999999999906,
+          "D": 0.00999999999999801,
+          "beta": 0.001999999999999968,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.069,
+          "B_minus_A": 0.06899999999999906,
+          "D": 0.00999999999999801,
+          "beta": 0.001999999999999968,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.069,
+          "B_minus_A": 0.06899999999999906,
+          "D": 0.00999999999999801,
+          "beta": 0.001999999999999968,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.069,
+          "B_minus_A": 0.06899999999999906,
+          "D": 0.00999999999999801,
+          "beta": 0.001999999999999968,
+          "persistent_decline": false,
+          "trigger": true
+        }
+      }
+    },
+    "persistent_decline": {
+      "status": "EXTENSION_TRIGGER_NOT_MET",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.0975,
+          "B_minus_A": 0.09750000000000014,
+          "D": -0.02499999999999858,
+          "beta": -0.00500000000000006,
+          "persistent_decline": true,
+          "trigger": false
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.0975,
+          "B_minus_A": 0.09750000000000014,
+          "D": -0.02499999999999858,
+          "beta": -0.00500000000000006,
+          "persistent_decline": true,
+          "trigger": false
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.0975,
+          "B_minus_A": 0.09750000000000014,
+          "D": -0.02499999999999858,
+          "beta": -0.00500000000000006,
+          "persistent_decline": true,
+          "trigger": false
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.0975,
+          "B_minus_A": 0.09750000000000014,
+          "D": -0.02499999999999858,
+          "beta": -0.00500000000000006,
+          "persistent_decline": true,
+          "trigger": false
+        }
+      }
+    },
+    "tiny_pullback": {
+      "status": "TRAINING_NOT_SATURATED",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.0555,
+          "B_minus_A": 0.05549999999999855,
+          "D": -0.005000000000002558,
+          "beta": -0.0009999999999999948,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.0555,
+          "B_minus_A": 0.05549999999999855,
+          "D": -0.005000000000002558,
+          "beta": -0.0009999999999999948,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.0555,
+          "B_minus_A": 0.05549999999999855,
+          "D": -0.005000000000002558,
+          "beta": -0.0009999999999999948,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.0555,
+          "B_minus_A": 0.05549999999999855,
+          "D": -0.005000000000002558,
+          "beta": -0.0009999999999999948,
+          "persistent_decline": false,
+          "trigger": true
+        }
+      }
+    },
+    "threshold_equal": {
+      "status": "TRAINING_NOT_SATURATED",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.05,
+          "B_minus_A": 0.05000000000000071,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.05,
+          "B_minus_A": 0.05000000000000071,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.05,
+          "B_minus_A": 0.05000000000000071,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": true
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.05,
+          "B_minus_A": 0.05000000000000071,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": true
+        }
+      }
+    },
+    "below_threshold": {
+      "status": "EXTENSION_TRIGGER_NOT_MET",
+      "group_results": {
+        "D0": {
+          "A": 20.0,
+          "B": 20.04,
+          "B_minus_A": 0.03999999999999915,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "R0": {
+          "A": 20.0,
+          "B": 20.04,
+          "B_minus_A": 0.03999999999999915,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "R08": {
+          "A": 20.0,
+          "B": 20.04,
+          "B_minus_A": 0.03999999999999915,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        },
+        "L08": {
+          "A": 20.0,
+          "B": 20.04,
+          "B_minus_A": 0.03999999999999915,
+          "D": 0.0,
+          "beta": 0.0,
+          "persistent_decline": false,
+          "trigger": false
+        }
+      }
+    }
+  },
+  "file_sha256": {
+    "METHOD_AND_DATA_SPEC.json": "b23a7ad30c1f422da46a15044b750f127efd0417a9a63ead7f4d480a4a4ecc72",
+    "DATA_SCOPE_AUDIT.json": "d481dfc7d195cae6a3288009ecbbcacc490d3f51f55e44a72af58669489557e5",
+    "PLANNED_MONITOR_LISTS.json": "d3199dd1ee6a2032b11b4f507c925e428a19ecd1c28cb31bc264022bbb72358c",
+    "TRAINING_PLAN.md": "8d54ffb7b61f9da17596efcb15c3dc491087f5b3646b8df7de6dfdecc782427c",
+    "TRAINING_PLAN_SPEC.json": "c08c6134f21268c261cb05cc0b167404da39338154bb0ddc8857812c5a0d7e73",
+    "check_training_plan.py": "451287266820a414be67ac60e947c919f00ec4ca318036a72108c69ab8f91443"
+  },
+  "prior_matched_v2_files_sha256": {
+    "TRAINING_PLAN.md": "e019fca35e4da552fcbdba161ae78f66ffc50dceaf4041998e4d4136653fd1ef",
+    "TRAINING_PLAN_SPEC.json": "bfde41e6e2da94d6f58ced2fcb90a1832397d596184519f9b71dc872832c703f",
+    "TRAINING_PLAN_CHECK.json": "a1241a47b3b095949b801eecdcd603367436928d2320bc4e00bf37a8bd7d4c73"
+  },
+  "reproduce": "python3 'output/v4_linear_path_design_20260929/check_training_plan.py'",
+  "source_counts": {
+    "old_train_sources": 100,
+    "additional_train_sources": 400,
+    "validation_sources": 100
+  },
+  "monitor_counts": {
+    "sources": 100,
+    "old_sources": 20,
+    "new_sources": 80,
+    "starts": 400,
+    "per_G": 100
+  },
+  "visual_counts": {
+    "train_sources": 5,
+    "val_sources": 5,
+    "starts": 40
+  },
+  "limitation": "No implementation, GPU numerical stability, mutex behavior, metric generation, model forward/backward or training has been tested by this local plan check."
+}

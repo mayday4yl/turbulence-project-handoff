@@ -1,0 +1,5 @@
+branch,prior_stage,new_stage,prior_last_completed_update,prior_last_completed_local_iso,extension_first_started_update,extension_first_update_started_local_iso,recorded_update_gap_minutes,scope
+original,until_noon,until18_extension,55760,2026-11-03T12:00:00+08:00,55761,2026-11-03T12:49:14+08:00,49.22606926759084,Committed update gap including validation/handoff/gates/initialization; not pure idle.
+original,until18_extension,until00_extension,61764,2026-11-03T18:00:00+08:00,61765,2026-11-03T18:17:26+08:00,17.4391694466273,Committed update gap including validation/handoff/gates/initialization; not pure idle.
+improved,until_noon,until18_extension,20000,2026-11-03T11:54:14+08:00,20001,2026-11-03T12:49:16+08:00,55.025858016808826,Committed update gap including validation/handoff/gates/initialization; not pure idle.
+improved,until18_extension,until00_extension,30000,2026-11-03T17:23:49+08:00,30001,2026-11-03T18:17:33+08:00,53.73866404692332,Committed update gap including validation/handoff/gates/initialization; not pure idle.

@@ -1,0 +1,892 @@
+{
+  "status": "PROPOSED_MATCHED_UPDATE_STAGE1_PLAN_NOT_EXECUTED_NOT_RUNTIME_FROZEN",
+  "plan_id": "v4_train500_four_arm_matched_v2",
+  "formal_training_authorized_by_this_document": false,
+  "planning_turn_actual_training_optimizer_steps": 0,
+  "parent_method_spec_sha256": "b23a7ad30c1f422da46a15044b750f127efd0417a9a63ead7f4d480a4a4ecc72",
+  "parent_data_scope_audit_sha256": "d481dfc7d195cae6a3288009ecbbcacc490d3f51f55e44a72af58669489557e5",
+  "planned_monitor_lists_sha256": "d3199dd1ee6a2032b11b4f507c925e428a19ecd1c28cb31bc264022bbb72358c",
+  "groups": {
+    "D0": {
+      "path": "direct",
+      "T0": 0,
+      "predictions": "1"
+    },
+    "R0": {
+      "path": "physical",
+      "T0": 0,
+      "predictions": "G"
+    },
+    "R08": {
+      "path": "physical",
+      "T0": 0.8,
+      "predictions": "G"
+    },
+    "L08": {
+      "path": "linear_predicted_clean_to_original_Y",
+      "T0": 0.8,
+      "predictions": "G"
+    }
+  },
+  "data": {
+    "dataset_id": "places_p2s_a100_20260928_g4321_s500_v100_t200_v1",
+    "train_sources": 500,
+    "train_realizations_per_source": 4,
+    "train_starts": 8000,
+    "val_sources": 100,
+    "val_realizations_per_source": 2,
+    "val_starts": 800,
+    "test_sources_reserved": 200,
+    "test_starts_reserved": 1600,
+    "test_used_in_this_round": false,
+    "resolution": [
+      256,
+      256
+    ],
+    "new_data_generation_needed_for_chosen_scope": false,
+    "normalization_population": "all 8000 unique train500 physical states; one frozen artifact shared by all four groups; recompute before formal training"
+  },
+  "budget": {
+    "primary": "matched_optimizer_updates_and_start_record_exposures",
+    "stage1_updates_per_group": {
+      "D0": 10000,
+      "R0": 10000,
+      "R08": 10000,
+      "L08": 10000
+    },
+    "stage1_exposures_per_group": {
+      "D0": 320000,
+      "R0": 320000,
+      "R08": 320000,
+      "L08": 320000
+    },
+    "stage1_epochs_per_group": {
+      "D0": 40,
+      "R0": 40,
+      "R08": 40,
+      "L08": 40
+    },
+    "effective_batch": 32,
+    "same_ordered_start_stream": true,
+    "same_LR_at_same_update": true,
+    "stage1_is_proposed_checkpoint_not_sufficiency_guarantee": true,
+    "training_sufficiency": "determined by frozen operational trigger at10k; not-triggered is not proof of convergence",
+    "reference_hours_cap": null,
+    "compute_or_walltime_determines_updates": false,
+    "cost_role": "separate reporting and ETA only",
+    "stop": "all groups stop stage1 at update10000 for sufficiency review; no per-arm early stop",
+    "extension": {
+      "automatic": false,
+      "included_in_stage1": false,
+      "suggested_common_additional_updates": 5000,
+      "suggested_additional_exposures": 160000,
+      "suggested_lr": 1e-05,
+      "resume": "each own optimizer/EMA/stream/RNG; no LR history rewrite",
+      "must_keep_all_four_groups_same_new_update_endpoint": true,
+      "recommendation_trigger_ref": "evaluation.sufficiency_review",
+      "only_after_explicit_user_authorization": true
+    }
+  },
+  "batch": {
+    "effective": 32,
+    "world_size": 1,
+    "microbatch_preferred": 2,
+    "accumulation_preferred": 16,
+    "microbatch_memory_fallback": 1,
+    "accumulation_fallback": 32,
+    "all_groups_same_microbatch": true,
+    "starts_per_G_per_update": 8,
+    "updates_per_full_epoch": 250,
+    "epoch_starts": 8000,
+    "tail_policy": "no padding/drop; stage1 ends after 40 complete epochs and 10000 full updates"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "no_decay": "bias and normalization",
+    "global_gradient_clip": 1.0
+  },
+  "learning_rate": {
+    "common_stage1_updates": 10000,
+    "warmup_updates": 500,
+    "peak": 0.0001,
+    "end": 1e-05,
+    "warmup": "1e-4*u/500 for 1<=u<=500",
+    "decay": "1e-5+0.5*(1e-4-1e-5)*(1+cos(pi*(u-500)/9500)) for 500<u<=10000",
+    "same_value_at_same_update_all_groups": true,
+    "dependent_on_runtime_or_compute_cost": false,
+    "future_extension": "if separately approved, common schedule from saved state; do not rewrite this history",
+    "provenance": {
+      "warmup_ratio_current": "500/10000 = 0.05",
+      "warmup_ratio_historical_reference": "50/1000 = 0.05",
+      "warmup_reference_path": "v4_noise_bridge_training_20260929/docs/TRAINING_PLAN.md section5",
+      "final_lr_classification": "new explicitly registered choice for this longer training horizon; not direct inheritance from the user-referenced old Pilot1e-6",
+      "user_referenced_old_pilot_final_lr": 1e-06,
+      "user_referenced_old_pilot_source_status": "not located in current local source check; do not generalize to all historical V4 runs",
+      "verified_old_32k_three_arm_final_lr": 1e-05,
+      "verified_old_32k_source": "v4_noise_bridge_training_20260929/docs/TRAINING_PLAN.md section5",
+      "current_lr_schedule_values_changed": false,
+      "lr_search_allowed": false
+    }
+  },
+  "EMA": {
+    "decay_per_update": 0.996,
+    "copy_buffers": true
+  },
+  "precision": {
+    "dtype": "float32",
+    "autocast": false,
+    "tf32": false
+  },
+  "seeds": {
+    "master": 20260929,
+    "paired_R08_L08_eta": true,
+    "training_eta_key": "namespace|epoch|start_id",
+    "eval_eta_key": "eval|20260929|start_id",
+    "hash": "SHA256 first8bytes little-endian mod(2**63-1)",
+    "eta_tensor": "torch.randn((3,256,256), dtype=float32, device=cuda, per-record CUDA generator)",
+    "data_stream": "independent per-G epoch shuffle, 8/G/update, independent within-batch shuffle"
+  },
+  "resource": {
+    "host": "10.94.2.1",
+    "max_A100_cards": 2,
+    "preferred_mapping": {
+      "5": [
+        "R08",
+        "D0"
+      ],
+      "6": [
+        "R0",
+        "L08"
+      ]
+    },
+    "max_training_or_eval_GPU_processes_per_card": 2,
+    "DDP": false,
+    "pinned_cache_MiB_per_process": 512,
+    "cpu_array_cache_GiB_per_process": 2,
+    "memory_headroom": "max(4GiB, 10% of device total)",
+    "live_GPU_availability_verified": false,
+    "shared_card_acceptance_passed": false,
+    "evaluation_mutex": {
+      "scope": "one coordinated evaluation lease per physical GPU UUID",
+      "per_card_max_evaluators": 1,
+      "peer_training_allowed_during_eval": false,
+      "peer_pause_boundary": "complete current accumulated optimizer+EMA step, CUDA synchronize, acknowledge U/E",
+      "grant_requires_live_peer_pause_ACK": true,
+      "waiter_advances_training_state": false,
+      "covers": [
+        "train-monitor400",
+        "full_train8000_if_due",
+        "val800",
+        "raw",
+        "EMA",
+        "LPIPS",
+        "metrics/hash and fixed-image commit"
+      ],
+      "queue": "FIFO coordinator tickets; fixed card-local method order for simultaneous requests",
+      "tie_order": {
+        "5": [
+          "R08",
+          "D0"
+        ],
+        "6": [
+          "R0",
+          "L08"
+        ]
+      },
+      "two_GPU_leases_independent": true,
+      "pending_eval_ticket_priority_before_training_resume": true,
+      "release": "after evaluation result commit, CUDA sync, RAW/train-mode/buffer restoration and temporary LPIPS/EMA residency cleanup",
+      "finished_peer": "verified terminal state counts as ACK",
+      "missing_or_failed_peer": "fail safe; no implicit ACK; preserve evidence and avoid duplicate commits",
+      "paused_peer_resident_model_optimizer_in_memory_acceptance": true,
+      "automatic_offload_or_precision_or_microbatch_change": false,
+      "extra_GPU_evaluator_process_allowed": false,
+      "waiting_time_reported_separately": true,
+      "acceptance_cases": [
+        "simultaneous requests",
+        "one peer already complete",
+        "evaluation failure and recovery"
+      ],
+      "required_log_fields": [
+        "gpu_uuid",
+        "job",
+        "ticket",
+        "request_time",
+        "peer_pause_ack",
+        "peer_U",
+        "peer_E",
+        "eval_start",
+        "eval_end",
+        "release_time",
+        "error"
+      ],
+      "acceptance_assertions": [
+        "no same-GPU eval overlap",
+        "no peer training kernels during eval",
+        "peer U/E/sampler/RNG unchanged while paused",
+        "no deadlock",
+        "no duplicate committed evaluation"
+      ],
+      "runtime_verified": false
+    }
+  },
+  "evaluation": {
+    "primary_weights": "raw",
+    "EMA": "secondary",
+    "refinement": false,
+    "refine_on_supplement_planned": false,
+    "network_batch": 2,
+    "metric_batch": 1,
+    "world_size": 1,
+    "raw_curve_population": [
+      "train_monitor400",
+      "val800"
+    ],
+    "raw_curve_nodes": "0 and every250updates (each epoch) through10000",
+    "EMA_nodes": "0 and every1250updates (each5epochs) through10000",
+    "full_train8000_nodes": [
+      0,
+      5000,
+      7500,
+      10000
+    ],
+    "losses": [
+      "path_clean_MSE",
+      "path_reconstruction_MSE",
+      "path_weighted_reconstruction_MSE",
+      "path_total",
+      "final_clean_MSE"
+    ],
+    "metrics": [
+      "PSNR",
+      "SSIM",
+      "LPIPS"
+    ],
+    "metrics_spec": {
+      "PSNR": {
+        "implementation": "original v4.core.mse then -10*log10",
+        "data_range": 1.0,
+        "reduction": "per-image mean over RGB/H/W",
+        "arithmetic": "torch FP32 on CUDA"
+      },
+      "SSIM": {
+        "implementation": "skimage.metrics.structural_similarity",
+        "package": "scikit-image==0.25.2",
+        "data_range": 1.0,
+        "channel_axis": 2,
+        "gaussian_weights": true,
+        "win_size": 11,
+        "sigma": 1.5,
+        "use_sample_covariance": false,
+        "K1": 0.01,
+        "K2": 0.03,
+        "arithmetic": "float64 CPU; mean of RGB channel scores",
+        "border": "library crops 5-pixel window border from SSIM map; no input crop"
+      },
+      "LPIPS": {
+        "implementation": "official lpips.LPIPS",
+        "package": "lpips==0.1.4",
+        "net": "alex",
+        "version": "0.1",
+        "pretrained": true,
+        "pnet_rand": false,
+        "lpips": true,
+        "spatial": false,
+        "eval_mode": true,
+        "arithmetic": "FP32 CUDA",
+        "normalization": "normalize=True, exactly 2*x-1 then official v0.1 ScalingLayer",
+        "metric_batch": 1
+      },
+      "preprocessing": {
+        "resolution": [
+          256,
+          256
+        ],
+        "channels": "RGB",
+        "units": "original floating RGB",
+        "clamp": false,
+        "resize": false,
+        "quantization": false,
+        "per_image_standardization": false,
+        "PNG_used_for_metrics": false
+      },
+      "directions": {
+        "psnr": "higher",
+        "ssim": "higher",
+        "lpips": "lower"
+      }
+    },
+    "metric_asset_sha256": {
+      "assets/torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+      "deps/lpips/weights/v0.1/alex.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+    },
+    "baseline": "Input Y for all evaluated populations",
+    "primary_checkpoint": "all four methods RAW refinement-OFF update10000; primary matched-update ablation",
+    "primary_pairs": [
+      "R0-D0",
+      "R08-R0",
+      "R08-D0",
+      "L08-D0",
+      "R08-L08"
+    ],
+    "bootstrap": {
+      "unit": "source cluster",
+      "replicates": 10000,
+      "seed": 20260929,
+      "interval": 0.95,
+      "training_seed_uncertainty_covered": false,
+      "generator": "NumPy Generator(PCG64)",
+      "same_index_matrix_for_all_contrasts": true,
+      "index_matrix_hash_required": true,
+      "resample_size_sources": 100,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "percentile_method": "linear"
+    },
+    "test200_used": false,
+    "main_curve_axis": "optimizer updates or start-record exposures; epoch auxiliary",
+    "sufficiency_review": {
+      "review_at_update": 10000,
+      "population": "full_val800",
+      "weights": "raw",
+      "refinement": false,
+      "eval_eta": "fixed per registered start",
+      "all_four_groups_and_all20_window_nodes_complete_finite_required": true,
+      "prior_epochs": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "last_epochs": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "prior_updates": [
+        5250,
+        5500,
+        5750,
+        6000,
+        6250,
+        6500,
+        6750,
+        7000,
+        7250,
+        7500
+      ],
+      "last_updates": [
+        7750,
+        8000,
+        8250,
+        8500,
+        8750,
+        9000,
+        9250,
+        9500,
+        9750,
+        10000
+      ],
+      "A": "mean(raw_val_PSNR_epoch21..30)",
+      "B": "mean(raw_val_PSNR_epoch31..40)",
+      "D": "mean(raw_val_PSNR_epoch36..40)-mean(raw_val_PSNR_epoch31..35)",
+      "beta": "OLS slope raw_val_PSNR vs epoch over31..40; dB/epoch",
+      "improvement_threshold_db": 0.05,
+      "persistent_decline_halfwindow_threshold_db": 0.02,
+      "persistent_decline": "beta<0 AND D<=-0.02",
+      "per_group_trigger": "B-A>=0.05 AND NOT persistent_decline",
+      "aggregation": "any(D0,R0,R08,L08) after all required records are complete",
+      "triggered_status": "TRAINING_NOT_SATURATED",
+      "not_triggered_status": "EXTENSION_TRIGGER_NOT_MET",
+      "incomplete_status": "REVIEW_INCOMPLETE",
+      "not_triggered_means_converged": false,
+      "uses_unrounded_metrics": true,
+      "change_after_formal_results_forbidden": true,
+      "action": "propose four-group common +5000 updates only; no automatic execution or single-group continuation",
+      "record_fields": [
+        "A",
+        "B",
+        "B_minus_A",
+        "D",
+        "beta",
+        "persistent_decline",
+        "per_group_trigger",
+        "overall_status"
+      ],
+      "pre_FROZEN_numerical_repeat_check": {
+        "executed": false,
+        "groups": [
+          "D0",
+          "R0",
+          "R08",
+          "L08"
+        ],
+        "model": "independent temporary frozen model snapshot per method; no formal training result",
+        "population": "full_val800",
+        "repeats": 3,
+        "same_checkpoint_eta_batch_dtype": true,
+        "under_eval_mutex": true,
+        "max_overall_PSNR_range_db": 0.005,
+        "per_start_differences_logged": true,
+        "optimizer_steps": 0,
+        "failure": "do not freeze; resolve numerical issues or explicitly revise thresholds before formal results; never tune post-hoc"
+      },
+      "evidence_scope": "preset operational continuation recommendation; not convergence proof or statistical significance test"
+    },
+    "raw_eval_update_nodes": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000,
+      2250,
+      2500,
+      2750,
+      3000,
+      3250,
+      3500,
+      3750,
+      4000,
+      4250,
+      4500,
+      4750,
+      5000,
+      5250,
+      5500,
+      5750,
+      6000,
+      6250,
+      6500,
+      6750,
+      7000,
+      7250,
+      7500,
+      7750,
+      8000,
+      8250,
+      8500,
+      8750,
+      9000,
+      9250,
+      9500,
+      9750,
+      10000
+    ],
+    "EMA_eval_update_nodes": [
+      0,
+      1250,
+      2500,
+      3750,
+      5000,
+      6250,
+      7500,
+      8750,
+      10000
+    ],
+    "priority_pair": "R08-L08",
+    "best_validation_capability": {
+      "enabled": true,
+      "role": "secondary observed best validation performance under the same training protocol; does not replace update10000 main table",
+      "population": "full_val800",
+      "weights": "raw",
+      "refinement": false,
+      "candidate_updates": [
+        0,
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        1500,
+        1750,
+        2000,
+        2250,
+        2500,
+        2750,
+        3000,
+        3250,
+        3500,
+        3750,
+        4000,
+        4250,
+        4500,
+        4750,
+        5000,
+        5250,
+        5500,
+        5750,
+        6000,
+        6250,
+        6500,
+        6750,
+        7000,
+        7250,
+        7500,
+        7750,
+        8000,
+        8250,
+        8500,
+        8750,
+        9000,
+        9250,
+        9500,
+        9750,
+        10000
+      ],
+      "selection_metric": "mean_per_start_val_PSNR_unrounded",
+      "selection": "compute global max m over all41 nodes; choose earliest U among scores>=m-1e-6 dB",
+      "tie_tolerance_db": 1e-06,
+      "tie_break": "earliest_update",
+      "requires_all41_complete_finite": true,
+      "SSIM_LPIPS_from_same_selected_checkpoint": true,
+      "different_best_per_metric_forbidden": true,
+      "epoch_formula": "update/250",
+      "delta_PSNR_vs_Input": "selected checkpoint val800 mean PSNR minus same val800 Input-Y mean PSNR",
+      "columns": [
+        "method",
+        "best_update",
+        "best_epoch",
+        "PSNR",
+        "SSIM",
+        "LPIPS",
+        "delta_PSNR_vs_Input"
+      ],
+      "checkpoint_hash_required": true,
+      "validation_selection_bias_disclosed": true,
+      "independent_test_claim": false,
+      "file_stem": "best_validation_capability_table",
+      "also_attached_to_main_performance_table_panel": "B"
+    },
+    "paired_delta_aggregation": "per-start A-B PSNR; within-source mean over2xi*4G; mean across100 sources",
+    "source_win_rate": {
+      "win": "source_mean_delta>1e-6 dB",
+      "tie": "abs(source_mean_delta)<=1e-6 dB",
+      "loss": "source_mean_delta<-1e-6 dB",
+      "denominator": 100,
+      "ties_in_denominator": true,
+      "report_counts": true
+    },
+    "progression": {
+      "methods": [
+        "R0",
+        "R08",
+        "L08"
+      ],
+      "G": [
+        2,
+        3,
+        4
+      ],
+      "first": "first network clean prediction in the SAME rollout, not another D0 model",
+      "final": "last network clean prediction in the SAME rollout",
+      "formula": "PSNR(final,C_GT)-PSNR(first,C_GT) per start before averaging",
+      "record_at": "every RAW evaluation node for train-monitor400 and val800, plus full-train RAW nodes",
+      "main_update": 10000,
+      "main_population": "val800 filtered to G2,3,4",
+      "main_weights": "raw",
+      "refinement": false,
+      "per_G_source_count": 100,
+      "per_G_starts": 200,
+      "overall_sources": 100,
+      "overall_starts": 600,
+      "per_G_reduction": "mean two xi per source then mean100 sources",
+      "overall_reduction": "equal mean of G2,G3,G4",
+      "G1": "N/A no recursion; excluded from Overall",
+      "fields": [
+        "psnr_first",
+        "psnr_final",
+        "delta_prog_PSNR",
+        "output_hash_first",
+        "output_hash_final"
+      ],
+      "training_population_separate": true,
+      "best_val_checkpoint_not_used_in_primary_progression": true
+    }
+  },
+  "artifacts": {
+    "rolling_resume_every_updates": 25,
+    "rolling_keep": 2,
+    "immutable_full_checkpoint_nodes": "every1250updates through10000 (including full-evaluation anchors)",
+    "weights_only_nodes": "each full epoch",
+    "intermediate_FP32_outputs": "fixed40 registered qualitative starts only, at each applicable RAW/EMA evaluation node",
+    "fixed_visual_starts": 40,
+    "image_layout": "fixed vertical AND horizontal; Clean | Input Y | D0 | R0 | R08 | L08; explicit source/G/split/U/RAW-EMA",
+    "full_image_tensor_archive": {
+      "required": false,
+      "default_enabled": false,
+      "optional_endpoint_bytes_estimate_without_headers": 55364812800,
+      "enable_only_after": "disk headroom and I/O overhead verified acceptable and explicit archival choice logged"
+    },
+    "mandatory_retention": [
+      "all evaluated per-start/per-source/per-G/overall metrics",
+      "checkpoints",
+      "output hashes",
+      "fixed qualitative samples FP32 tensors",
+      "manifests",
+      "protocols",
+      "logs"
+    ],
+    "nonfixed_outputs": "compute original-FP32 metrics and SHA256 in streaming batches then release; no mandatory full tensor dump",
+    "output_hash": {
+      "algorithm": "SHA256",
+      "payload": "contiguous little-endian FP32 CHW C-order bytes; no clamp/resize/quantization",
+      "metadata": [
+        "shape",
+        "dtype",
+        "source_id",
+        "trajectory_id",
+        "start_id",
+        "G",
+        "stage_first_or_final",
+        "update",
+        "weights_raw_or_EMA",
+        "checkpoint_hash",
+        "eta_seed",
+        "protocol_hash",
+        "environment_identity"
+      ],
+      "bitwise_replay_guaranteed": false,
+      "replay_policy": "retain original hash and metrics; record new hash and metric deltas; no silent overwrite; fixed FP32 samples additionally permit pixel differences",
+      "replay_under_eval_mutex": true
+    },
+    "qualitative": {
+      "selection_manifest": "PLANNED_MONITOR_LISTS.json",
+      "train_sources": 5,
+      "val_sources": 5,
+      "starts": 40,
+      "selection_unchanged": true,
+      "main_update": 10000,
+      "weights": [
+        "raw",
+        "EMA"
+      ],
+      "layouts": [
+        "vertical",
+        "horizontal"
+      ],
+      "columns": [
+        "Clean",
+        "Input Y",
+        "D0",
+        "R0",
+        "R08",
+        "L08"
+      ],
+      "reselection_from_results_forbidden": true,
+      "labels": [
+        "source",
+        "G",
+        "split",
+        "update",
+        "RAW/EMA"
+      ],
+      "optional_best_val_images": "separate and each method actual update labelled; cannot replace matched10k images"
+    }
+  },
+  "new_paths_proposed_not_created": {
+    "implementation": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_train500_matched_v2",
+    "results": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/runs/v4_train500_matched_v2"
+  },
+  "pending_runtime_gates": [
+    "L08 real implementation",
+    "train500 normalization artifact",
+    "current A100/data/asset/import audit",
+    "FP32 true-simulator forward/backward and endpoint-only BPTT with detach control",
+    "metric and evaluation correctness",
+    "four-process shared-card memory acceptance",
+    "final code/environment/data/protocol freeze",
+    "shared update/exposure/LR budget lock; adequacy reviewed after stage1",
+    "fullval RAW repeated-evaluation numerical spread before trigger freeze",
+    "GPU evaluation mutex acceptance",
+    "best-val selection/progression/report and streaming-hash implementation acceptance"
+  ],
+  "revision_date": "2026-09-30",
+  "supersedes": "archive/matched_v2_before_reporting_addendum_20260930/TRAINING_PLAN_SPEC.json",
+  "preflight": {
+    "correctness_optimizer_steps_per_group_per_microbatch_candidate_max": 2,
+    "microbatch_candidates_max": 2,
+    "temporary_optimizer_steps_all_groups_max": 16,
+    "extra_timing_optimizer_steps": 0,
+    "temporary_weights_discarded": true,
+    "timing": "bounded forward/backward preview; formal authorized update logs count within stage1 budget",
+    "training_optimizer_steps_executed_this_revision": 0
+  },
+  "revision_id": "reporting_eval_addendum_v1",
+  "revision_scope": "Only user-requested reporting, trigger, LR provenance, eval mutex and output-retention additions; method/data/batch/10k budget/LR formula unchanged",
+  "deliverables": {
+    "main_context": {
+      "update": 10000,
+      "population": "val800",
+      "weights": "raw",
+      "refinement": false
+    },
+    "main_figures": [
+      {
+        "stem": "train_val_psnr_curve",
+        "x": "optimizer updates with epoch=U/250 and exposures=32U",
+        "methods": [
+          "D0",
+          "R0",
+          "R08",
+          "L08"
+        ],
+        "populations": [
+          "train-monitor400",
+          "val800"
+        ],
+        "input_Y_PSNR_baseline_for_each_population": true
+      },
+      {
+        "stem": "train_val_loss_curve",
+        "populations": [
+          "train-monitor400",
+          "val800"
+        ],
+        "components": [
+          "L_total",
+          "path_L_C",
+          "0.2_path_L_R"
+        ],
+        "same_checkpoint_fixed_eta_eval_losses": true,
+        "online_training_loss_separate": true
+      },
+      {
+        "stem": "progression_by_G",
+        "methods": [
+          "R0",
+          "R08",
+          "L08"
+        ],
+        "G": [
+          2,
+          3,
+          4
+        ],
+        "metric": "delta_prog_PSNR",
+        "zero_line": true,
+        "context": "RAW update10000 full validation G2-4 only"
+      }
+    ],
+    "main_figure_formats": [
+      "png",
+      "pdf",
+      "csv_or_json_plot_data"
+    ],
+    "additional_complete_curves": [
+      "train/val SSIM",
+      "train/val LPIPS",
+      "EMA curves separately"
+    ],
+    "main_tables": [
+      {
+        "stem": "main_performance_table",
+        "panel_A": {
+          "methods": [
+            "D0",
+            "R0",
+            "R08",
+            "L08"
+          ],
+          "update": 10000,
+          "columns": [
+            "PSNR",
+            "SSIM",
+            "LPIPS",
+            "delta_PSNR_vs_Input"
+          ]
+        },
+        "panel_B": "same data as best_validation_capability_table, explicitly secondary"
+      },
+      {
+        "stem": "paired_ablation_table",
+        "contrasts": [
+          "R0-D0",
+          "R08-R0",
+          "R08-D0",
+          "L08-D0",
+          "R08-L08"
+        ],
+        "columns": [
+          "mean_paired_delta_PSNR",
+          "source_win_rate",
+          "source_cluster_bootstrap_95CI",
+          "source_count",
+          "start_count"
+        ]
+      },
+      {
+        "stem": "progression_by_G_table",
+        "methods": [
+          "R0",
+          "R08",
+          "L08"
+        ],
+        "G_rows": [
+          2,
+          3,
+          4,
+          "Overall_G2to4"
+        ],
+        "columns": [
+          "first_PSNR",
+          "final_PSNR",
+          "delta_PSNR",
+          "source_count",
+          "start_count"
+        ]
+      }
+    ],
+    "secondary_tables": [
+      {
+        "stem": "best_validation_capability_table",
+        "columns": [
+          "method",
+          "best_update",
+          "best_epoch",
+          "PSNR",
+          "SSIM",
+          "LPIPS",
+          "delta_PSNR_vs_Input"
+        ]
+      }
+    ],
+    "table_formats": [
+      "csv",
+      "json",
+      "md"
+    ],
+    "required_checks": [
+      "main10k never replaced by best-val",
+      "first/final same rollout",
+      "G1 excluded from progression Overall",
+      "five prescribed contrasts",
+      "three main figures and three main tables generated",
+      "fixed qualitative vertical and horizontal RAW/EMA generated"
+    ]
+  }
+}

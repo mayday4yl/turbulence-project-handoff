@@ -1,0 +1,1550 @@
+{
+  "status": "PASS_ALL_FOUR_TRAINING_AND_104_EVALUATIONS_ACCEPTED",
+  "time_local": "2026-10-12T14:44:42.511775+08:00",
+  "scope": "User-authorized one CPU workflow restoration; last3 evaluations finished; no training restart or retry reset",
+  "closeout_checks": {
+    "all_four_complete": true,
+    "all104eval_complete": true,
+    "supervisor_file_unchanged": true,
+    "method_retry_counts_unchanged": true,
+    "earlier_eval_retry_counts_unchanged": true,
+    "final_three_evaluation_retries_zero": true,
+    "source_current_approved": true,
+    "science_config_unchanged": true,
+    "phase1_receipt_all104": true
+  },
+  "checkpoint_SHA256": {
+    "D0": "625d5bad5d8c0eb8fc07cb9371e448c978b48086d5595dddc725a9cf27d4a844",
+    "R0": "1a081d67d2af6307d4199140b4f05b4106f8317ac6133039c12d8aa6a1dd7c18",
+    "R08": "c57e224b18ea80902017bab3b8c1a230cf2b27f7990b24345ff392e935f3c9d9",
+    "L08": "c06049b32f8891c19915532a34a93c1d6ef06037bdd8fdf1f02d8f9caae0e2ad"
+  },
+  "last_three_original_parts_CPU_audit": {
+    "purpose": "CPU-only new completed evaluation audit and checkpoint bindings; no inference rerun, no GPU claim, no training changes",
+    "time": 1791787840.3816047,
+    "evaluations": {
+      "L08_U20000_monitor_online": {
+        "status": "PASS",
+        "checks": {
+          "completion_and_hashes": true,
+          "job_checkpoint_identity": true,
+          "protocol": true,
+          "v5_checkpoint_v6_evaluator_compatible": true,
+          "source_identity_current": true
+        },
+        "populations": {
+          "train_monitor": {
+            "status": "PASS",
+            "checks": {
+              "ordered_frozen_population": true,
+              "unique_expected_starts": true,
+              "expected_sources": true,
+              "all_parts_retained": true,
+              "G_balance": true,
+              "domain_balance": true,
+              "correct_split": true,
+              "all_finite": true,
+              "original_order_FP64_aggregate_exact": true
+            },
+            "starts": 200,
+            "sources": 50,
+            "per_G_count": {
+              "1": 50,
+              "2": 50,
+              "3": 50,
+              "4": 50
+            },
+            "domains": {
+              "Places365": 100,
+              "LSDIR": 100
+            },
+            "domain_sources": {
+              "Places365": 25,
+              "LSDIR": 25
+            },
+            "parts": 7,
+            "parts_content_sha256": "4b39e23c69233f219e6c5f431402ee4612c5e97b86f24110e611668326a5ea90"
+          },
+          "val_monitor": {
+            "status": "PASS",
+            "checks": {
+              "ordered_frozen_population": true,
+              "unique_expected_starts": true,
+              "expected_sources": true,
+              "all_parts_retained": true,
+              "G_balance": true,
+              "domain_balance": true,
+              "correct_split": true,
+              "all_finite": true,
+              "original_order_FP64_aggregate_exact": true
+            },
+            "starts": 200,
+            "sources": 50,
+            "per_G_count": {
+              "1": 50,
+              "2": 50,
+              "3": 50,
+              "4": 50
+            },
+            "domains": {
+              "Places365": 100,
+              "LSDIR": 100
+            },
+            "domain_sources": {
+              "Places365": 25,
+              "LSDIR": 25
+            },
+            "parts": 7,
+            "parts_content_sha256": "235aa43eb4e7200ccde1d4657a2f6a8cb8cd77fd81f09b47581b0240f3a5ea26"
+          }
+        },
+        "receipt": {
+          "status": "PASS",
+          "aggregate_sha256": "e71616dbacb7bf977f0d11a971bf3277de66d9bd315c63071d240b9b32ecb811",
+          "identity_sha256": "8acd6b437a85e7c774182191b03bc327c0fa27e0578a044fcbe8e7210ad9ffd8",
+          "time": 1791785988.4726999
+        }
+      },
+      "L08_U20000_fullval_online": {
+        "status": "PASS",
+        "checks": {
+          "completion_and_hashes": true,
+          "job_checkpoint_identity": true,
+          "protocol": true,
+          "v5_checkpoint_v6_evaluator_compatible": true,
+          "source_identity_current": true
+        },
+        "populations": {
+          "val8000": {
+            "status": "PASS",
+            "checks": {
+              "ordered_frozen_population": true,
+              "unique_expected_starts": true,
+              "expected_sources": true,
+              "all_parts_retained": true,
+              "G_balance": true,
+              "domain_balance": true,
+              "correct_split": true,
+              "all_finite": true,
+              "original_order_FP64_aggregate_exact": true
+            },
+            "starts": 8000,
+            "sources": 1000,
+            "per_G_count": {
+              "1": 2000,
+              "2": 2000,
+              "3": 2000,
+              "4": 2000
+            },
+            "domains": {
+              "Places365": 4000,
+              "LSDIR": 4000
+            },
+            "domain_sources": {
+              "Places365": 500,
+              "LSDIR": 500
+            },
+            "parts": 250,
+            "parts_content_sha256": "0a1a9de92a59d5c00e86e27a4235b4c8ad02c446515cb99751ad3e6a43322975"
+          }
+        },
+        "receipt": {
+          "status": "PASS",
+          "aggregate_sha256": "6be7c69c7c84388c45d8ebbe949670870ffdfbe92bfef021b3897c01d5203ab1",
+          "identity_sha256": "b44f72e897a705d8a3f2bb8a0acf7c9e3b0fb6e0f01fd7ca40656341983c49ba",
+          "time": 1791787531.8973486
+        }
+      },
+      "L08_U20000_fullval_ema": {
+        "status": "PASS",
+        "checks": {
+          "completion_and_hashes": true,
+          "job_checkpoint_identity": true,
+          "protocol": true,
+          "v5_checkpoint_v6_evaluator_compatible": true,
+          "source_identity_current": true
+        },
+        "populations": {
+          "val8000": {
+            "status": "PASS",
+            "checks": {
+              "ordered_frozen_population": true,
+              "unique_expected_starts": true,
+              "expected_sources": true,
+              "all_parts_retained": true,
+              "G_balance": true,
+              "domain_balance": true,
+              "correct_split": true,
+              "all_finite": true,
+              "original_order_FP64_aggregate_exact": true
+            },
+            "starts": 8000,
+            "sources": 1000,
+            "per_G_count": {
+              "1": 2000,
+              "2": 2000,
+              "3": 2000,
+              "4": 2000
+            },
+            "domains": {
+              "Places365": 4000,
+              "LSDIR": 4000
+            },
+            "domain_sources": {
+              "Places365": 500,
+              "LSDIR": 500
+            },
+            "parts": 250,
+            "parts_content_sha256": "a3107cf087a97fa3ef1f11c589729d6d9fa02a1b9c4c55488f4287ace5bdeb1f"
+          }
+        },
+        "receipt": {
+          "status": "PASS",
+          "aggregate_sha256": "f2e4287d66a22d12d74d89dfe38bacfcc78964729413dcf44f687489d75d23f7",
+          "identity_sha256": "517ea845aa29d2f9e1a2f12e8966e106a8d5d51ae37a305633ce5cc90439bd8f",
+          "time": 1791787630.176553
+        }
+      }
+    },
+    "checkpoint_bindings": {
+      "D0": {
+        "update": 20000,
+        "compatible_binding": true,
+        "expected_sampler_state": {
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "stream_identity": "f1f2cf8edc722f5f085ccdcb0d4b090afc36b4a247c4d3d3e30727ecd042eb8d",
+          "effective_batch": 32,
+          "next_sample_ids": []
+        },
+        "expected_scheduler": {
+          "kind": "exposure_linear16000_cosine640000",
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "next_lr": null
+        }
+      },
+      "L08": {
+        "update": 20000,
+        "compatible_binding": true,
+        "expected_sampler_state": {
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "stream_identity": "f1f2cf8edc722f5f085ccdcb0d4b090afc36b4a247c4d3d3e30727ecd042eb8d",
+          "effective_batch": 32,
+          "next_sample_ids": []
+        },
+        "expected_scheduler": {
+          "kind": "exposure_linear16000_cosine640000",
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "next_lr": null
+        }
+      },
+      "R0": {
+        "update": 20000,
+        "compatible_binding": true,
+        "expected_sampler_state": {
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "stream_identity": "f1f2cf8edc722f5f085ccdcb0d4b090afc36b4a247c4d3d3e30727ecd042eb8d",
+          "effective_batch": 32,
+          "next_sample_ids": []
+        },
+        "expected_scheduler": {
+          "kind": "exposure_linear16000_cosine640000",
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "next_lr": null
+        }
+      },
+      "R08": {
+        "update": 20000,
+        "compatible_binding": true,
+        "expected_sampler_state": {
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "stream_identity": "f1f2cf8edc722f5f085ccdcb0d4b090afc36b4a247c4d3d3e30727ecd042eb8d",
+          "effective_batch": 32,
+          "next_sample_ids": []
+        },
+        "expected_scheduler": {
+          "kind": "exposure_linear16000_cosine640000",
+          "completed_updates": 20000,
+          "completed_exposures": 640000,
+          "next_lr": null
+        }
+      }
+    },
+    "issues": [],
+    "inventory": {
+      "gpus": {
+        "0": {
+          "uuid": "GPU-93610957-afeb-9b4c-7eca-eaed77cf32fd",
+          "total_MiB": 81920,
+          "used_MiB": 36919
+        },
+        "1": {
+          "uuid": "GPU-72cd915b-3feb-f823-38a8-2d175a84fe0b",
+          "total_MiB": 81920,
+          "used_MiB": 33421
+        },
+        "2": {
+          "uuid": "GPU-e49c0ca8-8eac-7cec-4ecb-228af638edfb",
+          "total_MiB": 81920,
+          "used_MiB": 17767
+        },
+        "3": {
+          "uuid": "GPU-f3a8ea0e-dc60-515a-6afa-785da8eca151",
+          "total_MiB": 81920,
+          "used_MiB": 1
+        },
+        "4": {
+          "uuid": "GPU-1a36bf37-948b-bd1e-a7cc-d47ec16a469b",
+          "total_MiB": 81920,
+          "used_MiB": 1
+        },
+        "5": {
+          "uuid": "GPU-83edf451-9cae-c2a0-c9a6-f344b7bb2673",
+          "total_MiB": 81920,
+          "used_MiB": 1
+        },
+        "6": {
+          "uuid": "GPU-8079b40c-338b-f5a5-2be6-db5255033862",
+          "total_MiB": 81920,
+          "used_MiB": 33655
+        },
+        "7": {
+          "uuid": "GPU-ea99c268-646b-06de-8e63-a7f46a2db6b8",
+          "total_MiB": 81920,
+          "used_MiB": 1
+        }
+      },
+      "processes": [
+        {
+          "gpu": 0,
+          "pid": 3470368,
+          "uid": 1040,
+          "user": "yuchenghuang",
+          "MiB": "36910",
+          "verified_nonlive_driver_record": false
+        },
+        {
+          "gpu": 1,
+          "pid": 348538,
+          "uid": 1029,
+          "user": "guanxing.chen",
+          "MiB": "33412",
+          "verified_nonlive_driver_record": false
+        },
+        {
+          "gpu": 2,
+          "pid": 886857,
+          "uid": 1029,
+          "user": "guanxing.chen",
+          "MiB": "17758",
+          "verified_nonlive_driver_record": false
+        },
+        {
+          "gpu": 6,
+          "pid": 2562502,
+          "uid": 1040,
+          "user": "yuchenghuang",
+          "MiB": "33646",
+          "verified_nonlive_driver_record": false
+        }
+      ],
+      "account_uid": 1036,
+      "account": "zhuzhiyu"
+    },
+    "account_cards": [],
+    "final_states": {
+      "D0": {
+        "status": "PHASE1_TRAINING_COMPLETE",
+        "group": "D0",
+        "update": 20000,
+        "attempting_update": 20000,
+        "pid": 2336356,
+        "physical_gpu": 3,
+        "microbatch": 16,
+        "time": 1791620406.7768426,
+        "exposures": 640000
+      },
+      "L08": {
+        "status": "PHASE1_TRAINING_COMPLETE",
+        "group": "L08",
+        "update": 20000,
+        "attempting_update": 20000,
+        "pid": 305202,
+        "physical_gpu": 5,
+        "microbatch": 16,
+        "time": 1791778561.2766645,
+        "exposures": 640000
+      }
+    },
+    "completed_at": 1791787843.794783,
+    "status": "PASS"
+  },
+  "evaluation_counts": {
+    "COMPLETE": 104
+  },
+  "per_method_evaluation_counts": {
+    "R0": 26,
+    "R08": 26,
+    "D0": 26,
+    "L08": 26
+  },
+  "all104_aggregate_identity_contracts": {
+    "R0_U01000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "feb774d4afe90f04e2ac1a217f2002f09c9ec5bc926076436ee1d9eed15623a6",
+        "identity_sha256": "dbf1f1958c4b04e7b8e6c114d5f3497a18c249c3fed6596ee311efc095653f09",
+        "time": 1791276515.1975172
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U01000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e71f09cd8107c0b2cca15cc8676b6301e08168391dff0dc568abb2446c4e4ef9",
+        "identity_sha256": "58ccc33c192ffbef18a770457382616dbe228fe3e54e9d4b1c94a69232f3c49c",
+        "time": 1791277556.9660177
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U02000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "3ed86c6e532693fe0c88997ae6751812f14b95fb7bd55d8003634cfe8de3cc39",
+        "identity_sha256": "13e5bdd903cab378670c3a6ed7f79502a3e0b8aeb2e8819caa1d60d180c08d14",
+        "time": 1791289304.9907289
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U02000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "563075bc2cd327d813db2e316cb8c9708b28ae79884ae203a1c977bef1a3d5b7",
+        "identity_sha256": "0b86f243644ec75b45b01c606f1865dc5b9f18247f37f7a1eb20d32d8b681cbd",
+        "time": 1791289997.8997529
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U03000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "2df962f0fb50b7d776363d48357f9fdb7116d9e52744c459fedaafab32252d34",
+        "identity_sha256": "6d4f4c236258dbb1fb6e38167adc46e79752cf542147824010016aa2c7bf236b",
+        "time": 1791302145.50656
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U03000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "902b4daf1f7b3989c67b553d379ff8d3af594ae3e530ae40d8ff35a7a45d43a0",
+        "identity_sha256": "281a1eec68a6059bdf15508bb77ea6a32ad1ec6a77b805fd85438102e0e78755",
+        "time": 1791302458.4186943
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U04000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "5aff5dfc9ccc13998b447288a03f4ac18abfa117d79d242226731a886ab55db1",
+        "identity_sha256": "a64c638a8de06b3efa8f0af5e65d74df2ee919d82f29c88cd6b0eb6d8dbd343e",
+        "time": 1791315005.896628
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U04000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "486e19100f03406df1ed5fa8fb986f216daa80250a50c61961f694dbe59a934e",
+        "identity_sha256": "e0af084ca235352a393f66fbfca909516d8b15caa2ead86b6530888c8a8b8d1f",
+        "time": 1791315005.7079616
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U04000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1d0365248df8c5537be53337486643a4f80846dcbef569e1bac08b03a45ae7bb",
+        "identity_sha256": "0ca526a44cd4a56fad175470425e19c2161c52a02d3af691e356c1f65bdca4c3",
+        "time": 1791319168.43322
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U04000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "9eed98fa422dc8f404f614d9b92ca7a639af9157b0112fe6795d363025525118",
+        "identity_sha256": "f1f9ef63d8acc54b8f4d4d9d3537f1505ba80879e4dcabc4aa455dbfa6a736cb",
+        "time": 1791319167.5796244
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R08_U05000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "5fc53ad745851d94abb0b2424d8a3632a829bc819b37dd72784ba28d978a0e8a",
+        "identity_sha256": "3bdc034127c6478dff24244954fe4b31dff997c9661cc6fb4ff8d3b90faeeffe",
+        "time": 1791329190.4049459
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U05000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1cd2ca88dc62040626e735d414c9f0bcb53facb8c1bce6267b5c18715ab01e78",
+        "identity_sha256": "643b050b51cfed5d2ab4d1b6bda0d9fffca8f8ecfcb103d7e6736eafcfc5546b",
+        "time": 1791329164.915294
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U06000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "c7c6c0959021a3d9ee76938798c7ee0d1840a067daa33e5e9da6236f270aa81f",
+        "identity_sha256": "5fbbf2b7ce35086b8487d6e0554485eb2e33e5d45afde2a34f6e74ed509a8d5e",
+        "time": 1791341825.4566462
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U06000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "5bd47ad4b7d724f9768806d0a8497262e5ca2b65098cb6079efebaee99160f7c",
+        "identity_sha256": "d29234f63ee68e710744d43a76b9c2b8be58e8d1f10318bbbf3cc5fea822d64c",
+        "time": 1791341847.8926551
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U07000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "38914d0a64c2cce9165d4842f9489b95995122afba35f50dd2e1dfc09908edea",
+        "identity_sha256": "0bce79efc4ab01802fbec75c88a75af455d1cfbc45e9b068969717d88bb27a1e",
+        "time": 1791360880.8194146
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U07000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1e6180ba90ad66afcf1e0b8416163d45b9efd658ff5b5726250e1ebef890ef10",
+        "identity_sha256": "4a3ace739b81d9762196ba7b1fea3e8982a626233bc9dbefb0e6734964c7b4b5",
+        "time": 1791360881.0762286
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U08000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6f411fe0f32e025efe22739e71f3147768b30e9760629f858856e3e868a5456f",
+        "identity_sha256": "de9b736d867f0b9561f03d4da66ebc8182111a83f4d9131ba373361f8d56d31e",
+        "time": 1791371197.8818195
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U08000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "a57fd72b445dbcf1d6cc24d276950a9f569bf6517750d8cb37a3ca8065fe4891",
+        "identity_sha256": "b70c9c53b2e48febaf63f1adc9cc300c390c749e97da3c2cde2149be1d00bb88",
+        "time": 1791375004.3579369
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R08_U08000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e50aef1aba65f89368b7934f2c3c55f485d7c7ed1e218772ca92e27207f5efa0",
+        "identity_sha256": "fd6f7ea4b3c5f3388e7fe2f24175c0003ca20eeffab6d46f2ae9433a462dd8ae",
+        "time": 1791372079.5676632
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U08000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "623de724491c18a1146184376e929308ec8ce43b026392f7533e47d77295d994",
+        "identity_sha256": "ec26d9eeec7e685d0070855e018515bfdc02fee4757f9d4d8934f6951095caf9",
+        "time": 1791375987.0543652
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U09000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "7f4a830f08e45876af5667a54e38310eb62d907562b54d8e661fad68f6aa66db",
+        "identity_sha256": "7a41dd94906a6043090ebdcd40b7332934f49e1f57c3ba369dcc2e7d563a8dd0",
+        "time": 1791384269.5200706
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U09000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "b3102846c90dcb771e356db5be821dda21b65d682c5416886a8cb0b92bea529d",
+        "identity_sha256": "538886e9898829b579a287cca62659a64d8d0cf24288f64816f38430fe46d88d",
+        "time": 1791384561.5033095
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U10000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "a8159aaee92d5b5733f862950acecaf1723fdbe51de00ba27bf5a8e07b59ff7a",
+        "identity_sha256": "721cd2e3e2510e415d8bec7c53f799217431174e9ec02950e0725afa842f9b93",
+        "time": 1791396181.018065
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U10000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "5c6203dfc97d5a2e10f79261accd482e8eb27b6e17befd503c31d89e7299618c",
+        "identity_sha256": "341c29c817766346a601a84f6008a8df3d3d0664887ba5057bc053c3280bd1ea",
+        "time": 1791396179.9936817
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U11000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "814078f1c84103c10862818e2b2a780f7aa21c8b02d8644b4d8e39dd1ccb9980",
+        "identity_sha256": "db905e07f033a80a8e2f2e6cf3fa8466bcbae224c6e2257d5d9d159d149c6f38",
+        "time": 1791407994.399796
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U11000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "4df63f5e5ec2505bdee07037f2323f831e74e9961a6d6d9ec19fd9a441136b3f",
+        "identity_sha256": "26c6c084695a7828621ca8a931203771633c1454dad7642e7ccaea2e792a5d38",
+        "time": 1791407994.1780543
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U12000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "a0540093be6f77d273dcf15b2e105f80a01f6f04b9fbe610a9f96df5596ff89f",
+        "identity_sha256": "baa673e34e723000717db4092d21aa10597b4447bdf9bff97fd5ec5bd596535e",
+        "time": 1791419768.9559286
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U12000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "26a5394ed43cf72a2727731453d30f931877a0aa23ce13399f361ee9c5b8a838",
+        "identity_sha256": "b69b041ad6f6386430d1cf8edbef826f9db71a83dbbf826f5a1c1d28a3162376",
+        "time": 1791419768.6153357
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U12000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "2e6a00d639218d3f6d38657b12c6285128803b4d8e34315fe977505d740926f5",
+        "identity_sha256": "744a3076ce764b25f55fd8638be36af90562d58549ccf8033c8b279d361ac456",
+        "time": 1791423879.1207304
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U12000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "0ee3705eccbadb315361862e85823bde558bd7e9c9065830866e3a670f28ad24",
+        "identity_sha256": "34a83eea86f47a2adc943b16753da1a8e4dbc1c741f53590072a377fbc6c0c26",
+        "time": 1791423879.35814
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R08_U13000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "735c3f636c4ad3646e45d3fb98c3ffbb679eb0525753e7d60e9a37f6eb922e13",
+        "identity_sha256": "f0c87e4367fe4cab9a14395de2157d22c8605c27368abf4eb24956f302aec136",
+        "time": 1791432808.5670753
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U13000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "333b3f69224abe56884db75ecc0814ea6d5f7934abb394021fa68c5fc19dca7c",
+        "identity_sha256": "fd5dca7ed87e434122d475ef8b955fd397d3fddc7c7caaac47f2702cee402dae",
+        "time": 1791432808.5738652
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U14000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "98bc7b5dca0e07481e6e26f7dde640374156a92f4fb2e4216ea329f3c90739f4",
+        "identity_sha256": "0672b567383a78ddc3aac012f5f6e6cbf2c813afb7c82a106c2c407e26acf104",
+        "time": 1791444543.795039
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U14000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "477bda571d988b5020cc732d8a430099edc77c6eba72d2c547c23d536c22eef8",
+        "identity_sha256": "feb529a2eab153c1d23f608aa8ff3741d931d96240eaaacba45d25506a638977",
+        "time": 1791444542.4162655
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U15000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1e30ffe206489a06f1ada38c51380b1ae11f6e8c62153110720d2af4edea54e6",
+        "identity_sha256": "606d215c29e655c8542447c2e68f0abfca9150038997134a769776aa9bc5cf6b",
+        "time": 1791456349.55015
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U15000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e4b62d4f181931c57211311e626f8b2c8bacd2c5069f961f236a8e1835132d47",
+        "identity_sha256": "86dc58a5cb247837bb619e1ee5a9a89d1a35a4a8fbfd83f2285d6dac61b7c29a",
+        "time": 1791456375.4926229
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U16000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "ae11d8596c68823f05a2a73e7ff019d720848b5d91ac831879d838bc2625e407",
+        "identity_sha256": "8fd62b5d299ebb94531c06a3396fb36cb60df075528ea4ebbf89a0f9c97d9354",
+        "time": 1791468097.0248263
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U16000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "0ca33d6e8bba144e9589d53b0db588a0293a5176673732f469bdcd30cf7ddb8a",
+        "identity_sha256": "e11b53cdcd678ee7d6d480a29b8eb0fd1503732bfbaa03fccb74a3e70810cf47",
+        "time": 1791468096.775699
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U16000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "8a814d7ef85d68ce72420f0cd091af2f60cfd4d0128d760842aa610c9a2d5ea2",
+        "identity_sha256": "86c988c0a18165e0ddb81fc0c42cd260cda1e697f557a833f2faaa6d86a08f01",
+        "time": 1791472179.38897
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U16000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "5243949c1122605edff4cdb094a2f8d133bd1196eff059790059dcae69f62983",
+        "identity_sha256": "a5cb18bf583db6a6f783d17cd40809413a1fa723f7424f55683db48dad820552",
+        "time": 1791472179.2879734
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R08_U17000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "66a505ee75b033a247d46857476c8ba0c4d2f812aa3e21129d315890f69616f4",
+        "identity_sha256": "6d61f93b9cffc218aa946aeb50b653e46a93c97b788aab7d248b371c3618e171",
+        "time": 1791481091.3318424
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U17000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "cc5dbf7171a8b7e20d3e39f9cc76f06886c21c6fcba13c7bf8d37e9423da0368",
+        "identity_sha256": "fd09529d699e0fc7295fdae5c4741289f86b0e5e4afbb2b9630e0721af603bf9",
+        "time": 1791481090.8954291
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U18000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "9e1425528034618d5ad807450b2d74d1562feba5a1644d4a67754ddc54b154a8",
+        "identity_sha256": "c4ff8bc8f20403016c4c635519c4295836de3119b17cc5c1f7760884ca761a3b",
+        "time": 1791492857.6306975
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U18000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "84884c0185e686c73b24c4c81b157e4e27a2df923dc10c6a96ad4677609e164c",
+        "identity_sha256": "196d6fb70d7c1ab617df12964693d5bcb0d7c5fff239c09cc080e7601159e5e9",
+        "time": 1791492856.615165
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U19000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "a5cfa043f733d9c8819777e8a725f6c5b1d010390ff75a64d0dda83382b66e00",
+        "identity_sha256": "ba9215d23852047d7b691508dce42b91a9b4d28661918c9d1e361abc8c67af8c",
+        "time": 1791504612.7012963
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U19000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "c997b6a78e9bbd86e78d404159c970f5298a6f1f0ce272bf71d77520cbd8531a",
+        "identity_sha256": "0d38ade0123905ccc8566d9fa3aa424892e3b7f5a92dcbb0abab4aa56668a304",
+        "time": 1791504641.4887521
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U20000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "90a9e4c0d3e14c9ac57501588c86a7c0909a3fa15339958dd3a9422068714023",
+        "identity_sha256": "356cda8662c14349b7490dfcf4a012572358a88937ae990886ef3713e8d17a6d",
+        "time": 1791516308.5800276
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R0_U20000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "53e59b558bdb8b6f02018849facbfddae56b1327e3badeb401e809f28113f740",
+        "identity_sha256": "d6488f201c2fe75d9e8400646a2aab4debb3ba31521e1261677406c26538fc10",
+        "time": 1791516308.5989723
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "R08_U20000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1e05a3be92ff07ecd49add1a839dd306ef27eae14000f91da189aa85fe33aeef",
+        "identity_sha256": "7db63070900256e736fe758fafba436360503dcd42610fb8842d75ca04e5e329",
+        "time": 1791518236.5479481
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U20000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "06d476f479c517bb700529ce1fbe81f2e48ccd61191211575faf82db1ac64d7a",
+        "identity_sha256": "1468fb9c60c582f938d99eeb6c2815df2c4e42b0fa79ff91b85bfc3ee2984cc1",
+        "time": 1791520157.0232558
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R08_U20000_fullval_ema.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "0f0a61f9fc816c7712fd1c9f13c73f3af49a02b63d0b240c2826e83252e04bf5",
+        "identity_sha256": "8d4d24bce17bd4f38faf44fce9d1aef94d063533512ff74cc19d7f466ba38f5a",
+        "time": 1791522138.5795305
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "R0_U20000_fullval_ema.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "c3066bc53b244c934301525b6aec488f37dd0bbae6486b898f97c82ece5007bd",
+        "identity_sha256": "96b24ed69bb648c4c080c02f06897208dd11aa98caedfec3f88f3857e1cbad96",
+        "time": 1791523855.3221626
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U01000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "d59bd5f2d1e81e2d6af5f117015755cb1ea46b5db693265fd7318525fabb5555",
+        "identity_sha256": "fd11c60201ab8ea80930e7427ef831b04048cf03ffbf361d84182b02c98c5338",
+        "time": 1791524482.9653664
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U02000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "075319c0f2321faa6e1f3c8b241e0710e40fae166c664cd1ab7e6ca6e7700576",
+        "identity_sha256": "91647d5ffaa82cec183f9fee1576d07557f78f7d8bc93073e23dad48e07fe0ad",
+        "time": 1791529416.0550442
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U01000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "aece9031b253e3400127f4508e67bba89a89898464125107ef0068e11f3733c3",
+        "identity_sha256": "65a27c1956156f6087f6ad02446057890c7e4a36d8931332a510afaccce4ab07",
+        "time": 1791530251.8858652
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U03000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "284aa7b87d8d498ac3c7e7f97aba2430782ae13633e8aab4f1537916d64687b2",
+        "identity_sha256": "76b6a644923ee4c1c79296f4d7b290b960efb6fb54f8038baf479da602f3612f",
+        "time": 1791534387.9798477
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U04000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "afec1502d9c5a0c2eb324f67a5151e597865b1e0a99a5187562ad0ca02ce3453",
+        "identity_sha256": "08318226cfbe6d0543804dd503fd95f46646c4f4ba18b505a6e71ea22280c300",
+        "time": 1791546836.8687496
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U04000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1e1990c15eaf2717bf82ac6d3a0fa3f129c3fedba890137503cb3f845c48eecf",
+        "identity_sha256": "1b0eba5a4089770bdba4541f3db150fb7d05229b74543e99cf334907e3d5fec3",
+        "time": 1791549404.9107254
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U02000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "7e52ff78f8269f937e1ee9009ad089ee68af1dd15b0c9cc69260a898352bac91",
+        "identity_sha256": "05e758e66c3c4fd75f31a1fa2cc67d64f3c4fddeb3bc5eb5418ee2e34be066e4",
+        "time": 1791546956.756479
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U05000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "30e50690cae7bde4de803ad0f5ab49c5f1bd3f54085fddd7094cb0ef00f9dbdb",
+        "identity_sha256": "421db7354623a52418c5441b35a74b4a5ba419d5ed670032aa52cce8ec74caf4",
+        "time": 1791547213.892659
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U06000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "23487fbeb5865b3d6cbf9b30917d6734be74818fa44a7de34f415474224d67ed",
+        "identity_sha256": "69f3f8905c738621cc54cc56bb4e6454abcba0d311750f27214de6085c56a73f",
+        "time": 1791549983.6658733
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U03000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "c3fa26f6771115191b7e5e983bad3b54c6d6c8a5dc96aea89f88085ddcc57274",
+        "identity_sha256": "20aa290d61e20cd44aaa33447c19b0060dff7c55814d3e29b4d4c529e29fcc41",
+        "time": 1791571054.7558596
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U07000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "bce28784357a0c45638cd242998766c0369a624e9fcf45b01d31c4718e7cc05c",
+        "identity_sha256": "4b521197be82e7ad780a7e9f4de97d9d3b6ffda685f85475b66cf5a8c77264d7",
+        "time": 1791570854.7962024
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U08000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "089316f64946bd70461788c4ff26544adae46c9c29652c285f863d31118d4f5c",
+        "identity_sha256": "85d2314776af1a4f691bb180280f2ae0320384d1cbbe11268c22eaa9e9721a7b",
+        "time": 1791570814.6076775
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U08000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "b9de947a27c7c6d138bbae1e7c91b7345340673e5d54ecd83ab53647a992fad1",
+        "identity_sha256": "5b5a063b11478e66c51db08500593128669b78630f2492a1251203dd776f61c3",
+        "time": 1791573262.7125862
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U09000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "346e16a680ab2825cdc825fa77d4b446a9f97bdd8993b81218e4b5ded5f53386",
+        "identity_sha256": "22bf572ef939ef243ff1bb26bd96a8ecc79b17bca86ebf9b6188a09116b722e4",
+        "time": 1791573410.197992
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U04000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "002f0e01152c1638d61d8c68f73048a1ef440a82bb03203ed76f15a948cc9a9b",
+        "identity_sha256": "8f1e1eefcc64c8831519e03b9ee12b043a0d8d16534a4eca2e7e1ed4725453b8",
+        "time": 1791571080.267408
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U04000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "7c5bfcb3df6c30e7598bf38ffe7529e0363ec3e1dec7452a36dbf2c159418326",
+        "identity_sha256": "093e14121ee89e88fbd81b184b34710e642d18efb5eb3226b24578673c0539fb",
+        "time": 1791574924.9516737
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U10000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "c5cb8741ce8965df7977c84f8f72e8739c2ffcfcea1194c6f8b0e8a1ef88cd34",
+        "identity_sha256": "c7cf2673f9360762f6e0695f4989b0816376bfabe95770ecf35f3d225cb9dbd8",
+        "time": 1791573557.3718822
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U11000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "b76bbe2e30d3a5f025337f9f33bf65dcab50f12be0e970e3ca94ad5265a9e9f2",
+        "identity_sha256": "ef5fb6c7b4750c5daa83b4c568435a3e2c8a953e8ef5706f95407fde0f4f998b",
+        "time": 1791576047.8095005
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U05000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6d72e9cf7fd301049c8fe5d7efdaa787ff4f9445f1cd32ff48aaa06b93030e44",
+        "identity_sha256": "6dee6da750f241a7f9c7cc30ba623de0c48cede1c9ab8a5c31a5093f183d575c",
+        "time": 1791578743.0043576
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U12000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6c0bc31f56ccb27e7ed3e518205b54819de7eec9ec3c78b1307938cfadf613d5",
+        "identity_sha256": "b9e09400f92cf42e7ababffa6a92d93485d86b10af1395756177478b36d1af53",
+        "time": 1791581065.413474
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U12000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "034587e82a464e30ca167760bf5fe2587091c31b8910add562d0680aaa19f497",
+        "identity_sha256": "e41dbf178725b11228468acf87a32ce4aca5129ba470c55560d0fe11ff4abf7c",
+        "time": 1791582546.896653
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U13000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "ce2b922b5ffe28e6233e468e0fa30c8207747283ff136664ea1d8191ceea09f4",
+        "identity_sha256": "7e5d43bcb44b1fe23f2b0f4ece6a0559639b5ddfac472db871d8992e9ea86992",
+        "time": 1791586002.4368658
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U06000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "fcc1204d2503807abbdcdd756a54939aecb291e9e221696c1e6855528fb42e5d",
+        "identity_sha256": "ff256cf56f1e5d2e89db85d701648a674391ce7b39bf33cddc264d1079c6f101",
+        "time": 1791590615.9015396
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U14000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "0d95a1e543f0838883c248a7103e2cc5b6573f2a66e91537ca9680f64f8e9945",
+        "identity_sha256": "d1acbc49b7809840020d0278466e0bb75b4b1611b98fb758b1aaa41d6fb8e8ce",
+        "time": 1791590952.6556535
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U15000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "22e1403c3bc73eec69a3c51fa57f06b57fdb73c41ddb7dce652714c57c15ba14",
+        "identity_sha256": "e4947ce78e6acadb0d8ee3f52f655c319029f22cb025f2925494f29c9322c1cf",
+        "time": 1791595845.9648755
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U16000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6766f2f3ffd571aac26afab12e5c0e76de19eb233a352f27d932ff50c77e39b7",
+        "identity_sha256": "bf34d717b2d130dead1fda4acfeaaba2d9e64f770d8e7ac0d511e4cc4285c238",
+        "time": 1791600761.8963213
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U16000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "f491ec8d26f2690a72d217742654bc99e894a552e810dcbd07e03430a2c9b707",
+        "identity_sha256": "cc08d28ff789566903920a5c8d631d8d05e738c183c2ae086b2a09cb98b533ba",
+        "time": 1791602295.7049
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U07000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "0cc4c8c84c1097d7e9aa659e361dc2f4eeb5569a63cad1d34af5dc11459e7232",
+        "identity_sha256": "210d3e9f341bf2fb338443bde9981b25075a73711e4bc528d4f3d92e607abd6a",
+        "time": 1791602418.5051107
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U17000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e3828a1c851cc8da7a52a2aabea8c26265891bf633cfe8ffab7adbe645bdf072",
+        "identity_sha256": "7c2fe8cf39f5a980959e5dcd4c969d8478b262fdb751f88f9695678ed740d30e",
+        "time": 1791605781.5559711
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U18000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "9a1ce92f9b20e82e0cc65c1f9f6399d638d1c2b69852660985a9291ecc3007ba",
+        "identity_sha256": "8127061d1c4b33b0facf13c2276a3af5af45773d932b1cf9cc342a4698b40b15",
+        "time": 1791610669.833886
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U08000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "aacbe6d540903827eca55c057e35c73687883cee37f5af1ac97aeb770d832090",
+        "identity_sha256": "2b0e35984ddd9d7861678c4c9ab3d11f83bf0784f718f9d9875f1b28c5789ade",
+        "time": 1791613899.41094
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U08000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "d75e82f71600fbbe43263856519325bf88369d3a75aabd8d43529f3b0203f33f",
+        "identity_sha256": "d81e1021a3583713ae9b21c7d017fe6198d8568d90e3d1bd1e7aecd272aa4e2e",
+        "time": 1791616951.19728
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U19000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "72ea5491a4d860e4f0b93a88671cd1701d140b937234a8c19915ba4a9fb6c569",
+        "identity_sha256": "4862b325a51ca9eb4069286fe1d4805f987a6514e211a819a2288eecd00b2e87",
+        "time": 1791615667.0100455
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U20000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "7879ca7f5bd5495b933412efbae42629a482eee789fd61aaf17c266a0a1dbd8a",
+        "identity_sha256": "f9d63ae04494e0c6e693a26ba1b92a0ec761dc16319abcf5a8b2ae4bdabd2281",
+        "time": 1791620525.1089997
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "D0_U20000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "069ae9b0027b4ddc6bc319db38432adafa6621ba7cfc279d6a624423ef5311ac",
+        "identity_sha256": "e1b6dd990fac280a232ed324d4149baeebe366d95a2308ff6231d2ac1278eebe",
+        "time": 1791622441.7426424
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "D0_U20000_fullval_ema.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "49bb7f087c3c14907eb5b3423471c870bce41fec4233b86a50ad8f7f10137db7",
+        "identity_sha256": "987e1223215eeba0ec09fa53390dc3fc0389572e2d93e3d5ec1a9d1a1cb8f881",
+        "time": 1791622227.7661154
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U09000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "afc666db3fc6e70beae7ca11c6ef57ccefa544ded079542d81a2d3437ab7e61b",
+        "identity_sha256": "637ac0b8a2cb28d053bf4553a152ad50a5223882c1b64c541c5b4d6ca0604206",
+        "time": 1791626811.0865867
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U10000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1b00d33fb05292b6288871017bd6677b7a6b09de344e0871c14ad374e2f915b1",
+        "identity_sha256": "c8943e326b46855dd5b92f5eb5ca31cdf846c1898261ed66323fd6843bc7e5d4",
+        "time": 1791638298.7355468
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U11000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "7411971d0294fac1555e2895aef7826a4234985cd5488f69baf52f279fc45392",
+        "identity_sha256": "c15625675cb3226dc6b8c65a76eda987f2a059be496fe1c243d35eb690d7b1e6",
+        "time": 1791649834.0735393
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U12000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "aa4e72012fbbe64730a4925e2c480828fd09ff6acd3dd8e749f6284590c21a39",
+        "identity_sha256": "c45def477a76210ec45ea878de7fd6c306c07cb1d16ec41dde22bf6c7464fd23",
+        "time": 1791661340.5666287
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U12000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "1f250bc6677698ac71740b61b69b3b0ca5f1ff79355456951db51fc4728cdcf5",
+        "identity_sha256": "e0215f47d664a66bbeed624c77fcb6a91f2065c2e656bc20575593b3a4a343f2",
+        "time": 1791664365.9688387
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U13000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "ae7379f10b8b74d7f253eb53c28bb9e2d385d3e1f5fa414fa422463c51a95ce4",
+        "identity_sha256": "4cb6678baeb3be6224a0d6f153cb5c0a2a20e22b24402993dd5a162c238b2888",
+        "time": 1791673923.2737987
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U14000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "089ce785194db1a69f735d898ef1870f43859a7f3c00172cbbdff8e9b2f5c7a9",
+        "identity_sha256": "4993311138df149155dbdd8e57e223abb24260e3ae1f23a1b3960378f02062e4",
+        "time": 1791685384.2939763
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U15000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "d11a79cf7ca6d3c342154876fe23586589d7c9a222e68deeeee46062c00410e8",
+        "identity_sha256": "525cfc07e9bed949e3cdfe57f374b8ee62518006e0a5a90ce20e06761fd1eebc",
+        "time": 1791696930.3472686
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U16000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e9ce58ffbf6a57f2731808ba6a1bb5cb66089918237e062304bf85a296f819d1",
+        "identity_sha256": "dbc066a676f568d6f6ad39e52bafa61b1aff702f9151fee0ded1c3f6a49fc28f",
+        "time": 1791708419.5171874
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U16000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "14364ab73608240b452fef28fc553652aa9a0103888e83d2f3d16dd4082cbd4d",
+        "identity_sha256": "d5cd243fe5a100b90cfd6b998d73004ab97014c9b17a6e97939e2367b80132a7",
+        "time": 1791711430.7445846
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U17000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6b1b07089a6f4a8f022ea1b69f49c94e271c6e6abb9d943104344d92d387c4af",
+        "identity_sha256": "5dc2773583b611edfa8c92746849c44e369533444e7a4cf9c9642fb98e46fd34",
+        "time": 1791720993.6655834
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U18000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6608c3c87c75a72f895ac06a69020524716be18bd6c64ce3b85d1e1eead476d1",
+        "identity_sha256": "049a7f03405ee96f74489416a9ad72da222ae33affad5dac6701a177165dbed2",
+        "time": 1791732503.880621
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U19000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6d7f14efdb1441e3d50c89c88f0799865822b819617dcbadc5cf4b5af7ff5743",
+        "identity_sha256": "e770f7713edcf5043eb9c5246278e1aab565c4b698a8859ade7bf41acf0a0d55",
+        "time": 1791744027.3319883
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U20000_monitor_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "e71616dbacb7bf977f0d11a971bf3277de66d9bd315c63071d240b9b32ecb811",
+        "identity_sha256": "8acd6b437a85e7c774182191b03bc327c0fa27e0578a044fcbe8e7210ad9ffd8",
+        "time": 1791785988.4726999
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": true
+    },
+    "L08_U20000_fullval_online.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "6be7c69c7c84388c45d8ebbe949670870ffdfbe92bfef021b3897c01d5203ab1",
+        "identity_sha256": "b44f72e897a705d8a3f2bb8a0acf7c9e3b0fb6e0f01fd7ca40656341983c49ba",
+        "time": 1791787531.8973486
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    },
+    "L08_U20000_fullval_ema.json": {
+      "receipt": {
+        "status": "PASS",
+        "aggregate_sha256": "f2e4287d66a22d12d74d89dfe38bacfcc78964729413dcf44f687489d75d23f7",
+        "identity_sha256": "517ea845aa29d2f9e1a2f12e8966e106a8d5d51ae37a305633ce5cc90439bd8f",
+        "time": 1791787630.176553
+      },
+      "contract": "PASS_RAW_REFINE_OFF_FP32_BATCH1_TEST_DISABLED",
+      "fixed_monitor_population_exact": null
+    }
+  },
+  "workload_locks_released": {
+    "reports/workflow.lock": [],
+    "reports/supervisor.lock": [],
+    "runs/phase1/D0/worker.lock": [],
+    "runs/phase1/R0/worker.lock": [],
+    "runs/phase1/R08/worker.lock": [],
+    "runs/phase1/L08/worker.lock": [],
+    "evaluation/results/L08_U20000_fullval_ema/evaluation.lock": [],
+    "evaluation/results/L08_U20000_fullval_online/evaluation.lock": [],
+    "evaluation/results/L08_U20000_monitor_online/evaluation.lock": []
+  },
+  "formal_processes": [],
+  "runtime_mirror_ready": {
+    "status": "PASS",
+    "dataset_id": "places_lsdir_p2s_canonical_20261006_p4000_l4000_v1000_t200_g4321_v1",
+    "verified_arrays": 145000,
+    "runtime_manifest_sha256": "dd352786429d2c1a1faa7ea3d8c62f3166722691793da564ee9deac18341e658",
+    "metadata_sha256": {
+      "DATA_READY.json": "572a0d67aebeb4fed3e815bd36bc1194cb706b79274d75337c63cce62bf0eb4e",
+      "SOURCE_FREEZE.json": "ecebf1b71e5b1c5a5054a10109a1049907a137abcff9525ef8239a0536ad5c22",
+      "BUILD_IDENTITY.json": "463bc707aa69a286c3314886efb322096cd1a394ddf18ac4c0a4f53ea7aa8ab7",
+      "ASSET_LOCK.json": "2d9f912a8dcd74a765ecf19f658ea56376c4fa1d21ea0ef0878ea24b770bb7d6",
+      "source_manifest.jsonl": "de6446663fc38e0e447cadaa7bf5c27d2d08018fb968071d5d6db195e4035037",
+      "trajectory_manifest.jsonl": "09faee0a4a3ba569c3370f3b5c556a2ebdc0b0fe9e77c7b42b783cad623976f9",
+      "start_manifest.jsonl": "f1905ee6ee5d6f71157049edaf2ce137fe17bb14241d90a3d641550d6fa7507a",
+      "trajectory_plan.jsonl": "6cde57721983c683b99d84545bb80c7d90b3f0e5a2ac755440a8a52f8e7252b6",
+      "categories.json": "806d79b656a13cfeda3230bbaa828679f952d3162cc281e2409b9c26317af81b",
+      "PLACES_EXTENSION_AUDIT.json": "f1004bf32713f99cde4b8941a87bc10e2349048cfaf592d4d130b5625fa12b96",
+      "MERGED_DUPLICATE_AUDIT.json": "a30c48846a5f3bff8fcd81f2fcaf744bf6d7d833544052eae6578adcc5f67232",
+      "LSDIR_SELECTED_MEMBER_SHA_AUDIT.json": "d733e369f7eff864d3262ebdfbf33274bdc7c7352f9424086a48c123e1a03375",
+      "DATA_SELECTION_IMPLEMENTATION.json": "5152542dfffb9ca8575aecab6ed86aa8afed24ce1f0cc5b1b50cf04a29083414",
+      "normalization_train8000.json": "6bafa481ca1712ec076145f4bc437ef14feb653f0e97baaf4573e698fcaf0b41",
+      "runtime_hash_manifest.json": "dd352786429d2c1a1faa7ea3d8c62f3166722691793da564ee9deac18341e658"
+    },
+    "raw_xi_copied": false,
+    "canonical_raw_archive": "de36",
+    "Test_inference": false,
+    "time": 1791261140.9689748
+  },
+  "old_Restormer_L08_matchU5000_completion": {
+    "status": "PASS",
+    "starts": 32000,
+    "sources": 2000,
+    "aggregate_sha256": "a50e3599ec4eae5421e0f26b71eaf14091e5d4031ea934ee2cfb612f27ef17df",
+    "protocol": "L08_U5000_TRAIN32000_B1_PARALLEL2_20261007",
+    "time": 1791363917.957311
+  },
+  "old_Restormer_L08_matchU5000_CPU_audit": {
+    "status": "PASS",
+    "time": 1791366845.4868424,
+    "cpu_only": true,
+    "starts": 32000,
+    "sources": 2000,
+    "per_G_counts": {
+      "1": 8000,
+      "2": 8000,
+      "3": 8000,
+      "4": 8000
+    },
+    "all_committed_files_sha_verified": 32027,
+    "all_per_start_order_and_identity_checked": true,
+    "original_FP64_aggregate_recomputed_exactly": true,
+    "table_matches_aggregate": true,
+    "RAW_refinement_OFF": true,
+    "loss_formula_rounding_delta": 6.446495681017295e-12,
+    "loss_formula_FP32_rounding_bound": 4.708118471927897e-08,
+    "initial_additional_algebra_assertion_1e_minus12_too_strict": true,
+    "checkpoint_sha256": "7b26fd8ecb640bdb4ec93e05325a4ad12d8ada95b7fb38a51ac411fa591584e5",
+    "aggregate_sha256": "a50e3599ec4eae5421e0f26b71eaf14091e5d4031ea934ee2cfb612f27ef17df",
+    "commit_sha256": "7a06f2ded4d05141da6786591296960a4e12074f88fd2423ec900db405b14074",
+    "metrics": {
+      "delta_prog_PSNR": 0.05718731273892158,
+      "lpips": 0.4139369083833881,
+      "mse": 0.006680405237720151,
+      "path_clean_MAE": 0.04747153133881511,
+      "path_reconstruction_MAE": 0.009483345030821511,
+      "path_total": 0.04936820035142591,
+      "psnr": 22.900243981826208,
+      "psnr_first": 22.84305666908728,
+      "ssim": 0.6322163298183924
+    },
+    "NAF_health": {
+      "R0": {
+        "status": "RUNNING",
+        "pid": 1117944,
+        "update": 7653,
+        "exposures": 244896,
+        "microbatch": 16,
+        "last_checkpoint": 7000,
+        "time": 1791366840.906802,
+        "startticks": "284527219"
+      },
+      "R08": {
+        "status": "RUNNING",
+        "pid": 1118184,
+        "update": 7593,
+        "exposures": 242976,
+        "microbatch": 16,
+        "last_checkpoint": 7000,
+        "time": 1791366842.7451081,
+        "startticks": "284527253"
+      }
+    },
+    "account_cards": [
+      3,
+      5
+    ],
+    "old_eval_processes_finished": true
+  },
+  "scientific_scope_unchanged": true,
+  "automatic_extension": false
+}

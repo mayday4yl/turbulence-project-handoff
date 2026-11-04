@@ -1,0 +1,10 @@
+{
+  "status": "PASS_DOWNLOAD_SIZE_AND_SHA_ONLY",
+  "source": "local_download_user_authorized_fallback",
+  "file_id": "1kIrvZ1X46jFRAYIScverDD3dT1F40Kip",
+  "original_filename": "gamma_1e7.pth",
+  "bytes": 548649183,
+  "sha256": "a6bb76bfabe32b8403d8b112f0ce7876114d830d20b9f4a4119aa860afef64b4",
+  "local_path": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/weights/sr_gamma_1e7.pth",
+  "strict_load": "NOT_YET_EXECUTED"
+}

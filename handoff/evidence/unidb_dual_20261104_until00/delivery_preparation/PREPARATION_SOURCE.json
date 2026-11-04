@@ -1,0 +1,35 @@
+{
+  "status": "PREPARED_NOT_FINAL_COLLECTED",
+  "created_at": "2026-11-03T23:37:43.516517+08:00",
+  "files": {
+    "collect_final_original.py": "1bdbef0f936e495657d0a5476eaaf568e32f905e28697349e92bd4b7a4258eda",
+    "prepare_original_delivery.py": "ecc650f9866943a2c883a7c65022a04ff019f68e8467537ab2be0bee27a18499",
+    "render_final_original.py": "8b62826c7cc7a4a0a96ea5ee93f464e5362b26b320de01ff7dbe86de1c8bcdbf",
+    "test_preparation.py": "50665b660c58366f3a46bbe78471e267d8dc9db413998ba6738af7ef782c1afb",
+    "README_ZH.md": "da6810ce834417fef49b1c882449f87486ed8e1c8f0d56923c2cb70c9535219c"
+  },
+  "selftest": {
+    "path": "PREPARATION_CPU_SELFTEST.json",
+    "sha256": "f4cb74001863e66ab4236c268de5e29ae4afc5d6886e02d883fcb0e483321054",
+    "tests": 30,
+    "status": "PASS_SYNTHETIC_SELFTEST_ONLY"
+  },
+  "independent_review": {
+    "path": "INDEPENDENT_PREPARATION_REVIEW.json",
+    "sha256": "02c011fa681e939bc97c4d561bf2753c50410ce2583d14cd737ce9588321bb9a",
+    "status": "PASS"
+  },
+  "actual_incomplete_dry_run": {
+    "path": "DRY_RUN_1793720182724790000.json",
+    "sha256": "105c7a813c2dc8e4c0ba923792d790542b019790d39ddfc3ef743f4e6a9c84ea",
+    "exit_code": 2
+  },
+  "expected_future_output": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/original_route",
+  "future_output_exists_now": false,
+  "checkpoint_downloads": 0,
+  "all_prediction_downloads": 0,
+  "new_model_calls": 0,
+  "optimizer_calls": 0,
+  "NPU_calls": 0,
+  "final_collection_executed": false
+}

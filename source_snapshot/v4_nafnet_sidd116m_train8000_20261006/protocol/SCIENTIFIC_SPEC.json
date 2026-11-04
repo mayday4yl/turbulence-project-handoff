@@ -1,0 +1,95 @@
+{
+  "name": "v4_nafnet_sidd116m_train8000_20261006",
+  "initialization": "Official SIDD pretrained body plus already accepted common V4 adapter U0; full parameter finetuning; only train-statistics buffers rebound",
+  "model_parameters": 117767209,
+  "groups": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "full_BPTT": true,
+  "simulator_parameters_frozen": true,
+  "GT_xi_supervision": false,
+  "LoRA": false,
+  "loss": "full-image mean L1 clean + 0.2 * full-image mean L1 re-degradation; inherited path aggregation unchanged",
+  "data": {
+    "train": {
+      "Places365": 4000,
+      "LSDIR": 4000
+    },
+    "val": {
+      "Places365": 500,
+      "LSDIR": 500
+    },
+    "test": {
+      "Places365": 200,
+      "locked": true
+    },
+    "train_starts": 128000,
+    "val_starts": 8000,
+    "old_2450_sources_and_rendered_bytes_reused": true,
+    "one_canonical_generation": "de36 NPU FP32, authorized physical devices 0-3 only",
+    "A100_mirror": "train/val RGB arrays and frozen metadata, no new raw xi copy"
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "norm_bias_weight_decay": 0.0,
+    "gradient_clip_global_norm": 1.0,
+    "clip_frequency": "once after the full effective batch",
+    "EMA": 0.996,
+    "EMA_role": "secondary final validation only"
+  },
+  "schedule": {
+    "peak_candidates": [
+      0.0001,
+      5e-05
+    ],
+    "fallback_only_on_defined_numerical_failure": true,
+    "warmup_exposures": 16000,
+    "phase1_exposures": 640000,
+    "end_lr": 1e-06,
+    "auto_extend": false
+  },
+  "preflight": {
+    "timebox_minutes": 45,
+    "required_incomplete_means_no_launch": true,
+    "LR_probe": "at actual peak, >=10 updates each method, distinct from throughput tests",
+    "throughput": "2 warmup + 5 timed updates",
+    "effective_batches": [
+      32,
+      64
+    ],
+    "B64_rule": "safe and >=10% start/s gain on D0 and heaviest recursive case",
+    "precision": [
+      "BF16",
+      "FP32"
+    ],
+    "all_groups_identical_precision_and_LR": true,
+    "formal_state": "new process, reload common U0, new optimizer/EMA, reset RNG/sampler"
+  },
+  "runtime": {
+    "gpu_whitelist": [
+      3,
+      5
+    ],
+    "max_account_cards": 2,
+    "unknown_ownership_that_could_exceed_cap": "wait",
+    "old_methods_require_verified_U5000_stop_and_no_respawn": true,
+    "OOM": "halve microbatch and increase accumulation keeping effective batch; resume own complete checkpoint; stop only micro1 still OOM",
+    "infrastructure_retries": 3,
+    "checkpoint_every_updates": 1000,
+    "checkpoint_retention": "all",
+    "scalar_every_updates": 20,
+    "monitor_every_updates": 1000,
+    "fullval_every_exposures": 128000,
+    "primary": "online RAW and refinement OFF",
+    "test_inference": false
+  }
+}

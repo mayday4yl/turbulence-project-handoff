@@ -1,0 +1,125 @@
+{
+  "schema": "actual_final_unique_checkpoint_backup_v1",
+  "scope": "actual_final_unique_checkpoint_backup_v1",
+  "status": "PASS",
+  "final": true,
+  "created_unix": 1793729359.406244,
+  "network_calls": 0,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "checkpoint_payload_reads": 0,
+  "campaign": "unidb_dual_20261104_until00",
+  "deadline_unix": 1793721600,
+  "identities": {
+    "original:latest": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "original:best": {
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98"
+    },
+    "improved:latest": {
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9"
+    },
+    "improved:best": {
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75"
+    }
+  },
+  "files": [
+    {
+      "local_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/original/U00067180.pt",
+      "source_path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+      "branch": "original",
+      "roles": [
+        "best",
+        "latest"
+      ],
+      "update": 67180,
+      "bytes": 2194706863,
+      "local_mtime_ns": 1793721612000000000,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+      "source_sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+      "status": "PASS_BYTE_IDENTICAL_FINAL",
+      "SHA_verified_unix": 1793728854.146724,
+      "final_role_binding_verified_unix": 1793729359.405607,
+      "full_byte_SHA_reused": true,
+      "new_checkpoint_payload_reads": 0,
+      "source_byte_receipt": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/original/TRANSFER.json",
+        "sha256": "3c1e2bae6581f2ae8bedb94a5504138752a0494cd9af3bbcf044ae8f9b5288a1"
+      }
+    },
+    {
+      "local_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/U00040848.pt",
+      "source_path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00040848.pt",
+      "branch": "improved",
+      "roles": [
+        "latest"
+      ],
+      "update": 40848,
+      "bytes": 2194679415,
+      "local_mtime_ns": 1793721611000000000,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+      "source_sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+      "status": "PASS_BYTE_IDENTICAL_FINAL",
+      "SHA_verified_unix": 1793727540.1499789,
+      "final_role_binding_verified_unix": 1793729359.4058392,
+      "full_byte_SHA_reused": true,
+      "new_checkpoint_payload_reads": 0,
+      "source_byte_receipt": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/TRANSFER.json",
+        "sha256": "dbe9de24a0f3b2a0d954286cee1d71c04c40f96b95eb696ce0e6f20d79a391c2"
+      }
+    },
+    {
+      "local_path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/checkpoints/improved/U00010000.pt",
+      "source_path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00010000.pt",
+      "branch": "improved",
+      "roles": [
+        "best"
+      ],
+      "update": 10000,
+      "bytes": 2194675639,
+      "local_mtime_ns": 1793658651000000000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "source_sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "status": "PASS_BYTE_IDENTICAL_FINAL",
+      "SHA_verified_unix": 1793682008.846414,
+      "final_role_binding_verified_unix": 1793729359.406189,
+      "full_byte_SHA_reused": true,
+      "new_checkpoint_payload_reads": 0,
+      "source_byte_receipt": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/CANDIDATE_CHECKPOINT_BACKUP_AUDIT.json",
+        "sha256": "23625ae97f254c9d8242bf134daed88e7b505f1ce74c373c306b5404260dad01"
+      }
+    }
+  ],
+  "unique_file_count": 3,
+  "logical_role_count": 4,
+  "total_unique_bytes": 6584061917,
+  "no_duplicate_download": true,
+  "old_U10000_complete_byte_SHA_reused": true,
+  "new_prediction_payload_downloads": 0,
+  "scope_note": "Three exact final complete states are byte-backed. Full hashes were already verified by immutable transfer/candidate receipts; current size/mtime and CPU final role identities revalidated without rereading2.19GB payloads.",
+  "evidence_bindings": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_POSTPROCESS_ACCEPTANCE.json",
+      "sha256": "e9c560e0c00b614c23be8def0cdc14da013ee9b7c1d98a19521259290355f567"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/original/TRANSFER.json",
+      "sha256": "3c1e2bae6581f2ae8bedb94a5504138752a0494cd9af3bbcf044ae8f9b5288a1"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/checkpoint_backup_staging/improved/TRANSFER.json",
+      "sha256": "dbe9de24a0f3b2a0d954286cee1d71c04c40f96b95eb696ce0e6f20d79a391c2"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/CANDIDATE_CHECKPOINT_BACKUP_AUDIT.json",
+      "sha256": "23625ae97f254c9d8242bf134daed88e7b505f1ce74c373c306b5404260dad01"
+    }
+  ]
+}

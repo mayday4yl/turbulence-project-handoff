@@ -1,0 +1,622 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "wrapper_sha256": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+    "legacy_auditor": "/data2/yanglin/unidb_dual_20261103_until_noon/scripts/audit_saved_outputs.py",
+    "legacy_auditor_sha256": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950",
+    "validation_paths": [
+      "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full",
+      "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full",
+      "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full"
+    ],
+    "allowed_read_roots": [
+      "/data2/yanglin/unidb_dual_20261104_until00",
+      "/data2/yanglin/unidb_dual_20261103_until_noon",
+      "/data2/yanglin/unidb_dual_20261103_until18"
+    ],
+    "out_root": "/data2/yanglin/unidb_dual_20261104_until00",
+    "old_assets_writes_allowed": false,
+    "tolerances_frozen_before_metric_evaluation": {
+      "psnr": {
+        "atol": 1e-08,
+        "rtol": 0.0
+      },
+      "ssim": {
+        "atol": 1e-08,
+        "rtol": 0.0
+      },
+      "mae": {
+        "atol": 1e-08,
+        "rtol": 0.0
+      },
+      "lpips": {
+        "atol": 0.0002,
+        "rtol": 0.0002
+      }
+    },
+    "batch_size": 4,
+    "CPU_threads": 8,
+    "metric_source_sha256": "ea241b2477a07b67d2704d47f8db9e1e38a47ac9593524203f222807db05ef2d",
+    "restoration_model_construction_forbidden": true,
+    "NPU_calls": 0,
+    "frozen_unix": 1793726453.192977
+  },
+  "unique_validations": 3,
+  "validations": [
+    {
+      "status": "PASS",
+      "validation": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full",
+      "validation_dir": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full",
+      "summary_path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+      "summary_sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+      "report_path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_d7e29f5b8001_RESULT.json",
+      "signature": "94eafe4832202ae9f044a19c2ff2de89acee239446cd026d13f48e9b1ca20242",
+      "identity": {
+        "validation": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full",
+        "SUMMARY_sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+        "rank_files": [
+          {
+            "file": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/rank0.jsonl",
+            "sha256": "ce49df54a4841dad8b105f0573e68176137b210ed20d15f3812e17c81c6645af",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/rank1.jsonl",
+            "sha256": "4d293c1b8d06512dab38362911faaa37a4d48b5abec7f18d226c41b27ebddf25",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/rank2.jsonl",
+            "sha256": "b8591db91c230e56dfeaa5448828357e303675699bbf30a499cba5e878998839",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/rank3.jsonl",
+            "sha256": "1579009d27928ff934ef7dded05e9f77df95cdc48ff4fe3c166c73aecacced36",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/rank4.jsonl",
+            "sha256": "43f3662ab7f2935edad31d1879f0f9f34fce3125f01fdca41041cc283e740edc",
+            "records": 1000
+          }
+        ],
+        "source_identity": {
+          "data_gate_sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+          "val_manifest": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+          "val_manifest_sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9"
+        },
+        "metric_identity": {
+          "metric_source": "/data2/yanglin/v5_concertormer_10k_20261021/training/image_metrics.py",
+          "metric_source_sha256": "ea241b2477a07b67d2704d47f8db9e1e38a47ac9593524203f222807db05ef2d",
+          "metric_SPEC": {
+            "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+            "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+            "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize"
+          },
+          "LPIPS_network": "official AlexNet v0.1, pretrained, normalize=True, eval/FP32 CPU",
+          "metric_parameter_digest_full": "fd6dfd3089386596b0ca14eeb92a9f245e8ae6ca27f6192d03936bc93f6c843f",
+          "alexnet_pretrained_file_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+          "torch_version": "2.7.1+cpu",
+          "torch_threads": 8,
+          "interop_threads": 1
+        },
+        "auditor_sha256": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950"
+      },
+      "images": 5000,
+      "sources_per_strength": 250,
+      "realizations_per_source": 4,
+      "strengths": [
+        0.5,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coverage": "exact canonical1000samples x5strengths; no duplicate or missing identity; group seeds/positions/source SHA matched",
+      "all_prediction_input_clean_SHA_verified": true,
+      "unique_file_SHA_checks": 10250,
+      "per_image_max_absolute_errors": {
+        "psnr": 0.0,
+        "ssim": 0.0,
+        "lpips": 0.0,
+        "mae": 0.0
+      },
+      "CPU_recomputed_means": {
+        "0.5": {
+          "psnr": 17.332065874944046,
+          "ssim": 0.29744651359458024,
+          "lpips": 0.48685883545875547,
+          "mae": 0.09543238643677739
+        },
+        "1": {
+          "psnr": 16.866700750602824,
+          "ssim": 0.2590040567578528,
+          "lpips": 0.5009264054894448,
+          "mae": 0.10037309463985891
+        },
+        "2": {
+          "psnr": 16.070529422512926,
+          "ssim": 0.20068506956340146,
+          "lpips": 0.5666992890238762,
+          "mae": 0.11092673882265522
+        },
+        "3": {
+          "psnr": 15.265373225816587,
+          "ssim": 0.15558850089799262,
+          "lpips": 0.6676340928971768,
+          "mae": 0.1241402820367535
+        },
+        "4": {
+          "psnr": 14.708871734557935,
+          "ssim": 0.1263234851116052,
+          "lpips": 0.7719467279911041,
+          "mae": 0.13453476744212295
+        }
+      },
+      "recorded_SUMMARY_means": {
+        "0.5": {
+          "psnr": 17.332065874944046,
+          "ssim": 0.29744651359458024,
+          "lpips": 0.48685883545875547,
+          "mae": 0.09543238643677739
+        },
+        "1": {
+          "psnr": 16.866700750602824,
+          "ssim": 0.25900405675785276,
+          "lpips": 0.5009264054894448,
+          "mae": 0.10037309463985891
+        },
+        "2": {
+          "psnr": 16.070529422512926,
+          "ssim": 0.20068506956340143,
+          "lpips": 0.5666992890238762,
+          "mae": 0.1109267388226552
+        },
+        "3": {
+          "psnr": 15.265373225816585,
+          "ssim": 0.15558850089799262,
+          "lpips": 0.6676340928971768,
+          "mae": 0.1241402820367535
+        },
+        "4": {
+          "psnr": 14.708871734557935,
+          "ssim": 0.1263234851116052,
+          "lpips": 0.7719467279911041,
+          "mae": 0.13453476744212295
+        }
+      },
+      "mean_max_absolute_errors": {
+        "psnr": 1.7763568394002505e-15,
+        "ssim": 5.551115123125783e-17,
+        "lpips": 0.0,
+        "mae": 1.3877787807814457e-17
+      },
+      "fixed_tolerances": {
+        "psnr": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "ssim": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "mae": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "lpips": {
+          "atol": 0.0002,
+          "rtol": 0.0002
+        }
+      },
+      "failure_counts": {},
+      "failure_examples": [],
+      "per_image_CSV": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_d7e29f5b8001_PER_IMAGE.csv",
+      "per_image_CSV_sha256": "7985ab63ebc2a8e56ba3f4b037bcff41abff718606edaaaf126d2905ffa17d1f",
+      "source_SHA_manifest": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_d7e29f5b8001_SOURCE_SHA.json",
+      "restoration_network_calls": 0,
+      "NPU_calls": 0,
+      "optimizer_steps": 0,
+      "CPU_metric_forward_batches": 1250,
+      "CPU_LPIPS_images": 5000,
+      "CPU_metric_forward_batches_this_invocation": 0,
+      "pure_CPU": true,
+      "CPU_metric_network_allowed": true,
+      "restoration_model_constructed": false,
+      "input_metrics_scope": "All input SHA + PSNR/MAE freshly recomputed; primary output SSIM/LPIPS freshly evaluated for all5000. Input SSIM/LPIPS were not newly evaluated.",
+      "seconds": 524.0339064598083,
+      "reused_completed_audit": true,
+      "limits": "Independent CPU recomputation against recorded CPU metrics uses fixed declared descriptive tolerances for thread/version/floating implementation differences, not mathematical identity. A PASS proves saved-output provenance/coverage/metrics at this protocol, not restoration success, convergence or generalization.",
+      "source_SHA_revalidated": true,
+      "reuse_seconds": 18.75471830368042,
+      "wrapper_sha256": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+      "all_audit_outputs_inside_new_root": true
+    },
+    {
+      "status": "PASS",
+      "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full",
+      "validation_dir": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full",
+      "summary_path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+      "summary_sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+      "report_path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_9ec6e32ada1b_RESULT.json",
+      "signature": "c471afa146ed88dbe905dfc8cab3da1de8ec1bc6f02c07c8642734d4af98f05b",
+      "identity": {
+        "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full",
+        "SUMMARY_sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+        "rank_files": [
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/rank0.jsonl",
+            "sha256": "add5d69961e73c592f8042664f29801a3d15fa684d8fd249fabe04b6853d6d53",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/rank1.jsonl",
+            "sha256": "566119209ede6d47b76081bd6bdd1c5887ea161436a2720b3d1014e00d63448b",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/rank2.jsonl",
+            "sha256": "d5727915093df6aed35af5853a2a95fe6788eff787ade5044e71bb58594bc565",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/rank3.jsonl",
+            "sha256": "a0d1ea56b81147564cac512f565fab06ca2ebff5b07f0831e4aaa52b29a64f8c",
+            "records": 1000
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/rank4.jsonl",
+            "sha256": "5fb5fb2b43efcfaa36b1434377f62a5a9106ea958545c19d748657e8945d9c6a",
+            "records": 1000
+          }
+        ],
+        "source_identity": {
+          "data_gate_sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+          "val_manifest": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+          "val_manifest_sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9"
+        },
+        "metric_identity": {
+          "metric_source": "/data2/yanglin/v5_concertormer_10k_20261021/training/image_metrics.py",
+          "metric_source_sha256": "ea241b2477a07b67d2704d47f8db9e1e38a47ac9593524203f222807db05ef2d",
+          "metric_SPEC": {
+            "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+            "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+            "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize"
+          },
+          "LPIPS_network": "official AlexNet v0.1, pretrained, normalize=True, eval/FP32 CPU",
+          "metric_parameter_digest_full": "fd6dfd3089386596b0ca14eeb92a9f245e8ae6ca27f6192d03936bc93f6c843f",
+          "alexnet_pretrained_file_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+          "torch_version": "2.7.1+cpu",
+          "torch_threads": 8,
+          "interop_threads": 1
+        },
+        "auditor_sha256": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950"
+      },
+      "images": 5000,
+      "sources_per_strength": 250,
+      "realizations_per_source": 4,
+      "strengths": [
+        0.5,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coverage": "exact canonical1000samples x5strengths; no duplicate or missing identity; group seeds/positions/source SHA matched",
+      "all_prediction_input_clean_SHA_verified": true,
+      "unique_file_SHA_checks": 10250,
+      "per_image_max_absolute_errors": {
+        "psnr": 0.0,
+        "ssim": 0.0,
+        "lpips": 0.0,
+        "mae": 0.0
+      },
+      "CPU_recomputed_means": {
+        "0.5": {
+          "psnr": 16.550629933812868,
+          "ssim": 0.2537674805298342,
+          "lpips": 0.5022200217843056,
+          "mae": 0.10418371922947514
+        },
+        "1": {
+          "psnr": 16.079717566448032,
+          "ssim": 0.22204608803416148,
+          "lpips": 0.5181128331422806,
+          "mae": 0.1099887823015622
+        },
+        "2": {
+          "psnr": 15.088655355519089,
+          "ssim": 0.16564726784263473,
+          "lpips": 0.5782349533438682,
+          "mae": 0.12513131720136636
+        },
+        "3": {
+          "psnr": 14.17330130663269,
+          "ssim": 0.1268963300566971,
+          "lpips": 0.6560262320339679,
+          "mae": 0.1422100556078065
+        },
+        "4": {
+          "psnr": 13.761129645417956,
+          "ssim": 0.10612768578364785,
+          "lpips": 0.7451030653715134,
+          "mae": 0.1512082022548533
+        }
+      },
+      "recorded_SUMMARY_means": {
+        "0.5": {
+          "psnr": 16.550629933812868,
+          "ssim": 0.2537674805298342,
+          "lpips": 0.5022200217843056,
+          "mae": 0.10418371922947514
+        },
+        "1": {
+          "psnr": 16.079717566448032,
+          "ssim": 0.2220460880341615,
+          "lpips": 0.5181128331422806,
+          "mae": 0.1099887823015622
+        },
+        "2": {
+          "psnr": 15.08865535551909,
+          "ssim": 0.16564726784263473,
+          "lpips": 0.5782349533438682,
+          "mae": 0.12513131720136636
+        },
+        "3": {
+          "psnr": 14.173301306632691,
+          "ssim": 0.12689633005669707,
+          "lpips": 0.6560262320339679,
+          "mae": 0.1422100556078065
+        },
+        "4": {
+          "psnr": 13.761129645417958,
+          "ssim": 0.10612768578364785,
+          "lpips": 0.7451030653715134,
+          "mae": 0.1512082022548533
+        }
+      },
+      "mean_max_absolute_errors": {
+        "psnr": 1.7763568394002505e-15,
+        "ssim": 2.7755575615628914e-17,
+        "lpips": 0.0,
+        "mae": 0.0
+      },
+      "fixed_tolerances": {
+        "psnr": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "ssim": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "mae": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "lpips": {
+          "atol": 0.0002,
+          "rtol": 0.0002
+        }
+      },
+      "failure_counts": {},
+      "failure_examples": [],
+      "per_image_CSV": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_9ec6e32ada1b_PER_IMAGE.csv",
+      "per_image_CSV_sha256": "93e0c386e6b55ac874329a018579e794df1605798fb49a0817b1588d5c6a99d7",
+      "source_SHA_manifest": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_9ec6e32ada1b_SOURCE_SHA.json",
+      "restoration_network_calls": 0,
+      "NPU_calls": 0,
+      "optimizer_steps": 0,
+      "CPU_metric_forward_batches": 1250,
+      "CPU_LPIPS_images": 5000,
+      "CPU_metric_forward_batches_this_invocation": 1250,
+      "pure_CPU": true,
+      "CPU_metric_network_allowed": true,
+      "restoration_model_constructed": false,
+      "input_metrics_scope": "All input SHA + PSNR/MAE freshly recomputed; primary output SSIM/LPIPS freshly evaluated for all5000. Input SSIM/LPIPS were not newly evaluated.",
+      "seconds": 507.46729707717896,
+      "reused_completed_audit": false,
+      "limits": "Independent CPU recomputation against recorded CPU metrics uses fixed declared descriptive tolerances for thread/version/floating implementation differences, not mathematical identity. A PASS proves saved-output provenance/coverage/metrics at this protocol, not restoration success, convergence or generalization.",
+      "wrapper_sha256": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+      "all_audit_outputs_inside_new_root": true
+    },
+    {
+      "status": "PASS",
+      "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full",
+      "validation_dir": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full",
+      "summary_path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+      "summary_sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+      "report_path": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_2701f53bf69d_RESULT.json",
+      "signature": "f5ea41cb10623968d7c268a2d878e38f508ac7eff43acbb876d5dbe022530bcf",
+      "identity": {
+        "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full",
+        "SUMMARY_sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+        "rank_files": [
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/rank0.jsonl",
+            "sha256": "40b0aa503286b36f22770e34667d8d5d730cdb123b59e0428a875593032d358f",
+            "records": 1668
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/rank1.jsonl",
+            "sha256": "552aa0f511078d1f9db4e7b30e73ce0edc96c6b15b2cbb8944e14bd672ce3b58",
+            "records": 1668
+          },
+          {
+            "file": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/rank2.jsonl",
+            "sha256": "c8c1c4ebee33a45b03e920ecddb059db118e130ae2f266353d039a49ba68a4b4",
+            "records": 1664
+          }
+        ],
+        "source_identity": {
+          "data_gate_sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+          "val_manifest": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+          "val_manifest_sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9"
+        },
+        "metric_identity": {
+          "metric_source": "/data2/yanglin/v5_concertormer_10k_20261021/training/image_metrics.py",
+          "metric_source_sha256": "ea241b2477a07b67d2704d47f8db9e1e38a47ac9593524203f222807db05ef2d",
+          "metric_SPEC": {
+            "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+            "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+            "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize"
+          },
+          "LPIPS_network": "official AlexNet v0.1, pretrained, normalize=True, eval/FP32 CPU",
+          "metric_parameter_digest_full": "fd6dfd3089386596b0ca14eeb92a9f245e8ae6ca27f6192d03936bc93f6c843f",
+          "alexnet_pretrained_file_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+          "torch_version": "2.7.1+cpu",
+          "torch_threads": 8,
+          "interop_threads": 1
+        },
+        "auditor_sha256": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950"
+      },
+      "images": 5000,
+      "sources_per_strength": 250,
+      "realizations_per_source": 4,
+      "strengths": [
+        0.5,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coverage": "exact canonical1000samples x5strengths; no duplicate or missing identity; group seeds/positions/source SHA matched",
+      "all_prediction_input_clean_SHA_verified": true,
+      "unique_file_SHA_checks": 10250,
+      "per_image_max_absolute_errors": {
+        "psnr": 0.0,
+        "ssim": 0.0,
+        "lpips": 0.0,
+        "mae": 0.0
+      },
+      "CPU_recomputed_means": {
+        "0.5": {
+          "psnr": 21.750354130898597,
+          "ssim": 0.6492243485576155,
+          "lpips": 0.07363884431496262,
+          "mae": 0.05030493792362853
+        },
+        "1": {
+          "psnr": 20.255326716732736,
+          "ssim": 0.5560743289900426,
+          "lpips": 0.09006591750495135,
+          "mae": 0.06061963568532554
+        },
+        "2": {
+          "psnr": 18.389684037268324,
+          "ssim": 0.4525770590035645,
+          "lpips": 0.1252754578348249,
+          "mae": 0.07628262569809303
+        },
+        "3": {
+          "psnr": 17.442455544383296,
+          "ssim": 0.40278875659284646,
+          "lpips": 0.20117582428455352,
+          "mae": 0.08652059118930254
+        },
+        "4": {
+          "psnr": 16.211782897367502,
+          "ssim": 0.31531739708086254,
+          "lpips": 0.41153059792518615,
+          "mae": 0.10312369535744295
+        }
+      },
+      "recorded_SUMMARY_means": {
+        "0.5": {
+          "psnr": 21.750354130898593,
+          "ssim": 0.6492243485576155,
+          "lpips": 0.07363884431496262,
+          "mae": 0.05030493792362852
+        },
+        "1": {
+          "psnr": 20.255326716732736,
+          "ssim": 0.5560743289900426,
+          "lpips": 0.09006591750495135,
+          "mae": 0.06061963568532555
+        },
+        "2": {
+          "psnr": 18.38968403726832,
+          "ssim": 0.45257705900356443,
+          "lpips": 0.1252754578348249,
+          "mae": 0.07628262569809303
+        },
+        "3": {
+          "psnr": 17.442455544383296,
+          "ssim": 0.4027887565928465,
+          "lpips": 0.20117582428455352,
+          "mae": 0.08652059118930254
+        },
+        "4": {
+          "psnr": 16.211782897367502,
+          "ssim": 0.31531739708086254,
+          "lpips": 0.41153059792518615,
+          "mae": 0.10312369535744295
+        }
+      },
+      "mean_max_absolute_errors": {
+        "psnr": 3.552713678800501e-15,
+        "ssim": 5.551115123125783e-17,
+        "lpips": 0.0,
+        "mae": 1.3877787807814457e-17
+      },
+      "fixed_tolerances": {
+        "psnr": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "ssim": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "mae": {
+          "atol": 1e-08,
+          "rtol": 0.0
+        },
+        "lpips": {
+          "atol": 0.0002,
+          "rtol": 0.0002
+        }
+      },
+      "failure_counts": {},
+      "failure_examples": [],
+      "per_image_CSV": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_2701f53bf69d_PER_IMAGE.csv",
+      "per_image_CSV_sha256": "3054184f666cebbb0a481f9561a5293d6be92f642c70276bf297670a21ff7972",
+      "source_SHA_manifest": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_2701f53bf69d_SOURCE_SHA.json",
+      "restoration_network_calls": 0,
+      "NPU_calls": 0,
+      "optimizer_steps": 0,
+      "CPU_metric_forward_batches": 1250,
+      "CPU_LPIPS_images": 5000,
+      "CPU_metric_forward_batches_this_invocation": 1250,
+      "pure_CPU": true,
+      "CPU_metric_network_allowed": true,
+      "restoration_model_constructed": false,
+      "input_metrics_scope": "All input SHA + PSNR/MAE freshly recomputed; primary output SSIM/LPIPS freshly evaluated for all5000. Input SSIM/LPIPS were not newly evaluated.",
+      "seconds": 500.1287956237793,
+      "reused_completed_audit": false,
+      "limits": "Independent CPU recomputation against recorded CPU metrics uses fixed declared descriptive tolerances for thread/version/floating implementation differences, not mathematical identity. A PASS proves saved-output provenance/coverage/metrics at this protocol, not restoration success, convergence or generalization.",
+      "wrapper_sha256": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+      "all_audit_outputs_inside_new_root": true
+    }
+  ],
+  "audited_summaries": {
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385"
+  },
+  "reports": {
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_d7e29f5b8001_RESULT.json": "d5a624f02b7ffa36f994d8be512cc65917f97d3406cc561a1ed209034e98fd81",
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_9ec6e32ada1b_RESULT.json": "d617e10ad89e3f87d33534d6f1b5e0c7b1edf3881316000950c5fb27d9854c8b",
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT_2701f53bf69d_RESULT.json": "2a362967d705585e66de750eb2778a2b14c65e99b31c740118eb02f406638d11"
+  },
+  "pure_CPU": true,
+  "CPU_metric_network_allowed": true,
+  "CPU_metric_model_constructions": 1,
+  "CPU_metric_forward_batches_this_invocation": 2500,
+  "historical_completed_audits_reused": 1,
+  "restoration_model_constructed": false,
+  "restoration_network_calls": 0,
+  "NPU_calls": 0,
+  "optimizer_steps": 0
+}

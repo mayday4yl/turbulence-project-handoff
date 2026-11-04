@@ -1,0 +1,19 @@
+{
+  "user_authorized": true,
+  "automatic_formal_start_only_after_all_gates_PASS": true,
+  "methods": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "updates_per_method": 2000,
+  "extension_authorized": false,
+  "gpu_latest_preference": [
+    2,
+    3
+  ],
+  "shared_5_6_after_one_hour_requires_actual_headroom_acceptance": true,
+  "reservation_requested": true,
+  "old_experiment_remains_stopped": true
+}

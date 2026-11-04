@@ -1,0 +1,20 @@
+{
+  "python": "3.10.20 (main, Aug  7 2026, 02:25:15) [Clang 22.1.3 ]",
+  "platform": "Linux-5.4.0-218-generic-x86_64-with-glibc2.31",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "numpy": "1.26.4",
+    "torchvision": "0.22.1+cu126",
+    "lpips": "0.1.4",
+    "scikit-image": "0.25.2",
+    "Pillow": "10.4.0"
+  },
+  "python_executable": "/home/zhuzhiyu/yanglin/turbulence_ir/shared/envs/py310_torch271_cu126_v1/bin/python",
+  "metrics_dependency_dir": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/deps",
+  "TORCH_HOME": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/assets/torch",
+  "alexnet_metric_weight_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+  "metric_cache_load": "PASS",
+  "NAFNet_restoration_pretrained_loaded": true,
+  "active_initialization": "official_SIDD_pretrained_body",
+  "original_official_checkpoint_sha256": "cd685efaae01f7c4e9951f2deab05780079c8eb1e49ed664b72f6db04dabb445"
+}

@@ -1,0 +1,225 @@
+{
+  "method_version": "V0.31",
+  "stage": 3,
+  "project_root": "/data2/yanglin/v031_followup_20260918",
+  "base_source": "/data0/yanglin/physical_bridge",
+  "dataset_root": "/data2/yanglin/v03_overfit100_g4321_n4/data/places_p2s_bridge_v03_overfit100_g4321_n4",
+  "dataset_id": "places_p2s_bridge_v03_overfit100_g4321_n4",
+  "asset_dir": "/data0/yanglin/vendor/PiRN/assets/utils",
+  "data_hash_manifest_sha256": "b896f9060a8ff012cafe476ec6c0bb1075e6291bfdec1eab7ff791dc8936b03b",
+  "base_hashes": {
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "physical_bridge/inference.py": "d8adc179bb58a7a166c216cd16f459f4233017a63730da6330eec4007a332bd7",
+    "physical_bridge/data.py": "2bda58815d446ae0aaf53b06548d3150f68683f3d10eb9bfd0e41c3055407a14"
+  },
+  "seed": 20260916,
+  "lambda_R": 0.2,
+  "diagnostic_subset": "subsets/overfit_16traj_starts.jsonl",
+  "physics": {
+    "adjustment": 1.0,
+    "aperture_diameter": 0.071,
+    "correlation": -0.05,
+    "image_size": 256,
+    "propagation_distance": 100.0,
+    "rf_range": 512,
+    "tilt_threshold": 0.02,
+    "wavelength": 5e-07
+  },
+  "network": {
+    "base_channels": 64,
+    "channel_multipliers": [
+      1,
+      2,
+      4,
+      4,
+      4
+    ],
+    "residual_blocks_per_level": 2,
+    "group_norm_groups": 32,
+    "severity_embedding_dim": 256
+  },
+  "precision": {
+    "reference": "fp32",
+    "candidate": "hybrid_bf16",
+    "fallback": "fp32",
+    "parameter_dtype": "float32",
+    "ema_dtype": "float32",
+    "optimizer_state_dtype": "float32",
+    "simulator_dtype": "float32",
+    "loss_dtype": "float32",
+    "selected": "fp32",
+    "bf16_exclusion": "Stage1 global gradient cosine 0.8705482464 below0.99"
+  },
+  "scheduler": {
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "warmup_updates": 50,
+    "cosine_end_update": 1000,
+    "floor_lr": 1e-05,
+    "after_1000": "constant",
+    "diagnostic_checkpoints": [
+      500,
+      1000
+    ]
+  },
+  "npu_execution": {
+    "jit_compile": false,
+    "task_queue_enable": 0,
+    "launch_blocking": 0,
+    "force_jit_ops": [
+      "Conv2DBackpropInput"
+    ],
+    "precision_mode": "must_keep_origin_dtype",
+    "allow_internal_format": true,
+    "conv_hf32": false,
+    "matmul_hf32": false,
+    "aclnn_hf32": false
+  },
+  "mode": "FOLLOWUP_TO_1000",
+  "identity": {
+    "task": "T2_FEEDBACK_R",
+    "plan_sha256": {
+      "00_MASTER_PLAN.md": "6c96c8365e37af9290e62eb374108b97e8f8559b0462034477a970bd8639e657",
+      "01_T1_DIRECT.md": "f16bfa0e0afd3a1ae351f25ae21fd90bdc01cd85ea66aea04f14083c142d2a0c",
+      "02_T2_FEEDBACK_R.md": "63fe8bcc0dd0788cf82760f572e9c62ecbaea07ea187e32cac9f1b3cbc54373d",
+      "03_I1_REFINE_REPAIR.md": "8b550113651fc956e35ce1c36822f1fb27e08e517795b16876b21d7d0029167d"
+    },
+    "common_initial_network_sha256": "9e377787f59f7d60106c989b8ed8e058b6b02d29456cb1b68e4aeb539b942087",
+    "formal_fresh_after_smoke": true,
+    "runtime_selection_sha256": "66bcbfe13694b0c9bb370a0f5997a0d8f849a8e8b196922dcadf7067dd38269e",
+    "native_semantics_sha256": "cd47ee78751f518bfca02e1652d839cc862ec5ae0ac0b9f13fdf117d69ebc138",
+    "actual_configuration": {
+      "precision": "fp32",
+      "world_size": 4,
+      "effective_batch": 32,
+      "microbatch": 1,
+      "accumulation": 8,
+      "optimizer": "AdamW",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "clip_grad_norm": 1.0,
+      "parameter_group_rule": "bias_and_normalization_no_decay",
+      "run_until_update": 1000,
+      "allow_automatic_updates_beyond_1000": false,
+      "checkpoint_every": 100,
+      "sampler_seed": 20260916,
+      "train_seed": 20260916,
+      "ema_enabled": false
+    }
+  },
+  "gates": {
+    "targeted_acceptance_passed": true,
+    "training_config_frozen": true
+  },
+  "evaluation": {
+    "batch_size": 1,
+    "tie_psnr_db": 1e-06,
+    "fixed_preview_start_ids": [
+      "Places365_val_00003063_r01_G4",
+      "Places365_val_00003063_r01_G3",
+      "Places365_val_00003063_r01_G2",
+      "Places365_val_00003063_r01_G1"
+    ],
+    "fixed64_manifest": "subsets/overfit_16traj_starts.jsonl",
+    "full_manifest": "start_manifest.jsonl",
+    "modes": [
+      "unrefined"
+    ],
+    "weights": [
+      "raw"
+    ],
+    "initial_update0_modes": [
+      "unrefined"
+    ],
+    "batch2_exclusion": "native xi comparison failed at unchanged rtol1e-4/atol1e-5",
+    "calibrate_once_at_update": 100
+  },
+  "training": {
+    "precision": "fp32",
+    "world_size": 4,
+    "effective_batch": 32,
+    "microbatch": 1,
+    "accumulation": 8,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "clip_grad_norm": 1.0,
+    "parameter_group_rule": "bias_and_normalization_no_decay",
+    "run_until_update": 1000,
+    "allow_automatic_updates_beyond_1000": false,
+    "checkpoint_every": 100,
+    "sampler_seed": 20260916,
+    "train_seed": 20260916,
+    "ema_enabled": false
+  },
+  "simulator_asset_hashes": {
+    "I0_I2.pt": "aa99db54950df99465e5c8b7b7b16b7ed9236603b5c1a63d82dd8831b5712f2e",
+    "P2S_model.pt": "578c3cd09c5c44e66c1086ffc0aadcab99542b74d27b932e9ca601a3faf6a4d5",
+    "dictionary.pt": "2204ace3e4b99f31d62d21d0ba19bae95c606393ba7df5111e2526172e6b24c6"
+  },
+  "data_manifest_hashes": {
+    "source_manifest.jsonl": "cfcca03afc4fd61f17970973f1ad45eb0317170c45b3e7d4f0742c9306ff64f1",
+    "trajectory_manifest.jsonl": "26870ae5b48cb175ca57c46c8c3eb3f6d86df05ef54cec2120979329f868767e",
+    "start_manifest.jsonl": "9ee10f77a842f316301bff91adcda3ce3aa896c2c22cc25023866d573a7dd6d6"
+  },
+  "expected_initial_network_sha256": "9e377787f59f7d60106c989b8ed8e058b6b02d29456cb1b68e4aeb539b942087",
+  "expected_simulator_sha256": "d2a29de8a38c8c26996c176d83f1393b3d3ac85d3a4e0577f717dfdf4bf319b7",
+  "resume_acceptance": {
+    "criterion": "exact_restore_then_bounded_fp32_reexecution_v1",
+    "immediate_restore": "exact_all_fields_before_any_restored_optimizer_attempt",
+    "continuation_exact_fields": "all except FP32 network, EMA network and AdamW exp_avg/exp_avg_sq tensors",
+    "continuation_atol": 1.1920928955078125e-07,
+    "continuation_rtol": 9.5367431640625e-07,
+    "continuation_group_relative_l2_max": 9.5367431640625e-07,
+    "independent_relative_l2_groups": [
+      "network",
+      "ema",
+      "optimizer_exp_avg",
+      "optimizer_exp_avg_sq"
+    ],
+    "bitwise_reexecution": "always_report_separately; false is never relabeled exact",
+    "identical_suffix_start_ids_required": true,
+    "finite_shape_dtype_structure_required": true,
+    "basis": "IEEE FP32 epsilon and independently observed repeated-backward variability without checkpoint restore; original user protocol requires full state restore and exact LR trajectory, not bitwise accelerator reexecution",
+    "original_bitwise_failure_preserved": "artifacts/stage2_resume_mb1_hccl02"
+  },
+  "orchestration": {
+    "train_segment_timeout_seconds": 16037,
+    "calibration_timeout_seconds": 7200,
+    "subset_evaluation_timeout_seconds": 7200,
+    "full_evaluation_timeout_seconds": 43200,
+    "infrastructure_retry_limit": 2,
+    "automatic_stop_update": 1000,
+    "separate_process_for_every_evaluation": true,
+    "hccl_connect_timeout_seconds": 3600
+  },
+  "task": "T2_FEEDBACK_R",
+  "initial_state_path": "/data2/yanglin/v031_followup_20260918/shared/initial_full_network.pt",
+  "expected_full_initial_network_sha256": "9e377787f59f7d60106c989b8ed8e058b6b02d29456cb1b68e4aeb539b942087",
+  "code_hashes": {
+    "code/train_worker.py": "2bf9a544f8f63ab4e527ec71486d9c8e34c2262ce038d7ffee7c3ce531072c9c",
+    "code/v031/__init__.py": "d6c7408e64218187c7aeed73d552278b290a11191514f289e89afdf12880ae5c",
+    "code/v031/checkpoint.py": "cd5a09c0d995a3e6c2037da0016db24e00a8999b1f0b6e723d85252208d78845",
+    "code/v031/core.py": "cd6029c257578cdbc41302d2c6e22332dc0d111a44347688b8910db53171e763",
+    "code/v031/data.py": "116ad57f2cb296cedbb0543e21ce5df4d3611c56f938f522bad778b98a242f77",
+    "code/v031/distributed_runtime.py": "35e5cffcce3180c9ce6882d587d1a895392902659161be21485431d5486a1f8d",
+    "code/v031/evaluation.py": "32c2ee78eaec8886698c488b4e176022819cf9ed5b85fa2651353a82a1019343",
+    "code/v031/followup.py": "a9bb3011d6bd91ece398ae4c6ea5e1c2edd83165c09546a0feb73f34a407b7e5",
+    "code/v031/followup_diagnostics.py": "adff10408dd442fc09ac549bd41c0e425d12f5bba72836e2c3e1ac729ea3260b",
+    "code/v031/followup_refinement.py": "575c9f91e5dccd063e794de904db06bc67ea2fce2c4ae7e6d8b9657615cf6657",
+    "code/v031/inference.py": "14b8a319b822a581956373d932aa2bd8454c09eabc172bbc16cc9251466d67bf",
+    "code/v031/refinement.py": "83eb8938c3f93e670370765f2ca806391caad0aca85472854bebe5525515eca8",
+    "code/v031/runtime.py": "434b1896d97017838d8785a3f8c061375cae9ea281a11e69851f8b09d87a0a68",
+    "code/v031/scheduler.py": "91369bc9a08d1601bd3761ec8520fa022316349b5a682ea93a7597104a705a78",
+    "code/v031/training.py": "e5230b957cf981b0344d8dba31e4537ef78bbcacaa4fe1a39e67a312e449852a"
+  }
+}

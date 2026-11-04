@@ -1,0 +1,9 @@
+{
+  "status": "PASS_STAGED_CANONICAL_CPU_REPLAY",
+  "raw_comparisons": 20,
+  "RGB_comparisons": 8,
+  "maximum_RGB_error": 1.9669532775878906e-06,
+  "fixed_tolerances_unchanged": true,
+  "new_GPU_validation_not_authorized_or_run": true,
+  "compiled_entry_sha256": "509dbe25d411b79035a5a7d24160f166ffa276049aa3e7239ef4227ce963d28d"
+}

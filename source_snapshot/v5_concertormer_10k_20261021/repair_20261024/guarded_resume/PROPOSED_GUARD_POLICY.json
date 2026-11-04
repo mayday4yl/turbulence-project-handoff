@@ -1,0 +1,11 @@
+{
+  "schema": "v5_pause_only_gradient_guard_v1",
+  "status": "PROPOSED_NOT_AUTHORIZED_FOR_LAUNCH",
+  "action": "abort_all_ranks_before_optimizer_no_skip",
+  "max_micro_total_loss": 1.0,
+  "max_micro_clean_mae": 1.0,
+  "max_micro_observation_mae": 10.0,
+  "max_preclip_gradient_norm": 1000.0,
+  "semantics": "Gross catastrophe pause criteria only; these values are not a root-cause fix, scientific validity threshold, acceptance relaxation, sample skipping rule, or gradient clipping change.",
+  "basis": "Parent-selected gross-anomaly abort thresholds: catch all three known historical windows without a loss/gradient modification. Activation still requires bound replay and six-card update evidence."
+}

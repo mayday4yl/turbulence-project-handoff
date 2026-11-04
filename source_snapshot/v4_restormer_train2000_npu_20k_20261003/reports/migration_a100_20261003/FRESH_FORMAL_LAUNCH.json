@@ -1,0 +1,78 @@
+{
+  "status": "ALL_FOUR_A100_FRESH_U0_FORMAL_LAUNCH_VERIFIED",
+  "methods": {
+    "D0": {
+      "attempt": "1791007919_2475896",
+      "device": "cuda:0",
+      "epoch": 0.008,
+      "evaluation_seconds_this_attempt": 0.0,
+      "exposures": 256,
+      "last_update_seconds": 16.64245925564319,
+      "mean_recent_update_seconds": 16.549393845140003,
+      "microbatch": 8,
+      "precision": "bf16",
+      "status": "TRAINING",
+      "time": 1791008054.024114,
+      "training_only_remaining_seconds": 330855.48175203893,
+      "training_seconds_this_attempt": 132.39515076112002,
+      "update": 8
+    },
+    "R0": {
+      "attempt": "1791007920_2476023",
+      "device": "cuda:1",
+      "epoch": 0.003,
+      "evaluation_seconds_this_attempt": 0.0,
+      "exposures": 96,
+      "last_update_seconds": 43.70665552886203,
+      "mean_recent_update_seconds": 44.095654092573874,
+      "microbatch": 4,
+      "precision": "bf16",
+      "status": "TRAINING",
+      "time": 1791008054.7610776,
+      "training_only_remaining_seconds": 881780.7948891997,
+      "training_seconds_this_attempt": 132.2869622777216,
+      "update": 3
+    },
+    "R08": {
+      "attempt": "1791007919_2476129",
+      "device": "cuda:0",
+      "epoch": 0.003,
+      "evaluation_seconds_this_attempt": 0.0,
+      "exposures": 96,
+      "last_update_seconds": 43.62042877916247,
+      "mean_recent_update_seconds": 43.6864523057205,
+      "microbatch": 4,
+      "precision": "bf16",
+      "status": "TRAINING",
+      "time": 1791008052.865899,
+      "training_only_remaining_seconds": 873597.9867574928,
+      "training_seconds_this_attempt": 131.0593569171615,
+      "update": 3
+    },
+    "L08": {
+      "attempt": "1791007920_2476234",
+      "device": "cuda:1",
+      "epoch": 0.003,
+      "evaluation_seconds_this_attempt": 0.0,
+      "exposures": 96,
+      "last_update_seconds": 42.80505516100675,
+      "mean_recent_update_seconds": 43.00085771332184,
+      "microbatch": 4,
+      "precision": "bf16",
+      "status": "TRAINING",
+      "time": 1791008050.8811648,
+      "training_only_remaining_seconds": 859888.151693297,
+      "training_seconds_this_attempt": 129.00257313996553,
+      "update": 3
+    }
+  },
+  "physical_gpu_mapping": {
+    "D0": 3,
+    "R08": 3,
+    "R0": 5,
+    "L08": 5
+  },
+  "NPU_checkpoint_imported": false,
+  "source": "User explicitly requests fresh training",
+  "time": 1791008065.394447
+}

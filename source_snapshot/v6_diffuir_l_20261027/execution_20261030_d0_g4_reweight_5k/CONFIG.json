@@ -1,0 +1,85 @@
+{
+  "experiment": "D0_Mixed_G4_reweight_5k",
+  "parent_update": 157505,
+  "parent_cursor": 3717660,
+  "parent_path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U157505.pt",
+  "parent_sha256": "9e6b66e6a46434dc86b327dfce6be04d78aa1de61449d7791e282c62d52e0029",
+  "seed": 737001,
+  "reweight_seed": 2026103002,
+  "source_execution": "execution_20261029_d0_multistrength160k",
+  "physical_devices_by_branch": {
+    "Control": [
+      2
+    ],
+    "G4_biased": [
+      3
+    ]
+  },
+  "original_virtual_ranks": 4,
+  "original_accumulation": 3,
+  "microbatch": 5,
+  "serial_accumulation": 12,
+  "effective_batch": 60,
+  "initial_updates_per_branch": 5000,
+  "maximum_additional_G4_biased_updates": 5000,
+  "lr": 2e-06,
+  "ema_beta": 0.995,
+  "global_clip": 1.0,
+  "precision": "FP32",
+  "HF32": false,
+  "amp": false,
+  "gradient_checkpointing": false,
+  "loss": "official_normalized_raw_residual_L1",
+  "residual_multiplier": 1.0,
+  "clean_training_branch": false,
+  "training_nfe_per_sample": 1,
+  "sampling_nfe": 3,
+  "g_values_validation": [
+    0.5,
+    1,
+    2,
+    3,
+    4
+  ],
+  "validation_local_updates": [
+    0,
+    1000,
+    3000,
+    5000
+  ],
+  "extension_validation_local_updates": [
+    6000,
+    8000,
+    10000
+  ],
+  "checkpoint_every": 500,
+  "probabilities": {
+    "Control": {
+      "1": 0.25,
+      "2": 0.25,
+      "3": 0.25,
+      "4": 0.25
+    },
+    "G4_biased": {
+      "1": 0.16666666666666666,
+      "2": 0.16666666666666666,
+      "3": 0.16666666666666666,
+      "4": 0.5
+    }
+  },
+  "stop_request": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/STOP_REQUEST.json",
+  "A_B_allowed": false,
+  "world_size": 1,
+  "accumulation": 12,
+  "physical_devices_authorized": [
+    1,
+    2,
+    3
+  ],
+  "original_inference_tasks_reserved_devices": [
+    4,
+    5,
+    6,
+    7
+  ]
+}

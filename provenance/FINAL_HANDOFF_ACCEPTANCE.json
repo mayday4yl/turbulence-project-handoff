@@ -1,0 +1,128 @@
+{
+  "schema": "turbulence_project_handoff_final_acceptance_v1",
+  "status": "PASS",
+  "final": true,
+  "checked_unix": 1793730351.580987,
+  "scope": "User-requested entire turbulence project handoff plus midnight UniDB experiment artifacts completed; external receipt not claimed",
+  "covered_versions": [
+    "v1",
+    "v1.5",
+    "v2",
+    "v2.5",
+    "v3",
+    "V4",
+    "V5",
+    "V6",
+    "UniDB",
+    "geometry",
+    "candidate_baseline_diagnostics"
+  ],
+  "evidence_bindings": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/PACKAGE_CREATION_RECEIPT.json",
+      "bytes": 1718,
+      "sha256": "77ae60594713267bb8950d4f289844bda8f627d06997ddaf6dcdcfc7ab08e6ed"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/package_preparation/INDEPENDENT_FINAL_PACKAGE_REVIEW.json",
+      "bytes": 797736,
+      "sha256": "ec2960f363d9f258b66e1e49d73eb80cd3452f07d933a4dd67a42ed8cd2d2189"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/FINAL_HANDOFF_CONTENT_REFRESH.json",
+      "bytes": 4365,
+      "sha256": "6c768e522deaf1007f544456ac7baddcf27e94e4686817bbc72411e1d82155cc"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/HANDOFF_FINAL_DOCUMENT_VISUAL_QA.json",
+      "bytes": 5479,
+      "sha256": "947fdb3afe84bd9dbe96c629697081bfd3e34a9548d8fbb800e69984296470c7"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/ROOT_EXPERIMENT_FINAL_ACCEPTANCE.json",
+      "bytes": 14530,
+      "sha256": "cfb123e1d6428561e7771c379befb89fa2300e428397adca9fbcfe32839c2b82"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+      "bytes": 7914,
+      "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "bytes": 5060,
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "bytes": 5579,
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff/MANIFEST.json",
+      "bytes": 108943,
+      "sha256": "3a736d8b5e736e0ed1fe511cd1574501e241c6000cd71e96cfc6b1ac1f2d580d"
+    }
+  ],
+  "delivery_files": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff.zip",
+      "bytes": 29674149,
+      "sha256": "aaba5303f5b5d555d143cb40b131593079dbea29d2a22539a17ed126c912d827"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff/documents/Turbulence_Project_Handoff_FINAL.docx",
+      "bytes": 54587,
+      "sha256": "7ab32d05dab9f365f5e1540d516bf3ca6d8bb064f24e8101b9478658f3d12c8f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/portable_handoff/documents/Turbulence_Project_Handoff_FINAL.pdf",
+      "bytes": 793057,
+      "sha256": "3e53c3664d0d288d924aef35d953267667ff6c1dc73f6f79a3ae84b76d5c3179"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/SHA256SUMS.txt",
+      "bytes": 445,
+      "sha256": "f859ee9f94694a0a91487de04e7d5c96b117cad69afc65fcd41f67d352a1c6b3"
+    }
+  ],
+  "validation": {
+    "source_files": 416,
+    "package_files_including_manifest": 562,
+    "manifest_entries": 561,
+    "source_original_markdown_copies": 142,
+    "local_markdown_links": 694,
+    "independent_checks": 4651,
+    "root_actual_final_document_pages_reviewed": 11,
+    "root_actual_final_experiment_pngs_reviewed": 10,
+    "final_unique_checkpoints_full_sha_verified": 3,
+    "final_checkpoint_roles": 4,
+    "owned_process_identity_union": 534,
+    "external_signals": 0,
+    "zip_crc": "PASS",
+    "all_manifest_payload_sha": "PASS",
+    "source_map_sha": "PASS"
+  },
+  "register_rows": {
+    "VERSION": 11,
+    "EXPERIMENT": 74,
+    "DATA": 27,
+    "CODE_ENV": 31,
+    "WEIGHT": 33,
+    "EVIDENCE": 353,
+    "ASSET": 80
+  },
+  "limitations": [
+    "125 unavailable structured fields remain explicitly unknown.",
+    "A100 five asset paths currently unverified due to connection failure; not asserted missing.",
+    "Portable ZIP excludes model weights, data, full prediction arrays and environment images; actual locations and evidence tiers are registered.",
+    "No new experiments or model inference were started for handoff.",
+    "External recipient signing or receipt was not performed."
+  ],
+  "next_action": "Return verified experiment entrypoint and full-project DOCX/PDF/ZIP links in this chat. Scheduled follow-up has been deleted.",
+  "automation_retirement": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/delivery/AUTOMATION_RETIREMENT.json",
+    "bytes": 449,
+    "sha256": "faf821a282d548ffe28fb7d8c91a91033a76ed997ab3ec65540bf81535eb85aa"
+  }
+}

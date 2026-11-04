@@ -1,0 +1,247 @@
+{
+  "input_signature": "5ff848635f9bd6d276e9f07f2321e4cb1c9dc6575749b63c5a5edb4d777d6c35",
+  "figures": {
+    "CAMPAIGN_DYNAMICS.pdf": "41ac3ef73846a5fd5776c82e56e331f0b372ba255bf3f23ffefe14f75a28cd15",
+    "CAMPAIGN_DYNAMICS.png": "745821cdf1cdae7a1b14eb5f1ccb2ac12ddc7772683727b49e63d463daef6d1d",
+    "FIXED_G4_BEST.pdf": "32c0b0c88512a2dd8e8a42cb5736fc8f1715dec71dc9fca90a47ce3a871e10e6",
+    "FIXED_G4_BEST.png": "e09a9e52224e637d4058762d9a23debee33aa8441f3c71a928824ccdffe0a326",
+    "FIXED_G4_LATEST.pdf": "e358775a37516a1fb8c9993e0cf454fbe1f57074312f4dcba1ddabc02f4fa371",
+    "FIXED_G4_LATEST.png": "53451213b0987668d73006438f38a99aa7e649877e080a0c9e1e6977f41273a9"
+  },
+  "fixed_image_audits": [
+    {
+      "role": "best",
+      "selected_validation": {
+        "original": {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+          "update": 67180,
+          "full": true,
+          "campaign_stage": "until00_extension"
+        },
+        "improved": {
+          "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+          "update": 10000,
+          "full": true,
+          "campaign_stage": "until_noon"
+        }
+      },
+      "assets": [
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1708_r00.npy",
+          "sha256": "5524db24c4bef70d66235c9334ddb3aa12f0e927475717cf67664af7a1142cb6",
+          "display_clamp_01": true,
+          "raw_min": 0.00442447979003191,
+          "raw_max": 0.9104924201965332,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "0c830505bc3369a0f9e0fdf367f4516c27d24a31eac084035a661e07444039e1",
+          "display_clamp_01": true,
+          "raw_min": -0.03987456113100052,
+          "raw_max": 1.037078619003296,
+          "raw_outside_01_fraction": 0.0010121663411458333
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "568f899b7476898c07cd20a2d5a49d6f9b92caca42aec046efce77ba2540c7fa",
+          "display_clamp_01": true,
+          "raw_min": -0.09136398136615753,
+          "raw_max": 1.1135755777359009,
+          "raw_outside_01_fraction": 0.021662394205729168
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "1d8e752fb34fde15f5ea7b3994fe81a74c4cab62dd63796843ef01826c8fdba6",
+          "display_clamp_01": true,
+          "raw_min": -0.09661570936441422,
+          "raw_max": 1.1289830207824707,
+          "raw_outside_01_fraction": 0.022237141927083332
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "8a5a3ace709d9e53fe33bb062cbe4d9803189071d59b179ffeeb3624e161555c",
+          "display_clamp_01": true,
+          "raw_min": -0.14550073444843292,
+          "raw_max": 1.18594229221344,
+          "raw_outside_01_fraction": 0.0306549072265625
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000076.jpg.npy",
+          "sha256": "93aa225cb9010e0cda1eff762f256ded210a3fe43b8e46f2b01cdbaeb170fbc2",
+          "display_clamp_01": true,
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1710_r00.npy",
+          "sha256": "7662836aa45a6066b8c7b3ca870ff4010605c38ff61b37011592da0aa6f57528",
+          "display_clamp_01": true,
+          "raw_min": 0.08448396623134613,
+          "raw_max": 0.9963895678520203,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "9921bef3662ffb7fd17f833a269ddd9d0c2475b742c5ff1f1e2f231b7e47f510",
+          "display_clamp_01": true,
+          "raw_min": 0.007949868217110634,
+          "raw_max": 1.0503978729248047,
+          "raw_outside_01_fraction": 0.0016937255859375
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "ccbc2cc0d98b8aac1443cdf6dab1c33b109f7edcb5a4d889b9495c9921fbefcb",
+          "display_clamp_01": true,
+          "raw_min": -0.1220286414027214,
+          "raw_max": 1.259782075881958,
+          "raw_outside_01_fraction": 0.029368082682291668
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "491ea4d05e62f1b4e725376d9308cbf5b20029a2d284ad9eb08eed20511f3b34",
+          "display_clamp_01": true,
+          "raw_min": -0.12078327685594559,
+          "raw_max": 1.2697992324829102,
+          "raw_outside_01_fraction": 0.031499226888020836
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "dc202d356ee50be4084a919e2a175b3530953f52b8f722f06c31df31032bc7bc",
+          "display_clamp_01": true,
+          "raw_min": -0.18854638934135437,
+          "raw_max": 1.2582199573516846,
+          "raw_outside_01_fraction": 0.0478057861328125
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000223.jpg.npy",
+          "sha256": "3e2905c9e4e16780fc2bfa04e22db48a0510bd40bad25475146ae6cd0030be7d",
+          "display_clamp_01": true,
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_outside_01_fraction": 0.0
+        }
+      ],
+      "scope": "Stage fallback is a completed monitor candidate, explicitly labeled; final best/latest must resolve full5000 summaries."
+    },
+    {
+      "role": "latest",
+      "selected_validation": {
+        "original": {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+          "update": 67180,
+          "full": true,
+          "campaign_stage": "until00_extension"
+        },
+        "improved": {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+          "update": 40848,
+          "full": true,
+          "campaign_stage": "until00_extension"
+        }
+      },
+      "assets": [
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1708_r00.npy",
+          "sha256": "5524db24c4bef70d66235c9334ddb3aa12f0e927475717cf67664af7a1142cb6",
+          "display_clamp_01": true,
+          "raw_min": 0.00442447979003191,
+          "raw_max": 0.9104924201965332,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "0c830505bc3369a0f9e0fdf367f4516c27d24a31eac084035a661e07444039e1",
+          "display_clamp_01": true,
+          "raw_min": -0.03987456113100052,
+          "raw_max": 1.037078619003296,
+          "raw_outside_01_fraction": 0.0010121663411458333
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "568f899b7476898c07cd20a2d5a49d6f9b92caca42aec046efce77ba2540c7fa",
+          "display_clamp_01": true,
+          "raw_min": -0.09136398136615753,
+          "raw_max": 1.1135755777359009,
+          "raw_outside_01_fraction": 0.021662394205729168
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "1d8e752fb34fde15f5ea7b3994fe81a74c4cab62dd63796843ef01826c8fdba6",
+          "display_clamp_01": true,
+          "raw_min": -0.09661570936441422,
+          "raw_max": 1.1289830207824707,
+          "raw_outside_01_fraction": 0.022237141927083332
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/predictions/G4/val_s1708_r00.npy",
+          "sha256": "f3452ed5fac925e7526413bf780e0b39ab4ebd509c96a7933b68c762c876192b",
+          "display_clamp_01": true,
+          "raw_min": -0.1365145742893219,
+          "raw_max": 1.173817753791809,
+          "raw_outside_01_fraction": 0.0346527099609375
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000076.jpg.npy",
+          "sha256": "93aa225cb9010e0cda1eff762f256ded210a3fe43b8e46f2b01cdbaeb170fbc2",
+          "display_clamp_01": true,
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1710_r00.npy",
+          "sha256": "7662836aa45a6066b8c7b3ca870ff4010605c38ff61b37011592da0aa6f57528",
+          "display_clamp_01": true,
+          "raw_min": 0.08448396623134613,
+          "raw_max": 0.9963895678520203,
+          "raw_outside_01_fraction": 0.0
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "9921bef3662ffb7fd17f833a269ddd9d0c2475b742c5ff1f1e2f231b7e47f510",
+          "display_clamp_01": true,
+          "raw_min": 0.007949868217110634,
+          "raw_max": 1.0503978729248047,
+          "raw_outside_01_fraction": 0.0016937255859375
+        },
+        {
+          "path": "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "ccbc2cc0d98b8aac1443cdf6dab1c33b109f7edcb5a4d889b9495c9921fbefcb",
+          "display_clamp_01": true,
+          "raw_min": -0.1220286414027214,
+          "raw_max": 1.259782075881958,
+          "raw_outside_01_fraction": 0.029368082682291668
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "491ea4d05e62f1b4e725376d9308cbf5b20029a2d284ad9eb08eed20511f3b34",
+          "display_clamp_01": true,
+          "raw_min": -0.12078327685594559,
+          "raw_max": 1.2697992324829102,
+          "raw_outside_01_fraction": 0.031499226888020836
+        },
+        {
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/predictions/G4/val_s1710_r00.npy",
+          "sha256": "25d5c350a8cb7024e4b8d9c2e86d90e74b130ef0b0b2507d3376d6e89f0ebfc2",
+          "display_clamp_01": true,
+          "raw_min": -0.22937723994255066,
+          "raw_max": 1.2589234113693237,
+          "raw_outside_01_fraction": 0.051462809244791664
+        },
+        {
+          "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000223.jpg.npy",
+          "sha256": "3e2905c9e4e16780fc2bfa04e22db48a0510bd40bad25475146ae6cd0030be7d",
+          "display_clamp_01": true,
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_outside_01_fraction": 0.0
+        }
+      ],
+      "scope": "Stage fallback is a completed monitor candidate, explicitly labeled; final best/latest must resolve full5000 summaries."
+    }
+  ],
+  "display_only_clamp": true,
+  "visual_QA_by_root_required": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS_D0_READY_TO_DELIVER",
+  "latest": 157505,
+  "best": 109544,
+  "parent": 95544,
+  "all_original_workers_and_controller_exited": true,
+  "final_five_g_complete": true,
+  "complete_source_and_delivery_SHA_verified": true,
+  "all_160_gallery_dimensions_checked": true,
+  "four_final_figures_visually_inspected": true,
+  "new_model_calls_for_report": 0,
+  "report_sha256": "3a29234e1832c6c9212f64f36b0997ccab75411ab2d6a936311ca4601bdc8483",
+  "new_updates": 61961,
+  "epochs_equivalent": 23.235375
+}

@@ -1,0 +1,9 @@
+{
+  "required_training_evaluations_missing": [],
+  "heldout32_complete": true,
+  "I1_confirmation": "not_run_predeclared_no_eligible_dev_candidate",
+  "I1_candidate_heldout": "not_run_predeclared_no_eligible_dev_candidate",
+  "confirm_source_arrays": "not_applicable_confirmation_not_opened",
+  "checkpoint_and_FP32_arrays": "retained remotely; paths and hashes supplied",
+  "local_package_and_visual_QA": "performed after remote packaging; see DELIVERY_VALIDATION.json beside ZIP"
+}

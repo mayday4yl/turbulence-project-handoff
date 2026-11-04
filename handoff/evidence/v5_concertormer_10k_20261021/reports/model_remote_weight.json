@@ -1,0 +1,8 @@
+{
+  "host": "liteserver-de36",
+  "path": "/data2/yanglin/v5_concertormer_10k_20261021/weights/Concertormer_GoPro_official.pth",
+  "sha256": "e6a55a1f9ae53c818d2bef9280d9b428973d8776df008b151df226ae94137b3b",
+  "local_and_remote_sha256_match": true,
+  "verified_by": "remote sha256sum after rsync",
+  "size_bytes": 202554935
+}

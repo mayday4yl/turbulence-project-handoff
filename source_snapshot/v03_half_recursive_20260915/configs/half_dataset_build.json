@@ -1,0 +1,7 @@
+{
+  "source_root": "/data2/yanglin/physical_bridge/data/places_p2s_bridge_v01",
+  "output_root": "/data2/yanglin/v03_half_recursive_20260915/data/places_p2s_bridge_v03_half",
+  "subset_seed": 2026091504,
+  "workers": 2,
+  "maximum_wall_seconds": 3600
+}

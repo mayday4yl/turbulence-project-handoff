@@ -1,0 +1,37 @@
+{
+  "g450_trajectories": 20,
+  "gates": {
+    "bridge_last200_at_most_95pct_first200": true,
+    "finite": true,
+    "full_trajectory_last200_at_most_95pct_first200": true,
+    "k0_psnr_drop_no_more_than_0p1db": false,
+    "k1_psnr_gain_at_least_0p1db": false,
+    "next_state_mse_reduction_at_least_25pct": false,
+    "xi_scale_stable": true
+  },
+  "metrics": {
+    "baseline_k0_psnr": 22.0902911567688,
+    "baseline_k1_psnr": 20.008865642547608,
+    "baseline_next_state_mse": 0.0005571394256548956,
+    "bridge_last_first_ratio": 0.9128393007979924,
+    "full_trajectory_last_first_ratio": 0.9036838308039961,
+    "k0_psnr_delta_db": -0.12377462387085103,
+    "k1_psnr_gain_db": 0.06980113983154368,
+    "next_state_mse_reduction": 0.03586669725652303,
+    "pilot_k0_psnr": 21.96651653289795,
+    "pilot_k1_psnr": 20.078666782379152,
+    "pilot_next_state_mse": 0.0005371566745452583,
+    "xi_median_ratios": {
+      "tilt_norm": 1.024477516181458,
+      "tilt_std": 1.0222437524966923,
+      "zernike_norm": 1.0354072149620859,
+      "zernike_std": 1.0311415870073226
+    }
+  },
+  "pilot_checkpoint": "/data2/yanglin/physical_bridge/runs/v02_new_protocol_20260829/a1/checkpoints/update-003000.pt",
+  "pilot_checkpoint_sha256": "a48a7557a577d0affd745f1e06f32902801b96c2b97d1df53f68d59176ff033a",
+  "stage": "A1",
+  "status": "STOP",
+  "validation_trajectories": 100,
+  "wall_seconds": 16.86826776798989
+}

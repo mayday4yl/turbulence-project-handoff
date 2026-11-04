@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "created_utc": "2026-11-02T17:35:18.485758+00:00",
+  "files": {
+    "audit_engineering.py": "0a4cd79dbe7c3d36f4319985568ef41dd4fec014394644c817c33022fd89718d",
+    "audit_native_dummy_gloo.py": "e5abf1eafad253b7b658bf98d15d831edf9b6598be2f5a3bb42588d93c0d60b0",
+    "audit_state.py": "2a85ef1f9bf9794da17d3d2f42b674a1d3e71aa7846309777ce2178553b72697",
+    "controller.py": "c5b7e584300e1e08fcc7c2554e6c61aa1a9bb987634b990bd1b6d95885be668d",
+    "improved_objective.py": "20aa4a11a11494436186ac3a8ad1ff56e47ed1b277ba7a5b9b3d21c45060ba98",
+    "protocol/AUDIT_STATE_FROZEN_TOLERANCES.json": "61bc51ce136f314de7cbbf8ea62c0c6dd1def3cce8881e03b9913879f76a7d3e",
+    "protocol/USER_AUTHORITY.json": "331bdb5d8e3198fc18a5fcc7d7658a82ce033709b255ee7e3562576e85f91d3f",
+    "tests/test_audit_state_helpers.py": "a03cfae090253acfb24608f0c28c411f307a473f7d8940bf9a5203c9e056924f",
+    "tests/test_improved_cpu_math.py": "ebf4416b85bbf0514527c355c181fb684f360658ac820275576c66a5e5035e2a",
+    "training_worker.py": "36dad281a04fcc24864b3d12413a29553df52734c5099df69042c1fd3cbe1d60",
+    "validation.py": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f"
+  },
+  "method": "New directory only. Existing original sources checked independently by original core.sources_ok.",
+  "previous_manifest_sha256": "25a441b43a93ffedc430d9e4933c2df306cb3e60be19fc2a2191f06393488a85",
+  "repair": "EMA checker uses actual official warmup semantics; controller reuses immutable completed gates and monitors evaluation progress; scientific and numerical tolerances unchanged"
+}

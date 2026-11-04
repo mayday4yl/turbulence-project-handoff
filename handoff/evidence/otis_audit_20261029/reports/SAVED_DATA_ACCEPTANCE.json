@@ -1,0 +1,123 @@
+{
+  "saved_files_checked": 5795,
+  "saved_file_hash_mismatches": [],
+  "frame_index_checks": [
+    {
+      "sequence": "Door",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern1",
+      "count": 64,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern10",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern11",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern12",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern13",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern14",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern15",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern16",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern2",
+      "count": 64,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern3",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern4",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern5",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern6",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern7",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern8",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Pattern9",
+      "count": 300,
+      "consecutive_one_based": true
+    },
+    {
+      "sequence": "Car1",
+      "count": 100,
+      "consecutive_one_based": true,
+      "mask_indices_match_inputs": true,
+      "mask_sizes_match_inputs": true
+    },
+    {
+      "sequence": "Car2",
+      "count": 315,
+      "consecutive_one_based": true,
+      "mask_indices_match_inputs": true,
+      "mask_sizes_match_inputs": true
+    },
+    {
+      "sequence": "Car3",
+      "count": 51,
+      "consecutive_one_based": true,
+      "mask_indices_match_inputs": true,
+      "mask_sizes_match_inputs": true
+    },
+    {
+      "sequence": "Car4",
+      "count": 101,
+      "consecutive_one_based": true,
+      "mask_indices_match_inputs": true,
+      "mask_sizes_match_inputs": true
+    }
+  ],
+  "all_input_frames_rgb_uint8": true,
+  "input_pixel_duplicate_groups": [],
+  "all_frame_and_dynamic_pair_checks_pass": true,
+  "passed": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_DIAGNOSTIC_DELIVERY",
+  "valid_control_runs": 80,
+  "exact_training_preprocess_replays": 20,
+  "original_delivery_files_unchanged": 196,
+  "gallery_links_exist": true,
+  "training_or_checkpoint_mutation": false,
+  "new_server_model_processes": 0,
+  "all_model_computation_local_CPU": true,
+  "scope": "six real failure fixtures, four fixed G4 positive controls, two historical numerical references, and all20 training-recipe replays"
+}

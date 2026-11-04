@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "counts": {
+    "ATD": 190,
+    "OTIS": 5195
+  },
+  "paired_count": 4328,
+  "all_outputs_SHA_shape_finite_verified": true,
+  "all_workers_exited": true,
+  "NPU_4_to_7_free": true,
+  "checkpoint_sha256_unchanged": "1fd16df15c64cc496bda89ccb32fd6a9413c9de8e59942fc13cbb6592e757cc3",
+  "stop_sha256_unchanged": "5380799448d89a7afbd21ff6d3cbdec59b3997ecdd451b85db706e1e6cba8595",
+  "training_updates": 0,
+  "A_B_resumed": false,
+  "report_sha256": "73941a7e9a057ad821f1a507e820c38ddcd21bcb23a91baf24f528ac63359e91",
+  "delivery_sha256": "bacf54a26d0a2538877913a41a57d2220d59cf053f0ecbcca6ed11a0e4fb1998",
+  "unix": 1793263388.0840113,
+  "independent_review_sha256": "9e54b4d0c42b25e92612c42f5d112122f11a82b81943f8560cabfbc38b25945a",
+  "scientific_restoration_success": false,
+  "scientific_conclusion": "OTIS external restoration degraded vs input under frozen protocol; ATD qualitative artifacts observed",
+  "controller_exited": true,
+  "updated_unix": 1793263591.5589387,
+  "final_verified_unix": 1793263660.8940394
+}

@@ -1,0 +1,47 @@
+{
+  "verified_utc": "2026-09-17T15:11:32.993468+00:00",
+  "status": "passed",
+  "checkpoint": "/data2/yanglin/v031_overfit100_g4321_n4/runs/formal/checkpoint_001000.pt",
+  "sha256": "6eb3de6a064a0215a9a5b02935145528b23209d2f633b6dd50b60a999bad2454",
+  "bytes": 514225366,
+  "global_update": 1000,
+  "optimizer_steps": [
+    1000
+  ],
+  "optimizer_parameter_states": 344,
+  "ema_updates": 1000,
+  "sampler_consumed": 32000,
+  "rng_rank_count": 4,
+  "scheduler": {
+    "version": 1,
+    "schedule_id": "v031_linear50_cosine1000_constant1e-5_v1",
+    "completed_updates": 1000,
+    "next_update_index": 1001,
+    "next_lr": 1e-05,
+    "last_used_lr": 1e-05,
+    "parameter_group_count": 2,
+    "index_semantics": "one_based_applied_update; optimizer_lr_is_next"
+  },
+  "required_complete_state_fields": [
+    "network",
+    "ema",
+    "optimizer",
+    "scheduler",
+    "rng_by_rank",
+    "sampler",
+    "identity",
+    "counts"
+  ],
+  "checked_tensor_counts": {
+    "network": 344,
+    "ema": 344,
+    "optimizer": 1032
+  },
+  "all_floating_tensors_fp32_and_finite": true,
+  "frozen_stage2_files_verified": 70,
+  "inference_calibration_unchanged": true,
+  "training_segment_exited_successfully": true,
+  "parallel_guard_completed_and_resources_released": true,
+  "run_until_update": 1000,
+  "allow_automatic_updates_beyond_1000": false
+}

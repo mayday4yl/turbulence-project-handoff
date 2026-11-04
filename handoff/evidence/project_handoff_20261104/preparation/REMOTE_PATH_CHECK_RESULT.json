@@ -1,0 +1,315 @@
+{
+  "status": "METADATA_ONLY",
+  "captured_UTC": "2026-11-03T16:37:53.172723+00:00",
+  "plan_sha256": "c9ad7006d75a9dcaec1827953cf073b130bd5c451e7d469674f967a04bfeffff",
+  "results": [
+    {
+      "host": "liteserver-40b3",
+      "status": "READ_ONLY_METADATA_CHECK_COMPLETE",
+      "result": {
+        "unix": 1793723872.0838892,
+        "rows": [
+          {
+            "asset_id": "LEGACY_CODE",
+            "path": "/data0/yanglin/physical_bridge",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1788157336834599178,
+            "mode": "0o755",
+            "symlink_target": null
+          }
+        ]
+      },
+      "requested_count": 1
+    },
+    {
+      "host": "liteserver-de36",
+      "status": "READ_ONLY_METADATA_CHECK_COMPLETE",
+      "result": {
+        "unix": 1793723873.1354795,
+        "rows": [
+          {
+            "asset_id": "DE36_BASE_ENV",
+            "path": "/data0/yanglin/envs/physical_bridge/bin/python",
+            "exists": true,
+            "is_symlink": true,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 5684392,
+            "mtime_ns": 1782154527000000000,
+            "mode": "0o755",
+            "symlink_target": "python3"
+          },
+          {
+            "asset_id": "V6_UNIDB_ENV",
+            "path": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+            "exists": true,
+            "is_symlink": true,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 5684392,
+            "mtime_ns": 1782154527000000000,
+            "mode": "0o755",
+            "symlink_target": "python3"
+          },
+          {
+            "asset_id": "V5_SIM_CODE",
+            "path": "/data2/yanglin/v5_v1_simulator_20261020",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1792571759000000000,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "SIM_P2S_model_pt",
+            "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/P2S_model.pt",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 137346,
+            "mtime_ns": 1792510115000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "SIM_dictionary_pt",
+            "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/dictionary.pt",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 876583,
+            "mtime_ns": 1792510115000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "SIM_I0_I2_pt",
+            "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/I0_I2.pt",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 90147,
+            "mtime_ns": 1792510115000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "SIM_CANONICAL_CPU_REFERENCE_npz",
+            "path": "/data2/yanglin/v5_v1_simulator_20261020/assets/CANONICAL_CPU_REFERENCE.npz",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 1885939,
+            "mtime_ns": 1792510115000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V4_TRAIN2000_DE36",
+            "path": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1790961507806328647,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V4_TRAIN2000_XI_RETAINED",
+            "path": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1/xi",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 294912,
+            "mtime_ns": 1790960723814475311,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V5_DATA",
+            "path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1792577129717033590,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V6_DATA",
+            "path": "/data2/yanglin/v6_diffuir_l_20261027/datasets",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1793043374800523907,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V6_MULTIG_TRAIN_MANIFEST",
+            "path": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/TRAIN_MANIFEST.jsonl",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 223477906,
+            "mtime_ns": 1793294121072769993,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "V6_MULTIG_VAL_MANIFEST",
+            "path": "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 2652456,
+            "mtime_ns": 1793294121128771128,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "PLACES_VAL_ARCHIVE",
+            "path": "/data2/yanglin/physical_bridge/data/source_archives/val_256.tar",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 525158400,
+            "mtime_ns": 1787766076000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "CONCERTORMER_GOPRO_OFFICIAL",
+            "path": "/data2/yanglin/v5_concertormer_10k_20261021/weights/Concertormer_GoPro_official.pth",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 202554935,
+            "mtime_ns": 1792575572000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "DIFFUIR_MODEL300_OFFICIAL",
+            "path": "/data2/yanglin/v5_diffuir_l_stage1_20261026/weights/model-300.pt",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 580824471,
+            "mtime_ns": 1793021432000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "UNIDB_SR_GAMMA1E7",
+            "path": "/data2/yanglin/unidb_d0_20261102/weights/sr_gamma_1e7.pth",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 548649183,
+            "mtime_ns": 1793553164000000000,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "LPIPS_ALEXNET",
+            "path": "/data2/yanglin/v6_diffuir_l_20261027/cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": true,
+            "is_dir": false,
+            "bytes": 244408911,
+            "mtime_ns": 1793036941379072647,
+            "mode": "0o644",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "ARCHIVE_20_REMOTE",
+            "path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1792507093450498188,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "ARCHIVE_25_REMOTE",
+            "path": "/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1792933908755983759,
+            "mode": "0o700",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "UNIDB_CODE",
+            "path": "/data2/yanglin/unidb_d0_20261102",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1793632928238810679,
+            "mode": "0o755",
+            "symlink_target": null
+          },
+          {
+            "asset_id": "UNIDB_MIDNIGHT_ROOT",
+            "path": "/data2/yanglin/unidb_dual_20261104_until00",
+            "exists": true,
+            "is_symlink": false,
+            "is_file": false,
+            "is_dir": true,
+            "bytes": 4096,
+            "mtime_ns": 1793721599998048982,
+            "mode": "0o755",
+            "symlink_target": null
+          }
+        ]
+      },
+      "requested_count": 22
+    },
+    {
+      "host": "h3c-gpu-server01",
+      "status": "NOT_VERIFIED_CONNECTION_FAILED",
+      "exit_code": 255,
+      "error": "ssh: Could not resolve hostname h3c-gpu-server01: nodename nor servname provided, or not known",
+      "requested_count": 5
+    }
+  ],
+  "no_recursive_traversal": true,
+  "no_payload_read": true,
+  "no_model_calls": true,
+  "no_signals_or_mutations": true,
+  "not_content_or_runtime_acceptance": true
+}

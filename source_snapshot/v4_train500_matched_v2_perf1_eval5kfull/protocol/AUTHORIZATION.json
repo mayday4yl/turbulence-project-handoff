@@ -1,0 +1,45 @@
+{
+  "recorded_utc": "2026-09-29T16:39:44.624703+00:00",
+  "plan_id": "v4_train500_four_arm_matched_v2",
+  "plan_revision": "reporting_eval_addendum_v1",
+  "user_authorized": true,
+  "stage": "IMPLEMENTATION_AND_ACCEPTANCE",
+  "automatic_formal_start_only_after_all_gates_PASS": true,
+  "methods": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "gpu_indices": [
+    5,
+    6
+  ],
+  "updates_per_method": 10000,
+  "effective_batch": 32,
+  "scientific_changes_authorized": false,
+  "extension_authorized": false,
+  "pause_on": [
+    "NaN/Inf",
+    "correctness failure",
+    "resources cannot meet protocol",
+    "required method semantic change"
+  ],
+  "engineering_fixes_allowed": [
+    "paths",
+    "launcher",
+    "tmux",
+    "microbatch 2 to 1 with effective batch32",
+    "gradient accumulation",
+    "checkpoint/resume",
+    "cache",
+    "logs",
+    "process scheduling"
+  ],
+  "source_plan_hashes": {
+    "TRAINING_PLAN.md": "8d54ffb7b61f9da17596efcb15c3dc491087f5b3646b8df7de6dfdecc782427c",
+    "TRAINING_PLAN_SPEC.json": "c08c6134f21268c261cb05cc0b167404da39338154bb0ddc8857812c5a0d7e73",
+    "PLANNED_MONITOR_LISTS.json": "d3199dd1ee6a2032b11b4f507c925e428a19ecd1c28cb31bc264022bbb72358c"
+  },
+  "stop_after": "U10000 evaluation and reports; no automatic extension"
+}

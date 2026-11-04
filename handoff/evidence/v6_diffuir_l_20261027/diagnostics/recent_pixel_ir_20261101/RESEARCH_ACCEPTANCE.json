@@ -1,0 +1,19 @@
+{
+  "status": "PASS_SOURCE_BASED_RECENT_RESEARCH_NOT_RUNTIME",
+  "learnir_readme_git_blob_exact": true,
+  "sub_manifest_entries_verified": 6,
+  "report_sha256": "88c4f47d0e8bad9ae91f31a7dbf44bc593414d813a97aa16ee596a5e3eef33ca",
+  "payload_downloads": 0,
+  "model_forwards": 0,
+  "training_updates": 0,
+  "AB_resumed": false,
+  "main_scope": "2025-2026; late2024 supplement",
+  "non_residual_native_code_priority": "UniDB-GOU; author weights link not inventory/load acceptance",
+  "limitations": [
+    "Bounded search, not completeness proof",
+    "Newer does not establish turbulence quality",
+    "UDBM and LearnIR retain residual targets",
+    "GenDR-Pix and ResFlow official assets not found",
+    "No new runtime/gradient/latency measured"
+  ]
+}

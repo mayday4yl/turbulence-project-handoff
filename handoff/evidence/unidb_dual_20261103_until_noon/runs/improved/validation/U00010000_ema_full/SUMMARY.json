@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "branch": "improved",
+  "update": 10000,
+  "weights": "EMA",
+  "full": true,
+  "count": 5000,
+  "sources_per_g": 250,
+  "per_g": 1000,
+  "by_g": {
+    "0.5": {
+      "psnr": 17.332065874944046,
+      "ssim": 0.29744651359458024,
+      "lpips": 0.48685883545875547,
+      "mae": 0.09543238643677739,
+      "input_psnr": 25.170834311941398
+    },
+    "1": {
+      "psnr": 16.866700750602824,
+      "ssim": 0.25900405675785276,
+      "lpips": 0.5009264054894448,
+      "mae": 0.10037309463985891,
+      "input_psnr": 22.24176827289323
+    },
+    "2": {
+      "psnr": 16.070529422512926,
+      "ssim": 0.20068506956340143,
+      "lpips": 0.5666992890238762,
+      "mae": 0.1109267388226552,
+      "input_psnr": 20.306366255324075
+    },
+    "3": {
+      "psnr": 15.265373225816585,
+      "ssim": 0.15558850089799262,
+      "lpips": 0.6676340928971768,
+      "mae": 0.1241402820367535,
+      "input_psnr": 19.471852182624982
+    },
+    "4": {
+      "psnr": 14.708871734557935,
+      "ssim": 0.1263234851116052,
+      "lpips": 0.7719467279911041,
+      "mae": 0.13453476744212295,
+      "input_psnr": 18.79593752422192
+    }
+  },
+  "nfe_per_image": 100,
+  "sampler": "native_reverse_sde",
+  "precision": "FP32/HF32off",
+  "image_clip_crop_resize": false,
+  "seconds": 2902.403078317642,
+  "selection_role": "full_validation",
+  "training_RNG_restored": true,
+  "test_used": false,
+  "parameter_digest": "76e79eddd13b9b482d9ee28ad37b56a6ccad60c1ad61d7d96683a05edc119fc0"
+}

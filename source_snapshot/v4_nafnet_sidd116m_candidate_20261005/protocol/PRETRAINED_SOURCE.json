@@ -1,0 +1,19 @@
+{
+  "path": "assets/pretrained/NAFNet-SIDD-width64.pth",
+  "sha256": "cd685efaae01f7c4e9951f2deab05780079c8eb1e49ed664b72f6db04dabb445",
+  "bytes": 464154961,
+  "state_key": "params",
+  "state_tensor_count": 664,
+  "source": "official NAFNet README Google Drive link",
+  "official_repository": "https://github.com/megvii-research/NAFNet",
+  "repository_commit": "2b4af71ebe098a92a75910c233a3965a3e93ede4",
+  "official_download_url": "https://drive.google.com/file/d/14Fht1QQJ2gMlk4N1ERCRuElg8JfjrWWR/view?usp=sharing",
+  "actual_download_url": "https://drive.usercontent.google.com/download?id=14Fht1QQJ2gMlk4N1ERCRuElg8JfjrWWR&export=download&confirm=t",
+  "original_name": "NAFNet-SIDD-width64.pth",
+  "original_task": "SIDD image denoising",
+  "strict_official_width64_load": "PASS",
+  "all_parameters_finite": true,
+  "source_parameter_count": 115982915,
+  "download_server_unix": 1791218476.9594188,
+  "published_checksum": "not provided by upstream README; SHA here freezes the directly downloaded official-link file"
+}

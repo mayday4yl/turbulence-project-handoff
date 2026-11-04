@@ -1,0 +1,925 @@
+{
+  "status": "FINAL_READY",
+  "source_sha256": "3459722ebd11898eab9cd1cb0eeac10cd769232b3b59981bd3ab90ea242f6470",
+  "command_argv": [
+    "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+    "/data2/yanglin/unidb_dual_20261104_until00/scripts/make_campaign_report.py",
+    "--final"
+  ],
+  "inputs": {
+    "/data2/yanglin/unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json": {
+      "sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22",
+      "bytes_read": 6719,
+      "snapshot_unix": 1793727812.030268
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/STATUS.json": {
+      "sha256": "80cc8f82acdb2dc02dfdff549986a0bd9a3050de883801e16606b7d5ece74ad2",
+      "bytes_read": 816,
+      "snapshot_unix": 1793727735.4835308
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/protocol/SHARED_CONTEXTS.json": {
+      "sha256": "11958217c598b9de23183ae8b357c5b3e79b9ef466070b4657d77ac3e7bb1bc4",
+      "bytes_read": 960,
+      "snapshot_unix": 1793727735.4836876
+    },
+    "/data2/yanglin/unidb_d0_20261102/protocol/MONITOR_SELECTION.json": {
+      "sha256": "59e267d8edb401c1d40ff46dd0eea4f11624230dc6c24e356aa996e561afaf19",
+      "bytes_read": 1114,
+      "snapshot_unix": 1793727735.5296252
+    },
+    "/data2/yanglin/unidb_d0_20261102/evidence/DATA_GATE.json": {
+      "sha256": "12008bec93c4095cb85539a5c723c7de4be1e02ba0f1bace5c80081dac579822",
+      "bytes_read": 929,
+      "snapshot_unix": 1793727735.484014
+    },
+    "/data2/yanglin/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/VAL_MANIFEST.jsonl": {
+      "sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9",
+      "bytes_read": 2652456,
+      "snapshot_unix": 1793727735.4898608
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/report/FIXED_IMAGE_SELECTION.json": {
+      "sha256": "ee159a294b85e5b48b1612b57c4755bdd33147a7d15348cfddd637ad3342c848",
+      "bytes_read": 1735,
+      "snapshot_unix": 1793727735.5252075
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/CONFIG.json": {
+      "sha256": "5831ac3ee3191a40d6441fb93e22dc23a16beac495fa5aed5a3884bec4bdd31c",
+      "bytes_read": 1531,
+      "snapshot_unix": 1793727735.5300684
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/STATUS.json": {
+      "sha256": "b986533979271ea6b9562fbb6b0c8b448b965a6deaaf69eddbb90a6e7150187b",
+      "bytes_read": 321,
+      "snapshot_unix": 1793727735.530241
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/LATEST.json": {
+      "sha256": "aae55ad90bc64f03a6452215a18992e55bde5bf5b0e589e6f43122960e18c791",
+      "bytes_read": 423,
+      "snapshot_unix": 1793727735.5303907
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/BEST_FULL.json": {
+      "sha256": "a983a68e5f6cb6e89c2b9ab2ee833de2e154cca3e95f184d543e5980047498fc",
+      "bytes_read": 2284,
+      "snapshot_unix": 1793727735.5305371
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/BEST_MONITOR.json": {
+      "sha256": "d389d5e71b35f3c62d7e34ad785ced4e74bd86aa5a3a61b97a1e793e64ddc061",
+      "bytes_read": 1586,
+      "snapshot_unix": 1793727735.5307202
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/UPDATES_rank0.jsonl": {
+      "sha256": "8671d8cb54fda04a282ccfe88c0d644fc8dff06b15c32125bba62661b4218328",
+      "bytes_read": 29809034,
+      "snapshot_unix": 1793727735.598589
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/protocol/USER_AUTHORITY.json": {
+      "sha256": "6e31e86f16b05c783ba31e91759dc0a4c5d813d4a465aaf0f2180b96a34fdb97",
+      "bytes_read": 4529,
+      "snapshot_unix": 1793727781.0815198
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/UPDATES_rank0.jsonl": {
+      "sha256": "c675620db2c400daf448426be2a9eaa007b6a9fa24f51ce33c523e31a8c40ea4",
+      "bytes_read": 18126362,
+      "snapshot_unix": 1793727744.1319573
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/UPDATES_rank0.jsonl": {
+      "sha256": "c947310847b93a7cba53c9e17f2dd68b7cab98f7053fcf5d29a578032c52a5f2",
+      "bytes_read": 16351102,
+      "snapshot_unix": 1793727750.3844821
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045411_ema_monitor/SUMMARY.json": {
+      "sha256": "cb2082525faa22fc6be4cf54f3f879666fdb359067ae717eb7c2a675968a964a",
+      "bytes_read": 904,
+      "snapshot_unix": 1793727755.1080365
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045461_ema_monitor/SUMMARY.json": {
+      "sha256": "5755d9eeb21ded659930677d802aa80565fa638e3669f29018654ac25f051645",
+      "bytes_read": 904,
+      "snapshot_unix": 1793727755.1092622
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045511_ema_monitor/SUMMARY.json": {
+      "sha256": "d789b43e81fec32e8efe28e433564f56343c3ba6247648eafcd4d649e737591a",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727755.1103332
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045661_ema_monitor/SUMMARY.json": {
+      "sha256": "bed9dc4b31c83d280f64e062590c41397d353962868b64098705d2ef0105258c",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.1114902
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045911_ema_monitor/SUMMARY.json": {
+      "sha256": "be72a71a8df629a74174b584fff7c579dff797583dfd5b2f0b3c785b963bdcea",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727755.1125183
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00045911_raw_monitor/SUMMARY.json": {
+      "sha256": "765832d21de73ceba52ce0cc3b1946faa9094f377699432e9c68bdf3ee82b99d",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1136754
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00046411_ema_monitor/SUMMARY.json": {
+      "sha256": "1193f7a2a037e40f25896fdfcd5115f8e301f36e5bf5f78238ae195ded5d1e91",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1147225
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00047411_ema_monitor/SUMMARY.json": {
+      "sha256": "0082b5688c37deeb714d22119e82403645a208fb406d11132173b8c3e26b798b",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727755.1158473
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00047411_raw_monitor/SUMMARY.json": {
+      "sha256": "3fb9d2f4d8642c834f7de4f19dd789cb002bf5286bb18c0df6525627adf6b544",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.1168885
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00048411_ema_monitor/SUMMARY.json": {
+      "sha256": "82a7753630582f4aabddd7091d5e3f87b3b796ca6cea1d63efc13a508aa9110f",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.117912
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00049411_ema_monitor/SUMMARY.json": {
+      "sha256": "9bd603cd66cedca1d68fc397fc5deb477d6d2d79d559052a48e4e88f5273a17f",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.118933
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00050411_ema_monitor/SUMMARY.json": {
+      "sha256": "07eb050529435e328c0a8d54aad6a656670786d437cf3b263edc65495946b9ef",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.11994
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00051411_ema_monitor/SUMMARY.json": {
+      "sha256": "ccf5d88b0212291c36d05e2abfba920c925291d169826a79bb51046687ff5700",
+      "bytes_read": 903,
+      "snapshot_unix": 1793727755.1209435
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00052411_ema_monitor/SUMMARY.json": {
+      "sha256": "d1a67852c4db815df9d5753df75d9adf4b5eb2a9cfafa482c8a28ddd8a4f7747",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1219497
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00053411_ema_monitor/SUMMARY.json": {
+      "sha256": "366c2f2af1c66b196f207eb2cd369c6685ed23730fb33498dd9533ebb4e866de",
+      "bytes_read": 904,
+      "snapshot_unix": 1793727755.1230023
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00054411_ema_monitor/SUMMARY.json": {
+      "sha256": "ee969bb83c412d6bc5d392d83c67949f76476c2b77c10c6fd5848d66bdaa9d6d",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1240177
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/validation/U00055411_ema_full/SUMMARY.json": {
+      "sha256": "9a597075f94432e0b3f9fe5d16916554e3f4e6bcd9e66ea9009a1b9ca9f7b53b",
+      "bytes_read": 1490,
+      "snapshot_unix": 1793727755.12503
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00056411_ema_monitor/SUMMARY.json": {
+      "sha256": "1956fe83609ff163756fc01a95c000c2e63e4b2d1227962f2afd7ca00bb9862d",
+      "bytes_read": 898,
+      "snapshot_unix": 1793727755.126439
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00057411_ema_monitor/SUMMARY.json": {
+      "sha256": "b99dadc2819a786689a09c740d27cfc29b49bf152746a4cfbdb16d900612c3a4",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1274865
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00058411_ema_monitor/SUMMARY.json": {
+      "sha256": "633b8d820bdc2bf94ce4753bda7818181e7d24536b16c12ea1ecd13bd6f4579b",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727755.1285026
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00059411_ema_monitor/SUMMARY.json": {
+      "sha256": "5eaecd9155dfbe4a5e46b25a9b0edec0171b2250c2d59df02a3a8954d455f5cb",
+      "bytes_read": 904,
+      "snapshot_unix": 1793727755.1295216
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00060411_ema_monitor/SUMMARY.json": {
+      "sha256": "9f62d662112c3b861e9d8995b0f03922a11313e0ed2e9d9666ab3eb4983c1855",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.1305463
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/original/validation/U00061411_ema_monitor/SUMMARY.json": {
+      "sha256": "4d6178196a6212c702e0dc5037abc5cb92e17ea7e6e791b25d7076d336b99a94",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727755.1315877
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00062411_ema_monitor/SUMMARY.json": {
+      "sha256": "7141f695b83de85ab11e121463b2c79bdfa6e58a51d49a14e51a24d39a01a31b",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.133004
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00063411_ema_monitor/SUMMARY.json": {
+      "sha256": "054ef3a67422f03d113d5f28a50785d3986a90606fca9372493987b92f4a9e74",
+      "bytes_read": 904,
+      "snapshot_unix": 1793727755.134041
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00064411_ema_monitor/SUMMARY.json": {
+      "sha256": "06ad563b3f52342b305db41a3f1ac42f6f2cebd51579a035f982a2dbedcc0c54",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727755.1350827
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00065411_ema_full/SUMMARY.json": {
+      "sha256": "936f971de4bd7dd39cb10d625db08b9feb7abdfa5a79a2caa52001a66dbe81e6",
+      "bytes_read": 1488,
+      "snapshot_unix": 1793727755.1360912
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00066411_ema_monitor/SUMMARY.json": {
+      "sha256": "f35d5ccd7a758c997f75d41d314cc76824a91dd685d0ce9c9409876b4107af45",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727755.137113
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json": {
+      "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+      "bytes_read": 1492,
+      "snapshot_unix": 1793727755.1381106
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_raw_monitor/SUMMARY.json": {
+      "sha256": "6aced3114af51dafe1b9f74fa5d3df9e9623bc71071c91aa9872e745b809166e",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727755.13916
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/CONFIG.json": {
+      "sha256": "6d42553ae7c8ffcc4cdf0415540c3145d7ac39f98922d34efd15db26ffafba6e",
+      "bytes_read": 1713,
+      "snapshot_unix": 1793727755.3547084
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/STATUS.json": {
+      "sha256": "5f290d46ab72030dc5d3d3460401f4cc5f5682c038d25aa0eba88b2cab8643c4",
+      "bytes_read": 325,
+      "snapshot_unix": 1793727755.3549273
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/LATEST.json": {
+      "sha256": "c1fb6830814c44422aea3eb1a823559eef77e022084a23dd91ef3d64f7981549",
+      "bytes_read": 423,
+      "snapshot_unix": 1793727755.355078
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/BEST_FULL.json": {
+      "sha256": "799fb8774c86edf818f4fbd27a34ddca5b41f6fc5c4153294457711f3e163962",
+      "bytes_read": 2221,
+      "snapshot_unix": 1793727755.3552332
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/BEST_MONITOR.json": {
+      "sha256": "71c55c3c5f079946bc0a8776fbab1ce25fc97dc03afb432f7c5d378bee804353",
+      "bytes_read": 1587,
+      "snapshot_unix": 1793727755.355418
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/UPDATES_rank0.jsonl": {
+      "sha256": "bdcd01bcf0dd1987a259cae6eb9ea7936cb7356743cc464f7dce5fcd391ee39f",
+      "bytes_read": 36215130,
+      "snapshot_unix": 1793727755.4410865
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/UPDATES_rank0.jsonl": {
+      "sha256": "6b10043e77162e42529db0e78734bf74ca3076a8c7a8b0e1632aa25d1476e019",
+      "bytes_read": 19582811,
+      "snapshot_unix": 1793727770.9231994
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/UPDATES_rank0.jsonl": {
+      "sha256": "8f3f455e971fd7e445fb52a59dd639dbe034e22cf86389de59341b54fe0653cf",
+      "bytes_read": 21244179,
+      "snapshot_unix": 1793727781.1551938
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000000_ema_monitor/SUMMARY.json": {
+      "sha256": "ecbe971d83e657a7cf4bb1b17bdf67886e7532612fee01b4b028b679601b0f00",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.2444253
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000050_ema_monitor/SUMMARY.json": {
+      "sha256": "5f3de4f66744d9d2ea5611b58b3e356e51d02dc4818f62163691054684b4411b",
+      "bytes_read": 896,
+      "snapshot_unix": 1793727790.2455895
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000100_ema_monitor/SUMMARY.json": {
+      "sha256": "50a97a5024997a26977ea2aae462d07b5e4664e6b6ae491020bd508d5eb6294c",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2466578
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000250_ema_monitor/SUMMARY.json": {
+      "sha256": "e91c52c5c882def025d2deaa3148dcc2825d0903caf7e88334621130250d9a2d",
+      "bytes_read": 898,
+      "snapshot_unix": 1793727790.2477362
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000500_ema_monitor/SUMMARY.json": {
+      "sha256": "95f0818ea734ed200d12f5e6766d9f1731fbd7f02e825637e7ffe6a027fc83d2",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.24877
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00000500_raw_monitor/SUMMARY.json": {
+      "sha256": "c938e9ee0cfdfe1696f4873c56f739c6ec3fe575fe88ffbccb268193dfd56611",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2498028
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00001000_ema_monitor/SUMMARY.json": {
+      "sha256": "23680b2c9032b56cef7ac07381210eae6fa4bbca63314b29d332d323307f1e27",
+      "bytes_read": 895,
+      "snapshot_unix": 1793727790.2508473
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00002000_ema_monitor/SUMMARY.json": {
+      "sha256": "64f3ad6015b6fdf1afa7f3eefcaac0c6da3de511889b6f0b51f3398d9b927e39",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2518752
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00002000_raw_monitor/SUMMARY.json": {
+      "sha256": "b69c5f4802e1745c781b16904c51a5476d750ecc545cb010acbcbd9c61830538",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.2528877
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00003000_ema_monitor/SUMMARY.json": {
+      "sha256": "ddb91f01b776a35fec8808959cbe6333e4bf263706cf03a44b9b0ec1e2d4436a",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.2539024
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00004000_ema_monitor/SUMMARY.json": {
+      "sha256": "08a1c8d7b7a6d210aa279a05804bb84f4090e473f63241d58969e288dbd8deb6",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2549362
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00005000_ema_monitor/SUMMARY.json": {
+      "sha256": "65de9a47433e3a403840dd56613ff3f771798094b72a394339782215e65e44cc",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.255971
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00006000_ema_monitor/SUMMARY.json": {
+      "sha256": "388bd6deba5e2f0704575622388d03afb2ed0491e844f32c9715d6d124a2662b",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.256994
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00007000_ema_monitor/SUMMARY.json": {
+      "sha256": "d4961487d63f0295dccb1b14cacb0f9bd6b7de0fdc22a4747ef8160a6d3ba57e",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2580073
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00008000_ema_monitor/SUMMARY.json": {
+      "sha256": "3a1ba86c22c0666c345b3ebd8b72ac58c6245fb3a2f45e618833c14eb8c67590",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2590406
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00009000_ema_monitor/SUMMARY.json": {
+      "sha256": "a9e3b65e8506744697d73262d238334c8b8568371f87e1c3ca9124c843a96807",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.260067
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json": {
+      "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+      "bytes_read": 1490,
+      "snapshot_unix": 1793727790.2611067
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00011000_ema_monitor/SUMMARY.json": {
+      "sha256": "16764c7a785e548a62a1c44cb9c8284192762cbe20326f268d20afc60619b112",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2621403
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00012000_ema_monitor/SUMMARY.json": {
+      "sha256": "cd238bd85e79604341a58356161517dceda1a8cdd9ae7300e4454c7cb4471cd9",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2631629
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00013000_ema_monitor/SUMMARY.json": {
+      "sha256": "4607ff595b8f98b1ad82e8b0a9e9b50eb7c0a2d566a4f3c044f165cfbafc73e5",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2641723
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00014000_ema_monitor/SUMMARY.json": {
+      "sha256": "51b3f5595221d55bff63df8f350342c26269928d3c438cb13737f1a45141848d",
+      "bytes_read": 903,
+      "snapshot_unix": 1793727790.265179
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00015000_ema_monitor/SUMMARY.json": {
+      "sha256": "7ab9373475473f9de377b4a186fa792e58521fd97091d8add6a0b37e0a050746",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2661896
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00016000_ema_monitor/SUMMARY.json": {
+      "sha256": "61ddbad9686c196f3017bd94dd7ff6d68feb8c549895fd5361e391525e4baf1e",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.267251
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00017000_ema_monitor/SUMMARY.json": {
+      "sha256": "d99843eb1f7d3a6542ec1f54322a99498543635379bc9986723bf253350d68a7",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2682698
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00018000_ema_monitor/SUMMARY.json": {
+      "sha256": "3b8ad4840ac85c828cf2dc87aeb0611a7e79c3692997a2998b9803d1e425bf94",
+      "bytes_read": 903,
+      "snapshot_unix": 1793727790.269279
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00019000_ema_monitor/SUMMARY.json": {
+      "sha256": "5f96af2b74433f704078ce697b3a9b035b4eed468bb6cbdfd1002d557872b2f3",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2702978
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00021000_ema_monitor/SUMMARY.json": {
+      "sha256": "16c6fa2e73a93d5b31bf691954cf21f6b8129afe38af04d51fe8192c3acf3420",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2717779
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00022000_ema_monitor/SUMMARY.json": {
+      "sha256": "0b857b72ede2d5d4b121af2fc53ec619f67d54146362ae8dc93b1fd78e450575",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2728243
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00023000_ema_monitor/SUMMARY.json": {
+      "sha256": "2ce1dfae7e86645889550a3ec6b4042bd3939cbc42f0780201ca89d79f65c875",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2738552
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00024000_ema_monitor/SUMMARY.json": {
+      "sha256": "31d6acc00904c33ee9b200ee54fa1c30dfc868cbd41af91ec2994a773536467d",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2748818
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00025000_ema_monitor/SUMMARY.json": {
+      "sha256": "bc1398b6e77cc319ef11974e991c1828391513a2be7f62d76bbf935b00a155e7",
+      "bytes_read": 898,
+      "snapshot_unix": 1793727790.275887
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00026000_ema_monitor/SUMMARY.json": {
+      "sha256": "36823e111606b7fbd5b38725f91fb1281d64b7bf6dfa542115ec55a42c383310",
+      "bytes_read": 899,
+      "snapshot_unix": 1793727790.2768972
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00027000_ema_monitor/SUMMARY.json": {
+      "sha256": "aae5edb303fa7153219a486b0d0a4207dee025487993b2ff45f42d1052a3194f",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2779098
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00028000_ema_monitor/SUMMARY.json": {
+      "sha256": "9eb0f0c0e6b6f09b04acb1d09f9fe480a806e40144cf9e43a9042ccb3479aaf5",
+      "bytes_read": 897,
+      "snapshot_unix": 1793727790.2789373
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00029000_ema_monitor/SUMMARY.json": {
+      "sha256": "2d9842eb6ad3e72a258c7609355a495dd39e072badc388b81415cbb38578f746",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.279944
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/validation/U00030000_ema_full/SUMMARY.json": {
+      "sha256": "739fe7ff4f595526b8221c1759c731be1d01fbd465868f6c385ab21fcc941aeb",
+      "bytes_read": 1490,
+      "snapshot_unix": 1793727790.2809486
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00031000_ema_monitor/SUMMARY.json": {
+      "sha256": "4c941c6f50bda0ba8019785fe0987f6c8df656a5e42c236545b163dbd3e71090",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2825844
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00032000_ema_monitor/SUMMARY.json": {
+      "sha256": "e1a93ead744ba888dc9dcadbc76c06eb1854b3b27fc098d0f6bf5ef3996c4b20",
+      "bytes_read": 903,
+      "snapshot_unix": 1793727790.2836747
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00033000_ema_monitor/SUMMARY.json": {
+      "sha256": "0371599ee142acff61b42bcd0a42dfdf71f4f27ebd80a6f0dfdb9533fe6660ec",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2846942
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00034000_ema_monitor/SUMMARY.json": {
+      "sha256": "a593415007470ccbf24ebbcea19ed7291d910665da6f0d39b9d82b58ffafd82b",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2858138
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00035000_ema_monitor/SUMMARY.json": {
+      "sha256": "dd46f99cfe8e58c8babca72cf65a2f6cfe063c44764412b4913961f34fa8afac",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2868626
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00036000_ema_monitor/SUMMARY.json": {
+      "sha256": "5085caa9f81d5b9bac702598490f32751aa5aef698070eee0b19c657545dde24",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2878823
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00037000_ema_monitor/SUMMARY.json": {
+      "sha256": "652e90f9762185d8139069f8d2451c54a27f2a09f294e9605b7a83a58cae93a1",
+      "bytes_read": 901,
+      "snapshot_unix": 1793727790.2888951
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00038000_ema_monitor/SUMMARY.json": {
+      "sha256": "4bf78474ca2f495631892646fe6ee9358fcd68b8de4bcca783f0bc5b05b88602",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2899015
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00039000_ema_monitor/SUMMARY.json": {
+      "sha256": "72b63bbf4897810d376f92ecf523e2b650cc1d71bb160f9d25d230067556478c",
+      "bytes_read": 902,
+      "snapshot_unix": 1793727790.2909355
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040000_ema_full/SUMMARY.json": {
+      "sha256": "7ee541f0eda663f953c60da757703ccce934b2cb5d79aff6d9348293b21ebab0",
+      "bytes_read": 1486,
+      "snapshot_unix": 1793727790.2919486
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json": {
+      "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+      "bytes_read": 1486,
+      "snapshot_unix": 1793727790.2929811
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_raw_monitor/SUMMARY.json": {
+      "sha256": "d02622320210aafabce796681eba1e7c5ec07e07464aeb8397a7893458e55cc8",
+      "bytes_read": 900,
+      "snapshot_unix": 1793727790.2940967
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/SUMMARY.json": {
+      "sha256": "0739a6ec043f09bda9b978184c59347618c486e1b071369807b356b20f0a019e",
+      "bytes_read": 1073,
+      "snapshot_unix": 1793727790.587472
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank0.jsonl": {
+      "sha256": "0ae266fdcb9b4e346523ea4d21a690b612443f3a295df63a3c9695b1f256aea6",
+      "bytes_read": 678215,
+      "snapshot_unix": 1793727790.5895755
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank1.jsonl": {
+      "sha256": "16251c8fde76ff365d6efa5ad66fb6433cbc648623621457448f2378ffa91cd8",
+      "bytes_read": 678082,
+      "snapshot_unix": 1793727790.6012347
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank2.jsonl": {
+      "sha256": "3986686f06c0eb59f7c11205b15654af61b82732f1b1dc10ec6f773b9bf47a2a",
+      "bytes_read": 673786,
+      "snapshot_unix": 1793727790.613242
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank3.jsonl": {
+      "sha256": "ddd0166ed885b1ee2b1983d2a37c565014ac47d68cd85dd2f6754cab45742809",
+      "bytes_read": 673661,
+      "snapshot_unix": 1793727790.6246474
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank4.jsonl": {
+      "sha256": "c9cd351b82398dd3b86b5005ec3ef4b32dabe78d88ef0263ee1e67335d814e5f",
+      "bytes_read": 673717,
+      "snapshot_unix": 1793727790.6359124
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank5.jsonl": {
+      "sha256": "850b93bf662bef5cfb99b05829c54737ea19f3a2e0bd3c74e1e7de565819774b",
+      "bytes_read": 673796,
+      "snapshot_unix": 1793727790.647256
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank6.jsonl": {
+      "sha256": "6abfc0a7ba173882815ef509e5c4c99bf325212875e7b0567c7c08a31464a8ae",
+      "bytes_read": 673705,
+      "snapshot_unix": 1793727790.6601777
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/rank7.jsonl": {
+      "sha256": "1f51a1a01fe43565e11d2789a49fdb3d450d72ac3e0bb2d63620a1200cad6b27",
+      "bytes_read": 673725,
+      "snapshot_unix": 1793727790.6717024
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/SUMMARY.json": {
+      "sha256": "9507cbae168e91d2a52028e41a78a24d4a642ef70249a55a8125af5f863138d0",
+      "bytes_read": 1079,
+      "snapshot_unix": 1793727790.6996536
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank0.jsonl": {
+      "sha256": "390b2816d98c4f6d4c19f9ddbac5c5a27d3da0830c96ab73155c89604c69ca16",
+      "bytes_read": 680964,
+      "snapshot_unix": 1793727790.701415
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank1.jsonl": {
+      "sha256": "b399eb18a044ae8af1c634d5b1e54d285b3211cb7dd699532180cf209cef9495",
+      "bytes_read": 680819,
+      "snapshot_unix": 1793727790.7131824
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank2.jsonl": {
+      "sha256": "4d3957c5c8207f9a441f09cde3575778737083d639e4f215d3dc501bfe38ce01",
+      "bytes_read": 676452,
+      "snapshot_unix": 1793727790.7266092
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank3.jsonl": {
+      "sha256": "dcf72f2a31d9ff4a3fd503fbdb70ed4e563a498197bfd301f10cbe9c8aedf8f8",
+      "bytes_read": 676572,
+      "snapshot_unix": 1793727790.7377887
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank4.jsonl": {
+      "sha256": "8925ed7aa2a0934fd0abc17d29eee6bac58e5d479f77b5d98af397b5a6eb1ede",
+      "bytes_read": 676486,
+      "snapshot_unix": 1793727790.7492428
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank5.jsonl": {
+      "sha256": "77fc3793b104dad6ae20e3b93c3265b1fbabf6ed0629f6692c89226dd347ecdd",
+      "bytes_read": 676476,
+      "snapshot_unix": 1793727790.760611
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank6.jsonl": {
+      "sha256": "51f71eca92e8cbcb4b8a6815e9a74933b7119da71634b52accb3eebf59ab797c",
+      "bytes_read": 676503,
+      "snapshot_unix": 1793727790.8150876
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/rank7.jsonl": {
+      "sha256": "7889c555874c6900a96e44e93d0fd3eb4b00ba152c98fd028897f1d73a2cff9b",
+      "bytes_read": 676531,
+      "snapshot_unix": 1793727790.8267212
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/improved5/RESULT.json": {
+      "sha256": "19d0578f5ee1a4b21025a1d573821fca3eba6c11ef5a7f9f79ef962a60c6b8d4",
+      "bytes_read": 5716,
+      "snapshot_unix": 1793727800.7815626
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/improved5/UPDATES_rank0.jsonl": {
+      "sha256": "73c6b2b09c4b28b141bd88e15a05a0a62b787f2fe6e8a2b11324e5c3d8e1840e",
+      "bytes_read": 3585,
+      "snapshot_unix": 1793727800.781794
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/improved_resume/RESULT.json": {
+      "sha256": "783d2ff486eccee6d039d2202b5dc85c037e33c18cf00935bd7f9eb19e6782e5",
+      "bytes_read": 5750,
+      "snapshot_unix": 1793727800.7820733
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/improved_resume/UPDATES_rank0.jsonl": {
+      "sha256": "92317de47f174bad1b4445f973ce3de25ab99d59d718288f00a0607cd4b21f38",
+      "bytes_read": 1832,
+      "snapshot_unix": 1793727800.7822893
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original3/RESULT.json": {
+      "sha256": "e799fb12c034581e3d2f64f02de41aae5c563626ce3a22235dd34d82be17f318",
+      "bytes_read": 3779,
+      "snapshot_unix": 1793727800.7825038
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original3/UPDATES_rank0.jsonl": {
+      "sha256": "1e77bb24f5771a42ea4bbedcfd1a1bb03600b7f86d5e2f7460eec1172dd0460c",
+      "bytes_read": 6321,
+      "snapshot_unix": 1793727800.782697
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original_ref8/RESULT.json": {
+      "sha256": "5d2dde5a9fe6ce5a674bca81c56b4a458dae992fbb63e63d8a1fddeb14affba2",
+      "bytes_read": 9181,
+      "snapshot_unix": 1793727800.7830102
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original_ref8/UPDATES_rank0.jsonl": {
+      "sha256": "d796045101fd80a686c4138e0e40332b60814d5ddae58b9124239591c8cf3de8",
+      "bytes_read": 2922,
+      "snapshot_unix": 1793727800.7832515
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original_resume/RESULT.json": {
+      "sha256": "e650c53ecd48c30cf7b9fc1f6758f3f3cf4e99a1ca37245b7397116d6cad18b8",
+      "bytes_read": 3800,
+      "snapshot_unix": 1793727800.7834866
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/gates/original_resume/UPDATES_rank0.jsonl": {
+      "sha256": "9856a6625865fba17dab99bd2cae147a135fa281109b9c8894af3f07ff75f54b",
+      "bytes_read": 3149,
+      "snapshot_unix": 1793727800.7836766
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/improved/RESULT.json": {
+      "sha256": "c048e0e0a11a3912cb4086405129d589ff18d8c00e3e721cefda45e2cb801337",
+      "bytes_read": 6675,
+      "snapshot_unix": 1793727800.7840452
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/improved/UPDATES_rank0.jsonl": {
+      "sha256": "fa6e936c243b4c6360ecb7298c7521e0fff42e9a3208311b998c4d59c549a9a3",
+      "bytes_read": 2143,
+      "snapshot_unix": 1793727800.7842593
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/improved_restart/RESULT.json": {
+      "sha256": "7b4621c8b404ab2076e2bc58cb7f5c5ca02aac421ff8bda9d6068c97d4bc6337",
+      "bytes_read": 6727,
+      "snapshot_unix": 1793727800.7844784
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/improved_restart/UPDATES_rank0.jsonl": {
+      "sha256": "1b8c75e1050c21958a10106d6a4de3016fc715772feb6642148a79b36cec05ca",
+      "bytes_read": 2146,
+      "snapshot_unix": 1793727800.784689
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/original/RESULT.json": {
+      "sha256": "5d01aef87182fdbadd7042bf64d14db779d4f600788f9a8204c84d171902c250",
+      "bytes_read": 4240,
+      "snapshot_unix": 1793727800.7848935
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/original/UPDATES_rank0.jsonl": {
+      "sha256": "36b44a888e7ec60db3f7c659e2da18978dab0f2dbc29abd0b764af85fec97320",
+      "bytes_read": 3294,
+      "snapshot_unix": 1793727800.7850823
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/original_restart/RESULT.json": {
+      "sha256": "7a435f0be3fc06a9ce7d952b4d064cd557b767132abf7225fd4194aac5590674",
+      "bytes_read": 4272,
+      "snapshot_unix": 1793727800.7853007
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/gates/original_restart/UPDATES_rank0.jsonl": {
+      "sha256": "ae28b5ff9a1b902ac08dfcf23cc1486761fb1f20d96fe3f00628b87b8f5fb321",
+      "bytes_read": 3282,
+      "snapshot_unix": 1793727800.785486
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/improved/RESULT.json": {
+      "sha256": "3b5a020687005c64f6624a803f22e314bda3e0101a3b0debed5003a9644cc552",
+      "bytes_read": 6675,
+      "snapshot_unix": 1793727800.7858577
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/improved/UPDATES_rank0.jsonl": {
+      "sha256": "66c1c5d24ba4f0110e498950879bfff7644cca70effebad235bd3983d86da323",
+      "bytes_read": 2146,
+      "snapshot_unix": 1793727800.7860715
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/improved_restart/RESULT.json": {
+      "sha256": "ae232dd1789e36b80281300a80dd74f1484d2de6d0d41b3b5cf46f991d415856",
+      "bytes_read": 6727,
+      "snapshot_unix": 1793727800.786286
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/improved_restart/UPDATES_rank0.jsonl": {
+      "sha256": "63dd8ca9fd67a627cf0296fe0e4564e84a64b55fdb5d5764453ee0c467c3dec1",
+      "bytes_read": 2131,
+      "snapshot_unix": 1793727800.7864983
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/original/RESULT.json": {
+      "sha256": "bc56a93c3e81793a82a3a2f0b47070173120bfde7b9ce21f645ce57330c5f0c1",
+      "bytes_read": 4237,
+      "snapshot_unix": 1793727800.7867048
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/original/UPDATES_rank0.jsonl": {
+      "sha256": "5c31957e03ef2f5f7cb6e8a23226228ce4a47f67c617366443582a801b0919ae",
+      "bytes_read": 3292,
+      "snapshot_unix": 1793727800.7869096
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/original_restart/RESULT.json": {
+      "sha256": "97d972120c99e0f07bbb39e68e4bc9b0f3ea53549d4e743e9a62884f58d4f847",
+      "bytes_read": 4271,
+      "snapshot_unix": 1793727800.7871308
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/gates/original_restart/UPDATES_rank0.jsonl": {
+      "sha256": "940aa27f38f653ecafc6cc088bf6005d12ac9c42c76daa5c4d012d9f9c930e86",
+      "bytes_read": 3301,
+      "snapshot_unix": 1793727800.787318
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/ACTOR_EVENTS.jsonl": {
+      "sha256": "c85861651618b530db7d0832a3fbe5b41f705fa7449a28c67f6ad9e080047248",
+      "bytes_read": 10140,
+      "snapshot_unix": 1793727800.7880604
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/evidence/ACTOR_EVENTS.jsonl": {
+      "sha256": "3e1f67ea61f88ce6423d2bd837e3f4ec3d2b233b05329d6a645b45f85da674af",
+      "bytes_read": 6185,
+      "snapshot_unix": 1793727800.788485
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/ACTOR_EVENTS.jsonl": {
+      "sha256": "a957ff291a2f59e06991f778c90503f25939421fba3e0cba1620f55246ef0812",
+      "bytes_read": 6971,
+      "snapshot_unix": 1793727800.7888129
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/TRAINING_STOPPED.json": {
+      "sha256": "ba3f74deb9d8b25f7bf54773d5e0ac921588dfea0a86e681fae5aa27def664c6",
+      "bytes_read": 306,
+      "snapshot_unix": 1793727800.7903874
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/TRAINING_STOPPED.json": {
+      "sha256": "cfabeadecb861726e322efdb9a5983f047f7555a4a1bf00a8791687b36b02aed",
+      "bytes_read": 309,
+      "snapshot_unix": 1793727804.2955558
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json": {
+      "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3",
+      "bytes_read": 205744,
+      "snapshot_unix": 1793727812.015031
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json": {
+      "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305",
+      "bytes_read": 205744,
+      "snapshot_unix": 1793727812.0204248
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json": {
+      "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f",
+      "bytes_read": 203255,
+      "snapshot_unix": 1793727812.0236804
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json": {
+      "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932",
+      "bytes_read": 204153,
+      "snapshot_unix": 1793727812.0266988
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json": {
+      "sha256": "07a9573f0652a2da61da276cce976faf8f6d04144e530534bb512a2bce35efc5",
+      "bytes_read": 7644,
+      "snapshot_unix": 1793727812.0292823
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json": {
+      "sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+      "bytes_read": 26985,
+      "snapshot_unix": 1793727812.029573
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/FINAL_OUTPUTS_CPU_AUDIT.json": {
+      "sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+      "bytes_read": 10469,
+      "snapshot_unix": 1793727812.0307896
+    },
+    "/data2/yanglin/unidb_dual_20261103_until18/evidence/FINAL_OUTPUTS_CPU_AUDIT.json": {
+      "sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+      "bytes_read": 10469,
+      "snapshot_unix": 1793727812.0311854
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/scripts/audit_campaign_saved_outputs.py": {
+      "sha256": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+      "bytes_read": 6066,
+      "snapshot_unix": 1793727812.0315292
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/report/FIGURE_MANIFEST.json": {
+      "sha256": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa",
+      "bytes_read": 12367,
+      "snapshot_unix": 1793727812.9729438
+    },
+    "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1708_r00.npy": {
+      "sha256": "5524db24c4bef70d66235c9334ddb3aa12f0e927475717cf67664af7a1142cb6",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0215824
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1708_r00.npy": {
+      "sha256": "0c830505bc3369a0f9e0fdf367f4516c27d24a31eac084035a661e07444039e1",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.023538
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1708_r00.npy": {
+      "sha256": "568f899b7476898c07cd20a2d5a49d6f9b92caca42aec046efce77ba2540c7fa",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0254903
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1708_r00.npy": {
+      "sha256": "1d8e752fb34fde15f5ea7b3994fe81a74c4cab62dd63796843ef01826c8fdba6",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0275
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/predictions/G4/val_s1708_r00.npy": {
+      "sha256": "8a5a3ace709d9e53fe33bb062cbe4d9803189071d59b179ffeeb3624e161555c",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0027993
+    },
+    "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000076.jpg.npy": {
+      "sha256": "93aa225cb9010e0cda1eff762f256ded210a3fe43b8e46f2b01cdbaeb170fbc2",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0319326
+    },
+    "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1710_r00.npy": {
+      "sha256": "7662836aa45a6066b8c7b3ca870ff4010605c38ff61b37011592da0aa6f57528",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0338535
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00000000_full/predictions/G4/val_s1710_r00.npy": {
+      "sha256": "9921bef3662ffb7fd17f833a269ddd9d0c2475b742c5ff1f1e2f231b7e47f510",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0357885
+    },
+    "/data2/yanglin/unidb_d0_20261102/runs/formal_until_20261103_noon/validation/U00045411_full/predictions/G4/val_s1710_r00.npy": {
+      "sha256": "ccbc2cc0d98b8aac1443cdf6dab1c33b109f7edcb5a4d889b9495c9921fbefcb",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.037732
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/predictions/G4/val_s1710_r00.npy": {
+      "sha256": "491ea4d05e62f1b4e725376d9308cbf5b20029a2d284ad9eb08eed20511f3b34",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0397854
+    },
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/predictions/G4/val_s1710_r00.npy": {
+      "sha256": "dc202d356ee50be4084a919e2a175b3530953f52b8f722f06c31df31032bc7bc",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0174375
+    },
+    "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000223.jpg.npy": {
+      "sha256": "3e2905c9e4e16780fc2bfa04e22db48a0510bd40bad25475146ae6cd0030be7d",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0441182
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/predictions/G4/val_s1708_r00.npy": {
+      "sha256": "f3452ed5fac925e7526413bf780e0b39ab4ebd509c96a7933b68c762c876192b",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0299525
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/predictions/G4/val_s1710_r00.npy": {
+      "sha256": "25d5c350a8cb7024e4b8d9c2e86d90e74b130ef0b0b2507d3376d6e89f0ebfc2",
+      "bytes_read": 786560,
+      "snapshot_unix": 1793727813.0422254
+    },
+    "/data2/yanglin/unidb_dual_20261104_until00/report/VISUAL_QA.json": {
+      "sha256": "66887bfb97b80544861b4a37c2e3237dad051292a78f871aceb3b2acb4072ec0",
+      "bytes_read": 1187,
+      "snapshot_unix": 1793727813.0450966
+    }
+  },
+  "output_sha256": {
+    "report/RECOVERY_REPLAY_WORK.csv": "7703741f562b3f2c276fc35a9aba6f2de114df21e80f56ebf257cdb5ea03115c",
+    "report/MATCHED_MONITOR_BASELINES.csv": "4fe9b4a166cff9bdaf7cfea757b90a0d173e16800b59ff5f77abc0216fdad6ce",
+    "report/HANDOFF_INTERVALS.csv": "aed28569bd9f65d55a8af8919ef7fd5aa045c1005766a26de165ae2740bad66a",
+    "report/VALIDATION_HISTORY.csv": "d005eefaf6ada61b4bdf0d7780d46b3db4dac589d375c7e7fc4c263b15025679",
+    "report/FULL_QUALITY_COMPARISON.csv": "9bcf1f112b6c4b10823775ee43047c224c26edb7959e6968405fb74905313589",
+    "report/ACTIVITY_AND_COST.csv": "e666e4b42848294e4a3ab47d16b037d3b2830f1e8e85e2dbabb5c08cc9c0c335",
+    "report/CPU_AUDIT_VALIDATION_PROVENANCE.csv": "f601d76e6339478e858cdf7706113b409e2087b21442c609290967497766044c",
+    "report/ENGINEERING_GATE_WORK.csv": "f528f201418d8e4130eaadefbfa6d3958c80108d64f62f143bbaf9fe13cb88e8",
+    "report/TRAINING_UPDATES.csv": "e80adc72ab6885d81048ce1e690f428f03ba0f6fe6ebf125cb25e49b508455aa",
+    "report/CPU_POSTPROCESS_WORK.csv": "6d588360a0213bda9c7cf2272eb6daac92083c4e8a4152c94f3c6634b215bb51",
+    "report/REPORT_ZH.md": "813919c28dde710590d3e534f056f4da3f98acd547338d57369401dd32e5e93a",
+    "report/STAGE_REPORT_ZH.md": "07531eceb264b2e8409a9aefd948ff01a3c8c1234745b625d335dc35483019b6",
+    "report/FINAL_REPORT_ZH.md": "813919c28dde710590d3e534f056f4da3f98acd547338d57369401dd32e5e93a",
+    "figures/CAMPAIGN_DYNAMICS.png": "745821cdf1cdae7a1b14eb5f1ccb2ac12ddc7772683727b49e63d463daef6d1d",
+    "figures/CAMPAIGN_DYNAMICS.pdf": "41ac3ef73846a5fd5776c82e56e331f0b372ba255bf3f23ffefe14f75a28cd15",
+    "figures/FIXED_G4_LATEST.pdf": "e358775a37516a1fb8c9993e0cf454fbe1f57074312f4dcba1ddabc02f4fa371",
+    "figures/FIXED_G4_LATEST.png": "53451213b0987668d73006438f38a99aa7e649877e080a0c9e1e6977f41273a9",
+    "figures/FIXED_G4_BEST.png": "e09a9e52224e637d4058762d9a23debee33aa8441f3c71a928824ccdffe0a326",
+    "figures/FIXED_G4_BEST.pdf": "32c0b0c88512a2dd8e8a42cb5736fc8f1715dec71dc9fca90a47ce3a871e10e6",
+    "report/FIGURE_MANIFEST.json": "4e73cef56fbf16f811e50f21f5cbdf5ff2d8c320e720951e054480f876f5ecaa",
+    "report/REPORT_STATUS.json": "9baa3c7830addac67b3a23a75bd487522789c5652d2383ce7ed40d6c8017e0c9"
+  },
+  "required_final_summary_sha256": {
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+    "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+    "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542"
+  },
+  "elapsed_seconds": 77.61737632751465,
+  "calls": {
+    "restoration_network": 0,
+    "metric_network": 0,
+    "optimizer_updates": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS_SOURCE_BASED_RESEARCH_DELIVERY_NOT_RUNTIME_ACCEPTANCE",
+  "created_at": "2026-11-01T22:45:08.315634+08:00",
+  "scope": "No-latent pixel diffusion IR selection; source and catalog research only",
+  "candidate_configuration_records": 19,
+  "unique_search_records": 28,
+  "retained_search_records": 22,
+  "source_manifest_checks": [
+    {
+      "manifest": "route1_bridges/SOURCE_MANIFEST.json",
+      "sha256": "44e4843a000cf5681dd312ff13d22f8912582e1bad8f223ce04c06b6e1964e9f",
+      "verified_entries": 40
+    },
+    {
+      "manifest": "route1_other/SOURCE_MANIFEST.json",
+      "sha256": "f7413c6e7555e4e8e90fb795201c1f0829809710cc506372abffe21278920451",
+      "verified_entries": 54
+    },
+    {
+      "manifest": "route2_control/ROUTE2_SOURCE_MANIFEST.json",
+      "sha256": "51bf076e2cfec7311d19e654144081581202a20cee05a0f09b64426761ebcbd1",
+      "verified_entries": 13
+    }
+  ],
+  "child_sha_entries_verified": 107,
+  "readiness": {
+    "source_and_metadata_only": true,
+    "downloaded_checkpoint_payloads": 0,
+    "strict_loads": 0,
+    "model_instantiations": 0,
+    "model_forwards": 0,
+    "training_updates": 0,
+    "AB_resumed": false
+  },
+  "review": "Two independent source-track reviewers checked the final report; I2SB expanded-input wording clarified.",
+  "search_partial_failures_recorded": "search/multisource_live_stderr.txt",
+  "optional_probe_state": "route2_control/SERVER_FETCH_STATE.json",
+  "no_active_probe": true,
+  "limitations": [
+    "No complete checkpoint payload download/hash or strict loading",
+    "No new model instantiation, forward, NPU/gradient test, or turbulence quality comparison",
+    "Model priority is a technical-check proposal, not a measured quality ranking",
+    "API errors and unknown meeting bridge name preserved"
+  ]
+}

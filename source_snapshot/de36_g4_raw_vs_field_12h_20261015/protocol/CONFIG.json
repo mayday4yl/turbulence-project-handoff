@@ -1,0 +1,107 @@
+{
+  "experiment": "de36_g4_raw_vs_field_12h_20261015",
+  "seed": 20261015,
+  "devices": {
+    "Raw": 2,
+    "Field": 3
+  },
+  "dataset_root": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+  "asset_dir": "/data0/yanglin/vendor/PiRN/assets/utils",
+  "network": {
+    "base_channels": 16,
+    "channel_multipliers": [
+      1,
+      2,
+      4
+    ],
+    "residual_blocks_per_level": 1,
+    "group_norm_groups": 8,
+    "severity_embedding_dim": 256
+  },
+  "physics": {
+    "image_size": 256,
+    "rf_range": 512,
+    "aperture_diameter": 0.071,
+    "propagation_distance": 100.0,
+    "wavelength": 5e-07,
+    "correlation": -0.05,
+    "tilt_threshold": 0.02,
+    "adjustment": 1.0
+  },
+  "G": 4,
+  "g_ref": 1,
+  "microbatch": 1,
+  "accumulation": 4,
+  "effective_batch": 4,
+  "warm_updates": 500,
+  "allowed_formal_updates": [
+    200,
+    400,
+    600,
+    800,
+    1000,
+    1200,
+    1600
+  ],
+  "maximum_experiment_wall_seconds": 43200,
+  "evaluation_save_reserve_seconds": 7200,
+  "precision": "fp32",
+  "lambda_R": 0.2,
+  "loss": "mean_k=1..4(LC_k+0.2*LR_k_original_G4)",
+  "optimizer": {
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "bias_norm_weight_decay": 0.0,
+    "clip_global_norm": 1.0
+  },
+  "field_scale": {
+    "existing_train_realizations": 32,
+    "floor": 1e-06
+  },
+  "acceptance": {
+    "image_mean_abs_max": 1e-05,
+    "image_max_abs_max": 0.001,
+    "directional_relative_tolerance": 0.1,
+    "directional_absolute_tolerance": 1e-05,
+    "directional_epsilons": [
+      0.01,
+      0.005,
+      0.001
+    ]
+  },
+  "val_metric_access_before_budget_lock": false,
+  "test_access": false,
+  "resume_old_models": false,
+  "resume_after_interruption": false,
+  "forbidden": [
+    "GT_state_or_xi_supervision",
+    "RGB_mixing",
+    "g_prediction",
+    "renderer_coordinate_or_FFT_repair",
+    "old_runs_or_authority_modification",
+    "training_refinement"
+  ],
+  "note": "New G4 protocol supersedes canceled G2. Only physical NPU 2,3. All network and physics FP32. No pre-existing restoration checkpoint is loaded.",
+  "safety_reserve_seconds": 1800,
+  "refinement": {
+    "steps": 40,
+    "lr": 0.01,
+    "lambda": 0.01,
+    "sources": 8,
+    "minimum_sources": 4,
+    "execution": "per_sample_serial",
+    "selection": "minimum_total_J_including_initial"
+  },
+  "lr_schedule": {
+    "kind": "cosine",
+    "start": 0.0001,
+    "end": 1e-06,
+    "duration": "locked_common_N"
+  },
+  "coding_started_epoch": 1791995803.2361338
+}

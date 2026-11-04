@@ -1,0 +1,446 @@
+{
+  "schema": "project_handoff.history_evidence.v1",
+  "version": "v5",
+  "prepared_at_local": "2026-11-04T00:18:22.143009+08:00",
+  "scope": "Historical local evidence synthesis; not live remote/process/model revalidation",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "history_document": {
+    "path": "project_handoff_20261104/preparation/v5_history.md",
+    "sha256": "18bd6d99d925f8cdbba5b46c6d58ad773529f713f09e496a7e30c451c8eb4b0d",
+    "bytes": 13592
+  },
+  "generator": {
+    "path": "project_handoff_20261104/preparation/build_history_evidence.py",
+    "sha256": "34ce8f9b58762ac88ded4ea328d6a606f4e0c5a926d26fa1c874c9d3610ad179"
+  },
+  "execution": {
+    "network_calls": 0,
+    "accelerator_calls": 0,
+    "restoration_model_calls": 0,
+    "optimizer_updates": 0,
+    "checkpoint_payload_loads": 0,
+    "source_asset_writes": 0,
+    "temporary_or_final_training_started": false
+  },
+  "checkpoint_SHA_policy": "All checkpoint hashes in facts are recorded original acceptance values; payloads not rehashed by this preparation",
+  "historical_status_policy": "Dates refer to source reports; old PID/RUNNING/resource snapshots are not current facts. Later final/stop receipts take precedence.",
+  "metric_policy": "Keep source population, checkpoint/EMA, native sampler, strength and metric protocol distinct; no cross-protocol ranking or partial-to-full substitution",
+  "sources": [
+    {
+      "id": "method",
+      "path": "v5_v1_simulator_20261020/docs/METHOD_SPEC_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/docs/METHOD_SPEC_ZH.md",
+      "bytes": 15578,
+      "sha256": "44611b0490b8902afa1d2bd756eb46023b7aac331d45bf92facd55dc99eb6255",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "simulator_acceptance",
+      "path": "v5_v1_simulator_20261020/acceptance_20261021/RESEARCH_ACCEPTANCE_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/acceptance_20261021/RESEARCH_ACCEPTANCE_ZH.md",
+      "bytes": 3030,
+      "sha256": "3d7a4d606d87d50c14c809e2f836cec6e9421bb3a2f206ac72fe49340fa18249",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "a100_gate",
+      "path": "v5_v1_simulator_a100_20261021/a100_reports/A100_GATE_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_a100_20261021/a100_reports/A100_GATE_REPORT_ZH.md",
+      "bytes": 7662,
+      "sha256": "8864a377f36f34d4cea065e9137d15b554418f345be0c6ad17c8844fc16eb35e",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "backbone_review",
+      "path": "v5_backbone_review_20261021/BACKBONE_COMPARISON_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_backbone_review_20261021/BACKBONE_COMPARISON_ZH.md",
+      "bytes": 12176,
+      "sha256": "756796d163ba48dca7ddc89378ed72b75bcd7f2a297d2296604dfda648424d6c",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "a100_benchmark",
+      "path": "v5_concertormer_a100_benchmark_20261021/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_a100_benchmark_20261021/README.md",
+      "bytes": 2716,
+      "sha256": "77cab7c91822ee2c05fff2abfae552969dd2fda38dfb7f62203111b0b81478f9",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "psf_optimization",
+      "path": "v5_concertormer_10k_20261021/optimizations/psf_adjoint_20261021/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/optimizations/psf_adjoint_20261021/REPORT_ZH.md",
+      "bytes": 4529,
+      "sha256": "fbc33cbf39f8553b6234ee94fba74a4631a50824ab2f8cc411084814684b81a2",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "formal_execution",
+      "path": "v5_concertormer_10k_20261021/reports/CURRENT_EXECUTION_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/CURRENT_EXECUTION_ZH.md",
+      "bytes": 42174,
+      "sha256": "3c4e852b85a9071207e782091ff3a368bedecc784dddd1bac75848714e88baef",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "formal_final",
+      "path": "v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/FINAL_REPORT_ZH.md",
+      "bytes": 1199,
+      "sha256": "7e4a05d976985a2a33e8e01e488d29d8c30922df5f73793fb5625077ddf1ab91",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "formal_results",
+      "path": "v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/FINAL_RESULTS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/FINAL_RESULTS.json",
+      "bytes": 44768,
+      "sha256": "d8dc3c0f319f3e3ab7e4426b4f533b8f98e52eac59b1f7d06cd5d1ed2e4d62a5",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "unified_val",
+      "path": "v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/UNIFIED_VAL1000_FINAL_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/UNIFIED_VAL1000_FINAL_ZH.md",
+      "bytes": 6063,
+      "sha256": "2f5999e7986ae521b9ff2450d5db8509ff2fad486dc900d5de512cc5532dab83",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "unified_val_json",
+      "path": "v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/UNIFIED_VAL1000_FINAL.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/UNIFIED_VAL1000_FINAL.json",
+      "bytes": 19132,
+      "sha256": "22868f96e87e757a6aaa7c230dbd1231ff7b345ad65d44a716b41aa979117e20",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "stepwise_replay",
+      "path": "v5_concertormer_10k_20261021/reports/three_stage_stepwise_20261027/MANIFEST.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_concertormer_10k_20261021/reports/three_stage_stepwise_20261027/MANIFEST.json",
+      "bytes": 1866,
+      "sha256": "1e69f836a4760a58605521ff6d7d130ffa7b073e7752ee2a9d6cfa28c75aeae9",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "resshift_stage1",
+      "path": "v5_resshift_stage1_20261026/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_resshift_stage1_20261026/reports/FINAL_REPORT_ZH.md",
+      "bytes": 21963,
+      "sha256": "ca0000c992b8ff1e1d5ba9303e93887ca3f08840d3ee3c728e71f986afc18054",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "resshift_grad",
+      "path": "v5_resshift_grad_vq_audit_20261026/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_resshift_grad_vq_audit_20261026/reports/FINAL_REPORT_ZH.md",
+      "bytes": 11251,
+      "sha256": "f5f4f004ff875ac47c6eeb5295995280849e618c5b54489aa53bd452a3dd4a0d",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "resshift_codec",
+      "path": "v5_resshift_vq_repeat4_20261026/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_resshift_vq_repeat4_20261026/reports/FINAL_REPORT_ZH.md",
+      "bytes": 13243,
+      "sha256": "abdc0c7052213595c645a24a927e0c543087937177417d7760cbc59d573cfac6",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "resshift_archive",
+      "path": "v5_diffuir_l_stage1_20261026/archive/ARCHIVE_RECEIPT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_diffuir_l_stage1_20261026/archive/ARCHIVE_RECEIPT_ZH.md",
+      "bytes": 5984,
+      "sha256": "c93558c1eea27f764f9d1f4be3e7b91016be0d5a979c88e035e85b316c034754",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "diffuir_stage1",
+      "path": "v5_diffuir_l_stage1_20261026/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_diffuir_l_stage1_20261026/reports/FINAL_REPORT_ZH.md",
+      "bytes": 14268,
+      "sha256": "0a9b5c7abcd14f673f7390e01325ee1108bb34e36258fb007f8de6147021344d",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "diffuir_benchmark",
+      "path": "v5_diffuir_l_benchmark_20261026/BENCHMARK_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_diffuir_l_benchmark_20261026/BENCHMARK_REPORT_ZH.md",
+      "bytes": 13768,
+      "sha256": "d54c7c90a45431ffdc2a26893ac500cb9ff463e43685ef2aacff8f744b8fddb8",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "diffuir_benchmark_results",
+      "path": "v5_diffuir_l_benchmark_20261026/RESULTS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v5_diffuir_l_benchmark_20261026/RESULTS.json",
+      "bytes": 175235,
+      "sha256": "dfbdd5d67ff02276a361705b670824a3e854a794357b3474f95b323e5755c51a",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    }
+  ],
+  "branches": [
+    {
+      "id": "simulator",
+      "kind": "research_acceptance",
+      "historical_status": "ACCEPTED_WITH_KNOWN_LIMITS_ORIGINAL_GATE_NOT_ALL_PASSED",
+      "historical_date": "2026-10-21",
+      "sources": [
+        "method",
+        "simulator_acceptance",
+        "a100_gate"
+      ],
+      "facts": {
+        "formal_training_in_gate": false,
+        "nearzero_threshold": 0.002,
+        "nearzero_actual_max": 0.002176,
+        "full_gate_pass": false
+      }
+    },
+    {
+      "id": "backbone_review",
+      "kind": "static_candidate_review",
+      "historical_status": "CPU_STATIC_ONLY",
+      "historical_date": "2026-10-21",
+      "sources": [
+        "backbone_review"
+      ],
+      "facts": {
+        "models_run": 0,
+        "checkpoints_downloaded": 0,
+        "training_updates": 0
+      }
+    },
+    {
+      "id": "a100_preparation",
+      "kind": "benchmark_preparation",
+      "historical_status": "GPU_BENCHMARK_NOT_RUN_AT_REPORT",
+      "historical_date": "2026-10-21",
+      "sources": [
+        "a100_benchmark"
+      ],
+      "facts": {
+        "formal_training": false
+      }
+    },
+    {
+      "id": "psf_input_gradient",
+      "kind": "equivalent_engineering_optimization",
+      "historical_status": "BOUNDED_MATH_GRADIENT_MULTICARD_PASS",
+      "historical_date": "2026-10-21",
+      "sources": [
+        "psf_optimization"
+      ],
+      "facts": {
+        "original_frozen_sources_changed": false,
+        "four_card_seconds_before_after": {
+          "D0": [
+            21.45,
+            9.6
+          ],
+          "R0": [
+            87.28,
+            39.09
+          ]
+        },
+        "quality_claim": false
+      }
+    },
+    {
+      "id": "concertormer_D0_A_B",
+      "kind": "formal",
+      "historical_status": "ALL_AUTHORIZED_ALIGNMENT_COMPLETE_EXITED",
+      "historical_date": "2026-10-26 00:32 Asia/Shanghai",
+      "sources": [
+        "formal_execution",
+        "formal_final",
+        "formal_results",
+        "unified_val",
+        "unified_val_json"
+      ],
+      "facts": {
+        "updates": {
+          "D0": 10000,
+          "A": 6000,
+          "B": 4000
+        },
+        "best_updates": {
+          "D0": 8250,
+          "A": 5000,
+          "B": 2750
+        },
+        "fixed_val_clean_sources": 250,
+        "fixed_val_starts": 1000,
+        "best_psnr": {
+          "D0": 21.44350572,
+          "A": 20.156652,
+          "B": 21.736105
+        },
+        "input_psnr": 18.795937524,
+        "B_minus_D0_psnr": 0.292599187,
+        "B_C4_minus_C1_psnr": -0.105346,
+        "B_complete_checkpoint_sha256_from_original_receipt": "5b1f2ff98e0cd2541899689cd6d7827a3b3f644465fc8b52ac0701f4405f21ed",
+        "retained_run_hours": 91.19,
+        "workflow_wall_hours": 97.1,
+        "test_used": false,
+        "refinement_on_executed": false
+      }
+    },
+    {
+      "id": "concertormer_stepwise_replay",
+      "kind": "post_training_illustrative_replay",
+      "historical_status": "FIXED4TRAIN_AND4VAL_BEST_CHECKPOINT_REPLAY_COMPLETE",
+      "historical_date": "2026-10-27",
+      "sources": [
+        "stepwise_replay"
+      ],
+      "facts": {
+        "training_updates": 0,
+        "examples": 8,
+        "training_time_snapshots": false,
+        "full_val_metrics": false
+      }
+    },
+    {
+      "id": "resshift_stage1",
+      "kind": "candidate_zero_shot",
+      "historical_status": "OFFICIAL_BASELINE_VAL4_ONLY_COMPLETED",
+      "historical_date": "2026-10-26",
+      "sources": [
+        "resshift_stage1"
+      ],
+      "facts": {
+        "formal_updates": 0,
+        "val_images": 4,
+        "input_psnr": 17.7892,
+        "model_psnr": 16.9712,
+        "full_val1000": false
+      }
+    },
+    {
+      "id": "resshift_grad_vq",
+      "kind": "gradient_representation_diagnostic",
+      "historical_status": "FP32_PASS_FP16_OPERATOR_BLOCKER_RETAINED",
+      "historical_date": "2026-10-26",
+      "sources": [
+        "resshift_grad"
+      ],
+      "facts": {
+        "optimizer_updates": 0,
+        "fp32_denoising_steps": 4,
+        "fixed_true_xi_physical_stages_tested": 2,
+        "full_four_physical_stages_predicted_xi_tested": false,
+        "clean_codec_val_images": 250,
+        "clean_codec_psnr": 28.7253
+      }
+    },
+    {
+      "id": "resshift_codec_repeat",
+      "kind": "codec_only_diagnostic",
+      "historical_status": "FOUR_PASSES_ALL250_PSNR_DECLINE",
+      "historical_date": "2026-10-26",
+      "sources": [
+        "resshift_codec"
+      ],
+      "facts": {
+        "codec_calls": 1000,
+        "unet_calls": 0,
+        "optimizer_updates": 0,
+        "psnr_by_pass": [
+          28.7253,
+          27.4151,
+          26.0999,
+          24.9492
+        ],
+        "full_restoration_claim": false
+      }
+    },
+    {
+      "id": "resshift_archive",
+      "kind": "archive_in_place",
+      "historical_status": "HASH_MANIFEST_ACCEPTED_NOT_EXTRA_FULL_BACKUP",
+      "historical_date": "2026-10-26 21:27 Asia/Shanghai",
+      "sources": [
+        "resshift_archive"
+      ],
+      "facts": {
+        "files": 7321,
+        "bytes": 4897644957,
+        "source_directories_retained_in_place": true
+      }
+    },
+    {
+      "id": "diffuir_L_stage1",
+      "kind": "candidate_plus_short_pilot",
+      "historical_status": "100_UPDATE_NATIVE_RESIDUAL_PILOT_COMPLETE_EXITED",
+      "historical_date": "2026-10-26",
+      "sources": [
+        "diffuir_stage1"
+      ],
+      "facts": {
+        "official_parameters": 36261187,
+        "formal_pilot_updates": 100,
+        "actual_pairs": 200,
+        "clean_sources": 91,
+        "classes": 49,
+        "val_images": 50,
+        "ema_psnr": {
+          "U0": 18.73989,
+          "U25": 18.74114,
+          "U100": 18.48104
+        },
+        "input_psnr": 18.95359,
+        "mature_ema": false,
+        "best_checkpoint_sha256_from_original_receipt": "055a8b95ccc4660f207a8c021b8184cde4a48db82b055cc5891fbc6ac530347e",
+        "physical_outer_recursion": false
+      }
+    },
+    {
+      "id": "diffuir_benchmark",
+      "kind": "engineering_only",
+      "historical_status": "12_RUNS_PASS_6_ZERO_UPDATE_ENV_FAILS_PRESERVED",
+      "historical_date": "2026-10-26",
+      "sources": [
+        "diffuir_benchmark",
+        "diffuir_benchmark_results"
+      ],
+      "facts": {
+        "successful_runs": 12,
+        "initial_zero_update_environment_failures": 6,
+        "temporary_updates_discarded": 144,
+        "formal_updates": 0,
+        "native_measured_max_microbatch": 16,
+        "native_seconds_per_update": 0.7095,
+        "three_step_backward_measured_max_batch": 8,
+        "three_step_backward_seconds": 1.0407,
+        "larger_batches_not_tested": true,
+        "hardware_hard_limit_claim": false
+      }
+    }
+  ],
+  "limits": [
+    "No current remote file/process/disk existence audit",
+    "No independent recalculation of historical model predictions in this task",
+    "No permission to resume old runs or delete retained/archive assets",
+    "UniDB final experiment and full-project final handoff remain parent-task responsibilities"
+  ]
+}

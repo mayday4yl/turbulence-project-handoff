@@ -1,0 +1,83 @@
+{
+  "status": "PASS_PRETRAINED_ASSETS_AND_BOUNDED_ACCEPTANCE",
+  "created_local_iso": "2026-10-06T00:39:57.197747+08:00",
+  "official_model": "NAFNet-SIDD-width64, 115982915 parameters, complete official checkpoint preserved",
+  "official_checkpoint": "assets/pretrained/NAFNet-SIDD-width64.pth",
+  "official_sha256": "cd685efaae01f7c4e9951f2deab05780079c8eb1e49ed664b72f6db04dabb445",
+  "adapted_parameter_count": 117767209,
+  "initialization": "official pretrained body shared by all four V4 methods",
+  "V4_common_init": "protocol/pretrained_common_init.pt",
+  "V4_common_init_sha256": "b5ed0a9b430618f477c7b1bc0377537365f74df384df2ae20a6874b7d8214b2b",
+  "unchanged_transferred_tensor_count": 661,
+  "unchanged_transferred_parameter_count": 115979456,
+  "input_mapping": "official3ch W -> 6ch [W/2,W/2]; original bias",
+  "FiLM": "identity initially",
+  "fresh_layers": "V4 conditioning; absolute sigmoid clean head; native raw xi decoder/heads",
+  "official_ending_not_transferred_reason": "official predicts additive residual; V4 head predicts absolute clean RGB",
+  "four_methods_native_B1_G4": {
+    "D0": {
+      "status": "PASS",
+      "gradient_norm_before_clip": 0.09925562888383865,
+      "peak_allocated_GiB": 2.2170214653015137,
+      "save_restore": "exact model/optimizer/RNG/scaler/counters/sampler state restoration"
+    },
+    "R0": {
+      "status": "PASS",
+      "gradient_norm_before_clip": 0.06464551389217377,
+      "peak_allocated_GiB": 3.251356601715088,
+      "save_restore": "exact model/optimizer/RNG/scaler/counters/sampler state restoration"
+    },
+    "R08": {
+      "status": "PASS",
+      "gradient_norm_before_clip": 60.9515266418457,
+      "peak_allocated_GiB": 3.251356601715088,
+      "save_restore": "exact model/optimizer/RNG/scaler/counters/sampler state restoration"
+    },
+    "L08": {
+      "status": "PASS",
+      "gradient_norm_before_clip": 231989.109375,
+      "peak_allocated_GiB": 2.4842963218688965,
+      "save_restore": "exact model/optimizer/RNG/scaler/counters/sampler state restoration"
+    }
+  },
+  "native_full_BPTT": "R0/R08 first clean and xi connected to terminal clean loss; L08 first clean connected, xi not in linear transition by definition",
+  "refinement": "R0/R08 native G2 serial40 and fixed-object invariance passed",
+  "precision": {
+    "setting": "BF16 model / FP32 simulator and loss",
+    "clean_forward_FP32_BF16_max_abs": 0.0030193328857421875
+  },
+  "pretrained_body_parity": {
+    "exact_tensor_transfer": true,
+    "same_intro_features_body_max_abs": 0.0,
+    "intro_max_abs": 1.2516975402832031e-06,
+    "end_to_end_bitwise": false,
+    "details": "CPU_ACCEPTANCE.json"
+  },
+  "actual_risk": "R08/L08 initial noisy-path gradients are larger, notably L08 ~2.32e5 before existing clip=1. Requires formal batch/longer stability calibration before launch.",
+  "short_numeric_followup": {
+    "status": "PASS_FINITE_ONLY_NOT_CONVERGENCE_OR_LONG_TRAIN_STABILITY",
+    "per_group_updates": 8,
+    "effective_batch": 1,
+    "results": "R08 and L08 both finite across the eight temporary updates; no convergence claim",
+    "report": "SHORT_NUMERICS.json"
+  },
+  "formal_training_started": false,
+  "test_used": false,
+  "existing_restormer_changed": false,
+  "pending": [
+    "future dataset identity and train statistics",
+    "formal budget and update schedule",
+    "effective batch and microbatch calibration",
+    "actual resource layout and throughput",
+    "formal monitor/evaluation/recovery binding"
+  ],
+  "evidence": [
+    "CPU_ACCEPTANCE.json",
+    "NATIVE_D0.json",
+    "NATIVE_R0.json",
+    "NATIVE_R08.json",
+    "NATIVE_L08.json",
+    "INFERENCE_ACCEPTANCE.json",
+    "SHORT_NUMERICS.json"
+  ]
+}

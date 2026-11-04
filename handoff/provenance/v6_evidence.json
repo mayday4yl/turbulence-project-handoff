@@ -1,0 +1,1028 @@
+{
+  "schema": "project_handoff.history_evidence.v1",
+  "version": "v6",
+  "prepared_at_local": "2026-11-04T00:18:22.159560+08:00",
+  "scope": "Historical local evidence synthesis; not live remote/process/model revalidation",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "history_document": {
+    "path": "project_handoff_20261104/preparation/v6_history.md",
+    "sha256": "7457648f26ce5b3e5ae797e9f4fb6cf649231641939a11f1435c6a1cc7b6ee11",
+    "bytes": 22219
+  },
+  "generator": {
+    "path": "project_handoff_20261104/preparation/build_history_evidence.py",
+    "sha256": "34ce8f9b58762ac88ded4ea328d6a606f4e0c5a926d26fa1c874c9d3610ad179"
+  },
+  "execution": {
+    "network_calls": 0,
+    "accelerator_calls": 0,
+    "restoration_model_calls": 0,
+    "optimizer_updates": 0,
+    "checkpoint_payload_loads": 0,
+    "source_asset_writes": 0,
+    "temporary_or_final_training_started": false
+  },
+  "checkpoint_SHA_policy": "All checkpoint hashes in facts are recorded original acceptance values; payloads not rehashed by this preparation",
+  "historical_status_policy": "Dates refer to source reports; old PID/RUNNING/resource snapshots are not current facts. Later final/stop receipts take precedence.",
+  "metric_policy": "Keep source population, checkpoint/EMA, native sampler, strength and metric protocol distinct; no cross-protocol ranking or partial-to-full substitution",
+  "sources": [
+    {
+      "id": "method",
+      "path": "v6_diffuir_l_method_review_20261027/METHOD_REVIEW_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_method_review_20261027/METHOD_REVIEW_ZH.md",
+      "bytes": 12535,
+      "sha256": "c9a89638130d4f0f5faf9af99b67d6439974a2f038f74ee793a4447e9125f3b3",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mapping",
+      "path": "v6_diffuir_l_method_review_20261027/SPEC_TO_CODE_MAPPING_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_method_review_20261027/SPEC_TO_CODE_MAPPING_ZH.md",
+      "bytes": 9079,
+      "sha256": "dfba467706f32af317bc716514edfcc0fb17e9a8b475844e9dabec88523ee277",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "initial_d0",
+      "path": "v6_diffuir_l_20261027/V6_D0_A_B_FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/V6_D0_A_B_FINAL_REPORT_ZH.md",
+      "bytes": 11432,
+      "sha256": "f16c20cb21832a11af1d0a1c5311d4a63f649aa8c4b047c37ebc640464b1d000",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "initial_results",
+      "path": "v6_diffuir_l_20261027/reports/V6_D0_A_B_FINAL_RESULTS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/reports/V6_D0_A_B_FINAL_RESULTS.json",
+      "bytes": 4591,
+      "sha256": "0924bcf9793ab109c2f467fe1fa15480fe051f1e81eb82acdd0c95ee758d0609",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "continuation",
+      "path": "v6_diffuir_l_20261027/reports/D0_CONTINUATION_FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/reports/D0_CONTINUATION_FINAL_REPORT_ZH.md",
+      "bytes": 1015,
+      "sha256": "d2873e467ed82e7a065af61b8a70f1b88808d270a291498b79f4c73df389a808",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "A_complete",
+      "path": "v6_diffuir_l_20261027/reports/A_COMPLETION_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/reports/A_COMPLETION_REPORT_ZH.md",
+      "bytes": 1308,
+      "sha256": "c8dc3c8c772fdd4883f3b3d794a8c389ffb2f3b3948e795aa771cb295c7e6805",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_preflight",
+      "path": "v6_diffuir_l_20261027/reports/B_PREFLIGHT_PILOT_AND_STARTUP_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/reports/B_PREFLIGHT_PILOT_AND_STARTUP_REPORT_ZH.md",
+      "bytes": 3633,
+      "sha256": "e13f05352bc18c7d513549a2840d25f58152570ebd2bcbc8fdeb701909cde816",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_status",
+      "path": "v6_diffuir_l_20261027/execution_20261027_five_npu/STATUS.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261027_five_npu/STATUS.json",
+      "bytes": 614,
+      "sha256": "cdfe7414dc4b316fd95f4f88088c133cff9c3ac3e8f9e7d669a94bb0dffda520",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_pause",
+      "path": "v6_diffuir_l_20261027/execution_20261028_d0_until_noon/B_PAUSE_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261028_d0_until_noon/B_PAUSE_ACCEPTANCE.json",
+      "bytes": 401,
+      "sha256": "af6c4ad43eeeb38df4b1d1b6a2fcd2c548673ce7c39ac99c8e32c04c80faf469",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_best",
+      "path": "v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/BEST.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/BEST.json",
+      "bytes": 50409,
+      "sha256": "410a2521223bb62ca4cc39fb5a4975ffac821c0b7015dd65ab103791056e8658",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_best_full",
+      "path": "v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/validation/U007000_1000/SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/validation/U007000_1000/SUMMARY.json",
+      "bytes": 46883,
+      "sha256": "4dffa02c51141e613d42013eb707e7d47652dac5d38789fcf10f6531e348570d",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_latest_full",
+      "path": "v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/validation/U009000_1000/SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/validation/U009000_1000/SUMMARY.json",
+      "bytes": 46926,
+      "sha256": "d3055e914529e9dd5ee3d931c79eddfb9738e71c1c8135eb99996d10b73f7c75",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "B_result",
+      "path": "v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/RESULT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/distributed/B_five_npu_formal10000_01/RESULT.json",
+      "bytes": 1931,
+      "sha256": "5862f272a63c5660a2e767bbe2399af4e41cf198e060acd51c232ae37b990537",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "joint_pause",
+      "path": "v6_diffuir_l_20261027/execution_20261028_d0_until_noon/USER_PAUSE_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261028_d0_until_noon/USER_PAUSE_REPORT_ZH.md",
+      "bytes": 864,
+      "sha256": "92b87582945054ea896cee4c7d19292d9c77d1fab77833e681008002049e2971",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "residual_final",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_user_stop/D0_OFFICIAL_RESIDUAL_FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_user_stop/D0_OFFICIAL_RESIDUAL_FINAL_REPORT_ZH.md",
+      "bytes": 24814,
+      "sha256": "d5f4868a72973ad2bf9e0c9e8091515c87fdaec4895463d01482236ff91c5732",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "residual_acceptance",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_user_stop/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_user_stop/FINAL_ACCEPTANCE.json",
+      "bytes": 14710,
+      "sha256": "9bba20c2902af3f9d559b0a995f6314768310f8c972a41b408969d62d9cb7a32",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "residual_cpu_state",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_user_stop/CHECKPOINT_CPU_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_user_stop/CHECKPOINT_CPU_AUDIT.json",
+      "bytes": 1115,
+      "sha256": "5b4cd2cff137af385360ebeb74a91f53b2c9932d00d60c4bd26905aa476a461f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mixed_final",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/D0_MULTISTRENGTH_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/D0_MULTISTRENGTH_REPORT_ZH.md",
+      "bytes": 5929,
+      "sha256": "3a29234e1832c6c9212f64f36b0997ccab75411ab2d6a936311ca4601bdc8483",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mixed_acceptance",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/FINAL_ACCEPTANCE.json",
+      "bytes": 4711,
+      "sha256": "28b32690371149740182b52ebde781ed1366bee258232caccb94d79d0386b2a5",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mixed_delivery",
+      "path": "v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/LOCAL_FINAL_DELIVERY_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261029_d0_multistrength160k/final_20261030_1800/LOCAL_FINAL_DELIVERY_ACCEPTANCE.json",
+      "bytes": 515,
+      "sha256": "fcceb5b693a460a342eaebf224262f1ea34dbb8729cf525ada78f87dc50bfa9c",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "reweight_final",
+      "path": "v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/D0_G4_REWEIGHT_FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/D0_G4_REWEIGHT_FINAL_REPORT_ZH.md",
+      "bytes": 5051,
+      "sha256": "1e64682d4822cd74e61f37021a59cb9433edd280780f54f64de6f243cb193257",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "reweight_acceptance",
+      "path": "v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/FINAL_ACCEPTANCE.json",
+      "bytes": 2020,
+      "sha256": "ffec8674deb875253a2d792c746a2ee25aefbd013112394bf0ab357a0d1ba4ea",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "reweight_supplement",
+      "path": "v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/FINAL_DELIVERY_SUPPLEMENT_20261031_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/execution_20261030_d0_g4_reweight_5k/final_20261031_0255/FINAL_DELIVERY_SUPPLEMENT_20261031_ZH.md",
+      "bytes": 1775,
+      "sha256": "d7ff8da9389315f53e8cff91834b7b67120346cdd2f9b1461620ac14a59506a5",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external95544",
+      "path": "v6_diffuir_l_20261027/external_eval_20261029_otis_atd/OTIS_ATD_EVALUATION_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/external_eval_20261029_otis_atd/OTIS_ATD_EVALUATION_REPORT_ZH.md",
+      "bytes": 8134,
+      "sha256": "73941a7e9a057ad821f1a507e820c38ddcd21bcb23a91baf24f528ac63359e91",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external95544_acceptance",
+      "path": "v6_diffuir_l_20261027/external_eval_20261029_otis_atd/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/external_eval_20261029_otis_atd/FINAL_ACCEPTANCE.json",
+      "bytes": 1042,
+      "sha256": "6a284aa929e1c78b87712f10b0903f255a9afec8e2fab905793a619783ed3128",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "official13",
+      "path": "v6_diffuir_l_20261027/diagnostics/official_five_tasks_20261030/all13_final_delivery_20261031_0650/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/official_five_tasks_20261030/all13_final_delivery_20261031_0650/FINAL_REPORT_ZH.md",
+      "bytes": 8427,
+      "sha256": "3fca66ee3020516ab8c98b29e9cdcb7984c49d609e24b429059fafe449f5301e",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "official13_acceptance",
+      "path": "v6_diffuir_l_20261027/diagnostics/official_five_tasks_20261030/all13_final_delivery_20261031_0650/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/official_five_tasks_20261030/all13_final_delivery_20261031_0650/FINAL_ACCEPTANCE.json",
+      "bytes": 1912,
+      "sha256": "e36271a34bcfc3e82b772a856e2b2e04c48fd51c8fb7cb9c5e6be0f0e870cdf6",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external6",
+      "path": "v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/HANDOFF_CURRENT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/HANDOFF_CURRENT_ZH.md",
+      "bytes": 18752,
+      "sha256": "9af2467e246c3c4f23adeddf2f12710ec79cbb90464daa927273cd856eac0fae",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external6_delivery",
+      "path": "v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/FINAL_DELIVERY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/FINAL_DELIVERY.json",
+      "bytes": 1594,
+      "sha256": "2a018be0494241357a5bfa387d862b4e1d5ed85278c2f84d7844db4e482739bb",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external_final",
+      "path": "v6_diffuir_l_20261027/diagnostics/external_best_final_singleframe_20261101/CURRENT_HANDOFF_V3_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_best_final_singleframe_20261101/CURRENT_HANDOFF_V3_ZH.md",
+      "bytes": 3737,
+      "sha256": "569ebb431f165fe503fb46afc01f74227ed6a659c55822d97f9d22ba24dfb6af",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "external_final_delivery",
+      "path": "v6_diffuir_l_20261027/diagnostics/external_best_final_singleframe_20261101/CURRENT_DELIVERY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_best_final_singleframe_20261101/CURRENT_DELIVERY.json",
+      "bytes": 625,
+      "sha256": "cc8e26118df3862771733a394a79fb47898e86867a48be9fbfee52a3315eb806",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "atsyn_acceptance",
+      "path": "v6_diffuir_l_20261027/diagnostics/external_atsyn_singleframe_20261101/FINAL_DELIVERY_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_atsyn_singleframe_20261101/FINAL_DELIVERY_ACCEPTANCE.json",
+      "bytes": 745,
+      "sha256": "2f1bce90273980d3798bfe51fa4be929d340dae771262c87e39d9dccf51eee0b",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "dependency",
+      "path": "v6_diffuir_l_20261027/diagnostics/D0_diffusion_dependency_20261027_1955/D0_DIFFUSION_DEPENDENCY_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/D0_diffusion_dependency_20261027_1955/D0_DIFFUSION_DEPENDENCY_REPORT_ZH.md",
+      "bytes": 5806,
+      "sha256": "96ed3c4732e352e7441f4055a575a7b13a73fb7809348ac96e5811a9aea15ea0",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mechanism",
+      "path": "v6_diffuir_l_20261027/diagnostics/diffusion_mechanism_audit_20261028/V6_DIFFUSION_MECHANISM_DIAGNOSIS_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/diffusion_mechanism_audit_20261028/V6_DIFFUSION_MECHANISM_DIAGNOSIS_ZH.md",
+      "bytes": 24781,
+      "sha256": "7b69dd2a94b908d7d0630db1cdfcebbc75f01aa35a7cb22bb7f78003988fc460",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "mechanism_theory",
+      "path": "v6_diffuir_l_20261027/diagnostics/diffusion_mechanism_audit_20261028/DIFFUIR_THEORY_AND_CODE_AUDIT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/diffusion_mechanism_audit_20261028/DIFFUIR_THEORY_AND_CODE_AUDIT_ZH.md",
+      "bytes": 23008,
+      "sha256": "50c1dfff566ea7f70e617045f7a4a7e76d23c7a8c32363e946c6b58a2f3e3f87",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "train_val",
+      "path": "v6_diffuir_l_20261027/diagnostics/d0_u14927_train_val_generalization_20261028/TRAIN_VAL_GENERALIZATION_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/d0_u14927_train_val_generalization_20261028/TRAIN_VAL_GENERALIZATION_REPORT_ZH.md",
+      "bytes": 5897,
+      "sha256": "9b8cfe2d287492a2195f227120f6df8faca08f54c825833a09e6ee5c57b229c7",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "strength_eval",
+      "path": "v6_diffuir_l_20261027/diagnostics/d0_u95544_g1_g4_val1000_20261029/G1_G4_VAL1000_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/d0_u95544_g1_g4_val1000_20261029/G1_G4_VAL1000_REPORT_ZH.md",
+      "bytes": 6084,
+      "sha256": "acc0979be2627c4b3f7c916cf1d8384dbfa4f632ba4d4b331c952bbbadd6625d",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "loss_eval",
+      "path": "v6_diffuir_l_20261027/diagnostics/d0_train_val_loss_20261029/TRAIN_VAL_LOSS_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/d0_train_val_loss_20261029/TRAIN_VAL_LOSS_ZH.md",
+      "bytes": 1897,
+      "sha256": "4fad174fdbcd2a9f455a4a64443d461e1df6037e110dc05b187468e76e048d39",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "strength_preview",
+      "path": "v6_diffuir_l_20261027/diagnostics/strength_preview_g025_g4_20261029/PREVIEW_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/strength_preview_g025_g4_20261029/PREVIEW_REPORT_ZH.md",
+      "bytes": 2109,
+      "sha256": "c3d48846fe9d43146d0646f12090723963a8a1387c7521690bca6c2ec61ec2e9",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "data_inventory",
+      "path": "v6_diffuir_l_20261027/diagnostics/data_strength_inventory_20261029/DATA_STRENGTHS_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/data_strength_inventory_20261029/DATA_STRENGTHS_ZH.md",
+      "bytes": 2195,
+      "sha256": "94c36ae416d69a438444f21dcddac775d4fc38d21fbe8251b9cc772381cfe87f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "post_meeting",
+      "path": "v6_diffuir_l_20261027/diagnostics/post_meeting_audit_20261101/AUDIT_SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/post_meeting_audit_20261101/AUDIT_SUMMARY.json",
+      "bytes": 11927,
+      "sha256": "4a2d945cd7be3e53b9f7a1f71a6878ef623735a82a8c1172b877cbe9e1010d39",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "global_curve",
+      "path": "v6_diffuir_l_20261027/diagnostics/d0_global_train_val_review_20261031/AUDIT_AND_COVERAGE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/d0_global_train_val_review_20261031/AUDIT_AND_COVERAGE.json",
+      "bytes": 1155,
+      "sha256": "798f3067d1b7bae974ab894f261056528e321ded3c235eadf1f5bcdece0e6a04",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "selection_v1",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_20261101/FINAL_RESEARCH_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_20261101/FINAL_RESEARCH_ACCEPTANCE.json",
+      "bytes": 1800,
+      "sha256": "56740f4b91187f270ad456e961c4bd42a31aa168490b89459de8d58ff74e839f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "selection_v2",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_v2_20261101/RESEARCH_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_v2_20261101/RESEARCH_REPORT_ZH.md",
+      "bytes": 15657,
+      "sha256": "9fd28a0a84c1ef0b501cecb4d168cc6a88c18750315ebd535234d6af5ca86697",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "selection_v2_acceptance",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_v2_20261101/FINAL_RESEARCH_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixel_diffusion_selection_v2_20261101/FINAL_RESEARCH_ACCEPTANCE.json",
+      "bytes": 3425,
+      "sha256": "c38b9c46facaafa7253ba2b4535884eed6347c854651607abd0138e99fa5e83a",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "recent_ir",
+      "path": "v6_diffuir_l_20261027/diagnostics/recent_pixel_ir_20261101/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/recent_pixel_ir_20261101/REPORT_ZH.md",
+      "bytes": 5263,
+      "sha256": "88c4f47d0e8bad9ae91f31a7dbf44bc593414d813a97aa16ee596a5e3eef33ca",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "recent_ir_acceptance",
+      "path": "v6_diffuir_l_20261027/diagnostics/recent_pixel_ir_20261101/RESEARCH_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/recent_pixel_ir_20261101/RESEARCH_ACCEPTANCE.json",
+      "bytes": 751,
+      "sha256": "470253f996d983adf19375df02edec3823c5627c5b4f9395a49dc6b8295739b9",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nonres_expansion",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixel_nonres_topconf_expansion_20261101/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixel_nonres_topconf_expansion_20261101/REPORT_ZH.md",
+      "bytes": 8037,
+      "sha256": "44ea555900cc135d26d6f11757351fb6c8cbfaa8177fe9ca53bdacc53b49d372",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "deblur_selection",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixel_deblur_selection_20261101/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixel_deblur_selection_20261101/REPORT_ZH.md",
+      "bytes": 6576,
+      "sha256": "ece9acd75936f8f3379b32d42b663b245129d5ce797bf9f2ddc606bfc098aaa7",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "pixeldit",
+      "path": "v6_diffuir_l_20261027/diagnostics/pixeldit_fit_20261101/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/pixeldit_fit_20261101/REPORT_ZH.md",
+      "bytes": 5448,
+      "sha256": "50b9d46a8b85ed68d1c506a2d2e4efa1e0582a947c5440dd54408edbbd68b890",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "latent_fit",
+      "path": "v6_diffuir_l_20261027/diagnostics/deblurdiff_diffbir_fit_20261101/FIT_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/deblurdiff_diffbir_fit_20261101/FIT_REPORT_ZH.md",
+      "bytes": 4918,
+      "sha256": "6c9f18e73e75e3f1db8dd410eb2c2da702b86571450de3ada4e5c50de22e5fd4",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "turbnet",
+      "path": "turbnet_zeroshot_20261028/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/turbnet_zeroshot_20261028/reports/FINAL_REPORT_ZH.md",
+      "bytes": 8334,
+      "sha256": "ed5b3d35e695f9595625db5215999e4ec4dd8a4d9b81f21708d180fee8d43660",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "turbwnet",
+      "path": "turbwnet_zeroshot_20261028/reports/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/turbwnet_zeroshot_20261028/reports/FINAL_REPORT_ZH.md",
+      "bytes": 8373,
+      "sha256": "3ce62f2858f3d37a0ea32dfcd1ea16f83a461d7a772184c55f540d916c9e8045",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    }
+  ],
+  "branches": [
+    {
+      "id": "method_review",
+      "kind": "static_review",
+      "historical_status": "METHOD_AND_CODE_MAPPING_COMPLETE_NOT_TRAIN",
+      "historical_date": "2026-10-27",
+      "sources": [
+        "method",
+        "mapping"
+      ],
+      "facts": {
+        "optimizer_updates": 0
+      }
+    },
+    {
+      "id": "initial_joint_D0",
+      "kind": "formal",
+      "historical_status": "U10000_COMPLETE",
+      "historical_date": "2026-10-27",
+      "sources": [
+        "initial_d0",
+        "initial_results"
+      ],
+      "facts": {
+        "updates": 10000,
+        "exposures": 600000,
+        "effective_batch": 60,
+        "train_nfe": 4,
+        "inference_nfe": 3,
+        "validation_psnr": 21.03393849,
+        "validation_lpips": 0.53120907,
+        "official_u0_lpips": 0.51510603
+      }
+    },
+    {
+      "id": "joint_D0_continuation",
+      "kind": "formal",
+      "historical_status": "U13334_COMPLETE_THEN_U14927_USER_PAUSE",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "continuation",
+        "joint_pause"
+      ],
+      "facts": {
+        "initial_extra_updates": 3334,
+        "initial_extra_exposures": 200040,
+        "U13334_psnr": 21.05311102,
+        "next_extra_updates": 1593,
+        "pause_update": 14927,
+        "pause_full_val_evaluated_in_later_branch": true
+      }
+    },
+    {
+      "id": "A",
+      "kind": "formal",
+      "historical_status": "6000_UPDATES_COMPLETE_EXITED",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "A_complete"
+      ],
+      "facts": {
+        "updates": 6000,
+        "actual_exposures": 259280,
+        "world_size_changed_from_to": [
+          6,
+          5
+        ],
+        "best_update": 1000,
+        "best_C4_psnr": 19.86120922,
+        "best_C1_psnr": 20.99742496,
+        "latest_C4_psnr": 19.79950879
+      }
+    },
+    {
+      "id": "B",
+      "kind": "formal_user_pause",
+      "historical_status": "U9500_SAFE_SAVED_EXITED_NOT_U10000",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "B_preflight",
+        "B_status",
+        "B_pause",
+        "B_best",
+        "B_best_full",
+        "B_latest_full",
+        "B_result"
+      ],
+      "facts": {
+        "updates": 9500,
+        "cursor": 95000,
+        "terminal_U9500_full_summary_found": false,
+        "best_update": 7000,
+        "best_psnr": 21.04583810240762,
+        "best_ssim": 0.5487442090092839,
+        "best_lpips": 0.5329662312120199,
+        "best_mae": 0.05630583086428803,
+        "best_C4_minus_C1_psnr": -0.03826110927160897,
+        "latest_full_update": 9000,
+        "latest_full_psnr": 21.055674913514768,
+        "best_is_strict_psnr_max": false,
+        "checkpoint_sha256_from_original_receipt": "e49abaae1e487e63e73a3c3151b8f5585bd4945f9a15fde103ffc1bd572f7337",
+        "auto_resume": false
+      }
+    },
+    {
+      "id": "official_residual_D0",
+      "kind": "formal_user_stop",
+      "historical_status": "U95544_FINAL_CPU_FULL_VAL_AND_EXIT_COMPLETE",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "residual_final",
+        "residual_acceptance",
+        "residual_cpu_state"
+      ],
+      "facts": {
+        "parent_update": 14927,
+        "final_update": 95544,
+        "effective_new_updates": 80617,
+        "exposures": 4837020,
+        "discarded_unsaved_updates": 420,
+        "discarded_unsaved_exposures": 25200,
+        "from_official_u0": false,
+        "train_nfe": 1,
+        "inference_nfe": 3,
+        "psnr": 21.16514236838766,
+        "ssim": 0.5562608945579739,
+        "lpips": 0.4976828113496304,
+        "mae": 0.055116699808241854,
+        "checkpoint_sha256_from_original_receipt": "1fd16df15c64cc496bda89ccb32fd6a9413c9de8e59942fc13cbb6592e757cc3"
+      }
+    },
+    {
+      "id": "mixed_strength160k",
+      "kind": "formal",
+      "historical_status": "U157505_SAFE_STOP_FULL_FIVE_G_CPU_LOCAL_DELIVERY_COMPLETE",
+      "historical_date": "2026-10-30 18:00 Asia/Shanghai",
+      "sources": [
+        "mixed_final",
+        "mixed_acceptance",
+        "mixed_delivery"
+      ],
+      "facts": {
+        "parent_update": 95544,
+        "final_update": 157505,
+        "new_updates": 61961,
+        "exposures": 3717660,
+        "train_clean_sources": 10000,
+        "starts": 160000,
+        "training_G": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "validation_G": [
+          0.5,
+          1,
+          2,
+          3,
+          4
+        ],
+        "val_starts_each_G": 1000,
+        "latest_psnr": {
+          "0.5": 29.9295844,
+          "1": 27.82736964,
+          "2": 24.81663086,
+          "3": 22.62914854,
+          "4": 20.89072573
+        },
+        "best_update": 109544,
+        "best_G4_psnr": 20.98248545,
+        "G4_latest_minus_parent": -0.27441664,
+        "final_G4_protection_floor_pass": false,
+        "latest_sha256_from_original_receipt": "9e6b66e6a46434dc86b327dfce6be04d78aa1de61449d7791e282c62d52e0029",
+        "best_sha256_from_original_receipt": "5d7c57408af1a296f940997406c4bb2b2e876b9100ae20cd30ce2690a0d693a8"
+      }
+    },
+    {
+      "id": "Control_G4biased",
+      "kind": "matched_finite_formal",
+      "historical_status": "BOTH5000_COMPLETE_EXTENSION_CRITERION_FAILED_EXTRA0",
+      "historical_date": "2026-10-31 02:55 Asia/Shanghai",
+      "sources": [
+        "reweight_final",
+        "reweight_acceptance",
+        "reweight_supplement"
+      ],
+      "facts": {
+        "common_parent": 157505,
+        "each_updates": 5000,
+        "each_exposures": 300000,
+        "global_update": 162505,
+        "each_checkpoints": 13,
+        "control_psnr": [
+          30.15297247,
+          28.13339141,
+          25.08305824,
+          22.76327627,
+          20.88218708
+        ],
+        "biased_psnr": [
+          30.04724353,
+          27.97340765,
+          24.90353741,
+          22.65574966,
+          20.96989413
+        ],
+        "G_order": [
+          0.5,
+          1,
+          2,
+          3,
+          4
+        ],
+        "G4_biased_minus_control": 0.08770705,
+        "source_ci95": [
+          0.07842587,
+          0.09601288
+        ],
+        "biased_3k_to5k_G4_gain": 0.01862229,
+        "extension_required_recent_gain": 0.02,
+        "extension_pass": false,
+        "extra_updates": 0,
+        "AB_resumed": false,
+        "control_sha256_from_original_receipt": "50a7162ba7c821e5e91ef79197218405dea3743b9bda955a50120537bb1027fb",
+        "biased_sha256_from_original_receipt": "2dd267d35428c92433576bd5fae78a1af60efcb0f3e5bda7cda4e29f9341ba7d"
+      }
+    },
+    {
+      "id": "turbnet_candidate",
+      "kind": "asset_review",
+      "historical_status": "STOPPED_MISSING_OFFICIAL_WEIGHTS",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "turbnet"
+      ],
+      "facts": {
+        "model_runs": 0,
+        "optimizer_updates": 0,
+        "performance_failure_established": false
+      }
+    },
+    {
+      "id": "turbwnet_initial",
+      "kind": "candidate_asset_cpu_smoke",
+      "historical_status": "USER_STOP_AFTER_CPU_FORWARD_NOT_NPU_FULL_VAL",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "turbwnet"
+      ],
+      "facts": {
+        "cpu_weighted_forward_pass": true,
+        "npu_full_val": false,
+        "optimizer_updates": 0,
+        "later_separate_OTIS4328_completed": true
+      }
+    },
+    {
+      "id": "OTIS_ATD_U95544",
+      "kind": "external_zero_shot",
+      "historical_status": "COMPLETE_OUTPUTS_METRICS_AND_EXIT",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "external95544",
+        "external95544_acceptance"
+      ],
+      "facts": {
+        "OTIS_restores": 5195,
+        "OTIS_mask_GT_frames": 4328,
+        "ATD_noGT_frames": 190,
+        "sequence_macro_input_psnr": 10.372096,
+        "sequence_macro_model_psnr": 8.515455,
+        "psnr_improved_frames": 0,
+        "metric_protocol": "gray_luma_mask_not_main_RGB_Val1000"
+      }
+    },
+    {
+      "id": "official13_forgetting",
+      "kind": "external_zero_shot",
+      "historical_status": "13_OF13_FULL_SUBSETS_COMPLETE",
+      "historical_date": "2026-10-31 06:50 Asia/Shanghai",
+      "sources": [
+        "official13",
+        "official13_acceptance"
+      ],
+      "facts": {
+        "paired_inputs": 43321,
+        "restores": 86642,
+        "UNet_calls": 259926,
+        "training_updates": 0,
+        "all13_D0_Y_PSNR_lower_and_RGB_LPIPS_worse": true,
+        "degradation_training_phase_causally_identified": false
+      }
+    },
+    {
+      "id": "external6groups",
+      "kind": "external_zero_shot_delivery",
+      "historical_status": "SIX_GROUPS_AND_OFFLINE_PACKAGE_COMPLETE_BLOCKED_SOURCES_EXPLICIT",
+      "historical_date": "2026-11-01 02:40 Asia/Shanghai",
+      "sources": [
+        "external6",
+        "external6_delivery"
+      ],
+      "facts": {
+        "base_inputs": 5222,
+        "extra_Door": 3,
+        "three_D0_restores": 15675,
+        "D0_UNet_calls": 47025,
+        "additional_TurbWNet_OTIS": 4328,
+        "files": 760,
+        "complete_final_text400_OCR": false
+      }
+    },
+    {
+      "id": "ATSyn999_best_final",
+      "kind": "external_zero_shot",
+      "historical_status": "FULL999_IDENTITY_OUTPUT_METRIC_EXIT_VISUAL_LOCAL_SYNC_ACCEPTED",
+      "historical_date": "2026-11-01",
+      "sources": [
+        "external_final",
+        "external_final_delivery",
+        "atsyn_acceptance"
+      ],
+      "facts": {
+        "original_test_scenes": 1000,
+        "excluded_near_duplicate_scenes": 1,
+        "evaluated": 999,
+        "fixed_singleframe": "turb24.png",
+        "paper_multiframe_exact_reproduction": false,
+        "PSNR": [
+          21.38151965,
+          21.4772688,
+          21.58389958
+        ],
+        "SSIM": [
+          0.58283467,
+          0.59024354,
+          0.59554888
+        ],
+        "LPIPS": [
+          0.5509075,
+          0.52245069,
+          0.49099741
+        ],
+        "MAE": [
+          0.05836579,
+          0.05688721,
+          0.05629226
+        ],
+        "order": [
+          "Input",
+          "best109544",
+          "final157505"
+        ],
+        "final_text400_OCR": false
+      }
+    },
+    {
+      "id": "diffusion_dependency",
+      "kind": "read_only_model_diagnostic",
+      "historical_status": "VAL50_DIAGNOSTIC_COMPLETE",
+      "historical_date": "2026-10-27",
+      "sources": [
+        "dependency"
+      ],
+      "facts": {
+        "independent_clean_sources": 50,
+        "seeds_each": 4,
+        "optimizer_updates": 0,
+        "D0_C3_minus_C1_psnr": 0.223054,
+        "condition_only_strict_hypothesis_supported": false,
+        "generative_posterior_proved": false
+      }
+    },
+    {
+      "id": "diffusion_mechanism",
+      "kind": "read_only_CPU_model_diagnostic",
+      "historical_status": "COMPLETED_WITH_OFFICIAL_FORWARD_INIT_DISTRIBUTION_LIMIT",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "mechanism",
+        "mechanism_theory"
+      ],
+      "facts": {
+        "clean_sources": 12,
+        "models": 3,
+        "NFE_compared": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "optimizer_updates": 0,
+        "new_NPU_calls": 0,
+        "formal_train_code_changed": false,
+        "full_posterior_consistency_established": false
+      }
+    },
+    {
+      "id": "train_val_generalization",
+      "kind": "read_only_model_diagnostic",
+      "historical_status": "FIXED_TRAIN300_VS_VAL250_COMPLETE_NOT_WHOLE_TRAIN",
+      "historical_date": "2026-10-28",
+      "sources": [
+        "train_val"
+      ],
+      "facts": {
+        "train_clean_sources": 300,
+        "train_starts": 1200,
+        "val_clean_sources": 250,
+        "val_starts": 1000,
+        "train_minus_val_psnr": -0.140351,
+        "proves_no_overfit": false,
+        "proves_undertraining": false
+      }
+    },
+    {
+      "id": "U95544_strength",
+      "kind": "read_only_model_diagnostic",
+      "historical_status": "FOUR_G_EACH1000_COMPLETE",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "strength_eval"
+      ],
+      "facts": {
+        "optimizer_updates": 0,
+        "new_restores": 4000,
+        "G1_G2_PSNR_change_from_input": [
+          -6.8537,
+          -3.9315
+        ],
+        "rationale_for_multistrength_not_loss_bug_proof": true
+      }
+    },
+    {
+      "id": "residual_train_val_loss",
+      "kind": "read_only_model_diagnostic",
+      "historical_status": "U95544_FULL_VAL_RESIDUAL_SINGLE_POINT_COMPLETE",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "loss_eval"
+      ],
+      "facts": {
+        "optimizer_updates": 0,
+        "val_starts": 1000,
+        "train_last1000_raw_L1": 0.089182109,
+        "val_EMA_native_L1": 0.087682003,
+        "val_EMA_S3_clean_MAE": 0.0551167,
+        "full_historical_val_residual_curve_exists": false
+      }
+    },
+    {
+      "id": "strength_preview_inventory",
+      "kind": "physics_only_and_asset_inventory",
+      "historical_status": "PREVIEW192_DEGRADATIONS_PLUS32_CLEAN_COMPLETE",
+      "historical_date": "2026-10-29",
+      "sources": [
+        "strength_preview",
+        "data_inventory"
+      ],
+      "facts": {
+        "restoration_calls": 0,
+        "training_updates": 0,
+        "independent_sources": 32,
+        "preview_G": [
+          0.25,
+          0.5,
+          1,
+          2,
+          3,
+          4
+        ],
+        "whole_val_quality": false
+      }
+    },
+    {
+      "id": "post_meeting_audit",
+      "kind": "read_only_forensic",
+      "historical_status": "NO_CONFIRMED_NEW_BUG_IN_AUDITED_SCOPE_WITH_SCIENTIFIC_LIMITS",
+      "historical_date": "2026-11-01",
+      "sources": [
+        "post_meeting",
+        "global_curve"
+      ],
+      "facts": {
+        "cached_observations_rehashed_in_original_audit": 5000,
+        "physical_truth_validation": false
+      }
+    },
+    {
+      "id": "candidate_research",
+      "kind": "literature_and_static_source_review",
+      "historical_status": "BOUNDED_SOURCE_METADATA_RESEARCH_COMPLETE_NO_MODEL_TEST",
+      "historical_date": "2026-11-01",
+      "sources": [
+        "selection_v1",
+        "selection_v2",
+        "selection_v2_acceptance",
+        "recent_ir",
+        "recent_ir_acceptance",
+        "nonres_expansion",
+        "deblur_selection",
+        "pixeldit",
+        "latent_fit"
+      ],
+      "facts": {
+        "candidate_model_runs": 0,
+        "training_updates": 0,
+        "checkpoint_payloads_downloaded_in_research": 0,
+        "all_candidates_strict_loaded": false,
+        "priority_is_quality_ranking": false
+      }
+    }
+  ],
+  "limits": [
+    "No current remote file/process/disk existence audit",
+    "No independent recalculation of historical model predictions in this task",
+    "No permission to resume old runs or delete retained/archive assets",
+    "UniDB final experiment and full-project final handoff remain parent-task responsibilities"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "rule": "MONITOR_SELECTION.sources first2 in declared order, G4, first lexical sample_id per source; never chosen by model result",
+  "sources": [
+    "Places365_val_00000076.jpg",
+    "Places365_val_00000223.jpg"
+  ],
+  "g": 4,
+  "monitor_path": "/data2/yanglin/unidb_d0_20261102/protocol/MONITOR_SELECTION.json",
+  "monitor_sha256": "59e267d8edb401c1d40ff46dd0eea4f11624230dc6c24e356aa996e561afaf19",
+  "val_manifest_sha256": "bbfba1f790647a155da0883352d5ecfb6381837743cbb94d7996937754dfbeb9",
+  "selected": [
+    {
+      "source_id": "Places365_val_00000076.jpg",
+      "sample_id": "val_s1708_r00",
+      "g": 4,
+      "input_path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1708_r00.npy",
+      "input_sha256": "5524db24c4bef70d66235c9334ddb3aa12f0e927475717cf67664af7a1142cb6",
+      "clean_path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000076.jpg.npy",
+      "clean_sha256": "93aa225cb9010e0cda1eff762f256ded210a3fe43b8e46f2b01cdbaeb170fbc2"
+    },
+    {
+      "source_id": "Places365_val_00000223.jpg",
+      "sample_id": "val_s1710_r00",
+      "g": 4,
+      "input_path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/observations/val/val_s1710_r00.npy",
+      "input_sha256": "7662836aa45a6066b8c7b3ca870ff4010605c38ff61b37011592da0aa6f57528",
+      "clean_path": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021/clean/Places365_val_00000223.jpg.npy",
+      "clean_sha256": "3e2905c9e4e16780fc2bfa04e22db48a0510bd40bad25475146ae6cd0030be7d"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "data.py": "72682ee4ce60fc1f197e69bee49f5f802e234a366800c5df43fee371aa11900c",
+    "core.py": "1bc3d1cc551d9ef8f24cf70bb5a97e0663c4b5fffa0115ef86ced7646ce4c7d5",
+    "pipeline.py": "1e9f4138628c11b8f4942659a5ebb1c5b61ee14191209215dda01d8172515c51",
+    "worker.py": "9f147be9a249946ed00185c9d7fd972bb463ce14648e9230f1db1a4413ac63f8",
+    "scripts/prepare_assets.py": "d600c9e1f0a603ce32a2f307df1d12f57fe0e269adbe007f9eee44dab2afe686",
+    "scripts/preflight.py": "00a172ab009803a7369d4a32488f5a946bae01f78274374296e14a270e26756a",
+    "scripts/diagnose_fp32.py": "57465b417c0a1e891901cd6494ef5b421b895c124704390d9eb4d5113e11d553",
+    "scripts/audit_checkpoint.py": "8fe8d8bbe394abf68934cc795873edc9c629429b67dda133d667d91a511e6f5a",
+    "scripts/finalize.py": "01543f636529146dab14c63e57e4ac3c8a667171f1b31249631821c69b41bfce",
+    "scripts/diagnose_activation.py": "ab8208b42380e4184c006cfd98c6581e41ce7cffc9c970cc1ec77cb6bbdc15b7",
+    "vendor/unidb_gou/loss.py": "1b4285f178eded1d58cd326dbb39ef19b031ce9ccb598f3aa5e26db6d3120293",
+    "vendor/unidb_gou/DenoisingUNet_arch.py": "b8be609d811848c10ecc1472184623f745e9f360d1f632dc8c8a7e2d6de65905",
+    "vendor/unidb_gou/train.py": "93939c70ca7cfe01b75d0a281c4c325996e5e3e38074c6fb31ef63344e6875c9",
+    "vendor/unidb_gou/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/unidb_gou/denoising_model.py": "8c0463cac8928740162584d8db44cc82942564e4a2fa32411ce790e9a3bbc2e8",
+    "vendor/unidb_gou/module_util.py": "02e255b10f3f61fa785f3e6b1f096726bf52326f846e9529b30ba52c8dc44d86",
+    "vendor/unidb_gou/sde_utils.py": "32de35f0f8b83f6db2c24d7ba6d4b89d33e35e67ff4545c42b745654468cfd5f"
+  },
+  "authority_sha256": "8ec96a8154a0afd24a87f92c672ad5f81afc080cabfd6970183d40663b281c5d"
+}

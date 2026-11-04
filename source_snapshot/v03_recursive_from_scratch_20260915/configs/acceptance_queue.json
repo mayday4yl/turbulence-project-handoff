@@ -1,0 +1,82 @@
+{
+  "id": "acceptance_queue_01",
+  "maximum_wall_seconds": 5400,
+  "steps": [
+    {
+      "id": "acceptance_resume_01",
+      "timeout_seconds": 1800,
+      "worker_args": [
+        "-m",
+        "v03.train",
+        "--config",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/configs/acceptance_longest.json",
+        "--run-dir",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/acceptance_longest_01",
+        "--mode",
+        "acceptance",
+        "--resume",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/acceptance_longest_01/checkpoints/update-000003.pt",
+        "--stop-after",
+        "6"
+      ]
+    },
+    {
+      "id": "acceptance_reference_01",
+      "timeout_seconds": 1800,
+      "worker_args": [
+        "-m",
+        "v03.train",
+        "--config",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/configs/acceptance_longest.json",
+        "--run-dir",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/acceptance_reference_01",
+        "--mode",
+        "acceptance"
+      ]
+    },
+    {
+      "id": "acceptance_mixed_tail_01",
+      "timeout_seconds": 1800,
+      "worker_args": [
+        "-m",
+        "v03.train",
+        "--config",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/configs/acceptance_mixed_tail.json",
+        "--run-dir",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/acceptance_mixed_tail_01",
+        "--mode",
+        "acceptance"
+      ]
+    },
+    {
+      "id": "gradient_probe_01",
+      "timeout_seconds": 1800,
+      "worker_args": [
+        "-m",
+        "v03.gradient_probe",
+        "--config",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/configs/acceptance_mixed.json",
+        "--output-dir",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/gradient_probe_01/probe"
+      ]
+    },
+    {
+      "id": "inference_smoke_01",
+      "timeout_seconds": 1800,
+      "worker_args": [
+        "-m",
+        "v03.evaluate",
+        "--config",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/configs/acceptance_longest.json",
+        "--checkpoint",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/acceptance_longest_01/checkpoints/update-000006.pt",
+        "--output-dir",
+        "/data2/yanglin/v03_recursive_from_scratch_20260915/runs/inference_smoke_01/validation",
+        "--limit-trajectories",
+        "1",
+        "--ks",
+        "0,1,3,5"
+      ]
+    }
+  ]
+}

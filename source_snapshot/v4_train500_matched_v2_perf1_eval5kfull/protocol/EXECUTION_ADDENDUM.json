@@ -1,0 +1,53 @@
+{
+  "id": "decision_milestones_v1",
+  "recorded_utc": "2026-09-29T16:58:41.132663+00:00",
+  "authorized_by": "current explicit user instruction",
+  "scientific_configuration_changed": false,
+  "parent_plan_sha256": "c08c6134f21268c261cb05cc0b167404da39338154bb0ddc8857812c5a0d7e73",
+  "parent_authorization_sha256": "50029f8e7551d16ccbd881432d201a8c7e11149494fbb4f150179a495adc5aec",
+  "nodes": [
+    {
+      "update": 5000,
+      "epoch": 20.0,
+      "exposures_per_group": 160000
+    },
+    {
+      "update": 7500,
+      "epoch": 30.0,
+      "exposures_per_group": 240000
+    },
+    {
+      "update": 10000,
+      "epoch": 40.0,
+      "exposures_per_group": 320000
+    }
+  ],
+  "barrier": "all four train+evaluation+complete stage report before release; no extra update by waiting workers; release eval lease before stage wait",
+  "default": "automatically continue after complete delivery at5000/7500; stop at10000",
+  "full_deliverables": [
+    "immutable RAW/EMA/optimizer/LR/RNG/stream/counters/protocol resumable checkpoint",
+    "full train8000 and val800 RAW/EMA losses/PSNR/SSIM/LPIPS per-start/source/G/overall",
+    "first-final progression",
+    "three main figures and tables at same U",
+    "best-val auxiliary candidates0..U",
+    "fixed qualitative FP32 outputs and horizontal/vertical four-way panels",
+    "metrics/output hashes/manifests/config/logs"
+  ],
+  "reuse_evaluation": true,
+  "all_image_FP32_dump_required": false,
+  "stop_if_node_not_released": "complete that common node deliveries then exit normally",
+  "stop_if_node_released": "safe complete optimizer boundary stop; preserve and disclose every actual excess update; main comparison remains specified saved common node",
+  "no_mismatched_latest_checkpoint_table": true,
+  "LR": "unchanged original10000-update schedule even if stopping early",
+  "early_stop_label": "USER_DECIDED_COMMON_BUDGET_TRUNCATION",
+  "trigger_before10000": "NOT_APPLICABLE_REQUIRES_FULL_10K_CURVE",
+  "timing_categories": [
+    "training",
+    "evaluation",
+    "checkpoint_save",
+    "same_card_mutex_wait",
+    "stage_wait"
+  ],
+  "ETA": "stable per-method sec/update; slowest group plus remaining eval/save/mutex/stage costs; report early and at milestones",
+  "changes_to_method_data_B32_LR_stream_metrics_budget": false
+}

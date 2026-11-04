@@ -1,0 +1,17 @@
+{
+  "current_experiment_final_acceptance": true,
+  "final_experiment_receipt": {
+    "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+    "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac"
+  },
+  "final_related_receipts": {
+    "all_owned_process_exit_audit": {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+    },
+    "unique_checkpoint_backup_audit": {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+    }
+  }
+}

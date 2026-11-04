@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "execution_device": "CPU_only",
+  "torch": "2.7.1+cpu",
+  "checkpoints": {
+    "Raw_U00000": {
+      "sha256": "fdf09c48aed948347840d28573a366ec6b9527ecb5805082789782230ffe8ffb",
+      "update": 0,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 0,
+      "optimizer_step_min": null,
+      "optimizer_step_max": null,
+      "common_warm_exactly_copied": true,
+      "lr": 0.0001
+    },
+    "Raw_U00500": {
+      "sha256": "29be332efc3a618df76218eea03a5f04a97af79dae1f987c972ea8da15e8c3d1",
+      "update": 500,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 134,
+      "optimizer_step_min": 500,
+      "optimizer_step_max": 500,
+      "common_warm_exactly_copied": "checked_at_U0",
+      "lr": 5.0577832218355434e-05
+    },
+    "Raw_U01000": {
+      "sha256": "330785f66dad64c7805b14dc693148f1914bf0f79abaf53a8de4090690ca7e81",
+      "update": 1000,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 134,
+      "optimizer_step_min": 1000,
+      "optimizer_step_max": 1000,
+      "common_warm_exactly_copied": "checked_at_U0",
+      "lr": 1e-06
+    },
+    "Field_U00000": {
+      "sha256": "12aa7c841db862c16a54d647bb452911e17dd3866a62d69404af950d13c454aa",
+      "update": 0,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 0,
+      "optimizer_step_min": null,
+      "optimizer_step_max": null,
+      "common_warm_exactly_copied": true,
+      "lr": 0.0001
+    },
+    "Field_U00500": {
+      "sha256": "28e419461ab67fb50199ec52cc0613ce144d8e8ed1d82a86b01a735890e1b294",
+      "update": 500,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 134,
+      "optimizer_step_min": 500,
+      "optimizer_step_max": 500,
+      "common_warm_exactly_copied": "checked_at_U0",
+      "lr": 5.0577832218355434e-05
+    },
+    "Field_U01000": {
+      "sha256": "7434a9b05f040c4b613366967eb2761cb20538a804e5a47624954de93ffe8f16",
+      "update": 1000,
+      "parameter_count_excluding_field_scale_buffers": 651417,
+      "model_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_count": 134,
+      "optimizer_step_min": 1000,
+      "optimizer_step_max": 1000,
+      "common_warm_exactly_copied": "checked_at_U0",
+      "lr": 1e-06
+    }
+  }
+}

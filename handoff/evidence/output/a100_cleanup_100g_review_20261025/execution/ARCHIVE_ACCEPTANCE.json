@@ -1,0 +1,13 @@
+{
+  "status": "PASS_ALL_FILES_READBACK_FSYNC",
+  "count": 126050,
+  "logical_bytes": 106184022161,
+  "source_manifest_sha256": "45de65baf7101d45c78c1d02be27ff6ef1ba37a8896acdb9256fed9cf4bab263",
+  "verification_jsonl_sha256": "2fe79c52aaadc0a7ba4a9576f7284b70827653045037dfa692b41706d45a70b2",
+  "archive": "/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data",
+  "hostname": "liteserver-de36",
+  "server_epoch": 1792930960.1480758,
+  "seconds": 238.79771926160902,
+  "exact_file_set": true,
+  "independent_process": true
+}

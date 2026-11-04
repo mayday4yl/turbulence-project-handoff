@@ -1,0 +1,57 @@
+{
+  "status": "CANDIDATE_BYTE_BACKUPS_COMPLETE_FINAL_ROLES_PENDING",
+  "unix": 1793683932.022796,
+  "files": [
+    {
+      "relative_path": "delivery/checkpoints/improved/U00010000.pt",
+      "source_sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "exec_session": 83609,
+      "source_bytes": 2194675639,
+      "present_with_final_name": true,
+      "bytes": 2194675639,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "status": "PASS_BYTE_IDENTICAL_CANDIDATE",
+      "SHA_verified_unix": 1793682008.846414,
+      "local_mtime_ns": 1793658651000000000,
+      "reused_completed_byte_verification": true
+    },
+    {
+      "relative_path": "delivery/checkpoints/improved/U00020000.pt",
+      "source_sha256": "aaf66a6f5cc3dba16dd39375ec17a5a7d1cd670b685b23b34cce6993ecd11d76",
+      "exec_session": 41079,
+      "source_bytes": 2194675831,
+      "present_with_final_name": true,
+      "bytes": 2194675831,
+      "sha256": "aaf66a6f5cc3dba16dd39375ec17a5a7d1cd670b685b23b34cce6993ecd11d76",
+      "status": "PASS_BYTE_IDENTICAL_CANDIDATE",
+      "SHA_verified_unix": 1793681844.08548,
+      "reused_completed_byte_verification": true,
+      "local_mtime_ns": 1793678062000000000
+    },
+    {
+      "relative_path": "delivery/checkpoints/original/U00055760.pt",
+      "source_sha256": "d9e490ffcc5e8fffcb57202f0a8ad3a887951b14a7dfe439daae9a88d97afba5",
+      "exec_session": 18210,
+      "source_bytes": 2194704367,
+      "present_with_final_name": true,
+      "status": "PASS_BYTE_IDENTICAL_CANDIDATE",
+      "sha256": "d9e490ffcc5e8fffcb57202f0a8ad3a887951b14a7dfe439daae9a88d97afba5",
+      "bytes": 2194704367,
+      "SHA_verified_unix": 1793683930.9880981,
+      "local_mtime_ns": 1793678411000000000
+    },
+    {
+      "relative_path": "delivery/checkpoints/original/U00055411.pt",
+      "source_sha256": "c62b49d71b9682d802e8e714a8da955a49610c212c519de704c27a9ed7174ffe",
+      "exec_session": 31744,
+      "source_bytes": 2194704303,
+      "present_with_final_name": true,
+      "status": "PASS_BYTE_IDENTICAL_CANDIDATE",
+      "sha256": "c62b49d71b9682d802e8e714a8da955a49610c212c519de704c27a9ed7174ffe",
+      "bytes": 2194704303,
+      "SHA_verified_unix": 1793683932.022774,
+      "local_mtime_ns": 1793672578000000000
+    }
+  ],
+  "note": "Prior-noon complete-state candidates only. New18:00 actual best/latest selection and extra weights pending. No predictions downloaded."
+}

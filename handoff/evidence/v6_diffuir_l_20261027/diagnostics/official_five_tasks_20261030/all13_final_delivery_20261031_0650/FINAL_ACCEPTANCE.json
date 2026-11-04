@@ -1,0 +1,44 @@
+{
+  "status": "PASS_ALL13_FULL_NATIVE_AUTHOR_ECC_SOTS_FORMULA_PAIRED_VISUAL_QA_LOCAL_SYNC",
+  "unix": 1793400680.686166,
+  "complete_subsets": 13,
+  "total_pair_inputs": 43321,
+  "full_restorations": 86642,
+  "full_U_net_calls": 259926,
+  "each_model_3NFE": true,
+  "training_or_finetuning_updates": 0,
+  "smokes_excluded_from_main_metrics": true,
+  "all_stages_actual_final_acceptances_reverified": true,
+  "all_NN_workers_and_recorded_controllers_exited": true,
+  "all_source_data_seed_strict_EMA_buffers_original_shape_finite_NFE_pass": true,
+  "all_local_stage_manifest_files_verified": 922,
+  "all399_gallery_image_integrity_and26_links_pass": true,
+  "fixed_sample_visual_QA_per_stage_preserved": true,
+  "total_scientific_plot_QA_pass": true,
+  "RealBlur_ECC_common_pairs": {
+    "J": 980,
+    "R": 980
+  },
+  "RealBlur_ECC_failures_each_model": {
+    "J": 0,
+    "R": 0
+  },
+  "SOTS500_source_formula_CPU_replay_pass": true,
+  "report_sha256": "3fca66ee3020516ab8c98b29e9cdcb7984c49d609e24b429059fafe449f5301e",
+  "catalog_sha256": "e76968c45d401b77b2d4ff77a88d55c79e40a04a5be3299fff6731f335dd07cd",
+  "metrics_csv_sha256": "4b34d825ca16fd9a7f28fa737ef7e18bd3ecd752e66209a3c24583afe963ed4a",
+  "body_manifest_sha256": "686dc972f7f9a143a638a5d6263c25a8a5706375cbf05fce24273b6687007abf",
+  "body_files_SHA_verified": 60,
+  "body_sync_receipt": "../ALL13_BODY_SYNC_20261031_0650_FINAL.json",
+  "fixed_models": {
+    "official_ema": "b9d07ab6b32d37d895be65c50e99bbe6b2ae6e32823e7304ec2167bc5f18843f",
+    "D0_U109544_ema": "5d7c57408af1a296f940997406c4bb2b2e876b9100ae20cd30ce2690a0d693a8"
+  },
+  "native_Y_PSNR_lower_subsets": 13,
+  "native_RGB_LPIPS_worse_subsets": 13,
+  "causal_training_phase_or_loss_identified": false,
+  "exact_DiffUIR_repack_or_legacy_binary_reproduction_claimed": false,
+  "original_task_test_used_to_reselect_D0": false,
+  "A_B_started": false,
+  "new_model_calls_by_delivery": 0
+}

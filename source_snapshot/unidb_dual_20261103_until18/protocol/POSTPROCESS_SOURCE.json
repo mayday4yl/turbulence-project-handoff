@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_CPU_POSTPROCESS_SOURCE",
+  "version": 3,
+  "created_utc": "2026-11-03T04:47:31.088339+00:00",
+  "files": {
+    "scripts/finalize_campaign.py": "91510250fddc1c5c12afad716ad73c2d199655a1730c506d9ed7679fff396ee6",
+    "scripts/make_campaign_report.py": "bf3ee10890078134960c3fb208ad268cba8120a2bce3013c85150d54f6cdb733",
+    "scripts/audit_campaign_saved_outputs.py": "4a74d64b6dea1bb3aef282af8aed25a36627be3480764affa328fc91cb7e6a88",
+    "scripts/audit_saved_outputs.py": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950",
+    "scripts/test_extension_postprocess.py": "be480a6aca4f5fb8130e42544e9e771d7e6c7692d04b078e8230f27b114e994d"
+  },
+  "legacy_auditor_sha256": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950",
+  "training_manifest_unmodified_by_postprocess": true,
+  "restoration_model_calls_allowed": 0,
+  "NPU_jobs_allowed": 0,
+  "optimizer_updates_allowed": 0,
+  "visual_QA_and_local_delivery_required": true,
+  "historical_validation_paths": "Canonical previous noon completed full may be read and cache reused via exact frozen legacy auditor functions; outputs only inside new root",
+  "updated_unix": 1793690378.189934,
+  "previous_manifest_sha256": "fda7660472904a6c909a1db3a9257109f4045e9138bdc28816f2d05611ce3047",
+  "repair": "Report monitor scope only: completed EMA monitor argmax across noon+extension distinguished from extension-only marker. Established completed-full best pool, fixed-image selection, final acceptance gates and all numeric metric/training algorithms unchanged; no model evaluation added."
+}

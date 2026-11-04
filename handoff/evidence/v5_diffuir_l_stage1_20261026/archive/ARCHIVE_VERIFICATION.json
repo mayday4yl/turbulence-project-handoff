@@ -1,0 +1,11 @@
+{
+  "schema": "v5_resshift_in_place_archive_verification_v1",
+  "verified_at_beijing": "2026-10-26T21:27:48.543758+08:00",
+  "status": "PASS",
+  "source_files_rehashed": 7321,
+  "source_bytes_rehashed": 4897644957,
+  "key_evidence_copies_verified": 33,
+  "manifest_sha256": "e5c9030e5f852fc5df969342958194794202c2915ace801b68f5aec5ca1a142a",
+  "errors": [],
+  "scope": "Local source content, size/mtime, inventory, symlinks and copied key evidence; no model execution or remote access"
+}

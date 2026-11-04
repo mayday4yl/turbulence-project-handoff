@@ -1,0 +1,19 @@
+{
+  "criterion": "exact_restore_then_bounded_fp32_reexecution_v1",
+  "immediate_restore": "exact_all_fields_before_any_restored_optimizer_attempt",
+  "continuation_exact_fields": "all except FP32 network, EMA network and AdamW exp_avg/exp_avg_sq tensors",
+  "continuation_atol": 1.1920928955078125e-07,
+  "continuation_rtol": 9.5367431640625e-07,
+  "continuation_group_relative_l2_max": 9.5367431640625e-07,
+  "independent_relative_l2_groups": [
+    "network",
+    "ema",
+    "optimizer_exp_avg",
+    "optimizer_exp_avg_sq"
+  ],
+  "bitwise_reexecution": "always_report_separately; false is never relabeled exact",
+  "identical_suffix_start_ids_required": true,
+  "finite_shape_dtype_structure_required": true,
+  "basis": "IEEE FP32 epsilon and independently observed repeated-backward variability without checkpoint restore; original user protocol requires full state restore and exact LR trajectory, not bitwise accelerator reexecution",
+  "original_bitwise_failure_preserved": "artifacts/stage2_resume_mb1_hccl02"
+}

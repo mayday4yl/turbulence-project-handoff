@@ -1,0 +1,19 @@
+{
+  "status": "operationally_paused",
+  "formal_training_complete": false,
+  "update": 204,
+  "sampled_trajectories": 6528,
+  "network_predictions": 10098,
+  "resume_checkpoint": "/data2/yanglin/v03_half_recursive_20260915/runs/half_formal_01/checkpoints/update-000204.pt",
+  "resume_checkpoint_sha256": "8bb92a45c1fca32d4a8692a909dfc54120ad24bf5ee32ef9c28588c949c43b92",
+  "resume_audit_passed": true,
+  "validated_checkpoint_update": 173,
+  "validation_scope": "fixed16valtrajectories;EMA;sixG;K0/1/3/5",
+  "progressive_gain_observed": false,
+  "performance_checkpoint_recommended": null,
+  "ready_for_frozen_test": false,
+  "held_out_test_run": false,
+  "automation_status": "PAUSED",
+  "training_curves": "training_curves.png",
+  "report": "/Users/lucas/Desktop/turbulence IR/v03_half_recursive_20260915/docs/NOON_HANDOFF.md"
+}

@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "created_utc": "2026-11-03T04:33:38.994116+00:00",
+  "files": {
+    "training_worker.py": "3e57c74befd034b27beb56d5018712d1b1a9cc7fac57c52f55210c7657f77030",
+    "controller.py": "770d9819e68f261a7f8142b0011a6cc660181df9a9b8dff91771fe0aed795a04",
+    "audit_state.py": "578b36c49e16e8c729e8586f02619e1f38aab9398c6acc0010cdc386befabc43",
+    "improved_objective.py": "20aa4a11a11494436186ac3a8ad1ff56e47ed1b277ba7a5b9b3d21c45060ba98",
+    "validation.py": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f",
+    "protocol/USER_AUTHORITY.json": "6e31e86f16b05c783ba31e91759dc0a4c5d813d4a465aaf0f2180b96a34fdb97",
+    "protocol/AUDIT_STATE_FROZEN_TOLERANCES.json": "61bc51ce136f314de7cbbf8ea62c0c6dd1def3cce8881e03b9913879f76a7d3e",
+    "scripts/test_extension_worker_state.py": "5efabe0c2429d734739323c9731ec951f883a9421ef8fa6454f5e8f9814fa913",
+    "evidence/audit_state_cpu_helpers/test_extension_metadata.py": "e418f78e3cd9fd013febd8bb763683c719c94ab4a4a79f90223172ea713cb126",
+    "tests/test_controller_owned_cleanup.py": "4b66b6cf9b9d0b3d939ec3035f0827940eb6fac52c671d60d0309ab884ed0a55",
+    "evidence/EXTENSION_WORKER_CPU_SELFTEST.json": "6f0f517d0d5a5848f4417f9b7cf7e95b428e65dfc7caa29f7c5ee2d0d0261cd9",
+    "evidence/EXTENSION_AUDITOR_CPU_TESTS.json": "f4094c963a1ba715653231530457596e2fb5785a566da3ecd49642f2f6dd12a5",
+    "evidence/EXTENSION_CONTROLLER_CLEANUP_MOCK_TESTS.json": "48c8525cb8f38bb9716c2d1a666f5cc89bd9465607e4418fc070ca3df33d544e",
+    "evidence/PARENT_STATE_AUDIT_original.json": "51909a8e0db7ac168a694e38dbcc2a189289c6dd80ae4bbe8418f1026a905d60",
+    "evidence/PARENT_STATE_AUDIT_improved.json": "167b3df546f3caf52ecb5c93455c65f29a4f264ea0790cd82369dc3950de017b",
+    "protocol/SHARED_CONTEXTS.json": "11958217c598b9de23183ae8b357c5b3e79b9ef466070b4657d77ac3e7bb1bc4"
+  },
+  "scope": "18:00 continuation only; scientific core operations inherited; complete parent restore and same3/5 gates required; previous12:00 campaign immutable",
+  "postprocess_source": "Separate freeze, may be prepared while training runs; never modify these training files after launch",
+  "previous_manifest_sha256": "b9401ce7c44972f3e1b9e0a5615b5fdbf5a660f12861394a0ead0672bdb91796",
+  "repair": "Only operational resource guard permits exact observed external identities with >=48GiB free HBM; zero optimizer updates before guard failure; scientific worker/loss/batch/precision/tolerances unchanged"
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "main_handoff_final_content_review_v1",
+  "status": "PASS_TARGETED_CONTENT_REVIEW_NOT_DOCUMENT_OR_PACKAGE_QA",
+  "reviewed_local": "2026-11-04T02:13:47.416170+08:00",
+  "source": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/MAIN_HANDOFF_FINAL.md",
+    "bytes": 25935,
+    "sha256": "4a71e10e3be702bb34d5e60d58b8a1d76336186e98f41d5832702f4c365405d7"
+  },
+  "scope": "Read only new introduction and sections7/10/13; historical chapters reuse prior independent reviews. No edit to root manuscript.",
+  "checks": [
+    {
+      "item": "Actual original best=latest U67180 and improved latest40848/historyfullbest10000; four logical roles/three unique states",
+      "PASS": true
+    },
+    {
+      "item": "Three update stages45411→55760→61764→67180 and0→20000→30000→40848 agree accepted authority/metadata",
+      "PASS": true
+    },
+    {
+      "item": "Actual cumulative and midnight update/presentation accounting; effective160K exposure40.308/13.0614/24.5088, not convergence",
+      "PASS": true
+    },
+    {
+      "item": "Deadline boundary0new postdeadline-start, +1.718/+0.354 in-flight completion matches prior145 checks",
+      "PASS": true
+    },
+    {
+      "item": "G4 six-row Input/U0/parent/original/improvedbest/latest fourmetrics match actual final report; five original PSNRs and deltas correct",
+      "PASS": true
+    },
+    {
+      "item": "EMA/full1000/250source×4, monitor100/25source×4, RAWmonitor200 separated; best excludes U3000monitor",
+      "PASS": true
+    },
+    {
+      "item": "Three unique full outputs15000 and current2500 CPU metricbatches with oldU10000 cache reuse correctly scoped; no new restoration call attributed to auditor",
+      "PASS": true
+    },
+    {
+      "item": "Full Adam/EMA/RNG/loader/cursor/ancestry/EMAdigest bindings stated at actual accepted level",
+      "PASS": true
+    },
+    {
+      "item": "Local checkpoint paths/byte sizes/hash prefixes and02:00:54/01:39:00 original/new byteSHA timestamps match transfer receipts; oldU10000 reuse explicit",
+      "PASS": true
+    },
+    {
+      "item": "CPUfinalizer01:39:35; native02:03:51 identity468 and02:10:26 additional66 union534 separated, no claim native534",
+      "PASS": true
+    },
+    {
+      "item": "No unsupported singlecause claim; degradedPSNR versusInput and perceptual/pixel tradeoff retained; no crossversion fair ranking",
+      "PASS": true
+    },
+    {
+      "item": "No recipient-signature or external-message claim; automatic followup stops only after experiment and fullproject actual chat delivery",
+      "PASS": true
+    }
+  ],
+  "errors": [],
+  "release_boundaries": [
+    "Section13 document/PDF/link/package acceptance is a final release checklist. This content review does not certify final DOCX/PDF/page PNG visual QA or a built portable package; root must finish and bind those before delivering this final manuscript.",
+    "Historical chapter content and version mapping were reviewed earlier; no new fullproject causal audit was performed."
+  ],
+  "observed_backup_timestamps": {
+    "original:best,latest": {
+      "bytes": 2194706863,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+      "SHA_verified_local": "2026-11-04T02:00:54.146724+08:00"
+    },
+    "improved:latest": {
+      "bytes": 2194679415,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+      "SHA_verified_local": "2026-11-04T01:39:00.149979+08:00"
+    },
+    "improved:best": {
+      "bytes": 2194675639,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "SHA_verified_local": "2026-11-03T13:00:08.846414+08:00"
+    }
+  },
+  "observed_CPU_exit_local": "2026-11-04T01:39:35.715974+08:00",
+  "observed_exit_counts": {
+    "native": 468,
+    "additional_historical": 66,
+    "union": 534
+  },
+  "sources": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/experiment_full_delivery_receipt.json",
+      "bytes": 7914,
+      "sha256": "d9a47a4906d2147853c47303c2a08e2149e3a7ba1706af4ae35424f6cde7b1ac"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/all_owned_process_exit_audit.json",
+      "bytes": 5060,
+      "sha256": "ecd005ac404d6f86e8fe9729cbf010945f55782ef59ad7476dfc7b43b7e9be97"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/unique_checkpoint_backup_audit.json",
+      "bytes": 5579,
+      "sha256": "fccb534de9393d886c4ec9eeef6640897dbeb090632d335f2c9eeebf166a8fb8"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery/EXPERIMENT_FINAL_RECEIPT_VALIDATION.json",
+      "bytes": 14478,
+      "sha256": "fa686b6a0cf4a176d04de44da16520fa9a36dfae156209ebda0290d433b5613e"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/final_metadata_review/FINAL_METADATA_REVIEW.json",
+      "bytes": 59297,
+      "sha256": "887a5ac1422303790a3ca62057b00e56d5f0446387bcf3174fde87c5cddf6c3f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/FINAL_REPORT_ZH.md",
+      "bytes": 17300,
+      "sha256": "813919c28dde710590d3e534f056f4da3f98acd547338d57369401dd32e5e93a"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_EXIT.json",
+      "bytes": 177,
+      "sha256": "a471f18c89d7c794159bf94f9bd3506290c1a69c076cf217e9ed935259076585"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/HISTORICAL_IDENTITY_UNION_EXIT_AUDIT.json",
+      "bytes": 23288,
+      "sha256": "df2acaf91cd7ab5851616f5185d4d33984dfb0c5eb53e03a0f48ed73bdb313e2"
+    }
+  ],
+  "network_calls": 0,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "NPU_calls": 0,
+  "checkpoint_payload_reads": 0,
+  "manuscript_modified": false
+}

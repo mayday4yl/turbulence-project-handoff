@@ -1,0 +1,130 @@
+{
+  "base_source": "/data0/yanglin/physical_bridge",
+  "base_v01_hashes": {
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "physical_bridge/data.py": "2bda58815d446ae0aaf53b06548d3150f68683f3d10eb9bfd0e41c3055407a14",
+    "physical_bridge/inference.py": "d8adc179bb58a7a166c216cd16f459f4233017a63730da6330eec4007a332bd7",
+    "scripts/train.py": "95b2384368952c7f6fa5a716672243c4fbaba5dd8a6af7f26fd23ae7e329c5c5",
+    "configs/train_v01.yaml": "327535abc5034537d05f10246e7236f669cb3ba284334cf399bdfbe4bcfa5de9",
+    "configs/inference_v01.yaml": "0cf635b4e72a1261404627e478117845d1a7fa8183f9de6ec9e7a65956e172c9",
+    "configs/simulator_v01.yaml": "5444c2a426d69c559c9197ca8afdf8f20e3230767abb8e2a6d277d49a65e4b7f"
+  },
+  "model": {
+    "base_channels": 64,
+    "channel_multipliers": [
+      1,
+      2,
+      4,
+      4,
+      4
+    ],
+    "residual_blocks_per_level": 2,
+    "group_norm_groups": 32,
+    "severity_embedding_dim": 256,
+    "clean_activation": "sigmoid",
+    "realization_activation": "linear"
+  },
+  "simulator": {
+    "version": "simulator_v01",
+    "image_size": 256,
+    "rf_range": 512,
+    "aperture_diameter": 0.071,
+    "propagation_distance": 100.0,
+    "wavelength": 5e-07,
+    "correlation": -0.05,
+    "tilt_threshold": 0.02,
+    "adjustment": 1.0,
+    "renderer_order": "blur_then_tilt",
+    "g_grid": [
+      0.75,
+      1.5,
+      2.25,
+      3.0,
+      3.75,
+      4.5
+    ],
+    "asset_dir": "/data0/yanglin/vendor/PiRN/assets/utils"
+  },
+  "base": {
+    "train_config": "/data0/yanglin/physical_bridge/configs/train_v01.yaml",
+    "simulator_config": "/data0/yanglin/physical_bridge/configs/simulator_v01.yaml",
+    "inference_config": "/data0/yanglin/physical_bridge/configs/inference_v01.yaml",
+    "frozen_inference": "/data2/yanglin/v03_half_recursive_20260915/configs/frozen_inference_v01.json"
+  },
+  "version": "v03_half_recursive_20260915",
+  "dataset_root": "/data2/yanglin/v03_half_recursive_20260915/data/places_p2s_bridge_v03_half",
+  "seed": 20260915,
+  "sampling_seed": 2026091503,
+  "validation": {
+    "weight_key": "ema",
+    "lpips_device": "cpu",
+    "capture_trajectories": 1,
+    "deduplicate_schedules": true,
+    "selection": "sha256-key-v1"
+  },
+  "training": {
+    "microbatch": 2,
+    "effective_batch": 32,
+    "maximum_updates": 10000,
+    "lambda_R": 0.2,
+    "learning_rate": 0.0001,
+    "final_learning_rate": 1e-06,
+    "warmup_updates": 64,
+    "betas": [
+      0.9,
+      0.99
+    ],
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "ema_decay": 0.996005996001,
+    "checkpoint_interval": 500,
+    "num_workers": 2,
+    "diagnostic_interval": 500,
+    "balance_paths_by_length": true,
+    "milestone_interval": 2000,
+    "rolling_keep": 3,
+    "checkpoint_prepare_at_utc": "2026-09-16T03:30:00Z",
+    "pause_at_utc": "2026-09-16T03:50:00Z",
+    "yield_at_safe_checkpoint": true
+  },
+  "curriculum": [
+    {
+      "until_fraction": 0.0128,
+      "weights_by_effective_K": {
+        "0": 0.65,
+        "1": 0.3,
+        "2": 0.05,
+        "3": 0.05,
+        "4": 0.05,
+        "5": 0.05
+      }
+    },
+    {
+      "until_fraction": 0.0512,
+      "weights_by_effective_K": {
+        "0": 0.4,
+        "1": 0.3,
+        "2": 0.15,
+        "3": 0.15,
+        "4": 0.15,
+        "5": 0.15
+      }
+    },
+    {
+      "until_fraction": 1.0,
+      "weights_by_effective_K": {
+        "0": 0.2,
+        "1": 0.2,
+        "2": 0.3,
+        "3": 0.3,
+        "4": 0.3,
+        "5": 0.3
+      }
+    }
+  ],
+  "workload": {
+    "kind": "mixed"
+  },
+  "purpose": "Unique fresh-from-scratch V0.3-half formal run; no pilot weights."
+}

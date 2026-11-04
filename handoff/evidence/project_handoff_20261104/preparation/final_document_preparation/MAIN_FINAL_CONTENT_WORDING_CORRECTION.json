@@ -1,0 +1,36 @@
+{
+  "status": "PASS_ROOT_SINGLE_PHRASE_CORRECTION",
+  "previous": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/MAIN_HANDOFF_FINAL.md",
+    "bytes": 25935,
+    "sha256": "4a71e10e3be702bb34d5e60d58b8a1d76336186e98f41d5832702f4c365405d7"
+  },
+  "current": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/MAIN_HANDOFF_FINAL_v2.md",
+    "bytes": 25932,
+    "sha256": "3ef6edb97bfad725cdbf05824429a7b91ccf82abf3ba3d736f777d739f312356"
+  },
+  "old_text": "不直接最小化最终100步图像的PSNR",
+  "new_text": "不直接优化最终100步图像的PSNR",
+  "reason": "PSNR higher is better; clarify objective wording without changing any scientific value or conclusion. All other text identical.",
+  "previous_targeted_review": {
+    "path": "/Users/lucas/Desktop/turbulence IR/project_handoff_20261104/preparation/final_document_preparation/MAIN_FINAL_CONTENT_REVIEW.json",
+    "bytes": 6012,
+    "sha256": "0b020adc76b237ba57ebc4c902aaac07fbfcb8f52cb705566278a408a6b4c44a"
+  },
+  "root_viewed_previous_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "previous_artifacts_retained": true,
+  "unix": 1793729853.416824
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS_SAFE_DEADLINE_BOUNDARY_METADATA_ONLY",
+  "observed_unix": 1793721722.509929,
+  "deadline_unix": 1793721600,
+  "source": "Remote runs/{branch}/TRAINING_STOPPED.json and last UPDATES_rank*.jsonl; separately inspected immutable latest checkpoint sidecars via inspect_live_campaign.py",
+  "inspector_snapshot_sha256": "30bbe5b0dc19879090e52777b3bfd633a4bcf37eaad86041187ba0ee4a038072",
+  "branches": {
+    "original": {
+      "update": 67180,
+      "cursor": 6449280,
+      "reason": "deadline",
+      "last_update_started_unix_rank0": 1793721598.9611814,
+      "last_update_completed_unix_all_ranks": 1793721601.7178423,
+      "stop_detected_unix": 1793721601.722363,
+      "matching_rank_count": 3,
+      "all_rank_last_update_started_before_deadline": true,
+      "equivalent_epochs_160000_pairs": 40.308,
+      "checkpoint_sidecar": {
+        "status": "PASS",
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+        "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+        "bytes": 2194706863,
+        "update": 67180,
+        "cursor": 6449280,
+        "branch": "original",
+        "phase": "formal",
+        "full_state": true,
+        "full_parameter_digest": "37fc54ba28f01bcbe000356202d6b554e87e5072e57021600f2eb38e2cd368d8"
+      },
+      "terminal_evaluation_in_progress": true
+    },
+    "improved": {
+      "update": 40848,
+      "cursor": 3921408,
+      "reason": "deadline",
+      "last_update_started_unix_rank0": 1793721598.8729763,
+      "last_update_completed_unix_all_ranks": 1793721600.3538404,
+      "stop_detected_unix": 1793721600.3584962,
+      "matching_rank_count": 5,
+      "all_rank_last_update_started_before_deadline": true,
+      "equivalent_epochs_160000_pairs": 24.5088,
+      "checkpoint_sidecar": {
+        "status": "PASS",
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00040848.pt",
+        "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+        "bytes": 2194679415,
+        "update": 40848,
+        "cursor": 3921408,
+        "branch": "improved",
+        "phase": "formal",
+        "full_state": true,
+        "full_parameter_digest": "6a2a8bbb437c2f24385b70e297b6a9be7981e8b8c880c798685650c5bb8f3557"
+      },
+      "terminal_evaluation_in_progress": true
+    }
+  },
+  "not_final_acceptance": true,
+  "remaining": "Complete model validation, full checkpoint CPU audit, saved prediction CPU audit, visual QA, all owned processes exit, local delivery and whole-project handover"
+}

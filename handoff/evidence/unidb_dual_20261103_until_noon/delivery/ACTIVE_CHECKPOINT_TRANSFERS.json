@@ -1,0 +1,49 @@
+{
+  "status": "COMPLETED_FOUR_PRIOR_CANDIDATE_TRANSFERS_BYTE_SHA_PASS_FINAL_ROLES_PENDING",
+  "unix": 1793678597.138284,
+  "free_GiB_at_start": 28.937274932861328,
+  "process_records": [
+    "20812 83843 20812 Tue Nov  3 11:57:31 2026     rsync -az --partial liteserver-de36:/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00010000.pt /Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/checkpoints/improved/U00010000.pt",
+    "20815 83843 20815 Tue Nov  3 11:57:32 2026     rsync -az --partial liteserver-de36:/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00020000.pt /Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/checkpoints/improved/U00020000.pt",
+    "20949 83843 20949 Tue Nov  3 12:02:11 2026     rsync -az --partial liteserver-de36:/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/checkpoints/U00055411.pt /Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/checkpoints/original/U00055411.pt",
+    "20951 83843 20951 Tue Nov  3 12:02:12 2026     rsync -az --partial liteserver-de36:/data2/yanglin/unidb_dual_20261103_until_noon/runs/original/checkpoints/U00055760.pt /Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/delivery/checkpoints/original/U00055760.pt"
+  ],
+  "files": [
+    {
+      "relative_path": "delivery/checkpoints/improved/U00010000.pt",
+      "source_sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "exec_session": 83609,
+      "source_bytes": 2194675639
+    },
+    {
+      "relative_path": "delivery/checkpoints/improved/U00020000.pt",
+      "source_sha256": "aaf66a6f5cc3dba16dd39375ec17a5a7d1cd670b685b23b34cce6993ecd11d76",
+      "exec_session": 41079,
+      "source_bytes": 2194675831
+    },
+    {
+      "relative_path": "delivery/checkpoints/original/U00055760.pt",
+      "source_sha256": "d9e490ffcc5e8fffcb57202f0a8ad3a887951b14a7dfe439daae9a88d97afba5",
+      "exec_session": 18210,
+      "source_bytes": 2194704367
+    },
+    {
+      "relative_path": "delivery/checkpoints/original/U00055411.pt",
+      "source_sha256": "c62b49d71b9682d802e8e714a8da955a49610c212c519de704c27a9ed7174ffe",
+      "exec_session": 31744,
+      "source_bytes": 2194704303
+    }
+  ],
+  "selection_note": "Four complete full-evaluation candidates/current latest only; final best/latest role mapping and full-state/byte acceptance remain pending. Keep running transfers, do not duplicate them. No predictions downloaded.",
+  "free_GiB_now": 28.67833709716797,
+  "last_checked_unix": 1793683932.023366,
+  "completed_byte_identical_candidates": [
+    "delivery/checkpoints/improved/U00010000.pt",
+    "delivery/checkpoints/improved/U00020000.pt",
+    "delivery/checkpoints/original/U00055760.pt",
+    "delivery/checkpoints/original/U00055411.pt"
+  ],
+  "transfer_commands_exit_code_all": 0,
+  "completed_unix": 1793684126.637061,
+  "next_step": "Do not repeat these completed transfers; resolve new18:00 actual unique best/latest roles after final evaluation and back up only additional weights as required."
+}

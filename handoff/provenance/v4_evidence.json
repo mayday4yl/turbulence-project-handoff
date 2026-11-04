@@ -1,0 +1,799 @@
+{
+  "schema": "project_handoff.history_evidence.v1",
+  "version": "v4",
+  "prepared_at_local": "2026-11-04T00:18:22.136495+08:00",
+  "scope": "Historical local evidence synthesis; not live remote/process/model revalidation",
+  "project_root": "/Users/lucas/Desktop/turbulence IR",
+  "history_document": {
+    "path": "project_handoff_20261104/preparation/v4_history.md",
+    "sha256": "fd405f5b72f08bf4c6870767c467d0c416793a8daeb19d6ac317f3abff2dbda0",
+    "bytes": 15193
+  },
+  "generator": {
+    "path": "project_handoff_20261104/preparation/build_history_evidence.py",
+    "sha256": "34ce8f9b58762ac88ded4ea328d6a606f4e0c5a926d26fa1c874c9d3610ad179"
+  },
+  "execution": {
+    "network_calls": 0,
+    "accelerator_calls": 0,
+    "restoration_model_calls": 0,
+    "optimizer_updates": 0,
+    "checkpoint_payload_loads": 0,
+    "source_asset_writes": 0,
+    "temporary_or_final_training_started": false
+  },
+  "checkpoint_SHA_policy": "All checkpoint hashes in facts are recorded original acceptance values; payloads not rehashed by this preparation",
+  "historical_status_policy": "Dates refer to source reports; old PID/RUNNING/resource snapshots are not current facts. Later final/stop receipts take precedence.",
+  "metric_policy": "Keep source population, checkpoint/EMA, native sampler, strength and metric protocol distinct; no cross-protocol ranking or partial-to-full substitution",
+  "sources": [
+    {
+      "id": "implementation",
+      "path": "v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/DELIVERY_REPORT.md",
+      "bytes": 8355,
+      "sha256": "a4472d679fd827c4c8e9fe8fc997ead3dae36143b6ee6a332156ce809aa3b948",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "asset_readme",
+      "path": "v4_noise_bridge_20260929/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_20260929/README.md",
+      "bytes": 5123,
+      "sha256": "354ba99409028273e86a4b0e419a01ac1072ea4b2b2b645b4064c07031c1524f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "initial_formal",
+      "path": "v4_noise_bridge_training_20260929/results/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_training_20260929/results/FINAL_REPORT_ZH.md",
+      "bytes": 9976,
+      "sha256": "d17f1b279658571ef1def24dcc91bbcb8794cb9a30435ea775f898575b20424a",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "initial_acceptance",
+      "path": "v4_noise_bridge_training_20260929/reports/final_completion_audit.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_noise_bridge_training_20260929/reports/final_completion_audit.json",
+      "bytes": 742,
+      "sha256": "aca1ebab9587f6401339453ab59797ed4f497ea2a6c752e5840daccdc4f5a034",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "metrics_supplement",
+      "path": "v4_metrics_supplement_20260929/results/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_metrics_supplement_20260929/results/FINAL_REPORT_ZH.md",
+      "bytes": 9316,
+      "sha256": "03e241c90382b499cbefd87b57bb94dd749a047ae5dbeee5e181c7723d44b290",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "overfit5_full",
+      "path": "v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_d0_40ep_20260929/results/report/REPORT_ZH.md",
+      "bytes": 2402,
+      "sha256": "85abae669b1740975b8843539c9413a3776aaa279e4ba4915e0ccd9db309320f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "overfit5_clean",
+      "path": "v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_d0_40ep_20260929/results/report/REPORT_ZH.md",
+      "bytes": 3481,
+      "sha256": "706172ec278ecf30ee92fb2ab4d09e46c5895c24be9af3e3357687cd42bbd9a7",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "cancelled",
+      "path": "v4_overfit5_cleanonly_resume200_20260929/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume200_20260929/README.md",
+      "bytes": 272,
+      "sha256": "5bb4f2ffdc63518b222d74e680ae33914a0f2d568d42fda7cf13be58fe774fac",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "overfit5_plateau",
+      "path": "v4_overfit5_cleanonly_resume_plateau_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_cleanonly_resume_plateau_20260929/results/report/REPORT_ZH.md",
+      "bytes": 2091,
+      "sha256": "069b06ccc0645127a98ad06ea064cde35686a079e797892198c6336984d4118a",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "overfit5_full_resume",
+      "path": "v4_overfit5_full_d0_resume_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_overfit5_full_d0_resume_20260929/results/report/REPORT_ZH.md",
+      "bytes": 2003,
+      "sha256": "948db34d725048cf56e6d5781380a8b7aefb4daa7c010e920fb68dc7ed65906d",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "one_source",
+      "path": "v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_one_source16_cleanonly_d0_20260929/results/report/REPORT_ZH.md",
+      "bytes": 1762,
+      "sha256": "4e2ef21c41ef62a2563489a175528675f4d04939e5989c73f443085d4e2d6835",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "one_pair",
+      "path": "v4_single_pair_cleanonly_400u_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_single_pair_cleanonly_400u_20260929/results/report/REPORT_ZH.md",
+      "bytes": 2377,
+      "sha256": "4964ae18d16668f7b9898bbdad080e29e5d4ac0d0af78c91d68c55230c69a900",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "fixed_operator",
+      "path": "v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_fixed_physics_operator_20260929/results/report/REPORT_ZH.md",
+      "bytes": 7405,
+      "sha256": "662078dca990638f643bf2e6cf8baf7da412e2cafda619efe47a2544f1978996",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "blind_ambiguity",
+      "path": "v4_blind_ambiguity_20260929/results/report/REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_blind_ambiguity_20260929/results/report/REPORT_ZH.md",
+      "bytes": 20053,
+      "sha256": "980675f1767703bcc65308ed4070f1a148d5a1eaac2f2ea38d53b86839517bd1",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "train500",
+      "path": "v4_train500_matched_v2_perf1_eval5kfull/reports/U05000_READOUT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_train500_matched_v2_perf1_eval5kfull/reports/U05000_READOUT.md",
+      "bytes": 4283,
+      "sha256": "4161443f965dfe2d189fe80810ef316179066287f6575f97a997fb73f6d9304f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "pirn",
+      "path": "v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_pirn_backbone_matched4_20261001/reports/SUMMARY.md",
+      "bytes": 3892,
+      "sha256": "8f2e6d234aa272ab328aac4e7134ac8e372f4b4bb9f37ce3fed2fc7c08feec40",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "swinir",
+      "path": "v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_swinir_l1_train500_2k_20261001/reports/U2000_DELIVERY_REVIEW.md",
+      "bytes": 7731,
+      "sha256": "70094ee7cabaeb571e7bb087198b7abec84918b273a84261ee393ce916812857",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "restormer_candidate",
+      "path": "v4_restormer_candidate_20261002/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_candidate_20261002/README.md",
+      "bytes": 5187,
+      "sha256": "30fabdef8572044f81d2f3254b178123b24f1b3b3a0dfb3c519cd122f1ee853e",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "restormer_formal",
+      "path": "v4_restormer_train2000_npu_20k_20261003/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_restormer_train2000_npu_20k_20261003/README.md",
+      "bytes": 2693,
+      "sha256": "83b15236aa98f06919d6c1ec9c8601dc489453c7f1d893fac428116a18382c14",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "restormer_matched",
+      "path": "v4_nafnet_sidd116m_train8000_20261006/reports/OLD_U5000_FULLVAL_SUMMARY.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/OLD_U5000_FULLVAL_SUMMARY.md",
+      "bytes": 943,
+      "sha256": "7959701b420971a961926bcb11f1b4971298c661558df6f7f207ed0de1f7c288",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_candidate",
+      "path": "v4_nafnet_sidd116m_candidate_20261005/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/README.md",
+      "bytes": 8015,
+      "sha256": "444255655aa284ca1ff5a44c274a5eab8a6d3bee077da9c095baf235f5f80368",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_adaptation",
+      "path": "v4_nafnet_sidd116m_candidate_20261005/ADAPTATION.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/ADAPTATION.md",
+      "bytes": 4089,
+      "sha256": "1a50329935c59b4050a9d084c3cd7ca1da9e53b5cd73e62d78bf8ed9171d401e",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_candidate_acceptance",
+      "path": "v4_nafnet_sidd116m_candidate_20261005/reports/pretrained/ACCEPTANCE_SUMMARY.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/reports/pretrained/ACCEPTANCE_SUMMARY.json",
+      "bytes": 3686,
+      "sha256": "74fafba383cad4146fe070e08b3cd488035214cca702126557fd22d4ad80eccc",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_pretrained_identity",
+      "path": "v4_nafnet_sidd116m_candidate_20261005/protocol/PRETRAINED_SOURCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_candidate_20261005/protocol/PRETRAINED_SOURCE.json",
+      "bytes": 1026,
+      "sha256": "7715d12440788b442fae165ced1e0b2f2b262e1b4012977868248455736a91d5",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_formal",
+      "path": "v4_nafnet_sidd116m_train8000_20261006/README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/README.md",
+      "bytes": 7017,
+      "sha256": "499a86ad05779a90a1179cb4222f1458ab4cee36656a44eff2f91a5bd7e39e00",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_phase1",
+      "path": "v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/U20000_FOUR_METHOD_RESULTS.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/U20000_FOUR_METHOD_RESULTS.md",
+      "bytes": 3312,
+      "sha256": "ce73d1f59417e91a389656b15dbbaa8f284c12a253b712105178617bd0cbacdb",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_phase1_acceptance",
+      "path": "v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/FINAL_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/reports/PHASE1_FINAL_20261012/FINAL_ACCEPTANCE.json",
+      "bytes": 62857,
+      "sha256": "9f7d93ae7f07c5f0c516416da415cf5ff8f07d75359c89d4b23fc01919e4af17",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_rev4",
+      "path": "v4_nafnet_sidd116m_train8000_20261006/deliverables/U20000_FOUR_METHOD_RESULTS_20261016_REV4/README_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_sidd116m_train8000_20261006/deliverables/U20000_FOUR_METHOD_RESULTS_20261016_REV4/README_ZH.md",
+      "bytes": 5964,
+      "sha256": "ce609925bab80a85641baf613e327a7d5ff6d9f02cfa124c034b53e78d9f3918",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_stop",
+      "path": "v4_nafnet_train15000_20261013/reports/user_stop_20261018/停止与结果保全说明.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/user_stop_20261018/停止与结果保全说明.md",
+      "bytes": 5737,
+      "sha256": "557489055d6a4f3502cc3b7afb17d560598cd6ce6f63b0dbe39ded4c378980e6",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_stop_acceptance",
+      "path": "v4_nafnet_train15000_20261013/reports/user_stop_20261018/USER_STOP_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/user_stop_20261018/USER_STOP_ACCEPTANCE.json",
+      "bytes": 35978,
+      "sha256": "2dfdb86211ea5a1a6a310e332515fa1f5b1dcafe52f0d538f8d6a96e69272d3c",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "nafnet_preservation",
+      "path": "v4_nafnet_train15000_20261013/reports/user_stop_20261018/FINAL_PRESERVATION_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/reports/user_stop_20261018/FINAL_PRESERVATION_ACCEPTANCE.json",
+      "bytes": 4142,
+      "sha256": "cc0e9c1fb78927b8ac73026415e0b511c197f6930d50ddbb36fe22972eac9849",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "continuous_initial",
+      "path": "v4_followup_pilot_train15000_20261013/PILOT_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_train15000_20261013/PILOT_REPORT.md",
+      "bytes": 274,
+      "sha256": "656e05c0b159be787356d2c25a2681a9143c59f3188ca882bd8c74da44a6959a",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "continuous_final",
+      "path": "v4_followup_pilot_lr5e6_attempt2_20261014/PILOT_REPORT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/v4_followup_pilot_lr5e6_attempt2_20261014/PILOT_REPORT.md",
+      "bytes": 1319,
+      "sha256": "f93fd0684af2b43cc1df8fd66e890a28ab6ee185e606229459b840cfa3f96871",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "rawfield",
+      "path": "de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+      "bytes": 10861,
+      "sha256": "36412465d47b5650390bab9126beeff17e9759599e2d56ec02837d518ea2e72c",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "rawfield_checkpoint",
+      "path": "de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/CHECKPOINT_AUDIT.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/CHECKPOINT_AUDIT.json",
+      "bytes": 2694,
+      "sha256": "d89e9160ebd8637190c90056713f2920c4bd7255400471a9aaad1c9d9bafb66f",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "rawfield_delivery",
+      "path": "de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/DELIVERY_COMPLETE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/de36_g4_raw_vs_field_12h_20261015/reports/FINAL_CPU_AUDIT/DELIVERY_COMPLETE.json",
+      "bytes": 1050,
+      "sha256": "5bc03f54cac489ab13b8e043d6335d3ac2fd1c639bb8073553447061979a5f7b",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "archive_oct02",
+      "path": "storage_archives/A100_cleanup_20261002/CLEANUP_RECEIPT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/storage_archives/A100_cleanup_20261002/CLEANUP_RECEIPT.md",
+      "bytes": 2836,
+      "sha256": "44eb7ebea1b52fb02930912d03fbfefcdcac46194b5b6c6b92322ab345ec8c59",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "archive_oct25",
+      "path": "output/a100_cleanup_100g_review_20261025/execution/CLEANUP_RECEIPT.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/CLEANUP_RECEIPT.md",
+      "bytes": 2680,
+      "sha256": "cda045e72a69f404960e1c561b94c0e18b63ea7f5a6fb40e5a02aa769696e994",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "archive_oct25_acceptance",
+      "path": "output/a100_cleanup_100g_review_20261025/execution/ARCHIVE_ACCEPTANCE.json",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/ARCHIVE_ACCEPTANCE.json",
+      "bytes": 542,
+      "sha256": "b3a10774975be5ace4c20e1c86bd374deda760581f821f06d4cd38f50013db62",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    },
+    {
+      "id": "archive_oct25_restore",
+      "path": "output/a100_cleanup_100g_review_20261025/execution/RESTORE_README.md",
+      "absolute_path": "/Users/lucas/Desktop/turbulence IR/output/a100_cleanup_100g_review_20261025/execution/RESTORE_README.md",
+      "bytes": 1954,
+      "sha256": "35d3c9d321301a2047b6cb2c7b5ce7551821a359e8aa5414048bddf337ce9385",
+      "local_report_rehashed": true,
+      "remote_asset_revalidated": false
+    }
+  ],
+  "branches": [
+    {
+      "id": "noise_bridge",
+      "kind": "implementation_gate",
+      "historical_status": "ENGINEERING_ACCEPTED_WITH_SERIAL_REFINEMENT_LIMITS",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "implementation",
+        "asset_readme"
+      ],
+      "facts": {
+        "formal_updates": 0,
+        "temporary_updates": 1,
+        "parameters": 32038377,
+        "strict_refinement_determinism_pass": false
+      }
+    },
+    {
+      "id": "overfit100",
+      "kind": "formal",
+      "historical_status": "D0_R0_R08_COMPLETED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "initial_formal",
+        "initial_acceptance",
+        "metrics_supplement"
+      ],
+      "facts": {
+        "each_updates": 1000,
+        "each_exposures": 32000,
+        "validation_starts": 800,
+        "validation_clean_sources": 100,
+        "raw_off_psnr": {
+          "Input": 20.5394,
+          "D0": 19.1983,
+          "R0": 18.8805,
+          "R08": 19.1895
+        },
+        "all_models_above_input": false
+      }
+    },
+    {
+      "id": "overfit5_full",
+      "kind": "fitting_diagnostic",
+      "historical_status": "COMPLETED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "overfit5_full"
+      ],
+      "facts": {
+        "updates": 400,
+        "train_starts": 80,
+        "train_psnr": 22.773847,
+        "val64_psnr": 17.534017
+      }
+    },
+    {
+      "id": "overfit5_clean",
+      "kind": "fitting_diagnostic",
+      "historical_status": "COMPLETED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "overfit5_clean"
+      ],
+      "facts": {
+        "updates": 400,
+        "train_psnr": 22.59023,
+        "val64_psnr": 17.549631
+      }
+    },
+    {
+      "id": "overfit5_resume200_cancelled",
+      "kind": "preparation",
+      "historical_status": "CANCELLED_NOT_UPLOADED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "cancelled"
+      ],
+      "facts": {
+        "updates": 0
+      }
+    },
+    {
+      "id": "overfit5_clean_plateau",
+      "kind": "fitting_diagnostic",
+      "historical_status": "HIT_CAP_NOT_CONFIRMED_PLATEAU",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "overfit5_plateau"
+      ],
+      "facts": {
+        "total_updates": 2000,
+        "train_psnr": 31.037437,
+        "val64_psnr": 15.744348
+      }
+    },
+    {
+      "id": "overfit5_full_resume",
+      "kind": "fitting_diagnostic",
+      "historical_status": "COMPLETED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "overfit5_full_resume"
+      ],
+      "facts": {
+        "total_updates": 2000,
+        "train_psnr": 30.670328,
+        "val64_psnr": 15.803111
+      }
+    },
+    {
+      "id": "one_source16",
+      "kind": "fitting_diagnostic",
+      "historical_status": "COMPLETED",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "one_source"
+      ],
+      "facts": {
+        "updates": 400,
+        "train_psnr": 30.560403,
+        "val64_psnr": 11.952586
+      }
+    },
+    {
+      "id": "single_pair",
+      "kind": "fitting_diagnostic",
+      "historical_status": "COMPLETED_NO_HELDOUT_VAL",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "one_pair"
+      ],
+      "facts": {
+        "updates": 400,
+        "input_psnr": 19.440704,
+        "train_pair_psnr": 34.693485
+      }
+    },
+    {
+      "id": "fixed_operator",
+      "kind": "identifiability_diagnostic",
+      "historical_status": "COMPLETED_STRUCTURAL_NONINJECTIVITY_EVIDENCE",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "fixed_operator"
+      ],
+      "facts": {
+        "full_svd": false,
+        "preregistered_nearzero_witness_found": false
+      }
+    },
+    {
+      "id": "blind_ambiguity",
+      "kind": "identifiability_diagnostic",
+      "historical_status": "LOCAL_C_XI_COMPENSATION_WITNESSES",
+      "historical_date": "2026-09-29",
+      "sources": [
+        "blind_ambiguity"
+      ],
+      "facts": {
+        "network_updates": 0,
+        "diagnostic_variable_updates": 21600,
+        "formal_restoration_test": false
+      }
+    },
+    {
+      "id": "unet_train500",
+      "kind": "formal_stage_readout",
+      "historical_status": "U5000_STAGE_VERIFIED_LATER_FULL_END_NOT_VERIFIED",
+      "historical_date": "2026-10-01",
+      "sources": [
+        "train500"
+      ],
+      "facts": {
+        "each_updates": 5000,
+        "each_exposures": 160000,
+        "raw_off_val800_psnr": {
+          "D0": 19.667,
+          "R0": 19.4339,
+          "R08": 19.5665,
+          "L08": 19.3841,
+          "Input": 20.5394
+        }
+      }
+    },
+    {
+      "id": "pirn_backbone",
+      "kind": "candidate_gate",
+      "historical_status": "FOUR_METHOD_GATES_COMPLETE_NOT_FORMAL_TRAIN",
+      "historical_date": "2026-10-01",
+      "sources": [
+        "pirn"
+      ],
+      "facts": {
+        "optimizer_updates": 0,
+        "official_pirn_full_method": false,
+        "parameters": 17611761
+      }
+    },
+    {
+      "id": "swinir_2k",
+      "kind": "formal",
+      "historical_status": "FOUR_METHOD_U2000_DELIVERED",
+      "historical_date": "2026-10-02",
+      "sources": [
+        "swinir"
+      ],
+      "facts": {
+        "each_updates": 2000,
+        "each_exposures": 64000,
+        "raw_off_val800_psnr": {
+          "D0": 20.473245,
+          "R0": 20.443722,
+          "R08": 20.419548,
+          "L08": 20.400306,
+          "Input": 20.539433
+        }
+      }
+    },
+    {
+      "id": "restormer_candidate",
+      "kind": "candidate_gate",
+      "historical_status": "BOUNDED_CORRECTNESS_GATE_ONLY",
+      "historical_date": "2026-10-02",
+      "sources": [
+        "restormer_candidate"
+      ],
+      "facts": {
+        "parameters": 27032525,
+        "optimizer_updates": 0,
+        "r0_cuda_gate_cpu_saved_tensor_offload": true
+      }
+    },
+    {
+      "id": "restormer_platform_migration",
+      "kind": "formal_then_fresh_restart",
+      "historical_status": "NPU_USER_STOP_A100_NEW_RANDOM_U0",
+      "historical_date": "2026-10-03",
+      "sources": [
+        "restormer_formal",
+        "restormer_matched"
+      ],
+      "facts": {
+        "npu_stop_updates": {
+          "D0": 669,
+          "R0": 196,
+          "R08": 198,
+          "L08": 201
+        },
+        "a100_from_npu_checkpoint": false,
+        "a100_main_closeout_update": 5000,
+        "val2000_psnr": {
+          "D0": 22.7106,
+          "R0": 22.7497,
+          "R08": 22.7013,
+          "L08": 22.7123
+        }
+      }
+    },
+    {
+      "id": "nafnet_candidate",
+      "kind": "candidate_gate",
+      "historical_status": "OFFICIAL_SIDD_BODY_ADAPTATION_ACCEPTED",
+      "historical_date": "2026-10-06",
+      "sources": [
+        "nafnet_candidate",
+        "nafnet_adaptation",
+        "nafnet_candidate_acceptance",
+        "nafnet_pretrained_identity"
+      ],
+      "facts": {
+        "official_parameters": 115982915,
+        "adapted_parameters": 117767209,
+        "full_official_residual_mapping_unchanged": false
+      }
+    },
+    {
+      "id": "nafnet_train8000",
+      "kind": "formal",
+      "historical_status": "FOUR_U20000_AND_104_EVALS_COMPLETE_REV4_SUPPLEMENT",
+      "historical_date": "2026-10-16",
+      "sources": [
+        "nafnet_formal",
+        "nafnet_phase1",
+        "nafnet_phase1_acceptance",
+        "nafnet_rev4"
+      ],
+      "facts": {
+        "train_clean_sources": 8000,
+        "val_clean_sources": 1000,
+        "full_val_starts": 8000,
+        "each_updates": 20000,
+        "each_exposures": 640000,
+        "psnr": {
+          "D0": 23.09077535,
+          "R0": 22.91951237,
+          "R08": 22.73627484,
+          "L08": 22.81135343
+        },
+        "test_used": false
+      }
+    },
+    {
+      "id": "nafnet_train15000",
+      "kind": "formal_user_stop",
+      "historical_status": "ALL_SAFE_SAVED_NOT_ALL_U40000",
+      "historical_date": "2026-10-18",
+      "sources": [
+        "nafnet_stop",
+        "nafnet_stop_acceptance",
+        "nafnet_preservation"
+      ],
+      "facts": {
+        "global_update": {
+          "D0": 40000,
+          "R0": 40000,
+          "R08": 32891,
+          "L08": 21559
+        },
+        "actual_stop_point_full_eval_available": {
+          "D0": true,
+          "R0": true,
+          "R08": false,
+          "L08": false
+        },
+        "local_stop_checkpoint_backup_recorded_bytes": 7541233596,
+        "auto_resume": false
+      }
+    },
+    {
+      "id": "continuous_delta_initial",
+      "kind": "pilot",
+      "historical_status": "NO_MATCHED_COMMON_MILESTONE_AT_REPORT",
+      "historical_date": "2026-10-13",
+      "sources": [
+        "continuous_initial"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "continuous_delta_attempt2",
+      "kind": "pilot",
+      "historical_status": "MATCHED_U1000_NEGATIVE_PSNR_RESULT",
+      "historical_date": "2026-10-14",
+      "sources": [
+        "continuous_final"
+      ],
+      "facts": {
+        "each_updates": 1000,
+        "val_starts": 400,
+        "D0_psnr": 18.75392,
+        "CONT_DELTA_R0_psnr": 18.421053,
+        "delta_ci95": [
+          -0.40078325,
+          -0.27556037
+        ]
+      }
+    },
+    {
+      "id": "raw_field",
+      "kind": "formal_pilot",
+      "historical_status": "MATCHED_U1000_FULL_VAL64_CPU_DELIVERY_COMPLETE",
+      "historical_date": "2026-10-15",
+      "sources": [
+        "rawfield",
+        "rawfield_checkpoint",
+        "rawfield_delivery"
+      ],
+      "facts": {
+        "each_updates": 1000,
+        "train_clean_sources": 128,
+        "val_clean_sources": 32,
+        "val_starts": 64,
+        "raw_psnr": 19.836685,
+        "field_psnr": 19.827981,
+        "input_psnr": 20.133437,
+        "delta_ci95": [
+          -0.01755358,
+          -0.00024447
+        ],
+        "all_metric_field_worse": false,
+        "full_training_generalization_claim": false
+      }
+    },
+    {
+      "id": "a100_archives",
+      "kind": "archive_then_delete",
+      "historical_status": "HISTORICAL_HASH_VERIFIED_ARCHIVES",
+      "historical_date": "2026-10-25",
+      "sources": [
+        "archive_oct02",
+        "archive_oct25",
+        "archive_oct25_acceptance",
+        "archive_oct25_restore"
+      ],
+      "facts": {
+        "oct02_checkpoint_files": 93,
+        "oct25_files": 126050,
+        "oct25_remote_archive": "/data2/yanglin/storage_archives/A100_cleanup_20261025_train15000_data/files/",
+        "current_remote_existence_rechecked": false
+      }
+    }
+  ],
+  "limits": [
+    "No current remote file/process/disk existence audit",
+    "No independent recalculation of historical model predictions in this task",
+    "No permission to resume old runs or delete retained/archive assets",
+    "UniDB final experiment and full-project final handoff remain parent-task responsibilities"
+  ]
+}

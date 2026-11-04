@@ -1,0 +1,9 @@
+{
+  "status": "terminated",
+  "reason": "dataset_protocol_change",
+  "time_utc": "2026-09-15T15:42:20.462142+00:00",
+  "successor": "v03_half_recursive_20260915",
+  "resume_old_weights_allowed": false,
+  "preserve_all_existing_artifacts": true,
+  "old_formal_training_started": false
+}

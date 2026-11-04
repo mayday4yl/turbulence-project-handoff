@@ -1,0 +1,53 @@
+{
+  "provenance": "Post-training best-checkpoint replay; NOT training-time snapshots",
+  "checkpoint_updates": {
+    "D0": 8250,
+    "A": 5000,
+    "B": 2750
+  },
+  "checkpoint_sha256": {
+    "D0": "3be57567b24b6f967e148fb4d48391b154a4464dbf6831b9183f43e7815a5483",
+    "A": "869a5c39012f87d9e37127b0a8c4a990afaf60db1f8d190adddcd3a52746168a",
+    "B": "8eb6a53e32dcaf84d19c9e520a1f40ac4a492c98455a2b0d7f643dbf770ff581"
+  },
+  "scope": "Previously fixed 4 train and 4 validation examples; illustrative, not population metrics",
+  "display": "Display clips to [0,1]; PSNR computed from unmodified arrays; no sharpening",
+  "training_updates": 0,
+  "test_used": false,
+  "figures": [
+    {
+      "file": "train_s0304_r00_D0_A_B.png",
+      "sha256": "ef3417ada87cdb307b15bff065eb79428a877a19ccf3793cb4a7071f7106a7d7"
+    },
+    {
+      "file": "train_s0912_r00_D0_A_B.png",
+      "sha256": "5661ea4d259971ccb304dad5d08316dab96fc2a7f647c1c9faec7ae0135f5b15"
+    },
+    {
+      "file": "train_s1529_r00_D0_A_B.png",
+      "sha256": "2efd4751d995eecba5d86c7f7ca39b93c52ce41fb72cbf5e24eeb6d5cc1b405d"
+    },
+    {
+      "file": "train_s2137_r00_D0_A_B.png",
+      "sha256": "401c7c8755e68a1285af95b56bd92e0cfa3c38e0b0af5c11c39f102247b1fbcd"
+    },
+    {
+      "file": "val_s0335_r00_D0_A_B.png",
+      "sha256": "dda018d7b1a3df7b60e361a6bce834aec5ca4bbc2212ff262e1ac2a9518c1286"
+    },
+    {
+      "file": "val_s0925_r00_D0_A_B.png",
+      "sha256": "1dd1460d3da7b84486523d388d08323e7bbfcbc48e5638e70b70aee1c6dc5d8b"
+    },
+    {
+      "file": "val_s1560_r00_D0_A_B.png",
+      "sha256": "8f7532e1299f7fb50e473c766b75d5b4637a5299086307230f2e73a857d4d1d0"
+    },
+    {
+      "file": "val_s2150_r00_D0_A_B.png",
+      "sha256": "7d9193f5960f3a55d279de11a96922292441500cea2d3c52dd76d766a04cb80b"
+    }
+  ],
+  "verified_array_hashes": true,
+  "verified_shared_input_gt": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_LOCAL_OFFLINE_G4_REVIEW_AND_EXTERNAL6GROUPS_COMPLETED_SKIP_BLOCKED_SOURCES",
+  "folder": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/output/V6_最终组会离线包",
+  "file_count": 760,
+  "zip": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/output/V6_最终组会离线包.zip",
+  "zip_bytes": 80115677,
+  "zip_sha256": "3cb516cd72be40e3cab98f160f0db75931f928d297c0690885c779ddf0fdf59a",
+  "PPT_SHA": {
+    "V6_G4_Weighting_Review.pptx": "fafda5764be9cb5ae3c6a6676fc454398e52b274666067d14687c6e78b8bd249",
+    "V6_External_Generalization_Evaluation.pptx": "c0b5ae2a27c79dd79c2bdef7b4d22a25581b492e3d46037624824b3194df1fab"
+  },
+  "completed_Asia_Shanghai": "2026-11-01T02:40:55.658890+08:00",
+  "automation_id": "v6",
+  "automation_deleteStatus": "deleted",
+  "all_new_NN_and_CPU_controllers_exited": true,
+  "remote_artifact_root": "/data2/yanglin/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/output/V6_最终组会离线包",
+  "local_artifact_root": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/external_singleframe_20261031/output/V6_最终组会离线包",
+  "blocked_sources_explicit": [
+    "Heat Chamber official404",
+    "ATSyn-static quota/Box404; Places leakage/CW-SSIM not verified"
+  ],
+  "no_training_or_A_B": true,
+  "remote_readback_status": "PASS_REMOTE_760_FILE_SHA_ZIP_CRC_PPT_SHA_AUTHORING9_WORKLOG_NO_OLD_CONTROLLERS",
+  "remote_readback_receipt": "evidence/FINAL_REMOTE_DELIVERY_READBACK.json"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "completed_UTC": "2026-11-02T16:05:58.197558+00:00",
+  "local_root": "/Users/lucas/Desktop/turbulence IR/unidb_d0_20261102/forensic_audit_20261102",
+  "remote_root": "liteserver-de36:/data2/yanglin/unidb_d0_20261102/forensic_audit_20261102",
+  "files_independently_SHA_verified_at_both_roots": 2614,
+  "bytes_verified_at_both_roots": 261803424,
+  "mismatches": 0,
+  "audit_manifest_sha256": "f6db8c8b602b71d34f9ee4936ba740685f1b8713f6e84fd42073e84cadd3b614",
+  "final_acceptance_sha256": "d3e1de890e703308025fd38e408791e0fc392ea211a552151d569491ed618c72",
+  "final_report_sha256": "4ecd748dfe205c5509bcd55126b1eab5eb1480cc7356f9b537b1c5398c4bc9b4",
+  "plan_sha256": "6da5814924ddeffb89632070d473db2f8addf90a088e980e196063ac8c29264e",
+  "remote_verification_sha256": "c1c11b8dfbdaeaab02e63a59fbb2da001f1ec4c441bef550709b49d2d6103c45",
+  "remote_bulk_inventory_sha256": "9f57da4fb620af9a16cb781956327af165599c8bf425493028238615ca7818d6",
+  "remote_process_audit_sha256": "a964416317730b7265d861fd4b61021220b98f74a3c65658e119d7ccabd821e0",
+  "scope": "All locally delivered files independently reread at both roots. Bulk remote arrays are independently inventoried but not all downloaded. No claim of convergence or restoration success.",
+  "new_optimizer_updates": 0
+}

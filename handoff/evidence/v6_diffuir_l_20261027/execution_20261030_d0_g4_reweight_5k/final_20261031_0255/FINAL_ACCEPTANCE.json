@@ -1,0 +1,54 @@
+{
+  "status": "PASS_FINITE_MATCHED5K_FULL_STATE_PAIRED_VALIDATION_VISUAL_QA_LOCAL_SYNC",
+  "checkpoints": {
+    "Control": {
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_G4_reweight_20261030_Control_formal01/checkpoints/U162505.pt",
+      "sha256": "50a7162ba7c821e5e91ef79197218405dea3743b9bda955a50120537bb1027fb",
+      "update": 162505,
+      "branch_updates": 5000,
+      "cursor": 4017660,
+      "cpu_readback": true,
+      "actual_strength_counts": {
+        "2": 75054,
+        "4": 74876,
+        "1": 74924,
+        "3": 75146
+      },
+      "formal_updates": 5000,
+      "presentations": 300000,
+      "uniform_manifest_presentation_equivalent": 1.875
+    },
+    "G4_biased": {
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_G4_reweight_20261030_G4_biased_formal01/checkpoints/U162505.pt",
+      "sha256": "2dd267d35428c92433576bd5fae78a1af60efcb0f3e5bda7cda4e29f9341ba7d",
+      "update": 162505,
+      "branch_updates": 5000,
+      "cursor": 4017660,
+      "cpu_readback": true,
+      "actual_strength_counts": {
+        "2": 49896,
+        "4": 149998,
+        "1": 50018,
+        "3": 50088
+      },
+      "formal_updates": 5000,
+      "presentations": 300000,
+      "uniform_manifest_presentation_equivalent": 1.875
+    }
+  },
+  "all26_checkpoints_SHA_preserved": true,
+  "all30000_new_S3_validation_rows_passed": true,
+  "all160_fixed_visuals_integrity_passed": true,
+  "visual_and_full_curves_QA_passed": true,
+  "all_train_workers_drivers_and_v3_CPU_exited": true,
+  "additional_updates": 0,
+  "extension_decision_replayed": true,
+  "report_sha256": "1e64682d4822cd74e61f37021a59cb9433edd280780f54f64de6f243cb193257",
+  "delivery_manifest_sha256": "02609529b9247b0e27bafbf36a3c7735117c0c20ae5e0b6e4315dd8c7956ca38",
+  "local_remote_artifact_files_verified": 232,
+  "old_U95544_U109544_U157505_and_best_preserved": true,
+  "quality_success_not_implied": true,
+  "A_B_started": false,
+  "new_model_calls_by_final_audit": 0,
+  "unix": 1793387032.1197803
+}

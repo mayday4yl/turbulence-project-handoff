@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "artifact_title": "V0.2 A1 全面失败分析",
+  "artifact_blocks": 21,
+  "artifact_charts": 4,
+  "artifact_tables": 4,
+  "artifact_datasets": {
+    "headline": 1,
+    "gate_sensitivity": 4,
+    "per_g_deltas": 10,
+    "mechanism_decomposition": 15,
+    "training_loss": 240,
+    "sampling_exposure": 12,
+    "checkpoint_progression": 4,
+    "simulator_finite_difference": 3,
+    "simulator_conditioning_g450": 10
+  },
+  "sqlite_queries_reproduced": 9,
+  "notebook_code_cells_executed": 8,
+  "official_eval_rows": 100,
+  "official_train_rows": 3000,
+  "corrected_gate": "STOP",
+  "four_way_stop": true,
+  "mechanism_identity_max_abs_residual": 0.0,
+  "simulator_binary_nondifferentiability_supported": false,
+  "simulator_finite_difference_max_best_relative_error": 0.002394150496690054,
+  "simulator_g450_conditioning_samples": 10,
+  "simulator_g450_effective_zernike_ratio_median": 4.646534016635837,
+  "direct_npu_finite_difference_checked": false
+}

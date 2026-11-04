@@ -1,0 +1,89 @@
+{
+  "status": "PASS_RESEARCH_PROVENANCE_AND_INDEPENDENT_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "time": "2026-11-01T23:07:54.372118+08:00",
+  "scope": "Broadened pixel conditional IR versus pretrained pixel diffusion + ControlNet; bridge not required",
+  "candidate_configuration_records": 20,
+  "source_manifest_checks": [
+    {
+      "path": "native_nonbridge/SOURCE_MANIFEST.json",
+      "sha256": "f8b607f7ac67ae5d65d6f96545f3395071bf92d8384f4d2ffe2aeff23e484f18",
+      "verified_sha_entries": 51,
+      "records_without_payload_sha": [
+        "https://arxiv.org/html/2111.05826v3",
+        "https://arxiv.org/html/2104.07636v3",
+        "https://arxiv.org/html/2104.14951v3",
+        "https://arxiv.org/html/2207.14626v3",
+        "https://raw.githubusercontent.com/LeiaLi/SRDiff/56285083a2d64ed321c249e6ef5d6e745a5d817e/configs/config_base.yaml"
+      ]
+    },
+    {
+      "path": "pretrained_adaptation/SOURCE_MANIFEST.json",
+      "sha256": "8749a323c74b6d11c296904981f3d59b6686b35203284970666e635b888c6f40",
+      "verified_sha_entries": 33,
+      "records_without_payload_sha": [
+        "https://arxiv.org/html/2411.07126v1",
+        "https://research.nvidia.com/labs/cosmos-lab/edify-image/",
+        "https://arxiv.org/html/2502.20679v1",
+        "https://arxiv.org/abs/2212.06512",
+        "https://arxiv.org/abs/2305.08995",
+        "https://github.com/openai/glide-text2im"
+      ]
+    },
+    {
+      "path": "recent_native/SOURCE_MANIFEST.json",
+      "sha256": "c7e0eae2ddd7b23e9cb4cb8461a4ec73a67256e725f79d33a9c842d87dae634b",
+      "verified_sha_entries": 101,
+      "records_without_payload_sha": []
+    }
+  ],
+  "verified_source_sha_entries": 185,
+  "prior_delivery_files_unchanged": 131,
+  "official_AT_DDPM_git_blobs_exact": 9,
+  "independent_reviews": [
+    "Native nonbridge models reviewer",
+    "DA-CLIP / recent native models reviewer",
+    "Pretrained generation / ControlNet reviewer"
+  ],
+  "review_repairs": [
+    "SRDiff epsilonL1 target clarified",
+    "Bridge labels corrected without excluding bridges",
+    "Weather image batch versus patch batch explicit",
+    "FoundIR evidence ID corrected",
+    "DiffPIR paper-claimed NFE separated from actual code count",
+    "DifFace selected estimator L1 filename separated from generic paper objective"
+  ],
+  "quantitative_crosschecks": {
+    "FoundIR_matching_common_top_level_AST": [
+      28,
+      29
+    ],
+    "Resfusion_default_actual_calls": 5,
+    "ADM_base_parameters_derived": 552814086,
+    "ADM_plus_branch_parameters_derived_excluding_hint": 772052230,
+    "Weather_example_patch_evaluations": 4225,
+    "Weather_example_batched_calls": 75
+  },
+  "literature_search": {
+    "raw_hits": 18,
+    "unique": 17,
+    "retained": 10,
+    "irrelevant_removed_after_abstract_read": 7,
+    "errors_preserved": "search/stderr.txt"
+  },
+  "html_internal_links_exist": true,
+  "runtime": {
+    "checkpoint_payload_downloads": 0,
+    "model_loads": 0,
+    "model_instantiations": 0,
+    "model_forwards": 0,
+    "training_updates": 0,
+    "NPU_jobs": 0,
+    "AB_resumed": false
+  },
+  "limits": [
+    "No turbulence quality, native256 runtime, NPU, gradient or performance result for any new candidate",
+    "HEAD/LFS/catalog data do not establish payload availability or strict loading",
+    "Costs are source/config-derived or explicitly paper-claimed, not latency rankings",
+    "No full-domain completeness or exhaustive absence claim"
+  ]
+}

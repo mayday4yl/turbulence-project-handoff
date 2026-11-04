@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "protocol_hash": "69ef8e95c2b3e6012a131eacb371aaf2a2707556ff3556c3cbf18fc7a0756b93",
+  "groups": 3,
+  "updates_per_group": 1000,
+  "exposures_per_group": 32000,
+  "total_exposures": 96000,
+  "visits_per_training_start": 20,
+  "complete_evaluation_products": 164,
+  "evaluation_identity_grouping_and_eta_verified": true,
+  "source_level_metric_and_paired_reduction_independently_recomputed": true,
+  "both_formal_refinement_audits_passed": true,
+  "formal_failures": 0,
+  "own_workers_exited_and_gpu5_6_released": true,
+  "checkpoint_scope": "33 full checkpoint files retained remotely; final selected checkpoint SHA256 verified in each group audit; preflight tested model/EMA/optimizer/RNG next-update roundtrip."
+}

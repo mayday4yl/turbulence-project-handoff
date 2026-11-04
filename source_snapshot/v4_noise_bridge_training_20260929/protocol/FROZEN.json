@@ -1,0 +1,137 @@
+{
+  "status": "FROZEN",
+  "comparison_id": "v4_overfit100_paired_20260929",
+  "comparison_dir": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/runs/v4_overfit100_paired_20260929",
+  "groups": [
+    "R08",
+    "R0",
+    "D0"
+  ],
+  "world_size": 2,
+  "GPU_UUIDs": [
+    "GPU-83edf451-9cae-c2a0-c9a6-f344b7bb2673",
+    "GPU-8079b40c-338b-f5a5-2be6-db5255033862"
+  ],
+  "batch": 32,
+  "microbatch": 4,
+  "accumulation": 4,
+  "updates_per_group": 1000,
+  "exposures_per_group": 32000,
+  "eval_network_batch": 2,
+  "refinement_execution": "per_sample_serial",
+  "refine_batch": 1,
+  "precision": "FP32_autocast_and_TF32_off",
+  "tf32": false,
+  "autocast": false,
+  "refinement": {
+    "updates": 40,
+    "candidates": 41,
+    "lr": 0.01,
+    "lambda": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0
+  },
+  "evaluation_grouping_sha256": "b9e04ac7e6503560cd5c8f26a7cb1877c790333b3bf2baec252f5c46b89a56e3",
+  "seed": 20260916,
+  "eta_seed_per_rank": [
+    91810000,
+    91810001
+  ],
+  "initialization_sha256": "2e6a29eb895de090bbaeaf1cfdd1aedd5550703fa1bb9bb80e099ca2fd920fc2",
+  "stream_sha256": "6c4d594d218fe32168fe5a430f9a236eca86de0b98b6eb6bc31d6b724c84a59f",
+  "normalization_artifact_sha256": "b1393baba5e3fe0e60516a0062fc41a5eeb8b4c322dbfbbd3e0bca1982b7a899",
+  "authorization_sha256": "1911c5cfd76f43ec35c5d526720caeecbe175a90222ad92d145bb62ca90b71cc",
+  "list_hashes": {
+    "train1600": "6b9f1b0053f5b1376b93e9dee6ef1e172038324779c363eac0ab7108508596bd",
+    "val800": "091d091a1b0896af2421179a7a37cd2857cf5577fb52f1f1202aa7b0a5ec7af5",
+    "train64": "4175f850a93ce119c72c120ddd6e1a9c28b2c0a5e527aa735116d9438821914e",
+    "val64": "634ef5dc9892eedcea80ad28ecb7f592e3358722e4539da782756fd41141adbc"
+  },
+  "data_manifest_hashes": {
+    "BUILD_IDENTITY.json": "469f4c1434f7df88c913a4c97e983ba42ad868ec0ee41486b7c8eb4cc320206b",
+    "source_manifest.jsonl": "09c82c8adcba23b38ccb9f26d8716c2bbeb976ad1c4ab255bd985574fe202d90",
+    "trajectory_manifest.jsonl": "30a61c35944c2fc728e2f0cf2fa55ab5bcfbfe0fa30c2bace3e608725b1acaf9",
+    "subsets/overfit100.json": "2599c9dfa27f2ca3efe89024c7c5bbe64249d5451a0959f742aafd2644b481a8",
+    "ASSET_LOCK.json": "c3f9100f52a00a48d06c155bb92e783dec825489c4c9c9921585133a6a4e1ffb"
+  },
+  "code_sha256": {
+    "v4/__init__.py": "ec4c7c6b24e386d8a5b4d183171bac92c995932e79f00670530e0565bf18241c",
+    "v4/core.py": "bcd9eb897a0685d1e1b16708d5a9642556c6c35f0b5ba702093ffaacdb6009bd",
+    "v4/data.py": "90692f7135d316b6ec135a8d8a1d505b38d39ad3ed5421c50a1e2eecb5af17c1",
+    "v4/evaluation.py": "a33bc5371639506e96dfc24b8799b72469f7494d72e64040816dfd5dda75aa22",
+    "v4/inference.py": "01aaece0a10995087f914789b72027d7f169a51534abbda25f2976f4e54834cd",
+    "v4/model.py": "bdcf36c92bc9e180cda9a73acd8bad7a623bcf54e992a165525b5e3c647ebf6d",
+    "v4/normalization.py": "011b803b557e4efdf2af0135b9aa3f17a68fb75af47dfa3e3ba6511596769768",
+    "v4/refinement.py": "c5f39f691f304ef30ec87024430e0c3d920df0205c12efa763dd8c0c1429c40d",
+    "v4/runtime.py": "d98b79f363a32393bfdb85c064f0b8ef31831bd589f7ff7cfab3d81589694cd4",
+    "v4/training.py": "5f420a9e0ed343227a41833f52d538224cad6958df7ddb2d4badc1c872856da8",
+    "physical_bridge/__init__.py": "c7993d49fe900729e0e209414972517a19534fd0eba216af9c223163624e6fae",
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "scripts/prepare_and_validate.py": "d4721de0f8212a8fb53fc24a39ad58cd2526f97915d2efd6dbafb3fea322a7bc",
+    "scripts/summarize_comparison.py": "5be593b0d8134f60aacd61f1116382f9eb30e1348548904973b8f34601de86a9",
+    "scripts/train_comparison.py": "c617a698ccf7d4b3fbf8f3be357a8410b7dd1a52d56dafbd65ca531659e1f89c",
+    "scripts/validate_evaluator.py": "3a60af0c84725cdba9f70a72750b9cd34dd343af71dcfc73abfa13f903b59e59",
+    "scripts/validate_selected.py": "3aaf18eee581acab096e40c12652921b0bcfe6c9b044acd5a1f9df6e5a08d191",
+    "scripts/run_formal.sh": "496d002ca493efb47bb0324ef04f23f04bfa43f43757190fec82bf46fbd59e01",
+    "scripts/launch_phase.sh": "aed9e28eebe8a652ae83a80634635fadb749a6fda5ec44bdad23a61474f5267d",
+    "configs/correctness.json": "cd41b1c19d2a7a8cc36cb00f0c7be369cb34ec362eebb299131e186423145aa7",
+    "configs/base_source_identity.json": "333621d661651f0ef50bfc182091cac982d5576749812911101fe3b241d90c9f",
+    "docs/TRAINING_PLAN.md": "f3d1f6083f901c68b942bee755ad1f67c93897e77de563cbbd0c4f33c502de6d",
+    "protocol/AUTHORIZATION.json": "1911c5cfd76f43ec35c5d526720caeecbe175a90222ad92d145bb62ca90b71cc"
+  },
+  "validation_report": "reports/training_validation.json",
+  "validation_sha256": "07531ce3bc14b67d7482c505262fe11dc93dffb31eba45bb2e9cb1499e8efe70",
+  "selected_validation_sha256": "226ecbecf1acad4d48e68ba7bb9fb409efe756dad01c931aa788ee0f94c193d0",
+  "evaluator_validation_sha256": "05310c3afc95e9b61f856a3bce2cebe7d5244cd8e0899ed84be9f06b9fba3e5f",
+  "benchmark_sha256": "806b67c14dcb29e5a7a2b7fbe112bd7a79d7da8483fe9df70189f88ac5dd5f62",
+  "measured_training_seconds_by_candidate": {
+    "(16, 1)": 17269.938230514526,
+    "(16, 2)": 15118.412733078003,
+    "(32, 2)": 14977.338075637817,
+    "(32, 4)": 13384.732782840729
+  },
+  "batch_selection": "minimum measured three-group time; within 10% prefer smaller B",
+  "software": {
+    "torch": "2.7.1+cu126",
+    "cuda": "12.6",
+    "cudnn": 90501
+  },
+  "tail_policy": "all selected batches and nodes divisible; reject padding/drop/unequal shards",
+  "evaluation_grouping": "global fixed chunks of 2; assign chunk_index modulo world_size",
+  "evaluation_nodes": [
+    0,
+    3200,
+    6400,
+    9600,
+    12800,
+    16000,
+    19200,
+    22400,
+    25600,
+    28800,
+    32000
+  ],
+  "optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "no_decay": "bias and normalization",
+    "clip_global_norm": 1.0
+  },
+  "scheduler": "exposure_warmup_1600_cosine_to_32000",
+  "EMA": "0.996**(B_u/32)",
+  "formal_training_authorized": true,
+  "training_eta": "fresh per occurrence and sample; shared within path",
+  "eval_eta": "SHA256 eval:20260916:start_id modulo 2**63-1",
+  "determinism": "CUDA grid_sample backward remains nondeterministic; no bitwise claim",
+  "protocol_hash": "69ef8e95c2b3e6012a131eacb371aaf2a2707556ff3556c3cbf18fc7a0756b93"
+}

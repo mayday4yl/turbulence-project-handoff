@@ -1,0 +1,352 @@
+{
+  "created_at": "2026-11-01T22:07:25.873676+08:00",
+  "status": "NO_CONFIRMED_NEW_IMPLEMENTATION_BUG_IN_AUDITED_SCOPE_WITH_SCIENTIFIC_LIMITS",
+  "scope": "Post-meeting implementation, lineage, cache and fixed-validation audit; not physical ground-truth validation or new training",
+  "fresh_checks": {
+    "source_manifest_entries_remote": 164,
+    "train_manifest_pairs": 160000,
+    "clean_sources": 10000,
+    "matched_xi_groups": 40000,
+    "train_val_source_intersection": 0,
+    "train_val_exact_clean_file_sha_intersection": 0,
+    "validation_observation_cache_files_rehashed": 5000,
+    "validation_clean_files_rehashed": 250,
+    "raw_validation_records_reaudited_local": 150000,
+    "additional_final_records_reaudited_remote": 5000,
+    "regular_physics_nonzero_g_renders": 18,
+    "g0_exact_identity_checks": 4,
+    "outlier_physics_g4_renders": 2,
+    "physics_maxabs": 6.377696990966797e-06,
+    "existing_replay_tolerance": 2e-05,
+    "checkpoints": [
+      {
+        "update": 95544,
+        "sha256": "1fd16df15c64cc496bda89ccb32fd6a9413c9de8e59942fc13cbb6592e757cc3",
+        "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_official_residual_until18_20261029_01/checkpoints/U095544.pt"
+      },
+      {
+        "update": 109544,
+        "sha256": "5d7c57408af1a296f940997406c4bb2b2e876b9100ae20cd30ce2690a0d693a8",
+        "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U109544.pt"
+      },
+      {
+        "update": 157505,
+        "sha256": "9e6b66e6a46434dc86b327dfce6be04d78aa1de61449d7791e282c62d52e0029",
+        "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_U95544_multistrength160k_formal01/checkpoints/U157505.pt"
+      }
+    ],
+    "final_fixed_seed_and_paired_csv_maxabs": 0.0,
+    "input_PSNR_MAE_recalculation_maxabs": 0.0,
+    "CPU_nonlearned_spy_algebra_status": "PASS_CPU_ALGEBRA_AND_PLUMBING_WITH_NON_LEARNED_SPY"
+  },
+  "quality": {
+    "0.5": {
+      "input": {
+        "psnr": 25.170834311941398,
+        "ssim": 0.7587941511532414,
+        "lpips": 0.07494747577421366,
+        "mae": 0.03536393877434299
+      },
+      "parent": {
+        "psnr": 15.425166570727573,
+        "ssim": 0.428839319802334,
+        "lpips": 0.3843660097271204,
+        "mae": 0.11711606915781297
+      },
+      "best": {
+        "psnr": 25.98022582616571,
+        "ssim": 0.8126592993265419,
+        "lpips": 0.14448033687099815,
+        "mae": 0.03147415008198074
+      },
+      "latest": {
+        "psnr": 29.929584401717996,
+        "ssim": 0.9196383507320711,
+        "lpips": 0.056897903487086295,
+        "mae": 0.01987561891977863
+      },
+      "final_minus_input": {
+        "psnr": 4.758750089776598,
+        "ssim": 0.16084419957882967,
+        "lpips": -0.01804957228712737,
+        "mae": -0.01548831985456436
+      },
+      "final_minus_parent": {
+        "psnr": 14.504417830990423,
+        "ssim": 0.49079903092973715,
+        "lpips": -0.3274681062400341,
+        "mae": -0.09724045023803435
+      },
+      "final_psnr_win_count_over_input": 941
+    },
+    "1": {
+      "input": {
+        "psnr": 22.24176827289323,
+        "ssim": 0.6185088166205449,
+        "lpips": 0.10602416064217687,
+        "mae": 0.0494776441546323
+      },
+      "parent": {
+        "psnr": 15.388082682018869,
+        "ssim": 0.4138017992998885,
+        "lpips": 0.39124176393449306,
+        "mae": 0.11647202865964243
+      },
+      "best": {
+        "psnr": 24.48931968721217,
+        "ssim": 0.7500357139118135,
+        "lpips": 0.17965020594000816,
+        "mae": 0.037213653936679046
+      },
+      "latest": {
+        "psnr": 27.827369644672558,
+        "ssim": 0.8708288908574016,
+        "lpips": 0.08860560062713921,
+        "mae": 0.025425780530319825
+      },
+      "final_minus_input": {
+        "psnr": 5.58560137177933,
+        "ssim": 0.25232007423685665,
+        "lpips": -0.017418560015037665,
+        "mae": -0.024051863624312476
+      },
+      "final_minus_parent": {
+        "psnr": 12.43928696265369,
+        "ssim": 0.4570270915575131,
+        "lpips": -0.3026361633073539,
+        "mae": -0.0910462481293226
+      },
+      "final_psnr_win_count_over_input": 993
+    },
+    "2": {
+      "input": {
+        "psnr": 20.306366255324075,
+        "ssim": 0.5135806055266077,
+        "lpips": 0.19167134827375412,
+        "mae": 0.06372611351143745
+      },
+      "parent": {
+        "psnr": 16.37484507550174,
+        "ssim": 0.4458737151745959,
+        "lpips": 0.3972986369729042,
+        "mae": 0.09978118170648517
+      },
+      "best": {
+        "psnr": 22.882957502069235,
+        "ssim": 0.6617878403360498,
+        "lpips": 0.25369183205813167,
+        "mae": 0.0453650287357232
+      },
+      "latest": {
+        "psnr": 24.816630855385878,
+        "ssim": 0.7582380820473853,
+        "lpips": 0.16514045597985386,
+        "mae": 0.03697173612710743
+      },
+      "final_minus_input": {
+        "psnr": 4.510264600061802,
+        "ssim": 0.24465747652077763,
+        "lpips": -0.026530892293900266,
+        "mae": -0.026754377384330022
+      },
+      "final_minus_parent": {
+        "psnr": 8.441785779884139,
+        "ssim": 0.3123643668727894,
+        "lpips": -0.23215818099305033,
+        "mae": -0.06280944557937775
+      },
+      "final_psnr_win_count_over_input": 996
+    },
+    "3": {
+      "input": {
+        "psnr": 19.471852182624982,
+        "ssim": 0.4758446847912819,
+        "lpips": 0.3613753688335419,
+        "mae": 0.0724753618403747
+      },
+      "parent": {
+        "psnr": 19.081601574680278,
+        "ssim": 0.5242257089978396,
+        "lpips": 0.40482605117559434,
+        "mae": 0.06822934860865215
+      },
+      "best": {
+        "psnr": 21.995194026298236,
+        "ssim": 0.6039490272816843,
+        "lpips": 0.3601206909716129,
+        "mae": 0.05108200862192682
+      },
+      "latest": {
+        "psnr": 22.629148537878738,
+        "ssim": 0.6435941709399519,
+        "lpips": 0.2762967393174767,
+        "mae": 0.04792197419564647
+      },
+      "final_minus_input": {
+        "psnr": 3.157296355253756,
+        "ssim": 0.16774948614866997,
+        "lpips": -0.08507862951606515,
+        "mae": -0.024553387644728232
+      },
+      "final_minus_parent": {
+        "psnr": 3.54754696319846,
+        "ssim": 0.11936846194211226,
+        "lpips": -0.1285293118581176,
+        "mae": -0.02030737441300568
+      },
+      "final_psnr_win_count_over_input": 988
+    },
+    "4": {
+      "input": {
+        "psnr": 18.79593752422192,
+        "ssim": 0.45175115362477053,
+        "lpips": 0.5716285873651504,
+        "mae": 0.08017829378919375
+      },
+      "parent": {
+        "psnr": 21.16514236838766,
+        "ssim": 0.5562608945579739,
+        "lpips": 0.4976828113496304,
+        "mae": 0.055116699808241854
+      },
+      "best": {
+        "psnr": 20.98248544617531,
+        "ssim": 0.5358005206047843,
+        "lpips": 0.505751010030508,
+        "mae": 0.058230578942276824
+      },
+      "latest": {
+        "psnr": 20.890725726606266,
+        "ssim": 0.5281371071294091,
+        "lpips": 0.4759787078946829,
+        "mae": 0.05916841698651412
+      },
+      "final_minus_input": {
+        "psnr": 2.094788202384347,
+        "ssim": 0.07638595350463856,
+        "lpips": -0.09564987947046755,
+        "mae": -0.021009876802679628
+      },
+      "final_minus_parent": {
+        "psnr": -0.2744166417813929,
+        "ssim": -0.028123787428564806,
+        "lpips": -0.0217041034549475,
+        "mae": 0.004051717178272268
+      },
+      "final_psnr_win_count_over_input": 980
+    }
+  },
+  "selection": {
+    "candidates": 33,
+    "eligible": 8,
+    "tie_candidates": [
+      109544
+    ],
+    "selected": 109544,
+    "terminal_eligible": false,
+    "lpips_tie_break_not_exercised_for_final_selected_candidate": true
+  },
+  "cache_ranges_and_residual_limits": {
+    "0.5": {
+      "count": 1000,
+      "input_psnr": 25.170834311941398,
+      "input_mae": 0.035363938774343,
+      "min": -0.0005323213408701122,
+      "max": 1.0010772943496704,
+      "outside01_values": 7128,
+      "outside01_fraction": 3.62548828125e-05,
+      "outside01_images": 102,
+      "correction_gt_half_fraction": 0.0012420908610026042,
+      "correction_gt_half_images": 674,
+      "max_metric_recalculation_error": 0.0
+    },
+    "1": {
+      "count": 1000,
+      "input_psnr": 22.24176827289323,
+      "input_mae": 0.049477644154632294,
+      "min": -0.0004751421802211553,
+      "max": 1.0017470121383667,
+      "outside01_values": 1039,
+      "outside01_fraction": 5.284627278645833e-06,
+      "outside01_images": 61,
+      "correction_gt_half_fraction": 0.0036531829833984374,
+      "correction_gt_half_images": 887,
+      "max_metric_recalculation_error": 0.0
+    },
+    "2": {
+      "count": 1000,
+      "input_psnr": 20.306366255324075,
+      "input_mae": 0.06372611351143745,
+      "min": -9.391009371029213e-06,
+      "max": 1.0007561445236206,
+      "outside01_values": 766,
+      "outside01_fraction": 3.896077473958334e-06,
+      "outside01_images": 45,
+      "correction_gt_half_fraction": 0.005759877522786458,
+      "correction_gt_half_images": 943,
+      "max_metric_recalculation_error": 0.0
+    },
+    "3": {
+      "count": 1000,
+      "input_psnr": 19.471852182624986,
+      "input_mae": 0.07247536184037472,
+      "min": -0.00019278105173725635,
+      "max": 1.001452922821045,
+      "outside01_values": 958,
+      "outside01_fraction": 4.872639973958334e-06,
+      "outside01_images": 53,
+      "correction_gt_half_fraction": 0.005911936442057291,
+      "correction_gt_half_images": 956,
+      "max_metric_recalculation_error": 0.0
+    },
+    "4": {
+      "count": 1000,
+      "input_psnr": 18.795937524221916,
+      "input_mae": 0.08017829378919374,
+      "min": -0.07380474358797073,
+      "max": 1.0922415256500244,
+      "outside01_values": 907,
+      "outside01_fraction": 4.6132405598958335e-06,
+      "outside01_images": 64,
+      "correction_gt_half_fraction": 0.005919164021809896,
+      "correction_gt_half_images": 968,
+      "max_metric_recalculation_error": 0.0
+    }
+  },
+  "inherited_diffusion_limits": {
+    "training_terminal_noise_std": 0.9999797940254211,
+    "sampling_initial_noise_std": 0.1,
+    "variance_ratio_train_to_infer": 99.99595880508423,
+    "alpha_terminal": 0.9936471581459045,
+    "delta_terminal": 0.9004999995231628,
+    "interpretation": "Official q training and DDIM initialization distributions are not identical; V6 did not introduce this difference. No causal quality conclusion or automatic mathematical change follows."
+  },
+  "warmup": {
+    "initial_formal_updates": 10000,
+    "initial_warmup_updates": 200,
+    "initial_peak_lr": 2e-05,
+    "later_continuation_lr": 2e-06,
+    "later_warmup_restarted": false
+  },
+  "limits": [
+    "All160K manifest identities were checked, but all160K training arrays were not freshly rehashed or rerendered.",
+    "Source and exact Clean-file hash disjointness does not prove semantic near-duplicate absence or physical realism.",
+    "Physics replay proves consistency with the frozen V5 PiRN/P2S revision, not unmodified official PiRN or calibrated Cn2.",
+    "The 20 nonzero-g CPU replays plus four identities are a bounded diagnostic sample, not full physical-covariance validation.",
+    "Rare raw observation overshoot is reproduced; no clipping or scientific definition change was applied.",
+    "Official train-versus-inference noise scale and residual clamping are inherited limitations, not proven causes of poor quality.",
+    "SSIM and LPIPS per-image values were not recomputed by a new network; existing full records and all means were crosschecked.",
+    "No continuous same-objective Mixed validation-residual-loss history exists."
+  ],
+  "training_updates": 0,
+  "restoration_network_calls": 0,
+  "accelerator_calls": 0,
+  "historical_assets_modified": false,
+  "AB_resumed": false,
+  "remote_audit_processes_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

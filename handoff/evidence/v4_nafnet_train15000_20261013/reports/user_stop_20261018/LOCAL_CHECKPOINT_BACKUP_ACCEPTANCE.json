@@ -1,0 +1,45 @@
+{
+  "status": "PASS_ALL_FOUR_LATEST_FULL_CHECKPOINTS_LOCAL_SHA256",
+  "items": [
+    {
+      "method": "D0",
+      "global_update": 40000,
+      "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/D0/checkpoints/full_U40000.pt",
+      "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/D0_full_U40000.pt",
+      "sha256": "d0a66bb030a73527f0c86e9cd642fe8e704ac5316f48515fcbbf546b9711173b",
+      "bytes": 1885307919,
+      "verified_local_epoch": 1792303035.00265,
+      "seconds": 60.94495606422424
+    },
+    {
+      "method": "R0",
+      "global_update": 40000,
+      "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R0/checkpoints/full_U40000.pt",
+      "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/R0_full_U40000.pt",
+      "sha256": "73c7c7dea2f0722cae32ab52aeafefbe897f67cef76c44c270f5eae13a3be3e5",
+      "bytes": 1885307919,
+      "verified_local_epoch": 1792303097.546819,
+      "seconds": 62.54361581802368
+    },
+    {
+      "method": "R08",
+      "global_update": 32891,
+      "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R08/checkpoints/full_U32891.pt",
+      "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/R08_full_U32891.pt",
+      "sha256": "56f1e261b4f3d00cc8ef9f3606c14cb96862f8fb7540e74c38e29c7e432e033e",
+      "bytes": 1885308879,
+      "verified_local_epoch": 1792303155.237105,
+      "seconds": 57.689308881759644
+    },
+    {
+      "method": "L08",
+      "global_update": 21559,
+      "remote_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/L08/checkpoints/full_U21559.pt",
+      "local_path": "/Users/lucas/Desktop/turbulence IR/v4_nafnet_train15000_20261013/deliverables/Train15000_STOP_20261018_checkpoints/L08_full_U21559.pt",
+      "sha256": "50ff132f85369e79f592102a193e97cccc047e9cc37c5bd4c70636393ae86205",
+      "bytes": 1885308879,
+      "verified_local_epoch": 1792303211.792809,
+      "seconds": 56.55483078956604
+    }
+  ]
+}

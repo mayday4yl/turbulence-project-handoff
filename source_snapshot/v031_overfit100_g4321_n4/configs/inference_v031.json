@@ -1,0 +1,9 @@
+{
+  "status": "frozen_calibrate_once_at_update100",
+  "policy": "/data2/yanglin/v031_overfit100_g4321_n4/configs/inference_calibration_policy.json",
+  "policy_sha256": "6ff0ac1aed7701eafb01cc636d8d96d0323cc4cb9d7db58b9d6ed45ba7823d84",
+  "numerical_config_authority_after_update100": "/data2/yanglin/v031_overfit100_g4321_n4/artifacts/calibration_update100/calibration.json",
+  "evaluation_batch_size": 1,
+  "precision": "fp32",
+  "no_user_choice_pending": true
+}

@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "delivery_epoch": 1792024335.0468962,
+  "delivery_beijing": "2026-10-15T08:32:15.046896+08:00",
+  "experiment_controller_seconds": 27339.662913560867,
+  "total_acceptance_to_delivery_seconds": 28072.397798538208,
+  "authorized_budget_seconds": 46800,
+  "common_N": 1000,
+  "common_evaluation_nodes": [
+    0,
+    500,
+    1000
+  ],
+  "fullval_OFF_inputs_per_arm": 64,
+  "refinement_ON_inputs_per_arm": 8,
+  "cpu_metrics_audit": "PASS",
+  "checkpoint_cpu_audit": "PASS",
+  "render_and_gradient_acceptance": "PASS",
+  "delivery_verify": "PASS",
+  "verified_core_files": 519,
+  "frozen_protocol_sha256": "cf2cf5efa5e6add8a0c65648e0cac8084dd81f5d3a4452b5c88670561995dd50",
+  "known_experiment_processes_exited": true,
+  "NPU_0_to_3_no_processes": true,
+  "diagnostic_NPU0_exception": "CHECKPOINT_AUDIT_REPAIR.json",
+  "no_autoresume": true,
+  "automation_id": "de36-g4-raw-field-12h",
+  "automation_delete_status": "deleted",
+  "main_report": "reports/FINAL_CPU_AUDIT/FINAL_REPORT_ZH.md",
+  "final_notification_ready": true
+}

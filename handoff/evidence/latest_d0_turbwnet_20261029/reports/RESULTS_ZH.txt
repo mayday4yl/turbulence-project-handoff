@@ -1,0 +1,15 @@
+原固定 G4 10 张，第三列更新为最新 D0 U95544 EMA。
+输入、TurbWNet、GT 的图像像素与原图完全一致。未增删或重新挑选样本。
+最新 D0 原 FP32 输出与 PSNR/SSIM/LPIPS/MAE 来自已完成的正式 Val1000，
+PSNR/MAE 已用原始 GT 浮点数组独立重算匹配；PNG 仅显示时 clip/量化。
+输入/GT 文件 SHA256 与原 FIXED_INDEX 逐图匹配；最新 S3 seed 逐图符合固定验证协议。
+没有重新推理、训练或启动 NPU 进程，未修改旧结果或 checkpoint。
+
+固定10张平均指标（不是 Val1000）：
+Input_G4: PSNR 17.903898, SSIM 0.386492, LPIPS 0.580485, MAE 0.089983
+D0_U14927_EMA: PSNR 20.177678, SSIM 0.489190, LPIPS 0.534038, MAE 0.065215
+TurbWNet_CPU_zero_shot: PSNR 18.177932, SSIM 0.377687, LPIPS 0.383202, MAE 0.082831
+D0_U95544_EMA: PSNR 20.185760, SSIM 0.494417, LPIPS 0.507333, MAE 0.064551
+最新相对旧 D0 平均 PSNR +0.008082 dB；7张提高，3张降低。
+权重 SHA256: 1fd16df15c64cc496bda89ccb32fd6a9413c9de8e59942fc13cbb6592e757cc3
+已有完整 Val1000 最新 D0 PSNR 21.165142 dB；TurbWNet 本轮仅固定10张，不能拼作全量对照。

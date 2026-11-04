@@ -1,0 +1,53 @@
+{
+  "verified_at_utc": "2026-09-16T03:56:53.295875+00:00",
+  "passed": true,
+  "checks": {
+    "checkpoint_config_equals_frozen": true,
+    "config_hash_matches_frozen": true,
+    "policy_hash_matches_frozen": true,
+    "formal_seed_and_mode": true,
+    "only_authorized_devices": true,
+    "update_agreement": true,
+    "sampler_counter": true,
+    "optimizer_steps": true,
+    "model_EMA_finite": true,
+    "EMA_decay": true,
+    "four_rank_rng_preserved": true,
+    "paused_state": true,
+    "explicit_resume_required": true,
+    "contiguous_logged_updates": true,
+    "all_logged_numerics_finite": true,
+    "prediction_counter": true,
+    "all_guarded_jobs_completed_and_released": true,
+    "formal_safe_save_resume_actual_audit": true,
+    "saved_before_noon": true,
+    "frozen_source_files_unchanged": true,
+    "frozen_V01_authority_unchanged": true
+  },
+  "checkpoint": "/data2/yanglin/v03_half_recursive_20260915/runs/half_formal_01/checkpoints/update-000204.pt",
+  "checkpoint_sha256": "8bb92a45c1fca32d4a8692a909dfc54120ad24bf5ee32ef9c28588c949c43b92",
+  "checkpoint_bytes": 514216013,
+  "update": 204,
+  "sampled_trajectories": 6528,
+  "network_predictions": 10098,
+  "scheduler": {
+    "maximum": 10000,
+    "warmup": 64,
+    "initial": 0.0001,
+    "final": 1e-06,
+    "completed_updates": 204
+  },
+  "optimizer_learning_rates": [
+    9.995219218602562e-05
+  ],
+  "next_curriculum_stage": 1,
+  "next_32_samples_sha256": "99d9845fde6d54d77c1ee3017de135bfdb435e056b76de3f79358fd3186c0a76",
+  "formal_actual_resume_load_audits": 4,
+  "completed_guards": 3,
+  "NPU_execution_by_this_audit": false,
+  "model_weights_modified": false,
+  "held_out_test_run": false,
+  "ready_for_frozen_test": false,
+  "reason_not_test_ready": "Operational pause before the declared minimum training horizon and full validation selection.",
+  "resume_boundary": "Exact saved state and actual prior load audit verified; subsequent NPU execution is not claimed bitwise deterministic."
+}

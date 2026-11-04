@@ -1,0 +1,205 @@
+{
+  "experiment": "v4_swinir_l1_train500_2k_20261001",
+  "status": "AUTHORIZED_PREPARATION_PENDING_ACCEPTANCE",
+  "authorized_at_recorded_utc": "2026-10-01T14:41:28.646235+00:00",
+  "methods": [
+    "D0",
+    "R0",
+    "R08",
+    "L08"
+  ],
+  "backbone": {
+    "source": "v4_pirn_backbone_matched4_20261001",
+    "embed_dim": 180,
+    "depths": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "heads": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "window_size": 8,
+    "PixelUnshuffle": 8,
+    "pretrained": false,
+    "common_initialization_sha256": "d5e928344c05bebb9a0939472b193f5a4ef7c2601ccc38c9713be248bf21a512"
+  },
+  "training_loss": {
+    "clean": "per_sample_RGB_full_image_MAE",
+    "observation": "per_sample_RGB_full_image_MAE",
+    "lambda_R": 0.2,
+    "reduction": "unchanged_stage_path_batch",
+    "full_BPTT": true
+  },
+  "budget": {
+    "max_updates_per_group": 2000,
+    "effective_batch": 32,
+    "train500": true,
+    "val100": true,
+    "test200_forbidden": true,
+    "formal_from_common_U0": true,
+    "no_auto_extension": true
+  },
+  "lr": {
+    "warmup_updates": 100,
+    "peak": 0.0001,
+    "end": 1e-05,
+    "horizon": 2000,
+    "formula": "1e-4*u/100 if 1<=u<=100 else 1e-5 + .5*(1e-4-1e-5)*(1+cos(pi*(u-100)/1900))"
+  },
+  "precision": {
+    "dtype": "FP32",
+    "TF32": false,
+    "autocast": false
+  },
+  "unchanged": [
+    "AdamW",
+    "grad_clip",
+    "EMA",
+    "train500_mu_s",
+    "start_stream",
+    "eta",
+    "split",
+    "simulator",
+    "rollout",
+    "Concat(Z,Y)",
+    "raw_g_t_conditioning",
+    "RGB_and_raw_xi_outputs"
+  ],
+  "monitor": {
+    "updates": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000
+    ],
+    "populations": [
+      "train_monitor400",
+      "val800"
+    ],
+    "weights": "RAW",
+    "refinement": "OFF",
+    "metrics": [
+      "L_C",
+      "0.2L_R",
+      "total_loss",
+      "PSNR",
+      "SSIM",
+      "LPIPS"
+    ]
+  },
+  "milestones": {
+    "updates": [
+      1000,
+      2000
+    ],
+    "populations": [
+      "full_train8000",
+      "val800"
+    ],
+    "outputs": [
+      "performance",
+      "paired_ablation",
+      "progression_by_G",
+      "fixed_qualitative",
+      "R0_R08_OFF_ON",
+      "complete_checkpoint",
+      "stage_report"
+    ],
+    "common_barrier": true,
+    "after_1000": "continue_after_complete_delivery",
+    "after_2000": "stop_after_complete_delivery"
+  },
+  "refinement": {
+    "unchanged_parent": "v4_train500_matched_v2_perf1_eval5kfull",
+    "objective": "MSE observation residual + raw_xi proximity",
+    "lambda": 0.01,
+    "lr": 0.01,
+    "steps": 40,
+    "candidate_selection": "best_total_J_including_initial",
+    "execution": "per_sample_serial",
+    "groups": [
+      "R0",
+      "R08"
+    ],
+    "population": "val800",
+    "updates": [
+      1000,
+      2000
+    ]
+  },
+  "best_val": {
+    "criterion": "RAW_OFF_val800_mean_PSNR",
+    "grid": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000
+    ],
+    "tie_tolerance_dB": 1e-06,
+    "tie_choose": "earlier",
+    "SSIM_LPIPS_same_checkpoint": true,
+    "refinement_not_used": true,
+    "fulltrain_backfill_only_final_best_if_not_milestone": true
+  },
+  "comparison": {
+    "old": "U-Net + MSE + old LR schedule",
+    "new": "SwinIR + L1 + 2k LR schedule",
+    "matched_updates": [
+      1000,
+      2000
+    ],
+    "best_grid": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000
+    ],
+    "report": [
+      "best_PSNR_SSIM_LPIPS",
+      "best_update",
+      "full_train_minus_val_gap",
+      "D0_minus_Input",
+      "recursive_arms_minus_D0"
+    ],
+    "old_U5000": "background_only",
+    "missing_old_full_train": "N/A_not_monitor_proxy",
+    "causality": "whole_configuration_only",
+    "loss_scales_not_comparable": true
+  },
+  "prelaunch_gates": [
+    "L1_update",
+    "B32_microbatch_accumulation",
+    "nonzero_AdamW_moments_checkpoint_resume",
+    "two_GPU_four_task_resource_acceptance"
+  ],
+  "automatic_launch_after_PASS": true,
+  "old_training_resumption_forbidden": true
+}

@@ -1,0 +1,204 @@
+{
+  "status": "PASS_ALL_33_ARCHIVED_CONTENT_SHA256",
+  "count": 33,
+  "files": [
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/R08/checkpoints/full_U00198.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/R08/checkpoints/full_U00198.pt",
+      "bytes": 117165403,
+      "sha256": "e777e31690bf47d384d94a3df77969c3569f1267b5aa60d8c4b38036041113f5"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/R0/checkpoints/full_U00196.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/R0/checkpoints/full_U00196.pt",
+      "bytes": 144810848,
+      "sha256": "d3b7afb464a0e8ce0b2440799d8e56a51799c610e2fb8d3c66e16421dd242222"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/L08/checkpoints/full_U00201.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/L08/checkpoints/full_U00201.pt",
+      "bytes": 229494130,
+      "sha256": "cc4677129dd6e17714179fa21f3d67989a2778a3bf65b4b72e67f0f2d330d096"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/D0/checkpoints/full_U00669.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/imports/npu/runs/formal_20k/D0/checkpoints/full_U00669.pt",
+      "bytes": 209956886,
+      "sha256": "a10d270d1fc8384cb40c4338e29583390406dc33185d890aa71e87920a719580"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/D0/1791007367_2222043/checkpoints/full_U00002.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/D0/1791007367_2222043/checkpoints/full_U00002.pt",
+      "bytes": 433302630,
+      "sha256": "926bb93b91066cf106cec3497ca572b91e62068fbd1768afa189bfc5d13f6adb"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/D0/1791007367_2222043/checkpoints/full_U00001.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/D0/1791007367_2222043/checkpoints/full_U00001.pt",
+      "bytes": 433302630,
+      "sha256": "222ab6abd24474ff6539ab40b1ba1fe7e3d1d4dd396584d5ab469bf1110f13b3"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/L08/1791007543_2322722/checkpoints/full_U00002.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/L08/1791007543_2322722/checkpoints/full_U00002.pt",
+      "bytes": 433302566,
+      "sha256": "89b220c9df133b2e7539e31a9561a58bfec5a5ee263543e030b30308ec56c3ac"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/L08/1791007543_2322722/checkpoints/full_U00001.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/L08/1791007543_2322722/checkpoints/full_U00001.pt",
+      "bytes": 433302566,
+      "sha256": "4e745c1e3ceee70d5caf6593de4d7b985a7d8eef21e26e81ed2d6d7e66adf28d"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R0/1791007367_2222048/checkpoints/full_U00002.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R0/1791007367_2222048/checkpoints/full_U00002.pt",
+      "bytes": 433302694,
+      "sha256": "1155099e1ed6677a48cc065b51d1a8a6d4cd3ce48572d3072e30f0b161f9b664"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R0/1791007367_2222048/checkpoints/full_U00001.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R0/1791007367_2222048/checkpoints/full_U00001.pt",
+      "bytes": 433302694,
+      "sha256": "260c332703e5e91537a655b2894b5670a42dc4efa976d8bfaf8203b7fa63d8b5"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R08/1791007543_2322719/checkpoints/full_U00001.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R08/1791007543_2322719/checkpoints/full_U00001.pt",
+      "bytes": 433302630,
+      "sha256": "9ec1d139108e34a7823e1f438b4ce415266a077ea5bf9d3639b4983617749d74"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R08/1791007543_2322719/checkpoints/full_U00002.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/a100_resume_20261003/v4_restormer_train2000_npu_20k_20261003/acceptance/R08/1791007543_2322719/checkpoints/full_U00002.pt",
+      "bytes": 433302630,
+      "sha256": "c63788aefeef68a84fa380424f7c1b0d15961f211b5dfef4121deccb4abf5f64"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_final_v1/cpu/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_final_v1/cpu/D0/full_state_U0.pt",
+      "bytes": 216677653,
+      "sha256": "c6c113cfa3947a80a7231d913ba8ba5269f03390e4b45e7bf0cdfe83f6fed75d"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_v1/cpu/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_v1/cpu/D0/full_state_U0.pt",
+      "bytes": 216677653,
+      "sha256": "059e8ed0fd5859296df97d7559ed1a9ec957ca4ecba24169648063c2777c28a4"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_offload_v1/cpu/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_offload_v1/cpu/D0/full_state_U0.pt",
+      "bytes": 216677589,
+      "sha256": "0add3fee51757f40e03c582a8e1682ad756e00fd30b1d099e3197d8362e9b52f"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_v2/cpu/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_restormer_candidate_20261002/reports/acceptance_v2/cpu/D0/full_state_U0.pt",
+      "bytes": 216677589,
+      "sha256": "67711fb0ed6ad8b1ca2e5d160bf81c6fe45c4e9bb47a356f531b6bb33c137118"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/D0/full_state_U0.pt",
+      "bytes": 157282477,
+      "sha256": "e842f079083b040a5cd58716403a3d368eda2f93534a63d2bbf524c9f78a948a"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/L08/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/L08/full_state_U0.pt",
+      "bytes": 157282477,
+      "sha256": "302aa097465b5e2e73c7e5aafb7084db81872292abdcf133c89c730ccae68ef8"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/R0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/R0/full_state_U0.pt",
+      "bytes": 157282477,
+      "sha256": "ce944d43e9fafa24505bec274daa2daee9107e89230f0cb66460c2e7b744b4a0"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/R08/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/gpu_acceptance_v1/R08/full_state_U0.pt",
+      "bytes": 157282477,
+      "sha256": "399ba0a62de47736ea3055d1b20a39b9d361154447cdebea4d1c477558fd3f50"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/cpu_acceptance_v1/D0/full_state_U0.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_matched4_20261001/reports/cpu_acceptance_v1/D0/full_state_U0.pt",
+      "bytes": 157259621,
+      "sha256": "0875f257d368be1c539a5c54bbdffd8d9a0b06e0bd6c497f8e045be6ed507e00"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/temporary_untrained_candidate.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/temporary_untrained_candidate.pt",
+      "bytes": 78650564,
+      "sha256": "ad8c2095d72225abd9859e380d44fdba584e6f03ffec77e4a8102b3f64957a91"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/intentionally_invalid_configuration.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/intentionally_invalid_configuration.pt",
+      "bytes": 78641745,
+      "sha256": "26efd9f6a311b95108b4a9d240cac3f84ee28589aeb164c5dafbd278c9b2d68f"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/temporary_untrained_backward.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/temporary_untrained_backward.pt",
+      "bytes": 78649749,
+      "sha256": "7fa3979c77ad6978f387b281dfb5d45c60f6985c2d3f7cc48dc168cc4b88f181"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/intentionally_invalid_architecture.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_pirn_backbone_candidate_20260929/reports/intentionally_invalid_architecture.pt",
+      "bytes": 78640930,
+      "sha256": "1139c2b9e55a412e88e8b1573eb4fcdbbf332499bfeb742c1e2698ffaf00d600"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/D0/checkpoints/full_U39000.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/D0/checkpoints/full_U39000.pt",
+      "bytes": 1885308879,
+      "sha256": "511644efa07fff140e86f3617539ede755e32e3c72891946ac375acd74de1e77"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R0/checkpoints/full_U39000.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R0/checkpoints/full_U39000.pt",
+      "bytes": 1885308879,
+      "sha256": "8bdf6df0d3369fa3176aaaa4c6ce37b96dd73b92e2be8f8a77cac648ad027b49"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R08/checkpoints/full_U32000.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/R08/checkpoints/full_U32000.pt",
+      "bytes": 1885308879,
+      "sha256": "b7f1b2d0647be667936930affd98030827d09a976ab803ad2f7a7d51bdb4f60b"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/L08/checkpoints/full_U21000.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_nafnet_train15000_20261013/runs/L08/checkpoints/full_U21000.pt",
+      "bytes": 1885308879,
+      "sha256": "a8446f2fcc3606a694cd244a04174f6aa9df7fe6633d8e08b402d402ac4e5320"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_followup_pilot_train15000_20261013/runs/D0/checkpoints/full_U00900.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_followup_pilot_train15000_20261013/runs/D0/checkpoints/full_U00900.pt",
+      "bytes": 1885305167,
+      "sha256": "64a8b377bc13bd3e37402543bb7741c0556625762a24463d1025ba3020c29f4b"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_followup_pilot_train15000_20261013/runs/CONT_DELTA_R0/checkpoints/full_U00100.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_followup_pilot_train15000_20261013/runs/CONT_DELTA_R0/checkpoints/full_U00100.pt",
+      "bytes": 1885305167,
+      "sha256": "62c6102cbb3eb7f54d84823ce220569cf69808bba2c305594b1909b4af19048e"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_followup_pilot_lr5e6_attempt2_20261014/runs/CONT_DELTA_R0/checkpoints/full_U00900.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_followup_pilot_lr5e6_attempt2_20261014/runs/CONT_DELTA_R0/checkpoints/full_U00900.pt",
+      "bytes": 1885305167,
+      "sha256": "e4cbcf27dc37daffafd5ab7f59d2bab3285acfe906a170ea0e32bc9d699e2432"
+    },
+    {
+      "source_path": "/home/zhuzhiyu/yanglin/turbulence_ir/versions/v4_noise_bridge/implementations/v4_followup_pilot_lr5e6_attempt2_20261014/runs/D0/checkpoints/full_U00900.pt",
+      "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files/files/versions/v4_noise_bridge/implementations/v4_followup_pilot_lr5e6_attempt2_20261014/runs/D0/checkpoints/full_U00900.pt",
+      "bytes": 1885305167,
+      "sha256": "8984a278f539b675402063d298d450b3c5e788ce9be22b98dd1e0aed289e0172"
+    }
+  ]
+}

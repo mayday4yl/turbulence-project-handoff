@@ -1,0 +1,1596 @@
+{
+  "schema": "independent_unidb_final_metadata_review_v1",
+  "status": "PASS_METADATA_ONLY_NOT_FINAL_DELIVERY",
+  "checked_local": "2026-11-04T01:42:58.007738+08:00",
+  "deadline_unix": 1793721600,
+  "scope": "Read-only local JSON/source crosschecks. No checkpoint tensor loading or saved-output metric recomputation. This does not substitute CPU output audit, real process-exit audit, local payload backup or root final visual QA.",
+  "script_sha256": "12a38dc5d0af871667916f851522981e78d0153947c85e801a46d792d10604d2",
+  "check_count": 145,
+  "checks": [
+    {
+      "check": "frozen RUN_SOURCE manifest SHA",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "authority absolute deadline",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source training_worker.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source controller.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source audit_state.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source improved_objective.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source validation.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source protocol/AUDIT_STATE_FROZEN_TOLERANCES.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source protocol/SHARED_CONTEXTS.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source scripts/test_extension_worker_state.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source scripts/test_midnight_auditor_metadata.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source tests/test_controller_owned_cleanup.py",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/EXTENSION_WORKER_CPU_SELFTEST.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/EXTENSION_AUDITOR_CPU_TESTS.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/EXTENSION_CONTROLLER_CLEANUP_MOCK_TESTS.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/MIDNIGHT_TRAINING_SOURCE_REVIEW.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/MIDNIGHT_TRAINING_INDEPENDENT_REVIEW.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source protocol/USER_AUTHORITY.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/PARENT_STATE_AUDIT_original.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "frozen local source evidence/PARENT_STATE_AUDIT_improved.json",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "actual formal START acceptance",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original actual START full categories bitwise",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved actual START full categories bitwise",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "model pipeline status only",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "remote log extraction is metadata only",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original explicit resume parent",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original complete parent audit",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original parent audit byte binding",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original configuration source and recipe",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original historical D0 or official SR lineage",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original deadline boundary status",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original terminal all-rank RAW consensus",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original terminal RESULT all ranks",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 0 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 0 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 0 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 1 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 1 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 1 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 2 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 2 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 2 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank log metadata count",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 0 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 0 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 1 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 1 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 2 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original rank 2 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original first and terminal B96 exact positions",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original terminal all ranks common completion clock",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original BEST full selection protocol",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest independent auditor frozen identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest checkpoint role identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest update/cursor/strength accounting",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest complete RAW EMA Adam RNG",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest every parameter and moment schema",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest extension and schedule ancestry",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest full5000 protocol and EMA identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest model completion embedded role equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest G0.5 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest G1 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest G2 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest G3 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:latest G4 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best independent auditor frozen identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best checkpoint role identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best update/cursor/strength accounting",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best complete RAW EMA Adam RNG",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best every parameter and moment schema",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best extension and schedule ancestry",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best full5000 protocol and EMA identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best BEST embedded full SUMMARY equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best model completion embedded role equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best G0.5 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best G1 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best G2 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best G3 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original:best G4 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved explicit resume parent",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved complete parent audit",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved parent audit byte binding",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved configuration source and recipe",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved historical D0 or official SR lineage",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved deadline boundary status",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved terminal all-rank RAW consensus",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved terminal RESULT all ranks",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 0 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 0 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 0 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 1 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 1 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 1 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 2 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 2 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 2 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 3 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 3 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 3 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 4 final state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 4 EXIT receipt",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 4 EXIT identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank log metadata count",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 0 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 0 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 1 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 1 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 2 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 2 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 3 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 3 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 4 first-last update metadata",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved rank 4 terminal record not duplicated",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved first and terminal B96 exact positions",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved terminal all ranks common completion clock",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved BEST full selection protocol",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest independent auditor frozen identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest checkpoint role identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest update/cursor/strength accounting",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest complete RAW EMA Adam RNG",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest every parameter and moment schema",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest extension and schedule ancestry",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest full5000 protocol and EMA identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest model completion embedded role equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest G0.5 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest G1 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest G2 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest G3 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:latest G4 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best independent auditor frozen identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best checkpoint role identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best update/cursor/strength accounting",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best complete RAW EMA Adam RNG",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best every parameter and moment schema",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best historical auditor own authority preserved",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best full5000 protocol and EMA identity",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best BEST embedded full SUMMARY equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best model completion embedded role equality",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best G0.5 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best G1 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best G2 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best G3 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "improved:best G4 all four scalar metrics finite",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "original BEST equals LATEST actual state",
+      "PASS": true,
+      "detail": null
+    },
+    {
+      "check": "four logical roles represent three unique checkpoints",
+      "PASS": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "roles": {
+    "original:latest": {
+      "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+      "bytes": 2194706863,
+      "cursor": 6449280,
+      "initial_update": 45411,
+      "new_updates": 21769,
+      "physical_world_size": 3,
+      "RAW_digest": "37fc54ba28f01bcbe000356202d6b554e87e5072e57021600f2eb38e2cd368d8",
+      "EMA_digest": "bf6013431ffbf354524271ff98391f6116d0bc19cdfcd04d6d70e99e7547de1a",
+      "Adam_step": 67180,
+      "EMA_step": 67180,
+      "Adam_lr": 1e-05,
+      "RNG_banks": 8,
+      "state_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+        "bytes": 205744,
+        "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305"
+      },
+      "summary": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+        "bytes": 1492,
+        "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385"
+      },
+      "summary_mirror_kind": "canonical local mirror"
+    },
+    "original:best": {
+      "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+      "update": 67180,
+      "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+      "bytes": 2194706863,
+      "cursor": 6449280,
+      "initial_update": 45411,
+      "new_updates": 21769,
+      "physical_world_size": 3,
+      "RAW_digest": "37fc54ba28f01bcbe000356202d6b554e87e5072e57021600f2eb38e2cd368d8",
+      "EMA_digest": "bf6013431ffbf354524271ff98391f6116d0bc19cdfcd04d6d70e99e7547de1a",
+      "Adam_step": 67180,
+      "EMA_step": 67180,
+      "Adam_lr": 1e-05,
+      "RNG_banks": 8,
+      "state_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+        "bytes": 205744,
+        "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3"
+      },
+      "summary": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+        "bytes": 1492,
+        "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385"
+      },
+      "summary_mirror_kind": "canonical local mirror"
+    },
+    "improved:latest": {
+      "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00040848.pt",
+      "update": 40848,
+      "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+      "bytes": 2194679415,
+      "cursor": 3921408,
+      "initial_update": 0,
+      "new_updates": 40848,
+      "physical_world_size": 5,
+      "RAW_digest": "6a2a8bbb437c2f24385b70e297b6a9be7981e8b8c880c798685650c5bb8f3557",
+      "EMA_digest": "a692313e6253e5c6f24eadc3d66772e7ab42f9410704547369bed3576ce1619f",
+      "Adam_step": 40848,
+      "EMA_step": 40848,
+      "Adam_lr": 2e-07,
+      "RNG_banks": 5,
+      "state_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+        "bytes": 204153,
+        "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932"
+      },
+      "summary": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+        "bytes": 1486,
+        "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542"
+      },
+      "summary_mirror_kind": "canonical local mirror"
+    },
+    "improved:best": {
+      "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00010000.pt",
+      "update": 10000,
+      "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+      "bytes": 2194675639,
+      "cursor": 960000,
+      "initial_update": 0,
+      "new_updates": 10000,
+      "physical_world_size": 5,
+      "RAW_digest": "afc240bfdfc0382d5f764085e32ba93abf14b74aa1f260eb528e4d7d1edeb321",
+      "EMA_digest": "76e79eddd13b9b482d9ee28ad37b56a6ccad60c1ad61d7d96683a05edc119fc0",
+      "Adam_step": 10000,
+      "EMA_step": 10000,
+      "Adam_lr": 1.2208551879650922e-06,
+      "RNG_banks": 5,
+      "state_audit": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+        "bytes": 203255,
+        "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f"
+      },
+      "summary": {
+        "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/briefing_20261103_1900/snapshot_1900/sources/noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+        "bytes": 1490,
+        "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044"
+      },
+      "summary_mirror_kind": "immutable 19:00 snapshot of same historical full SUMMARY, byte-bound locally; current BEST embedded object independently equal"
+    }
+  },
+  "deadline_update_metadata": {
+    "original": {
+      "last_update": 67180,
+      "extension_updates": 5416,
+      "extension_presentations": 519936,
+      "all_rank_log_record_counts": [
+        5416,
+        5416,
+        5416
+      ],
+      "last_started_unix": [
+        1793721598.9611814,
+        1793721598.9616215,
+        1793721598.9616137
+      ],
+      "last_completed_unix": 1793721601.7178423,
+      "completion_after_deadline_seconds": 1.7178423404693604,
+      "records_started_at_or_after_deadline": [
+        0,
+        0,
+        0
+      ],
+      "stop_detected_unix": 1793721601.722363,
+      "remote_log_sha256": [
+        "c947310847b93a7cba53c9e17f2dd68b7cab98f7053fcf5d29a578032c52a5f2",
+        "4d96609cac8ec55d79c0158a210eaedbe9715f6fc4a657fb169c2014954aedea",
+        "ac4ec42c04fbeca59a43174a8a1d1b5ba059976ef1db802e1ad39b78b61fccac"
+      ]
+    },
+    "improved": {
+      "last_update": 40848,
+      "extension_updates": 10848,
+      "extension_presentations": 1041408,
+      "all_rank_log_record_counts": [
+        10848,
+        10848,
+        10848,
+        10848,
+        10848
+      ],
+      "last_started_unix": [
+        1793721598.8729763,
+        1793721598.87336,
+        1793721598.873355,
+        1793721598.8733687,
+        1793721598.8734221
+      ],
+      "last_completed_unix": 1793721600.3538404,
+      "completion_after_deadline_seconds": 0.35384035110473633,
+      "records_started_at_or_after_deadline": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stop_detected_unix": 1793721600.3584962,
+      "remote_log_sha256": [
+        "8f3f455e971fd7e445fb52a59dd639dbe034e22cf86389de59341b54fe0653cf",
+        "0e8783c64d3d6369f77e0d2f942464c27f038986bdc3748e2c7f4b4163a8e80e",
+        "2adc6a1b2db5240d704dd5914a1ca91a09ec30d7fc16e2bc185d9e470461e283",
+        "b486925947ff718d69f895bdc5ad0ca4be6b11a5187978ab60227547745e12e6",
+        "d15c4d40dd1784e0af07308ed780efa316ba2290c6c250fcb2e87a90eaabc170"
+      ]
+    }
+  },
+  "current_postprocess_snapshot": {
+    "REPORT_STATUS": {
+      "status": "FINAL_CPU_AUDITED_VISUAL_QA_PENDING",
+      "final_requested": true,
+      "final_requirements_pass": true,
+      "pending": [],
+      "root_status": {
+        "status": "MODEL_VALIDATION_COMPLETE_CPU_QA_PENDING",
+        "controller": {
+          "pid": 1969261,
+          "start_ticks": "598504915"
+        },
+        "deadline_unix": 1793721600,
+        "unix": 1793726439.4251113,
+        "branches": {
+          "improved": {
+            "status": "COMPLETE",
+            "update": 40848,
+            "new_updates": 40848,
+            "extension_start_update": 30000,
+            "extension_new_updates": 10848,
+            "extension_start_cursor": 2880000,
+            "extension_new_presentations": 1041408,
+            "stop_reason": "deadline",
+            "final_full_validation_done": true,
+            "completed_unix": 1793724474.4858856
+          },
+          "original": {
+            "status": "COMPLETE",
+            "update": 67180,
+            "new_updates": 21769,
+            "extension_start_update": 61764,
+            "extension_new_updates": 5416,
+            "extension_start_cursor": 5929344,
+            "extension_new_presentations": 519936,
+            "stop_reason": "deadline",
+            "final_full_validation_done": true,
+            "completed_unix": 1793726366.04937
+          }
+        }
+      },
+      "branches": [
+        {
+          "branch": "original",
+          "physical_NPUs": 3,
+          "initial_update": 45411,
+          "committed_new_updates": 21769,
+          "new_presentations": 2089824,
+          "last_global_update": 67180,
+          "last_completed_log_update": 67180,
+          "prior_last_completed_update": 61764,
+          "prior_last_completed_unix": 1793700000.280129,
+          "extension_first_started_update": 61765,
+          "extension_first_update_started_unix": 1793701046.6302958,
+          "prior_last_completed_local_iso": "2026-11-03T18:00:00+08:00",
+          "extension_first_update_started_local_iso": "2026-11-03T18:17:26+08:00",
+          "recorded_update_gap_seconds": 1046.350166797638,
+          "recorded_update_gap_minutes": 17.4391694466273,
+          "recorded_update_gap_scope": "Last prior-stage committed update completed to first current extension update started; includes validation, handoff, engineering gates and initialization; not pure idle time.",
+          "extension_parent_update": 61764,
+          "extension_parent_checkpoint": "/data2/yanglin/unidb_dual_20261103_until18/runs/original/checkpoints/U00061764.pt",
+          "extension_parent_checkpoint_sha256": "d8b6e9bafac6f8d7368a9418f9bcc46b9e4838d7f3a7652028144c42dc1b471a",
+          "before_extension_updates": 16353,
+          "extension_new_updates": 5416,
+          "extension_new_presentations": 519936,
+          "recorded_committed_rows": 21769,
+          "extension_recorded_rows": 5416,
+          "first_formal_actor_start_unix": 1793641236.5967605,
+          "extension_first_actor_start_unix": 1793700973.1972897,
+          "training_stop_detection_unix": 1793721601.722363,
+          "final_evaluation_completed_unix": 1793726366.04937,
+          "extra_discarded_completed_updates": 0,
+          "extra_recorded_presentations": 0,
+          "recovery_record_files": 0,
+          "extension_extra_discarded_updates": 0,
+          "formal_actor_attempts": 3,
+          "extension_actor_attempts": 1,
+          "configured_cards": "0,1,2",
+          "last_completed_unix": 1793721601.7178423,
+          "rank0_recorded_update_seconds": 60619.74483847618,
+          "extension_rank0_recorded_update_seconds": 14933.392598628998,
+          "worker_status": "COMPLETE",
+          "latest_checkpoint_update": 67180,
+          "best_full_update": 67180,
+          "best_full_stage": "until00_extension",
+          "best_monitor_update": 66411,
+          "best_monitor_g4_psnr": 16.62029915640781,
+          "best_monitor_summary": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00066411_ema_monitor/SUMMARY.json",
+          "best_monitor_summary_sha256": "f35d5ccd7a758c997f75d41d314cc76824a91dd685d0ce9c9409876b4107af45",
+          "extension_best_monitor_update": 66411,
+          "extension_best_monitor_g4_psnr": 16.62029915640781,
+          "first_formal_actor_start_local_iso": "2026-11-03T01:40:36+08:00",
+          "extension_first_actor_start_local_iso": "2026-11-03T18:16:13+08:00",
+          "training_stop_detection_local_iso": "2026-11-04T00:00:01+08:00",
+          "final_evaluation_completed_local_iso": "2026-11-04T01:19:26+08:00"
+        },
+        {
+          "branch": "improved",
+          "physical_NPUs": 5,
+          "initial_update": 0,
+          "committed_new_updates": 40848,
+          "new_presentations": 3921408,
+          "last_global_update": 40848,
+          "last_completed_log_update": 40848,
+          "prior_last_completed_update": 30000,
+          "prior_last_completed_unix": 1793697829.161769,
+          "extension_first_started_update": 30001,
+          "extension_first_update_started_unix": 1793701053.4816117,
+          "prior_last_completed_local_iso": "2026-11-03T17:23:49+08:00",
+          "extension_first_update_started_local_iso": "2026-11-03T18:17:33+08:00",
+          "recorded_update_gap_seconds": 3224.319842815399,
+          "recorded_update_gap_minutes": 53.73866404692332,
+          "recorded_update_gap_scope": "Last prior-stage committed update completed to first current extension update started; includes validation, handoff, engineering gates and initialization; not pure idle time.",
+          "extension_parent_update": 30000,
+          "extension_parent_checkpoint": "/data2/yanglin/unidb_dual_20261103_until18/runs/improved/checkpoints/U00030000.pt",
+          "extension_parent_checkpoint_sha256": "71b3547cb2f65b0c7e8bfc7ad434f620f9349ebc523a586871541cb373594bbd",
+          "before_extension_updates": 30000,
+          "extension_new_updates": 10848,
+          "extension_new_presentations": 1041408,
+          "recorded_committed_rows": 40848,
+          "extension_recorded_rows": 10848,
+          "first_formal_actor_start_unix": 1793641236.59952,
+          "extension_first_actor_start_unix": 1793700973.200977,
+          "training_stop_detection_unix": 1793721600.3584962,
+          "final_evaluation_completed_unix": 1793724474.4858856,
+          "extra_discarded_completed_updates": 0,
+          "extra_recorded_presentations": 0,
+          "recovery_record_files": 0,
+          "extension_extra_discarded_updates": 0,
+          "formal_actor_attempts": 3,
+          "extension_actor_attempts": 1,
+          "configured_cards": "3,4,5,6,7",
+          "last_completed_unix": 1793721600.3538404,
+          "rank0_recorded_update_seconds": 60928.817237615585,
+          "extension_rank0_recorded_update_seconds": 16142.975895881653,
+          "worker_status": "COMPLETE",
+          "latest_checkpoint_update": 40848,
+          "best_full_update": 10000,
+          "best_full_stage": "until_noon",
+          "best_monitor_update": 3000,
+          "best_monitor_g4_psnr": 18.61586053227808,
+          "best_monitor_summary": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00003000_ema_monitor/SUMMARY.json",
+          "best_monitor_summary_sha256": "ddb91f01b776a35fec8808959cbe6333e4bf263706cf03a44b9b0ec1e2d4436a",
+          "extension_best_monitor_update": 39000,
+          "extension_best_monitor_g4_psnr": 13.779429510553719,
+          "first_formal_actor_start_local_iso": "2026-11-03T01:40:36+08:00",
+          "extension_first_actor_start_local_iso": "2026-11-03T18:16:13+08:00",
+          "training_stop_detection_local_iso": "2026-11-04T00:00:00+08:00",
+          "final_evaluation_completed_local_iso": "2026-11-04T00:47:54+08:00"
+        }
+      ],
+      "report": "/data2/yanglin/unidb_dual_20261104_until00/report/FINAL_REPORT_ZH.md",
+      "fixed_sources": [
+        "Places365_val_00000076.jpg",
+        "Places365_val_00000223.jpg"
+      ],
+      "new_restoration_network_calls": 0,
+      "metric_network_calls": 0,
+      "optimizer_updates_by_reporter": 0,
+      "cpu_cost_provenance": {
+        "historical": {
+          "scope": "historical_completed_audits",
+          "source_aggregate": "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+          "source_sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+          "source_aggregates": [
+            {
+              "source_aggregate": "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+              "source_sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+              "CPU_metric_forward_batches": 1250,
+              "CPU_metric_model_constructions": 1
+            }
+          ],
+          "unique_validation_signatures": 1,
+          "CPU_metric_forward_batches": 1250,
+          "CPU_metric_model_constructions": 1,
+          "reporter_model_calls": 0,
+          "cost_role": "Historical genuine invocation receipts only; copied receipts do not add cost."
+        },
+        "current": {
+          "scope": "current_extension_finalizer_invocation",
+          "source_aggregate": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+          "source_sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+          "invocation_receipt_present": true,
+          "unique_validation_signatures": 3,
+          "CPU_metric_forward_batches": 2500,
+          "CPU_metric_model_constructions": 1,
+          "cache_reused_unique_signatures": 1,
+          "reporter_model_calls": 0,
+          "cost_role": "Actual current wrapper receipt; cache hits add zero metric forwards."
+        },
+        "reporter": {
+          "scope": "this_reporter_invocation",
+          "CPU_metric_forward_batches": 0,
+          "CPU_metric_model_constructions": 0,
+          "reporter_metric_model_calls": 0,
+          "reporter_restoration_model_calls": 0,
+          "optimizer_updates": 0,
+          "NPU_calls": 0
+        },
+        "validation_rows": [
+          {
+            "validation_signature": "94eafe4832202ae9f044a19c2ff2de89acee239446cd026d13f48e9b1ca20242",
+            "validation": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/validation/U00010000_ema_full",
+            "branch": "improved",
+            "update": 10000,
+            "summary_sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044",
+            "historical_recorded_metric_forward_batches": 1250,
+            "current_wrapper_aggregate": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+            "current_wrapper_aggregate_sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+            "current_invocation_metric_forward_batches": 0,
+            "current_invocation_reused_cache": true,
+            "reporter_metric_model_calls": 0,
+            "reporter_restoration_model_calls": 0
+          },
+          {
+            "validation_signature": "c471afa146ed88dbe905dfc8cab3da1de8ec1bc6f02c07c8642734d4af98f05b",
+            "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full",
+            "branch": "improved",
+            "update": 40848,
+            "summary_sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542",
+            "historical_recorded_metric_forward_batches": 0,
+            "current_wrapper_aggregate": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+            "current_wrapper_aggregate_sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+            "current_invocation_metric_forward_batches": 1250,
+            "current_invocation_reused_cache": false,
+            "reporter_metric_model_calls": 0,
+            "reporter_restoration_model_calls": 0
+          },
+          {
+            "validation_signature": "f5ea41cb10623968d7c268a2d878e38f508ac7eff43acbb876d5dbe022530bcf",
+            "validation": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full",
+            "branch": "original",
+            "update": 67180,
+            "summary_sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385",
+            "historical_recorded_metric_forward_batches": 0,
+            "current_wrapper_aggregate": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+            "current_wrapper_aggregate_sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+            "current_invocation_metric_forward_batches": 1250,
+            "current_invocation_reused_cache": false,
+            "reporter_metric_model_calls": 0,
+            "reporter_restoration_model_calls": 0
+          }
+        ],
+        "scope_rows": [
+          {
+            "scope": "historical_completed_audits",
+            "source_aggregate": "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+            "source_sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+            "source_aggregates": [
+              {
+                "source_aggregate": "/data2/yanglin/unidb_dual_20261103_until_noon/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+                "source_sha256": "a884f0acc075d9b68b36e926dbddc17e45df8a41c0c035e91f07386c488c3b8e",
+                "CPU_metric_forward_batches": 1250,
+                "CPU_metric_model_constructions": 1
+              }
+            ],
+            "unique_validation_signatures": 1,
+            "CPU_metric_forward_batches": 1250,
+            "CPU_metric_model_constructions": 1,
+            "reporter_model_calls": 0,
+            "cost_role": "Historical genuine invocation receipts only; copied receipts do not add cost."
+          },
+          {
+            "scope": "current_extension_finalizer_invocation",
+            "source_aggregate": "/data2/yanglin/unidb_dual_20261104_until00/evidence/FINAL_OUTPUTS_CPU_AUDIT.json",
+            "source_sha256": "b54d27e73504d6a7955a5c22a3382e8e5f943dee5619e2f8afdc9a6e5ae11526",
+            "invocation_receipt_present": true,
+            "unique_validation_signatures": 3,
+            "CPU_metric_forward_batches": 2500,
+            "CPU_metric_model_constructions": 1,
+            "cache_reused_unique_signatures": 1,
+            "reporter_model_calls": 0,
+            "cost_role": "Actual current wrapper receipt; cache hits add zero metric forwards."
+          },
+          {
+            "scope": "this_reporter_invocation",
+            "CPU_metric_forward_batches": 0,
+            "CPU_metric_model_constructions": 0,
+            "reporter_metric_model_calls": 0,
+            "reporter_restoration_model_calls": 0,
+            "optimizer_updates": 0,
+            "NPU_calls": 0
+          }
+        ],
+        "copied_historical_aggregate_not_new_invocation": false,
+        "deduplication": "Canonical validation signatures and genuine invocation aggregate SHA; copied receipts and cached reference totals never add fresh work."
+      },
+      "shared_contexts_source": "/data2/yanglin/unidb_dual_20261104_until00/protocol/SHARED_CONTEXTS.json",
+      "figure_reused": false,
+      "visual_qa_pass": false,
+      "generated_unix": 1793727575.242051
+    },
+    "CPU_FINALIZER_status": "CPU_AUDIT_AND_REPORT_PASS_VISUAL_AND_LOCAL_DELIVERY_PENDING",
+    "CPU_FINALIZER_snapshot_unix": 1793727575.7156825,
+    "independent_CPU_completion_claim": false
+  },
+  "limitations": [
+    "Existing full-state CPU auditors performed prior torch.load; this reviewer only verified their schema, all per-parameter metadata and SHA/source bindings, with 0 torch.load.",
+    "Final rank log SHA/count/first/last/no-post-deadline-start summaries were generated remotely by the root pure-stdlib extraction. The 150MB full logs were not transferred or re-read by this reviewer; middle-row continuity is not independently established here.",
+    "Historical improved U10000 standalone SUMMARY was read from immutable 19:00 snapshot and matched current BEST embedded SUMMARY and newly audited EMA digest exactly; canonical historical directory is not locally mirrored.",
+    "Rank EXIT receipts prove worker cleanup requests and identities, not actual absence of all OS descendants. Independent full PGID/SID/CPU process-exit audit remains required.",
+    "Scalar metric metadata is not the independent saved-prediction SHA/PSNR/SSIM/MAE/LPIPS audit. No metric, weight or prediction payload was read here.",
+    "Best means selected best among completed full-validation candidates in this campaign, not the monitor-only historical U3000, official U0, or scientific success."
+  ],
+  "required_final_delivery_bindings": [
+    "Exact four logical roles with checkpoint path/SHA/update/cursor/bytes; original best/latest share one unique checkpoint, improved best is historical U10000.",
+    "Each actual STATE_AUDIT file SHA, frozen auditor/policy/source/authority SHA, RAW and EMA full digests, Adam/EMA steps, RNG/loader structure and ancestry acceptance.",
+    "Same EMA digest and complete5000 SUMMARY SHA, five strengths x1000/250source, exact protocol, complete saved-prediction independent CPU audit candidate signature and all four metrics.",
+    "Deadline1793721600, terminal8rank log metadata/full consensus/RESULT/STOP clocks and cursor96U; inherited D0 and two extension update counts separately.",
+    "Actual CPU_POSTPROCESS_ACCEPTANCE and FINAL_READY/root visual QA, all three campaign owned-process exit audit, unique best/latest backup receipt including fresh role binding, and requested original_route seven fresh PNGs.",
+    "Local small-file sync manifest and refreshed handoff final history/evidence/state/registers; final DOCX/PDF/all-page PNG root QA. Do not mark any of these complete from this metadata review."
+  ],
+  "operations": {
+    "torch_load": 0,
+    "new_model_calls": 0,
+    "optimizer_updates": 0,
+    "NPU_calls": 0,
+    "network_calls": 0,
+    "checkpoint_payload_reads": 0,
+    "original_files_modified": 0
+  },
+  "sources": [
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/USER_AUTHORITY.json",
+      "bytes": 6719,
+      "sha256": "ab1db7d9a715dc08b4e7f15124d12b64ec1709349a44058d2db3b9ccbf9ebd22"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/RUN_SOURCE.json",
+      "bytes": 2264,
+      "sha256": "666fb21632326820a519d3c23fcf2ab0f6fa6487a6040fa106abadaa6ca7ab2a"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/training_worker.py",
+      "bytes": 39128,
+      "sha256": "81aac46fe9150fdc36d858d33275c0a34ae9d5e5a1b8acc9cb3cb5b06c9ea2c1"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/controller.py",
+      "bytes": 22391,
+      "sha256": "7819e3efa7dd72a20126fc3b1241ea15b8689a8d6d708a6c64caa11c104c0038"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/audit_state.py",
+      "bytes": 33503,
+      "sha256": "481710f049c97efff7def9d567685290e1ed370b3eb251270bbacaeb1ace5a39"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/improved_objective.py",
+      "bytes": 4936,
+      "sha256": "20aa4a11a11494436186ac3a8ad1ff56e47ed1b277ba7a5b9b3d21c45060ba98"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/validation.py",
+      "bytes": 8514,
+      "sha256": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/AUDIT_STATE_FROZEN_TOLERANCES.json",
+      "bytes": 887,
+      "sha256": "61bc51ce136f314de7cbbf8ea62c0c6dd1def3cce8881e03b9913879f76a7d3e"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/protocol/SHARED_CONTEXTS.json",
+      "bytes": 960,
+      "sha256": "11958217c598b9de23183ae8b357c5b3e79b9ef466070b4657d77ac3e7bb1bc4"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/scripts/test_extension_worker_state.py",
+      "bytes": 16550,
+      "sha256": "0fdf4ea3a860c869062c5fdade6daaf6207e2f36ae625960393706e2b8bd1811"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/scripts/test_midnight_auditor_metadata.py",
+      "bytes": 8922,
+      "sha256": "dc34828f42898d2594758c3f73c5a8bc92475ec8b54ac3a7702309212fd93594"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/tests/test_controller_owned_cleanup.py",
+      "bytes": 5347,
+      "sha256": "4b66b6cf9b9d0b3d939ec3035f0827940eb6fac52c671d60d0309ab884ed0a55"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/EXTENSION_WORKER_CPU_SELFTEST.json",
+      "bytes": 4414,
+      "sha256": "55bdf823e4297d9143b55d210bc8f7add8dd288ddb18e7bb11f58b3864f5dfbc"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/EXTENSION_AUDITOR_CPU_TESTS.json",
+      "bytes": 2966,
+      "sha256": "93ee0f87e80721be4e9f9b95e953cfa10cc5eff55e214a06550a352714abc3ee"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/EXTENSION_CONTROLLER_CLEANUP_MOCK_TESTS.json",
+      "bytes": 2224,
+      "sha256": "198b786e8acb3238ab95bb572a802a5d45bf3b515155f1e6f99e5eeaadbe05de"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/MIDNIGHT_TRAINING_SOURCE_REVIEW.json",
+      "bytes": 4927,
+      "sha256": "a0f4ddf9eb5add73a2f3bdd5c2588443045bb6bae9010768709052e509b9b2dc"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/MIDNIGHT_TRAINING_INDEPENDENT_REVIEW.json",
+      "bytes": 5300,
+      "sha256": "f359461a798bc068e865074a1f84f7b261a10e7493c8e9bd4ebf915d4298de46"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_original.json",
+      "bytes": 207920,
+      "sha256": "3f6d809fc4d1b18150c0ec4169b6ffefcebff955e1f57dca998e10a76df33f42"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/PARENT_STATE_AUDIT_improved.json",
+      "bytes": 206994,
+      "sha256": "acd6aa3dff5c34fb44876d5fd4cc1355e364e777acbe4207ddd614b1f700589b"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FORMAL_EXTENSION_STARTUP_ACCEPTANCE.json",
+      "bytes": 26079,
+      "sha256": "52ceff1af4db8878cf6d83f92ae5739167b36cc3d31e842ca36711f792337864"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/TRAINING_AND_MODEL_VALIDATION_COMPLETE.json",
+      "bytes": 7644,
+      "sha256": "07a9573f0652a2da61da276cce976faf8f6d04144e530534bb512a2bce35efc5"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/FINAL_RANK_UPDATE_METADATA.json",
+      "bytes": 121451,
+      "sha256": "b092f111dc7be5286418e496fb6218d55fc0d6b488d5d5af7eddc3a6a009243d"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/LATEST.json",
+      "bytes": 423,
+      "sha256": "aae55ad90bc64f03a6452215a18992e55bde5bf5b0e589e6f43122960e18c791"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/BEST.json",
+      "bytes": 2284,
+      "sha256": "a983a68e5f6cb6e89c2b9ab2ee833de2e154cca3e95f184d543e5980047498fc"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/CONFIG.json",
+      "bytes": 1531,
+      "sha256": "5831ac3ee3191a40d6441fb93e22dc23a16beac495fa5aed5a3884bec4bdd31c"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RESUME_IDENTITY.json",
+      "bytes": 1135,
+      "sha256": "e58d6785eb774afcc0e00c0cb554646a178f3e0065816af3d929ac75733da253"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/TRAINING_STOPPED.json",
+      "bytes": 306,
+      "sha256": "ba3f74deb9d8b25f7bf54773d5e0ac921588dfea0a86e681fae5aa27def664c6"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/FULL_SHA_FINAL.json",
+      "bytes": 425,
+      "sha256": "c9492070be983e9b1f3390cc9332d5988f464170c27dd5e7d80cd8e778d1e442"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RESULT.json",
+      "bytes": 4276,
+      "sha256": "5949c831078d5778858b0569b8116a51ff0592289aaaba4f65690d67c845fab4"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RESULT_rank0.json",
+      "bytes": 1088,
+      "sha256": "58a184b0a5f6da58becf06445eace80f1ffc486ba72b6569deace9aedabc283d"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/EXIT_rank0.json",
+      "bytes": 202,
+      "sha256": "be5c04ea22e6f8f44bda101ca8533b18858e3a49f90e729e2c29d6a120af9d54"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RANK_0.json",
+      "bytes": 142,
+      "sha256": "423ebefc9ddccc330ae647f97d25e169f5c242b5328592369839b1e336a82056"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RESULT_rank1.json",
+      "bytes": 1088,
+      "sha256": "3289b1d7d089e7f22ef6fe94ce0442e39f9e7240b175b2e9392c7e4d4861cd6b"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/EXIT_rank1.json",
+      "bytes": 203,
+      "sha256": "453e0292550207757b593b3c8fed46e80ef2f56d0ebb2ce4a96aff4d74f8fd8e"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RANK_1.json",
+      "bytes": 142,
+      "sha256": "1b13195cc16e5f3efff4ab429c5191628cb318edbcbbc1a0438b32958f388341"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RESULT_rank2.json",
+      "bytes": 1088,
+      "sha256": "d4dd464497dbe975ed76615d0b3b3fc2cfe75109d24c51f25c1415df0306483e"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/EXIT_rank2.json",
+      "bytes": 202,
+      "sha256": "1e3328d4db5a5f0115bcf30dddf427fc78f7c663df81b5de8b4428a214abe1c4"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/RANK_2.json",
+      "bytes": 142,
+      "sha256": "b86e582044ca9c34d10332866d0137aee1fea4bd6ca5b52f2005221647ee7639"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_FINAL.json",
+      "bytes": 205744,
+      "sha256": "06eb2247f51c1fc3a8ea6a30e64ee2b8967a8016b158e2e08a0500604a3bc305"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/original/validation/U00067180_ema_full/SUMMARY.json",
+      "bytes": 1492,
+      "sha256": "1142eea48234496b8e1d8490226383a8e0e17742408507a8675a6db6b850d385"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_original_BEST.json",
+      "bytes": 205744,
+      "sha256": "600cf2960b7dfd6bbcb5124d48c2da64cba92c4a96683da5bebb058a7d5599e3"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/LATEST.json",
+      "bytes": 423,
+      "sha256": "c1fb6830814c44422aea3eb1a823559eef77e022084a23dd91ef3d64f7981549"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/BEST.json",
+      "bytes": 2221,
+      "sha256": "799fb8774c86edf818f4fbd27a34ddca5b41f6fc5c4153294457711f3e163962"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/CONFIG.json",
+      "bytes": 1713,
+      "sha256": "6d42553ae7c8ffcc4cdf0415540c3145d7ac39f98922d34efd15db26ffafba6e"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESUME_IDENTITY.json",
+      "bytes": 1006,
+      "sha256": "a0be63bf5fc1f25b91ec52d0db6d29f5906ac2ca2c49676935dd10fb839104af"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/TRAINING_STOPPED.json",
+      "bytes": 309,
+      "sha256": "cfabeadecb861726e322efdb9a5983f047f7555a4a1bf00a8791687b36b02aed"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/FULL_SHA_FINAL.json",
+      "bytes": 570,
+      "sha256": "78c4770f587e62f27f53548ccc55379c155ec4100dfb268fb5ba7875e2282146"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT.json",
+      "bytes": 6751,
+      "sha256": "9f4cfa089f8c3a79fe9763b170d8323420566d96a5f3faa852f1897ec44dba89"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT_rank0.json",
+      "bytes": 1087,
+      "sha256": "15f60d22851ef45d1b961b03da456b3325316444b414f167c0946baba7005fda"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/EXIT_rank0.json",
+      "bytes": 203,
+      "sha256": "2441279d6640c137752d9cc49d72e26efed63cf874ce7a5df331d90773f41971"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RANK_0.json",
+      "bytes": 142,
+      "sha256": "de2993d60acc15d30f8c6b2c4a20bc32a5c86416c7d2434006938ce1711d45cd"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT_rank1.json",
+      "bytes": 1086,
+      "sha256": "53be721d2a677562d50876c7e13284b8ab79d1c29db1f847202495ff7198e793"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/EXIT_rank1.json",
+      "bytes": 203,
+      "sha256": "6b78c13acf46ef73623cc4f480c390186747abdecba4a5e2b7f6f16828d44285"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RANK_1.json",
+      "bytes": 142,
+      "sha256": "c351874c00c69347f958ae92377eaa0957bd8dd1000429fc34ee97dea7160917"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT_rank2.json",
+      "bytes": 1087,
+      "sha256": "ca353da01d03125a326e903507683f1a15169c562aedd74307ad3c93a433be9f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/EXIT_rank2.json",
+      "bytes": 203,
+      "sha256": "c8c513db636c24c1cbf54a157f56d9f71fcd80bab354e1875bafd4e7a7dc0b82"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RANK_2.json",
+      "bytes": 142,
+      "sha256": "5214e684a47c52c7d917a08401e7a169a0c62a4af5885d9b7d19b60f43d4ca72"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT_rank3.json",
+      "bytes": 1087,
+      "sha256": "dd69529b64273e5ea8aa6929a1bc604dd52c4a609447a11f1550e4aed464dc5b"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/EXIT_rank3.json",
+      "bytes": 203,
+      "sha256": "35a37fca114e2fa9a7540ae8271f5fc0d5033f3bc89e970b5aabc3e67249be33"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RANK_3.json",
+      "bytes": 142,
+      "sha256": "2a2a1501e65715a11f9a6405ccf34ba8cbeea3e43736bb2f9a6e0fe537b4a0f7"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RESULT_rank4.json",
+      "bytes": 1086,
+      "sha256": "dbea39503cda2256b99bd4a73ed7c503df47bad2829114b358192f4142d96e18"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/EXIT_rank4.json",
+      "bytes": 203,
+      "sha256": "186603a1bc8cc798ffa64d949e9e945adb2c335d7362621776123c635b54d645"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/RANK_4.json",
+      "bytes": 142,
+      "sha256": "c647ad730ff3d30f19a6169450f1780f5b52f04ae3c75196059e06b6dcacdf3c"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_FINAL.json",
+      "bytes": 204153,
+      "sha256": "4be0d931a32c3bc609d7a6a63c3aadbc86b0660939479718386afe933e03a932"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/runs/improved/validation/U00040848_ema_full/SUMMARY.json",
+      "bytes": 1486,
+      "sha256": "cb157802188519d6969d6b36ab6815494f0102bcf32ef4349542c0181bf83542"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/STATE_AUDIT_improved_BEST.json",
+      "bytes": 203255,
+      "sha256": "5356760e56a6b107891f27f96af00209849cef6fbb53c9a4ae74076117e4017f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/protocol/RUN_SOURCE.json",
+      "bytes": 1585,
+      "sha256": "cce8a7aa10ec256ee965cd4be978c8b9b3c0934c02f2c32e048bf59106b4d2aa"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/audit_state.py",
+      "bytes": 22894,
+      "sha256": "2a85ef1f9bf9794da17d3d2f42b674a1d3e71aa7846309777ce2178553b72697"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261103_until_noon/protocol/USER_AUTHORITY.json",
+      "bytes": 3246,
+      "sha256": "331bdb5d8e3198fc18a5fcc7d7658a82ce033709b255ee7e3562576e85f91d3f"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/briefing_20261103_1900/snapshot_1900/sources/noon/runs/improved/validation/U00010000_ema_full/SUMMARY.json",
+      "bytes": 1490,
+      "sha256": "350b094a2a7c32fd1e88370f75785f8b2ebb891ee056b6640145aa9569238044"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/report/REPORT_STATUS.json",
+      "bytes": 14193,
+      "sha256": "141dc34e98ba04212d9ea69c255b32957bf78ee60f821d37cd0c2d81489748c8"
+    },
+    {
+      "path": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/evidence/CPU_FINALIZER_STATUS.json",
+      "bytes": 177,
+      "sha256": "6a6c61b3e38dfc52be6b5b18ab8328473550cef84793afea646198175a32c84d"
+    }
+  ]
+}

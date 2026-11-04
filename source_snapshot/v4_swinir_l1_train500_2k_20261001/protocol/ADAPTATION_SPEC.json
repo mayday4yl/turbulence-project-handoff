@@ -1,0 +1,77 @@
+{
+  "purpose": "Inherited PiRN adapter identity and train500 normalization; live authorization is AUTHORIZATION.json and SCIENTIFIC_SPEC.json",
+  "normalization_file_sha256": "63565fc8fff255495b7329bd492fff9add30586e453b44fd087c1f789abf3502",
+  "stream_file_sha256": "9c5bab298786140a9c736cf5c794c95ce1861a13e1951438f0d7e81f8fa082a3",
+  "parent_methods": "v4_train500_matched_v2_perf1_eval5kfull",
+  "parent_backbone": "v4_pirn_backbone_candidate_20260929",
+  "groups": {
+    "D0": {
+      "group": "D0",
+      "T0": 0.0,
+      "path": "direct",
+      "predictions": "1",
+      "refinement": "N/A",
+      "common_runtime": "configs/runtime.json",
+      "common_initialization": "protocol/common_init.pt",
+      "loss": "path_mean(LC + 0.2 LR); batch_mean",
+      "learned_parameters": "shared+clean+realization",
+      "full_BPTT": true
+    },
+    "R0": {
+      "group": "R0",
+      "T0": 0.0,
+      "path": "physical",
+      "predictions": "G",
+      "refinement": "optional_serial",
+      "common_runtime": "configs/runtime.json",
+      "common_initialization": "protocol/common_init.pt",
+      "loss": "path_mean(LC + 0.2 LR); batch_mean",
+      "learned_parameters": "shared+clean+realization",
+      "full_BPTT": true
+    },
+    "R08": {
+      "group": "R08",
+      "T0": 0.8,
+      "path": "physical",
+      "predictions": "G",
+      "refinement": "optional_serial",
+      "common_runtime": "configs/runtime.json",
+      "common_initialization": "protocol/common_init.pt",
+      "loss": "path_mean(LC + 0.2 LR); batch_mean",
+      "learned_parameters": "shared+clean+realization",
+      "full_BPTT": true
+    },
+    "L08": {
+      "group": "L08",
+      "T0": 0.8,
+      "path": "linear",
+      "predictions": "G",
+      "refinement": "N/A",
+      "common_runtime": "configs/runtime.json",
+      "common_initialization": "protocol/common_init.pt",
+      "loss": "path_mean(LC + 0.2 LR); batch_mean",
+      "learned_parameters": "shared+clean+realization",
+      "full_BPTT": true
+    }
+  },
+  "invariants": {
+    "data": "train500 / val100; test disabled",
+    "loss": "mean per path of LC + 0.2 LR, then mean across starts",
+    "effective_batch": 32,
+    "microbatch_candidate": 2,
+    "accumulation": 16,
+    "precision": "FP32; autocast off; TF32 off",
+    "BPTT": "full through every transition",
+    "eta": "one fixed eta per start path; original deterministic seed namespace",
+    "initialization": "one immutable fresh PiRN initialization shared by all four methods",
+    "pretrained_PiRN_weights": false,
+    "refinement": "R0/R08 only; existing serial per sample 40-step xi optimizer; network frozen"
+  },
+  "schedule_note": "Original 10k start stream retained byte-identically and only first 2000 updates used. New 2k LR and L1 loss are defined by SCIENTIFIC_SPEC.json.",
+  "acceptance_scope": "Code integration and bounded correctness only; not restoration quality or convergence evidence.",
+  "parent_preparation_authorization": {
+    "network_optimizer_updates": 0,
+    "formal_training": false,
+    "old_runs": "read only, stopped"
+  }
+}

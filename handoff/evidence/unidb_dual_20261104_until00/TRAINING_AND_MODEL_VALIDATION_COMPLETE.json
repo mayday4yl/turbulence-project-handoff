@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "branches": {
+    "improved": {
+      "status": "PASS",
+      "exit_code": 0,
+      "result": {
+        "status": "COMPLETE",
+        "update": 40848,
+        "new_updates": 40848,
+        "extension_start_update": 30000,
+        "extension_new_updates": 10848,
+        "extension_start_cursor": 2880000,
+        "extension_new_presentations": 1041408,
+        "stop_reason": "deadline",
+        "final_full_validation_done": true,
+        "completed_unix": 1793724474.4858856
+      },
+      "latest": {
+        "status": "PASS",
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/improved/checkpoints/U00040848.pt",
+        "sha256": "11a19694f8fc2f4f343e97fab6d3a326759253dbb8eb6b68d2275e144e2cbfc9",
+        "bytes": 2194679415,
+        "update": 40848,
+        "cursor": 3921408,
+        "branch": "improved",
+        "phase": "formal",
+        "full_state": true,
+        "full_parameter_digest": "6a2a8bbb437c2f24385b70e297b6a9be7981e8b8c880c798685650c5bb8f3557"
+      },
+      "best": {
+        "status": "PASS",
+        "checkpoint": {
+          "status": "PASS",
+          "path": "/data2/yanglin/unidb_dual_20261103_until_noon/runs/improved/checkpoints/U00010000.pt",
+          "sha256": "728c30638ee41259c6302b53979f23e115e618c08dca7c2156db8f15e1105a75",
+          "bytes": 2194675639,
+          "update": 10000,
+          "cursor": 960000,
+          "branch": "improved",
+          "phase": "formal",
+          "full_state": true,
+          "full_parameter_digest": null
+        },
+        "update": 10000,
+        "weights": "EMA",
+        "selection_score": [
+          14.708871734557935,
+          -0.7719467279911041,
+          -10000
+        ],
+        "full": true,
+        "selection_role": "full_validation",
+        "summary": {
+          "status": "PASS",
+          "branch": "improved",
+          "update": 10000,
+          "weights": "EMA",
+          "full": true,
+          "count": 5000,
+          "sources_per_g": 250,
+          "per_g": 1000,
+          "by_g": {
+            "0.5": {
+              "psnr": 17.332065874944046,
+              "ssim": 0.29744651359458024,
+              "lpips": 0.48685883545875547,
+              "mae": 0.09543238643677739,
+              "input_psnr": 25.170834311941398
+            },
+            "1": {
+              "psnr": 16.866700750602824,
+              "ssim": 0.25900405675785276,
+              "lpips": 0.5009264054894448,
+              "mae": 0.10037309463985891,
+              "input_psnr": 22.24176827289323
+            },
+            "2": {
+              "psnr": 16.070529422512926,
+              "ssim": 0.20068506956340143,
+              "lpips": 0.5666992890238762,
+              "mae": 0.1109267388226552,
+              "input_psnr": 20.306366255324075
+            },
+            "3": {
+              "psnr": 15.265373225816585,
+              "ssim": 0.15558850089799262,
+              "lpips": 0.6676340928971768,
+              "mae": 0.1241402820367535,
+              "input_psnr": 19.471852182624982
+            },
+            "4": {
+              "psnr": 14.708871734557935,
+              "ssim": 0.1263234851116052,
+              "lpips": 0.7719467279911041,
+              "mae": 0.13453476744212295,
+              "input_psnr": 18.79593752422192
+            }
+          },
+          "nfe_per_image": 100,
+          "sampler": "native_reverse_sde",
+          "precision": "FP32/HF32off",
+          "image_clip_crop_resize": false,
+          "seconds": 2902.403078317642,
+          "selection_role": "full_validation",
+          "training_RNG_restored": true,
+          "test_used": false,
+          "parameter_digest": "76e79eddd13b9b482d9ee28ad37b56a6ccad60c1ad61d7d96683a05edc119fc0"
+        }
+      }
+    },
+    "original": {
+      "status": "PASS",
+      "exit_code": 0,
+      "result": {
+        "status": "COMPLETE",
+        "update": 67180,
+        "new_updates": 21769,
+        "extension_start_update": 61764,
+        "extension_new_updates": 5416,
+        "extension_start_cursor": 5929344,
+        "extension_new_presentations": 519936,
+        "stop_reason": "deadline",
+        "final_full_validation_done": true,
+        "completed_unix": 1793726366.04937
+      },
+      "latest": {
+        "status": "PASS",
+        "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+        "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+        "bytes": 2194706863,
+        "update": 67180,
+        "cursor": 6449280,
+        "branch": "original",
+        "phase": "formal",
+        "full_state": true,
+        "full_parameter_digest": "37fc54ba28f01bcbe000356202d6b554e87e5072e57021600f2eb38e2cd368d8"
+      },
+      "best": {
+        "status": "PASS",
+        "checkpoint": {
+          "status": "PASS",
+          "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+          "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+          "bytes": 2194706863,
+          "update": 67180,
+          "cursor": 6449280,
+          "branch": "original",
+          "phase": "formal",
+          "full_state": true,
+          "full_parameter_digest": "37fc54ba28f01bcbe000356202d6b554e87e5072e57021600f2eb38e2cd368d8"
+        },
+        "update": 67180,
+        "weights": "EMA",
+        "selection_score": [
+          16.211782897367502,
+          -0.41153059792518615,
+          -67180
+        ],
+        "full": true,
+        "selection_role": "full_validation",
+        "summary": {
+          "status": "PASS",
+          "branch": "original",
+          "update": 67180,
+          "weights": "EMA",
+          "full": true,
+          "count": 5000,
+          "sources_per_g": 250,
+          "per_g": 1000,
+          "by_g": {
+            "0.5": {
+              "psnr": 21.750354130898593,
+              "ssim": 0.6492243485576155,
+              "lpips": 0.07363884431496262,
+              "mae": 0.05030493792362852,
+              "input_psnr": 25.170834311941398
+            },
+            "1": {
+              "psnr": 20.255326716732736,
+              "ssim": 0.5560743289900426,
+              "lpips": 0.09006591750495135,
+              "mae": 0.06061963568532555,
+              "input_psnr": 22.24176827289323
+            },
+            "2": {
+              "psnr": 18.38968403726832,
+              "ssim": 0.45257705900356443,
+              "lpips": 0.1252754578348249,
+              "mae": 0.07628262569809303,
+              "input_psnr": 20.30636625532408
+            },
+            "3": {
+              "psnr": 17.442455544383296,
+              "ssim": 0.4027887565928465,
+              "lpips": 0.20117582428455352,
+              "mae": 0.08652059118930254,
+              "input_psnr": 19.471852182624982
+            },
+            "4": {
+              "psnr": 16.211782897367502,
+              "ssim": 0.31531739708086254,
+              "lpips": 0.41153059792518615,
+              "mae": 0.10312369535744295,
+              "input_psnr": 18.795937524221916
+            }
+          },
+          "nfe_per_image": 100,
+          "sampler": "native_reverse_sde",
+          "precision": "FP32/HF32off",
+          "image_clip_crop_resize": false,
+          "seconds": 4558.330219268799,
+          "selection_role": "full_validation",
+          "training_RNG_restored": true,
+          "test_used": false,
+          "parameter_digest": "bf6013431ffbf354524271ff98391f6116d0bc19cdfcd04d6d70e99e7547de1a"
+        }
+      }
+    }
+  },
+  "unix": 1793726439.4242053,
+  "delivery_pending": "Independent saved-output CPU metric audit, visual QA, local sync and final report remain required."
+}

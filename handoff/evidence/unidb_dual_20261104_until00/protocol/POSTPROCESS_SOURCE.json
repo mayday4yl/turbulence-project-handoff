@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "created_unix": 1793698660.62625,
+  "scope": "Midnight extension only. Training core unchanged; three-stage canonical history and frozen old saved-output auditor, no changed metrics/population/tolerance. Final visual and local delivery remain mandatory.",
+  "files": {
+    "scripts/finalize_campaign.py": "a168df0a29ea923d0b8bc63387c8c719629901d0e1c158b43d4781f6da8c785a",
+    "scripts/make_campaign_report.py": "3459722ebd11898eab9cd1cb0eeac10cd769232b3b59981bd3ab90ea242f6470",
+    "scripts/audit_campaign_saved_outputs.py": "dbddb6f7cdb86ca0a8b985bf82e5af53a121d0a8715d2790353091f3c9eb7ddc",
+    "scripts/audit_saved_outputs.py": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950",
+    "scripts/test_extension_postprocess.py": "624408c97188a31be9a6a0262f6d2971fa752628b052a3d7397cdaed67e8ca1f"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "revision": "evaluation_schedule_v2_RAW_only",
+  "authorized_utc": "2026-09-29T18:09:42.518849+00:00",
+  "EMA_training_decay": 0.996,
+  "EMA_saved_in_checkpoint": true,
+  "new_EMA_evaluation": false,
+  "keep_completed_EMA": true,
+  "ordinary_RAW_nodes": "unchanged every250 updates",
+  "intermediate_milestones": {
+    "updates": [
+      5000,
+      7500
+    ],
+    "populations": [
+      "train_monitor400",
+      "val800"
+    ]
+  },
+  "final_milestone": {
+    "update": 10000,
+    "populations": [
+      "train8000",
+      "val800"
+    ]
+  },
+  "user_early_endpoint": "Backfill full train8000 RAW using saved specified milestone checkpoint; no training or random-stream changes",
+  "evaluation_batch": 2,
+  "metrics_precision_eta_preprocessing": "unchanged",
+  "scientific_training_change": false,
+  "best_val": "RAW val PSNR unchanged candidates",
+  "refinement_auxiliary": "R0/R08 RAW val800 at5000/7500/10000 remains additional; D0/L08 N/A",
+  "ETA_estimate_before_implementation": {
+    "future_critical_card_eval_hours_to5k": {
+      "before": 2.5394,
+      "after": 1.3837
+    },
+    "future_critical_card_eval_hours_to10k": {
+      "before": 5.9578,
+      "after": 3.2069
+    },
+    "estimated_wall_saving_hours_including_remaining_initial_EMA": {
+      "to5k": [
+        1,
+        1.5
+      ],
+      "to10k": [
+        2.5,
+        3.5
+      ]
+    },
+    "conditional_total_hours_excluding_unmeasured_refinement_and_tuning_gains": {
+      "to5k_before": [
+        35,
+        38
+      ],
+      "to5k_after": [
+        34,
+        37
+      ],
+      "to10k_before": [
+        71,
+        76
+      ],
+      "to10k_after": [
+        68,
+        73
+      ]
+    },
+    "caveat": "Training throughput not stable yet; uses temporary23s/update. Warm RAW cost approximated using measured EMA forward metrics timing (same network work without first-time baseline). Two cards parallel, same-card eval serialized. No GPU-time summation as wall-time."
+  }
+}

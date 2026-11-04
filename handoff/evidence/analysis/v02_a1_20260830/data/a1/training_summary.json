@@ -1,0 +1,13 @@
+{
+  "completed_updates": 3000,
+  "lambda_B": 0.1,
+  "lambda_T": 0.8,
+  "stability": {
+    "bridge_first_200_median": 0.0003221383522031829,
+    "bridge_last_200_median": 0.00029406054818537086,
+    "full_trajectory_first_200_median": 0.00036636326694861054,
+    "full_trajectory_last_200_median": 0.0003310765605419874
+  },
+  "stage": "A1",
+  "wall_seconds": 55717.447198128
+}

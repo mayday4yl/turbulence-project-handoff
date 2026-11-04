@@ -1,0 +1,18 @@
+[
+  {
+    "file": "autoencoder_vq_f4.pth",
+    "bytes": 221364711,
+    "sha256": "e967eaa2c380152811c53e312990d6967a8a957c4f7590f19490ec72110b2889",
+    "url": "https://github.com/zsyOAOA/ResShift/releases/download/v2.0/autoencoder_vq_f4.pth",
+    "download_source": "official GitHub v2.0 release over HTTPS",
+    "upstream_digest_provided": false
+  },
+  {
+    "file": "resshift_deblur_s4.pth",
+    "bytes": 610280984,
+    "sha256": "7b2bb6ddc9c29dfe845028ce32fa146081caf7647f772113eb26502b92dec515",
+    "url": "https://github.com/zsyOAOA/ResShift/releases/download/v2.0/resshift_deblur_s4.pth",
+    "download_source": "official GitHub v2.0 release over HTTPS",
+    "upstream_digest_provided": false
+  }
+]

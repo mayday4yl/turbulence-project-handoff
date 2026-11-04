@@ -1,0 +1,97 @@
+{
+  "protocol_frozen": true,
+  "run_id": "half_formal_01",
+  "config": "configs/half_formal_01.json",
+  "config_hash": "d5b08f8516e317983cab6ae9c3f59ad36b634da899fc50b99f41da6f4f0511cc",
+  "source_commit": "edf3dbcd5d93941c31303710a07b2120c7a7975d",
+  "guard_memory_gib": 58,
+  "fast_validation_interval": 1000,
+  "fast_validation_trajectories": 16,
+  "fast_validation_budget_seconds": 600,
+  "full_validation_interval": 2000,
+  "full_validation_budget_seconds": 5400,
+  "validation_weight_key": "ema",
+  "validation_G": [
+    0.75,
+    1.5,
+    2.25,
+    3.0,
+    3.75,
+    4.5
+  ],
+  "validation_K": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "fast_validation_keys": [
+    "val_000382",
+    "val_000083",
+    "val_000185",
+    "val_000115",
+    "val_000218",
+    "val_000220",
+    "val_000148",
+    "val_000310",
+    "val_000227",
+    "val_000062",
+    "val_000295",
+    "val_000385",
+    "val_000079",
+    "val_000000",
+    "val_000124",
+    "val_000139"
+  ],
+  "full_validation_keys_sha256": "13352ebf0fe4d1f63d86da22d6d75ea96463f6787811690cef7c9ffa96ff83b1",
+  "early_stop": {
+    "minimum_updates": 4000,
+    "plateau_intervals": 3,
+    "minimum_improvement_db": 0.05,
+    "catastrophic_k0_drop_db": 3.0
+  },
+  "continuation": {
+    "primary_updates": 8000,
+    "maximum_updates": 10000,
+    "lookback_updates": 2000,
+    "minimum_improvement_db": 0.05,
+    "k0_preservation_db": 0.1
+  },
+  "checkpoint_selection": {
+    "primary": "maximum absolute macro PSNR, equal six G and equal K=0/1/3/5",
+    "k0_preservation_db": 0.1,
+    "psnr_tie_db": 0.03,
+    "lpips_tie": 0.005,
+    "tie_break": "lower macro LPIPS; within LPIPS tolerance prefer earlier update",
+    "same_subset_and_weight_type_required": true,
+    "final_selection_requires_full_validation": true,
+    "mechanism_diagnostics_choose_checkpoint": false
+  },
+  "progressive_gain": {
+    "aggregation": "same checkpoint: equal K=1/3/5 minus K0, then equal six G",
+    "minimum_psnr_delta_db": 0.1,
+    "minimum_positive_G_count": 4,
+    "minimum_per_G_psnr_delta_db": -0.2,
+    "maximum_lpips_delta": 0.005,
+    "minimum_ssim_delta": -0.001,
+    "k0_preservation_required": true
+  },
+  "readiness": {
+    "declared_training_end_required": true,
+    "operational_pause_is_not_training_end": true,
+    "full_validation_and_selection_required": true,
+    "progressive_gain_and_k0_gate_required": true,
+    "identity_resume_gradient_checks_required": true,
+    "held_out_test_authorized": false,
+    "causal_recursive_only_claim_authorized": false
+  },
+  "numerical_recovery": {
+    "hyperparameter_changes_within_run": false,
+    "rule": "Stop on nonfinite/divergence; preserve latest complete checkpoint and logs. At most one same-config resume for a verified transient engineering interruption, after ownership/health checks. No repeating failed numerical update indefinitely. Any LR/batch/protocol change requires a new identity; protocol change starts fresh."
+  },
+  "minimum_exposure": {
+    "global_one_shot_all_stages": 0.4,
+    "final_stage_global_at_least_3_transitions": 0.27,
+    "final_stage_G4p5_full_K5_conditional": 0.3
+  }
+}

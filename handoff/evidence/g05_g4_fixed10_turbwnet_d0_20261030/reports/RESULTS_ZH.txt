@@ -1,0 +1,38 @@
+固定10张 × G0.5/G1/G2/G3/G4：TurbWNet官方预训练与D0 U153544 EMA
+
+D0固定为2026-10-30 17:04检查时的最新完整节点；训练继续推进，比较期间不追逐或切换节点，不使用best替代latest。
+50次TurbWNet单RGB前向在独立本地CPU进程执行；D0复用已完成的五档正式验证浮点输出，输入/GT/输出SHA逐图验证。
+PSNR、SSIM、LPIPS、MAE在同一个本地CPU进程、同一GT、同一原评估实现上重算；D0和Input与已保存值核对通过。
+这是每档固定10张的均值，不是五档完整Val1000的TurbWNet评估；不能由10张外推总体优势。
+
+G0.5（n=10）
+  Input: PSNR=23.894973 dB, SSIM=0.704473, LPIPS=0.074365, MAE=0.041907
+  TurbWNet: PSNR=28.574888 dB, SSIM=0.915138, LPIPS=0.042199, MAE=0.022299
+  D0: PSNR=28.523672 dB, SSIM=0.901175, LPIPS=0.062722, MAE=0.024241
+G1（n=10）
+  Input: PSNR=21.172043 dB, SSIM=0.545674, LPIPS=0.105499, MAE=0.057668
+  TurbWNet: PSNR=28.162771 dB, SSIM=0.903065, LPIPS=0.044901, MAE=0.023708
+  D0: PSNR=26.102622 dB, SSIM=0.833216, LPIPS=0.094119, MAE=0.031607
+G2（n=10）
+  Input: PSNR=19.378935 dB, SSIM=0.446193, LPIPS=0.187770, MAE=0.072604
+  TurbWNet: PSNR=26.379081 dB, SSIM=0.861497, LPIPS=0.068799, MAE=0.030687
+  D0: PSNR=23.529562 dB, SSIM=0.701240, LPIPS=0.175816, MAE=0.043996
+G3（n=10）
+  Input: PSNR=18.578579 dB, SSIM=0.411383, LPIPS=0.352991, MAE=0.081655
+  TurbWNet: PSNR=21.321070 dB, SSIM=0.624020, LPIPS=0.158002, MAE=0.055549
+  D0: PSNR=21.573448 dB, SSIM=0.571306, LPIPS=0.289882, MAE=0.056527
+G4（n=10）
+  Input: PSNR=17.903898 dB, SSIM=0.386492, LPIPS=0.580485, MAE=0.089983
+  TurbWNet: PSNR=18.177934 dB, SSIM=0.377687, LPIPS=0.383203, MAE=0.082831
+  D0: PSNR=20.122902 dB, SSIM=0.472225, LPIPS=0.487518, MAE=0.067500
+
+推理没有读取GT、物理参数或额外帧；输入为既有浮点RGB，无resize/crop/归一化调整。原物理缓存3张轻微超过1（最高1.00070215）原样保留，与D0相同；仅显示PNG做clip。
+首次输入范围断言在5张完成后停止，5张输出SHA验收后保留；只调整已审计浮点范围的检查，不修改模型或输入，第二进程完成其余45张。原失败日志保留。
+D0和TurbWNet运行设备不同，因此本轮不比较两者速度。所有新增推理/计分均在本地CPU，未对服务器启动模型、写文件、发信号或改动训练。
+复现：先运行scripts/snapshot_remote.py只读获取冻结输入和既有D0输出；本地infer_turbwnet_cpu.py，完成后evaluate_render.py。已存在产物拒绝覆盖，推理续跑需--resume。
+
+权重与源码：
+TurbWNet官方源码commit 05627b725241c28a09b03c00faefafa861558ebf，完整权重net_g_300000.pth，130013973字节，SHA256 a039c67176a0704a9db22cfefe6f58e78d09681e50c03ce73bfad34290b0843f。
+D0 U153544 EMA checkpoint SHA256 71516517d5b4ca65cee48de7b945d97137c36f16a9fe733910d1863a23bfba82；本轮未在服务器加载模型，复用已保存EMA输出。
+TurbWNet本地CPU单图平均 4.910秒；50次forward合计 245.485秒；完成进程峰值RSS 1.502GiB。
+训练核查：原四worker PID和start_ticks前后一致，进度从U154004推进至U154934，冻结CONFIG SHA不变；未测量可归因的训练吞吐变化，不声称零性能开销。

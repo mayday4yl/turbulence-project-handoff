@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_CPU_POSTPROCESS_SOURCE",
+  "created_utc": "2026-11-02T17:50:24.096320+00:00",
+  "files": {
+    "scripts/finalize_campaign.py": "b1b1f7ed046f7024cb1570a35e55bf0eb26fcc79ec9841bf7b9aee2ec3e463a5",
+    "scripts/audit_saved_outputs.py": "a9c684bf42fdab2a1cf34670d717d7d3d1e4dc21bccc5b7f63bc18beaddf3950",
+    "scripts/make_campaign_report.py": "08f0424e3c2b786f4725c72784e489970efc52d59f5c4707a588af1b6b58cabe",
+    "tests/test_final_cpu_identity_review.py": "c33ef85b266a932f6add56edfc51162dfb2e991661c4c5300464f1af4fa2d124"
+  },
+  "training_source_manifest_unmodified": true,
+  "restoration_model_calls_allowed": 0,
+  "NPU_jobs_allowed": 0,
+  "optimizer_updates_allowed": 0,
+  "visual_QA_and_local_delivery_required": true
+}

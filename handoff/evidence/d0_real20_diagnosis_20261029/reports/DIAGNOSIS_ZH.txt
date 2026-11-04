@@ -1,0 +1,98 @@
+旧 D0 抹字/细杆：预处理、归一化、EMA 与采样流程排查
+日期：2026-10-29（Asia/Shanghai）
+
+结论：RGB、数值范围、EMA 加载、S3 采样接口与保存未见实现错误；发现上一轮空间预处理与训练源图流程不同。已调用训练原函数重跑全部20张：OTIS部分小图明显变化，但ATD文字和细杆仍被抹除。问题更符合旧D0自身细节保持不足/过恢复，并叠加真实数据与尺度分布差异。
+需要修正上一轮解释的边界：小尺寸 OTIS 对输入尺度明显敏感，原生小图结果混有尺寸/尺度因素；同时，G4 正向对照本身也显著平滑细节。因此不能把所有现象简单归为“只有真实数据泛化差”，也不能据此锁定某个训练 loss 为根因。
+
+一、范围与隔离
+全 20 张真实输入做静态像素核对；从这同组预先指定 6 个故障样例做受控复跑（OTIS 3、ATD 3）；另用 4 个早已冻结的 G4 Val 样例做正向对照。
+2 次历史数值基准检查 + 58 次 U14927 控制 + 全20张精确训练预处理复跑，共80次有效模型调用，每次仍为S3；这是故障定位，不是80张独立样本。
+全部在本机 CPU FP32、2 线程、nice=15。只读下载一份旧验证 JSONL，未在服务器启动模型、未修改训练、源码、checkpoint，也未读取锁定的 PiRN/P2S Test。
+原先 20 张结果、选图、种子、PNG 与原始 NPY 保留，不被本轮反事实结果替换。
+
+二、逐项实现核对
+1. 全 20 张的来源图像按记录 ROI 重建，与冻结输入 PNG 逐像素相等；Pillow RGB 与 OpenCV BGR 转 RGB 后逐像素相等。没有隐藏缩放、通道错序或错误 ROI。
+2. ATD 10 张均为 256×256，外部 padding 为 0。因此这些 ATD 文字和杆件丢失不能由外部补边单独解释。
+3. TF1_1 与 WindM2 两段原视频用 OpenCV 独立解码首帧，再转 RGB，与原 FFmpeg/Pillow 首帧相比，平均差分别约 1.012 和 1.835 个 uint8 级，最大分别 6 和 5；未转换 BGR 的平均差分别约 20.738 和 35.247。存在解码器色彩舍入差异，但未见 RGB/BGR 对调。
+4. 输入 RGB uint8/255 → FP32 [0,1]。训练数据直接读取 float32 CHW；p_losses 与 sample 入口内部都对条件执行一次 2x−1。没有 ImageNet mean/std，也没有外部再做 [-1,1] 归一化。
+5. 所有受控网络调用的 hook 都断言条件通道逐值等于 2x−1；确认网络输入前 3 通道是扩散状态、后 3 通道是条件图。
+6. 旧 U14927 EMA 权重 SHA256：0c7903726f262c56fb40333dcaf70e0e205109c618456bb39e216987bd48d9b6。276 个网络张量严格加载且数值完全相等，native/sampling 的 14+14 个 buffer 与 checkpoint 相等。
+7. 实际网络调用固定为 999→665→332，eta=0，NFE=3。结果取最后一个 clean 估计，未把初始噪声状态或中间 latent 当成恢复图。
+8. 每步 clean 的计算与输出逐值核验：c_hat = (clip((2y−1) − clip(r_theta,−1,1),−1,1)+1)/2。最后一步的这个值与 sampler 最终返回图逐值相等。原始FP32输出先保存，之后 PNG 才进行统一显示量化。
+说明：旧 D0 residual_loss 外层的 0.5 是 loss 权重，不改变 p_losses 中的归一化残差目标；推理中不应据此额外缩放网络残差。
+9. 同组 6 个真实故障样例，在固定 epsilon 下复跑与上一轮正式 NPY 逐值相等（最大误差全为0）。原始 D0Restorer.sample_clean 接口复核也已通过，见上一轮 D0_CANONICAL_REPLAY.json。
+
+代码依据（项目内相对路径）：
+v6_diffuir_l_20261027/method_impl/training_io.py：PositionDataset 读取原始 float32。
+v5_concertormer_10k_20261021/data_pipeline/source_preprocess.py：RGB/CHW/255。
+v5_diffuir_l_stage1_20261026/upstream/src/model.py：p_losses 第1084行、sample 第1049行、ddim_sample 第946行、model_predictions 第835行。
+v6_diffuir_l_20261027/method_impl/evaluation.py：旧 EMA S3 正式验证入口。
+
+三、数值与 G4 正向对照
+固定4图：输入 PSNR 19.185980 dB → 本机旧D0 21.574497 dB，平均增加 2.388517 dB；4/4提高。
+同4图旧NPU记录均值 21.564366 dB，CPU与旧NPU逐图PSNR最大差 0.028389 dB。
+此处使用相同名义种子，但 CPU/NPU 的随机数流不同，不能称为逐像素精确复现。以上是 4 图正向检查，不是 Val1000 均值。
+旧 NPU 逐图记录文件 SHA256 与此前冻结的 TurbWNet 评估协议完全一致：4fded91c853b4d471597e4c5ec3881fba97e48f2cd5b0a70ad8446c5d5f7dc24
+G4观测和GT从已有NPZ恢复后，重新保存NPY的SHA256与原始源清单完全一致；没有用PNG近似代替原始float输入。
+进一步使用历史 U13334 的 Linux CPU 轨迹，耦合相同初始状态后，本机最大输出差 1.519918e-6、MAE 9.621742e-8。此项用于实现/后端数值检查，未将 U13334 当作本轮 U14927 的恢复结果。
+历史 NPU U13334 参考在纠正字段读取后，使用相同名义种子得到输出 MAE 0.001782；因为初始噪声没有保存，未宣称精确后端等价。
+G4控制样例及数值：
+val_s1660_r03: Input 18.014187, CPU D0 19.359163, old NPU 19.360305 dB
+val_s0091_r03: Input 17.658032, CPU D0 19.591497, old NPU 19.563107 dB
+val_s1856_r00: Input 19.971335, CPU D0 25.101615, old NPU 25.087220 dB
+val_s2297_r03: Input 21.100367, CPU D0 22.245714, old NPU 22.246831 dB
+
+四、采样噪声幅度核查
+训练 native 残差分支末端 beta_cumsum≈0.999980；官方 sample 初始噪声 std=sqrt(sum_scale)=0.1。此差异存在于沿用代码和旧训练/验证配置，不是本轮适配新引入。
+同时必须说明：旧 U14927 的训练目标包含 actual S3 Clean-loss 分支，它本身也调用相同0.1初始化的S3。因此不能只比较 native 前向噪声系数就认定整个训练/推理流程写错。
+固定每图权重、epsilon 与 S3，仅改变初始噪声标准差，全部版本记录、不选最好版本：
+噪声std | 固定4张G4平均PSNR(dB)
+0 | 21.573751
+0.1（正式） | 21.574497
+0.316 | 21.515966
+1.0 | 20.423635
+1.0 相对0.1降低 1.150862 dB；真实图没有修复丢字/丢杆，反而出现明显伪影。0与0.1的结果很接近，细节丢失仍然存在。
+所以本轮不支持将“把初始噪声改成1.0”视作修复，也没有更改正式 sum_scale=0.01。原方法分支间的噪声约定可作为独立研究问题，但本轮不能把它锁定为主要原因。
+
+五、尺度、补边、上下文、通道和随机种子
+OTIS Pattern3（113×117）和 Pattern10（149×149）：移除外部补边、只reflect补到256，都仍有明显细节丢失；先resize到256、推理再映射回原尺寸，结果有显著变化并部分保留结构。
+这证明模型对像素尺度敏感；上一轮原生小图推理混有训练尺寸/内容尺度差异。它不是归一化代码错误，但属于正式真实测试必须单独控制的协议因素。
+此处放大是诊断干预，不等于已经确定唯一正确预处理；没有用GT选尺度或替换原始比较。
+ATD TF1_1文字和WindM2细杆：从源图取512上下文，再取回与原256完全相同的中心像素区域，并保持该区域初始噪声相同；仍有文字和杆件结构丢失。因此仅扩大这两例的上下文不能解决。
+RGB/BGR反事实和两个额外固定随机种子的结果，仍出现同类丢失；正确协议仍是RGB，不采用BGR反事实替代正式流程。
+
+补充：精确匹配训练源图预处理的全20张复跑
+直接导入 v5_concertormer_10k_20261021/data_pipeline/source_preprocess.py，函数SHA256：77ba79cb2faac2f75342427cf47a1ac9b8b5733137ac8f259f2d690f99907782。
+训练源图规则：EXIF转正、RGB、短边缩放到256（Pillow BICUBIC，长边floor取整）、中心裁剪256×256、uint8/255。上一轮真实预览则是原像素中心区域+小图补边，确实没有复用这个空间变换。
+已将全部20张原始源帧交给这个原函数，用同一U14927 EMA、名义种子、3步、0.1噪声初始化复跑；不读取GT，不做参数选择。
+直接比较不同视野会造成误导，因此另外按照源图resize/crop的已知几何，将训练流程的输入和输出映射回上一轮的原始ROI，仅用于展示；未使用GT或输出估计配准，正式256输出原样保存。
+ATD原本就是256×256的Cabin样例，新旧输出逐值相等，最大差0。其余大图因缩放改变像素信息，展示中同时保留“训练流程输入映射回ROI”一列。
+观察：OTIS Pattern3/7等小图部分结构保留有所变化，但仍未完整恢复；ATD的TF1_1文字、WindM2格栅在精确训练流程后仍丢失，部分变得更平滑。
+因此上一轮OTIS结果混有明显空间尺度因素，不能当作纯真实域泛化结论；而ATD过恢复并没有由匹配训练空间预处理解决。训练源预处理也不自动等于唯一正确的正式真实测试协议，正式比较前仍需固定尺度/视野规则。
+全部20图：OTIS_EXACT_TRAINING_PREPROCESS.png、ATD_EXACT_TRAINING_PREPROCESS.png；TF1_1和WindM2摘要：TRAIN_RECIPE_TEXT_AND_POLE.png。
+每图原始256输入、输出、仅展示用ROI映射与有效mask都在 outputs/training_preprocess/；机器记录 RESULT.json。
+
+六、8bit量化敏感性，不能遗漏的限制
+4张G4观测做round(x*255)/255后再用同一epsilon推理，均值 21.442963 dB，平均变化 -0.131534 dB；最差单图变化 -0.522287 dB。
+这说明模型并非对8bit量化完全不敏感。它属于输入统计鲁棒性问题；本轮真实PNG的uint8→float映射仍然是正确的，不能把这个影响解释成多除了一次255或重复归一化。
+
+七、为什么字与细杆会消失：直接观察到的证据
+真实 S3 的每次网络调用都保存了预测 clean（与latent状态分开）。文字、铁塔格栅在第一步 tau999 的clean估计中已经被削弱，后面继续平滑。
+模型预测的残差/实际扣除量中包含这些结构。按原公式从条件图减去后，它们在结果里消失。MODEL_REMOVED_COMPONENT.png 将实际 |Input−Output| 按固定4倍展示，能看到被扣掉的文字笔画与杆件。
+因此就这些故障样例而言，丢失发生在网络预测与原采样器的clean重建内部，不是最终拼图、PNG保存或输出数组索引造成。
+但不能进一步武断推断模型在语义上“把杆认成噪声”，也未证明某个loss、容量或物理参数是唯一根因。
+同时看 G4_POSITIVE_CONTROLS.png：G4上虽然PSNR提升，输出本身也强烈平滑、没有恢复大量高频细节。故更准确的判断是旧D0本身细节保持弱，真实/弱退化与小尺度输入将过恢复问题进一步暴露，而不只是单独的Train–Val过拟合或纯真实域差异。
+
+八、诊断内部一次读数纠正
+最初把历史NPU可视化NPZ的finals当作采样中间态；检查原保存代码后确认它是4个随机种子的终态堆栈。该错误比较已归档为attempt01，当前报告不采用其误差。修正后NPU参考使用finals[0]（等于clean_steps[-1]），并明确没有耦合NPU初始噪声。
+当前严格数值基准采用保存了input_0的历史Linux CPU轨迹。原20张模型推理、权重、source均不涉及这次诊断fixture读取错误。
+
+九、交付与复现
+机器结论：reports/DIAGNOSIS_RESULT.json；全部80次控制：reports/ALL80_CONTROLS.csv（第一阶段60次另保留ALL60_CONTROLS.csv）。
+原始输出/每步clean与TRACE：outputs/；输入与源指纹：inputs/、evidence/。
+图：TRAIN_RECIPE_TEXT_AND_POLE.png、OTIS_EXACT_TRAINING_PREPROCESS.png、ATD_EXACT_TRAINING_PREPROCESS.png、G4_POSITIVE_CONTROLS.png、CLEAN_ESTIMATE_TRAJECTORIES.png、MODEL_REMOVED_COMPONENT.png、OTIS_SCALE_CONTROLS.png、ATD_CONTEXT_CONTROLS.png、NOISE_AMPLITUDE_CONTROLS.png、CHANNEL_AND_SEED_CONTROLS.png。
+环境复用本机独立 real20_d0_turbwnet_20261029/env，未修改服务器依赖。
+执行命令（已有结果拒绝覆盖；复现应使用新的独立诊断目录）：
+TORCH_DEVICE_BACKEND_AUTOLOAD=0 nice -n 15 real20_d0_turbwnet_20261029/env/bin/python -B -u d0_real20_diagnosis_20261029/scripts/diagnose.py
+real20_d0_turbwnet_20261029/env/bin/python -B d0_real20_diagnosis_20261029/scripts/render_diagnostics.py
+TORCH_DEVICE_BACKEND_AUTOLOAD=0 nice -n 15 real20_d0_turbwnet_20261029/env/bin/python -B d0_real20_diagnosis_20261029/scripts/check_training_preprocess.py

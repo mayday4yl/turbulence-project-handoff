@@ -1,0 +1,14 @@
+{
+  "status": "ROOT_VISUAL_QA_PENDING",
+  "source_archive_sha256": "a695dfdaa88505c382bb6f105804c40c44e420ad697b5d1a46c4f45c8a324f62",
+  "render_log": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/delivery_preparation/final_source_capture__loeu5xe/render.log",
+  "render_log_sha256": "bf3bd01d678f66781c6975da116fd3489ed7200d700dd6b041f2d7c1e957d418",
+  "scripts": {
+    "collect_final_original.py": "1bdbef0f936e495657d0a5476eaaf568e32f905e28697349e92bd4b7a4258eda",
+    "render_final_original.py": "8b62826c7cc7a4a0a96ea5ee93f464e5362b26b320de01ff7dbe86de1c8bcdbf",
+    "prepare_original_delivery.py": "ecc650f9866943a2c883a7c65022a04ff019f68e8467537ab2be0bee27a18499"
+  },
+  "new_restoration_model_calls": 0,
+  "optimizer_calls": 0,
+  "NPU_calls": 0
+}

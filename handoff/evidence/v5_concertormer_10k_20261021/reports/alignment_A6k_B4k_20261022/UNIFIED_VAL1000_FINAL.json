@@ -1,0 +1,592 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "verified_at": "2026-10-26T00:32:26.715414+08:00",
+  "names": {
+    "D0": "直接恢复基线",
+    "A": "连续时间单步预训练",
+    "B": "四步递归对齐"
+  },
+  "best": {
+    "D0": {
+      "event": "full_validation",
+      "update": 8250,
+      "method": "D0",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 21.44350572013855,
+      "clipped_psnr_auxiliary": 21.444434105873107,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 1,
+      "gamma": 1.0,
+      "elapsed_seconds": 85.31129811611027,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 82.6664004093036,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 85.31129811611027,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 83.96147253271192,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 83.43208672944456,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 81.0476567717269,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 82.22259137313813,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        }
+      ],
+      "ssim": 0.5740724176120515,
+      "lpips": 0.45879667487740516,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 2.6475678272247314,
+      "total_loss": 0.052756673975847664,
+      "clean_loss": 0.052756673975847664,
+      "clean_mae": 0.052756673975847664,
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean absolute clean RGB error, weight 1.0"
+      },
+      "objective": "clean_only"
+    },
+    "A": {
+      "event": "full_validation",
+      "update": 5000,
+      "method": "A",
+      "view": "original_Val1000_real_recursive_rollout",
+      "used_for_best_selection": true,
+      "observation_target": "original_G4_and_Y4",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 20.156652238845826,
+      "clipped_psnr_auxiliary": 20.156910633087158,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 4,
+      "gamma": 1.0,
+      "elapsed_seconds": 302.47527720499784,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 281.95017229393125,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 299.9140146682039,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 293.42668427247554,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 297.4167652335018,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 302.47527720499784,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 297.5455838032067,
+          "peak_allocated_bytes": 15886496256,
+          "peak_reserved_bytes": 18970836992
+        }
+      ],
+      "ssim": 0.5058313934882976,
+      "lpips": 0.5093303577899932,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 1.3607143459320068,
+      "total_loss": 0.05684104889445007,
+      "clean_loss": 0.06115900879260153,
+      "reprojection_loss": 0.017979424118297175,
+      "stage_psnr": [
+        21.77338173866272,
+        20.55691192340851,
+        20.287528693199157,
+        20.156652238845826
+      ],
+      "stage_losses": [
+        {
+          "total_loss": 0.04746450241282582,
+          "clean_loss": 0.05116722196992487,
+          "reprojection_loss": 0.014140038634184749
+        },
+        {
+          "total_loss": 0.057838861810043454,
+          "clean_loss": 0.062429753835313025,
+          "reprojection_loss": 0.016520849067252128
+        },
+        {
+          "total_loss": 0.060402417139150205,
+          "clean_loss": 0.06501955541502684,
+          "reprojection_loss": 0.018848186911083756
+        },
+        {
+          "total_loss": 0.0616584142157808,
+          "clean_loss": 0.06601950395014138,
+          "reprojection_loss": 0.022408621860668065
+        }
+      ],
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean across stages of 0.9 clean MAE + 0.1 original-G4 reprojection MAE"
+      },
+      "objective": "precomputed_current_g"
+    },
+    "B": {
+      "event": "full_validation",
+      "update": 2750,
+      "method": "B",
+      "view": "original_Val1000_real_recursive_rollout",
+      "used_for_best_selection": true,
+      "observation_target": "original_G4_and_Y4",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 21.736104907035827,
+      "clipped_psnr_auxiliary": 21.7372956867218,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 4,
+      "gamma": 1.0,
+      "elapsed_seconds": 299.5909832343459,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 299.5909832343459,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 294.98987243231386,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 297.56266035232693,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 298.97746760211885,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 293.9194744778797,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 288.8483757302165,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        }
+      ],
+      "ssim": 0.5827716299446037,
+      "lpips": 0.4532923741340637,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 2.940167014122009,
+      "total_loss": 0.047826725834514944,
+      "clean_loss": 0.05124062321218662,
+      "reprojection_loss": 0.017101661159074865,
+      "stage_psnr": [
+        21.841450730323793,
+        21.793081706047058,
+        21.763967997550964,
+        21.736104907035827
+      ],
+      "stage_losses": [
+        {
+          "total_loss": 0.047838409995660185,
+          "clean_loss": 0.05101059044804424,
+          "reprojection_loss": 0.01928879819903523
+        },
+        {
+          "total_loss": 0.04764811903983355,
+          "clean_loss": 0.05110473378561437,
+          "reprojection_loss": 0.01653859891463071
+        },
+        {
+          "total_loss": 0.04778042647521943,
+          "clean_loss": 0.05131859985552728,
+          "reprojection_loss": 0.015936877116095274
+        },
+        {
+          "total_loss": 0.04803994782734662,
+          "clean_loss": 0.051528568759560585,
+          "reprojection_loss": 0.016642370406538248
+        }
+      ],
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean across stages of 0.9 clean MAE + 0.1 original-G4 reprojection MAE"
+      },
+      "objective": "recursive_alignment"
+    }
+  },
+  "last": {
+    "D0": {
+      "event": "full_validation",
+      "update": 10000,
+      "method": "D0",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 21.439007772445677,
+      "clipped_psnr_auxiliary": 21.439975604057313,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 1,
+      "gamma": 1.0,
+      "elapsed_seconds": 85.79795242194086,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 83.16807360481471,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 85.72685103025287,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 85.03949848096818,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 85.17419367935508,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 85.79795242194086,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        },
+        {
+          "elapsed_seconds": 83.29751696903259,
+          "peak_allocated_bytes": 18243980800,
+          "peak_reserved_bytes": 18563989504
+        }
+      ],
+      "ssim": 0.5742901757745625,
+      "lpips": 0.4576310351341963,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 2.6430698795318603,
+      "total_loss": 0.052744451598264276,
+      "clean_loss": 0.052744451598264276,
+      "clean_mae": 0.052744451598264276,
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean absolute clean RGB error, weight 1.0"
+      },
+      "objective": "clean_only"
+    },
+    "A": {
+      "event": "full_validation",
+      "update": 6000,
+      "method": "A",
+      "view": "original_Val1000_real_recursive_rollout",
+      "used_for_best_selection": true,
+      "observation_target": "original_G4_and_Y4",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 20.098987184524535,
+      "clipped_psnr_auxiliary": 20.099239996910097,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 4,
+      "gamma": 1.0,
+      "elapsed_seconds": 290.7470434466377,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 287.27025270089507,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 286.66369884461164,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 290.7470434466377,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 283.5856329482049,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 283.5952755641192,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        },
+        {
+          "elapsed_seconds": 278.43769382685423,
+          "peak_allocated_bytes": 15885391360,
+          "peak_reserved_bytes": 18970836992
+        }
+      ],
+      "ssim": 0.5038577808527859,
+      "lpips": 0.5109469097703695,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 1.3030492916107177,
+      "total_loss": 0.05701091481861659,
+      "clean_loss": 0.06133100041747093,
+      "reprojection_loss": 0.018130159417865797,
+      "stage_psnr": [
+        21.783297269821166,
+        20.551658061027528,
+        20.25464109992981,
+        20.098987184524535
+      ],
+      "stage_losses": [
+        {
+          "total_loss": 0.04741959577426314,
+          "clean_loss": 0.05112091237679124,
+          "reprojection_loss": 0.014107758607249707
+        },
+        {
+          "total_loss": 0.05788869867939502,
+          "clean_loss": 0.06248038078006357,
+          "reprojection_loss": 0.016563574253581466
+        },
+        {
+          "total_loss": 0.060614205967634914,
+          "clean_loss": 0.06524215617403388,
+          "reprojection_loss": 0.01896267175488174
+        },
+        {
+          "total_loss": 0.06212115885317326,
+          "clean_loss": 0.06648055233899504,
+          "reprojection_loss": 0.02288663305575028
+        }
+      ],
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean across stages of 0.9 clean MAE + 0.1 original-G4 reprojection MAE"
+      },
+      "objective": "precomputed_current_g"
+    },
+    "B": {
+      "event": "full_validation",
+      "update": 4000,
+      "method": "B",
+      "view": "original_Val1000_real_recursive_rollout",
+      "used_for_best_selection": true,
+      "observation_target": "original_G4_and_Y4",
+      "count": 1000,
+      "source_count": 250,
+      "psnr": 21.71491616821289,
+      "clipped_psnr_auxiliary": 21.71623965549469,
+      "selection_metric": "mean_per_image_full_rgb_psnr_unclamped",
+      "refinement": false,
+      "inference_nfe": 4,
+      "gamma": 1.0,
+      "elapsed_seconds": 296.9000605205074,
+      "rank_resources": [
+        {
+          "elapsed_seconds": 295.27625876665115,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 287.556703559123,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 291.3149230182171,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 285.2896986231208,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 292.16148647200316,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        },
+        {
+          "elapsed_seconds": 296.9000605205074,
+          "peak_allocated_bytes": 59036412928,
+          "peak_reserved_bytes": 62021173248
+        }
+      ],
+      "ssim": 0.5833911173246773,
+      "lpips": 0.45099264036118986,
+      "input_psnr": 18.79593789291382,
+      "psnr_gain_vs_input": 2.918978275299072,
+      "total_loss": 0.047837619609432294,
+      "clean_loss": 0.05124632808356546,
+      "reprojection_loss": 0.017159255306469275,
+      "stage_psnr": [
+        21.8314177942276,
+        21.773702818870543,
+        21.74462693309784,
+        21.71491616821289
+      ],
+      "stage_losses": [
+        {
+          "total_loss": 0.047848769143223766,
+          "clean_loss": 0.05101197884045541,
+          "reprojection_loss": 0.01937989339698106
+        },
+        {
+          "total_loss": 0.04767343018576503,
+          "clean_loss": 0.05112119797803462,
+          "reprojection_loss": 0.016643532237038017
+        },
+        {
+          "total_loss": 0.04779534333944321,
+          "clean_loss": 0.05132781873829663,
+          "reprojection_loss": 0.0160030767461285
+        },
+        {
+          "total_loss": 0.04803293576929718,
+          "clean_loss": 0.051524316777475175,
+          "reprojection_loss": 0.01661051884572953
+        }
+      ],
+      "metric_spec": {
+        "psnr": "mean per-image RGB PSNR, range 1, no clamp/crop/resize",
+        "ssim": "skimage RGB; Gaussian 11x11 sigma1.5; population covariance; range1; float64 CPU",
+        "lpips": "official LPIPS AlexNet v0.1 pretrained; normalize=True; FP32; no clamp/resize",
+        "loss": "mean across stages of 0.9 clean MAE + 0.1 original-G4 reprojection MAE"
+      },
+      "objective": "recursive_alignment"
+    }
+  },
+  "final_checkpoint_readback": {
+    "time": "2026-10-26T00:33:13.115831+08:00",
+    "path": "runs/alignment_A6k_B4k_20261022/B/checkpoints/update_004000.pt",
+    "bytes": 612255280,
+    "inode": 112214205,
+    "sha256": "5b1f2ff98e0cd2541899689cd6d7827a3b3f644465fc8b52ac0701f4405f21ed",
+    "full_cpu_readback": true,
+    "completed_update": 4000,
+    "best_update": 2750,
+    "best_psnr": 21.736104907035827,
+    "config_hash": "dfcda596e5893e82642ac3ca1a636f6442c5666d59a3775fbaab997ff9b35104",
+    "scheduler": {
+      "base_lrs": [
+        2.5e-05,
+        5e-05
+      ],
+      "last_update": 4000,
+      "max_updates": 4000,
+      "warmup_updates": 100,
+      "cosine_terminal_lr": 0.0,
+      "step_timing": "before_optimizer_step_1_based"
+    },
+    "sampler": {
+      "kind": "update_indexed_global_epoch_shuffle_v1",
+      "seed": 20261022,
+      "dataset_size": 8000,
+      "completed_update": 4000,
+      "next_global_exposure": 192000,
+      "effective_batch": 48,
+      "microbatch": 2,
+      "accumulation_steps": 4,
+      "world_size": 6
+    },
+    "optimizer_state_count": 1173,
+    "rank_state_keys": [
+      [
+        "resources",
+        "rng"
+      ],
+      [
+        "resources",
+        "rng"
+      ],
+      [
+        "resources",
+        "rng"
+      ],
+      [
+        "resources",
+        "rng"
+      ],
+      [
+        "resources",
+        "rng"
+      ],
+      [
+        "resources",
+        "rng"
+      ]
+    ],
+    "keys": [
+      "best_psnr",
+      "best_update",
+      "completed_update",
+      "config",
+      "config_hash",
+      "cost_cutoff",
+      "counters",
+      "initial_identity",
+      "method",
+      "model",
+      "optimizer",
+      "rank_states",
+      "sampler",
+      "saved_unix_time",
+      "scheduler",
+      "schema",
+      "world_size"
+    ],
+    "latest_same_inode": true,
+    "note": "CPU readback only; no NPU allocation or training resume executed."
+  },
+  "run_hours": {
+    "D0": 25.051513970515483,
+    "A": 19.473477484043947,
+    "B": 46.66240124661501
+  },
+  "isolated_controls": "COMPLETE_NOT_DEPLOYED",
+  "refinement": false,
+  "test_used": false,
+  "no_new_guard_abort": true,
+  "npu_2_to_7_training_processes_released": true,
+  "monitor_stop_ready": true,
+  "monitor_deleted": true,
+  "automation_id": "v5"
+}

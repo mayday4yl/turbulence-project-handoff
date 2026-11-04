@@ -1,0 +1,216 @@
+{
+  "N": 1000,
+  "common_nodes": [
+    0,
+    500,
+    1000
+  ],
+  "devices": [
+    2,
+    3
+  ],
+  "parallel": true,
+  "refinement_sources": 8,
+  "refinement_trajectory_ids": [
+    "val_s1660_r00",
+    "val_s2052_r00",
+    "val_s2098_r00",
+    "val_s1902_r00",
+    "val_s0926_r00",
+    "val_s0680_r00",
+    "val_s2343_r00",
+    "val_s0286_r00"
+  ],
+  "post_training_reserve_seconds": 9000,
+  "minimum_eval_save_reserve_seconds": 7200,
+  "safety_seconds": 1800,
+  "validation_metrics_seen_before_lock": false,
+  "epoch": 1791997276.275726,
+  "estimates": [
+    {
+      "N": 200,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 15759.346175223589,
+      "remaining_seconds": 42186.37347269058,
+      "fits": true
+    },
+    {
+      "N": 400,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 22033.589694082737,
+      "remaining_seconds": 42186.37347269058,
+      "fits": true
+    },
+    {
+      "N": 600,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 28307.833212941885,
+      "remaining_seconds": 42186.37347269058,
+      "fits": true
+    },
+    {
+      "N": 800,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 34582.07673180103,
+      "remaining_seconds": 42186.37347269058,
+      "fits": true
+    },
+    {
+      "N": 1000,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 40856.32025066018,
+      "remaining_seconds": 42186.37347269058,
+      "fits": true
+    },
+    {
+      "N": 1200,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 47130.56376951933,
+      "remaining_seconds": 42186.37347269058,
+      "fits": false
+    },
+    {
+      "N": 1600,
+      "refinement_sources": 8,
+      "predicted_remaining_seconds": 59679.050807237625,
+      "remaining_seconds": 42186.37347269058,
+      "fits": false
+    }
+  ],
+  "common_warm_sha256": "6acb309c5a03b1ef4f982d369fea96e87b39cfefdfa8cfeadb55b8dc1c31253d",
+  "sample_manifest_sha256": "acb4bf38496cfe1c135701cd9b56914a196b24074b02ff91c429e1ae56541bb9",
+  "scale_sha256": "a8c80d3492c1e5bd302c40f6957c5af84ddb79c835f862e66ed9651c0dc4d041",
+  "source_hashes": {
+    "data.py": "c3460265e9c82c7e9e5c895290eb787ec5281329169bb54963079f593dc797f9",
+    "refine_adapter.py": "f75b4c217bf30dc76736ae5278a911c7013a3adbf9e0ea0efd20373a91f26779",
+    "controller.py": "890800ebdf201057e17cc81956e97689b94f5aa22cee206a8bdeb1722ac6ab32",
+    "core.py": "22b8ac6ada7c1f7e3a7e6a1954154d97b151b17c7e9dab724a045a6c940c4015",
+    "deadline_guard.py": "8be07b9135691200a4932cdfe615b9b9be6ed2b1633ea77064fa28527edaab0e",
+    "prepare.py": "1fe9ed9018995f0ba642fd90a50bb60ea1cf5bda6b366a649f6fc7047f971815",
+    "worker.py": "fa7ef3c624530ecd153d8ddb908d4ea548309b6a1cc32a2b87723fbf7fd7d63a",
+    "common.py": "7dde9c6d57c1d1ceb60f0c34c860443a75d8bcf53f0690180a213bc49497a134",
+    "report.py": "8dee9adde3768ffc0e5d75309ee4633a644b3311079f37673d3f2eb63846d0af",
+    "v4/model.py": "bdcf36c92bc9e180cda9a73acd8bad7a623bcf54e992a165525b5e3c647ebf6d",
+    "v4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "v4/refinement.py": "c5f39f691f304ef30ec87024430e0c3d920df0205c12efa763dd8c0c1429c40d",
+    "npu_runtime/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "npu_runtime/backend.py": "4a6d3f77dcea12225ee9889352a8ea114dcadfff038f721d621ebc158a6662da",
+    "physical_bridge/model.py": "d306b0a82d5f96ca442e77577cffecf977e02a73d91c968e76c5e88d3831c705",
+    "physical_bridge/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "physical_bridge/metrics.py": "f55af60f01143b935ab9198cf21111dc325dc385ee1f965387b541f5a92367a5",
+    "physical_bridge/simulator.py": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c"
+  },
+  "config": {
+    "experiment": "de36_g4_raw_vs_field_12h_20261015",
+    "seed": 20261015,
+    "devices": {
+      "Raw": 2,
+      "Field": 3
+    },
+    "dataset_root": "/data2/yanglin/datasets/places_p2s_canonical_20261003_c50_s2000_v250_t200_g4321_v1",
+    "asset_dir": "/data0/yanglin/vendor/PiRN/assets/utils",
+    "network": {
+      "base_channels": 16,
+      "channel_multipliers": [
+        1,
+        2,
+        4
+      ],
+      "residual_blocks_per_level": 1,
+      "group_norm_groups": 8,
+      "severity_embedding_dim": 256
+    },
+    "physics": {
+      "image_size": 256,
+      "rf_range": 512,
+      "aperture_diameter": 0.071,
+      "propagation_distance": 100.0,
+      "wavelength": 5e-07,
+      "correlation": -0.05,
+      "tilt_threshold": 0.02,
+      "adjustment": 1.0
+    },
+    "G": 4,
+    "g_ref": 1,
+    "microbatch": 1,
+    "accumulation": 4,
+    "effective_batch": 4,
+    "warm_updates": 500,
+    "allowed_formal_updates": [
+      200,
+      400,
+      600,
+      800,
+      1000,
+      1200,
+      1600
+    ],
+    "maximum_experiment_wall_seconds": 43200,
+    "evaluation_save_reserve_seconds": 7200,
+    "precision": "fp32",
+    "lambda_R": 0.2,
+    "loss": "mean_k=1..4(LC_k+0.2*LR_k_original_G4)",
+    "optimizer": {
+      "lr": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "bias_norm_weight_decay": 0.0,
+      "clip_global_norm": 1.0
+    },
+    "field_scale": {
+      "existing_train_realizations": 32,
+      "floor": 1e-06
+    },
+    "acceptance": {
+      "image_mean_abs_max": 1e-05,
+      "image_max_abs_max": 0.001,
+      "directional_relative_tolerance": 0.1,
+      "directional_absolute_tolerance": 1e-05,
+      "directional_epsilons": [
+        0.01,
+        0.005,
+        0.001
+      ]
+    },
+    "val_metric_access_before_budget_lock": false,
+    "test_access": false,
+    "resume_old_models": false,
+    "resume_after_interruption": false,
+    "forbidden": [
+      "GT_state_or_xi_supervision",
+      "RGB_mixing",
+      "g_prediction",
+      "renderer_coordinate_or_FFT_repair",
+      "old_runs_or_authority_modification",
+      "training_refinement"
+    ],
+    "note": "New G4 protocol supersedes canceled G2. Only physical NPU 2,3. All network and physics FP32. No pre-existing restoration checkpoint is loaded.",
+    "safety_reserve_seconds": 1800,
+    "refinement": {
+      "steps": 40,
+      "lr": 0.01,
+      "lambda": 0.01,
+      "sources": 8,
+      "minimum_sources": 4,
+      "execution": "per_sample_serial",
+      "selection": "minimum_total_J_including_initial"
+    },
+    "lr_schedule": {
+      "kind": "cosine",
+      "start": 0.0001,
+      "end": 1e-06,
+      "duration": "locked_common_N"
+    },
+    "coding_started_epoch": 1791995803.2361338
+  },
+  "training_refinement": false,
+  "evaluation_refinement": [
+    "OFF",
+    "ON"
+  ],
+  "no_automatic_continuation": true
+}

@@ -1,0 +1,29 @@
+{
+  "allow_direct_R0": false,
+  "allow_method_change": false,
+  "allow_test_evaluation": false,
+  "approved_execution_plan_sha256": "90dbd4922eafeedf16b9d4c24288ba94ee4956dcca6262d2b56bc1893bf72ce2",
+  "approved_execution_sequence": [
+    "A",
+    "B"
+  ],
+  "authority": "User final pasted instructions and follow-up requests to autonomously repair and run experiments. No stage approval required.",
+  "authorized_on": "2026-10-22",
+  "effective_batch": 48,
+  "physical_cards": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "schema": "v5_alignment_authorization_v1",
+  "source_user_instruction_sha256": "477c97af6a4079518fcba23f86c880c6eb34acb748b1f9d5dbf0a188ebbcaa42",
+  "stage_budgets": {
+    "A": 6000,
+    "B": 4000
+  },
+  "status": "AUTHORIZED",
+  "supersedes": "Post-D0 direct 10k R0-D0Init only. Running clean-only D0 remains unchanged."
+}

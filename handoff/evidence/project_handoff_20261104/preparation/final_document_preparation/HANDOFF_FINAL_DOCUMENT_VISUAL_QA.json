@@ -1,0 +1,134 @@
+{
+  "schema": "handoff_final_document_visual_qa_v1",
+  "scope": "handoff_final_document_visual_qa_v1",
+  "status": "PASS",
+  "final": true,
+  "reviewer": "root",
+  "draft": false,
+  "checked_unix": 1793730103.7523048,
+  "page_count": 11,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "artifacts": [
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/Turbulence_Project_Handoff_FINAL.docx",
+      "bytes": 54587,
+      "sha256": "7ab32d05dab9f365f5e1540d516bf3ca6d8bb064f24e8101b9478658f3d12c8f"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/Turbulence_Project_Handoff_FINAL.pdf",
+      "bytes": 793057,
+      "sha256": "3e53c3664d0d288d924aef35d953267667ff6c1dc73f6f79a3ae84b76d5c3179"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-1.png",
+      "bytes": 476781,
+      "sha256": "bda777a3d0df471dd585352f6c654b3effb2593b446a76dfc8afab0db070d79b",
+      "page_index": 1
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-2.png",
+      "bytes": 415637,
+      "sha256": "e160ddc6b6cf3a7a72b6123e7a61d39b10dea99b98a44f8c080d5a03d1309275",
+      "page_index": 2
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-3.png",
+      "bytes": 405932,
+      "sha256": "2333b210f38862b2ca24430c639689ae1da6484545fd675f3e0507b379f25cc7",
+      "page_index": 3
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-4.png",
+      "bytes": 463178,
+      "sha256": "4c880ffa5c17a04bf767aff742e1be27f8ec48e5d545534cc57f5f124b6ff55e",
+      "page_index": 4
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-5.png",
+      "bytes": 462465,
+      "sha256": "f6ff66c9e77d2ce30aa490df48c36b66692a2a90a4bb605a52ae4fb6f268a1ec",
+      "page_index": 5
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-6.png",
+      "bytes": 479298,
+      "sha256": "e9b60c29248e793943d1f69e5990ba94e8b402b6df807fa9bd4d457a104273b9",
+      "page_index": 6
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-7.png",
+      "bytes": 417836,
+      "sha256": "c85f48726f2348981a50e57d93d73a32d7a9911da098259787d3f72803677f1c",
+      "page_index": 7
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-8.png",
+      "bytes": 431587,
+      "sha256": "4142cf8ebbab27a59b952343958262302f7bfa34f19a33029af528311a1dc984",
+      "page_index": 8
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-9.png",
+      "bytes": 509714,
+      "sha256": "82c62d56d4956185567cb0ac11cc3e71f9786803da0d1315c6cdbca96239ace2",
+      "page_index": 9
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-10.png",
+      "bytes": 392145,
+      "sha256": "9eff6314e32014b1fbee8af2039f8829d58c201466d8854504b8b46fa0ea10f7",
+      "page_index": 10
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/rendered/page-11.png",
+      "bytes": 273954,
+      "sha256": "f2f7f715740aadebc3a317225cf120370b7b66a2bedcccea3715b3f64ed72ea0",
+      "page_index": 11
+    }
+  ],
+  "source_markdown": {
+    "path": "project_handoff_20261104/preparation/final_document_preparation/MAIN_HANDOFF_FINAL_v2.md",
+    "bytes": 25932,
+    "sha256": "3ef6edb97bfad725cdbf05824429a7b91ccf82abf3ba3d736f777d739f312356"
+  },
+  "evidence_bindings": [
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/artifacts_v2/FINAL_DOCX_BUILD.json",
+      "bytes": 31358,
+      "sha256": "046088ace6b047893155c88e3bde3de151cb79529991aaafb3ce2290b57d1b77"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/MAIN_FINAL_CONTENT_WORDING_CORRECTION.json",
+      "bytes": 1300,
+      "sha256": "ee94912a9580866b5fd1d8cdf2c012ff02672c78baa14524c2b59759bfdda766"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/final_document_preparation/MAIN_FINAL_CONTENT_REVIEW.json",
+      "bytes": 6012,
+      "sha256": "0b020adc76b237ba57ebc4c902aaac07fbfcb8f52cb705566278a408a6b4c44a"
+    },
+    {
+      "path": "project_handoff_20261104/preparation/FINAL_HANDOFF_CONTENT_REFRESH.json",
+      "bytes": 4365,
+      "sha256": "6c768e522deaf1007f544456ac7baddcf27e94e4686817bbc72411e1d82155cc"
+    }
+  ],
+  "notes": [
+    "Root visually reviewed all 11 actual v2 rendered PNGs: pages 1-4 before context compaction and 5-11 afterward in the same work session.",
+    "Chinese, symbols, tables and repeated table headers are legible, with no text overlap, truncation or overflow.",
+    "Page 6 objective wording is corrected to optimize, not minimize PSNR. Final identities, four metrics, epoch counts, CPU audit, local backups and 534 process identities match accepted evidence.",
+    "External recipient signing or receipt is not claimed. Neither draft nor first-edition final render QA is substituted for v2 QA."
+  ]
+}

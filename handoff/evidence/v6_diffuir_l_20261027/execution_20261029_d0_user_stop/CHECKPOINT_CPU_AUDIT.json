@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "unix": 1793259663.6332064,
+  "checkpoints": [
+    {
+      "label": "latest",
+      "update": 95544,
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_official_residual_until18_20261029_01/checkpoints/U095544.pt",
+      "sha256": "1fd16df15c64cc496bda89ccb32fd6a9413c9de8e59942fc13cbb6592e757cc3",
+      "raw_EMA_Adam_RNG_scheduler_scaler_buffers_data_source": "PASS",
+      "cursor": 5732640,
+      "Adam_state_count": 276
+    },
+    {
+      "label": "pre_final_best",
+      "update": 95000,
+      "path": "/data2/yanglin/v6_diffuir_l_20261027/distributed/V6_D0_official_residual_until18_20261029_01/checkpoints/U095000.pt",
+      "sha256": "2495fe8e03703727d1cd81d23c7a9fe1692ef098c03838cee478bf7d332a238f",
+      "raw_EMA_Adam_RNG_scheduler_scaler_buffers_data_source": "PASS",
+      "cursor": 5700000,
+      "Adam_state_count": 276
+    }
+  ],
+  "all_training_workers_and_controller_exited": true,
+  "original_config_sha256": "500a4393170204135b9e3c009d1a93f27ecccb5c790f4fc9838f37089c9a091b",
+  "training_updates_executed_for_audit": 0,
+  "A_B_remain_paused": true
+}

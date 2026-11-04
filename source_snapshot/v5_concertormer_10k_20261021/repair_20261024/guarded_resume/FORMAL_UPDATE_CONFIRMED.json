@@ -1,0 +1,103 @@
+{
+  "status": "FORMAL_UPDATE_CONFIRMED",
+  "observed_unix": 1792819053.9453192,
+  "local_time": "2026-10-24T13:17:33.945325",
+  "formal_status": {
+    "status": "TRAINING",
+    "event": "optimizer_update",
+    "update": 1003,
+    "method": "B",
+    "loss": 0.049038976430892944,
+    "clean_mae": 0.05203358456492424,
+    "grad_norm_before_clip": 0.09708976745605469,
+    "learning_rates": [
+      2.1836325692614397e-05,
+      4.3672651385228794e-05
+    ],
+    "elapsed_seconds": 41.12648084014654,
+    "samples_per_second": 1.1671312259021132,
+    "anomaly": null,
+    "counters": {
+      "optimizer_updates": 1003,
+      "sample_exposures": 48144,
+      "network_forward_exposures": 192576,
+      "training_seconds": 40521.751399197616,
+      "validation_seconds": 1208.1551016820595,
+      "checkpoint_seconds": 13.113545360974967,
+      "run_elapsed_seconds": 41881.6249962626,
+      "parent_optimizer_updates": 16000,
+      "parent_run_elapsed_seconds": 160289.96923641395,
+      "parent_direct_optimizer_updates": 6000,
+      "preparation_seconds": 0.0,
+      "cumulative_optimizer_updates_including_parent": 17003,
+      "cumulative_run_elapsed_seconds_including_parent": 202171.59423267655
+    },
+    "peak_allocated_bytes": 59016246272,
+    "peak_reserved_bytes": 60169388032,
+    "observation_target": "original_G4_and_Y4",
+    "observation_mae": 0.02208748459815979,
+    "stage_clean_loss": [
+      0.05172867700457573,
+      0.05195328965783119,
+      0.05211012065410614,
+      0.0523422472178936
+    ],
+    "stage_reprojection_loss": [
+      0.02832004614174366,
+      0.022169748321175575,
+      0.018827849999070168,
+      0.019032297655940056
+    ]
+  },
+  "controller": {
+    "authorization_sha256": "56f979b9a021891931bd7d38d3b6077496e447bc7aa91e369ebd9ee04e56b78d",
+    "child_pids": [
+      4003914
+    ],
+    "controller_pid": 4001534,
+    "logs": [
+      "/data2/yanglin/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/train_B_to_004000_attempt0_0.log"
+    ],
+    "plan_path": "/data2/yanglin/v5_concertormer_10k_20261021/protocol/ALIGNMENT_A6K_B4K_20261022.json",
+    "plan_sha256": "90dbd4922eafeedf16b9d4c24288ba94ee4956dcca6262d2b56bc1893bf72ce2",
+    "stage": "train_B_to_004000_attempt0",
+    "started_at_unix": 1792683850.4012444,
+    "status": "RUNNING_CHILD",
+    "test_used": false,
+    "unix_time": 1792819006.2113044
+  },
+  "processes": [
+    {
+      "pid": 4001534,
+      "command": "/data0/yanglin/envs/physical_bridge/bin/python -u -m repair_20261024.guarded_resume.resume_controller --plan /data2/yanglin/v5_concertormer_10k_20261021/protocol/ALIGNMENT_A6K_B4K_20261022.json --authorization /data2/yanglin/v5_concertormer_10k_20261021/protocol/ALIGNMENT_AUTHORIZATION_20261022.json --guard-policy /data2/yanglin/v5_concertormer_10k_20261021/repair_20261024/guarded_resume/ACTIVE_GUARD_POLICY.json --resume-acceptance /data2/yanglin/v5_concertormer_10k_20261021/repair_20261024/guarded_resume/RESUME_ACCEPTANCE.json "
+    },
+    {
+      "pid": 4003914,
+      "command": "/data0/yanglin/envs/physical_bridge/bin/python -u -m torch.distributed.run --nproc_per_node 6 --master_port 29867 -m repair_20261024.guarded_resume.guarded_runner --config /data2/yanglin/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/configs/B_to_004000.json --guard-policy /data2/yanglin/v5_concertormer_10k_20261021/repair_20261024/guarded_resume/ACTIVE_GUARD_POLICY.json --resume-acceptance /data2/yanglin/v5_concertormer_10k_20261021/repair_20261024/guarded_resume/RESUME_ACCEPTANCE.json "
+    }
+  ],
+  "training_rank_pids": [
+    4003975,
+    4003976,
+    4003977,
+    4003978,
+    4003979,
+    4003980
+  ],
+  "original_code_files_checked": 88,
+  "original_code_mismatches": [],
+  "guard_aborts": [],
+  "disk_free_GiB": 4518.680366516113,
+  "resources": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 311.0       54                0    / 0             |\n| 0                         | 0000:C1:00.0  | 100         0    / 0          25674/ 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 248.7       55                0    / 0             |\n| 0                         | 0000:01:00.0  | 85          0    / 0          14187/ 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 117.8       51                0    / 0             |\n| 0                         | 0000:C2:00.0  | 29          0    / 0          62532/ 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 124.7       53                0    / 0             |\n| 0                         | 0000:02:00.0  | 26          0    / 0          62534/ 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 120.5       49                0    / 0             |\n| 0                         | 0000:81:00.0  | 25          0    / 0          62527/ 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 117.0       51                0    / 0             |\n| 0                         | 0000:41:00.0  | 31          0    / 0          62526/ 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 123.7       50                0    / 0             |\n| 0                         | 0000:82:00.0  | 29          0    / 0          62526/ 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 119.4       51                0    / 0             |\n| 0                         | 0000:42:00.0  | 30          0    / 0          62526/ 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| 0       0                 | 1537424       | python                   | 13932                   |\n| 0       0                 | 3047394       | python                   | 8434                    |\n+===========================+===============+====================================================+\n| 1       0                 | 3047393       | python                   | 8434                    |\n| 1       0                 | 2938958       |                          | 2452                    |\n+===========================+===============+====================================================+\n| 2       0                 | 4003975       | python                   | 59172                   |\n+===========================+===============+====================================================+\n| 3       0                 | 4003976       | python                   | 59172                   |\n+===========================+===============+====================================================+\n| 4       0                 | 4003977       | python                   | 59172                   |\n+===========================+===============+====================================================+\n| 5       0                 | 4003978       | python                   | 59172                   |\n+===========================+===============+====================================================+\n| 6       0                 | 4003979       | python                   | 59172                   |\n+===========================+===============+====================================================+\n| 7       0                 | 4003980       | python                   | 59172                   |\n+===========================+===============+====================================================+\n",
+  "uncommitted_cost_receipts": [
+    "/data2/yanglin/v5_concertormer_10k_20261021/reports/alignment_A6k_B4k_20261022/guarded_resume_20261024/UNCOMMITTED_COST_B_1792818823274449177.json"
+  ],
+  "eta_hours_range": [
+    35,
+    37
+  ],
+  "eta_basis": "Early resumed observed update time plus historical full-Val and checkpoint costs; not long steady-state estimate",
+  "hourly_monitor": "v5 ACTIVE FREQ=HOURLY INTERVAL=1",
+  "method_changed": false,
+  "test_used": false
+}

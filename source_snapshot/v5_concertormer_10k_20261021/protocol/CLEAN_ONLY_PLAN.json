@@ -1,0 +1,73 @@
+{
+  "checkpoint_interval": 250,
+  "code_manifest": "/data2/yanglin/v5_concertormer_10k_20261021/protocol/CLEAN_ONLY_CODE_MANIFEST.json",
+  "d0_objective": "clean_only",
+  "dataset_root": "/data2/yanglin/v5_concertormer_10k_20261021/data/v5_places_c50_s2000_v250_t250_g4_r4_20261021",
+  "environment": {
+    "TASK_QUEUE_ENABLE": "0"
+  },
+  "execution_sequence": [
+    {
+      "method": "D0",
+      "target": 10000
+    },
+    {
+      "method": "R0-D0Init",
+      "target": 10000
+    }
+  ],
+  "extended_validation_metrics": true,
+  "hccl_readiness_report": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/clean_only_20261021/R0_RUNTIME_READY.json",
+  "hccl_readiness_reports": {
+    "D0": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/clean_only_20261021/D0_READY.json",
+    "R0": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/clean_only_20261021/R0_RUNTIME_READY.json"
+  },
+  "initial_checkpoint": "/data2/yanglin/v5_concertormer_10k_20261021/weights/clean_only_GoPro_U0.pt",
+  "master_port": 29865,
+  "max_updates": 10000,
+  "method_runtime_overrides": {
+    "D0": {
+      "activation_checkpointing": false,
+      "checkpoint_policy": "all",
+      "psf_backend": "native"
+    }
+  },
+  "methods": [
+    "D0",
+    "R0-D0Init"
+  ],
+  "parallel_groups": false,
+  "physical_cards": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "readiness_reports": {
+    "D0": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/clean_only_20261021/D0_READY.json",
+    "R0": "/data2/yanglin/v5_concertormer_10k_20261021/preparation/clean_only_20261021/R0_RUNTIME_READY.json"
+  },
+  "refinement_config": null,
+  "resource_retry_seconds": 60,
+  "run_root": "/data2/yanglin/v5_concertormer_10k_20261021/runs/clean_only_D0_then_R0D0Init_B48_u250",
+  "runtime": {
+    "accumulation_steps": 4,
+    "activation_checkpointing": true,
+    "checkpoint_policy": "highest_half",
+    "effective_batch": 48,
+    "microbatch": 2,
+    "network_precision": "bf16",
+    "psf_backend": "adjoint",
+    "talking_backend": "conv2d_equivalent",
+    "world_size": 6
+  },
+  "schema": "v5_workflow_v1",
+  "seed": 20261021,
+  "train_log_interval": 10,
+  "val_batch_size": 4,
+  "val_interval": 250,
+  "workers": 2,
+  "workflow_reports_dir": "/data2/yanglin/v5_concertormer_10k_20261021/reports/clean_only_D0_then_R0D0Init_B48_u250"
+}

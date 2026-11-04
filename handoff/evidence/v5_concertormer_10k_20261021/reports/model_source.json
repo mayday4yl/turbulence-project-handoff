@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/setsunil/Concertormer",
+  "commit": "94269c556277805051644343e3a2cc76c4cd7aaf",
+  "upstream_files_sha256": {
+    "basicsr/models/archs/Concertormer_arch.py": "34ed8cc94eed374fda15fbb6fa14ba1b3dfbc57609c3526a9d625ebfac46bc3c",
+    "basicsr/models/archs/arch_util.py": "5a11af2e7c2d7a7b57c1fbd7e19cf0a50b4b4e8c7ae7dd203a915d7a707e7005",
+    "options/train/GoPro/GoPro.yml": "01ff65a677d9ae613d6f6dded911db79c26082742eb7f66f4690f9179abcaa4a",
+    "LICENSE": "a29ecef3456149898f08e4c71b11b33e7d333664e087bc212e84e18ddd6599ad"
+  },
+  "runtime_architecture_change": "Only LayerNorm import changed; LayerNorm extracted unchanged",
+  "einops_version": "0.8.1"
+}

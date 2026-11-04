@@ -1,0 +1,11 @@
+{
+  "status": "PASS_ARCHIVED_VERIFIED_33_EXACT_FILES_DELETED",
+  "archive_path": "/data2/yanglin/storage_archives/A100_cleanup_20261020_33files",
+  "archive_host": "liteserver-de36",
+  "allocated_bytes_unlinked": 21316493312,
+  "deleted_count": 33,
+  "protected_assets_unchanged": true,
+  "raw_xi_untouched": true,
+  "other_projects_untouched": true,
+  "local_time": "2026-10-20T22:27:08.884395+08:00"
+}

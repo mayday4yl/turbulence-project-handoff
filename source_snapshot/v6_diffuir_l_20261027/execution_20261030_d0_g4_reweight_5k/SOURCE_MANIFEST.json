@@ -1,0 +1,21 @@
+{
+  "files": {
+    "method_impl/d0_g4_reweight_20261030.py": "018bbc7e165ee21e0d4fcab25335a2f6c6f821a7d17f61d1bb2e0c63971c3cac",
+    "scripts/finalize_d0_g4_reweight_20261030.py": "e5de61a16d49f3001b59a21c9dbc97d6cfe68fc28d3fb14830a353cc4ad91c52",
+    "scripts/launch_d0_g4_reweight_20261030.py": "e31b6509fe029d085e54c4a8426a0a0435422ca718b5c25eb7b6bee169fb3658",
+    "scripts/run_d0_g4_reweight_20261030.py": "feda962ea4907cc430c68f8dfd4e5b5a8a41ff8903969139cc159e2afe2f4ac3",
+    "scripts/audit_d0_g4_reweight_20261030.py": "1d6cd26148365f267e5143e6624184b8bdce28f3149ffd1050e219ebc69c3d58",
+    "scripts/d0_g4_reweight_pipeline_20261030.py": "80a910a33eb3dbaf9bbca8773707402de2ba56476babc0196e824d54e45bdea6",
+    "authority/USER_D0_G4_REWEIGHT_5K_AUTHORIZED_20261030.md": "1aa5f4bd769df944f6f9884c646d75017115d0677096056f65f1659327724d3c",
+    "execution_20261030_d0_g4_reweight_5k/EXTENSION_CRITERIA.json": "9e9dd295e94084cd8857194e8c6271ae79141fce82d56dec2fb92a7cba0d0ed6",
+    "execution_20261030_d0_g4_reweight_5k/CONFIG.json": "268683cbf324310273a08b12c464b65c3d35a0040334f4fdaf3700048ceb3f0e",
+    "execution_20261030_d0_g4_reweight_5k/SUPPORT_SOURCE_MANIFEST.json": "bb2b8427b4ca8a2d7b27ea4db4d0d5a807cb3d4e35b4b53c8cbbf5c56430e13e",
+    "execution_20261030_d0_g4_reweight_5k/CONFIG_MANIFEST.json": "9276b05f4a707395841c02df20ceb6787230fc1a435fb8c613ea40161322641c",
+    "execution_20261030_d0_g4_reweight_5k/RUN_PLAN_ZH.md": "58d19d8af31ca9fe2b789c8cdd304c4401563d02ae28de3dfaf1e1461270aa6b",
+    "execution_20261029_d0_multistrength160k/SOURCE_MANIFEST.json": "07d4b430b5383371998e605a22f23af0fa33cf600c7fa8d8ac6a5b85eec59304",
+    "execution_20261029_d0_multistrength160k/CONFIG.json": "8378ea99e0cbc16ab295d6187f96706033b4a5b56e316078c28afe20961db86a",
+    "execution_20261029_d0_multistrength160k/CONFIG_MANIFEST.json": "24092e8a77cfbf361f4f16cada3310527c51bc07ac7508fe60d31cc42fa5924c"
+  },
+  "training_math": "Original native residual-only path unchanged",
+  "created_unix": 1793367406.0035653
+}
