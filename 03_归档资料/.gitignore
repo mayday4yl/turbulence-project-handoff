@@ -1,0 +1,39 @@
+# Local tools and caches
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+.ssh/
+.aws/
+.auth/
+credentials.json
+auth.json
+id_rsa
+id_ed25519
+# Large scientific payloads are registered externally
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.bin
+*.tar
+*.tar.gz
+*.zip
+*.bundle
+*.mp4
+*.avi
+*.part
+*.tmp

@@ -1,0 +1,27 @@
+{
+  "scope": "Operational coexistence within user-authorized eight-card continuation; no external signals; no scientific recipe/batch change",
+  "min_free_HBM_MiB_before_launch": 49152,
+  "permitted_contexts": [
+    {
+      "card": 1,
+      "pid": 2938958,
+      "kind": "previously_user_permitted_driver_context",
+      "OS_liveness_asserted": false
+    },
+    {
+      "card": 0,
+      "pid": 1506794,
+      "start_ticks": "596454736",
+      "kind": "observed_external_training_context",
+      "recorded_process_MiB": 720
+    },
+    {
+      "card": 2,
+      "pid": 1504769,
+      "start_ticks": "596444189",
+      "kind": "observed_external_training_context",
+      "recorded_process_MiB": 674
+    }
+  ],
+  "provenance": "Resource guard stopped before any gate/optimizer update. Fresh npu-smi shows >59GiB free on these cards, above 48GiB launch headroom versus prior ~42GiB native reserved peak; shared compute affects timing, no outside task is stopped."
+}

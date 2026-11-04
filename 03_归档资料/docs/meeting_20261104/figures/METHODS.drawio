@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="METHODS" name="METHODS">
+    <mxGraphModel dx="1400" dy="800" grid="0" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" background="#FFFFFF" lineJumpsEnabled="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="当前交接：两个已有模块与一个待接方向" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="25" width="1328" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="先分别理解和运行模拟器、UniDB；物理路径与新 consistency 的接入尚未完成。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="80" width="1328" height="40" />
+        </mxCell>
+        <mxCell id="sim" value="① 可复用模块：V5 物理模拟器" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="135" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="clean_xi" value="清晰图 &lt;i&gt;C&lt;/i&gt;、固定 &lt;i&gt;ξ&lt;/i&gt;&lt;br&gt;退化强度 &lt;i&gt;g&lt;/i&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="205" width="300" height="100" />
+        </mxCell>
+        <mxCell id="physical" value="&lt;i&gt;F&lt;/i&gt;(&lt;i&gt;C&lt;/i&gt;, &lt;i&gt;ξ&lt;/i&gt;, &lt;i&gt;g&lt;/i&gt;)&lt;br&gt;Smooth 模糊 → 位移采样" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="430" y="205" width="460" height="100" />
+        </mxCell>
+        <mxCell id="degraded" value="退化图 &lt;i&gt;Y&lt;/i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;br&gt;固定 &lt;i&gt;ξ&lt;/i&gt;，改变 &lt;i&gt;g&lt;/i&gt; 得到物理路径" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="980" y="205" width="380" height="100" />
+        </mxCell>
+        <mxCell id="s1" value="" source="clean_xi" target="physical" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="s2" value="" source="physical" target="degraded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="simnote" value="恢复时间 t = 1 − g/4；模拟器负责生成退化，不是恢复网络。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="325" width="1320" height="42" />
+        </mxCell>
+        <mxCell id="uni" value="② 最新恢复基线：UniDB D0 / U67180 EMA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="395" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="y" value="退化图 Y&lt;br&gt;固定条件 μ = Y" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="455" width="250" height="90" />
+        </mxCell>
+        <mxCell id="sde" value="原生100步 reverse SDE&lt;br&gt;ConditionalUNet 预测噪声" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="390" y="455" width="440" height="90" />
+        </mxCell>
+        <mxCell id="pred" value="恢复图&lt;br&gt;当前无外层 Simulator / raw-ξ head" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="930" y="455" width="430" height="90" />
+        </mxCell>
+        <mxCell id="u1" value="" source="y" target="sde" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="u2" value="" source="sde" target="pred" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="future" value="③ 待接入：物理路径 + 接手方 consistency 方法" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="595" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="path" value="复用 F(C, ξ, g(t))&lt;br&gt;作为新方法的物理路径" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="660" width="350" height="80" />
+        </mxCell>
+        <mxCell id="consistency" value="确认接手方论文与代码&lt;br&gt;时间、目标、采样器、梯度需求" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="485" y="660" width="440" height="80" />
+        </mxCell>
+        <mxCell id="compare" value="适配后开展新实验&lt;br&gt;与匹配的 D0 对比" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1020" y="660" width="340" height="80" />
+        </mxCell>
+        <mxCell id="f" value="" source="path" target="consistency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;dashed=1;strokeColor=#B77B2D;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="g" value="" source="consistency" target="compare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;dashed=1;strokeColor=#B77B2D;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

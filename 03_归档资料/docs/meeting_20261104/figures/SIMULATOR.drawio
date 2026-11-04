@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="SIMULATOR" name="SIMULATOR">
+    <mxGraphModel dx="1400" dy="760" grid="0" page="1" pageScale="1" pageWidth="1400" pageHeight="760" math="0" background="#FFFFFF" lineJumpsEnabled="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="V5 模拟器：先形成空间变化模糊，再按位移场采样" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="25" width="1328" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="固定清晰图 C 与同一组 raw ξ，改变 g 才是在沿同一条物理路径移动。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="80" width="1328" height="40" />
+        </mxCell>
+        <mxCell id="rawz" value="原始随机源 &lt;i&gt;ξ&lt;/i&gt;&lt;sub&gt;z&lt;/sub&gt;&lt;br&gt;[B, 36, 512, 512]" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="150" width="250" height="90" />
+        </mxCell>
+        <mxCell id="zfield" value="相关混合 + FFT 滤波&lt;br&gt;幅度 &lt;i&gt;g&lt;/i&gt;&lt;sup&gt;5/6&lt;/sup&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="355" y="150" width="270" height="90" />
+        </mxCell>
+        <mxCell id="p2s" value="冻结 P2S：36 → 100&lt;br&gt;每像素 PSF 基权重" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="150" width="270" height="90" />
+        </mxCell>
+        <mxCell id="rawt" value="原始随机源 &lt;i&gt;ξ&lt;/i&gt;&lt;sub&gt;tilt&lt;/sub&gt;&lt;br&gt;[B, 512, 512, 2]" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="300" width="250" height="90" />
+        </mxCell>
+        <mxCell id="flow" value="&lt;i&gt;g&lt;/i&gt;&lt;sup&gt;5/6&lt;/sup&gt; 缩放 + 完整复 IFFT&lt;br&gt;取实部 → 像素位移 &lt;i&gt;u&lt;/i&gt;&lt;sub&gt;g&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=18;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="355" y="300" width="270" height="90" />
+        </mxCell>
+        <mxCell id="grid" value="像素中心采样网格&lt;br&gt;2(&lt;i&gt;p&lt;/i&gt; + &lt;i&gt;u&lt;/i&gt;&lt;sub&gt;g&lt;/sub&gt; + 0.5)/256 − 1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="300" width="330" height="90" />
+        </mxCell>
+        <mxCell id="clean" value="清晰图 C&lt;br&gt;[B,3,256,256]" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="480" width="250" height="100" />
+        </mxCell>
+        <mxCell id="conv" value="平均核 + 100 基核卷积&lt;br&gt;reflect 边界" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="355" y="480" width="270" height="100" />
+        </mxCell>
+        <mxCell id="smooth" value="逐像素加权 + Smooth&lt;br&gt;(1−&lt;i&gt;g&lt;/i&gt;/4)&lt;i&gt;C&lt;/i&gt; + (&lt;i&gt;g&lt;/i&gt;/4)&lt;i&gt;B&lt;/i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;sup&gt;phys&lt;/sup&gt;(&lt;i&gt;C&lt;/i&gt;)" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="480" width="330" height="100" />
+        </mxCell>
+        <mxCell id="warp" value="双线性 warp&lt;br&gt;边界：border&lt;br&gt;输出 &lt;i&gt;Y&lt;/i&gt;&lt;sub&gt;g&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1100" y="480" width="250" height="100" />
+        </mxCell>
+        <mxCell id="e1" value="" source="rawz" target="zfield" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" source="zfield" target="p2s" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" source="rawt" target="flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="" source="flow" target="grid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" source="clean" target="conv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" source="conv" target="smooth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" source="smooth" target="warp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" value="" source="p2s" target="smooth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1055" y="195" />
+              <mxPoint x="1055" y="450" />
+              <mxPoint x="855" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" source="grid" target="warp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1225" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" source="clean" target="smooth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="165" y="625" />
+              <mxPoint x="855" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="恢复时间 t = 1 − g/4：t=0 对应 g=4；t=1 对应 g=0。原图直连 Smooth；权重与位移分别控制两条支路。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="660" width="1310" height="38" />
+        </mxCell>
+        <mxCell id="boundary" value="g=0 前向 identity 有验证；近零误差与部分差分仍有历史 FAIL。图中 raw ξ、像素位移和归一化 grid 是不同对象。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=18;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="705" width="1310" height="32" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

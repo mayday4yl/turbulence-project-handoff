@@ -1,0 +1,17 @@
+{
+  "version": "dual_state_audit_v1",
+  "frozen_before_actual_checkpoint_comparison": true,
+  "network_and_EMA_allclose": {"atol": 0.000002, "rtol": 0.00002},
+  "Adam_moment_allclose": {"atol": 0.00000002, "rtol": 0.0002},
+  "RAW_error_L2_over_reference_two_update_delta_L2_max": 0.01,
+  "Adam_each_and_combined_error_L2_over_reference_moment_L2_max": 0.01,
+  "zero_denominator": "pass iff numerator also zero; otherwise fail",
+  "allclose_direction": "abs(test-reference) <= atol + rtol*abs(reference)",
+  "comparison_added_updates_required": 2,
+  "method_RNG": "all8 logical banks torch/npu/numpy/python exactly equal",
+  "counts_cursor_update": "exact equality",
+  "physical_loader_generators": "validate completeness per physical rank; not compared across different physical world sizes",
+  "CPU_threads": 4,
+  "tensor_chunk_elements": 1048576,
+  "no_cli_tolerance_override": true
+}

@@ -1,0 +1,82 @@
+{
+  "branch": "original",
+  "phase": "formal",
+  "physical_world_size": 3,
+  "logical_world_size": 8,
+  "effective_batch": 96,
+  "data_seed": 843101,
+  "rng_seed": 843101,
+  "precision": "FP32_HF32off",
+  "objective": "native_mean_matching_L1",
+  "gamma_inv": 1e-07,
+  "T": 100,
+  "dummy_mode": "parameters",
+  "physical_micro_layout": [
+    [
+      {
+        "lid": 0,
+        "offset": 0,
+        "n": 12
+      },
+      {
+        "lid": 3,
+        "offset": 36,
+        "n": 12
+      },
+      {
+        "lid": 6,
+        "offset": 72,
+        "n": 12
+      }
+    ],
+    [
+      {
+        "lid": 1,
+        "offset": 12,
+        "n": 12
+      },
+      {
+        "lid": 4,
+        "offset": 48,
+        "n": 12
+      },
+      {
+        "lid": 7,
+        "offset": 84,
+        "n": 12
+      }
+    ],
+    [
+      {
+        "lid": 2,
+        "offset": 24,
+        "n": 12
+      },
+      {
+        "lid": 5,
+        "offset": 60,
+        "n": 12
+      }
+    ]
+  ],
+  "gradient_clip": null,
+  "Adam_betas": [
+    0.9,
+    0.99
+  ],
+  "Adam_eps": 1e-08,
+  "weight_decay": 0.0,
+  "EMA_beta": 0.995,
+  "EMA_update_every": 10,
+  "deadline_unix": 1793700000,
+  "schedule_deadline_unix": 1793678400,
+  "extension_lr": 1e-05,
+  "startup_monitor": false,
+  "source_identity": {
+    "original_sources_checked": true,
+    "new_manifests": {
+      "protocol/RUN_SOURCE.json": "b3b07d6bbe466c3ec0d8353d516144b517ebad2152dd590eb405170ccc3633c4"
+    },
+    "authority_sha256": "6e31e86f16b05c783ba31e91759dc0a4c5d813d4a465aaf0f2180b96a34fdb97"
+  }
+}
