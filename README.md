@@ -23,19 +23,21 @@
 
 ## 2. 从最初到现在，做了哪些尝试
 
-下面按研究演进排列；各版本的数据和协议不同，**不是同条件模型排行榜，也不是已证明的单一因果链**。
+完整的[换方案理由、失败记录与未决问题](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md)已按**31个节点**逐项整理：每项写清当时为何改、实际改什么、哪里失败或停止、还缺什么证据，并链接原件。未记录的动机明确标未知，不用事后结果补造理由。
 
-| 阶段 | 当时尝试解决什么 | 实际做到哪里、留下什么结论 |
+| 转向 | 为什么换／为什么做 | 哪些仍没有解决 |
 |---|---|---|
-| **[v1 → v1.5](handoff/history/legacy_v1_v3.md)** | 同时预测清晰图像与湍流变量，用物理重建约束恢复。 | v1完成20k更新，验证最终选择直接单步恢复；v1.5完成3k，纠正评价身份后仍未通过继续条件。尚未支持渐进推理优势。 |
-| **[v2 → v2.5 → v3](handoff/history/legacy_v1_v3.md)** | 按老师的递归方案，用自身预测生成下一状态，再检查能否拟合。 | v2未启动正式训练；v2.5在U204安全暂停；v3完成Overfit100，训练人口可以拟合，留出来源出现回退。几何校正是独立支线，不归入v2。 |
-| **[V4 · Noise Bridge](handoff/history/v4_history.md)** | 固定原观测作为条件，比较直接恢复、物理递归、噪声路径与线性路径，并更换骨干、扩数据。 | 形成U-Net/SwinIR/Restormer/NAFNet匹配实验。NAFNet Train8000四法各20k完成，RAW/OFF主表中直接恢复的PSNR最高；扩至Train15000后按用户要求停止，四法实际训练量不同。 |
-| **[V5 · Concertormer](handoff/history/v5_history.md)** | 改用连续时间网络和新模拟器，分直接恢复、单步对齐、真实四步递归三个阶段训练。 | D0/A/B分别完成10k/6k/4k。B的best比D0提高约0.293dB，但第四步仍低于自身第一步；局部改善未证明逐步恢复优势。 |
-| **[V6 · DiffUIR-L](handoff/history/v6_history.md)** | 转向像素空间条件扩散，先后检查训练目标、多强度、G4偏重及外部数据。 | 原生残差、混强度和重加权实验均有完整记录。弱强度与G4存在取舍；ATSyn固定单帧有有限正结果，OTIS真实域评价出现退化，未建立稳定泛化。 |
-| **[UniDB · D0及诊断](handoff/history/unidb_history.md)** | 检查另一种官方像素桥，保留原生网络与100步随机采样。 | 八卡D0训练至U45411，G4 PSNR低于Input。诊断支持微调权重与随机采样路径的交互影响，未确认唯一根因。此路线没有外层物理递归。 |
-| **[UniDB · 3＋5双路线收尾](handoff/experiment/README_ZH.md)** | 原路线保留MatchingLoss L1继续训练；另一线从官方U0训练epsilon_opt MSE，比较整套路线。 | 经中午、18点、午夜三段，最终停在U67180/U40848。评价、全状态、备份、退出审计均完成；质量结论见下表，项目转入交接。 |
+| [v1→v1.5](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l1) | 原观测重建误差低，不保证ξ跨强度传输或下一状态正确；补轨迹与弱态约束。 | A1评价身份纠偏后仍未过继续门槛；不是模拟器不可微的定论。 |
+| [v2→v2.5→v3](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l2) | 用自身预测递归；随后改半量协议，再做小样本拟合诊断。 | v2未正式开训，v2.5因时间边界暂停；v3能拟合却在留出来源回退。 |
+| [T1/T2、I1与几何支线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l5) | 分别检查直接恢复、物理反馈、精修保护和几何轨迹的必要性。 | 留出回退、精修候选及几何Gate未通过；未开的确认集不是隐藏的成功证据。 |
+| [V4接口、骨干、数据与平台](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v4-01) | 新方法加入固定原观测；继续检查不同骨干、预训练和更大数据；A100迁移及NAFNet由用户指定。 | 不能当单因素骨干排名。Train8000的RAW/OFF主表中直接恢复PSNR最高；Train15000按用户要求停止，部分停点没有full。 |
+| [V4→V5及A→B](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-01) | 新连续时间/模拟器规格，选择Concertormer；先中间态训练再对齐真实递归。 | Simulator原FAIL带局限接收；B胜独立D0却末步弱于首步；首个失稳原因未定位。 |
+| [ResShift→DiffUIR-L](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-05) | 所测冻结VQ四次RGB往返累积漂移，随后选像素空间恢复器。 | 只约束所测codec组合，不否定所有latent方法；短pilot工程通过没有证明质量。 |
+| [V6目标与强度调整](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v6-3) | 用户要求切回官方原生目标、扩至G1–G4，再有限比较G4偏重。 | 强弱档取舍、追加门失败；ATSyn有限正结果与OTIS/官方能力退化并存。 |
+| [V6→UniDB→双路线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-1) | UniDB已有RGB空间条件和恢复权重，接入较直接；诊断后用户要求原配方与新配方并行。 | 选型不等于湍流排名；微调权重与随机采样有不良交互，唯一根因未定；双线不是单因素loss对照。 |
+| [中午→18点→午夜→交接](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-4) | 用户明确延长训练时限，之后决定结束研究、整理交接。 | 延期不是质量门通过；最终验收完成但恢复质量目标未达到。 |
 
-其他几何、候选模型、Raw–Field、模拟器、真实数据与机制诊断见[支线记录](handoff/history/extra_branches.md)和[逐实验登记](handoff/registers/EXPERIMENT_REGISTER.csv)。展示名称已统一为v1/v1.5/v2/v2.5/v3；原文件名、配置、数据ID与权重名称保留。
+**接手不用猜的部分：**[12项未决问题及核实入口](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#open-issues) · [模型、资产、复现与失败解释FAQ](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#handoff-faq)。跨版本常同时改变数据、初始化、目标或预算，以上是决策过程，不是同条件排行榜。几何校正独立于老师的v2；旧文件名保留。
 
 ## 3. 最后一次实验，结果到底怎样
 
@@ -61,7 +63,7 @@
 
 ## 4. 接手的人从哪里开始
 
-1. **先了解结论与限制：**读11页[主交接PDF](handoff/documents/Turbulence_Project_Handoff_FINAL.pdf)，或[可编辑Word](handoff/documents/Turbulence_Project_Handoff_FINAL.docx) / [Markdown同稿](handoff/documents/MAIN_HANDOFF_FINAL_v2.md)。
+1. **先了解结论、转向与限制：**先读[决策／失败／未决补充](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md)，再读11页[主交接PDF](handoff/documents/Turbulence_Project_Handoff_FINAL.pdf)，或[可编辑Word](handoff/documents/Turbulence_Project_Handoff_FINAL.docx) / [Markdown同稿](handoff/documents/MAIN_HANDOFF_FINAL_v2.md)。
 2. **再定位具体实验：**按[交接资料入口](handoff/README.md)、下方注册表和[操作说明](handoff/history/OPERATIONS_GUIDE_ZH.md)核对版本、评价口径、源码和模型身份。
 3. **需要复现时再转交大资产：**数据、完整权重和全量预测没有进入Git；按[未包含资产清单](handoff/NOT_INCLUDED.md)与权重/资产登记取得对应文件。旧A100路径未核实项保留为待查，不能推断文件丢失。
 4. **如决定继续研究：**由新负责人先确定目标和新实验范围。当前没有排队中的追加训练；旧控制器和启动脚本仅作历史源码，不应直接运行。

@@ -1,0 +1,37 @@
+{
+  "schema": "decision_sources_v1",
+  "date": "2026-11-04",
+  "purpose": "Verbatim historical decision evidence for the Git handoff addendum; not new execution authorization",
+  "entries": [
+    {
+      "source": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/authority/USER_D0_OFFICIAL_RESIDUAL_RESUME_20261028.md",
+      "repository_destination": "docs/decision_sources/v6/USER_D0_OFFICIAL_RESIDUAL_RESUME_20261028.md",
+      "sha256": "f155c65d5266a3b8e48cc617048e8f74c2e3ff554334fa003eef063954101a4c",
+      "bytes": 2220
+    },
+    {
+      "source": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/authority/USER_D0_MULTISTRENGTH160K_UPDATES_20261029.md",
+      "repository_destination": "docs/decision_sources/v6/USER_D0_MULTISTRENGTH160K_UPDATES_20261029.md",
+      "sha256": "b6f44c7e1d2767248275f20d67c8332330fcb278153a93d33bc2c1cc8813eb32",
+      "bytes": 1921
+    },
+    {
+      "source": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/authority/USER_D0_G4_REWEIGHT_5K_AUTHORIZED_20261030.md",
+      "repository_destination": "docs/decision_sources/v6/USER_D0_G4_REWEIGHT_5K_AUTHORIZED_20261030.md",
+      "sha256": "1aa5f4bd769df944f6f9884c646d75017115d0677096056f65f1659327724d3c",
+      "bytes": 2059
+    },
+    {
+      "source": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/unidb_vs_pixeldit_20261101/COMPARISON_ZH.md",
+      "repository_destination": "docs/decision_sources/v6/COMPARISON_ZH.md",
+      "sha256": "25a32504f63d77170fb3481d1cda015f0a927105a71ffdce1a7dbe55f284df84",
+      "bytes": 4674
+    },
+    {
+      "source": "/Users/lucas/Desktop/turbulence IR/v6_diffuir_l_20261027/diagnostics/unidb_turbulence_plan_20261102/RUN_PLAN_PROPOSED_ZH.md",
+      "repository_destination": "docs/decision_sources/v6/RUN_PLAN_PROPOSED_ZH.md",
+      "sha256": "9a2ef84e89d83a12195249564d6cf1801c98d1afbdaf2782fc0dd094b20f9d3d",
+      "bytes": 6335
+    }
+  ]
+}
