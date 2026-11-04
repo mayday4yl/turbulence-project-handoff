@@ -1,0 +1,21 @@
+01d548fd431f165cfdf677950d1494a19fe9db978c136ceaf72c31f7e2749ac7  /tmp/yanglin_handoff_20261104_1733/demo.py
+{
+  "task": "inspect",
+  "unix": 1793786545.6785398,
+  "python": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+  "device": "cpu",
+  "optimizer_updates": 0,
+  "scope": "receiver demonstration; not a formal benchmark",
+  "paths": {
+    "/data2/yanglin/v5_v1_simulator_20261020/simulator_v5.py": true,
+    "/data2/yanglin/v5_v1_simulator_20261020/assets/P2S_model.pt": true,
+    "/data2/yanglin/v5_v1_simulator_20261020/assets/dictionary.pt": true,
+    "/data2/yanglin/v5_v1_simulator_20261020/assets/I0_I2.pt": true,
+    "/data2/yanglin/v5_v1_simulator_20261020/assets/CANONICAL_CPU_REFERENCE.npz": true,
+    "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python": true,
+    "/data2/yanglin/unidb_d0_20261102/core.py": true,
+    "/data2/yanglin/unidb_d0_20261102/vendor/unidb_gou/sde_utils.py": true,
+    "/data2/yanglin/unidb_d0_20261102/evidence/DATA_GATE.json": true
+  },
+  "status": "PASS"
+}

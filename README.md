@@ -1,45 +1,37 @@
 # 湍流图像恢复项目交接
 
-**当前进度：实验已结束，资料已交接；当前研究到此收尾，未安排新训练。**
+**接手重点：读懂现有 V5 模拟器，跑通最新 UniDB D0，再由接手方接入 consistency 方法。**
 
-状态基准：2026年11月4日交接快照（北京时间），不是服务器实时监控。
+状态基准：2026年11月4日交接快照（北京时间），不是服务器实时监控。现有训练已结束；本次交接资料与运行示例已整理，接收人访问和独立重跑仍需实际确认。
 
-项目想解决的是：把大气湍流造成的**模糊、几何扭曲**图像恢复成清晰图像，并检验多步物理递归是否比直接恢复更有效。研究从物理桥接与递归，发展到多骨干匹配比较，再转向像素空间条件扩散；目前交接的是完整研究过程、可复核结果和资产入口。
+项目任务是单帧大气湍流图像恢复：从含空间变化模糊、几何扭曲的RGB图恢复清晰图，并检验物理恢复路径能否优于匹配条件下的直接恢复D0。下面先介绍现在可以交接和运行的模块；完整历史过程收在页末附录。
 
-> **工程收尾已完成，科研目标尚未达到。** 有局部正结果，但尚未建立跨真实场景稳定的强湍流恢复优势；最新 UniDB 两路线的最终五档 PSNR 均低于对应输入基线。不能把训练完成、loss 下降或图片更锐利等同于恢复成功。
+## 1. 现在接什么
 
-## 1. 现在做到哪里了
-
-| 项目 | 当前进度与交接内容 |
-|---|---|
-| **最新训练** | UniDB 双路线已在 **11月4日00:00** 截止边界安全停训。原路线 U67180；改进路线 U40848。午夜后没有新启动的优化器更新。 |
-| **最终评价** | 两线均完成五档强度、每档1000张的 EMA 评价及独立 RAW 监控；完整状态与保存预测的四指标 CPU 复核通过。 |
-| **最终模型** | 原路线 **best＝latest U67180**；改进路线 **best U10000、latest U40848**。三个唯一完整权重已在本机备份并核验 SHA，位置见[权重登记](handoff/registers/WEIGHT_REGISTER.csv)。 |
-| **运行收尾** | 本次三阶段所有自有训练、评价与 CPU 收尾进程已核验退出；本次自动跟进已结束。 |
-| **交接资料** | 已完成11页[Word](handoff/documents/Turbulence_Project_Handoff_FINAL.docx) / [PDF](handoff/documents/Turbulence_Project_Handoff_FINAL.pdf)、版本历史、七份登记表、结果图、证据及选定源码；本仓库已设为私有。 |
-| **仍未解决** | 跨真实场景的稳定恢复优势、物理多步在未见来源上稳定优于自身第一步、UniDB 退化的唯一原因均未确立。部分旧 A100 资产当前未核实；数据和大权重需按清单另行转交。 |
-
-最终状态依据：[主交接说明](handoff/documents/MAIN_HANDOFF_FINAL_v2.md) · [UniDB 实验收尾与验收](handoff/experiment/README_ZH.md) · [模型角色与身份](handoff/provenance/UNIDB_FINAL_HANDOFF_STATE.json)。历史文件中的 `RUNNING`、`pending`、计划步数只描述当时，不能当作现在仍在运行。
-
-## 2. 从最初到现在，做了哪些尝试
-
-完整的[换方案理由、失败记录与未决问题](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md)已按**31个节点**逐项整理：每项写清当时为何改、实际改什么、哪里失败或停止、还缺什么证据，并链接原件。未记录的动机明确标未知，不用事后结果补造理由。
-
-| 转向 | 为什么换／为什么做 | 哪些仍没有解决 |
+|模块|当前状态|从哪里开始|
 |---|---|---|
-| [v1→v1.5](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l1) | 原观测重建误差低，不保证ξ跨强度传输或下一状态正确；补轨迹与弱态约束。 | A1评价身份纠偏后仍未过继续门槛；不是模拟器不可微的定论。 |
-| [v2→v2.5→v3](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l2) | 用自身预测递归；随后改半量协议，再做小样本拟合诊断。 | v2未正式开训，v2.5因时间边界暂停；v3能拟合却在留出来源回退。 |
-| [T1/T2、I1与几何支线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l5) | 分别检查直接恢复、物理反馈、精修保护和几何轨迹的必要性。 | 留出回退、精修候选及几何Gate未通过；未开的确认集不是隐藏的成功证据。 |
-| [V4接口、骨干、数据与平台](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v4-01) | 新方法加入固定原观测；继续检查不同骨干、预训练和更大数据；A100迁移及NAFNet由用户指定。 | 不能当单因素骨干排名。Train8000的RAW/OFF主表中直接恢复PSNR最高；Train15000按用户要求停止，部分停点没有full。 |
-| [V4→V5及A→B](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-01) | 新连续时间/模拟器规格，选择Concertormer；先中间态训练再对齐真实递归。 | Simulator原FAIL带局限接收；B胜独立D0却末步弱于首步；首个失稳原因未定位。 |
-| [ResShift→DiffUIR-L](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-05) | 所测冻结VQ四次RGB往返累积漂移，随后选像素空间恢复器。 | 只约束所测codec组合，不否定所有latent方法；短pilot工程通过没有证明质量。 |
-| [V6目标与强度调整](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v6-3) | 用户要求切回官方原生目标、扩至G1–G4，再有限比较G4偏重。 | 强弱档取舍、追加门失败；ATSyn有限正结果与OTIS/官方能力退化并存。 |
-| [V6→UniDB→双路线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-1) | UniDB已有RGB空间条件和恢复权重，接入较直接；诊断后用户要求原配方与新配方并行。 | 选型不等于湍流排名；微调权重与随机采样有不良交互，唯一根因未定；双线不是单因素loss对照。 |
-| [中午→18点→午夜→交接](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-4) | 用户明确延长训练时限，之后决定结束研究、整理交接。 | 延期不是质量门通过；最终验收完成但恢复质量目标未达到。 |
+|**V5 simulator：可复用的物理退化模块**|输入清晰图、固定raw ξ和强度g，执行空间变化模糊、Smooth与warp；可构造随时间变化的物理路径。保留原Gate局限和研究接收记录。|[原理、公式与接口](docs/meeting_20261104/SIMULATOR_GUIDE.md) · [对应源码](source_snapshot/v5_v1_simulator_20261020/)|
+|**UniDB D0：最新像素空间扩散基线**|原路线best＝latest **U67180**；另一路best **U10000**、latest **U40848**。已有完整状态、最终评价及NPU恢复示例；当前没有接入外层模拟器或consistency loss。|[NPU逐步运行](docs/meeting_20261104/NPU_RUNBOOK.md) · [最终权重登记](handoff/registers/WEIGHT_REGISTER.csv)|
+|**会议提出的下一步：物理路径＋consistency**|由接手方提供其原consistency/CGDB实现，确认时间方向、目标、采样器与梯度需求后接入；目前尚未实现，也没有新实验性能结论。|[方法说明与接口表](docs/meeting_20261104/METHODS_AND_NEXT_STEP.md#3-接手方要接的接口)|
 
-**接手不用猜的部分：**[12项未决问题及核实入口](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#open-issues) · [模型、资产、复现与失败解释FAQ](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#handoff-faq)。跨版本常同时改变数据、初始化、目标或预算，以上是决策过程，不是同条件排行榜。几何校正独立于老师的v2；旧文件名保留。
+**当前恢复质量仍有限：**最新UniDB两路线的最终五档PSNR均低于相应输入基线；跨真实场景的稳定强湍流恢复优势、物理多步稳定优于自身第一步，以及UniDB退化的唯一原因均未确立。训练结束和工程能够运行不代表科研目标已达到。
 
-## 3. 最后一次实验，结果到底怎样
+## 2. 接手老师按这个顺序看、跑
+
+1. 打开[离线交互图解](docs/meeting_20261104/visual_guide.html)（下载/解压后在浏览器打开），或[文字总指南](docs/meeting_20261104/START_HERE.md)，先看当前模块和固定ξ强度示例。
+2. 读[模拟器说明](docs/meeting_20261104/SIMULATOR_GUIDE.md)，对照[逐函数代码导航](docs/meeting_20261104/CODE_MAP.md)，理解两类raw ξ、PSF权重、像素位移与归一化采样网格。
+3. 按[NPU运行指南](docs/meeting_20261104/NPU_RUNBOOK.md)取得现有de36访问方式，确认资产与解释器，先跑CPU模拟器，再在分配到的NPU上跑模拟器及UniDB最终EMA的100步恢复。
+4. 用[接收清单](docs/meeting_20261104/MEETING_CHECKLIST.md)确认访问和重跑结果，再安排新方法；[完整性复查](docs/meeting_20261104/COMPLETENESS_REVIEW.md)列明已覆盖内容及仍待实际对接的事项。
+
+现有NPU入口是`/data2/yanglin/v6_diffuir_l_20261027/env/bin/python`，它通过`.pth`依赖多个旧环境目录。模拟器位于`/data2/yanglin/v5_v1_simulator_20261020`，UniDB位于`/data2/yanglin/unidb_d0_20261102`；完整账号、路径和逐步命令以运行指南为准，不能仅拷贝一个venv文件夹。
+
+本次已完成CPU/NPU模拟器前向与一阶反向、UniDB最终EMA的CPU前向及NPU100步恢复示例，**0次优化器更新**。范围和原始记录见[运行验证](docs/meeting_20261104/VALIDATION.md)；这些检查与原正式实验评价分别记录。旧训练器绑定旧目录、截止和源清单，新训练需要按运行指南第6节另行适配。
+
+原论文先看P2S、UniDB，再结合接手方的一致性方法：[论文阅读顺序与项目对应关系](docs/meeting_20261104/PAPERS.md)。已有论文草稿、19点汇报和最终结果素材见[论文与汇报素材索引](docs/meeting_20261104/PAPER_MATERIALS.md)。
+
+## 3. 最新模型与正式结果
+
+UniDB双路线于**11月4日00:00**截止边界安全停训，原路线U67180、改进路线U40848；午夜后没有新启动的优化器更新。两线完成五档强度、每档1000张的EMA评价及独立RAW监控，完整状态与保存预测的四指标CPU复核通过。三个唯一完整权重已在本机备份并核验SHA，见[权重登记](handoff/registers/WEIGHT_REGISTER.csv)。三阶段自有训练、评价与CPU收尾进程均已核验退出，自动跟进已结束。
 
 **只比较 UniDB 匹配协议下的 G4 全量验证。** 每档1000张＝250个来源×4个湍流实现；模型使用EMA、原生100步SDE。这里不是每档100张的小监控集，也不是锁定Test或真实场景测试。`best` 指既定完整评价候选池的选择结果。
 
@@ -61,17 +53,41 @@
 - 最终Input / Best / Latest / GT固定样本：[G1](handoff/evidence/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G1.png) · [G2](handoff/evidence/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G2.png) · [G3](handoff/evidence/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G3.png) · [G4](handoff/evidence/unidb_dual_20261104_until00/delivery/original_route/ORIGINAL_FINAL_BEST_LATEST_G4.png)。原路线best与latest是同一权重，两列相同；固定样本不代替全量结果。
 - [完整五档四指标CSV](handoff/evidence/unidb_dual_20261104_until00/report/FULL_QUALITY_COMPARISON.csv) · [最终实验报告](handoff/evidence/unidb_dual_20261104_until00/report/FINAL_REPORT_ZH.md)。
 
-## 4. 接手的人从哪里开始
+最终状态依据：[主交接说明](handoff/documents/MAIN_HANDOFF_FINAL_v2.md) · [UniDB实验收尾与验收](handoff/experiment/README_ZH.md) · [模型角色与身份](handoff/provenance/UNIDB_FINAL_HANDOFF_STATE.json)。历史文件中的`RUNNING`、`pending`与计划步数只描述当时。
 
-1. **先了解结论、转向与限制：**先读[决策／失败／未决补充](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md)，再读11页[主交接PDF](handoff/documents/Turbulence_Project_Handoff_FINAL.pdf)，或[可编辑Word](handoff/documents/Turbulence_Project_Handoff_FINAL.docx) / [Markdown同稿](handoff/documents/MAIN_HANDOFF_FINAL_v2.md)。
-2. **再定位具体实验：**按[交接资料入口](handoff/README.md)、下方注册表和[操作说明](handoff/history/OPERATIONS_GUIDE_ZH.md)核对版本、评价口径、源码和模型身份。
-3. **需要复现时再转交大资产：**数据、完整权重和全量预测没有进入Git；按[未包含资产清单](handoff/NOT_INCLUDED.md)与权重/资产登记取得对应文件。旧A100路径未核实项保留为待查，不能推断文件丢失。
-4. **如决定继续研究：**由新负责人先确定目标和新实验范围。当前没有排队中的追加训练；旧控制器和启动脚本仅作历史源码，不应直接运行。
+## 4. 资料范围与交接边界
 
-本仓库从2026-11-04交接快照开始Git版本管理，旧实验历史保存在报告与登记表中。它保存已验收的小文件资料和选定源码，不是全部实验磁盘镜像；源码身份、依赖、第三方许可及离线校验方式见下方。
+本仓库公开提供技术交接资料，包含原11页[Word](handoff/documents/Turbulence_Project_Handoff_FINAL.docx) / [PDF](handoff/documents/Turbulence_Project_Handoff_FINAL.pdf)、[Markdown同稿](handoff/documents/MAIN_HANDOFF_FINAL_v2.md)、七份登记表、结果图、证据、选定源码及本次会议补充。原PDF/Word是午夜收尾快照；当前接手先读上面的会议后指南。对外交付统一使用一个无修订号后缀的交接ZIP；历史源码和证据文件的原名保留用于核验。
+
+数据、完整权重和全量预测未进入Git，按[未包含资产清单](handoff/NOT_INCLUDED.md)、[资产登记](handoff/registers/ASSET_REGISTER.csv)和[权重登记](handoff/registers/WEIGHT_REGISTER.csv)取得。指南按现有de36环境验证；迁到新机器仍要补齐官方vendor、载荷及环境依赖。部分旧A100资产尚未核实，不能由连接失败推断文件丢失。
+
+本仓库从2026-11-04交接快照开始Git版本管理，保存小文件资料与选定源码，不是全部实验磁盘镜像。原`handoff/`与`source_snapshot/`保持清单中的字节身份；详细冻结范围、离线校验和第三方许可说明在下方附录。需要追溯具体实验时再查[原交接入口](handoff/README.md)及[资产操作说明](handoff/history/OPERATIONS_GUIDE_ZH.md)。
+
+后续研究目标、实验负责人、资源、consistency代码版本和论文分工由双方对接确定。当前没有排队中的追加训练，原控制器和启动脚本保留作历史源码。
 
 <details>
-<summary><strong>展开详细目录：七份注册表、各版本源码、克隆校验与复现条件</strong></summary>
+<summary><strong>历史背景：方案演进、失败记录与未决问题</strong></summary>
+
+完整的[换方案理由、失败记录与未决问题](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md)已按**31个节点**逐项整理：每项写清当时为何改、实际改什么、哪里失败或停止、还缺什么证据，并链接原件。未记录的动机明确标未知，不用事后结果补造理由。
+
+| 转向 | 为什么换／为什么做 | 哪些仍没有解决 |
+|---|---|---|
+| [v1→v1.5](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l1) | 原观测重建误差低，不保证ξ跨强度传输或下一状态正确；补轨迹与弱态约束。 | A1评价身份纠偏后仍未过继续门槛；不是模拟器不可微的定论。 |
+| [v2→v2.5→v3](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l2) | 用自身预测递归；随后改半量协议，再做小样本拟合诊断。 | v2未正式开训，v2.5因时间边界暂停；v3能拟合却在留出来源回退。 |
+| [T1/T2、I1与几何支线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#l5) | 分别检查直接恢复、物理反馈、精修保护和几何轨迹的必要性。 | 留出回退、精修候选及几何Gate未通过；未开的确认集不是隐藏的成功证据。 |
+| [V4接口、骨干、数据与平台](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v4-01) | 新方法加入固定原观测；继续检查不同骨干、预训练和更大数据；A100迁移及NAFNet由用户指定。 | 不能当单因素骨干排名。Train8000的RAW/OFF主表中直接恢复PSNR最高；Train15000按用户要求停止，部分停点没有full。 |
+| [V4→V5及A→B](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-01) | 新连续时间/模拟器规格，选择Concertormer；先中间态训练再对齐真实递归。 | Simulator原FAIL带局限接收；B胜独立D0却末步弱于首步；首个失稳原因未定位。 |
+| [ResShift→DiffUIR-L](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v5-05) | 所测冻结VQ四次RGB往返累积漂移，随后选像素空间恢复器。 | 只约束所测codec组合，不否定所有latent方法；短pilot工程通过没有证明质量。 |
+| [V6目标与强度调整](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#v6-3) | 用户要求切回官方原生目标、扩至G1–G4，再有限比较G4偏重。 | 强弱档取舍、追加门失败；ATSyn有限正结果与OTIS/官方能力退化并存。 |
+| [V6→UniDB→双路线](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-1) | UniDB已有RGB空间条件和恢复权重，接入较直接；诊断后用户要求原配方与新配方并行。 | 选型不等于湍流排名；微调权重与随机采样有不良交互，唯一根因未定；双线不是单因素loss对照。 |
+| [中午→18点→午夜→交接](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#u-4) | 用户明确延长训练时限，之后决定结束研究、整理交接。 | 延期不是质量门通过；最终验收完成但恢复质量目标未达到。 |
+
+**接手不用猜的部分：**[12项未决问题及核实入口](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#open-issues) · [模型、资产、复现与失败解释FAQ](docs/DECISIONS_FAILURES_AND_OPEN_ISSUES_ZH.md#handoff-faq)。跨版本常同时改变数据、初始化、目标或预算，以上是决策过程，不是同条件排行榜。几何校正独立于老师的v2；旧文件名保留。
+
+</details>
+
+<details>
+<summary><strong>附录：七份注册表、各版本源码、冻结清单、校验与迁移条件</strong></summary>
 
 ## 七份注册表
 
@@ -108,12 +124,13 @@
 
 ## 克隆后先做离线完整性检查
 
-取得该私有仓库的访问权限后，克隆并使用 Python 3 标准库运行：
+克隆公开仓库并使用 Python 3 标准库运行：
 
 ```sh
 git clone https://github.com/mayday4yl/turbulence-project-handoff.git
 cd turbulence-project-handoff
 python3 tools/verify_repository.py
+python3 tools/receiver/verify_supplement.py
 ```
 
 也可从任意位置执行该脚本，或用 `--root /path/to/clone` 检查另一份副本。成功时退出码为 0 并输出一行精简 JSON；失败时退出码非零并列出错误。校验读取本仓库的相对路径，不访问清单中的原机绝对路径，不联网，不导入模型或执行实验代码。

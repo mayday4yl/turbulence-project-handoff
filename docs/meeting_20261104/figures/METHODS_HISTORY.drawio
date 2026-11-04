@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="METHODS_HISTORY" name="METHODS_HISTORY">
+    <mxGraphModel dx="1400" dy="800" grid="0" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" background="#FFFFFF" lineJumpsEnabled="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="三条路线必须分开理解" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="25" width="1328" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="D0是各自版本的直接恢复基线；扩散内部步数与外层物理递归次数不是同一个计数。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="80" width="1328" height="40" />
+        </mxCell>
+        <mxCell id="v5" value="① 已完成：V5 / Concertormer 物理递归" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="135" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="obs" value="原观测 &lt;i&gt;Y&lt;/i&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;br&gt;&lt;i&gt;Z&lt;/i&gt;&lt;sub&gt;0&lt;/sub&gt; = &lt;i&gt;Y&lt;/i&gt;&lt;sub&gt;4&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="205" width="210" height="100" />
+        </mxCell>
+        <mxCell id="network" value="&lt;i&gt;N&lt;/i&gt;&lt;sub&gt;θ&lt;/sub&gt;(&lt;i&gt;Z&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt;, &lt;i&gt;t&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt;)&lt;br&gt;预测 clean 与 raw &lt;i&gt;ξ&lt;/i&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="330" y="205" width="270" height="100" />
+        </mxCell>
+        <mxCell id="render" value="&lt;i&gt;F&lt;/i&gt;(预测 clean, 预测 &lt;i&gt;ξ&lt;/i&gt;, &lt;i&gt;g&lt;/i&gt;&lt;sub&gt;i+1&lt;/sub&gt;)&lt;br&gt;构造下一状态 &lt;i&gt;Z&lt;/i&gt;&lt;sub&gt;i+1&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="205" width="355" height="100" />
+        </mxCell>
+        <mxCell id="final" value="第4次 &lt;i&gt;N&lt;/i&gt;&lt;sub&gt;θ&lt;/sub&gt; → clean 输出&lt;br&gt;正式 refinement OFF" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=18;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="205" width="240" height="100" />
+        </mxCell>
+        <mxCell id="a" value="" source="obs" target="network" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="b" value="" source="network" target="render" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="c" value="" source="render" target="final" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="v5note" value="中间状态来自预测，训练保留 Full-BPTT。灰虚线省略重复步骤：前3次预测后重渲染，第4次直接返回 clean。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="325" width="1320" height="42" />
+        </mxCell>
+        <mxCell id="uni" value="② 已完成：UniDB D0 / 像素空间扩散桥" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="395" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="y" value="退化图 Y&lt;br&gt;固定条件 μ = Y" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="455" width="250" height="90" />
+        </mxCell>
+        <mxCell id="sde" value="原生100步 reverse SDE&lt;br&gt;ConditionalUNet 预测噪声" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="390" y="455" width="440" height="90" />
+        </mxCell>
+        <mxCell id="pred" value="恢复图&lt;br&gt;无外层 Simulator / raw-ξ head" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="930" y="455" width="430" height="90" />
+        </mxCell>
+        <mxCell id="d" value="" source="y" target="sde" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e" value="" source="sde" target="pred" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="future" value="③ 会议提出、尚待实施：物理路径 + consistency" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="595" width="1300" height="40" />
+        </mxCell>
+        <mxCell id="path" value="复用 F(C, ξ, g(t))&lt;br&gt;替换原线性插值路径" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="660" width="350" height="80" />
+        </mxCell>
+        <mxCell id="consistency" value="接手方确认原 consistency 方法&lt;br&gt;边界、目标、采样器与梯度需求" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="485" y="660" width="440" height="80" />
+        </mxCell>
+        <mxCell id="compare" value="新实验：与匹配 D0 对比&lt;br&gt;不是已取得的性能结论" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF4E4;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1020" y="660" width="340" height="80" />
+        </mxCell>
+        <mxCell id="f" value="" source="path" target="consistency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;dashed=1;strokeColor=#B77B2D;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="g" value="" source="consistency" target="compare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;dashed=1;strokeColor=#B77B2D;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

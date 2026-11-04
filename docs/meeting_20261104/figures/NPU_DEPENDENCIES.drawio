@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="NPU_DEPENDENCIES" name="NPU_DEPENDENCIES">
+    <mxGraphModel dx="1400" dy="640" grid="0" page="1" pageScale="1" pageWidth="1400" pageHeight="640" math="0" background="#FFFFFF" lineJumpsEnabled="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="NPU 环境：入口是一个 Python，依赖来自多个目录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="25" width="1328" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="2026-11-04 只读核对的 de36 环境关系；此图不是全封闭容器或当前卡号分配证明。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="36" y="80" width="1328" height="40" />
+        </mxCell>
+        <mxCell id="cmd" value="新增接手示例&lt;br&gt;tools/receiver/demo.py" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="165" width="300" height="100" />
+        </mxCell>
+        <mxCell id="python" value="V6 venv / Python 3.10&lt;br&gt;v6_diffuir_l_20261027/env/bin/python" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="430" y="165" width="490" height="100" />
+        </mxCell>
+        <mxCell id="cann" value="Ascend CANN&lt;br&gt;set_env.sh + torch_npu" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=20;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1010" y="165" width="350" height="100" />
+        </mxCell>
+        <mxCell id="p1" value="" source="cmd" target="python" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="p2" value="" source="python" target="cann" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="stage" value="DiffUIR Stage1&lt;br&gt;.../env/lib/python3.10/site-packages" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="380" width="400" height="100" />
+        </mxCell>
+        <mxCell id="resshift" value="ResShift Stage1&lt;br&gt;.../env/lib/python3.10/site-packages" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="380" width="400" height="100" />
+        </mxCell>
+        <mxCell id="base" value="基础 physical_bridge 环境&lt;br&gt;/data0/yanglin/envs/physical_bridge" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F5F8;strokeColor=#60788A;strokeWidth=1.5;fontColor=#17324D;fontFamily=Arial;fontSize=19;spacing=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="960" y="380" width="400" height="100" />
+        </mxCell>
+        <mxCell id="p3" value="" source="python" target="stage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="675" y="320" />
+              <mxPoint x="240" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4" value="" source="python" target="resshift" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=0.55;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5" value="" source="python" target="base" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#60788A;strokeWidth=2;jumpStyle=arc;jumpSize=12;exitX=0.6;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="730" y="320" />
+              <mxPoint x="1160" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pth" value="三条下行箭头表示 V6 的 .pth 显式包含路径；torch 实际从基础环境加载，venv 目录不是完整依赖闭包。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=20;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="520" width="1320" height="44" />
+        </mxCell>
+        <mxCell id="rule" value="先确认解释器与模块路径，再分配物理卡；ASCEND_RT_VISIBLE_DEVICES=N 后程序中的 npu:0 指该可见卡。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontColor=#17324D;fontFamily=Arial;fontSize=19;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="580" width="1320" height="38" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,21 @@
+{
+  "captured_utc": "2026-11-04T09:57:01.192036+00:00",
+  "hostname": "liteserver-de36",
+  "login_user": "root",
+  "python": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+  "python_version": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+  "architecture": "aarch64",
+  "torch_file": "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/torch/__init__.py",
+  "numpy_file": "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/numpy/__init__.py",
+  "packages": {
+    "torch": "2.7.1",
+    "torch-npu": "2.7.1.post2",
+    "torchvision": "0.22.1",
+    "numpy": "1.26.4",
+    "ema-pytorch": "0.3.2"
+  },
+  "pth": {
+    "/data2/yanglin/v6_diffuir_l_20261027/env/lib/python3.10/site-packages/v6_readonly_dependencies.pth": "/data2/yanglin/v5_diffuir_l_stage1_20261026/env/lib/python3.10/site-packages\n/data2/yanglin/v5_resshift_stage1_20261026/env/lib/python3.10/site-packages\n/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages\n"
+  },
+  "scope": "read-only environment snapshot; no credential fields"
+}

@@ -1,0 +1,10 @@
+{
+  "old_executed_sha256": "01d548fd431f165cfdf677950d1494a19fe9db978c136ceaf72c31f7e2749ac7",
+  "current_helper_sha256": "05f1383a8dae9448d832c607be116ecf375ead07dcfb4846a50b290be4fa6710",
+  "calculation_branch_unchanged": true,
+  "calculation_branch_sha256": "21fc864a45764b1f440abaf9fbe4a942ae5e0f2025a85199466d63c86a91651a",
+  "change_scope": "Only inspect preflight; existing CPU/NPU calculation evidence belongs to old helper. No calculation rerun.",
+  "v2_remote_script": "/tmp/yanglin_handoff_20261104_1733/demo_preflight_v2.py",
+  "v2_preflight_record": "PREFLIGHT_V2.json",
+  "v2_preflight_files": 38
+}

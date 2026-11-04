@@ -1,0 +1,44 @@
+[
+  {
+    "file": "SIMULATOR",
+    "check": "validate_visual_quality.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/SIMULATOR.drawio\",\n  \"summary\": {\n    \"total_findings\": 0,\n    \"fail\": 0,\n    \"warn\": 0,\n    \"passed\": true,\n    \"clean\": true\n  },\n  \"fails\": [],\n  \"warns\": [],\n  \"vertex_count\": 14,\n  \"edge_count\": 10,\n  \"canvas\": \"1400x760\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "file": "SIMULATOR",
+    "check": "validate_drawio.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"strict\": true,\n  \"errors\": [],\n  \"warnings\": [],\n  \"stats\": {\n    \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/SIMULATOR.drawio\",\n    \"pages\": 1,\n    \"cells\": 26,\n    \"vertices\": 14,\n    \"edges\": 10,\n    \"embedded_raster\": false,\n    \"external_image_count\": 0,\n    \"base64_payload_count\": 0,\n    \"largest_base64_payload_chars\": 0,\n    \"caption_like_text\": false,\n    \"duplicate_id_count\": 0,\n    \"missing_id_count\": 0,\n    \"empty_vertex_labels\": 0,\n    \"empty_edge_labels\": 10,\n    \"placeholder_label_count\": 0,\n    \"page_width\": 1400.0,\n    \"page_height\": 760.0\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "file": "METHODS",
+    "check": "validate_visual_quality.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/METHODS.drawio\",\n  \"summary\": {\n    \"total_findings\": 0,\n    \"fail\": 0,\n    \"warn\": 0,\n    \"passed\": true,\n    \"clean\": true\n  },\n  \"fails\": [],\n  \"warns\": [],\n  \"vertex_count\": 16,\n  \"edge_count\": 7,\n  \"canvas\": \"1400x800\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "file": "METHODS",
+    "check": "validate_drawio.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"strict\": true,\n  \"errors\": [],\n  \"warnings\": [],\n  \"stats\": {\n    \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/METHODS.drawio\",\n    \"pages\": 1,\n    \"cells\": 25,\n    \"vertices\": 16,\n    \"edges\": 7,\n    \"embedded_raster\": false,\n    \"external_image_count\": 0,\n    \"base64_payload_count\": 0,\n    \"largest_base64_payload_chars\": 0,\n    \"caption_like_text\": false,\n    \"duplicate_id_count\": 0,\n    \"missing_id_count\": 0,\n    \"empty_vertex_labels\": 0,\n    \"empty_edge_labels\": 7,\n    \"placeholder_label_count\": 0,\n    \"page_width\": 1400.0,\n    \"page_height\": 800.0\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "file": "NPU_DEPENDENCIES",
+    "check": "validate_visual_quality.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/NPU_DEPENDENCIES.drawio\",\n  \"summary\": {\n    \"total_findings\": 0,\n    \"fail\": 0,\n    \"warn\": 0,\n    \"passed\": true,\n    \"clean\": true\n  },\n  \"fails\": [],\n  \"warns\": [],\n  \"vertex_count\": 10,\n  \"edge_count\": 5,\n  \"canvas\": \"1400x640\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "file": "NPU_DEPENDENCIES",
+    "check": "validate_drawio.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"strict\": true,\n  \"errors\": [],\n  \"warnings\": [],\n  \"stats\": {\n    \"file\": \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/docs/meeting_20261104/figures/NPU_DEPENDENCIES.drawio\",\n    \"pages\": 1,\n    \"cells\": 17,\n    \"vertices\": 10,\n    \"edges\": 5,\n    \"embedded_raster\": false,\n    \"external_image_count\": 0,\n    \"base64_payload_count\": 0,\n    \"largest_base64_payload_chars\": 0,\n    \"caption_like_text\": false,\n    \"duplicate_id_count\": 0,\n    \"missing_id_count\": 0,\n    \"empty_vertex_labels\": 0,\n    \"empty_edge_labels\": 5,\n    \"placeholder_label_count\": 0,\n    \"page_width\": 1400.0,\n    \"page_height\": 640.0\n  }\n}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,35 @@
+cosine schedule
+{
+  "task": "unidb",
+  "unix": 1793784828.8427227,
+  "python": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+  "device": "cpu",
+  "optimizer_updates": 0,
+  "scope": "receiver demonstration; not a formal benchmark",
+  "torch": "2.7.1+cpu",
+  "torch_path": "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/torch/__init__.py",
+  "physical_card": null,
+  "initialization": {
+    "wrapper": "raw_state_dict",
+    "parameter_count": 137147523,
+    "tensor_count": 151,
+    "weight_sha256": "a6bb76bfabe32b8403d8b112f0ce7876114d830d20b9f4a4119aa860afef64b4",
+    "strict_load": true,
+    "equivalent_exact_GELU_runtime_count": 0
+  },
+  "checkpoint": {
+    "path": "/data2/yanglin/unidb_dual_20261104_until00/runs/original/checkpoints/U00067180.pt",
+    "sha256": "0381ae3435d2939a2b8b4fbc215c3f78ac6c3775f254bead31dee3e9cdb78e98",
+    "weights": "EMA",
+    "update": 67180
+  },
+  "action": "forward",
+  "nfe": 1,
+  "sample_id": "val_s0040_r00",
+  "g": 4,
+  "input_sha256": "df0cac74ee8b7af2eb4b5ce92b95e0ea60184ce5f1be01777f2acd5ee5f6d241",
+  "clean_sha256": "ca7682ef02e2cd34684e96c92a62be5a9393d9b856a8384fa69de33dbaa3160a",
+  "note": "B1 demonstration RNG differs from formal B4 per-source validation; forward is NOT a restored image",
+  "status": "PASS",
+  "seconds": 34.120477992109954
+}

@@ -1,0 +1,10 @@
+\begin{abstract}
+Atmospheric turbulence degrades images through spatially varying blur and geometric distortion, making reconstruction from a single observation ambiguous.
+We propose a physics-guided recursive diffusion framework for single-image turbulence restoration that incorporates a differentiable turbulence simulator into the restoration process.
+At each stage, a conditional diffusion model estimates a clean image from the current degraded state, while a separate prediction branch estimates the latent variables required by the simulator.
+The simulator then renders these estimates at a lower turbulence strength to construct the input to the next stage.
+During training, re-rendering each stage's estimates at the original strength provides an observation-consistency loss that anchors the recursive process to the input image.
+Physical strength and the internal diffusion timestep are represented separately, allowing the restoration model to account for changing degradation levels while retaining its conditional diffusion formulation.
+Training proceeds from direct restoration to learning on simulated intermediate states, followed by joint optimization of the unrolled restoration process with gradients through the simulator.
+The resulting framework uses the turbulence forward model to define both the transitions between restoration stages and the observation constraints applied during training.
+\end{abstract}

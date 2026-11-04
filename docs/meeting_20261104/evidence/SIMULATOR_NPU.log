@@ -1,0 +1,75 @@
+/usr/local/Ascend/cann-8.5.2/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/util/util_cube_dynamic.py:454: UserWarning: Current load size is 1216512, L1 size is 524288
+  warnings.warn("Current load size is {}, L1 size is {}".format(min_load_size, l1_size))
+............................................Warning: since the loaded file is not a zipfile, only "torch.device" and "str" type parameters are currently supported for parameter types of map_location. If parameter types of map_location is "Callable[[torch.Tensor, str], torch.Tensor]" or "Dict[str, str]", which is only support for zipfile, all tensors are currently loaded onto the CPU, which may introduce problems.
+{
+  "task": "simulator",
+  "unix": 1793785511.5574477,
+  "python": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+  "device": "npu",
+  "optimizer_updates": 0,
+  "scope": "receiver demonstration; not a formal benchmark",
+  "torch": "2.7.1+cpu",
+  "torch_path": "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/torch/__init__.py",
+  "physical_card": 0,
+  "simulator_source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+  "fixture": "synthetic RGB ramps and checkerboard; fresh fixed Gaussian raw xi",
+  "xi_seed": [
+    843001,
+    843002
+  ],
+  "strengths": {
+    "0": {
+      "max_abs_from_clean": 0.0,
+      "flow_rms_pixels": 0.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "0.5": {
+      "max_abs_from_clean": 0.9640466570854187,
+      "flow_rms_pixels": 0.5380405187606812,
+      "min": -0.0003722983819898218,
+      "max": 1.002687692642212
+    },
+    "1": {
+      "max_abs_from_clean": 0.9592074155807495,
+      "flow_rms_pixels": 0.95867919921875,
+      "min": 0.0005162813467904925,
+      "max": 0.9998393654823303
+    },
+    "2": {
+      "max_abs_from_clean": 0.9466972351074219,
+      "flow_rms_pixels": 1.70817232131958,
+      "min": 0.0006295084021985531,
+      "max": 0.9990538358688354
+    },
+    "3": {
+      "max_abs_from_clean": 0.9360460042953491,
+      "flow_rms_pixels": 2.3948280811309814,
+      "min": 0.0017231344245374203,
+      "max": 0.9983272552490234
+    },
+    "4": {
+      "max_abs_from_clean": 0.9343728423118591,
+      "flow_rms_pixels": 3.043616771697998,
+      "min": 0.002641130005940795,
+      "max": 0.9919580221176147
+    }
+  },
+  "first_order_gradient_at_g2": [
+    {
+      "finite": true,
+      "norm": 0.0005361405201256275
+    },
+    {
+      "finite": true,
+      "norm": 0.00032753817504271865
+    },
+    {
+      "finite": true,
+      "norm": 0.042947765439748764
+    }
+  ],
+  "backward_scope": "one synthetic point, C/raw-xi; not finite-difference acceptance, g derivative or full BPTT",
+  "status": "PASS",
+  "seconds": 450.0806252248585
+}

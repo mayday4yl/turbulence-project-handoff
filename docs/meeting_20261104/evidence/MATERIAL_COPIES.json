@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/main.tex",
+    "copy": "paper_snapshot/main.tex",
+    "sha256": "0d2574acbe7fce80575f0df9447748b62b6d7912349ab45462d6ea987352c180"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/main.bib",
+    "copy": "paper_snapshot/main.bib",
+    "sha256": "081b700caebbb02c9e2a91dec861e622f5baf3eca8906e0cacdb79596b6d09a7"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/preamble.tex",
+    "copy": "paper_snapshot/preamble.tex",
+    "sha256": "f666a85903f49929395951e7afb620e96d4e208334623f23135298b4d7f06228"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/cvpr.sty",
+    "copy": "paper_snapshot/cvpr.sty",
+    "sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/ieeenat_fullname.bst",
+    "copy": "paper_snapshot/ieeenat_fullname.bst",
+    "sha256": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/sec/0_abstract.tex",
+    "copy": "paper_snapshot/sec/0_abstract.tex",
+    "sha256": "d326374f4517da8a54877787aaee4ca586e3c50ebdcfa7881c6d2bdea3466618"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/output/cvpr2027_paper_draft_20261028/sec/1_intro.tex",
+    "copy": "paper_snapshot/sec/1_intro.tex",
+    "sha256": "720dfb1ecf82deb905697306d3c25dbc0c5d787d957efbb22dda276f3db31a11"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/briefing_20261103_1900/delivery/UniDB_20261103_1900_Briefing.pptx",
+    "copy": "paper_snapshot/UniDB_20261103_1900_Briefing.pptx",
+    "sha256": "a39393d086d0bb1901200420ddbfb18f49fbdc91a49f759744ad02ae2f844374"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/unidb_dual_20261104_until00/briefing_20261103_1900/delivery/UniDB_20261103_1900_Talk_Track_ZH.md",
+    "copy": "paper_snapshot/UniDB_20261103_1900_Talk_Track_ZH.md",
+    "sha256": "422d516093651a45b98a309d93bafabda74ff1262949eb47624e4e64c22e4aad"
+  },
+  {
+    "source": "/Users/lucas/Desktop/turbulence IR/v5_v1_simulator_20261020/gate_20261021/figures/intermediate_strengths.png",
+    "copy": "figures/HISTORICAL_SIMULATOR_GATE.png",
+    "sha256": "c0d8938b82f773bd3bfd9c8b3f46ff9f291681e20ef1700d784f7cd835313e5b"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "simulator",
+      "--device",
+      "npu",
+      "--out",
+      "/var/folders/4d/61_n8l0x4gzdh9tmkf6trfy40000gn/T/handoff_guard_v0moagyg/npu"
+    ],
+    "exit_code": 2,
+    "stderr": "usage: demo.py [-h] [--project-root PROJECT_ROOT] [--device {cpu,npu}]\n               [--physical-card PHYSICAL_CARD] [--confirm-card-is-allocated]\n               [--out OUT] [--checkpoint CHECKPOINT]\n               [--checkpoint-sha256 CHECKPOINT_SHA256] [--weights {EMA,RAW}]\n               [--action {forward,restore}] [--g {0.5,1,2,3,4}] [--seed SEED]\n               [--backward]\n               {inspect,simulator,unidb}\ndemo.py: error: NPU needs --physical-card N and --confirm-card-is-allocated after live resource check\n",
+    "rejected": true
+  },
+  {
+    "args": [
+      "simulator",
+      "--device",
+      "cpu",
+      "--out",
+      "/var/folders/4d/61_n8l0x4gzdh9tmkf6trfy40000gn/T/handoff_guard_v0moagyg"
+    ],
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/tools/receiver/demo.py\", line 202, in <module>\n    sys.exit(main())\n  File \"/Users/lucas/Desktop/turbulence IR/turbulence-project-handoff/tools/receiver/demo.py\", line 73, in main\n    out.mkdir(parents=True, exist_ok=False)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1313, in mkdir\n    self._accessor.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/private/var/folders/4d/61_n8l0x4gzdh9tmkf6trfy40000gn/T/handoff_guard_v0moagyg'\n",
+    "rejected": true
+  }
+]

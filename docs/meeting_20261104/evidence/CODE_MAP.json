@@ -1,0 +1,270 @@
+[
+  {
+    "file": "v5_v1_simulator_20261020/simulator_v5.py",
+    "sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+    "bytes": 8919,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "bind_canonical_buffers",
+        "line": 31
+      },
+      {
+        "name": "effective_state",
+        "line": 97
+      },
+      {
+        "name": "prepare_image",
+        "line": 133
+      },
+      {
+        "name": "sampling_grid",
+        "line": 145
+      },
+      {
+        "name": "warp",
+        "line": 151
+      },
+      {
+        "name": "render_prepared",
+        "line": 156
+      },
+      {
+        "name": "build_simulator",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "file": "v5_v1_simulator_20261020/vendor/v4_simulator.py",
+    "sha256": "937322fbd213d1674f315176daa47887c9d313d5dec517a1a2dbfbb91a4a042c",
+    "bytes": 14398,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "forward",
+        "line": 63
+      },
+      {
+        "name": "sample_realization",
+        "line": 262
+      },
+      {
+        "name": "effective_state",
+        "line": 289
+      },
+      {
+        "name": "prepare_image",
+        "line": 325
+      },
+      {
+        "name": "render_prepared",
+        "line": 347
+      },
+      {
+        "name": "render",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "file": "v5_v1_simulator_20261020/method_interface_20261021/schedules.py",
+    "sha256": "0cf2d90cc9799bc6ee5663481fcb1579cc1acf46f732338f88746266dd762241",
+    "bytes": 15706,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "sample_training_paths",
+        "line": 209
+      },
+      {
+        "name": "inference_paths",
+        "line": 253
+      }
+    ]
+  },
+  {
+    "file": "v5_concertormer_10k_20261021/models/clean_concertormer.py",
+    "sha256": "e6e449a963d2cb745eee2a9043c06891ccb18ae0b3d3a317012244f0d27aedce",
+    "bytes": 2839,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "forward",
+        "line": 28
+      },
+      {
+        "name": "build_clean_model",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "file": "v5_concertormer_10k_20261021/models/v5_concertormer.py",
+    "sha256": "d086eb05495c98186d1bbb09ffba9c73d4676a0e7139922bdf70da488d5462d9",
+    "bytes": 10562,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "forward",
+        "line": 46
+      },
+      {
+        "name": "forward",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "file": "v5_concertormer_10k_20261021/training/core.py",
+    "sha256": "56285eac1cfe8e6cc6becfe28a570f58e1f2cff452c38bb6244f0e495578c951",
+    "bytes": 12653,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "unroll_training",
+        "line": 90
+      },
+      {
+        "name": "infer",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "file": "v5_concertormer_10k_20261021/alignment_training/core.py",
+    "sha256": "1dace9fe831be6d442f4481fe5ab85035c51b14f838250bc5ee5c51dcf9cc6e6",
+    "bytes": 4312,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "unroll_training",
+        "line": 34
+      },
+      {
+        "name": "infer",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "file": "v5_concertormer_10k_20261021/alignment_training/runner.py",
+    "sha256": "9ffddb74f8a4f661e8451cbf510bcdf643bd4cc1d5d40f0055d9cce2254b2d7c",
+    "bytes": 40731,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "save_training_checkpoint",
+        "line": 186
+      },
+      {
+        "name": "train",
+        "line": 263
+      },
+      {
+        "name": "main",
+        "line": 624
+      }
+    ]
+  },
+  {
+    "file": "unidb_d0_20261102/core.py",
+    "sha256": "1bc3d1cc551d9ef8f24cf70bb5a97e0663c4b5fffa0115ef86ced7646ce4c7d5",
+    "bytes": 6876,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "sources_ok",
+        "line": 42
+      },
+      {
+        "name": "initialize",
+        "line": 52
+      },
+      {
+        "name": "configure_npu",
+        "line": 89
+      },
+      {
+        "name": "process",
+        "line": 103
+      },
+      {
+        "name": "forward",
+        "line": 116
+      },
+      {
+        "name": "make_ema",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "file": "unidb_d0_20261102/data.py",
+    "sha256": "72682ee4ce60fc1f197e69bee49f5f802e234a366800c5df43fee371aa11900c",
+    "bytes": 3526,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "load_pool",
+        "line": 12
+      },
+      {
+        "name": "validation_groups",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "file": "unidb_dual_20261103_until_noon/improved_objective.py",
+    "sha256": "20aa4a11a11494436186ac3a8ad1ff56e47ed1b277ba7a5b9b3d21c45060ba98",
+    "bytes": 4936,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "forward",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "file": "unidb_dual_20261104_until00/training_worker.py",
+    "sha256": "81aac46fe9150fdc36d858d33275c0a34ae9d5e5a1b8acc9cb3cb5b06c9ea2c1",
+    "bytes": 39128,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "source_checks",
+        "line": 67
+      },
+      {
+        "name": "forward",
+        "line": 144
+      },
+      {
+        "name": "save_checkpoint",
+        "line": 241
+      },
+      {
+        "name": "load_resume",
+        "line": 297
+      },
+      {
+        "name": "main",
+        "line": 406
+      }
+    ]
+  },
+  {
+    "file": "unidb_dual_20261104_until00/validation.py",
+    "sha256": "bf44335b2340a09dc7a46f933d4d4bfa633f68b14043e0d4ab01165f3354c75f",
+    "bytes": 8514,
+    "original_matches": true,
+    "functions": [
+      {
+        "name": "evaluate",
+        "line": 12
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "task": "simulator",
+  "unix": 1793784672.7026324,
+  "python": "/data2/yanglin/v6_diffuir_l_20261027/env/bin/python",
+  "device": "cpu",
+  "optimizer_updates": 0,
+  "scope": "receiver demonstration; not a formal benchmark",
+  "torch": "2.7.1+cpu",
+  "torch_path": "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/torch/__init__.py",
+  "physical_card": null,
+  "simulator_source_sha256": "0f2f6f54a578b3c36cb69861815c7eee5476f75ccd91cac863bd001345bd9636",
+  "fixture": "synthetic RGB ramps and checkerboard; fresh fixed Gaussian raw xi",
+  "xi_seed": [
+    843001,
+    843002
+  ],
+  "strengths": {
+    "0": {
+      "max_abs_from_clean": 0.0,
+      "flow_rms_pixels": 0.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "0.5": {
+      "max_abs_from_clean": 0.9640466570854187,
+      "flow_rms_pixels": 0.5380405187606812,
+      "min": -0.0003722940164152533,
+      "max": 1.002687692642212
+    },
+    "1": {
+      "max_abs_from_clean": 0.9592073559761047,
+      "flow_rms_pixels": 0.95867919921875,
+      "min": 0.000516281696036458,
+      "max": 0.9998394846916199
+    },
+    "2": {
+      "max_abs_from_clean": 0.9466972351074219,
+      "flow_rms_pixels": 1.7081722021102905,
+      "min": 0.0006295106140896678,
+      "max": 0.9990540742874146
+    },
+    "3": {
+      "max_abs_from_clean": 0.9360460042953491,
+      "flow_rms_pixels": 2.3948280811309814,
+      "min": 0.0017231361707672477,
+      "max": 0.9983274936676025
+    },
+    "4": {
+      "max_abs_from_clean": 0.9343728423118591,
+      "flow_rms_pixels": 3.043616533279419,
+      "min": 0.0026411316357553005,
+      "max": 0.991958498954773
+    }
+  },
+  "first_order_gradient_at_g2": [
+    {
+      "finite": true,
+      "norm": 0.000536140229087323
+    },
+    {
+      "finite": true,
+      "norm": 0.00032683086465112865
+    },
+    {
+      "finite": true,
+      "norm": 0.042947787791490555
+    }
+  ],
+  "backward_scope": "one synthetic point, C/raw-xi; not finite-difference acceptance, g derivative or full BPTT",
+  "status": "PASS",
+  "seconds": 19.400879049673676
+}

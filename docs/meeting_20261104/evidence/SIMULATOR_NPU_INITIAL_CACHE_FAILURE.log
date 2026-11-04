@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/tmp/yanglin_handoff_20261104_1733/demo.py", line 200, in <module>
+    sys.exit(main())
+  File "/tmp/yanglin_handoff_20261104_1733/demo.py", line 84, in main
+    torch.npu.set_option({'ACL_PRECISION_MODE': 'must_keep_origin_dtype'})
+  File "/data0/yanglin/envs/physical_bridge/lib/python3.10/site-packages/torch_npu/npu/npu_config.py", line 79, in set_option
+    torch_npu._C._npu_setOption(option)
+RuntimeError: operator():build/CMakeFiles/torch_npu.dir/compiler_depend.ts:110 NPU function error: AclSetCompileopt(aclCompileOpt::ACL_PRECISION_MODE, val.c_str()), error code is 500001
+[ERROR] 2026-11-04-17:41:03 (PID:3086536, Device:0, RankID:-1) ERR00100 PTA call acl api failed
+[Error]: The internal ACL of the system is incorrect.
+        Rectify the fault based on the error information in the ascend log.
+[PID: 3086536] 2026-11-04-17:41:03.761.990 Directory_Operation_Error(EC0006): Directory operation failed. Reason: Directory /tmp/yanglin_handoff_20261104_1733/simulator_npu/ascend_cache for environment variable ASCEND_CACHE_PATH does not exist.
+        TraceBack (most recent call last):
+        AOE failed to call InitCannKB.[FUNC:Initialize][FILE:python_adapter_manager.cc][LINE:47]
+        Failed to initialize TeConfigInfo.
+        [GraphOpt][InitializeInner][InitTbeFunc] Failed to init tbe.[FUNC:InitializeTeFusion][FILE:tbe_op_store_adapter.cc][LINE:1966]
+        [GraphOpt][InitializeInner][InitTeFusion]: Failed to initialize TeFusion.[FUNC:InitializeInner][FILE:tbe_op_store_adapter.cc][LINE:1933]
+        [SubGraphOpt][PreCompileOp][InitAdapter] InitializeAdapter adapter [tbe_op_adapter] failed! Ret [4294967295][FUNC:InitializeAdapter][FILE:op_store_adapter_manager.cc][LINE:79]
+        [SubGraphOpt][PreCompileOp][Init] Initialize op store adapter failed, OpsStoreName[tbe-custom].[FUNC:Initialize][FILE:op_store_adapter_manager.cc][LINE:120]
+        [FusionMngr][Init] Op store adapter manager init failed.[FUNC:Initialize][FILE:fusion_manager.cc][LINE:117]
+        PluginManager InvokeAll failed.[FUNC:Initialize][FILE:ops_kernel_manager.cc][LINE:83]
+        OpsManager initialize failed.[FUNC:InnerInitialize][FILE:gelib.cc][LINE:222]
+        GELib::InnerInitialize failed.[FUNC:Initialize][FILE:gelib.cc][LINE:159]
+        GEInitialize failed.[FUNC:GEInitializeV2][FILE:ge_api_v2.cc][LINE:330]
+        GEInitializeV2 initialize failed.[FUNC:GEInitialize][FILE:ge_api.cc][LINE:171]
+        [Initialize][Ge]GEInitialize failed. ge result = 4294967295[FUNC:ReportCallError][FILE:log_inner.cpp][LINE:147]
+        [Init][Compiler]Init compiler failed[FUNC:ReportInnerError][FILE:acl_op_executor_log_inner.cpp][LINE:108]
+        [Set][Options]OpCompileProcessor init failed![FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:131]
+
